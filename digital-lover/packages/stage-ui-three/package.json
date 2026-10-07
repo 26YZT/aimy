@@ -1,0 +1,56 @@
+{
+  "name": "@proj-airi/stage-ui-three",
+  "type": "module",
+  "private": true,
+  "description": "A collection of 3D scene components that used by Project AIRI",
+  "author": {
+    "name": "Moeru AI Project AIRI Team",
+    "email": "airi@moeru.ai",
+    "url": "https://github.com/moeru-ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moeru-ai/airi.git",
+    "directory": "packages/stage-ui-three"
+  },
+  "exports": {
+    "./assets/vrm": "./src/assets/vrm/index.ts",
+    "./composables/vrm": "./src/composables/vrm/index.ts",
+    "./trace": "./src/trace/index.ts",
+    "./utils/vrm-preview": "./src/utils/vrm-preview.ts",
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@moeru/eventa": "1.0.0",
+    "@pixiv/three-vrm": "^3.5.5",
+    "@pixiv/three-vrm-animation": "^3.5.5",
+    "@pixiv/three-vrm-core": "^3.5.5",
+    "@proj-airi/model-driver-lipsync": "workspace:*",
+    "@proj-airi/stage-shared": "workspace:*",
+    "@proj-airi/ui": "workspace:*",
+    "@tresjs/cientos": "^5.8.1",
+    "@tresjs/core": "^5.8.3",
+    "@tresjs/post-processing": "^3.7.4",
+    "@vueuse/core": "^14.4.0",
+    "culori": "^4.0.2",
+    "es-toolkit": "^1.51.0",
+    "pinia": "^4.0.3",
+    "postprocessing": "^6.39.4",
+    "three": "^0.185.1",
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@types/culori": "^4.0.1",
+    "@types/three": "^0.185.4",
+    "vitest": "4.1.11",
+    "vue-tsc": "3.3.11",
+    "typescript": "6.0.3",
+    "vite": "8.2.2",
+    "@types/node": "26.2.0",
+    "@vue-macros/volar": "^3.1.4"
+  }
+}

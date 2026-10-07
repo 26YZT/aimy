@@ -1,0 +1,32 @@
+{
+  "client_date": "2026-10-07",
+  "command": "pnpm verify",
+  "exit_code": 0,
+  "build": {
+    "packages": 9,
+    "status": "passed"
+  },
+  "typecheck": {
+    "packages": 15,
+    "status": "passed"
+  },
+  "tests": {
+    "node": 529,
+    "browser": 64,
+    "total": 593,
+    "files": 63,
+    "status": "passed"
+  },
+  "experience_lab": {
+    "tests": 26,
+    "live_calls": 0,
+    "default_status": "not-run",
+    "devices_captured": false,
+    "runtime": "AIRI factories/core + xsAI SDK 0.5.0"
+  },
+  "real_model": "not_verified",
+  "real_devices": "not_verified",
+  "desktop_product": "not_implemented",
+  "mvp": "not_complete",
+  "git_index_unchanged": true
+}

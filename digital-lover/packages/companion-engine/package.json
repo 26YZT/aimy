@@ -1,0 +1,18 @@
+{
+  "name": "@digital-lover/companion-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "主动陪伴引擎：观察 → 判定打扰度 → 决定是否搭话/说什么/用什么情绪",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

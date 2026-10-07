@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "kind": "visual-preview-only",
+  "evidenceDirectory": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-visual-preview-wbtqxA",
+  "profileDirectory": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-visual-preview-wbtqxA/profile",
+  "checks": [
+    "Real VRM and privacy statuses visible at 1040x760; 11px; contrast 5.46",
+    "Real VRM and privacy statuses visible at 760x580; 11px; contrast 5.46",
+    "Fresh native settings form contains no configured service, model or key"
+  ],
+  "layouts": [
+    {
+      "viewport": {
+        "width": 1040,
+        "height": 760
+      },
+      "scroll": {
+        "width": 1040,
+        "height": 760
+      },
+      "privacy": {
+        "left": 461.796875,
+        "top": 714,
+        "right": 1015,
+        "bottom": 760,
+        "width": 553.203125,
+        "height": 46
+      },
+      "composer": {
+        "left": 461.796875,
+        "top": 606,
+        "right": 1015,
+        "bottom": 714,
+        "width": 553.203125,
+        "height": 108
+      },
+      "avatar": {
+        "left": 0,
+        "top": 54,
+        "right": 436.796875,
+        "bottom": 760,
+        "width": 436.796875,
+        "height": 706
+      },
+      "conversation": {
+        "left": 436.796875,
+        "top": 54,
+        "right": 1040,
+        "bottom": 760,
+        "width": 603.203125,
+        "height": 706
+      },
+      "color": "rgb(82, 110, 97)",
+      "background": "rgb(251, 253, 252)",
+      "fontSize": 11,
+      "statuses": [
+        {
+          "text": "屏幕关闭",
+          "left": 615.3984375,
+          "top": 727,
+          "right": 676.3984375,
+          "bottom": 742,
+          "width": 61,
+          "height": 15
+        },
+        {
+          "text": "麦克风关闭",
+          "left": 691.3984375,
+          "top": 727,
+          "right": 763.3984375,
+          "bottom": 742,
+          "width": 72,
+          "height": 15
+        },
+        {
+          "text": "记录留在本机",
+          "left": 778.3984375,
+          "top": 727,
+          "right": 861.3984375,
+          "bottom": 742,
+          "width": 83,
+          "height": 15
+        }
+      ],
+      "state": "mounted",
+      "contrast": 5.464901942270239
+    },
+    {
+      "viewport": {
+        "width": 760,
+        "height": 580
+      },
+      "scroll": {
+        "width": 760,
+        "height": 580
+      },
+      "privacy": {
+        "left": 314.3984375,
+        "top": 540,
+        "right": 742,
+        "bottom": 580,
+        "width": 427.6015625,
+        "height": 40
+      },
+      "composer": {
+        "left": 314.3984375,
+        "top": 432,
+        "right": 742,
+        "bottom": 540,
+        "width": 427.6015625,
+        "height": 108
+      },
+      "avatar": {
+        "left": 0,
+        "top": 54,
+        "right": 296.3984375,
+        "bottom": 580,
+        "width": 296.3984375,
+        "height": 526
+      },
+      "conversation": {
+        "left": 296.3984375,
+        "top": 54,
+        "right": 760,
+        "bottom": 580,
+        "width": 463.6015625,
+        "height": 526
+      },
+      "color": "rgb(82, 110, 97)",
+      "background": "rgb(251, 253, 252)",
+      "fontSize": 11,
+      "statuses": [
+        {
+          "text": "屏幕关闭",
+          "left": 411.1953125,
+          "top": 553,
+          "right": 472.1953125,
+          "bottom": 568,
+          "width": 61,
+          "height": 15
+        },
+        {
+          "text": "麦克风关闭",
+          "left": 481.1953125,
+          "top": 553,
+          "right": 553.1953125,
+          "bottom": 568,
+          "width": 72,
+          "height": 15
+        },
+        {
+          "text": "记录留在本机",
+          "left": 562.1953125,
+          "top": 553,
+          "right": 645.1953125,
+          "bottom": 568,
+          "width": 83,
+          "height": 15
+        }
+      ],
+      "state": "mounted",
+      "contrast": 5.464901942270239
+    }
+  ],
+  "httpRequests": 0,
+  "limitations": [
+    "No model, key, microphone or screen capture configured",
+    "Business regression evidence remains in desktop-smoke-FGU442",
+    "This visual check does not certify full accessibility or production Keychain"
+  ]
+}

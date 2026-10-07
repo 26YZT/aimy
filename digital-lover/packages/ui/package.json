@@ -1,0 +1,44 @@
+{
+  "name": "@proj-airi/ui",
+  "type": "module",
+  "version": "0.12.0-beta.5",
+  "description": "A collection of UI components that used by Project AIRI",
+  "author": {
+    "name": "Moeru AI Project AIRI Team",
+    "email": "airi@moeru.ai",
+    "url": "https://github.com/moeru-ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moeru-ai/airi.git",
+    "directory": "packages/ui"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./main.css": "./src/main.css",
+    "./components/animations": "./src/components/animations/index.ts",
+    "./components/form": "./src/components/form/index.ts",
+    "./components/layouts": "./src/components/layouts/index.ts",
+    "./*": "./*"
+  },
+  "scripts": {
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@moeru/std": "0.1.0-beta.17",
+    "@vueuse/core": "^14.4.0",
+    "floating-vue": "^5.2.2",
+    "reka-ui": "^2.10.3",
+    "vaul-vue": "^0.4.1",
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@vue-macros/volar": "^3.1.4",
+    "vue-tsc": "3.3.11",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11",
+    "vite": "8.2.2",
+    "@types/node": "26.2.0"
+  }
+}

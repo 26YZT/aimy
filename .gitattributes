@@ -1,0 +1,6 @@
+# Keep asset bytes identical to the recorded SHA-256 fingerprints.
+*.vrm binary
+*.vrma binary
+*.onnx binary
+*.hdr binary
+*.png binary

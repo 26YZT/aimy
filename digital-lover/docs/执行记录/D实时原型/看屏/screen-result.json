@@ -1,0 +1,221 @@
+{
+  "status": "passed",
+  "scope": "own-window-screen-suite",
+  "evidenceDirectory": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-screen-smoke-VuY5AC",
+  "checks": [
+    "Actual own-frame getDisplayMedia → real Canvas JPEG → real Vision SDK → one authorized observation; no second LLM and no image in IndexedDB",
+    "off: actual video stops, Vision request aborts, late observation cannot publish and sharing does not reopen",
+    "hide: actual video stops, Vision request aborts, late observation cannot publish and sharing does not reopen",
+    "reload: actual video stops, Vision request aborts, late observation cannot publish and sharing does not reopen",
+    "quit: actual video stops, Vision request aborts, late observation cannot publish and sharing does not reopen",
+    "Revocation during a delayed real IndexedDB commit rolls back the observation in UI, database and reload",
+    "Actual permission handlers reject camera and audio+display requests without fake-ui bypass",
+    "Vision failure safely closes the own-window stream and keeps text conversation usable"
+  ],
+  "observations": [
+    {
+      "case": "normal",
+      "requests": [
+        {
+          "at": 1791388413893,
+          "audio": false,
+          "video": true
+        }
+      ],
+      "denials": [],
+      "jpegCount": 1,
+      "jpegBytes": 28747,
+      "tracks": [
+        {
+          "kind": "video",
+          "readyState": "ended"
+        }
+      ]
+    },
+    {
+      "case": "late-off",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-screen-smoke-VuY5AC/profile-late-off",
+      "requestAborted": true
+    },
+    {
+      "case": "late-hide",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-screen-smoke-VuY5AC/profile-late-hide",
+      "requestAborted": true
+    },
+    {
+      "case": "late-reload",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-screen-smoke-VuY5AC/profile-late-reload",
+      "requestAborted": true
+    },
+    {
+      "case": "late-quit",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-screen-smoke-VuY5AC/profile-late-quit",
+      "requestAborted": true
+    }
+  ],
+  "requests": [
+    {
+      "case": "normal",
+      "kind": "vision",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388415685,
+      "finishedAt": 1791388416190,
+      "bytes": 39143,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-vision-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true,
+      "imageCount": 1,
+      "imageBytes": 28747,
+      "imageSha256": "26abb56fff8b191f96b06ce88b33498f81684e74080de84d6c98191b631e30c9",
+      "jpegValid": true
+    },
+    {
+      "case": "late-off",
+      "kind": "vision",
+      "mode": "slow-vision",
+      "ordinal": 1,
+      "startedAt": 1791388419928,
+      "bytes": 39135,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-vision-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true,
+      "imageCount": 1,
+      "imageBytes": 28743,
+      "imageSha256": "209e3a35ef6cfd5add4750c5a84fbdcd8adaf09794f8863a1b6ae24e5132a4b2",
+      "jpegValid": true
+    },
+    {
+      "case": "late-hide",
+      "kind": "vision",
+      "mode": "slow-vision",
+      "ordinal": 1,
+      "startedAt": 1791388429976,
+      "bytes": 39227,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-vision-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true,
+      "imageCount": 1,
+      "imageBytes": 28811,
+      "imageSha256": "cd3c91647a2d2c91c4ba740d3616a89e3fd392743c191e1ed92fa72f04db8486",
+      "jpegValid": true
+    },
+    {
+      "case": "late-reload",
+      "kind": "vision",
+      "mode": "slow-vision",
+      "ordinal": 1,
+      "startedAt": 1791388439679,
+      "bytes": 39099,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-vision-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true,
+      "imageCount": 1,
+      "imageBytes": 28715,
+      "imageSha256": "c3881a1c31d04732264ba27621c79a04a0abfc7787c2b10026fe864a36742c0a",
+      "jpegValid": true
+    },
+    {
+      "case": "late-quit",
+      "kind": "vision",
+      "mode": "slow-vision",
+      "ordinal": 1,
+      "startedAt": 1791388449367,
+      "bytes": 39067,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-vision-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true,
+      "imageCount": 1,
+      "imageBytes": 28690,
+      "imageSha256": "bcd6043a8441aa28f6ded8554c61621f9216352a6e061b8bf310f7c132a259f4",
+      "jpegValid": true
+    },
+    {
+      "case": "commit-revoke",
+      "kind": "vision",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388459067,
+      "finishedAt": 1791388459569,
+      "bytes": 39143,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-vision-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true,
+      "imageCount": 1,
+      "imageBytes": 28748,
+      "imageSha256": "75ff95417f0ee81c49d25b566c21cc5c79e19d4a30d65343b3ee09b0512fdd07",
+      "jpegValid": true
+    },
+    {
+      "case": "vision-error",
+      "kind": "vision",
+      "mode": "vision-error",
+      "ordinal": 1,
+      "startedAt": 1791388469127,
+      "finishedAt": 1791388469131,
+      "bytes": 39203,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-vision-model",
+      "imageCount": 1,
+      "imageBytes": 28794,
+      "imageSha256": "904f086bc8560c9adf9402dfebd7ac5599a9eb097e5ab8fba33e57c7a2379ded",
+      "jpegValid": true
+    },
+    {
+      "case": "vision-error",
+      "kind": "llm",
+      "mode": "vision-error",
+      "ordinal": 2,
+      "startedAt": 1791388469446,
+      "finishedAt": 1791388469948,
+      "bytes": 638,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-chat-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    }
+  ],
+  "scannedFiles": 440,
+  "limitations": [
+    "Only the test-owned WebContents fake registry source was used; no OS desktopCapturer enumeration or real screen/window capture",
+    "Actual native getDisplayMedia, Canvas JPEG, Vision SDK and IndexedDB; provider response is a localhost fixture",
+    "Actual macOS screen-recording permission, external applications, system audio and Vision quality remain unverified"
+  ]
+}

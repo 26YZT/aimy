@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.aimy.json",
+  "compilerOptions": {
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "types": []
+  },
+  "include": [
+    "./src/**/*",
+    "./index.ts"
+  ]
+}

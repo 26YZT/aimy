@@ -1,0 +1,17 @@
+{
+  "id": "onnx-community/silero-vad",
+  "revision": "e71cae966052b992a7eca6b17738916ce0eca4ec",
+  "source": "https://huggingface.co/onnx-community/silero-vad",
+  "license": "MIT",
+  "license_file": "LICENSE.silero",
+  "model_path": "onnx-community/silero-vad/onnx/model.onnx",
+  "model_sha256": "a4a068cd6cf1ea8355b84327595838ca748ec29a25bc91fc82e6c299ccdc5808",
+  "model_bytes": 2243022,
+  "runtime": "@huggingface/transformers@3.8.1; declared ONNX WASM dependency copied at build",
+  "purpose": "local speech detection only; no remote model loading or audio upload",
+  "real_speech_quality": "not_verified",
+  "onnxruntime_version": "1.22.0-dev.20250409-89f8206ba4",
+  "onnxruntime_revision": "89f8206ba4f1c22c39e0297fb55272e8ce8cd7d0",
+  "onnxruntime_license_source": "https://github.com/microsoft/onnxruntime/blob/89f8206ba4f1c22c39e0297fb55272e8ce8cd7d0/LICENSE",
+  "onnxruntime_license_sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+}

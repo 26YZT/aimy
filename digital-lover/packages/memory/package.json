@@ -1,0 +1,18 @@
+{
+  "name": "@digital-lover/memory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "长时记忆：筛选 → 提取 → 整合 → 检索（对应 P0 缺口 s09）",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

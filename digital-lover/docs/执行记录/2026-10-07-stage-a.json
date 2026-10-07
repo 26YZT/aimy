@@ -1,0 +1,50 @@
+{
+  "client_date": "2026-10-07",
+  "stage": "A engineering baseline, B offline preparation",
+  "verification_command": "pnpm verify",
+  "exit_code": 0,
+  "build": {
+    "workspace_packages": 9,
+    "status": "passed"
+  },
+  "typecheck": {
+    "packages": 14,
+    "status": "passed"
+  },
+  "tests": {
+    "node": 503,
+    "browser": 64,
+    "total": 567,
+    "files": 62,
+    "status": "passed",
+    "live_model": false,
+    "real_devices": false
+  },
+  "package_tests": {
+    "audio": 5,
+    "pipelines-audio": 53,
+    "companion-engine": 7,
+    "relationship-engine": 8,
+    "plugin-protocol": 3,
+    "better-ws": 94,
+    "server-sdk": 19,
+    "core-agent": 151,
+    "text-chat-cli": 18,
+    "provider-node": 145,
+    "provider-browser": 64
+  },
+  "baseline": {
+    "directory": ".baseline/2026-10-07-pre-stage-a-f344c676",
+    "source_files": 320,
+    "archive_sha256": "e8eeff77745e798f542acf2c3f0754877b3579a5b6cbadc2e9bf33c868259f1f"
+  },
+  "git_index_unchanged": true,
+  "not_verified": [
+    "real LLM/Vision/ASR/TTS",
+    "device capture/echo/barge-in",
+    "Electron product startup",
+    "memory/session product persistence",
+    "official asset release approval",
+    "MVP user acceptance"
+  ]
+}

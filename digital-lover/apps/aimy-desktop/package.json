@@ -1,0 +1,52 @@
+{
+  "name": "@digital-lover/aimy-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "dev": "pnpm prepare:assets && electron-vite dev",
+    "build": "pnpm prepare:assets && electron-vite build",
+    "start": "electron .",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "setup": "node node_modules/electron/install.js",
+    "test:desktop": "tsx tests/desktop-smoke.ts",
+    "test:media": "node tests/media-smoke.mjs",
+    "test:screen": "node tests/screen-smoke.mjs",
+    "test:decode-budget": "node tests/decode-budget-smoke.mjs",
+    "test:visual": "node tests/visual-preview.mjs"
+  },
+  "dependencies": {
+    "@proj-airi/core-agent": "workspace:*",
+    "@proj-airi/provider-inference": "workspace:*",
+    "@proj-airi/stage-ui-three": "workspace:*",
+    "@proj-airi/audio": "workspace:*",
+    "@proj-airi/pipelines-audio": "workspace:*",
+    "@digital-lover/companion-engine": "workspace:*",
+    "@xsai/generate-transcription": "0.5.0",
+    "@xsai/generate-speech": "0.5.0",
+    "@huggingface/transformers": "3.8.1",
+    "@moeru/eventa": "1.0.0",
+    "vue": "3.5.41",
+    "pinia": "4.0.3",
+    "unstorage": "1.17.5",
+    "valibot": "^1.4.2",
+    "@electron-toolkit/preload": "3.0.2",
+    "idb-keyval": "6.2.3"
+  },
+  "devDependencies": {
+    "electron": "43.4.1",
+    "electron-vite": "5.0.0",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "vite": "8.2.2",
+    "typescript": "6.0.3",
+    "vue-tsc": "3.3.11",
+    "@types/node": "26.2.0",
+    "vitest": "4.1.11",
+    "playwright": "1.62.1",
+    "tsx": "4.23.12",
+    "unocss": "66.7.5"
+  }
+}

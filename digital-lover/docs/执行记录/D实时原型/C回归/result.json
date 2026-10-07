@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "evidenceDirectory": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-desktop-smoke-MzC2mA",
+  "profileDirectory": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-desktop-smoke-MzC2mA/profile",
+  "checks": [
+    "UI configuration saved; fake key confined to main process and ciphertext",
+    "Three actual streamed SDK requests preserve multi-turn history; tools disabled",
+    "Cancel aborts live local HTTP stream and rejects stale output in a subsequent turn",
+    "Image is shared through actual vision provider request and stored in local conversation",
+    "Provider failure produces safe message and permits a subsequent successful turn",
+    "Sandboxed renderer cannot use Node; microphone and display API requests are denied",
+    "Bundled sample VRM loads into a visible real WebGL canvas; screenshot captured",
+    "Hide stops active provider stream; activate reopens without enabling capture",
+    "A fresh Electron process restores configuration, text history, shared image and native window bounds",
+    "Immediate UI quit awaits delayed IndexedDB commit (1471 ms), restores partial reply and latest window bounds",
+    "Clear removes stored messages and images; another fresh process remains empty",
+    "Real VRM resource failure shows an actionable error while text conversation and settings remain usable",
+    "Temporary profile and logs contain no plaintext fake key or internal provider error; no external renderer request"
+  ],
+  "scannedFiles": 60,
+  "mediaDenial": [
+    {
+      "method": "getUserMedia",
+      "allowed": false,
+      "name": "NotAllowedError"
+    },
+    {
+      "method": "getDisplayMedia",
+      "allowed": false,
+      "name": "NotAllowedError"
+    }
+  ],
+  "shutdownDurationMs": 1471,
+  "mockKeychain": false,
+  "actualRequests": [
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 2,
+      "userCount": 1,
+      "assistantCount": 0,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 4,
+      "userCount": 2,
+      "assistantCount": 1,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 6,
+      "userCount": 3,
+      "assistantCount": 2,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 8,
+      "userCount": 4,
+      "assistantCount": 3,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": true
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 10,
+      "userCount": 5,
+      "assistantCount": 4,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    },
+    {
+      "model": "fixture-vision-model",
+      "messageCount": 12,
+      "userCount": 6,
+      "assistantCount": 5,
+      "imageCount": 1,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 14,
+      "userCount": 7,
+      "assistantCount": 6,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 15,
+      "userCount": 8,
+      "assistantCount": 6,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 17,
+      "userCount": 9,
+      "assistantCount": 7,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": true
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 19,
+      "userCount": 10,
+      "assistantCount": 8,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": true
+    },
+    {
+      "model": "fixture-chat-model",
+      "messageCount": 2,
+      "userCount": 1,
+      "assistantCount": 0,
+      "imageCount": 0,
+      "authenticated": true,
+      "toolsDisabled": true,
+      "aborted": false
+    }
+  ],
+  "limitations": [
+    "Fake localhost provider only; real models and quality not verified",
+    "Native safeStorage calls tested; production macOS Keychain policy not independently audited",
+    "Media denial verified; live microphone and screen capture are not enabled or tested",
+    "VRoid sample is a prototype asset, not a final Aimy character"
+  ]
+}
