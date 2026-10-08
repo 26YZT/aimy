@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<p align="center"><strong>先从今天的一件小事聊起。</strong><br>文字、声音与画面，连接一个在你桌面上的虚拟伙伴。</p>
+<p align="center"><strong>先从今天的一件小事聊起。</strong><br>会听、会看、会回应的桌面陪伴原型。</p>
 
 <p align="center">
   <img src="digital-lover/docs/visual/github/badge-status.svg" alt="研发阶段：Prototype" height="26">
