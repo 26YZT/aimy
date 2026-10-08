@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-labelledby="title desc">
+  <title id="title">Aimy</title>
+  <desc id="desc">Aimy desktop companion wordmark with the application's four-point star, in its dark brand palette.</desc>
+  <rect width="1280" height="320" rx="20" fill="#152c25"/>
+  <text x="78" y="224" fill="#a4dcc5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="190" font-weight="700" letter-spacing="-11">aimy</text>
+  <circle cx="1050" cy="160" r="188" fill="none" stroke="#274a3b" stroke-width="1.5"/>
+  <circle cx="1050" cy="160" r="123" fill="none" stroke="#274a3b" stroke-width="1.5"/>
+  <g transform="translate(930 40) scale(10)" fill="none" stroke="#a4dcc5" stroke-width="0.65" stroke-linejoin="round">
+    <path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4L12 3Z"/>
+  </g>
+  <path d="M677 160h170" stroke="#577d6b" stroke-width="1.5"/>
+  <circle cx="677" cy="160" r="4" fill="#a4dcc5"/>
+  <circle cx="847" cy="160" r="4" fill="#a4dcc5"/>
+</svg>
