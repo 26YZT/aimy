@@ -1,0 +1,75 @@
+{
+  "python_ast_files": 458,
+  "python_ast_errors": [],
+  "node_path": "/usr/local/bin/node",
+  "node_check_files": 179,
+  "node_check_errors": [],
+  "counts": {
+    "(root)": {
+      "files": 13,
+      "source_files": 8,
+      "source_lines": 1019,
+      "test_files": 0
+    },
+    "aion-chat": {
+      "files": 674,
+      "source_files": 654,
+      "source_lines": 203235,
+      "test_files": 289
+    },
+    "说明&教程": {
+      "files": 9,
+      "source_files": 0,
+      "source_lines": 0,
+      "test_files": 0
+    },
+    "docs": {
+      "files": 1,
+      "source_files": 0,
+      "source_lines": 0,
+      "test_files": 0
+    },
+    "AionPet": {
+      "files": 8,
+      "source_files": 0,
+      "source_lines": 0,
+      "test_files": 0
+    },
+    "AionsHome-Visitor-Lounge": {
+      "files": 115,
+      "source_files": 86,
+      "source_lines": 26931,
+      "test_files": 22
+    },
+    "scripts": {
+      "files": 2,
+      "source_files": 2,
+      "source_lines": 256,
+      "test_files": 0
+    },
+    "AionApp": {
+      "files": 334,
+      "source_files": 284,
+      "source_lines": 48151,
+      "test_files": 114
+    },
+    "Connor-Codex": {
+      "files": 1,
+      "source_files": 0,
+      "source_lines": 0,
+      "test_files": 0
+    }
+  },
+  "excludes": [
+    ".git",
+    "build",
+    "data",
+    "frames",
+    "node_modules",
+    "public",
+    "strips",
+    "vendor",
+    "webp",
+    "*.min.js"
+  ]
+}

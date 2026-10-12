@@ -1,0 +1,277 @@
+[
+  {
+    "query": "sqlite-vec",
+    "exit_code": 0,
+    "results": [
+      {
+        "description": "A vector search SQLite extension that runs anywhere!",
+        "fullName": "asg017/sqlite-vec",
+        "stargazersCount": 8179,
+        "url": "https://github.com/asg017/sqlite-vec"
+      },
+      {
+        "description": "Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.",
+        "fullName": "doobidoo/mcp-memory-service",
+        "stargazersCount": 2007,
+        "url": "https://github.com/doobidoo/mcp-memory-service"
+      },
+      {
+        "description": "SQLite-Vector is a cross-platform, ultra-efficient SQLite extension that brings vector search capabilities to your embedded database.",
+        "fullName": "sqliteai/sqlite-vector",
+        "stargazersCount": 1180,
+        "url": "https://github.com/sqliteai/sqlite-vector"
+      },
+      {
+        "description": "Save 30% token costs when using Claude Code, Codex, OpenCode for free - with open source, local semantic search. Works for small and large codebases and monorepos! Enterprise-ready and fully compliant via Ollama and SQLite-vec.",
+        "fullName": "ory/lumen",
+        "stargazersCount": 307,
+        "url": "https://github.com/ory/lumen"
+      },
+      {
+        "description": "Documents repo of ForkSilly. ForkSilly：兼容sillytavern（酒馆）角色卡、世界书、正则、预设、聊天记录的安卓移动端应用；同时也可作为stable diffusion客户端使用。",
+        "fullName": "fatsnk/forksilly.doc",
+        "stargazersCount": 172,
+        "url": "https://github.com/fatsnk/forksilly.doc"
+      },
+      {
+        "description": "A semantic code bookmarking system for humans and agents",
+        "fullName": "DanielCardonaRojas/codemark",
+        "stargazersCount": 126,
+        "url": "https://github.com/DanielCardonaRojas/codemark"
+      },
+      {
+        "description": "Shared memory + orchestration for your coding agents — one MCP server, persistent vector memory, agent registry",
+        "fullName": "pouyahasanamreji/continuum",
+        "stargazersCount": 98,
+        "url": "https://github.com/pouyahasanamreji/continuum"
+      },
+      {
+        "description": "AI-powered authorized security testing workspace. Maintained on the release branch (NestJS + Ink TUI + Web/Desktop).",
+        "fullName": "iammm0/secbot",
+        "stargazersCount": 75,
+        "url": "https://github.com/iammm0/secbot"
+      }
+    ],
+    "error": null
+  },
+  {
+    "query": "orama",
+    "exit_code": 0,
+    "results": [
+      {
+        "description": "🌌  A complete search engine and RAG pipeline in your browser, server or edge network with support for full-text, vector, and hybrid search in less than 2kb.",
+        "fullName": "oramasearch/orama",
+        "stargazersCount": 10574,
+        "url": "https://github.com/oramasearch/orama"
+      },
+      {
+        "description": "Official documentation, blog, and changelog for LibreChat. Built with Next.js and Fumadocs. Live at librechat.ai",
+        "fullName": "LibreChat-AI/docs",
+        "stargazersCount": 677,
+        "url": "https://github.com/LibreChat-AI/docs"
+      },
+      {
+        "description": "OramaCore is the complete runtime you need for your projects, answer engines, copilots, and search. It includes a fully-fledged full-text search engine, vector database, LLM interface, and many more utilities.",
+        "fullName": "oramasearch/oramacore",
+        "stargazersCount": 262,
+        "url": "https://github.com/oramasearch/oramacore"
+      },
+      {
+        "description": "Plug and play React charts",
+        "fullName": "kensho-technologies/orama",
+        "stargazersCount": 123,
+        "url": "https://github.com/kensho-technologies/orama"
+      },
+      {
+        "description": "Explore your logs smarter and faster 🌀 A sleek and powerful Node.js log viewer.",
+        "fullName": "pinoramajs/pinorama",
+        "stargazersCount": 98,
+        "url": "https://github.com/pinoramajs/pinorama"
+      },
+      {
+        "description": "Display mountain peaks around a location using PeakFinder-API",
+        "fullName": "woheller69/PeakOrama",
+        "stargazersCount": 79,
+        "url": "https://github.com/woheller69/PeakOrama"
+      },
+      {
+        "description": "An open source blog template build with Astro and Bulma 🚀",
+        "fullName": "Domenico-Tenace-Open-Labs/astro-minimal",
+        "stargazersCount": 62,
+        "url": "https://github.com/Domenico-Tenace-Open-Labs/astro-minimal"
+      },
+      {
+        "description": "A graphical user interface for deep learning cardiac intravascular ultrasound, optical coherence tomography and computer tomography segmentation and modification.",
+        "fullName": "AI-in-Cardiovascular-Medicine/HolOrama",
+        "stargazersCount": 20,
+        "url": "https://github.com/AI-in-Cardiovascular-Medicine/HolOrama"
+      }
+    ],
+    "error": null
+  },
+  {
+    "query": "LLM evaluation",
+    "exit_code": 0,
+    "results": [
+      {
+        "description": "The LLM Evaluation Framework",
+        "fullName": "confident-ai/deepeval",
+        "stargazersCount": 18748,
+        "url": "https://github.com/confident-ai/deepeval"
+      },
+      {
+        "description": "OpenCompass is an LLM evaluation platform, supporting a wide range of models from OpenAI, Anthropic, Gemini, Qwen, GLM, DeepSeek, etc, across 100+ datasets covering knowledge, reasoning, coding, science, language, long-context, and safety.",
+        "fullName": "open-compass/opencompass",
+        "stargazersCount": 7505,
+        "url": "https://github.com/open-compass/opencompass"
+      },
+      {
+        "description": "Sharing both practical insights and theoretical knowledge about LLM evaluation that we gathered while managing the Open LLM Leaderboard and designing lighteval!",
+        "fullName": "huggingface/evaluation-guidebook",
+        "stargazersCount": 2154,
+        "url": "https://github.com/huggingface/evaluation-guidebook"
+      },
+      {
+        "description": "The papers are organized according to our survey: Evaluating Large Language Models: A Comprehensive Survey.",
+        "fullName": "tjunlp-lab/Awesome-LLMs-Evaluation-Papers",
+        "stargazersCount": 809,
+        "url": "https://github.com/tjunlp-lab/Awesome-LLMs-Evaluation-Papers"
+      },
+      {
+        "description": "Reproducible, flexible LLM evaluations",
+        "fullName": "allenai/olmes",
+        "stargazersCount": 402,
+        "url": "https://github.com/allenai/olmes"
+      },
+      {
+        "description": "GPT-Fathom is an open-source and reproducible LLM evaluation suite, benchmarking 10+ leading open-source and closed-source LLMs as well as OpenAI's earlier models on 20+ curated benchmarks under aligned settings.",
+        "fullName": "GPT-Fathom/GPT-Fathom",
+        "stargazersCount": 345,
+        "url": "https://github.com/GPT-Fathom/GPT-Fathom"
+      },
+      {
+        "description": "Your faithful, impartial partner for audio evaluation — know yourself, know your rivals. 真实评测，知己知彼。A unified benchmark framework for ASR/TTS/Audio Codec/audio LLM evaluation",
+        "fullName": "OpenBMB/UltraEval-Audio",
+        "stargazersCount": 326,
+        "url": "https://github.com/OpenBMB/UltraEval-Audio"
+      },
+      {
+        "description": "BABILong is a benchmark for LLM evaluation using the needle-in-a-haystack approach.",
+        "fullName": "booydar/babilong",
+        "stargazersCount": 257,
+        "url": "https://github.com/booydar/babilong"
+      }
+    ],
+    "error": null
+  },
+  {
+    "query": "transformers.js",
+    "exit_code": 0,
+    "results": [
+      {
+        "description": "State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!",
+        "fullName": "huggingface/transformers.js",
+        "stargazersCount": 16342,
+        "url": "https://github.com/huggingface/transformers.js"
+      },
+      {
+        "description": "A collection of 🤗 Transformers.js demos and example applications",
+        "fullName": "huggingface/transformers.js-examples",
+        "stargazersCount": 2105,
+        "url": "https://github.com/huggingface/transformers.js-examples"
+      },
+      {
+        "description": "On-device AI agent Chrome extension powered by Transformers.js and Gemma 4",
+        "fullName": "nico-martin/gemma4-browser-extension",
+        "stargazersCount": 1163,
+        "url": "https://github.com/nico-martin/gemma4-browser-extension"
+      },
+      {
+        "description": "Free image background removal - private, client-side and powered by Transformers.js",
+        "fullName": "addyosmani/bg-remove",
+        "stargazersCount": 1022,
+        "url": "https://github.com/addyosmani/bg-remove"
+      },
+      {
+        "description": "SemanticFinder - frontend-only live semantic search with transformers.js",
+        "fullName": "do-me/SemanticFinder",
+        "stargazersCount": 326,
+        "url": "https://github.com/do-me/SemanticFinder"
+      },
+      {
+        "description": "https://ermine.ai -- 100% client-side live audio transcription, powered by transformers.js",
+        "fullName": "vishnumenon/ermine-ai",
+        "stargazersCount": 324,
+        "url": "https://github.com/vishnumenon/ermine-ai"
+      },
+      {
+        "description": "EntityDB is an in-browser vector database wrapping indexedDB and Transformers.js over WebAssembly",
+        "fullName": "babycommando/entity-db",
+        "stargazersCount": 297,
+        "url": "https://github.com/babycommando/entity-db"
+      },
+      {
+        "description": "Browser-compatible JS library for running language models",
+        "fullName": "praeclarum/transformers-js",
+        "stargazersCount": 233,
+        "url": "https://github.com/praeclarum/transformers-js"
+      }
+    ],
+    "error": null
+  },
+  {
+    "query": "promptfoo",
+    "exit_code": 0,
+    "results": [
+      {
+        "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
+        "fullName": "promptfoo/promptfoo",
+        "stargazersCount": 25906,
+        "url": "https://github.com/promptfoo/promptfoo"
+      },
+      {
+        "description": "AgentEval is the comprehensive .NET toolkit for AI agent evaluation—tool usage validation, RAG quality metrics, stochastic evaluation, and model comparison—built first for Microsoft Agent Framework (MAF) and Microsoft.Extensions.AI. What RAGAS, PromptFoo and DeepEval do for Python, AgentEval does for .NET",
+        "fullName": "AgentEvalHQ/AgentEval",
+        "stargazersCount": 155,
+        "url": "https://github.com/AgentEvalHQ/AgentEval"
+      },
+      {
+        "description": "The GitHub Action for Promptfoo.  Test your prompts, agents, and RAGs. AI Red teaming, pentesting, and vulnerability scanning for LLMs. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+        "fullName": "promptfoo/promptfoo-action",
+        "stargazersCount": 75,
+        "url": "https://github.com/promptfoo/promptfoo-action"
+      },
+      {
+        "description": "AutoResearch + PromptFoo = AutoPrompter. Run it with Neo AI Engineer",
+        "fullName": "gauravvij/AutoPrompter",
+        "stargazersCount": 58,
+        "url": "https://github.com/gauravvij/AutoPrompter"
+      },
+      {
+        "description": "A Docker lab integrating Splunk SIEM with Ollama LLM via MCP for AI security operations. Features Promptfoo OWASP evaluation, TA-ollama and TA-mcp-jsonrpc add-ons, dual bind-mount log ingestion, and real-time HEC streaming across six indexes for MITRE ATLAS TTP detection.",
+        "fullName": "rsfl/splunk-mcp-llm-siemulator",
+        "stargazersCount": 34,
+        "url": "https://github.com/rsfl/splunk-mcp-llm-siemulator"
+      },
+      {
+        "description": "Your guide to the Agentic AI evolution. **Prompting Blueprints** offers a curated collection of concepts and tactics for building autonomous AI workflows. Master tool-specific playbooks, backed by structured prompt packs and rigorous evaluations for the latest AI models.",
+        "fullName": "TomasHer/prompting-blueprints",
+        "stargazersCount": 23,
+        "url": "https://github.com/TomasHer/prompting-blueprints"
+      },
+      {
+        "description": "Evaluate Dify assistants with promptfoo!",
+        "fullName": "perzeuss/dify-promptfoo",
+        "stargazersCount": 19,
+        "url": "https://github.com/perzeuss/dify-promptfoo"
+      },
+      {
+        "description": "Linux version of Splunk MCP LLM MCP SIEMulator . A Docker lab integrating Splunk SIEM with Ollama LLM via Model Context Protocol for AI-powered security operations. Features Promptfoo evaluation, OpenWebUI chat interface, Splunk UF and Raw HEC logging for real-time event ingestion and LLM-assisted incident response testing.",
+        "fullName": "rsfl/splunk-mcp-llm-siemulator-linux",
+        "stargazersCount": 19,
+        "url": "https://github.com/rsfl/splunk-mcp-llm-siemulator-linux"
+      }
+    ],
+    "error": null
+  }
+]

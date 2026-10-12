@@ -1,0 +1,35 @@
+{
+  "memory_namespace_leak": {
+    "requested": "A",
+    "returned": [
+      "workflow-A-secret",
+      "workflow-B-secret"
+    ],
+    "reproduced": true
+  },
+  "cold_clear_keeps_disk_memory": {
+    "reproduced": true
+  },
+  "shutdown_loses_queued_final_chat": {
+    "writes": [
+      "first"
+    ],
+    "pending": 1,
+    "reproduced": true
+  },
+  "branch_loop_keyword_failure": {
+    "_execute_conditional_branch": "BaseEventLoop.run_in_executor() got an unexpected keyword argument 'value'",
+    "_execute_loop": "BaseEventLoop.run_in_executor() got an unexpected keyword argument 'value'"
+  },
+  "tool_choice_cap_ignored": {
+    "requested": "none",
+    "sent": "auto",
+    "reproduced": true
+  },
+  "http_v2_done_assignments": [
+    [
+      77,
+      "self.done = False"
+    ]
+  ]
+}

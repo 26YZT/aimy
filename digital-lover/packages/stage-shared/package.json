@@ -1,0 +1,59 @@
+{
+  "name": "@proj-airi/stage-shared",
+  "type": "module",
+  "private": true,
+  "description": "Shared",
+  "author": {
+    "name": "Moeru AI Project AIRI Team",
+    "email": "airi@moeru.ai",
+    "url": "https://github.com/moeru-ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moeru-ai/airi.git",
+    "directory": "packages/stage-shared"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./auth": "./src/auth/index.ts",
+    "./analytics/openpanel": "./src/analytics/openpanel.ts",
+    "./beat-sync": "./src/beat-sync/index.ts",
+    "./global-shortcut": "./src/global-shortcut/index.ts",
+    "./godot-stage": "./src/godot-stage/index.ts",
+    "./perf/io-trace": "./src/perf/io-trace.ts",
+    "./plugin-host": "./src/plugin-host.ts",
+    "./server-channel-qr": "./src/server-channel-qr.ts",
+    "./types/io-trace": "./src/types/io-trace.ts",
+    "./types/pinia-action-event": "./src/types/pinia-action-event.ts",
+    "./electron-renderer": "./src/electron-renderer.d.ts",
+    "./composables": "./src/composables/index.ts",
+    "./webgpu": "./src/webgpu/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@moeru/std": "0.1.0-beta.17",
+    "@vueuse/core": "^14.4.0",
+    "gpuu": "^1.0.7",
+    "pinia": "^4.0.3",
+    "valibot": "^1.4.2",
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
+    "@moeru/eventa": "1.0.0",
+    "@nekopaw/tempora": "0.4.0-alpha.1",
+    "@proj-airi/electron-screen-capture": "workspace:^",
+    "@types/audioworklet": "^0.0.100",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11",
+    "vite": "8.2.2",
+    "@types/node": "26.2.0",
+    "vue-tsc": "3.3.11",
+    "@vue-macros/volar": "^3.1.4",
+    "electron": "43.4.1",
+    "jsdom": "30.0.1"
+  }
+}

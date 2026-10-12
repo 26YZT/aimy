@@ -1,0 +1,38 @@
+{
+  "name": "digital-lover",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.24.0",
+  "description": "Aimy — 基于 AIRI 的虚拟情感陪伴产品工作区",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "pnpm --filter @proj-airi/core-agent... run build && pnpm --filter @proj-airi/electron-screen-capture build",
+    "typecheck": "pnpm -r --no-bail --if-present run typecheck",
+    "test:unit": "pnpm --filter @proj-airi/core-agent --filter @digital-lover/experience-lab --filter @digital-lover/companion-engine --filter @digital-lover/relationship-engine --filter @digital-lover/text-chat-cli --filter @proj-airi/audio --filter @proj-airi/pipelines-audio --filter @proj-airi/plugin-protocol --filter @proj-airi/server-sdk --filter @proj-airi/better-ws --filter @proj-airi/model-driver-lipsync --filter @proj-airi/stage-shared --filter @proj-airi/stage-ui-three --filter @digital-lover/aimy-desktop exec vitest run && pnpm --filter @proj-airi/provider-inference test:node",
+    "test:browser": "pnpm --filter @proj-airi/provider-inference test:browser",
+    "test": "pnpm run test:unit && pnpm run test:browser",
+    "verify": "pnpm run build:desktop && pnpm run typecheck && pnpm test",
+    "chat": "pnpm --filter @digital-lover/text-chat-cli start",
+    "test:setup": "playwright install chromium --only-shell",
+    "test:experience": "pnpm --filter @digital-lover/companion-engine --filter @proj-airi/pipelines-audio exec vitest run",
+    "smoke:live": "pnpm --silent --filter @digital-lover/experience-lab start",
+    "desktop": "pnpm --filter @digital-lover/aimy-desktop dev",
+    "build:desktop": "pnpm build && pnpm --filter @digital-lover/aimy-desktop build",
+    "start:desktop": "pnpm --filter @digital-lover/aimy-desktop start",
+    "setup:desktop": "pnpm --filter @digital-lover/aimy-desktop run setup",
+    "test:desktop": "pnpm --filter @digital-lover/aimy-desktop test:desktop",
+    "test:media": "pnpm --filter @digital-lover/aimy-desktop test:media",
+    "test:screen": "pnpm --filter @digital-lover/aimy-desktop test:screen",
+    "test:decode-budget": "pnpm --filter @digital-lover/aimy-desktop test:decode-budget",
+    "test:desktop-visual": "pnpm --filter @digital-lover/aimy-desktop test:visual",
+    "verify:desktop": "pnpm build:desktop && pnpm test:desktop"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "vite": "8.2.2",
+    "unocss": "66.7.5"
+  }
+}

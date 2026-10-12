@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-11",
+  "moved_or_archived_source_files": 126,
+  "annotated_markdown_artifacts": 56,
+  "unchanged_non_markdown_evidence_files": 70,
+  "backup_errors": [],
+  "evidence_errors": [],
+  "protected_product_and_config_files": 578,
+  "protected_changes": [],
+  "git_index_before": "cfed2c524e1f382ac46018366c06887b298bb74f84d1ece2e8e7aee851745c49",
+  "git_index_after": "cfed2c524e1f382ac46018366c06887b298bb74f84d1ece2e8e7aee851745c49",
+  "git_index_unchanged": true,
+  "compatibility_errors": [],
+  "local_links_checked": 521,
+  "current_missing_links": 8,
+  "new_missing_links": 0,
+  "not_run": [
+    "product tests",
+    "app startup",
+    "model/device calls",
+    "commit/push"
+  ],
+  "backup": "/Users/mima1234/Documents/aimy/.baseline/documentation-organization-2026-10-11-6f7c7ba9"
+}

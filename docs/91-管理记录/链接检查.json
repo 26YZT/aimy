@@ -1,0 +1,146 @@
+{
+  "baseline_missing_links": [
+    {
+      "original_document": "digital-lover/packages/better-ws/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE"
+    },
+    {
+      "original_document": "digital-lover/packages/plugin-protocol/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE"
+    },
+    {
+      "original_document": "digital-lover/packages/server-sdk/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE"
+    },
+    {
+      "original_document": "digital-lover/packages/server-shared/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "../stage-ui",
+      "target": "digital-lover/packages/stage-ui"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Animations",
+      "target": "digital-lover/packages/ui/src/components/Animations"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Animations/TransitionVertical.vue",
+      "target": "digital-lover/packages/ui/src/components/Animations/TransitionVertical.vue"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form",
+      "target": "digital-lover/packages/ui/src/components/Form"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Checkbox",
+      "target": "digital-lover/packages/ui/src/components/Form/Checkbox"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Select",
+      "target": "digital-lover/packages/ui/src/components/Form/Select"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Field",
+      "target": "digital-lover/packages/ui/src/components/Form/Field"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Input",
+      "target": "digital-lover/packages/ui/src/components/Form/Input"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Radio",
+      "target": "digital-lover/packages/ui/src/components/Form/Radio"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Range",
+      "target": "digital-lover/packages/ui/src/components/Form/Range"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Select",
+      "target": "digital-lover/packages/ui/src/components/Form/Select"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Form/Textarea",
+      "target": "digital-lover/packages/ui/src/components/Form/Textarea"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE"
+    },
+    {
+      "original_document": "digital-lover/packages/ui/README.md",
+      "link": "../../docs/ai/context/ui-components.md#swipeactions",
+      "target": "digital-lover/docs/ai/context/ui-components.md"
+    }
+  ],
+  "current_missing_links": [
+    {
+      "document": "digital-lover/packages/ui/README.md",
+      "link": "../stage-ui",
+      "target": "digital-lover/packages/stage-ui",
+      "existing_before": true
+    },
+    {
+      "document": "digital-lover/packages/ui/README.md",
+      "link": "src/components/Animations/TransitionVertical.vue",
+      "target": "digital-lover/packages/ui/src/components/Animations/TransitionVertical.vue",
+      "existing_before": true
+    },
+    {
+      "document": "digital-lover/packages/ui/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE",
+      "existing_before": true
+    },
+    {
+      "document": "digital-lover/packages/ui/README.md",
+      "link": "../../docs/ai/context/ui-components.md#swipeactions",
+      "target": "digital-lover/docs/ai/context/ui-components.md",
+      "existing_before": true
+    },
+    {
+      "document": "digital-lover/packages/plugin-protocol/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE",
+      "existing_before": true
+    },
+    {
+      "document": "digital-lover/packages/server-sdk/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE",
+      "existing_before": true
+    },
+    {
+      "document": "digital-lover/packages/better-ws/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE",
+      "existing_before": true
+    },
+    {
+      "document": "digital-lover/packages/server-shared/README.md",
+      "link": "../../LICENSE",
+      "target": "digital-lover/LICENSE",
+      "existing_before": true
+    }
+  ],
+  "local_links_checked": 521,
+  "new_missing_links": []
+}

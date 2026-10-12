@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-10",
+  "scope": "Provided AIRI source isolated evaluation; no product source changes",
+  "source": {
+    "path": "/Users/mima1234/Documents/airi-main",
+    "version": "0.12.0-beta.5",
+    "upstream_commit": null,
+    "files": 6214,
+    "tree_sha256": "d0917b7ea0d3283ff969297ef4b3ad198e2b821a589561124d3e9227910c7eba"
+  },
+  "evaluation_copy": "/Users/mima1234/Documents/aimy/.baseline/airi-evaluation-2026-10-10/source",
+  "install": {
+    "status": "passed",
+    "workspaces_selected": 45,
+    "workspaces_total": 74,
+    "frozen_lockfile": true,
+    "ignore_scripts": true,
+    "log_sha256": "4dfe764207341460407ad44483e4dd0359b8a1fd1f4ee558c4c8f341c78d11c7"
+  },
+  "build": {
+    "status": "passed",
+    "completed_builds": 32,
+    "log_sha256": "022f11d13d7512897e4d33b811b137ded798b70b18cc4a3e923cde596bbe1d94"
+  },
+  "desktop_typecheck": {
+    "status": "passed",
+    "package": "@proj-airi/stage-tamagotchi"
+  },
+  "existing_targeted_tests": {
+    "status": "passed",
+    "project": "node",
+    "files": 6,
+    "tests": 25,
+    "first_attempt": "Invalid project name; corrected to existing node project without config changes",
+    "device_or_model_acceptance": false
+  },
+  "original_runtime": {
+    "status": "launched",
+    "platform": "macOS",
+    "display": "Live2D example; VRM not tested",
+    "own_model_requests": 3,
+    "provider_model_name": "not inspected",
+    "profile": "Dedicated temporary profile; user manually logged in; not copied"
+  },
+  "cases": {
+    "new_test_session_text": {
+      "status": "passed",
+      "nickname": "小云",
+      "preference": "温热的乌龙茶",
+      "multi_turn_recall": true
+    },
+    "cross_session_fact_recall": {
+      "status": "not_implemented_in_traced_path",
+      "observed_reply": "不知道。我看不到上一测试会话的内容，所以无法确认当时约定的测试昵称和偏好饮品。"
+    },
+    "restart": {
+      "normal_ui_exit_codes": [
+        0,
+        0
+      ],
+      "process_pids": [
+        59072,
+        60328,
+        60620
+      ],
+      "profile_reused": true,
+      "test_session_id": "Tf_rQrMoT35Oi_I_xW6LH",
+      "read_only_single_indexeddb_key": true,
+      "record_exists_after_restart": true,
+      "known_test_marker_present": true,
+      "by_id_diagnostic_load": true,
+      "test_text_and_reply_visible": true,
+      "automatic_resume_last_new_session": "not_passed",
+      "ordinary_ui_restore": "not_verified",
+      "offline_restore": "not_verified",
+      "cloud_possible": true
+    },
+    "memory_settings": {
+      "status": "WIP",
+      "fixed_label_visible": true
+    },
+    "actual_minimize": {
+      "status": "not_verified",
+      "diagnostic_error": "'Browser.getWindowForTarget' wasn't found",
+      "source_minimize_pauses_stage": true
+    },
+    "computer_use": {
+      "default_pressed_observed": true,
+      "disabled_before_test_requests": true,
+      "not_invoked": true
+    },
+    "real_microphone": "not_enabled",
+    "real_camera": "not_enabled",
+    "real_screen_capture": "not_enabled",
+    "real_asr_tts": "not_verified",
+    "vision": "not_verified",
+    "latency_naturalness": "not_measured",
+    "human_acceptance": "pending"
+  },
+  "source_integrity": {
+    "original_changed": [],
+    "evaluation_existing_files_changed": [],
+    "git_index_sha256": "cfed2c524e1f382ac46018366c06887b298bb74f84d1ece2e8e7aee851745c49"
+  },
+  "github_research": {
+    "project_families": 8,
+    "deep_reads": 5,
+    "candidates_installed": 0,
+    "selection_frozen": false
+  },
+  "privacy": {
+    "existing_chat_bodies_read": false,
+    "credential_values_read": false,
+    "profile_or_auth_logs_copied": false,
+    "screenshots": "Only public test conversations and character",
+    "broad_button_query": "Auto-review rejected; replaced with fixed controls and exact test selectors"
+  },
+  "artifact_directory": "AIRI原版评估",
+  "artifacts": {
+    "2026-10-10-stage.png": {
+      "sha256": "857809ac5775464e2261a90e41f6077e51ef4d634fc63717c38bfec9140732e5"
+    },
+    "2026-10-10-stage-frame2.png": {
+      "sha256": "ab817d29c612b9b5f2c47a4ada86772a94231447d59a84c23f09c210eb4baf44"
+    },
+    "2026-10-10-test-chat.png": {
+      "sha256": "d5cb0effa0baf1d91b30675fc5ee38e65a9f9aed2db1ac9638ac52496fc75a3a"
+    },
+    "2026-10-10-memory-new-session.png": {
+      "sha256": "1b4f252617667c3f6a77628278978ec62343446a23103b54e8563f3e32adbf93"
+    },
+    "2026-10-10-typecheck.txt": {
+      "sha256": "aacdfedc485449151e8f0cedfb8264a7d15047256a7b3c3a4a9e848e28e7b178"
+    },
+    "2026-10-10-targeted-tests.txt": {
+      "sha256": "2a0a378bd53fac70ff60a178815582252a2e4fe8e8af70dfa1a2ea5db5641b62"
+    },
+    "2026-10-10-window-diagnostic.json": {
+      "sha256": "c823a7e4a951553874da67d55aebde1ccfde9faf5b00dfaf92588663e773af89"
+    }
+  },
+  "documentation_verification": {
+    "broken_local_links": [],
+    "independent_review": "Two read-only reviews completed; wording, interruption context and disagreement frequency corrected"
+  },
+  "cleanup": {
+    "first_two_normal_exit_codes": [
+      0,
+      0
+    ],
+    "final_menu_quit": "process_remained_running",
+    "sigterm": "process_remained_running",
+    "forced_termination": "Only owned test PID 60620; launcher exit code 247",
+    "browser_session_closed": true,
+    "dedicated_temporary_profile_and_auth_logs_removed": true,
+    "cloud_test_messages": "Not deleted; only newly created public test conversations were used",
+    "exit_stability": "needs_recheck"
+  }
+}

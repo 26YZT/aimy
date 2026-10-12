@@ -1,0 +1,2034 @@
+{
+  "repo": "lss233/kirara-ai",
+  "upstream_sha": "8295a5deda0b289a3f70d946064b6c9a3e1b0753",
+  "tree_truncated": false,
+  "remote_blob_count": 345,
+  "comparable_source_files": 289,
+  "matches": 289,
+  "differences": [],
+  "files": [
+    {
+      "path": "docker/start.sh",
+      "sha256": "edca834f557d37fe9540f799dcd140da35358308eb1ef69094fdc12760cce82c",
+      "git_blob_sha": "45552063b99608f90c288a0f6ca3b117e91ad2e8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/__init__.py",
+      "sha256": "df03c53d2f8f4c81209cf8c9e00014a395b56430e008f56fd36b4e16b0fd3b04",
+      "git_blob_sha": "f070c4c328a35403a60a622532872ab570367206",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/__main__.py",
+      "sha256": "975b7f425bfca9117ac2d3e9db09d6a1844241cb4226eb5cc381065dfa9a05a7",
+      "git_blob_sha": "527a56a1552cdfa5ebac54b723da86da95c67fd9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/alembic/env.py",
+      "sha256": "44fd4289388d290f4dda628996b515a0255a6401377f5e7e9734913b761a16ab",
+      "git_blob_sha": "2f6744ff496189f5a670d3cd6704cbecad65eda7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/alembic/versions/4a364dbb8dab_initial_migration.py",
+      "sha256": "3daa92501bb682e5f2bcbfdc95ff45d7cdf01129ee265d6af552bf1dd5ffe0a8",
+      "git_blob_sha": "67be892e51914ecaf6584e2985eb725fcb465cde",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/config/__init__.py",
+      "sha256": "69e14ba5790da11d08357dae105912d8453bf2b85beeadf1f34c4d90c0351856",
+      "git_blob_sha": "c77fba6fd7b5de0c1a158000e49b6853b940911d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/config/config_loader.py",
+      "sha256": "97e8d4220477cf5145f42b1041fb92bb729132f968551c1dc38c3c081685dd16",
+      "git_blob_sha": "caf18f66d6be1a5519516680de1f206ca0720c85",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/config/global_config.py",
+      "sha256": "e284cbe39138ba02ca179e9a4459dd1fd107f256fbf712e682c4e2ef2777fb86",
+      "git_blob_sha": "7d28f7cfaadbab9b8aee806cad7be360da1b8f5c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/database/__init__.py",
+      "sha256": "9ff3f74e32e5dcf0c49f33dfd6df982a5b8bb691bfe098e2cc6236f8bca9fc25",
+      "git_blob_sha": "7eed29dc74ad4b3137321d6c31184c9c28fe98c0",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/database/manager.py",
+      "sha256": "edfe4e5481adba1b3d82e7dff807996578ae57be90f2e18f7d2fa15ebb1e6f98",
+      "git_blob_sha": "a6a8275ebb3c856d7bf3bd96c274556e6b155207",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/entry.py",
+      "sha256": "f81e5c6f0504f180f654a0e6c1a0cfa02f6cc04efa3af04f414f97a64f754fd2",
+      "git_blob_sha": "2ea668769bf983a3f5a23b4c03d7e0969d3fdf89",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/__init__.py",
+      "sha256": "b9114e0b614770295d4c2de5763479965e8a0238928c8997be70f394e903e2ff",
+      "git_blob_sha": "54b59066a929d149625ba52bc440118a308514f1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/application.py",
+      "sha256": "6cad8c610b101e1cbea077bb2f23a7f66a358b8f64c4c6f35009a26e1beb4e94",
+      "git_blob_sha": "67fa1dec815dd39c8fb30a8aeda343224002e127",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/event_bus.py",
+      "sha256": "7c46ac325bff6c1bc096ca50836cb55849eefec6cffceb81635cb3ea8f2270b4",
+      "git_blob_sha": "02296b7628d0ca23b264a46d4d95dcd07bbc057e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/im.py",
+      "sha256": "49f1e7dcb0cbabd439c031532a4ec1d7c549c6b6af24e2c2cb3b262e2390ecf6",
+      "git_blob_sha": "b502aa53769637a30e2fd8d5e7126f7b1152185c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/listen.py",
+      "sha256": "45005df7aea8b209f3211e307de24217a4988f01b3d20af6445ad74b302e46c2",
+      "git_blob_sha": "04296a859eaba83445b833708bf792375493c598",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/llm.py",
+      "sha256": "d85cabf5c2363a583a6b6905989f662dd79e9bcdc7c33925b5abd9f1112397e6",
+      "git_blob_sha": "37087ecbdd1d616f4d22abae6b03852152340728",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/plugin.py",
+      "sha256": "17b849e1556877d4c521f492ec6b42014ccd10767aea4dc0fe4f3e365329a652",
+      "git_blob_sha": "2cab4998b613772a32a1748742d9facbfc318ba1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/tracing/__init__.py",
+      "sha256": "db66b44f5f925392068d212085dd22d375cc0a783447420b68528dd67223ead8",
+      "git_blob_sha": "e3eef6f68da7ea4888d70463e4b4a066545b70ff",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/tracing/base.py",
+      "sha256": "7292406295bddd0e9ea1a89c12f6ab47648aedad328025a2e077033b1c1a9217",
+      "git_blob_sha": "85318d9d257dc1b4ec9a3c25dab6518c29ea34fe",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/tracing/llm.py",
+      "sha256": "59c47a1e101e12cd2cfc6506f3cb1b514ea4f8ace42aa081745ff42f9f8b2182",
+      "git_blob_sha": "9764d61c37ac95cf293d0aeb5ae0583949cda6ef",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/events/workflow.py",
+      "sha256": "0c0bfb286086d580a17e912c4c48a08815695b49bb40be9da5f57ef593cac656",
+      "git_blob_sha": "4e11b060f4d3179da4b4ed000846a901603ee63e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/im/__init__.py",
+      "sha256": "58b7de86d5886cecc0aeb67249dea89bd74d60aa52b61076ee5082b7db6fea20",
+      "git_blob_sha": "f6b2c09ecc41c7b7eebe1bef50e43b6a2bbcc627",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/im/adapter.py",
+      "sha256": "53a87c74daa39a8cef4cde0abc3bb917a749b737d3665f1b41cf010b95a6671e",
+      "git_blob_sha": "2956e3df2de24ca92157183fe8949756bde81dfa",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/im/im_registry.py",
+      "sha256": "5df161c9554c9b294fe9e3a0877deffcd14481f52ba19728636a1c92606bfe98",
+      "git_blob_sha": "39a1e7f5b0e413fc802fe692281319eb05a88c01",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/im/manager.py",
+      "sha256": "cf1462784a6a61328e348303e5948be3842c94a1373f7c19df15022629ce0bb6",
+      "git_blob_sha": "e24f263ef3b6986df84870e1723a02dd395585dd",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/im/message.py",
+      "sha256": "d55f04808a3382b153dfe5f46d69b645ed26e05bb7a26b9014598505779838f0",
+      "git_blob_sha": "161b8190d1a50bc7105b671a42ac13d338a8a57d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/im/profile.py",
+      "sha256": "a29964b9e5a8cfcc35ab7ca89f725ec4f8579a932d85fb72a0ef11ca665f07f7",
+      "git_blob_sha": "4e0dba2173f67773dfeca3eba66634032798ecb2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/im/sender.py",
+      "sha256": "a7e36cf13e8d44e306ef7ed243adef470b68fab97f48bbc6208fc889c4c9d970",
+      "git_blob_sha": "6fffe53abdadfdf46084de2011e06a4c7ffce4fb",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/internal.py",
+      "sha256": "9b695467c1667547323f1209573188c197ae22ea520c707145f8cc082b03e748",
+      "git_blob_sha": "826bfa502ab4686fa6fcefdf59e7d66f723a7f82",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/ioc/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/ioc/container.py",
+      "sha256": "0b98043530e080ac8cec6461ee298be07ece1d652ed41eb2e6b9093bf9cd98ae",
+      "git_blob_sha": "cc73b2588b69cd93159f341a02854efffb1fc056",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/ioc/inject.py",
+      "sha256": "32a78fe1b0c2310c205c5d9d2e34279d014d1f7e9593fccaa6c18cd9e3900c63",
+      "git_blob_sha": "3220a61ce7dca1d733c6ab8287db174406e0b2a2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/adapter.py",
+      "sha256": "a82a430772835ad8d8a1db7c1991a82e87b14850164120abd924a6146975d894",
+      "git_blob_sha": "e705c708802c31053d01154e1fbd38d7288f5a7a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/format/__init__.py",
+      "sha256": "95defa1f3f7b19221513cb812a4ff0622ac5fb431c478e1bfbc989f462a3fdd9",
+      "git_blob_sha": "380e07a553cbc2370318874cf2063c9a1856c076",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/format/embedding.py",
+      "sha256": "70f8cbf6312bfe39c578e2fa802d11b585f5569124b771829e8ee9472746bbc2",
+      "git_blob_sha": "0bfdb8eeae2724edc76430bceb01867daab4dfd8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/format/message.py",
+      "sha256": "52d417caf1676fa5755d5e8e1d4126f2902763d89297d44a86c4fd8b396ea23a",
+      "git_blob_sha": "515051f78a51966be282d64fcc2ee84ceaa1fce8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/format/request.py",
+      "sha256": "7f689012b04aad61876df34ede6c80db4f1dc1a4334f0591a0b86a7440286690",
+      "git_blob_sha": "dd05f84e8f79d109bc694e79543df307a014358b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/format/rerank.py",
+      "sha256": "cc39c45ef8efcbd9006b57dee618f55d76074d295667fa5b84e3794d350829a9",
+      "git_blob_sha": "c59e050eb61e8ab1aea782abd1cc408a6caf8e35",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/format/response.py",
+      "sha256": "967ad4cb24b24dcbd53646f1a1c0ae5919fbf8b170e8f2bd04fc7a3b088905f5",
+      "git_blob_sha": "10bb9a247b43b4f6741f8750004ba81035cc1823",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/format/tool.py",
+      "sha256": "a16438142bbbbdba9a961818026dcb4ebdbf882f151692a447e1d478f9b25803",
+      "git_blob_sha": "41d00612755b3c37567a5ae52839ae1fd009047c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/llm_manager.py",
+      "sha256": "f6ab301f94ade926109925f6ff638ef1b8cb57bc2fa4a9f036b83e4dfc7ff9de",
+      "git_blob_sha": "3ca2f5b47e4e3a88093a99a333f0abfcaa4513fd",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/llm_registry.py",
+      "sha256": "8ecc7f0e422ba33ad8e784021013fe42d73b336dd52f3b37289b45bf74542dfc",
+      "git_blob_sha": "0008e1829a4ba47784007d07c41d1395b6d0298d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/llm/model_types.py",
+      "sha256": "cd39890e2f4f5a42d2fab962e6ba69dcea1534aa342915b439c9915b99377695",
+      "git_blob_sha": "0283f8f774adc3be238940988dc44ea73c5cbc1d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/logger.py",
+      "sha256": "66951830eaef367bdb0b586725aa6eb66da1199260f2c53895439293b01426d1",
+      "git_blob_sha": "907aaddd71cb536abfba567a634d70d19ef25b51",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/mcp_module/__init__.py",
+      "sha256": "b42c8c3e9e458ac2f9dc3afd46795e98ea486209c4e67ace54670ade0de623c3",
+      "git_blob_sha": "8c55b3e04bc7098b82c18d664b8390c378c847f2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/mcp_module/manager.py",
+      "sha256": "2ab67153865470916ff2326bbfcc5859f05c06fef283511d9b1dcc76b08079ea",
+      "git_blob_sha": "e4f01455fc0994fd551e1d4da78b5484cc368ceb",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/mcp_module/models.py",
+      "sha256": "887a248b9f0fdae2d2d0faff9e7aaf3777b515da3edc6624bbcf15ad2a0d072b",
+      "git_blob_sha": "774ccdaf6e84dc4913be7ce988a2e740052f84be",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/mcp_module/server.py",
+      "sha256": "fe56ade33bb06a62efafaf6ecf3491c40471fec3f15374c2f777832b66ae8817",
+      "git_blob_sha": "9b62c6e5d51a2cb3f5e04e75b8364e6a0ceb877c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/__init__.py",
+      "sha256": "9762b07868a4f2029feff8b46cf7c4ce2373af93fd47c4472b5b49c1f5380cd1",
+      "git_blob_sha": "3a8c5e31c279876ea9619a22ff621427179b352c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/carrier/__init__.py",
+      "sha256": "9060d953bd00e3088db6917968ce57641c1f4090bc8270c8f15e94c03fa052c2",
+      "git_blob_sha": "e6b051e19e438d1361c49b78edcae3efef5900ed",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/carrier/provider.py",
+      "sha256": "11a959520e05f9eb1d4ce7440237cf53fb9c5190e011ca420895efc011ff50e3",
+      "git_blob_sha": "fe7d6835c7d161a11103f7fcf3be98db8e155bce",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/carrier/registry.py",
+      "sha256": "9b77301f034c947ced78bd59f6e14a44f3af247da9b0f950c77ed82c992ac361",
+      "git_blob_sha": "b98578adb2730c50fef63c885e44dbdeb5ce6286",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/carrier/service.py",
+      "sha256": "cab2a34a564eadc950e10ad99b90f8618aa65c7ba322e2037f9cd4aed5fc0973",
+      "git_blob_sha": "e376e67a5ec2f099b5478d5dfbfe2ecf09913f49",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/manager.py",
+      "sha256": "9b844a0ec5223cda08f845c2b02d4003a6f0c6229f66a2dfdd5b4b2e231dd358",
+      "git_blob_sha": "d6e330db7927ccaf592e6669c9c23d3e22d23eef",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/media_object.py",
+      "sha256": "b3acdde0689853e44aaceb42691c43259740a0b4282f4ce7d8738fdd816de3b5",
+      "git_blob_sha": "c842a9872f5b839714e8f525965e0109c0deea19",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/metadata.py",
+      "sha256": "6c04ce21a6b5e24bce9d74b79da71f49198980b3b25073b0da93aa9a194ea112",
+      "git_blob_sha": "701a425d79dcad780429dd164089cbe49907f3e6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/types/__init__.py",
+      "sha256": "b7c637b22f94d5ea65f7ce303a1c6a3be92f2b348be4f00c5ed1acf6654b656b",
+      "git_blob_sha": "b3fdce279625e3388fd841d2c2a6a8ccd09f57db",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/types/media_type.py",
+      "sha256": "be62e62656bacecb6aa8cb39a0b1ba5a5395c17f77a73da2910642530073a559",
+      "git_blob_sha": "5934518a7e407ecf807f2a7b6cd53dd404a09576",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/utils/__init__.py",
+      "sha256": "421ae59275344c55dd816b06ca3834d0e4715791c4b36ffad17a0f9b6ccc145f",
+      "git_blob_sha": "49bab274ee52b91428583360fc9c2e7df7a9069c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/media/utils/mime.py",
+      "sha256": "f878deb8e97aad295573138435a12c28fbfa238a7bce187c999ca8a6a4f77492",
+      "git_blob_sha": "431f1c48b3856c511b330e60f149dac2e78071de",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/composes/__init__.py",
+      "sha256": "bbba18a123820c127d6ed6b58176d3fd3640ab4756d6e3f8f89920ff3111328d",
+      "git_blob_sha": "2c40b3fa628fe553cd23665553a895c4b4805185",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/composes/base.py",
+      "sha256": "dc49ceccb941b01edd02094ac1762692acd332841f3cd33b85faf96768f5269b",
+      "git_blob_sha": "6017e112ad29321fd496aafb82a5443e72244c7f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/composes/builtin_composes.py",
+      "sha256": "80f043d77b4f567b697cb011d3aaaaabca2a02f029664832b80abae38e32d5e0",
+      "git_blob_sha": "ae5e0a804144585667d8f2fc1e73ece746daf6ac",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/composes/composer_strategy.py",
+      "sha256": "fa35b4a5f6d5ffa9b61feb79fafa036a44635a399412a1f0173327c5f015b6fa",
+      "git_blob_sha": "22a64d149cd566ca9495dbbd379a1c154d73729a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/composes/decomposer_strategy.py",
+      "sha256": "6d0c253a804b6c94586ddfa155ffba32023aec50565e2503d78c8a27d80b5dca",
+      "git_blob_sha": "f7fb09bc904203ebb71ca332b13363f4d271b2d9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/composes/xml_helper.py",
+      "sha256": "14acc0a45516cf0d682f0629bd222015ee8aede7d738e660c614180e9bff6b4b",
+      "git_blob_sha": "0374e202fb6c89e642f4063bf36bb91e8e590a7c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/entry.py",
+      "sha256": "41ad91be96833bf70b704bc01d3ee12ae0845a482d9c00bb40b3d7555e8b9b20",
+      "git_blob_sha": "7a6a6d5e624a519216ad239e0e865a177dd48651",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/memory_manager.py",
+      "sha256": "ef9f6a21d0e7ad573639adcd0a7645777105483c66d74a4904f02e532a271016",
+      "git_blob_sha": "3417114042dea870752d79c1eb9ca7722913e129",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/persistences/__init__.py",
+      "sha256": "c65c924b8787b2e71bbf01026457b6e5dd8d67ca39e9527425d8f19333de4879",
+      "git_blob_sha": "85bc36aa90786813011c983bad6a5a81e222da76",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/persistences/base.py",
+      "sha256": "d98d1e86b21ec33caf56545f7fa7f2aab1d733263ff4ecd3d776fba0d4f96769",
+      "git_blob_sha": "d6934adde61f2b84f42766982b8694e34c2cfc6c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/persistences/codecs.py",
+      "sha256": "34ce7c5c354dfa67b15a33756d982e62e1dbe86017a99001d00db47ba21109ae",
+      "git_blob_sha": "15f504ebe25a4c89057c0bf97619a9139300590e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/persistences/file_persistence.py",
+      "sha256": "72651a5a9296f3fba4b2256d47a4ac912db8bdc3d6a8ef70853af19821a1ccc0",
+      "git_blob_sha": "1688a06088f9443aa931c4df1ae23eaab41d4087",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/persistences/redis_persistence.py",
+      "sha256": "4617d6ffb63f4e3769b3839584d4d5c9bd3fee0578bdd808725a9147c4f75d28",
+      "git_blob_sha": "407218c42c420a67ff7df62da3e7701fb5261791",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/registry.py",
+      "sha256": "3852d80cfd0ef64b6424c0b3d9cbe4cb535146cc30cd7df491c4bfd177f42510",
+      "git_blob_sha": "050d1f322ba91261c1d1f46b4b88e975ddfc5115",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/scopes/__init__.py",
+      "sha256": "0e7e5f50e0d3a65453ec4245ad90990e67cf8605bba385876ec7f173a7c01729",
+      "git_blob_sha": "566bd0e511cef2c787b95040917576c62ae72645",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/scopes/base.py",
+      "sha256": "ac034d5e8a8f6df6e49e1218afa9d63e0bdbb1b8b99dd4216c1546f000fc5fe0",
+      "git_blob_sha": "d4fb3722205035f7ebd191b626558780debdd9b1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/memory/scopes/builtin_scopes.py",
+      "sha256": "f81c3cc618f496b8a15c9d86bc4f809718f8540105d2219030bdc9082a652dd9",
+      "git_blob_sha": "2d6652b6405bf0ca83ae36ff4f53128e67729e85",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugin_manager/models.py",
+      "sha256": "f3aaf806511f8b571a069b0a472e1644e997171d7da63c72a9a04b0f97847965",
+      "git_blob_sha": "318dfc1d5d52907069ffe05c4be1d3f49afc6c4e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugin_manager/plugin.py",
+      "sha256": "8732c0704af304f2498e0f8797ceed8821f76c312b2fccc2424d67d74cb30637",
+      "git_blob_sha": "aa9d23b19fbfdf1c19d851332c8a4354064a7780",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugin_manager/plugin_event_bus.py",
+      "sha256": "dfad7ea13f3ec7173d064d7ad12bf009c02189802e2e6582fc20841eecd5d1f4",
+      "git_blob_sha": "ec7c979e3bf57d19677059627472a60696ffdb35",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugin_manager/plugin_loader.py",
+      "sha256": "14581be7ee36a824e064be9c3aee97a11343e660ba84602b4a80fc67f802aeb1",
+      "git_blob_sha": "4c497d582fc56fbcfca96e508283eb6cdc24661f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugin_manager/utils.py",
+      "sha256": "74d41917355b156f846667cbb1b88da8698573e53d77206f22ac24fee838161a",
+      "git_blob_sha": "49caa5f2cacfe770d2201900b754f5809c12e1cd",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/bundled_frpc/__init__.py",
+      "sha256": "b94fa608ad9de2993e00b1edc182c2242f3f2d3c21c6529871590759f4179f76",
+      "git_blob_sha": "7ffa630aa6306b993b00c44f2c6ea835dc0ad527",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/bundled_frpc/frpc_manager.py",
+      "sha256": "d95c893fb4d0ae7b5533c84685f3d675bb5353c76bf9ec28a70e11607e97183f",
+      "git_blob_sha": "7012678ef63eda65c3ec6f2205757f4fa586eab4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/bundled_frpc/models.py",
+      "sha256": "7fc33db45c908751eb09167dd5b58adac625e530626f876f3d3ef9df96019b24",
+      "git_blob_sha": "8d0cd2d0ef5456dd0199e406d2f461b3e3696b3f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/bundled_frpc/routes.py",
+      "sha256": "ff420a3eda8819d29cab70f6eeaa2d31f14cb91d8f761b1ef6f26551a1efa160",
+      "git_blob_sha": "451108715948062b3abda1391ff165d8bd8900c2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_http_legacy_adapter/__init__.py",
+      "sha256": "fbb067d9ad783e52367b42e903db3ed9a752461d0490fd3986ceebe8da72ba3a",
+      "git_blob_sha": "d4274c84259da12aa2f3483fb8713a3ad6f68ec9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_http_legacy_adapter/adapter.py",
+      "sha256": "0cbf27b991bc0f6fd8c8b2b2bcab05566060ff3b9fad2e5cc0c8dd6d9ed217b2",
+      "git_blob_sha": "a0cbb0f3dae6db3e073ee9cdb074d998480048e2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_http_legacy_adapter/setup.py",
+      "sha256": "b2a8c0a7f423245dc27741eb1d3a1b20ee9d01af04947e766646d9294356bd5d",
+      "git_blob_sha": "c06fdaad2eff1d9c3596b09cc184f817dc6c2705",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_http_legacy_adapter/tests/api_test.py",
+      "sha256": "edf36500ad0ce185d8650bdac36f289da8d7230d523ea0e94abf7f6f4171273c",
+      "git_blob_sha": "5f7d2df3d7fd3f93335f3b62f89931fb9711f3a1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_qqbot_adapter/__init__.py",
+      "sha256": "b2f2e12967d75ce542cfa6f8e0ca219e24ee6769d56271994f3f0babb80ce3bf",
+      "git_blob_sha": "fdbbbe5c78b3327b173158fa6d9156c02d8dd7d8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_qqbot_adapter/adapter.py",
+      "sha256": "25de80759532c02f77d466d16525cd0362975aa9b64fa289997663340d35bd83",
+      "git_blob_sha": "fcc5d818b8e802b44f20b2228287ec4658c23345",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_qqbot_adapter/setup.py",
+      "sha256": "6898651d43413eac475d7a75a1245aefe6b30491a3bb1e98582ed5e4ee13cb58",
+      "git_blob_sha": "5a17507943d8513ff83771d62460262cf5d66c14",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_qqbot_adapter/utils.py",
+      "sha256": "e9a4092410bf2cdfbd304dc1d2a592e3cba1b0a531c1783d097f191b4397ef58",
+      "git_blob_sha": "c7ddee95ca00bb0c537097feaee08feefa3675c7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_telegram_adapter/__init__.py",
+      "sha256": "8c61e196f5a918b316557ebddd0bc757965e04d3782823ff5621b704266141cf",
+      "git_blob_sha": "f099b6aab8820d15361390a42d7da040335fa202",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_telegram_adapter/adapter.py",
+      "sha256": "58fae3d638aa47b9380c7d3d6ccf94c4c30441a6c694915865c8770635fb1b0e",
+      "git_blob_sha": "fc9cd95e67fc3c9e31ed3fc0ac5891c22a7d495d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_telegram_adapter/setup.py",
+      "sha256": "602daa230ceb70e8b29c11e5135eeb264b4b4f74eb156e35a855373448c43347",
+      "git_blob_sha": "c7ba2a0953cf6a68473ae8e7502c7ec56d0e2f0d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_wecom_adapter/__init__.py",
+      "sha256": "1a1aeed3c4125a7a0b65724a9974dfc521e1fcd2d921e936961cd3b326447f26",
+      "git_blob_sha": "8a6b990032279ba265ea1adacb92c66d93e06389",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_wecom_adapter/adapter.py",
+      "sha256": "f824907977f1f3b42f892951d732b7f89753ea97d3a62b416ce8c76933bbbe5a",
+      "git_blob_sha": "026b01dd1f3cc192cb23b6aeb0ab164d942f336f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_wecom_adapter/delegates.py",
+      "sha256": "159599f42c5c451b81428c70a439a26ba83c48e3209a64e4ac4136cde65339cc",
+      "git_blob_sha": "58ea525b4b709fb57916675394f364c446fa7dce",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/im_wecom_adapter/setup.py",
+      "sha256": "70104e76abdc2ce8196b5f56f50aff16e66aa62d158ce2fc957856e1216d121a",
+      "git_blob_sha": "75b24e17e6bcf72cfad22b96f3a463249e497d5b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/__init__.py",
+      "sha256": "74254c2ea988fd75d86be20112a0642e2f08810fbcf913c1a40192581dd81b71",
+      "git_blob_sha": "86fbf7e4cd5ac1e52ca2d545dc510fea9e7bd2d3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/alibabacloud_adapter.py",
+      "sha256": "700e2a2f56790e19aa146068771acba1aef11774fc5592ca5f240e60f62b4634",
+      "git_blob_sha": "4ad4080c807a9ec95eef2fa1277d6cfaecc06a47",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/claude_adapter.py",
+      "sha256": "b20020b52090df7e817d32ec75e3eefc3c605872c0ef86b42b200c47c74c7f90",
+      "git_blob_sha": "1e6ded4c1d6f655fe43b5a03d95e209f554f6cdc",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/deepseek_adapter.py",
+      "sha256": "5235530ee59076eb7950429eb2dc58e4a3f780a684e56856afadbef022cc1d1a",
+      "git_blob_sha": "5a986f65b859e680dfdd9f4b6e6d4b088caab3c3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/gemini_adapter.py",
+      "sha256": "16c688599c1c2f373b134c5f863d8462eb23e5776d311a54f9db7e76b6b53426",
+      "git_blob_sha": "69d8191f4caebfe02a4230b6247ec196d074644c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/minimax_adapter.py",
+      "sha256": "f88e2cff4aa61180db78b10cb7b25dba23d5e10b10bd85cb9f55ba577f80574a",
+      "git_blob_sha": "882f39d746d51e55e9b8553a8af52556218dc586",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/mistral_adapter.py",
+      "sha256": "f4f1749542e6ecdb5291911fee55d410fa71d7a8f83a835a605b4b636bce5274",
+      "git_blob_sha": "2e17455c54918e8b0e2e94c76b1051f1fcf5d65c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/moonshot_adapter.py",
+      "sha256": "39463ef59dc6d00fd5e985daac7c812845956d2a04c46300b10e51a4ffa706a0",
+      "git_blob_sha": "aa7d9cd67581d82ffee2cf886c7c478f60765470",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/ollama_adapter.py",
+      "sha256": "97648e7eb774f06a3e3b408fff1f1602701417e266b577cadf49455bb0a3ed72",
+      "git_blob_sha": "04299e9fd9e55328174adfe7c659ce10e1ee7359",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/openai_adapter.py",
+      "sha256": "e7428da1e18071a681eca303ab6d23550fc1d22a617c776f84a104f46c06348d",
+      "git_blob_sha": "7bba4d8680b1d00881cda3ab9e5d0692a8bcc016",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/openrouter_adapter.py",
+      "sha256": "8452d0942593c353d61e02268910975d36ef40286a69192e370584cb1a4ce914",
+      "git_blob_sha": "09fa15c00b4c5513d095d6f0fd61622f30994aef",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/setup.py",
+      "sha256": "54da73534f6c2f6106df6dfd2f2261811e2955fe68938791b6fbe77164d22b26",
+      "git_blob_sha": "31020e05a2b85f937375d734d652c74f1643ce93",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/siliconflow_adapter.py",
+      "sha256": "c97529f1d1d9c9f2f1415390d636b40179148b8191b58518b1165c280a79c90f",
+      "git_blob_sha": "eb5dd3e1ba97d9df123fc73ee68f9a6a61186234",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/tencentcloud_adapter.py",
+      "sha256": "0ed01644e4547799e8335d637f5e75d4112751d34adc9b9f867479fef4347df8",
+      "git_blob_sha": "1d6db20ea6ca4f7068758f122755ea5b514620af",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/tests/test_utils.py",
+      "sha256": "13945892d1ab1d471082e527821ba3733e21f512ef0651ccaa75173622f5c9fe",
+      "git_blob_sha": "4e8d9da0ef7bf65ae5e5d70ee3fe91547325448e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/utils.py",
+      "sha256": "453b85d67ddd983dcfbc2d3c648efb528ecfbf5a10526fd8c381e64eaee80de8",
+      "git_blob_sha": "45b77c3f8ef040673cd05bf50d4e74f7fb999025",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/volcengine_adapter.py",
+      "sha256": "3bbd9bc8208a1697bdd1c7f19efcb46095daedc96fb08acdcd705f55df129f0a",
+      "git_blob_sha": "9d0dce1b041a20dc2d730d758cd24e78b16596b8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/plugins/llm_preset_adapters/voyage_adapter.py",
+      "sha256": "9222515a510d3d135d46767cff5f1a0cb54c2669a748bb5372c4af2e396bf107",
+      "git_blob_sha": "bc3de7ac79840f78a1e1caf5dc133bad54fed7ab",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/system/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/system/updater.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/tracing/__init__.py",
+      "sha256": "afba3e8254eff2fc2f11bc313c947391066cf1b9166c294b4e3c07d1902a16cd",
+      "git_blob_sha": "fde06e2aeda3254b685114c218928a5ce9deda48",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/tracing/core.py",
+      "sha256": "c055dae4a0347323e070dd8b35731418b820ca760b7d4209697ad2294fe26192",
+      "git_blob_sha": "52209b85dc56f1a67293de51ff5675bc88695f82",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/tracing/decorator.py",
+      "sha256": "77543a1ff5c74752d0b73a6682b4e8ad3c71bc11568f908598e1bc4e26913560",
+      "git_blob_sha": "ddaf89107a00dd44b6fcb3cd408eeb7fb82a18fc",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/tracing/llm_tracer.py",
+      "sha256": "5e4e097c3eef3ba86f927c64f0daf62f1bd6c2c7a66e9ab7d724d545d83ec0d2",
+      "git_blob_sha": "dee37a00b2a58b17762da5d44bbf085371769e35",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/tracing/manager.py",
+      "sha256": "5c6e1da0ef3fb2c4376a1b16fe628da373afa0415f4767cdf9b001b284c8349c",
+      "git_blob_sha": "9d446b1ff543dece87560ae8047f85669e4268a9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/tracing/models.py",
+      "sha256": "e688004cae002e6ba40fa4c739a368d02774867c88187ac148a7c233a86d29aa",
+      "git_blob_sha": "182b35d67526fc07fe2f2519c594b9237bbf1c99",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/__init__.py",
+      "sha256": "30dfffd640715842e0de5a0aed4a739a8410db8ce2b3e97aa82baa9148772b08",
+      "git_blob_sha": "118e181eb3cb51087523db6811597829a282a94d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/diagnostics/base_diagnostic.py",
+      "sha256": "e3ea59851c00a954b1cf9e8a659d0f46d38fc0022caa736becbd7d3c3378bcee",
+      "git_blob_sha": "d389a672a294eb652674f3a934f449c5675521ee",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/diagnostics/import_check.py",
+      "sha256": "6cfdd7279edd21426f4a7b82a61c7fb193b733130dc43840895813b672ef9741",
+      "git_blob_sha": "5d7a9d6c78106ea6e4249d791414e56d8d8426d5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/diagnostics/jedi_syntax_check.py",
+      "sha256": "873bad6b6dcf4e8f49136ef844dc02ae00a271b24ef70f21fb37088182f5ddb2",
+      "git_blob_sha": "0beb9eb7551222c305b1c03f5389d73825d9a5e1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/diagnostics/mandatory_function.py",
+      "sha256": "d052ca573ca4087741f6308553ddf49381966e0b7e07f7475c317626c728a37b",
+      "git_blob_sha": "9fe05f2aa46169699e8bf42978a732ecac95672b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/diagnostics/pyflakes_check.py",
+      "sha256": "265c3a8736bf0d5724febfff082e7640d3f60a126a21db16ad1ca87ce503e222",
+      "git_blob_sha": "06ac83d408b772190556079065bbe44d584f1d6a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/models.py",
+      "sha256": "c33e989bf3dcc9a451a5afe3e5d652eb302fc2561915c0965a7f94ea1b889bd0",
+      "git_blob_sha": "d594da97656f61eb6380195ff98522db4ac369f8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/python_lsp.py",
+      "sha256": "b18b69ba6ba6467689a5d23bf19ea274309090cf19966a9d627ab2babd9838b2",
+      "git_blob_sha": "6f7dd966d39cc09dccdc1d6894ffb6f5d59105d6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/block/routes.py",
+      "sha256": "d1a1f5cd2319349002a77404d71483bbc94ea0dc45d794c6b16edc2c71e85cf1",
+      "git_blob_sha": "12c35f761269670d9d5a83aedbc8776f69770f9f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/dispatch/__init__.py",
+      "sha256": "d93b3317fbd3b06c11901c6b040e81a4f4449b50377cba0948ec8b1196bbf57c",
+      "git_blob_sha": "223558a40dc222bf5c6616933c2b4a9487ee9ba2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/dispatch/models.py",
+      "sha256": "b9724cf6135bf8fb30152d6a2913bfd01bc726807fe141ecf8992c861d59fbd9",
+      "git_blob_sha": "e20e0012611c3057bf67c7214476b45eb6e891d5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/dispatch/routes.py",
+      "sha256": "f188f37b2496daaeb8b0802ed9c8a2814339cc9a4f70c8cf3da0e2ebeb18574d",
+      "git_blob_sha": "28c0d88d5dbdef76f7fc524816f891850619cd3b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/im/__init__.py",
+      "sha256": "cbb6d40e6d1a19abc867b8c2d2202032d77f30ff36d3b0a237b50589ae906a3a",
+      "git_blob_sha": "3a7a1f163ec5a5ed11fe9325ad2c218a520c0e61",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/im/models.py",
+      "sha256": "17485491b101054d7f9a379e5097ddb556d53a1e835a850f91a257e1beb46810",
+      "git_blob_sha": "8887e31adeb6a2b60723e198bffb68eb76186b04",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/im/routes.py",
+      "sha256": "124c6dab1046b76de92509aa10b4342ed49fb7bd1e1e8a58aec5cd6350dd4ca7",
+      "git_blob_sha": "4e3a125e3bb824cfd7bc0d5636a831ee69f8d105",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/llm/__init__.py",
+      "sha256": "78b9f2c05277f3bb48e4651972e738d740792e5117f230d0fd76d0084e8b4a1d",
+      "git_blob_sha": "98089db5047234fea77809944f1ff3e2c22240a7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/llm/models.py",
+      "sha256": "9c7ddbfee9565929e6e6ac906173bfb7e78f504f8c72b62844404d080bc6cb32",
+      "git_blob_sha": "0adf915cc0ca51119e265c9bf53d05e7089faae9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/llm/routes.py",
+      "sha256": "ac9387cae82c2e864ef1305720c88e0ac250879761c727564131d6e7dd005b22",
+      "git_blob_sha": "8164e202ac5e816dd6638abf543fe23b4eeb4941",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/mcp/__init__.py",
+      "sha256": "37889ecc72d91eab6ecd92b645c5d9dc11707e7036f7273f57d59efba576518d",
+      "git_blob_sha": "269d997bf2926eb409a7a3434e30ba8682dfba08",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/mcp/models.py",
+      "sha256": "1cf344075986b1e93e432df3b55d734326fc507178deba41f1e49fbe4c7d9a9e",
+      "git_blob_sha": "d586fc705792fb50304f6c3199d3a155c0e30897",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/mcp/routes.py",
+      "sha256": "ddc990e9d62b5b9a219ba7717a5fa185bde5d1ec4e205ecf8f700cceaccc8f47",
+      "git_blob_sha": "fa2bd5253b59a894f76b0764c3335e8b24408ec0",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/media/__init__.py",
+      "sha256": "d50e06d99d3622b0fea7a377f94d405b276dfe0deec71d3c49fd0eb486a4d407",
+      "git_blob_sha": "2e83325c4272921aa61cb45ebfdd853e3d6c44d3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/media/models.py",
+      "sha256": "e84b4682e0e648ec504e57c52e5a392d511743c144ca9256c9398bbf756bd18c",
+      "git_blob_sha": "adc7a013ee700779073373545a94927901ceaa85",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/media/routes.py",
+      "sha256": "2dce97fab853862d28a1f16f56e3e724ad5b19d08f97a17b22d3eb63a9ab42ec",
+      "git_blob_sha": "7f736117794035d4a1d47d07e39dacad02b6d036",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/plugin/__init__.py",
+      "sha256": "fe6337ba9eefaee7dd16da8cb37e6d2477b543ca0647092ace02b7b3cba96559",
+      "git_blob_sha": "38f9b02c8b91e97517c1530054cde0b5dd41685d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/plugin/models.py",
+      "sha256": "0c3771d69c0a5ce946c5be6846db77947cbc5a7a59fcd57b57e62536e11a71a0",
+      "git_blob_sha": "25c6a06661eab82e1a8b87d4e19906b2b64cf059",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/plugin/routes.py",
+      "sha256": "e3101f1dc3e6e82206b257dde627be5844dea7a772f5110de74294e3e17bdb23",
+      "git_blob_sha": "f000d6174d649559bc5f50d72259c866a911ba52",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/system/__init__.py",
+      "sha256": "47da7461f2d728d69a9f05748f9d4404ba920dd2033d2ab0fd5bfc88efcecf4b",
+      "git_blob_sha": "0bb02aa6a5fe7c9dc9bec9cf0d5a90ae3d2c0136",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/system/models.py",
+      "sha256": "98ee5bc2084d316459392d8047fdc1de57505658dd94ec8a145ca743100ecfc7",
+      "git_blob_sha": "304bee773cb60308e578c2a1f6df468f1f173bbe",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/system/routes.py",
+      "sha256": "92945eb1f8a8da0da20ea8bc2c7b5e9468ba37a007ae8c98f0845b2ca3334b9b",
+      "git_blob_sha": "a447ada5e2147887392edf5b8b7deb6e7cf86607",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/system/utils.py",
+      "sha256": "2d04f7a046d1ed17bf13419b6bc0a100a6f1e8d27e0d53005494eb99386f049a",
+      "git_blob_sha": "d40e08c9b66aed19ce8c35c466413654307fb072",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/tracing/__init__.py",
+      "sha256": "90f8fdb5a530075f39c0bf4de73a4b10c6605bb65fe1706f963b5ee93281c0e4",
+      "git_blob_sha": "f25d30335d583e3362141a6f7da30b42274a1d6f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/tracing/routes.py",
+      "sha256": "17f0c986ab2bb13791adfa7e51b8b9d4ffca5dfaae91dfa576bb3868884b7179",
+      "git_blob_sha": "6c6f95b771b058841ac05e8de8f6efd0ce34f3d3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/workflow/__init__.py",
+      "sha256": "050208a8357302f24cc8819251cdac8f7001cbf8ecde4c91ecbf3c92bc57117d",
+      "git_blob_sha": "049f0fce0c8d365c124672788a97a3d2141cb91b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/workflow/models.py",
+      "sha256": "7a897a0c9ae287755eadc27c97257daff4c8fe7625358ac0b56e7d973fde714a",
+      "git_blob_sha": "6fa389e71159112f11930f68eca8665e83c9f110",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/api/workflow/routes.py",
+      "sha256": "43eeee459ac07660f4d406cb1c92f3611bac3bf7ff9bb85af8726b9f40ef2793",
+      "git_blob_sha": "37f47aac6ec804c798faedc5e13f0ba45a795ce0",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/app.py",
+      "sha256": "da430b7c91e4bfd4523f418e386ac27eab33a6784b2f013a6f13b63436b9c159",
+      "git_blob_sha": "cd324193c0e3914c4fa853d536ee7a895657da4b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/auth/middleware.py",
+      "sha256": "13b5eed54e686075aa662aabc3439e6731da03d5c883f3241dcc3bfca7ba53b7",
+      "git_blob_sha": "6e6449c359d57f80d59514e1365763aaf110edc3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/auth/models.py",
+      "sha256": "7db0fc9eacf53442d897d314b367019ab4fa0356be8670c5f7a4db1deddaf193",
+      "git_blob_sha": "99b12cb74c9eb44e6d84486ef514cc8d8d798d7c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/auth/routes.py",
+      "sha256": "e8cc5e847a8c009cd783d39f67e429bdd30c2e88139c5c78fb80c7ef2d71641b",
+      "git_blob_sha": "57a45094ab012ed817e06476686c3a0915c1d70e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/auth/services.py",
+      "sha256": "83cdb3f13a94ce898f67abfec875b8c2c9a3b5534d4065b1f7e225783151cfcc",
+      "git_blob_sha": "91c08c4fdcc5e24800137ea61348dc90fbb76930",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/auth/utils.py",
+      "sha256": "aa1a0d18fb0140cc1fcec1be985ecdf232f41f3f818833ad412948d98f0e54ad",
+      "git_blob_sha": "0fa5f3a70808184bd47803d84974b562d7a3bdf6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/web/utils.py",
+      "sha256": "bf9b6cb6374e0804909d8a16fe91e6fe43ada8e8684607491585d8aa5dc86560",
+      "git_blob_sha": "b14d6ede44a7f8fa206acf622e5b2cc01bfe0370",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/block/__init__.py",
+      "sha256": "29d95a841325bdbf06bb3caf774405e745161c20954a59ccff89b45cee64ee51",
+      "git_blob_sha": "528ae10e368915361ff3bb451c9f107ba3a6eb18",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/block/base.py",
+      "sha256": "8a27be8411e9b03fa486bd43598e9bee5813acf734a5bd865e6ef1c30c40d454",
+      "git_blob_sha": "94b2e79b0487a5ad85419c4b3e7b467164d8f1fb",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/block/input_output.py",
+      "sha256": "4c1dc7e9f07a3169158b00cdbe5e7aca501aafc54c70fe2a5f7b5a597668c9d2",
+      "git_blob_sha": "c7ae7a6174a8475d645f09447f2496315ab725d9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/block/param.py",
+      "sha256": "4c23232c5f2ad248b877981f299d5d0cc670964209a9059f413f595b9296893b",
+      "git_blob_sha": "8817a709234924578e7da65b5df99373d1ecf336",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/block/registry.py",
+      "sha256": "400b31811d7e082990faf06c3d32628a06e1e51c46a1b8fbd6f17a0674c07c67",
+      "git_blob_sha": "766179caf3165ea7b77fb9d217e766e4b2d69cf0",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/block/schema.py",
+      "sha256": "48a159d4328fb27c539d56bc8a80e81b257052466ff07bb1643ff98753232f66",
+      "git_blob_sha": "a29d8788038f8ff8ce22584bc5a5488273537228",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/block/type_system.py",
+      "sha256": "7eab70bef5a7015d9cd65a0c1921abc0eeee0f42ba87817c8d89444b7c1cfe6b",
+      "git_blob_sha": "59d690695fd99e462f9f6887cc271c0d1f770ebb",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/__init__.py",
+      "sha256": "e2c714a752e5e66b0c92e4d7a51b64949e3bf030c0c68033494d56de7573af67",
+      "git_blob_sha": "3966c05613375617f8b53107ba2722785b575136",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/dispatcher.py",
+      "sha256": "3e7f68e6dca0dc9aa43aa4324967951a54dee8bdc2a3c4c8511376e864a3a41e",
+      "git_blob_sha": "f418542b7b748784fa1778b618b05ca5e0f61095",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/exceptions.py",
+      "sha256": "52016d2f473d57f25ab0b342c3048dd3dd625b35ddf6f09a24322c73141ea70a",
+      "git_blob_sha": "4a6a6b2b59460b497ffea9a118b18fb3e119150a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+      "sha256": "2fa5d92788c9cf0de09a9518ab410a0271e09f3994abd0d3c266bd9efbaf7294",
+      "git_blob_sha": "2ee996f5ea276b3a46b26fa6279f9b077d55af91",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/registry.py",
+      "sha256": "c87f1a63f009c610c848eaa7e25b71596807beb34051706be1abefc8aa537231",
+      "git_blob_sha": "05fec3515368623e0e429437abc7577c656173a1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/rules/base.py",
+      "sha256": "841df1ff969513116bf13391c185db559ac42baf6719646e4c84149ba01922bc",
+      "git_blob_sha": "778ff2082f077cba505e9b65f8ce045c0727f989",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+      "sha256": "c47f97949360d438a4bbcd7d224709451b871619e78daf967889f02535f530ba",
+      "git_blob_sha": "1b09ccbb714ba68ce795391ea39bd67a8b127f6c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/rules/sender_rules.py",
+      "sha256": "39d2987985840729b3a7dd745dcf4336ff9be921165b34b5e2fbce97b3176b48",
+      "git_blob_sha": "e679ec9d023ba34e226f20cb93ff18033db300ef",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/dispatch/rules/system_rules.py",
+      "sha256": "b33b5b530b165c4782a8539dcd63539760876f5c1add0e3880ba169b1aec60a2",
+      "git_blob_sha": "39d8b47818adb6c635b5eacf41dd99f9947d05a6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/execution/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/execution/exceptions.py",
+      "sha256": "e6b10f72fd1b9b26fd31e627c99f5d6fd81a09f34c22573d0a856acd12c5fcde",
+      "git_blob_sha": "bf3034764097774224ec4b6620390a94ee205300",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/execution/executor.py",
+      "sha256": "52053038a02758903cbb4b7a7b98c7fe368e6cfefc5d3a80e8e429f3382abb4d",
+      "git_blob_sha": "d9b751f8c67a6253d1131959e8d8e296f12d8aed",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/workflow/__init__.py",
+      "sha256": "94ab09a0f6020475ac71114aa0499323dbc8469dde2f38db5cc1c72a0cc947cb",
+      "git_blob_sha": "4761a6291e1507d7a3c0284dfa124c088319591b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/workflow/base.py",
+      "sha256": "5b3e126f3a12fc34a453e876cde43093f312b8bdc0b9f0eda68d9054822e31c4",
+      "git_blob_sha": "62854032e820c61090de3fc13ac5ed0a9998199a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/workflow/builder.py",
+      "sha256": "06ffc44864da43b2e7c530ffc8969c92b45ed35128900e457563a97906a08032",
+      "git_blob_sha": "7b3514771b41ae628316c7ea78dba4c0973f5496",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/core/workflow/registry.py",
+      "sha256": "2600ca50d60743fc4889d1a12022fca7bc631b394e60a9eb1c2d0e0434c82cb6",
+      "git_blob_sha": "db5a337c5afd3510f12648d0b32a6413b0dcc3e8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/__init__.py",
+      "sha256": "2a203d15c5659dda7b5455c77a4698afcf9870c77dee1a93a6b13de9c4aed37a",
+      "git_blob_sha": "aa8f61571800c6874226dfb569c303733a4b0e0f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/game/dice.py",
+      "sha256": "9583ca88c20410e03774060e2370b72aec7e7d0db9929e0d979c34e1bec12bb7",
+      "git_blob_sha": "5c76c820154662fbc15e3ae8677f375e077b4c0d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/game/gacha.py",
+      "sha256": "d94fef18b9a3f8e39cc26f9fb99e6b7ed021be5a8b608b79b13743ea5fe63986",
+      "git_blob_sha": "b7c4da5d965f313acacd02e8c138275a1fdbf86f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/im/basic.py",
+      "sha256": "3b195aa308d20cb3e3d3414ddaed3090a96658a63234fecfc39f4aae76a95c5c",
+      "git_blob_sha": "80d42da45420be3fe79447910b08d7df5351431e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/im/messages.py",
+      "sha256": "93f67e59f4bf8db7d8214eeb0478edb053caa1e5fa8785b0f3b58a563a4a18a0",
+      "git_blob_sha": "4753808dce4de6c968a6ee261ec4732a6feaf103",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/im/states.py",
+      "sha256": "c6cbdff779b03d85c3dc0cdc6b3f2373dbcb6a2b524734d47f3f6f9fe51113f3",
+      "git_blob_sha": "8e5f24bc1665e01aed3cbf42a08136418b92d86e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/im/user_profile.py",
+      "sha256": "581be7ef8fde891a5afeeddf39d8c5b0c4a2cb758d8452841f90dd7bc920190a",
+      "git_blob_sha": "85d01b2383cfd4ab55b2c9f5fdc56fb5d6836e1b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/llm/basic.py",
+      "sha256": "58eaa2f73df8f7e41c1b8695914d0323693cedae13f4a08220aef374d79128e7",
+      "git_blob_sha": "d598e0017e7aed7fa0bee4b5e5a92af29e12c29c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/llm/chat.py",
+      "sha256": "2dd3a66e59301246ea48879d241d5020a4f783530765688e0021310916d8a83c",
+      "git_blob_sha": "7485d0d29c45614fe6b8b7abbc4b324d4be6926e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/llm/image.py",
+      "sha256": "9223733445cf48b60836d51dc3056e55291cf0b4669bbf5441ef4df079e730f5",
+      "git_blob_sha": "48723a4121ea77092b9580ac511dfd375137f4bb",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/mcp/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/mcp/tool.py",
+      "sha256": "d3b4a8f36b83289578e2fbcc8b1d7254fbcaf1c1f8810f4acc69d47ce4ae069b",
+      "git_blob_sha": "21b48ce39b5f7b6ac0fd2bece1b5e5fd5a61bfcd",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/memory/chat_memory.py",
+      "sha256": "b5aba2b8f3ce91d43204952a96ab7c9091970567056799cabd4172f8d963c52d",
+      "git_blob_sha": "3f536b627d353ce9661ee6443e8e389c52c48813",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/memory/clear_memory.py",
+      "sha256": "7a800f56d86a55153f648a4924745eececaa1914267e191ebd31d69b07f95692",
+      "git_blob_sha": "f42cdc20a47b60fec61a85891822fcda50f3de16",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/system/basic.py",
+      "sha256": "7450357ac6cebb20926a0e55f6a5dd5dd5e335e64d77c5a4281937453f2d450e",
+      "git_blob_sha": "dd0ce294837fb174cbb21a829c7dded23addc60e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/system/help.py",
+      "sha256": "196c1f16e67b2d76368da8a754c9edb94a014f144877166022a096c84a64772b",
+      "git_blob_sha": "84905bc605fe813dae33c2faba8cfe8cab03f86f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/system_blocks.py",
+      "sha256": "f0a800a83976ba7357faf51f2c2295f5a7b79ca391a66ad928c66ec7fd701dc4",
+      "git_blob_sha": "e4c994b375aaf1251ecd5bf008b6e2fdac9dbbe9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/blocks/variables/variable_blocks.py",
+      "sha256": "35f8f176aa51ed53b966fceb58caafcef99ff0897bccc13247f3b562b2663011",
+      "git_blob_sha": "67a386ac712a1b9785a11c5c8eabf6f4b8e7dfa4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/factories/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/factories/default_factory.py",
+      "sha256": "3a69033798ff391ed28e39aa208b44ce3f2449ea5e5b0f6f58ddebc5d1158177",
+      "git_blob_sha": "dd25f02c159acd22b0bfddd25fbfa7d43b4d8e19",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/factories/game_factory.py",
+      "sha256": "6e44b86ae155a0299a9de3f1f65ca86632a182d5ec8155fa9645d580a59baba1",
+      "git_blob_sha": "30b65b16393af620cc80870a794eaa4423c72a84",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/factories/system_factory.py",
+      "sha256": "e2780cb48f7df8abd252ba2229cb22515070f957860cd03d4baac47a3b29395a",
+      "git_blob_sha": "116e8116a49bca3e73e7b44f90086bdd8cef8ab0",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/workflows/__init__.py",
+      "sha256": "068f04cad38e9b76a1733c4eaa6a4d5a7af9b9a0234d830572c289e537404d02",
+      "git_blob_sha": "253c02c2ae2e47afbfe960bfd8c45947d793dae8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/implementations/workflows/system_workflows.py",
+      "sha256": "6eb1770801a6e774541a2f2d6352d61294baa2d52e117b9fabfbb2df02c3732d",
+      "git_blob_sha": "8870ab4590dd15542e8b719add79632f8ec658f6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "kirara_ai/workflow/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/__init__.py",
+      "sha256": "9b3fedc3cb86170dd5e070fc27cb87cb6b68c02187e643550d766f6d5b56a4c4",
+      "git_blob_sha": "e25a099dc4b19d2a5f8cb39c6d13ba6a20483a50",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/conftest.py",
+      "sha256": "07f491920614992ae05e8e465fa18fda843e898edba6b0c7e47fd650e92a2102",
+      "git_blob_sha": "efeeaaf3d501f822e98bdbf2250aba81976e99fd",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/__init__.py",
+      "sha256": "9d18d02dc433963d07fd6f1caf08be97311dfdc26e2788829204e6f1154eebb2",
+      "git_blob_sha": "fa2c73a1d8feadc0f0bba4acf4847485e019ba13",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/app.py",
+      "sha256": "aa0bdd402d7e2650408ef3d7452cf018c0aff6f228855a0cb72f06b300567442",
+      "git_blob_sha": "9f1e83a198d43e74b3edd72a1992e8cdb9dc5354",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/gemini.py",
+      "sha256": "6522c6f8dbfabf3b52a878242f39b117a9c2dabf28be62de38608c6a62e37e3d",
+      "git_blob_sha": "5d08d385564ed873911226ed48990d80cb8aa910",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/models/gemini.py",
+      "sha256": "7c33be7ad62154abe6ae20f513c1b3c5d69614c9667cb0b87391262c712c7fdd",
+      "git_blob_sha": "2165ccf0a7c7c251be85a7bc2aac49921daa6d00",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/models/openai.py",
+      "sha256": "2435b11bdb5b35e7c602db63b733d52a6cc66a44000d6bd6156ea1b27c91e5d5",
+      "git_blob_sha": "1d20b623dbee39ef755399d996f365ad0471722d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/ollama.py",
+      "sha256": "ba71980ed848c6b7474a8ceeaa9962746b9b68af5b3795f3e3783d8e72ae4ece",
+      "git_blob_sha": "9fcac9ef482927df85413d74de86155c794689f3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/openai.py",
+      "sha256": "6ed93cdce71d9594250a815a780243d0dcf08e06a17b88afaf461867daab503e",
+      "git_blob_sha": "f95f7e62eacee7cb4278f1ce4c549a6f95e59b9b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/mock_app/voyage.py",
+      "sha256": "65e5fd58d5f09289ff1c735585ad2a324932c81ab2f695b25334f7817fb2eeeb",
+      "git_blob_sha": "f533cdd1563f7c8d9c98905f79cbb54a81666a34",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/test_gemini_adapter.py",
+      "sha256": "70a04b5e3e5a6b286eb4d93ca390ed433692d1e340bd241df44d17f25d246c78",
+      "git_blob_sha": "e3d472b206a270913d16fdc46f16cb93603a959c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/test_ollama_adapter.py",
+      "sha256": "e90000fea43630f3255f669819be0e0130b0e379756eded97c4d310eb283ec52",
+      "git_blob_sha": "b8fe9ca7ae591fbc408f968a9223a1426a628dc2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/test_openai_adapter.py",
+      "sha256": "ed872554035c3a48823f64044cf2ecf8118a6cdc80c8d0f968ced51fe6ae0cdf",
+      "git_blob_sha": "91b70638a087e2c6492a5d90b63632f6a5f5545f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/llm_adapters/test_voyage_adapter.py",
+      "sha256": "a05fedb4e7c5212a73f5e6e9d949607af4eae1f0952361857b9d46b5bb4de559",
+      "git_blob_sha": "5ea61fbebaf00799605d15b997399f9f90bbbaa9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/memory/__init__.py",
+      "sha256": "7472ebde0d8f59dbabf5becb9e9ca39e2deb4bee3b04c976738d8ef1c5baff56",
+      "git_blob_sha": "86a1c58e1fbd1557cdd00d2ebb9b9f8951a66b86",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/memory/test_composer_decomposer.py",
+      "sha256": "18ee9b22a49810e695467ece8b4400a28a34e67545a5f1b23788e2ee68fc078f",
+      "git_blob_sha": "0de2eea6fc12ed28b52a8e0bc5f60174124a8c55",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/memory/test_composer_strategy.py",
+      "sha256": "dc6865e68286afe526b86e6b6f61437271db8061d223cd24574043c4a637cd6d",
+      "git_blob_sha": "407c7ffb5f987a9112f0da004e4a7281d972ab92",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/memory/test_decomposer_strategy.py",
+      "sha256": "bba207ca2f180a2aa3aa57b652579de4c5f64be238cbf2740089a62c671ef974",
+      "git_blob_sha": "2950ca3e7f8b9831980f9cfdb1614099c3ec172f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/memory/test_memory_manager.py",
+      "sha256": "e5e813d96de8f3d48ee75c68ea5f390d96c454723fbf0deacf2787d1da934bf7",
+      "git_blob_sha": "79c316117b0b41a22ebfbc835446280e51679f20",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/memory/test_persistence.py",
+      "sha256": "e2a80da90e7e98f57a8d0912be36dcdc4fd46bcccbd0799069dfca586d668bc5",
+      "git_blob_sha": "ffa6a6c8f4eafbbca68a1c285e7a1ae322e8c7d4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/memory/test_scope.py",
+      "sha256": "6723a3b985b3acbd51a26ef2d1470a35d9b7403b4100b061422fb5162328d4f1",
+      "git_blob_sha": "dfdd9a61ccabd133231874eedf21da525a4e0dc1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/__init__.py",
+      "sha256": "c43bdac88086267894873789e1c83f57ff0352a42f09f6a06a9b7e5a6774fabe",
+      "git_blob_sha": "5ce3e36c3be7daffc520aad4c3d789b668d893f6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/game/__init__.py",
+      "sha256": "8b5ffe43d7ef412efa95755bcd6375679eeda3a2fc9c0481ab9e3ea99089cbe9",
+      "git_blob_sha": "d0bb0d2bce0393906f86a35230cbab1d54f5ea92",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/game/test_dice.py",
+      "sha256": "d5d169329e14e22557d8d3487ee541d4f015d62803ea3dd3553b4cc4c2e5930a",
+      "git_blob_sha": "4b15298d6bf053e28b6edd1a2906b4f39f2ebe21",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/game/test_gacha.py",
+      "sha256": "c716e742bb3bdac2c3e8f880d02bcd724b1295ce0c293f9192aa2cac63e2c6cf",
+      "git_blob_sha": "395f8d1c1e5e971a528c23c97ef4cf7a8b80ce31",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/im/__init__.py",
+      "sha256": "d3932cf094a4e2e80de65c1fa47f92646f18609c37a218098b3e0c95c2fbd033",
+      "git_blob_sha": "5778777c655bbeca1f782a857b34823a385f34f4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/im/test_messages.py",
+      "sha256": "29a5a4b97e580c0f5f7302d15e644cf208e6d3a4f3db46ed8ca8650db2abd3a2",
+      "git_blob_sha": "18946cd8da01e9cc6e07d96242c863ac6f340672",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/im/test_states.py",
+      "sha256": "7e2e06112092da55871a1b458815f58daef1b1aa642d0e37dcb90b58ec55ddbe",
+      "git_blob_sha": "bd7a91fa07f0b214e809274755e3d223e3f04bfa",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/llm/__init__.py",
+      "sha256": "3a62e6e41c92e58d02e201f1866104f2c508bf1162098e1980506761b1e4ccc2",
+      "git_blob_sha": "05f60379593d90ca177650cf3706422ed7654b6a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/llm/test_basic.py",
+      "sha256": "d8125a49dd7980f7465d52cd9553deefdc828125d552c8e2c5541c1714f5642a",
+      "git_blob_sha": "df7d8a7ce3575fceab81e79d400f3191e95b1c43",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/llm/test_chat.py",
+      "sha256": "d9af5772fc835b420aa135899d065074305817dc2cf0cb97e44735d519b91962",
+      "git_blob_sha": "8eeb4ab31ee85223ec05ff2fe87c79bd1a978ca5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/llm/test_image.py",
+      "sha256": "885f559b1c2bf97f041322a48bb6473331199b4a768293881ad721d6421ed8b4",
+      "git_blob_sha": "6f2a8610c57304c670b0647d9f66c6b01acadc84",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/memory/__init__.py",
+      "sha256": "12b443eaeeb4e2da9c99aa903714b41c00ade9b23773d62389b637b8d340389a",
+      "git_blob_sha": "b688c1ebf4fde1be9650b34fa86b3a88b66096d8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/memory/test_chat_memory.py",
+      "sha256": "0a4e4d9f6c31c0fa23332a17fb755fe4f42f45377672efe1a17695372f5b6e74",
+      "git_blob_sha": "40458c0c077647f5d97be9d136c039579be58a73",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/memory/test_clear_memory.py",
+      "sha256": "33fd0774d6c11db0281e83bfaf2cb9dcb126cf1b55f84cd97dd1037430bd4053",
+      "git_blob_sha": "126d2be5f96986c6a8ac3b35a0b662d8f7831d3b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/system/__init__.py",
+      "sha256": "7de43c24151ba8571697e6ce45255dcf14cd723e49100954068be2a6691753e7",
+      "git_blob_sha": "835839647233e0e498cfbdc72c8379c0850b76d2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/system/test_basic.py",
+      "sha256": "57833c46d3c073acb0083ffa507864898017c890ecc76dea467b5ea46dfd0afa",
+      "git_blob_sha": "8764d4854473582d36394e86f3f60f9c6e7b668d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/system_blocks/system/test_help.py",
+      "sha256": "c0e064a36f04911cefec235d31183a068ffc4e34c1fe9b3a4b813a7c105e2c75",
+      "git_blob_sha": "69be0716fb4837059af89a5bcde35c116cf753d3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_config_loader.py",
+      "sha256": "c5abe7b511d65cc0b86d88b77d509763a1addd664652d688c4f6d465483d4084",
+      "git_blob_sha": "6b31616100eac852dcc4d92d69287d3f0568ebc5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_game_blocks.py",
+      "sha256": "a70974257680a87f65d86ebe300f3bda4dbaaa6750467370cdba0478b098c498",
+      "git_blob_sha": "bf2d9f8e66b651bd58252f411b79e86416f46e09",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_mcp_server.py",
+      "sha256": "dc981dae0463df8b7d48daa08189cbe707e4e3e096409899c211b569b6401d65",
+      "git_blob_sha": "511138b1a2ceb896cbdaf03074ce81b22453371d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_media.py",
+      "sha256": "9627c8d0ad6b3145e89892b69450580e286c87b963147aaf7f7ba8d9259b22fd",
+      "git_blob_sha": "43dad4237a6f19afea391cd0fe2ad8c0c6db9466",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_media_element.py",
+      "sha256": "a744589350783f1b8504d16d463d76913d8f69722154f1d31f3601295b7b4143",
+      "git_blob_sha": "14dd413af1d28ff1b5c07e409b7b1acf0e654e50",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_system_blocks.py",
+      "sha256": "0898142acfef96b411c64d7e02f625405a35d2216dfc2cf909f6aae8946f016c",
+      "git_blob_sha": "0b0abaf35aa4c4985ff650adf1782074806afd2b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_workflow_builder.py",
+      "sha256": "8b544cf4e8ac256cd982ca3c8ee0f2ebf06c46ba4fa8d7beacf9ad1401bf986a",
+      "git_blob_sha": "a9ca9fd041c0511beaec26da41bcafa16fdf545d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/test_workflow_factories.py",
+      "sha256": "78817a1030df4d1c20a487f4d996ce0e5e5fad01d7ce7d3a73a8243bfc0c2910",
+      "git_blob_sha": "1ebcf1e7c91e012f9164b50611fdbccafa02f675",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/tracing/__init__.py",
+      "sha256": "665155b12a614b049ed72dfa815faedb3dee8a7b47eb92ea2c1afaf4b7308502",
+      "git_blob_sha": "f9cd0c76d7737226d3ec6bb56becf07e7c83563d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/tracing/test_base.py",
+      "sha256": "4d714f8c8379632d395d14c6ba5a5fe56be039c4146270b4f982cc6c8528a9f0",
+      "git_blob_sha": "2e2a8a334ff53e5a2b789463c8da497afa2656b5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/tracing/test_core.py",
+      "sha256": "8ee768599d8546249b241366cfe2baa362de9b1f8fee9d032df4485cabaf6971",
+      "git_blob_sha": "019b426d434e8b1f83817e7bf7ce6f71beb5e75b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/tracing/test_decorator.py",
+      "sha256": "f1c99f42c12a36dc33ab95a5d9dad66f7a06ee9d3850a0163829d54b1a71134b",
+      "git_blob_sha": "d6e3bbae090b4077487ced7d64ffc3cb3d327584",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/tracing/test_llm_tracer.py",
+      "sha256": "c88e7e25ba13386b3829ca825e40163c76f424eb741c38dde9c85a9ec5d2b827",
+      "git_blob_sha": "6bdb4572ef8487d6f20a2ed8ae65d29fbf1b75e4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/tracing/test_manager.py",
+      "sha256": "d8b06b4580072706c4eb755f5d7fd534042e0fcf97e43cad075f76b79547613a",
+      "git_blob_sha": "7a87fd90ac0c1ac1a663983ddd0786a77ac024c8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/tracing/test_models.py",
+      "sha256": "057b049ebef66f3bb1a13fa9f3c9eace434aad3153d0287caa13321955934a8d",
+      "git_blob_sha": "a2c3a3b825d2bf60bb41d76134b86cccacc7bea4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/utils/auth_test_utils.py",
+      "sha256": "23059144565dc65635cd33a254fb5e75c1fde431a0ace43daf46aa9cfebe6574",
+      "git_blob_sha": "65d96a9dddc027f9bce6912ed0c8c7d44fc1d291",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/utils/test_block_registry.py",
+      "sha256": "cdb842279815c23b8009fe1f65fd2ec4e1368785294ab1c7b412ab51fe4f8394",
+      "git_blob_sha": "3a2d63c22ea2f297d91d996530112b07dd93bf9b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/web/api/im/test_im.py",
+      "sha256": "a936f691a5033ee26120b7fa5267d1d5366f91cc4554d45de715425f8241604e",
+      "git_blob_sha": "70289df85115320eec1c64d167196aa24daec936",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/web/api/llm/test_llm.py",
+      "sha256": "375bd193998ee64975464158d466ade5c97d5f836c1b6d9f98ed8d40adb769fa",
+      "git_blob_sha": "f7f4cb0cd66dd9801f723f0ac18ccc6dbfe9f8dc",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/web/api/media/test_media.py",
+      "sha256": "e6d080abbac075958d018a41a118061c94b92d352b766b893bfb7b5cbd99623a",
+      "git_blob_sha": "238472150a53d3c8de05cdfdbce288f5b99b7caf",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/web/api/plugin/test_plugin.py",
+      "sha256": "40fdf691e12eff7330a02ac90ab931f5c0d4fc9b0e8e19c1c4bdabac8bb2fbd9",
+      "git_blob_sha": "eb4475f95df174dd5531f27e41d4c8636886d618",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/web/api/system/test_system.py",
+      "sha256": "af81b4af0a5c28b0a4ffcfa87f558fbb5b53164e7ab9c395a98656a992d3069d",
+      "git_blob_sha": "f80c957fe1eaef2d8bfba38623b7f912463ca3a8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/web/api/workflow/test_workflow.py",
+      "sha256": "c53a1d2b508401e22d1f4764e72594c36349d0d36b512e906ef328e4acd58c3a",
+      "git_blob_sha": "9079c49fd0ac03011a5ca167d8f031540999bf05",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/web/auth/test_auth.py",
+      "sha256": "01d14e771de785a2793a8b0d55efafb0cf7837a594737f44f763c3fc21170330",
+      "git_blob_sha": "2742b13511934426275ed2ac8d23a4226b180658",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/workflow_executor/test_block.py",
+      "sha256": "b2032010b1ebf674aa3a4cfeb30742771da53ca8213eb1b96595fdcc40bddfb3",
+      "git_blob_sha": "0c0cc94c35819741d8b3431192136597a7674771",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/workflow_executor/test_executor.py",
+      "sha256": "197f0c0db0ca500e9b37a4187dda0777add6e95b38280a538cf5c69669bd9aa9",
+      "git_blob_sha": "75198eafb15999e03f266064500aa1df9b8275a4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/workflow_executor/test_input_output.py",
+      "sha256": "ebce3f08f876b43d9e2d967ad83dfc507596e3b4332d65e51408c02a90eeb09e",
+      "git_blob_sha": "31e5d2c6c822bd060c2f029cbe6b8264c9540f15",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "tests/workflow_executor/test_workflow_basic.py",
+      "sha256": "e2929828da09d78a96a69fcbb4a8a9ab4f1dce589fd0bb580c2d90698b60375a",
+      "git_blob_sha": "1690abbe4ad89e0814742ff8046085e96876614c",
+      "remote_match": true,
+      "remote_exists": true
+    }
+  ]
+}

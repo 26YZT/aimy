@@ -1,0 +1,119 @@
+{
+  "stage": "D realtime prototype integration",
+  "date": "2026-10-07",
+  "unit_command": "pnpm verify (build + typecheck + test:unit + test:browser)",
+  "unit_exit_code": 0,
+  "unit_tests": 767,
+  "unit_files": 90,
+  "browser_tests": 64,
+  "browser_files": 3,
+  "browser_exit_code": 0,
+  "native_media": {
+    "status": "passed",
+    "scope": "full-media-suite",
+    "checks": 16,
+    "evidence": "D实时原型/语音/media-result.json",
+    "final_binary": true,
+    "includes_rapid_control_path": true,
+    "actual_local_sdk_requests": 66,
+    "scanned_files": 880
+  },
+  "real_models": "not_run; user has not configured services",
+  "real_devices": "not_verified; file-backed fake microphone and own-frame screen only",
+  "baseline": ".baseline/2026-10-07-pre-realtime-fcc6dcb1",
+  "unit_log_sha256": "c86b6e4084211038a8d49377b2eee3fa9faf6a53fa71f510a3c98145746cb372",
+  "typecheck_projects": 21,
+  "typecheck_exit_code": 0,
+  "desktop_regression": {
+    "status": "passed",
+    "checks": 13,
+    "actual_local_sdk_requests": 11,
+    "mock_keychain": false,
+    "evidence": "D实时原型/C回归/result.json",
+    "final_binary": true,
+    "shutdown_duration_ms": 1471,
+    "scanned_files": 60
+  },
+  "native_media_previous_binary": {
+    "status": "passed",
+    "scope": "full-media-suite",
+    "checks": 16,
+    "evidence": "D实时原型/语音/media-result-before-physical-budget.json",
+    "note": "Validated before final cross-generation physical decode reservation fix; final validation tracked separately"
+  },
+  "native_decode_budget": {
+    "status": "passed",
+    "scope": "native-decode-budget",
+    "checks": 2,
+    "evidence": "D实时原型/解码预算/budget-result.json",
+    "final_binary": true,
+    "native_max_pending": 2,
+    "native_final_pending": 0
+  },
+  "native_screen": {
+    "status": "passed",
+    "scope": "own-window-screen-suite",
+    "checks": 8,
+    "evidence": "D实时原型/看屏/screen-result.json",
+    "final_binary": true,
+    "source": "fake own WebContents only; no OS enumeration",
+    "actual_local_sdk_requests": 8
+  },
+  "native_visual": {
+    "status": "passed",
+    "checks": 4,
+    "evidence": "D实时原型/视觉/preview.json",
+    "final_binary": true,
+    "http_requests": 0,
+    "source": "empty test profile; inert fake chat config only for mock picker, never selected; zero HTTP"
+  },
+  "source_manifest": "2026-10-07-D源码清单.json",
+  "current_source_status": "complete prototype engineering and isolated native validation passed; real services/devices and user experience pending",
+  "rapid_toggle_failure": {
+    "status": "failed",
+    "evidence": "D实时原型/语音/media-result-rapid-toggle-failure.json",
+    "note": "First 11 full-media checks passed, then microphone initialization AbortError on rapid speech/mic enable; investigating delayed full-state snapshot race",
+    "resolution": "Global main-owned revision filters old/duplicate snapshots; 8 renderer and 2 main regressions plus final full-media suite passed"
+  },
+  "before_revision_verify": {
+    "command": "pnpm verify",
+    "exit_code": 0,
+    "tests": 821,
+    "files": 93,
+    "node_tests": 757,
+    "browser_tests": 64,
+    "typecheck_projects": 21,
+    "output_sha256": "852b1138131a33ad282ca3b9c1356fd4b887edad8883f8fc5774a6e4c255e19d",
+    "includes_null_display_denial": true,
+    "includes_final_physical_decode_budget": true
+  },
+  "media_revision_regressions": {
+    "main_tests": 6,
+    "renderer_tests": 36,
+    "new_main_tests": 2,
+    "new_renderer_tests": 8,
+    "status": "passed",
+    "full_verify": "passed"
+  },
+  "final_verify": {
+    "command": "pnpm verify",
+    "exit_code": 0,
+    "tests": 831,
+    "files": 93,
+    "node_tests": 767,
+    "browser_tests": 64,
+    "typecheck_projects": 21,
+    "output_sha256": "c86b6e4084211038a8d49377b2eee3fa9faf6a53fa71f510a3c98145746cb372",
+    "includes_media_state_revision": true,
+    "includes_null_display_denial": true,
+    "includes_final_physical_decode_budget": true
+  },
+  "native_total_checks": 43,
+  "manual_preview_launch": {
+    "status": "launched; process verified running",
+    "command": "env -u AIMY_TEST_MODE -u APP_USER_DATA_PATH pnpm start:desktop",
+    "test_mode": false,
+    "agent_activated_capture": false,
+    "user_configuration_read_by_agent": false
+  }
+}

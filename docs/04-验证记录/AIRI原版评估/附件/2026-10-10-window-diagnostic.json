@@ -1,0 +1,5 @@
+{
+  "method": "CDP diagnostic window control; not a product UI action",
+  "results": [],
+  "error": "'Browser.getWindowForTarget' wasn't found"
+}

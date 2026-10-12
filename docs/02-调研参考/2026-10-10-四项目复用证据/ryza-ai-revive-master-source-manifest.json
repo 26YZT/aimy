@@ -1,0 +1,620 @@
+{
+  "repo": "zeroa234/ryza-ai-revive",
+  "upstream_sha": "45e75ad6f6f0eb7952676b1bf24a674256082941",
+  "tree_truncated": false,
+  "remote_blob_count": 1764,
+  "comparable_source_files": 87,
+  "matches": 87,
+  "differences": [],
+  "files": [
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/AlarmReceiver.java",
+      "sha256": "e7037ebec9f633695d5a5b63ba2587ae770ebceb8e0fbee86c70849dfb7982ec",
+      "git_blob_sha": "be74833d9c08f1c13a216fcb406ab2608589372c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/AlarmRingActivity.java",
+      "sha256": "0987f9020d2971df032e59f572d0d97758761b63b4183a745db78ab811ef74f5",
+      "git_blob_sha": "846b202f0fdc477aff53597b4c839afd7deec0b4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/AlarmScheduler.java",
+      "sha256": "082648f004d2ee556650da70a7c586ac7d3377128a4d3252d7da2a6301b90b97",
+      "git_blob_sha": "d89c659c75caa059139b4adbeb77c0717c70fd8a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/AlarmStore.java",
+      "sha256": "49a904c87b388a3ce63d8a34c5120fae6c532d81cc54c4294aa3fb76dd93e844",
+      "git_blob_sha": "0e5e60c5dc96551fdf06c57e97b48045e964c6eb",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/AssetServer.java",
+      "sha256": "b89ab06651075c69088effca10b46a59b4f912e6500a2146fa84174d8b8784e2",
+      "git_blob_sha": "2a44d045d0fb9dc1fcbfe4aedc317182b767bca9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/BootReceiver.java",
+      "sha256": "bcbc4e8778c970a97c06097075f262ea5fc652866153075f3e4ee0fa3ac19e7e",
+      "git_blob_sha": "b520378ee466890efb0ba12adf921cba84181733",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/MainActivity.java",
+      "sha256": "384a6d7c2c23f05448defe4078c74875a0eeb5f8070a938b6d97b7e1470d0b3b",
+      "git_blob_sha": "73bb02b1df2831dd791ee8d976d08fb3ac7e8f4d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/app/src/main/java/com/ryza/chat/RyzaAlarm.java",
+      "sha256": "1c2a8e529192c02f9d1e9b7090cdd1a048f15ceac700fc37a12ae7d8c2275af2",
+      "git_blob_sha": "f3e12d6bd278bf59b7ba20182836e77c1fb608d7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "android/gradlew.bat",
+      "sha256": "0f3ed8f03b50934cb8c48b15a470d5c20a30a5385825e48b55bcc8ea3d8f8e18",
+      "git_blob_sha": "640d68685c14950470c82031e02198e220b96e62",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "desktop/main.js",
+      "sha256": "52e654166286008886bf7cf155f0c8cf802d8ee30f9d48294ac428c1fa026428",
+      "git_blob_sha": "9c63aa943459241ff1d617d4ed054b3e79681f85",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "desktop/preload.js",
+      "sha256": "7a45f16bc54b590387d2f8ef68753dcdb296306e4ef7d3d66dd516edf9031429",
+      "git_blob_sha": "eec8019c94e405ff730813317f205d37b25d48ee",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "desktop/proxy-target.js",
+      "sha256": "5f49cdad3a550df1a32c0b4c002956ee0f568ac90b4c6b62ca69f9ded68779bb",
+      "git_blob_sha": "6c422e6be1b7d91f1dedb65eabe3701f1a0690d3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "desktop/web-storage.js",
+      "sha256": "7c052bbeb7222bdaebc1750d8fd62b359972811cf4ea49af96924f3576e2b37f",
+      "git_blob_sha": "950290cd8bd6e0bfa44eec282297966cf4fd66b3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/_probe_env.js",
+      "sha256": "6d186364949ccd254ba4ad38a900074becf0ce6c5cc0d92062e5fc2551b3f45a",
+      "git_blob_sha": "bbc736582cfd8349df4512c032e6f77c7bf9268a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/back_regression.js",
+      "sha256": "78898d2de993f4f6dd620ed168e50e00279de02f7b93ca82963aaedb16f2c723",
+      "git_blob_sha": "32b4588b481e63735143e20d10a799f23f66c220",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/boot_smoke.js",
+      "sha256": "69876a2d814d237e9d5d2b1fcd0eb0dbbd64c2af7f6b966cd2f32deb1f5b2f30",
+      "git_blob_sha": "b36c18188ab7e236d08742edf027ce7b793ba5a4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/build_apk.ps1",
+      "sha256": "d8f35c4a037d215ab3ef13820dd861fdcaed6678e8c115cf894b26d218da08a6",
+      "git_blob_sha": "efe2b5ffaaef37e3b7892920d7905b4a038dd4ad",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/build_desktop.ps1",
+      "sha256": "36cc3d7497eda1d7803b8e667857d200c85d6eeab24e0e184dc29b91332f9550",
+      "git_blob_sha": "e8686e0cac1dd8417b9f1a4d54c356f682f5a43c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/build_indexes.py",
+      "sha256": "18472bdcfb3b2445104e5da9b6d5b34f6cc4dce0732d9cc08854fb025ad6869a",
+      "git_blob_sha": "a1df70bc162ec0dbcfa9be7574527d6728343a37",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/crf_import_e2e.js",
+      "sha256": "fa895def55f9d9ca7b1e2d9e73eeca9e06e9f5fe5846de9daff949b41cdbbda9",
+      "git_blob_sha": "c7bd700df794f4b7714e45a9fef75a43457e87a6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/crf_import_regression.js",
+      "sha256": "d01af7170dd9c5ea9edd537b0dd9f8ecec2cd877f7fb7025e8b2bffe87b0efe2",
+      "git_blob_sha": "3359807bc467a037b8cfa150ca85b68d2d136ff7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/electron_storage_regression.js",
+      "sha256": "0614611bd0be164a2a61d2cb2b4adfa37d0af968c6369dabe5c50391864e9461",
+      "git_blob_sha": "a0fafe0e1cc92c0e4faf81b0c0974427d2a950b1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/expression_coverage.js",
+      "sha256": "40e309bd60eb850ce39331344839252e21ffe3c8917079253d6d7683a34e40af",
+      "git_blob_sha": "d033df644eff503850b6a0823c29d0165c394a65",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/game_logic_regression.js",
+      "sha256": "25bac6f1f59105431ad235efd4abd9227ee75a8f5a3a5f2f3d4b2cd7bf2eb5b8",
+      "git_blob_sha": "181286e4e613ce2f678ba1ced764e69fbe1425b2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/i18n_coverage.js",
+      "sha256": "52c58406e7a618c987c50e4118eb002d80b98d1e498570c6fd44c4811b514cc5",
+      "git_blob_sha": "509ed89178f32b5f40b2324d587bd0fa896b3301",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/layering_check.js",
+      "sha256": "c2318c1371c203d0b508da2ef2601de6263effe262b0682c1b4c96be4ee4770c",
+      "git_blob_sha": "18d487fe684cee543b671d70df41f3e2c7f0aa1d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/longterm_regression.js",
+      "sha256": "6acea47a7b971c0697f9aa8dca3670fc80002a50cc38621348403307a04ea686",
+      "git_blob_sha": "8b842f1753120db976fff986e0f862adeee9018b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/memory_regression.js",
+      "sha256": "ffd3b73ec34665f9deed5f928c4fac63f33c2111b03f92c0d98b2fb5f3978e55",
+      "git_blob_sha": "b7fb1aa5cf709b4b24f288bd9f715fce26ab7c7f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/motion_regression.js",
+      "sha256": "8e90b51324757f88346c66a4f98ada3930332296fe5d59b06bc5c4a79f1b1616",
+      "git_blob_sha": "47105dadc81ec59611de6e3489b58cc8a998beea",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/nsfw_intent_regression.js",
+      "sha256": "221ca344c32d6d32ff25caf662ae6ba0e4d54046d50f2bb00156fc7df6fe560f",
+      "git_blob_sha": "aae5f29e1c718737f1946b64fa604919d23b7bcc",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/old-shots.js",
+      "sha256": "8f0268ce8311aa91716c1012aa3acebd7b3653299e44bbb90f01f56165e36092",
+      "git_blob_sha": "73fdd22b471381e3a7366ce724b20b0715633f96",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/pack_apk_assets.py",
+      "sha256": "59f13ef7d5f2a14b0b3db97ecdad1fd3cfa95dfdd7b2e3500941f3661a0c0e13",
+      "git_blob_sha": "15a5f8ad0edec4e6d7556b529a913384b5f3c635",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/privacy_check.py",
+      "sha256": "8d9bfb88576d813addfa14dcde75cae860dfb344ebe0f97186978bc941a364f7",
+      "git_blob_sha": "8c699145afb7a98c7d9a24155b5797f4b0e72b41",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/probe-eye-bones.js",
+      "sha256": "1fb8ef7810f843ecc40b79c1c2ba1c572984b4142061e0fff022c7d280eef1c7",
+      "git_blob_sha": "ddd2b31cc50d5696b2ffa83753a594cb1593516b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/probe-map-dom.js",
+      "sha256": "d6192625aeeefbdef1743d01453d2705f22db09bc249798b1a6c0186f400383a",
+      "git_blob_sha": "4f4dfa200b4bda4d956e53de1fbb721e8290cae3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/probe-map-labels.js",
+      "sha256": "a25bc603c8ee072e1856b4e08d7ba08b76546263c803710f5b5c31aa4f7c97fa",
+      "git_blob_sha": "c6283ca655924b0ee44e88ab7c644509787fa780",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/probe-ui.js",
+      "sha256": "7c25483d579d1bd8e513c7b7e39d282f197cdbe7993eaa2e92a421d8895ab981",
+      "git_blob_sha": "3003f85bd9b31ddd5552b84f3b84d04b6165aef8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/proxy_target_regression.js",
+      "sha256": "f303f7472ee52115046af1a0e89f4989d0e47ddaa0c09c8c06dc24c50a3b676b",
+      "git_blob_sha": "dd0eafb595e5af92716ffe0f26cb7cd28e13c902",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/restore_media.py",
+      "sha256": "67a58800af259e149125bddff578dce0805f6d7f5829d4721af1407d4c44b0e5",
+      "git_blob_sha": "eab9fe02e8e23b44fa9e23355340a58d18d2920c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/save_slot_regression.js",
+      "sha256": "f8abbff64aba35108fc3ce213a37572cef538b9bff3b449e53ac9d412cada1c0",
+      "git_blob_sha": "f855260a7497d39525d58c80c0821dfca5a272be",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/serve.py",
+      "sha256": "f330bee1b06d5e7b8295b485a4fffef41cc8ec18b7aa0bdf23c742470bd8ce18",
+      "git_blob_sha": "0fd9b910d31eec62ed12e49ecbba556dbcb0e9d2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/setup_android_tools.ps1",
+      "sha256": "52836ab5d4de6f292b6f5a81b7a7385643e482c1e8c7e21ee60d4e44d6a742a5",
+      "git_blob_sha": "5d45a741e54be08c12ba2b2dda5349cebb5a41af",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/shot-talk.js",
+      "sha256": "aa79ef672058cdab16bc737e991f3d705dcf4f0443798b683788efc5f3c97c26",
+      "git_blob_sha": "a8af279197dff40e56bc0f5040f4a089e65b7abe",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/sitting_regression.js",
+      "sha256": "3857b65d2b4032a0bc94b44649b5a892c8e1ea45eda5382d6686004e67f2a255",
+      "git_blob_sha": "e53ac572423047c1b8c19535188d5db02c3041e5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/stamp_version.js",
+      "sha256": "a0caf46013b193ed953f8dbf7880131635bcef6a92e2bdf376429b6a037a1983",
+      "git_blob_sha": "5e39139c5f2db99278dba68866fb05c500649f4e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/stt_regression.js",
+      "sha256": "6a2b280227c1115f73d133e50ded148a3b0c49f26f2a4856f2cfebbe8475188a",
+      "git_blob_sha": "a0f0373cacfb5da14c52264c36939c7ee21196a4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/transport_error_regression.js",
+      "sha256": "1bae88a7a4345d508e796ed18a7361dbaf867991302a2ba326ea617446b42abe",
+      "git_blob_sha": "15bb314dee56545e1bc7896fb9f34d3465501b29",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/ux-walkthrough.js",
+      "sha256": "91b4d64e5a49bb45d154e62b92435166507416611ef460599e323308f59f4a40",
+      "git_blob_sha": "13b282bb2aae2ccdcf0278ee5dc7c8f97e51f492",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/verify-map-coverage.js",
+      "sha256": "91fadaaccd63b9f4a43b98872d86ae55c7d75fd6314e104c1d201279486c9e82",
+      "git_blob_sha": "6cf70f886ec1b84901c17cd4b7f03d4bf8f9dce9",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/verify-map-fixes.js",
+      "sha256": "d42dbcc0d9ff2249e2d6be4f9bacc9ff691198d6bf8cbfd2b79b9ddad773fa3a",
+      "git_blob_sha": "167355b4ae7125d32327742841c9defd4c41dba1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/verify_skins.py",
+      "sha256": "7bdd2757a540a98a486395656be304f2f3ca25c4b2a2ad137c76abb2457cc197",
+      "git_blob_sha": "280364059f2c0ec263c6cbe1e9358051ea82ea93",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/voice_regression.js",
+      "sha256": "6d92bf316fef181afc10a03d860f57e180015349540849b7a0d12be56741940b",
+      "git_blob_sha": "dfb9a78705f260db7ce531dfea8754ce2ac9c61b",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/welcome_mission_regression.js",
+      "sha256": "9b011d76f916cec60c74cc738429bee2b7fe49839dc03f98729a60f08b2b122b",
+      "git_blob_sha": "5e59d06eb60bc086290f23d318452ac01434f870",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "scripts/write_placeholder_icon.py",
+      "sha256": "4e59b688584e5758464e3424f48f336f2d7f6f8b11d544949500b644e03410b7",
+      "git_blob_sha": "869ec5430f55cb10f3075cfa422438bbe10238d7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/css/app.css",
+      "sha256": "ddca4a45b3eafa469b97a7daa91b27e48bdde45b6cebb0ff6a193f1913301379",
+      "git_blob_sha": "f464497a3da3b74d117b2bf92f09bd3c97c5407a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "9edba8f537befd13eaafefb2005c8bd92c012403e112ea44cad5234f7b42f7c9",
+      "git_blob_sha": "ea7d55e7547c9f4b2e615543ae2166b4d8ad85e7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/alarm.js",
+      "sha256": "53efee1e6c703080171d25199a8f08ec279074d9c40e66ecdf4b07bc189bb8fe",
+      "git_blob_sha": "64e57570ee75783cf98faf0c0248bfc8fd8f0d38",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/api.js",
+      "sha256": "c7b9be46c521faf92c20930fbfdf3d2d1f061f498a3e450807b85cc77b41c250",
+      "git_blob_sha": "1e35548cdf26c68e279a102957d94ee3e683f29c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/app.js",
+      "sha256": "a71173cf55248600d7519b95247988a63506a6a70bfbca426e7f202a4d8b8df3",
+      "git_blob_sha": "a42d27d52b2e2b350a00e305afbc6b7bbc1d6fdd",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/audio.js",
+      "sha256": "71130d0d15194396746b2c8ba3e8e52f6402aad3b826947b4c6ca19cf75abb2f",
+      "git_blob_sha": "2c05964b3cd3093dddad2b3c5dcf19b4b328d08d",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/avatar.js",
+      "sha256": "0ba836f1c2ee1ca8ab447d0eeb6fedd1430a73866073a9d6054cae35a57ffb12",
+      "git_blob_sha": "0a4464854eb8d57b23b00fdb148774c0070aea04",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/back.js",
+      "sha256": "fbf93c1020b8a7a366f9ca941f13b1c88d76aa06b6114e2125fae3f06fa5c46c",
+      "git_blob_sha": "524cc8ae1c61b3038b45a6e797f5948fa32d2941",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/config.js",
+      "sha256": "35b968664bf8708798b64e57730031a58f840ce09d1168bc0477c91c6653d604",
+      "git_blob_sha": "61e5173696640adb3815c67dda13fc87dd2fd027",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/crfstore.js",
+      "sha256": "6064edd321287d03246859d40fe527741a4eeedc98b581e3b1d8860105bc9968",
+      "git_blob_sha": "038889ce45d51c2e32d057888811072f97501701",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/daily.js",
+      "sha256": "b43d87bc06091d3cc78bee6756641988a0a6b8e1a88ea39c32f38abaf1c91e6c",
+      "git_blob_sha": "f5b58f2688f73014909f7041a8409747d3e60f14",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/echo.js",
+      "sha256": "168f7e04a36a34a1b1273f126093cbbac73b7b408edf4164d816b020bdd4c212",
+      "git_blob_sha": "5932d78f931bdd043448b2a3fe8290657c53870a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/fx.js",
+      "sha256": "13a2136263ae30923b0f367f892911621b6517a3deef6cb4fedb74c88b549632",
+      "git_blob_sha": "573c2e8917de38fb4d7e370259f2cf7eda5c65d5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/game.js",
+      "sha256": "a120fff55900395afc13d9d849657ab53bc7d000c93202fc1f788696b4517e44",
+      "git_blob_sha": "6671400ba027c7651c733e7893161e19e7ddc547",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/i18n.js",
+      "sha256": "658a78ff84d7ce022f542067c0bb0dc1cc3fa812b2dd7e823cc7ca559a7e41fa",
+      "git_blob_sha": "6778b7d2b525e870a772813a58ce027ea310b3b2",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/kbd.js",
+      "sha256": "1e4de4118cac5fb0ee3bb0380a689e312098d48042187a4230918086dd1c9391",
+      "git_blob_sha": "408e0c237105d172ec993bb49379c5585dcca152",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/longterm.js",
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "git_blob_sha": "6a04d3ed753c1c3cde07f736218ff17435d11766",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/memory.js",
+      "sha256": "11fbb6fae5def1214cf939d275d001460fe6da02dcfd08165c56c286932c5611",
+      "git_blob_sha": "0811e3bd54b8e842ba5f25655f2b04edb6138ccb",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/npc.js",
+      "sha256": "043bd5b622863583dfb3aab2f96d277e77d686a5c64048fc5880127306b92d1e",
+      "git_blob_sha": "3c00fbd572581b88fae699508764c832434b5b31",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/nsfw.js",
+      "sha256": "c64c3274bbeaad0e92feb23b0f4906b543e59a90f3b3312d5146585d0211c0be",
+      "git_blob_sha": "0fe5e7bac774465d141c90a1ef11b63362dcabe6",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/onboarding.js",
+      "sha256": "c446d42be2af5f0de3111c34b6f626dc3076fa097f296f1e0c6f881aafdad447",
+      "git_blob_sha": "f4015633f1a92a54dbbbf1b40445ec969470a9a4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/providers.js",
+      "sha256": "1eded8d997431626e3d089a0f8e136f21aa4a672968e35c85acbee64848e89fa",
+      "git_blob_sha": "73fec84f221d01f1af5820074918e0c5346d4fcf",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/quests.js",
+      "sha256": "6170bacd8d68847f549a5bc3039c3b2a614d70ed09db1822c31c88daaffa863f",
+      "git_blob_sha": "d168e05e32209ad081ae86146b2e946909ac37cc",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/settings.js",
+      "sha256": "c83a2193286bfe282bfc238ce23e31c024ea056fff5de4921368fc0e76f85a6c",
+      "git_blob_sha": "b68e13aebc27cf5bcf6540360768f1594a4e8eba",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/shell.js",
+      "sha256": "6a7bd633f6f588901989151e08b78a7a276ac19a17b3bdc79a6125d8836734c3",
+      "git_blob_sha": "5468250afc8736a151d0685c43fe91bd66831346",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/stt.js",
+      "sha256": "fb13f3bbcd5b1c2f2c9d31b4d1eb06bb5b58b4febb5db68c4824cfadda2040bc",
+      "git_blob_sha": "674188b4dfb0f7d2183f6ad2b08df7519c665006",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/turn.js",
+      "sha256": "e8516b2f19ca3b082ae517e316febae51d48bf5386cf535b4bee43b855bb7dac",
+      "git_blob_sha": "96b8f61c49c5c3fdbb84c76c514e4c9eb7b59022",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/util.js",
+      "sha256": "ed264c03b21dabf73e138dd3eb2422d6f35680f319b4c01b6b08efe1390871f5",
+      "git_blob_sha": "8f84add1b657703fa1214867a23b45961f554a46",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/voice.js",
+      "sha256": "23ccfdfc3085124d6196d5cfc08227dd62c1f33c2d934b5a7899dc3511c38d1c",
+      "git_blob_sha": "0fec94c3289f5c56c3079fe1b9a6feb0126a1881",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/voicecache.js",
+      "sha256": "f4ddf7445793720503131274a7c132bd370422ef0873b6f99bd59f71cb14f79c",
+      "git_blob_sha": "9f5a9c452f6e59e8acab485f5b8fbf2efccb6ee4",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/world.js",
+      "sha256": "5ddf58847260d8b9310f542c8003612ec24b747a352f58bcc151d56d1aad730e",
+      "git_blob_sha": "324bbe770b8a98db654c17d061237cdce9082df5",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/js/worldmap.js",
+      "sha256": "38fe36a08cc2ff2802e12da4b7c6ae92e7c7fe84668065e84c59ca878cd51d0c",
+      "git_blob_sha": "55ba4229e2b2acbb1ad7fb042d0c455352b2bf32",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "web/vendor/spine-webgl.js",
+      "sha256": "d89efbec0d97981aefdcbb6121ee2ebd40d91ec31bf07c93dbf553718ac43ed6",
+      "git_blob_sha": "6611508a08087cbcd4fbaf7ffd25732dcffb3110",
+      "remote_match": true,
+      "remote_exists": true
+    }
+  ]
+}

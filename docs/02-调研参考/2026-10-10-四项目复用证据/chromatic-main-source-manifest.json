@@ -1,0 +1,172 @@
+{
+  "repo": "proj-airi/chromatic",
+  "upstream_sha": "b5859e420de6006b458fcbb672136302ebe17eba",
+  "tree_truncated": false,
+  "remote_blob_count": 49,
+  "comparable_source_files": 23,
+  "matches": 23,
+  "differences": [],
+  "files": [
+    {
+      "path": "bump.config.ts",
+      "sha256": "95d9f0c55c7df14f3a60cdf4468db48f45d50ae22aaa696f7aa556bdc4704406",
+      "git_blob_sha": "092c809f5297b0e0b7d8abc492d4a0a964e1d476",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "eslint.config.ts",
+      "sha256": "9df47fc9b9a09f7161468c174f28c2c9433d54e2e50296309349fd43364991de",
+      "git_blob_sha": "e751afbb3b3566319d59c8a8fef966b44e4c0062",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/chromatic/src/index.test.ts",
+      "sha256": "47f0f241a00773273fc322ea79fa7ec267928765be335e37e7b0a95355321e93",
+      "git_blob_sha": "a80778b01b0fefcac6af959e54cc0ad4aedda5a7",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/chromatic/src/index.ts",
+      "sha256": "52af601ba87b984194f3d6c75d7738d724c5e47344a9e0ed5c20d03bb5ed222e",
+      "git_blob_sha": "c3595433ac1efa136a53025a36fefd9c409e9529",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/chromatic/tsdown.config.ts",
+      "sha256": "3149309f66ef93694fc3cb5a48bf1df64421c3b28505730e50bad3113af2bd3e",
+      "git_blob_sha": "b2a924957f5558f71278952230642464df1177a3",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/preset/src/index.node.ts",
+      "sha256": "94a09f4ef9ac13a1ea9b07012cda68cb95a49712e2e25e9fb4207f567e2d7700",
+      "git_blob_sha": "768551643ef0948007a5b743a3fa466d815e73e0",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/preset/src/index.ts",
+      "sha256": "c40f5ee157c05efaa0182496758806bfc084296bc315b40479b49422506ea116",
+      "git_blob_sha": "4847d82b61e3d1b62d3114eca58ad4659a089126",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/preset/src/shared.test.ts",
+      "sha256": "f2734e644335f9d50afb9fc418bda30ee0f0e01d6b96564fac1ed49b38cf2bd7",
+      "git_blob_sha": "b28df14f92855c8a8da80351cc2466a038c2931e",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/preset/src/shared.ts",
+      "sha256": "29e803fbf385fcb61a191eacb12b543b942fd1b7b2fc17006a6dc827956f6f6a",
+      "git_blob_sha": "63da9b4889820a885727e9025489602bcdb5c73c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "packages/preset/tsdown.config.ts",
+      "sha256": "7024db14a2a74bc67ddb34565ac6c4e85a5ff61b116a85ac4fac092648eaf3a0",
+      "git_blob_sha": "05481d87c98b20e79dc061e7b5c8d76f53afd30a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/index.html",
+      "sha256": "0e6ac232f9b8ea7ae88fffd89b1295cf1d7eecb0e0f79c2bf6694f3166ed13bd",
+      "git_blob_sha": "f2e7341bb2e1a0aeecba2b2fb1f83e3bc404d0cc",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/shim.d.ts",
+      "sha256": "88c3dc76bd3ef2aeac2091cfb5df1bba9a09d9b1d345113420edc79cd2e12e80",
+      "git_blob_sha": "040270ea4b1540cd1668387000dcb36eca064484",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/App.vue",
+      "sha256": "5c3db27e60b5f2834fadce4a097786b833e15858a42a6be3fc91851549f5cfb6",
+      "git_blob_sha": "ba88e9ae175f06d411a5884a9e69ee3ba867f3f8",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/components/ColorGroup.vue",
+      "sha256": "d50c124a0e552ac7e150998611578003dbe2881176330420f33de1a0ecd0b149",
+      "git_blob_sha": "2952923cfed1c55952e6285ab48596d5081d9a9c",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/components/ColorHueRange.vue",
+      "sha256": "5e677681f5d34b1e5909bf45bd623cf8c2f8c34374951ee76d587625f0ee3b49",
+      "git_blob_sha": "e30d946a3ec4f08943d7a5a519137cca021fff08",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/components/ColorThreeDVolume.vue",
+      "sha256": "851aded4aee63cd80d36de8415324a0a9f3a39467bff7966a44f7ba608238236",
+      "git_blob_sha": "db6ce984be8ba1151a6c7d3715ac9cd88e64902a",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/components/SelectTab.vue",
+      "sha256": "774b867abb6d1f6af56064a82994554ff3fdd77167832633d2ea0e96c2cdcd55",
+      "git_blob_sha": "3278c3dfd010e138d123a9c8f550cb49b91543a0",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/docs/class-catalog.ts",
+      "sha256": "835359df46f52fdbc6825f748439babd364fa81f11b70197ef37faa14de9157e",
+      "git_blob_sha": "be66ee2de7492977f18eb5d8831958660bfa5a77",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/main.ts",
+      "sha256": "f78ea40f19db349bd717bdc50e8a45e36b1acec8bcca51635ab845aefeecfce8",
+      "git_blob_sha": "597df4a7193b5bc4881f05bef1ee8a2182136580",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/styles/main.css",
+      "sha256": "008a6f62936dd0d7b64da48e54093ab16106913b87d97c05b8088bd4127c070c",
+      "git_blob_sha": "17bb9ce17ac195a468a3fd3f962efdf01d9340b1",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/src/styles/markdown.css",
+      "sha256": "56595761d4ce9acf94c588b48bb992fe7ade88095198cf7a4a14e8f1be1bb97b",
+      "git_blob_sha": "0f22336f7190bad3563745af95e1342ee9fcf41f",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/uno.config.ts",
+      "sha256": "1c49020d7a8004432e44d23e588f7cab2be29fe375d075acdf185b3b7011d280",
+      "git_blob_sha": "03504d098526caca23772f65bbe0105c5af23888",
+      "remote_match": true,
+      "remote_exists": true
+    },
+    {
+      "path": "playground/vite.config.ts",
+      "sha256": "3f5c4082bc05ad980406606896a30fb38d5a5f9bbf32e77aff02c78cc0ec78f5",
+      "git_blob_sha": "0c1b5bc1e6dd236bb1423397d2a5206a48278811",
+      "remote_match": true,
+      "remote_exists": true
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-12",
+  "source_root": "/Users/mima1234/Documents/airi-main",
+  "git_checkout": false,
+  "version_note": "本地源码包无.git，不能声称等于远程HEAD；以所查文件sha256固定证据。",
+  "runtime_validated": false,
+  "inspected_files": [
+    {
+      "path": "package.json",
+      "sha256": "4c6311f485dd42d82bf8a72ad58feeda1788046e5c24d125b3d5cf864f56ea50",
+      "lines": 124
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "sha256": "421d5f1601cccef5ee7f14b330c66c7b4c090800d8d026de76677c354794782d",
+      "lines": 584
+    },
+    {
+      "path": "packages/memory-pgvector/src/index.ts",
+      "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9",
+      "lines": 24
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de",
+      "lines": 16
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenes/Stage.vue",
+      "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7",
+      "lines": 760
+    },
+    {
+      "path": "packages/stage-ui/package.json",
+      "sha256": "1eed0d487ddecdf305fbbd85b0ce0e3015dc4dfb81dedb4e39e07a8b589ea304",
+      "lines": 239
+    },
+    {
+      "path": "packages/stage-ui-three/package.json",
+      "sha256": "ded3a4da3c505307b87d52c7a19a2ba4eccc35b4c4197fbb31456d8b073879dc",
+      "lines": 52
+    },
+    {
+      "path": "packages/stage-layouts/src/composables/use-chat-interruption.ts",
+      "sha256": "a618143be6a89f2c55a47a709515290c40bad7f3716a543cd33c6c1291fba409",
+      "lines": 90
+    },
+    {
+      "path": "packages/pipelines-audio/src/speech-pipeline.ts",
+      "sha256": "485b4bde5fbb8a94ce897ae0144a7868a37d11935cb98e423c988a1965c9d83a",
+      "lines": 479
+    },
+    {
+      "path": "packages/pipelines-audio/src/managers/playback-manager.ts",
+      "sha256": "a666975b1fb75d4e98be55245d2b83f2ae8c50a831b7c08cf020a32668fd1b1c",
+      "lines": 426
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+      "sha256": "5435f5534daf2f346f3c6dca67b5e245ea07a36b9ad47ed4729d5492dde4f759",
+      "lines": 190
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/airi/apple-speech-transcription/index.ts",
+      "sha256": "9131b3ff80caacb4249e780d7d49624256ba14780e66de7f2e5a97bbefa9ce00",
+      "lines": 46
+    },
+    {
+      "path": "packages/provider-inference/src/providers/local/sherpaw-transcription/index.ts",
+      "sha256": "e41369e531c0198911662ceb3927b633fc06e74767d454c297b0942752ca0dc0",
+      "lines": 110
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "lines": 1065
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/context-store.ts",
+      "sha256": "6a903814528e2a320c1c43e0dd9cd969fbc99d8c95ad8823f656a61c9da0856e",
+      "lines": 78
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/context-providers/runtime-prompt.ts",
+      "sha256": "1222d2caab9bc8dec10ae356d04dccc7ba0797fe1276a9970be9a7b54bad75f3",
+      "lines": 23
+    },
+    {
+      "path": "packages/stage-ui/src/stores/ai/chat-llm/llm.ts",
+      "sha256": "fd4c50758e6c929365280250f957a232d6553f2febd2436d8f0887505cb01fa9",
+      "lines": 97
+    },
+    {
+      "path": "packages/model-driver-lipsync/package.json",
+      "sha256": "2a451ce86ebd613b5b8b63ed248844222074442f2f1820b2f540da2407d82f71",
+      "lines": 23
+    }
+  ]
+}

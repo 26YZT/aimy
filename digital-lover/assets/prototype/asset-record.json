@@ -1,0 +1,25 @@
+{
+  "id": "prototype-vroid-sample-a",
+  "display_name": "示例角色 · VRoid Sample A",
+  "status": "prototype-only",
+  "user_authorization": "2026-10-07：先用示例验证交互，正式角色后续定稿",
+  "source": "airi-main/packages/stage-ui/src/assets/vrm/models/AvatarSample-A/AvatarSample_A.vrm",
+  "sha256": "2a0ccd84880b03d7b65503d8b6287f7a97f3bb4fab70a5fd0a47b433c97827f5",
+  "vrm_metadata": {
+    "allowedUserName": "Everyone",
+    "author": "VRoid Project",
+    "commercialUssageName": "Allow",
+    "contactInformation": "https://www.pixiv.net/support.php?mode=select_vroid",
+    "licenseName": "Other",
+    "otherLicenseUrl": "https://hub.vroid.com/license?allowed_to_use_user=everyone&characterization_allowed_user=everyone&corporate_commercial_use=allow&credit=unnecessary&modification=allow&personal_commercial_use=profit&redistribution=allow&sexual_expression=allow&version=1&violent_expression=allow",
+    "otherPermissionUrl": "https://hub.vroid.com/license?allowed_to_use_user=everyone&characterization_allowed_user=everyone&corporate_commercial_use=allow&credit=unnecessary&modification=allow&personal_commercial_use=profit&redistribution=allow&sexual_expression=allow&version=1&violent_expression=allow",
+    "sexualUssageName": "Allow",
+    "texture": 6,
+    "title": "AvatarSample_A",
+    "version": "1.0",
+    "violentUssageName": "Allow"
+  },
+  "release_approval": "not_verified",
+  "official_persona": "not_defined",
+  "voice": "not_selected"
+}

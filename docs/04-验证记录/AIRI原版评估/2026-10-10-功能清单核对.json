@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-10",
+  "feature_rows": 234,
+  "csv_data_rows": 234,
+  "unique_ids": 234,
+  "provider_definitions": 73,
+  "source_reference_count": 635,
+  "missing_unexpected_sources": [],
+  "expected_missing_sources": [
+    {
+      "id": "AE-C08",
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/bin/computer_use"
+    },
+    {
+      "id": "AE-C12",
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/coding"
+    }
+  ],
+  "out_of_range_source_lines": [],
+  "broken_document_links": [],
+  "git_index_sha256": "cfed2c524e1f382ac46018366c06887b298bb74f84d1ece2e8e7aee851745c49",
+  "git_index_unchanged": true,
+  "root_review_corrections": [
+    "Legacy default microphone is not a device selection UI",
+    "Placeholder/unimplemented features have no runtime acceptance",
+    "BeatSync integrated module separated from system-audio experimental entry",
+    "Excluded non-route user/content-length literal calls"
+  ],
+  "valid_static_api_route_fragments": 42,
+  "artifacts_sha256": {
+    "md": "028e48694135353dee8c5bc944af85c14308757b692df085709ce41b37c7a9be",
+    "json": "9bb1546353211c029246087363b76b5050720d9664f4b97b3ac6eacce25337d1",
+    "csv": "63ab0bae574cf2282968f04faa6213d90b0f57db14e35467693bc404d1607a1e"
+  },
+  "validation": "Static structure, source paths, source line bounds and links only. No application/model/device tests rerun.",
+  "independent_review": {
+    "desktop_review": "Completed; BeatSync vs system-audio experimental classification corrected",
+    "legacy_and_structure_review": "Passed after fixes; default microphone, placeholder acceptance and non-route tokens corrected",
+    "final_counts_verified": {
+      "feature_rows": 234,
+      "provider_definitions": 73,
+      "csv_rows": 234,
+      "valid_static_api_path_fragments": 42
+    }
+  }
+}

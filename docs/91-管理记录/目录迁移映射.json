@@ -1,0 +1,2569 @@
+{
+  "date": "2026-10-11",
+  "backup": "/Users/mima1234/Documents/aimy/.baseline/documentation-organization-2026-10-11-6f7c7ba9",
+  "mapping": {
+    "digital-lover/docs/03-二开总纲.md": "docs/90-历史归档/旧Aimy样机/设计与需求/03-二开总纲.md",
+    "digital-lover/docs/06-语音系统设计.md": "docs/90-历史归档/旧Aimy样机/设计与需求/06-语音系统设计.md",
+    "digital-lover/docs/05-角色美术生产管线.md": "docs/90-历史归档/旧Aimy样机/设计与需求/05-角色美术生产管线.md",
+    "digital-lover/docs/00-架构裁决与底座说明.md": "docs/03-技术与协作参考/00-架构裁决与底座说明.md",
+    "digital-lover/docs/PRD.md": "docs/90-历史归档/入口快照/PRD入口-整理前.md",
+    "digital-lover/docs/多Agent开发操作手册.md": "docs/03-技术与协作参考/多Agent开发操作手册.md",
+    "digital-lover/docs/资产清单.md": "docs/03-技术与协作参考/资产清单.md",
+    "digital-lover/docs/GitHub发布范围.md": "docs/90-历史归档/旧Aimy样机/运行与来源/GitHub发布范围.md",
+    "digital-lover/docs/既有工作评估.md": "docs/90-历史归档/阶段评估/既有工作评估.md",
+    "digital-lover/docs/04-角色与美术设计.md": "docs/90-历史归档/旧Aimy样机/设计与需求/04-角色与美术设计.md",
+    "digital-lover/docs/01-AIRI复用与裁剪清单.md": "docs/90-历史归档/旧Aimy样机/设计与需求/01-AIRI复用与裁剪清单.md",
+    "digital-lover/docs/PRD-MVP-重构版.md": "docs/90-历史归档/旧Aimy样机/设计与需求/PRD-MVP-重构版.md",
+    "digital-lover/docs/PROJECT_STATE.md": "docs/90-历史归档/入口快照/PROJECT_STATE-整理前.md",
+    "digital-lover/docs/07-游戏设计.md": "docs/03-技术与协作参考/后置探索/07-游戏设计.md",
+    "digital-lover/docs/真实联调配置说明.md": "docs/90-历史归档/旧Aimy样机/运行与来源/真实联调配置说明.md",
+    "digital-lover/docs/任务编排.md": "docs/90-历史归档/入口快照/任务编排-整理前.md",
+    "digital-lover/docs/技术手册-M1-文字对话闭环.md": "docs/90-历史归档/旧Aimy样机/早期执行计划/技术手册-M1-文字对话闭环.md",
+    "digital-lover/docs/技术手册-T0.3-AIRI-core-agent接入.md": "docs/90-历史归档/旧Aimy样机/早期执行计划/技术手册-T0.3-AIRI-core-agent接入.md",
+    "digital-lover/docs/02-技术适配声明.md": "docs/03-技术与协作参考/02-技术适配声明.md",
+    "digital-lover/docs/PRD-2.0-对齐草案.md": "docs/00-当前方向/PRD-2.0-对齐草案.md",
+    "digital-lover/docs/AIRI复用修订记录.md": "docs/90-历史归档/旧Aimy样机/运行与来源/AIRI复用修订记录.md",
+    "digital-lover/docs/执行记录/2026-10-10-AIRI原版评估.json": "docs/04-验证记录/AIRI原版评估/2026-10-10-AIRI原版评估.json",
+    "digital-lover/docs/执行记录/2026-10-07-desktop-source-manifest.json": "docs/04-验证记录/旧Aimy样机/2026-10-07-desktop-source-manifest.json",
+    "digital-lover/docs/执行记录/2026-10-07-desktop-engineering.json": "docs/04-验证记录/旧Aimy样机/2026-10-07-desktop-engineering.json",
+    "digital-lover/docs/执行记录/2026-10-07-D工程检查.json": "docs/04-验证记录/旧Aimy样机/2026-10-07-D工程检查.json",
+    "digital-lover/docs/执行记录/2026-10-07-stage-a.json": "docs/04-验证记录/旧Aimy样机/2026-10-07-stage-a.json",
+    "digital-lover/docs/执行记录/2026-10-07-A与B基线.md": "docs/04-验证记录/旧Aimy样机/2026-10-07-A与B基线.md",
+    "digital-lover/docs/执行记录/2026-10-07-final-engineering.json": "docs/04-验证记录/旧Aimy样机/2026-10-07-final-engineering.json",
+    "digital-lover/docs/执行记录/B接入边界.md": "docs/04-验证记录/旧Aimy样机/B接入边界.md",
+    "digital-lover/docs/执行记录/2026-10-07-D源码清单.json": "docs/04-验证记录/旧Aimy样机/2026-10-07-D源码清单.json",
+    "digital-lover/docs/执行记录/2026-10-07-C桌面样机.md": "docs/04-验证记录/旧Aimy样机/2026-10-07-C桌面样机.md",
+    "digital-lover/docs/执行记录/2026-10-07-D实时交互原型.md": "docs/04-验证记录/旧Aimy样机/2026-10-07-D实时交互原型.md",
+    "digital-lover/docs/执行记录/2026-10-10-功能清单核对.json": "docs/04-验证记录/AIRI原版评估/2026-10-10-功能清单核对.json",
+    "digital-lover/docs/执行记录/2026-10-10-旧样机与原版结构比较.json": "docs/04-验证记录/AIRI原版评估/2026-10-10-旧样机与原版结构比较.json",
+    "digital-lover/docs/执行记录/C桌面样机/result.json": "docs/04-验证记录/旧Aimy样机/C桌面样机/result.json",
+    "digital-lover/docs/执行记录/C桌面样机/preview-settings-empty.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview-settings-empty.png",
+    "digital-lover/docs/执行记录/C桌面样机/desktop-immediate-shutdown-restored.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-immediate-shutdown-restored.png",
+    "digital-lover/docs/执行记录/C桌面样机/desktop-conversation.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-conversation.png",
+    "digital-lover/docs/执行记录/C桌面样机/desktop-avatar-unavailable.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-avatar-unavailable.png",
+    "digital-lover/docs/执行记录/C桌面样机/desktop-cleared.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-cleared.png",
+    "digital-lover/docs/执行记录/C桌面样机/preview-760x580.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview-760x580.png",
+    "digital-lover/docs/执行记录/C桌面样机/desktop-narrow.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-narrow.png",
+    "digital-lover/docs/执行记录/C桌面样机/preview-1040x760.png": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview-1040x760.png",
+    "digital-lover/docs/执行记录/C桌面样机/preview.json": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview.json",
+    "digital-lover/docs/执行记录/D实时原型/视觉/preview-own-window-picker.png": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-own-window-picker.png",
+    "digital-lover/docs/执行记录/D实时原型/视觉/preview-settings-asr-empty.png": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-settings-asr-empty.png",
+    "digital-lover/docs/执行记录/D实时原型/视觉/preview-settings-tts-empty.png": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-settings-tts-empty.png",
+    "digital-lover/docs/执行记录/D实时原型/视觉/preview-settings-chat-empty.png": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-settings-chat-empty.png",
+    "digital-lover/docs/执行记录/D实时原型/视觉/preview-760x580.png": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-760x580.png",
+    "digital-lover/docs/执行记录/D实时原型/视觉/preview-1040x760.png": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-1040x760.png",
+    "digital-lover/docs/执行记录/D实时原型/视觉/preview.json": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview.json",
+    "digital-lover/docs/执行记录/D实时原型/看屏/own-window-observation.png": "docs/04-验证记录/旧Aimy样机/D实时原型/看屏/own-window-observation.png",
+    "digital-lover/docs/执行记录/D实时原型/看屏/screen-result.json": "docs/04-验证记录/旧Aimy样机/D实时原型/看屏/screen-result.json",
+    "digital-lover/docs/执行记录/D实时原型/C回归/result.json": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/result.json",
+    "digital-lover/docs/执行记录/D实时原型/C回归/desktop-immediate-shutdown-restored.png": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-immediate-shutdown-restored.png",
+    "digital-lover/docs/执行记录/D实时原型/C回归/desktop-conversation.png": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-conversation.png",
+    "digital-lover/docs/执行记录/D实时原型/C回归/desktop-avatar-unavailable.png": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-avatar-unavailable.png",
+    "digital-lover/docs/执行记录/D实时原型/C回归/desktop-cleared.png": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-cleared.png",
+    "digital-lover/docs/执行记录/D实时原型/C回归/desktop-narrow.png": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-narrow.png",
+    "digital-lover/docs/执行记录/D实时原型/语音/voice-conversation.png": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/voice-conversation.png",
+    "digital-lover/docs/执行记录/D实时原型/语音/media-result-rapid-toggle-failure.json": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/media-result-rapid-toggle-failure.json",
+    "digital-lover/docs/执行记录/D实时原型/语音/media-result.json": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/media-result.json",
+    "digital-lover/docs/执行记录/D实时原型/语音/media-result-before-physical-budget.json": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/media-result-before-physical-budget.json",
+    "digital-lover/docs/执行记录/D实时原型/解码预算/decode-budget-recovery.png": "docs/04-验证记录/旧Aimy样机/D实时原型/解码预算/decode-budget-recovery.png",
+    "digital-lover/docs/执行记录/D实时原型/解码预算/budget-result.json": "docs/04-验证记录/旧Aimy样机/D实时原型/解码预算/budget-result.json",
+    "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-window-diagnostic.json": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-window-diagnostic.json",
+    "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-targeted-tests.txt": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-targeted-tests.txt",
+    "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-stage.png": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-stage.png",
+    "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-test-chat.png": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-test-chat.png",
+    "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-memory-new-session.png": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-memory-new-session.png",
+    "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-stage-frame2.png": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-stage-frame2.png",
+    "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-typecheck.txt": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-typecheck.txt",
+    "digital-lover/docs/决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md": "docs/01-决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md",
+    "digital-lover/docs/决策记录/2026-10-09-AIRI原版桌面基线.md": "docs/01-决策记录/2026-10-09-AIRI原版桌面基线.md",
+    "digital-lover/docs/阶段技术手册/P7-MVP后游戏探索.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P7-MVP后游戏探索.md",
+    "digital-lover/docs/阶段技术手册/P2-视觉与角色体验原型.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P2-视觉与角色体验原型.md",
+    "digital-lover/docs/阶段技术手册/P0-产品定义与可行性闸门.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P0-产品定义与可行性闸门.md",
+    "digital-lover/docs/阶段技术手册/P1-AIRI底座与集成边界.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P1-AIRI底座与集成边界.md",
+    "digital-lover/docs/阶段技术手册/P4-语音屏幕与隐私.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P4-语音屏幕与隐私.md",
+    "digital-lover/docs/阶段技术手册/README.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/README.md",
+    "digital-lover/docs/阶段技术手册/B-关键体验验证.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/B-关键体验验证.md",
+    "digital-lover/docs/阶段技术手册/P3-桌面对话垂直切片.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P3-桌面对话垂直切片.md",
+    "digital-lover/docs/阶段技术手册/P6-MVP硬化与发布.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P6-MVP硬化与发布.md",
+    "digital-lover/docs/阶段技术手册/P5-主动陪伴与连续人格.md": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P5-主动陪伴与连续人格.md",
+    "digital-lover/docs/调研/2026-10-10-AIRI与Aimy完整功能清单.md": "docs/02-调研参考/2026-10-10-AIRI与Aimy完整功能清单.md",
+    "digital-lover/docs/调研/2026-10-10-GitHub能力复用调查.md": "docs/02-调研参考/2026-10-10-GitHub能力复用调查.md",
+    "digital-lover/docs/调研/2026-10-10-AIRI实测与能力差距.md": "docs/02-调研参考/2026-10-10-AIRI实测与能力差距.md",
+    "digital-lover/docs/调研/2026-10-10-四项目复用与代码审查.md": "docs/02-调研参考/2026-10-10-四项目复用与代码审查.md",
+    "digital-lover/docs/调研/2026-10-10-AIRI与Aimy完整功能清单.json": "docs/02-调研参考/2026-10-10-AIRI与Aimy完整功能清单.json",
+    "digital-lover/docs/调研/2026-10-10-AIRI与Aimy完整功能清单.csv": "docs/02-调研参考/2026-10-10-AIRI与Aimy完整功能清单.csv",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/ryza-audit.md": "docs/02-调研参考/2026-10-10-四项目复用证据/ryza-audit.md",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/snapshot-summary.json": "docs/02-调研参考/2026-10-10-四项目复用证据/snapshot-summary.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-directed-results.json": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-directed-results.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-static-checks.json": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-static-checks.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-ai-master-source-manifest.json": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-ai-master-source-manifest.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-directed-checks.py": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-directed-checks.py",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-audit-reproductions.test.ts": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-audit-reproductions.test.ts",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-audit.md": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-audit.md",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-audit.md": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-audit.md",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/ryza-isolated-checks.js": "docs/02-调研参考/2026-10-10-四项目复用证据/ryza-isolated-checks.js",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/github-metadata.json": "docs/02-调研参考/2026-10-10-四项目复用证据/github-metadata.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/airi-reference-manifest.json": "docs/02-调研参考/2026-10-10-四项目复用证据/airi-reference-manifest.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/README.md": "docs/02-调研参考/2026-10-10-四项目复用证据/README.md",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-isolated-results.jsonl": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-isolated-results.jsonl",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/post-review-source-check.json": "docs/02-调研参考/2026-10-10-四项目复用证据/post-review-source-check.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-check-results.json": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-check-results.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-isolated-check.py": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-isolated-check.py",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/ryza-ai-revive-master-source-manifest.json": "docs/02-调研参考/2026-10-10-四项目复用证据/ryza-ai-revive-master-source-manifest.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/AionsHome-main-source-manifest.json": "docs/02-调研参考/2026-10-10-四项目复用证据/AionsHome-main-source-manifest.json",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-audit.md": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-audit.md",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-main-source-manifest.json": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-main-source-manifest.json",
+    "digital-lover/docs/visual/github/REFERENCE_LOCK.md": "docs/90-历史归档/旧样机展示/visual/github/REFERENCE_LOCK.md",
+    "digital-lover/docs/visual/github/banner-light.svg": "docs/90-历史归档/旧样机展示/visual/github/banner-light.svg",
+    "digital-lover/docs/visual/github/badge-status.svg": "docs/90-历史归档/旧样机展示/visual/github/badge-status.svg",
+    "digital-lover/docs/visual/github/badge-platform.svg": "docs/90-历史归档/旧样机展示/visual/github/badge-platform.svg",
+    "digital-lover/docs/visual/github/banner-dark.svg": "docs/90-历史归档/旧样机展示/visual/github/banner-dark.svg",
+    "digital-lover/docs/visual/github/badge-models.svg": "docs/90-历史归档/旧样机展示/visual/github/badge-models.svg",
+    "digital-lover/docs/superpowers/plans/2026-09-23-t0-3-airi-core-agent.md": "docs/90-历史归档/旧Aimy样机/早期执行计划/2026-09-23-t0-3-airi-core-agent.md",
+    "digital-lover/docs/superpowers/plans/2026-09-24-m1-text-chat-cli.md": "docs/90-历史归档/旧Aimy样机/早期执行计划/2026-09-24-m1-text-chat-cli.md",
+    "数字恋人-产品PRD.md": "docs/90-历史归档/早期产品与游戏探索/数字恋人-产品PRD.md",
+    "数字恋人-新产品PRD-对齐中.md": "docs/90-历史归档/早期产品与游戏探索/数字恋人-新产品PRD-对齐中.md",
+    "AIRI-参考项目-拆解与反推PRD.md": "docs/90-历史归档/早期产品与游戏探索/AIRI-参考项目-拆解与反推PRD.md",
+    "README.md": "docs/90-历史归档/入口快照/根README-旧样机介绍.md",
+    "digital-lover/README.md": "docs/90-历史归档/入口快照/digital-lover-README-旧样机说明.md",
+    "digital-lover/AGENTS.md": "docs/90-历史归档/入口快照/digital-lover-AGENTS-整理前规则.md",
+    "我要开发一个类似“AI角色真实生活在3D游戏世界中，并能够和玩家自然互动”的游戏原型。/我要开发一个类似“AI角色真实生活在3D游戏世界中，并能够和玩家自然互动”的游戏原型。.md": "docs/90-历史归档/早期产品与游戏探索/3D游戏原型原始需求.md"
+  },
+  "directory_mapping": {
+    "digital-lover/docs": "docs",
+    "digital-lover/docs/调研": "docs/02-调研参考",
+    "digital-lover/docs/决策记录": "docs/01-决策记录",
+    "digital-lover/docs/阶段技术手册": "docs/90-历史归档/旧Aimy样机/阶段技术手册",
+    "digital-lover/docs/执行记录": "docs/04-验证记录",
+    "digital-lover/docs/执行记录/AIRI原版评估": "docs/04-验证记录/AIRI原版评估/附件",
+    "digital-lover/docs/执行记录/C桌面样机": "docs/04-验证记录/旧Aimy样机/C桌面样机",
+    "digital-lover/docs/执行记录/D实时原型": "docs/04-验证记录/旧Aimy样机/D实时原型",
+    "digital-lover/docs/visual": "docs/90-历史归档/旧样机展示/visual",
+    "digital-lover/docs/visual/github": "docs/90-历史归档/旧样机展示/visual/github",
+    "digital-lover/docs/调研/2026-10-10-四项目复用证据": "docs/02-调研参考/2026-10-10-四项目复用证据"
+  },
+  "special_targets": {
+    "digital-lover/docs/PRD.md": "docs/PRD.md",
+    "digital-lover/docs/PROJECT_STATE.md": "docs/PROJECT_STATE.md",
+    "digital-lover/docs/任务编排.md": "docs/任务编排.md"
+  },
+  "rows": [
+    {
+      "original_path": "digital-lover/docs/03-二开总纲.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/设计与需求/03-二开总纲.md",
+      "original_sha256": "3526e8171a43945c0393cbabf0e78f6f60ad99ea27012f737bd6b6d1648aac63",
+      "bytes": 2394,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "日期未标；内容属2026-10-07 A–E路线时期（关联推定）",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "保留产品规则与二开分类缘由",
+      "context_contamination_risk": "称PRD-MVP唯一需求、A–E当前顺序、固定VRM，与10-10草案冲突，不能作为新主线开工依据",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/06-语音系统设计.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/设计与需求/06-语音系统设计.md",
+      "original_sha256": "889848470f5769504a6a9fe4dbea5d23bc7b5e7bee3516b0b5f69a413e798ee0",
+      "bytes": 2583,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；PRD-MVP B/D集成时期",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "保留打断、回声、陈旧结果与设备实测要求",
+      "context_contamination_risk": "先B再D和旧源码抑制判断不代表10-10来源相同；不能先重写语音作为原版继承前置",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/05-角色美术生产管线.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/设计与需求/05-角色美术生产管线.md",
+      "original_sha256": "bde8b5fe98e5ebda622dec13f0e28f93a68a78faac8083ca8673f368480f7416",
+      "bytes": 2505,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；旧官方VRM生产方案时期",
+      "date_kind": "原文无日期",
+      "date_evidence": [],
+      "why_keep": "绑定、口型、动作、音色协同验收仍有参考价值",
+      "context_contamination_risk": "不能因该文及Charakuru候选将正式角色固定VRM、自动采购或制作资产",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/00-架构裁决与底座说明.md",
+      "canonical_path": "docs/03-技术与协作参考/00-架构裁决与底座说明.md",
+      "original_sha256": "9404e937f4c53b9d7f095f7e051bf4f9477c68fd5e34f49f2f52ce7e7f44aff1",
+      "bytes": 3619,
+      "action": "move",
+      "status": "技术参考，含历史实现状态；使用前按当前源码与任务复核",
+      "artifact_period": "初稿日期未知；正文明确2026-10-09/10-10修订",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 当前方向与对齐入口为 [PRD 2.0草案](PRD-2.0-对齐草案.md)及 [直接继承决策](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md)。本文说明复用依据，不作为全功能完成或生产验收声明。"
+        },
+        {
+          "line": 9,
+          "text": "2026-10-09进一步明确：后续以 `apps/stage-tamagotchi` 完整桌面应用为开发基线，继承原版 UI、交互与角色系统；现有独立样机作为验证资产保留。2026-10-10已在隔离副本跑通原版桌面、文字和指定测试记录恢复；产品迁移尚未实施。当前按 [PRD 2.0草案](PRD-2.0-对齐草案.md) 重新对齐，再据 [能力差距](调研/2026-10-10-AIRI实测与能力差距.md) 决定增量，详见 [基线决策](决策记录/2026-10-09-AIRI原版桌面基线.md)。"
+        },
+        {
+          "line": 32,
+          "text": "`../airi-main` 为旧只读参考；2026-10-10新来源为 `/Users/mima1234/Documents/airi-main`，隔离评估副本在 `.baseline/airi-evaluation-2026-10-10/source`；`digital-lover` 为产品工作区。Blueprint 提供方法与工具，其测试不计 Aimy 产品完成度。既有包不重复导入，新消费包先检查闭包、许可证与平台限制；旧样机新增消费包见复用清单和修订记录。"
+        }
+      ],
+      "why_keep": "保存AIRI-first、证据层级、原版与旧来源边界",
+      "context_contamination_risk": "仍有最小消费闭包/VRM及隐藏停媒体表述；不得据此裁剪原版或决定未答窗口语义",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/PRD.md",
+      "canonical_path": "docs/90-历史归档/入口快照/PRD入口-整理前.md",
+      "original_sha256": "4eee303cf6a5955843080dcab3b94f9092c2b46fc513a6c480a42ca7e3241027",
+      "bytes": 2368,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "最新修订至少包含2026-10-10方向；初稿日期未知",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "**当前对齐入口：[PRD 2.0草案](PRD-2.0-对齐草案.md)。** 用户2026-10-10明确先直接继承AIRI应用、完成Aimy品牌/必要界面定制，再按实际体验优化。具体迁移手册和行为选择仍待细化；[旧需求总纲](PRD-MVP-重构版.md)保留历史输入。"
+        },
+        {
+          "line": 5,
+          "text": "PRD 2.0承接最新用户表达与 [AIRI实测](调研/2026-10-10-AIRI实测与能力差距.md)，结构边界见 [直接继承与旧样机隔离](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md)。本轮明确要求优先于旧文档相冲突的条目，不将待答事项当作默认批准。"
+        },
+        {
+          "line": 10,
+          "text": "| AIRI与现有Aimy功能、源码状态、适用范围和验证边界 | [完整功能清单](调研/2026-10-10-AIRI与Aimy完整功能清单.md) |"
+        }
+      ],
+      "why_keep": "不另立产品规格，链接当前PRD与事实",
+      "context_contamination_risk": "导航仍把阶段手册并列为当前执行方法；应明确仅历史方法参考",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/多Agent开发操作手册.md",
+      "canonical_path": "docs/03-技术与协作参考/多Agent开发操作手册.md",
+      "original_sha256": "c64a654084fa2c2ab84382338a11f8c989e62da5419f2492e41945879f954d0f",
+      "bytes": 8140,
+      "action": "move",
+      "status": "技术参考，含历史实现状态；使用前按当前源码与任务复核",
+      "artifact_period": "原文无日期；包含VS Code时代操作和父仓无历史提交快照",
+      "date_kind": "原文无日期",
+      "date_evidence": [],
+      "why_keep": "保存有边界主控、只读探查、单文件主写与独立验收方法",
+      "context_contamination_risk": "固定agents配置/API能力/VSCode面板、父仓状态会漂移；示例提示词与toml不是自动执行指令；先手册批准仅适用大型实现，不能扩大为本轮整理前置审批；历史示例提示词不自动授权创建对话、委派或实施",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/资产清单.md",
+      "canonical_path": "docs/03-技术与协作参考/资产清单.md",
+      "original_sha256": "a6287af9f7c747966dd2c328fbf8b342faf969883dc7859e0b698db6df5ea916",
+      "bytes": 1662,
+      "action": "move",
+      "status": "技术参考，含历史实现状态；使用前按当前源码与任务复核",
+      "artifact_period": "2026-10-07示例资源确认",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 2026-10-07 用户确认：先用 AIRI 示例验证交互，正式官方角色后续定稿。原型可用与正式发行许可、风格、动作和声音验收分别记录。"
+        }
+      ],
+      "why_keep": "保留VRoid示例、Silero、SHA与许可边界",
+      "context_contamination_risk": "VRM已渲染/口型已接仅对旧样机；新原版10-10实测的是Live2D；不能当正式角色已定或发行已批",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/GitHub发布范围.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/运行与来源/GitHub发布范围.md",
+      "original_sha256": "5720813ad4aec620feff6a476d9c727f258524bf73cff85367ba48ad8f68d6b1",
+      "bytes": 1475,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-10-08，文内用户确认",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "2026-10-08 用户确认：只发布 Aimy 本身，完整 AIRI 参考库及与 Aimy 无关的内容不上传。目标仓库为 [26YZT/aimy](https://github.com/26YZT/aimy)，发布分支为 `main`。"
+        }
+      ],
+      "why_keep": "保留只公开Aimy必要源码、排除参考/凭证/缓存的确认",
+      "context_contamination_risk": "digital-lover整目录发布和旧根资料排除是当时快照；统一docs后需核对公开范围，目录整理不授权发布；本轮集中归档不新增公开授权，根docs与旧路径兼容项的发布范围须重新审查",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/既有工作评估.md",
+      "canonical_path": "docs/90-历史归档/阶段评估/既有工作评估.md",
+      "original_sha256": "11cd517f609abd51512f3a30cee024f96acbb13c40960b52272e108d97913baf",
+      "bytes": 7192,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-09-29，文内明确评估日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 评估日期：2026-09-29"
+        },
+        {
+          "line": 67,
+          "text": "截至 2026-09-29，在不读取密钥的前提下重新执行："
+        }
+      ],
+      "why_keep": "解释为什么有Core/CLI/关系原型和后续重规划",
+      "context_contamination_risk": "没有Electron/只摘包/先视觉再桌面等是当时事实与判断；不能当10-11现状或反对完整原版继承",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/04-角色与美术设计.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/设计与需求/04-角色与美术设计.md",
+      "original_sha256": "b6e982547f51a2db35c1360126e6a391a95a621a59cb360b7de643de8f10f247",
+      "bytes": 2592,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "日期未标；与PRD-MVP/A–E相连的旧方案时期",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "保留资源/程序共同负责表现与素材许可检查方法",
+      "context_contamination_risk": "固定官方VRM和C/D前正式资源要求不能变成当前已定角色格式；当前先用原版示例，格式待定",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/01-AIRI复用与裁剪清单.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/设计与需求/01-AIRI复用与裁剪清单.md",
+      "original_sha256": "a27f566d3a7c9e7dd9e373a9adce21dff5942bf6df7d2834f0a06bb8be3a0903",
+      "bytes": 3317,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未知；头部引用2026-10-10隔离决策",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 以下包接入与定制描述旧独立样机，不是新主线的拼装清单。当前按 [PRD 2.0草案](PRD-2.0-对齐草案.md)与 [直接继承决策](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md)，以完整原版workspace/桌面入口起步，旧样机保持独立；先不大规模裁剪原版结构或重复摘包装配。"
+        }
+      ],
+      "why_keep": "记录九包/五包接入、占位与许可来源",
+      "context_contamination_risk": "按清单重新摘包装配会复建旧简版；不能以“一期不消费”批量裁剪完整原版workspace",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/PRD-MVP-重构版.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/设计与需求/PRD-MVP-重构版.md",
+      "original_sha256": "82d78c2cded5a520e0f135225bd26990b747426a7c03d2d1c6494502c47fa05a",
+      "bytes": 12725,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-10-07方向批准；10-09与10-10文内修订",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 历史需求总纲：产品负责人于2026-10-07批准产品方向与A–E路线。2026-10-10当前对齐入口已迁至 [PRD 2.0草案](PRD-2.0-对齐草案.md)，最新用户方向优先。本文保留历史范围和稳定链接；批准需求不等于功能、资产或MVP已验收，当前事实见 [PROJECT_STATE.md](PROJECT_STATE.md)。"
+        },
+        {
+          "line": 5,
+          "text": "> 2026-10-10：正在按新的伴侣体验访谈与原版 AIRI 证据重新对齐，见 [PRD 2.0 对齐草案](PRD-2.0-对齐草案.md)。草案未冻结；用户本轮明确提出的伴侣定位、记忆优先和收起后持续陪伴要求，优先于本文相冲突的旧安排。原版实测与后续路线见 [能力差距](调研/2026-10-10-AIRI实测与能力差距.md)。"
+        },
+        {
+          "line": 13,
+          "text": "### 2026-10-09 开发基线澄清"
+        },
+        {
+          "line": 15,
+          "text": "用户明确要沿用 **AIRI 原版完整桌面应用的界面、UI、交互和角色系统**，再开发 Aimy 所需增量。后续主线以 `apps/stage-tamagotchi` 及其实际消费闭包为基线；现有独立 Aimy 样机保留为验证成果。新增功能优先接入原版已有模块与扩展点，保持原版 UI 流程。实施顺序和验收边界见 [原版桌面基线决策](决策记录/2026-10-09-AIRI原版桌面基线.md)。"
+        },
+        {
+          "line": 17,
+          "text": "现有 Aimy 未完成项需重新对照 AIRI 实际实现，不据此判断 AIRI 也缺少相同能力。2026-10-10已在隔离副本安装、构建并启动原版，验证真实文字对话和指定测试记录恢复；尚未完成产品迁移、真实语音/看屏与长期记忆验收。"
+        }
+      ],
+      "why_keep": "保留曾经批准需求，不当作需求和授权从未存在",
+      "context_contamination_risk": "旧A–E、一个官方VRM、隐藏停止采集和记忆排在E等与新方向不一致；不能称唯一当前总纲",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/PROJECT_STATE.md",
+      "canonical_path": "docs/90-历史归档/入口快照/PROJECT_STATE-整理前.md",
+      "original_sha256": "e3c62d24597444b9500edd697a40401338fcbd2a46cd46708a5931d9275380cd",
+      "bytes": 10241,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-10-10更新；历史验证为2026-10-07",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 更新：2026-10-10。原版 AIRI 评估、既有独立样机、需求批准与人工体验验收分别记录。旧样机证据仍对应2026-10-07构建。"
+        },
+        {
+          "line": 7,
+          "text": "**当前处于重新对齐与能力验证阶段。原版 AIRI 已在隔离副本构建、启动并通过真实中文文字测试；尚未迁入 Aimy 主产品，也未完成完整多模态体验验收。** 保留原版桌面、UI 与角色系统，补 Aimy 增量，见 [开发基线决策](决策记录/2026-10-09-AIRI原版桌面基线.md)。"
+        },
+        {
+          "line": 11,
+          "text": "最新接续方向：**先直接继承原版应用并完成 Aimy 品牌/必要界面定制，让用户实际使用，再按体验优化能力。** 旧样机不整体并入，保留历史证据，后续退出新主线默认启动/构建/发布。当前脚本仍启动旧样机，源码与入口尚未切换。两边14个同名包存在版本/源码差异，已记录 [结构分析与隔离决策](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md)。"
+        },
+        {
+          "line": 13,
+          "text": "功能边界已另做 [完整功能清单](调研/2026-10-10-AIRI与Aimy完整功能清单.md)：AIRI桌面100条、其它端/生态76条、旧Aimy58条，另附73个服务定义。逐项区分源码接入、部分/实验/占位与运行验证；条目数量不可换算完成度。本次只做源码清单核对，没有新增模型、设备或应用运行验收。"
+        },
+        {
+          "line": 15,
+          "text": "四个指定项目已完成全局盘点、关键代码审查及隔离复现，见 [四项目复用与代码审查](调研/2026-10-10-四项目复用与代码审查.md)。AionsHome优先作为有来源记忆/主动续聊候选，Ryza提供轻量记忆与表现规则，Chromatic已由原版继承，Kirara留作中期网关/工作流候选。已记录记忆丢失/删除后复活、关闭后旧任务继续、身份与隔离等接入前问题；四份可比源码与固定远端提交一致。仅新增调研文档和证据，未安装候选、修改产品代码、启动真实模型/设备或冻结新架构。"
+        }
+      ],
+      "why_keep": "唯一可用状态汇总，明确原版尚未成为主产品",
+      "context_contamination_risk": "正文“当前可使用的原型”仍是旧样机；必须醒目区分当前方向、现有代码入口和历史验证",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/07-游戏设计.md",
+      "canonical_path": "docs/03-技术与协作参考/后置探索/07-游戏设计.md",
+      "original_sha256": "4c6359d5a26843ea9504f71147ae8bdf8a0ccf4c883f35384b14391e4374e6c3",
+      "bytes": 1798,
+      "action": "move",
+      "status": "技术参考，含历史实现状态；使用前按当前源码与任务复核",
+      "artifact_period": "无独立日期；旧MVP后探索时期",
+      "date_kind": "原文无日期",
+      "date_evidence": [],
+      "why_keep": "保存游戏事件桥接与桌面陪伴不同边界",
+      "context_contamination_risk": "雪夜庭院、独立游戏或引擎候选不能自动升为一期需求；占位状态须限定当时",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/真实联调配置说明.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/运行与来源/真实联调配置说明.md",
+      "original_sha256": "96dbaf370057367b69379329eb6b0ae6663caa786601b3c0d87ff30b0e237631",
+      "bytes": 3229,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；三设置页/250ms/5秒属于2026-10-07旧样机时期",
+      "date_kind": "关联实现时期推定，非创建日期",
+      "date_evidence": [],
+      "why_keep": "保存旧样机仍可诊断的接口要求与本地填配置方法",
+      "context_contamination_risk": "三设置页、共享vision地址、WAV限制、safeStorage均是旧实现；不能指导原版填写或承诺原版凭证安全",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/任务编排.md",
+      "canonical_path": "docs/90-历史归档/入口快照/任务编排-整理前.md",
+      "original_sha256": "13cccc8641f01deea990130c53db08df14d5e4375ee16edeefb1c30772335b41",
+      "bytes": 12160,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-10-10接续；历史2026-09-24及10-07",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 2026-10-10接续以 [PRD 2.0草案](PRD-2.0-对齐草案.md) 与 [直接继承决策](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md) 为准：原版主工程→Aimy品牌/界面→实际使用→能力优化。原 A–E 是历史路线；最新事实和验证看 PROJECT_STATE。"
+        },
+        {
+          "line": 19,
+          "text": "2026-10-10：原版隔离评估本轮范围已完成，详见 [实测差距](调研/2026-10-10-AIRI实测与能力差距.md)。用户进一步明确先直接使用原版并作Aimy品牌/必要界面定制，再按实际体验优化。下一出口为主工程切换手册：固定来源、隔离旧样机、单一运行主链路、品牌改动与原版回归。未启动源码搬迁、框架集成或并行代码修改。"
+        },
+        {
+          "line": 25,
+          "text": "| R-LIST 全功能清单 | [AIRI桌面100/生态76、旧Aimy58条及73服务定义](调研/2026-10-10-AIRI与Aimy完整功能清单.md)，源码/部分/占位/独立服务和验证状态分开 | 作为主工程切换的功能回归与继承范围输入，不能按条目数算完成度 |"
+        },
+        {
+          "line": 28,
+          "text": "以下保留2026-10-09及独立样机接续表，新的执行顺序待本轮对齐，不把它当作已经授权新的架构选型。"
+        },
+        {
+          "line": 30,
+          "text": "2026-10-09：后续主线改为继承 AIRI 原版完整桌面 UI 与角色系统。先完成原版安全启动边界核对、隔离副本跑通和能力差距表，再按下表推进；表中 C/D 结果为现有独立样机证据。见 [基线决策](决策记录/2026-10-09-AIRI原版桌面基线.md)。"
+        }
+      ],
+      "why_keep": "保存路线演变及旧完成证据，不丢原任务ID",
+      "context_contamination_risk": "中部A–E/末尾M0–M8和重复执行约定易被截取为现行命令；建议历史任务分离，当前文件只指向最新方向",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/技术手册-M1-文字对话闭环.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/早期执行计划/技术手册-M1-文字对话闭环.md",
+      "original_sha256": "b3aecb686e428c939cfdc3b2a3d13e102d580c84a9078df686d03c4ff775eb40",
+      "bytes": 2347,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-09-24设计与执行",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 55,
+          "text": "- 2026-09-24：完成设计，开始 T1.1。"
+        },
+        {
+          "line": 56,
+          "text": "- 2026-09-24：新增 `text-chat-cli`；7 项测试与 typecheck 通过。Core Agent 147 项测试与 typecheck 通过；relationship-engine 8 项测试与 typecheck 通过。真实模型因旧 Key 已撤销，仍待新 Key 验证。"
+        }
+      ],
+      "why_keep": "保存单轮CLI最初目标、模型接口与真实调用未验事实",
+      "context_contamination_risk": "不得将单轮stdin链路、.env方式和旧模型待验当新完整桌面契约或当前产品功能",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/技术手册-T0.3-AIRI-core-agent接入.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/早期执行计划/技术手册-T0.3-AIRI-core-agent接入.md",
+      "original_sha256": "4ab5af3ff9d49eb9dcb3534c44a10e1677800aab23198a3def1335492d75bccb",
+      "bytes": 10280,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-09-23执行；2026-09-24补充",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 63,
+          "text": "- 来源记录：仓库 `moeru-ai/airi`，本地参考目录 `../airi-main`；参考快照日期为 2026-09-23。该参考目录当前 Git 没有任何 commit（`HEAD` 不存在），因此无法记录可复现的 commit SHA；包版本以各导入 package manifest 记录为准。原仓库许可证副本放在 `packages/airi-upstream-LICENSE`。"
+        },
+        {
+          "line": 118,
+          "text": "## 执行记录（2026-09-23）"
+        },
+        {
+          "line": 129,
+          "text": "### 执行记录补充（2026-09-24）"
+        }
+      ],
+      "why_keep": "记录最小九包依赖闭包、来源、补丁及147/8测试",
+      "context_contamination_risk": "选择性vendoring、改catalog/自有lockfile和不搬monorepo适用当时任务；不能重复执行或用于新完整workspace",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/02-技术适配声明.md",
+      "canonical_path": "docs/03-技术与协作参考/02-技术适配声明.md",
+      "original_sha256": "8adb3b8a2a1728dd67c0769096a76ec34c9273322ddb3b46ecdb590971b6d4d2",
+      "bytes": 3225,
+      "action": "move",
+      "status": "技术参考，含历史实现状态；使用前按当前源码与任务复核",
+      "artifact_period": "初稿日期未知；头部引用2026-10-10直接继承决策",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 当前方向以 [PRD 2.0草案](PRD-2.0-对齐草案.md)及 [直接继承决策](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md) 为准。Blueprint/starter kit作为方法参考，完整AIRI应用作为产品起点；旧starter kit目录不作为必读前置。"
+        }
+      ],
+      "why_keep": "保存证据底线、技术边界、真实验收要求",
+      "context_contamination_risk": "不得把要求当已实现/已验；必须按当前原版检查存储、权限和外发边界",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/PRD-2.0-对齐草案.md",
+      "canonical_path": "docs/00-当前方向/PRD-2.0-对齐草案.md",
+      "original_sha256": "86b8af7937b132eb4ccaa87e85fdded077bd693bcd4baa581d0ca421c6f6f8bc",
+      "bytes": 8564,
+      "action": "move",
+      "status": "当前方向／方案草案",
+      "artifact_period": "2026-10-10，文内明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-10。依据本轮产品访谈、AIRI 源码复核与原版桌面实测整理。**这是可评审草案，尚未冻结实施方案。** 用户已明确的体验要求继续有效；待答事项不擅自选定。旧版需求中的相冲突条目以本轮用户明确表达为准。"
+        },
+        {
+          "line": 5,
+          "text": "证据：[AIRI 实测与能力差距](调研/2026-10-10-AIRI实测与能力差距.md)、[GitHub 能力复用调查](调研/2026-10-10-GitHub能力复用调查.md)。"
+        },
+        {
+          "line": 7,
+          "text": "最新迭代方向已由用户明确：**直接继承 AIRI 应用，先成为有 Aimy 品牌与界面的可用版本，再按自己的实际体验和能力要求优化。** 旧独立样机退出产品主线，保留历史证据；两套实现不整体混合。见 [结构分析与隔离决策](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md)。具体迁移手册与后续增量方案仍待细化。"
+        }
+      ],
+      "why_keep": "保存最新用户明确体验与直接继承路线；待答事项继续未决",
+      "context_contamination_risk": "将标题“PRD”误当冻结实施规格；目录整理不能自动确认窗口、记忆保存或观察策略",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/AIRI复用修订记录.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/运行与来源/AIRI复用修订记录.md",
+      "original_sha256": "b68c9b81ea7165519eba1d868ccbb97cbb4322d85b8431ab1e19da1d7b0d2804",
+      "bytes": 5938,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-10-07旧样机定制；头部引用10-10隔离规则",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 本文记录旧独立样机的包接入与补丁。新主线按 [直接继承决策](决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md) 从完整原版应用起步；这些补丁只作为复现和适配候选，不整批覆盖新基线。"
+        },
+        {
+          "line": 9,
+          "text": "## 2026-10-07 的定制"
+        },
+        {
+          "line": 35,
+          "text": "- 从 stage-ui 局部复制 VAD、AudioWorklet、音频图生命周期与 voice-input-transcription-chain，以及原测试到 `apps/aimy-desktop/src/renderer/airi-voice`。不引入 hearing/account/analytics store。VAD 增加本地权重加载、250ms 连续确认、代次隔离、队列清理；产品实例限制8帧，原构造默认值保留兼容回归。逐文件来源和 SHA 见 `执行记录/2026-10-07-D源码清单.json`。"
+        }
+      ],
+      "why_keep": "取消、脱敏、队列、口型和权限修复的候选来源",
+      "context_contamination_risk": "不能整批覆盖新基线；同名包54个差异不全是旧修复，先复现再适配",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-10-AIRI原版评估.json",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/2026-10-10-AIRI原版评估.json",
+      "original_sha256": "bb9ea29b4dc29698f388f0b8a783844569708f8f5b077ab2e2e3f16fce05440b",
+      "bytes": 5477,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-desktop-source-manifest.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-desktop-source-manifest.json",
+      "original_sha256": "2075add310472be3862f362bfc5c65fab064e2aa1266e04a24b156107b37059b",
+      "bytes": 21732,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-desktop-engineering.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-desktop-engineering.json",
+      "original_sha256": "d4fdbbc88d5366f1f45ab0ec18a1c11f5e441b1e15b4a0a5252c4ab4e613a501",
+      "bytes": 5878,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-D工程检查.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-D工程检查.json",
+      "original_sha256": "229da5aa73f64c9520403c884fc48b9fa3c4a7fa7704f9254374f1c3cd7b67bb",
+      "bytes": 4297,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-stage-a.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-stage-a.json",
+      "original_sha256": "0239d4a6f94df33233ae2144bf99359c8206832722159e837509f9ae417d3486",
+      "bytes": 1207,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-A与B基线.md",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-A与B基线.md",
+      "original_sha256": "324cf13199d60ce94d7f501010f08d33ed5a0e6a5cbf1e9aa698282d3bbf1acb",
+      "bytes": 3138,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "2026-10-07，文件名及文内证据",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 1,
+          "text": "# 2026-10-07 A 阶段与 B 离线准备"
+        },
+        {
+          "line": 5,
+          "text": "最终在主线程运行 `pnpm verify`，退出码 **0**：九包依赖闭包构建、14个包typecheck通过；Node **503项**、浏览器 **64项**，合计 **567项/62个测试文件**通过。机器可读结果见 `2026-10-07-stage-a.json`。这是本轮检查，不是对完整AIRI或Aimy MVP的验收。"
+        },
+        {
+          "line": 21,
+          "text": "开工前快照：`.baseline/2026-10-07-pre-stage-a-f344c676/source.tar.gz`，320个源/文档文件；清单在同目录manifest.json。未备份凭证、依赖、构建产物；未创建Git提交。父仓库index SHA与开工前一致。"
+        },
+        {
+          "line": 29,
+          "text": "新增experience-lab后，主线程再次运行完整`pnpm verify`，退出0：九包build、15包typecheck，Node529+browser64=593项、63files全部通过；机器记录见`2026-10-07-final-engineering.json`。其中B工具26项集成回归使用原AIRI工厂/SDK、假配置与本机HTTP，包括307/308重定向预算、第二请求拒绝、文件读取增长、父子超时/强制终止、无live不读配置和安全统计。"
+        }
+      ],
+      "why_keep": "旧A工程与B离线准备的分阶段事实",
+      "context_contamination_risk": "历史假模型/假设备结果不能外推原版和未来产品；运行命令继续指向旧样机，不是当前迭代优先级",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-final-engineering.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-final-engineering.json",
+      "original_sha256": "b3dc0bf4b0aed54e5f796395e0ba4c6ea0767835d2e8d97d0a89a9b10ba30102",
+      "bytes": 662,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/B接入边界.md",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/B接入边界.md",
+      "original_sha256": "49bc0a10c801172f0162aec7fadbec91b071dcfde8bc5f173e0df6d02aa27ca6",
+      "bytes": 3363,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "无独立日期；被2026-10-07执行记录引用",
+      "date_kind": "被日期明确的旧执行记录关联，非创建日期",
+      "date_evidence": [],
+      "why_keep": "解释为何当时选择精简composition并禁用原版部分入口",
+      "context_contamination_risk": "“不能直接搬原版”“单VRM不搬全部WidgetStage”与新继承方向相冲突；34/41包闭包不能当新来源32build等价",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-D源码清单.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-D源码清单.json",
+      "original_sha256": "e39c9b8b7c90c97eb063522076c63c1d606444ac13bfe23dd447a867cf80c5d7",
+      "bytes": 63997,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-C桌面样机.md",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-C桌面样机.md",
+      "original_sha256": "85da351690a39aa7395b574f3e075256940c93135d2b470d4915bbe560a0fd00",
+      "bytes": 5854,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "2026-10-07，文件名及文内证据",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 9,
+          "text": "新增五个 AIRI 包的192个src文件与只读参考库逐文件一致，manifest按独立工作区声明依赖，保留原测试/许可证；来源SHA见 `2026-10-07-desktop-source-manifest.json`。会话仓库只做 local-only 适配；没有搬原桌面 eager 云账号、插件、MCP、电脑操作或更新器。"
+        },
+        {
+          "line": 31,
+          "text": "工程统计见 `2026-10-07-desktop-engineering.json`。本机假模型不计真实供应商验收；单元/浏览器计数与原生行为门禁分别记录。"
+        },
+        {
+          "line": 59,
+          "text": "开工前338文件快照位于 `.baseline/2026-10-07-pre-desktop-73d954b1`，包括源文件SHA和Git index SHA；参考库未修改，暂存index未变，未创建提交。"
+        }
+      ],
+      "why_keep": "旧C独立Electron样机实现与13门禁",
+      "context_contamination_risk": "历史假模型/假设备结果不能外推原版和未来产品；运行命令继续指向旧样机，不是当前迭代优先级",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-07-D实时交互原型.md",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/2026-10-07-D实时交互原型.md",
+      "original_sha256": "692062c86cb9b9ac53aa517017d1a448cb6cb53dcb558afe6521f74f2bf5aef4",
+      "bytes": 8421,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "2026-10-07，文件名及文内证据",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 30,
+          "text": "| 完整工程 | pnpm verify退出0；767 Node＋64 browser＝831 tests，93 files，21个类型检查项目，构建通过 | 2026-10-07-D工程检查.json |"
+        },
+        {
+          "line": 47,
+          "text": "开工574文件快照：`.baseline/2026-10-07-pre-realtime-fcc6dcb1`。五个复用包192个原文件中仅两个口型文件作D定制，新增口型测试；VAD局部来源与应用源码SHA详见2026-10-07-D源码清单.json。参考库与C时来源清单一致，只读；Git暂存index SHA保持`cfed2c524e1f382ac46018366c06887b298bb74f84d1ece2e8e7aee851745c49`，未创建提交。"
+        }
+      ],
+      "why_keep": "旧D分段语音/看屏实现与失败修复证据",
+      "context_contamination_risk": "历史假模型/假设备结果不能外推原版和未来产品；运行命令继续指向旧样机，不是当前迭代优先级",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-10-功能清单核对.json",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/2026-10-10-功能清单核对.json",
+      "original_sha256": "2a713842fea270c0ff9ccacbc9fbbf95bcbabf8551b76b8f699cb30db5473284",
+      "bytes": 1843,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/2026-10-10-旧样机与原版结构比较.json",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/2026-10-10-旧样机与原版结构比较.json",
+      "original_sha256": "722621d96bbe8b99a2a8e9cdd119b6e38b9aaf15aaf51c8dc04b1122e75e35e0",
+      "bytes": 9087,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/result.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/result.json",
+      "original_sha256": "8ad1d1cc5394af317606331565180febdd9d231166b86ce6fd5fba36f0d5bd69",
+      "bytes": 5076,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/preview-settings-empty.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview-settings-empty.png",
+      "original_sha256": "8a8b84bb900b09c049dae196625a2ac1fc786eb9069aa998ee4472ab8b33a267",
+      "bytes": 412960,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/desktop-immediate-shutdown-restored.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-immediate-shutdown-restored.png",
+      "original_sha256": "8032d33f42cd646db1deeebc675ca1b2143a876a1e3d78f1c09acfac5b02723a",
+      "bytes": 322601,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/desktop-conversation.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-conversation.png",
+      "original_sha256": "bf9ce775f6c10150eea7efaf572ffd74e47b84a2fb3d850a81d390a02bf0ef4f",
+      "bytes": 395491,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/desktop-avatar-unavailable.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-avatar-unavailable.png",
+      "original_sha256": "4799b3a042296f74e0572388c4c9d9d45d644867b28b87633bac285c80b45a2d",
+      "bytes": 98154,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/desktop-cleared.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-cleared.png",
+      "original_sha256": "960eb6572442dae04dd2a6a87718088e1200300862eb24c58f2e9075896133d6",
+      "bytes": 313128,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/preview-760x580.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview-760x580.png",
+      "original_sha256": "299b38396dc34276f605c1b6501bd0bbd468e3bc548e1d24e4cc98675fe83e86",
+      "bytes": 260168,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/desktop-narrow.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/desktop-narrow.png",
+      "original_sha256": "7d156ce47787559b6d4c0990f5964252543fca227e37a8fea754e13af57b21d2",
+      "bytes": 292527,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/preview-1040x760.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview-1040x760.png",
+      "original_sha256": "e03f337808d525406dac6e68bb53fd1d81b53a287ea678267e1ba0e803d83c9e",
+      "bytes": 396669,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/C桌面样机/preview.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/C桌面样机/preview.json",
+      "original_sha256": "b7fe30c4935aa7ddf75e7251bbcc294ba680678c00c8e11af73b33b1291a701c",
+      "bytes": 4162,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/视觉/preview-own-window-picker.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-own-window-picker.png",
+      "original_sha256": "237c4e006bb4e13ee8db1064f152a8d4422d4a5b56f3f54a03c0cf25aa1e39c2",
+      "bytes": 408516,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/视觉/preview-settings-asr-empty.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-settings-asr-empty.png",
+      "original_sha256": "1c0bbd9f02b41b7ec4f8e6c845ac31758c0154359104785d5f011cf2877e7c96",
+      "bytes": 399739,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/视觉/preview-settings-tts-empty.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-settings-tts-empty.png",
+      "original_sha256": "45187673442c19ba17c44d36f5e73b3d59a4c78a914c5adf6506e185b2615f98",
+      "bytes": 404222,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/视觉/preview-settings-chat-empty.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-settings-chat-empty.png",
+      "original_sha256": "45667cbf3a6b3de156bfd3f1e2286dcff0ff134f7fa62903f6e8af0f0708126c",
+      "bytes": 425138,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/视觉/preview-760x580.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-760x580.png",
+      "original_sha256": "8555634350ebbd377ca1aaadd0a716f5bbce6d042bdf6c99eda554d470e51b46",
+      "bytes": 261980,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/视觉/preview-1040x760.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview-1040x760.png",
+      "original_sha256": "08e3a6e527c2abc0203c2b605ea78f1bbbeea2b098b495df0692e0f0b81de23b",
+      "bytes": 397848,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/视觉/preview.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/视觉/preview.json",
+      "original_sha256": "a7e63e2fa442dca2daaca215e1cd5a133537c991d9e481963983d6945c6ec281",
+      "bytes": 4893,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/看屏/own-window-observation.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/看屏/own-window-observation.png",
+      "original_sha256": "2cf03422454539333e57904b7a9311297589fddda72e3ee823b1f7d80723e09a",
+      "bytes": 382521,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/看屏/screen-result.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/看屏/screen-result.json",
+      "original_sha256": "1c8e3faa799567ea9ef5ea7141a92575349103d1a346d5272aeb68eaf4c789d8",
+      "bytes": 7030,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/C回归/result.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/result.json",
+      "original_sha256": "780e7cbb83a57221812a563dd33d05b397615bcfb57218ce0f90d7aa91775172",
+      "bytes": 4690,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/C回归/desktop-immediate-shutdown-restored.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-immediate-shutdown-restored.png",
+      "original_sha256": "fb167de5a1333970bc6a1141eaf9217f65e08838445fe164fecc8cf5caf5d53c",
+      "bytes": 326570,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/C回归/desktop-conversation.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-conversation.png",
+      "original_sha256": "b6ddfb1bec720dd0a21f77107a1f9061e0b0a4149b129d00d19b56da49f0f00a",
+      "bytes": 399658,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/C回归/desktop-avatar-unavailable.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-avatar-unavailable.png",
+      "original_sha256": "fb877bc525409e8d75af5aa35d5034f492372e41334e89758eb70523cd13f78b",
+      "bytes": 101621,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/C回归/desktop-cleared.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-cleared.png",
+      "original_sha256": "c30b11a32d8fc697dbcfa67378c78d73a596b31f2ce0895369f91da56cd23668",
+      "bytes": 316977,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/C回归/desktop-narrow.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/C回归/desktop-narrow.png",
+      "original_sha256": "cb8c4cfd9a18a66dff92708a8e75acfa49202a7729748af7db2e3f6569c44e59",
+      "bytes": 295302,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/语音/voice-conversation.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/voice-conversation.png",
+      "original_sha256": "7cea52941f5306201641b7e7374b405573c99be6f957e521f50f915d94c36c40",
+      "bytes": 449411,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/语音/media-result-rapid-toggle-failure.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/media-result-rapid-toggle-failure.json",
+      "original_sha256": "da3b8322f697a3d2ff91fe2d8a00e4cfd42ece47410627b90d543db410101aef",
+      "bytes": 28938,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/语音/media-result.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/media-result.json",
+      "original_sha256": "489683ac5e2e729a3b9a8124ef138942ada5c99832684c9f89fad10fc0066fc4",
+      "bytes": 72096,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/语音/media-result-before-physical-budget.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/语音/media-result-before-physical-budget.json",
+      "original_sha256": "30ed3177c7c575315ca88b15506836f4d10b9fd495b8d278539e7443e56c7729",
+      "bytes": 44469,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/解码预算/decode-budget-recovery.png",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/解码预算/decode-budget-recovery.png",
+      "original_sha256": "d4ae88309a18d6c5b3cd02506688f558d3b6445bf7bcdc92680b012c1f745c6f",
+      "bytes": 482417,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/D实时原型/解码预算/budget-result.json",
+      "canonical_path": "docs/04-验证记录/旧Aimy样机/D实时原型/解码预算/budget-result.json",
+      "original_sha256": "5e7e8dd6c6f74ba9d279f1869ed22a93a5ad11a64a091127473b323e6de0310d",
+      "bytes": 8347,
+      "action": "move",
+      "status": "旧样机验证证据，仅证明当时冻结构建与对应检查范围",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-window-diagnostic.json",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-window-diagnostic.json",
+      "original_sha256": "c823a7e4a951553874da67d55aebde1ccfde9faf5b00dfaf92588663e773af89",
+      "bytes": 145,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-targeted-tests.txt",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-targeted-tests.txt",
+      "original_sha256": "2a0a378bd53fac70ff60a178815582252a2e4fe8e8af70dfa1a2ea5db5641b62",
+      "bytes": 1281,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-stage.png",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-stage.png",
+      "original_sha256": "857809ac5775464e2261a90e41f6077e51ef4d634fc63717c38bfec9140732e5",
+      "bytes": 250216,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-test-chat.png",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-test-chat.png",
+      "original_sha256": "d5cb0effa0baf1d91b30675fc5ee38e65a9f9aed2db1ac9638ac52496fc75a3a",
+      "bytes": 127329,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-memory-new-session.png",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-memory-new-session.png",
+      "original_sha256": "1b4f252617667c3f6a77628278978ec62343446a23103b54e8563f3e32adbf93",
+      "bytes": 97759,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-stage-frame2.png",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-stage-frame2.png",
+      "original_sha256": "ab817d29c612b9b5f2c47a4ada86772a94231447d59a84c23f09c210eb4baf44",
+      "bytes": 251921,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/执行记录/AIRI原版评估/2026-10-10-typecheck.txt",
+      "canonical_path": "docs/04-验证记录/AIRI原版评估/附件/2026-10-10-typecheck.txt",
+      "original_sha256": "aacdfedc485449151e8f0cedfb8264a7d15047256a7b3c3a4a9e848e28e7b178",
+      "bytes": 19,
+      "action": "move",
+      "status": "就近技术说明／来源通知",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md",
+      "canonical_path": "docs/01-决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md",
+      "original_sha256": "4feb9ad3c9ce89630c340263b881fb3e32d0b1eef834fe726254ba85673a040c",
+      "bytes": 7978,
+      "action": "move",
+      "status": "当前方向决策记录；与更新的用户要求冲突时以后者为准",
+      "artifact_period": "2026-10-10，文内明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-10。依据用户最新澄清：先直接使用 AIRI 的应用、界面和人物，进行 Aimy 品牌与界面定制，再根据实际体验与能力要求优化。本轮为结构核对与路线分析，没有搬迁、删除或合并产品源码。"
+        },
+        {
+          "line": 23,
+          "text": "逐包路径比较见 [结构比较记录](../执行记录/2026-10-10-旧样机与原版结构比较.json)。"
+        }
+      ],
+      "why_keep": "规定原版完整继承与旧独立样机隔离，是现阶段结构依据",
+      "context_contamination_risk": "不得因目录整理写成主工程已经切换或旧代码已经冻结搬迁；此前本文件仅分析",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/决策记录/2026-10-09-AIRI原版桌面基线.md",
+      "canonical_path": "docs/01-决策记录/2026-10-09-AIRI原版桌面基线.md",
+      "original_sha256": "a371234260fb914d3ae628ae83846316ac66691e99fac37cc03e5912c7351d08",
+      "bytes": 3068,
+      "action": "move",
+      "status": "当前方向决策记录；与更新的用户要求冲突时以后者为准",
+      "artifact_period": "2026-10-09；2026-10-10文内补充",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-09。用户澄清，上一轮“完全套用现成界面、UI、人物，再开发缺失功能”指的是 AIRI 原项目。"
+        },
+        {
+          "line": 26,
+          "text": "现有831项测试和43项原生检查属于独立 Aimy 样机，不能算作 AIRI 原版桌面或迁移后产品已经验收。截至2026-10-09只确认开发方向，尚未安装/构建/启动完整原版。"
+        },
+        {
+          "line": 28,
+          "text": "2026-10-10补充：[原版隔离评估](../调研/2026-10-10-AIRI实测与能力差距.md) 已完成本轮安装/构建/启动及文字等验证；新来源为 `/Users/mima1234/Documents/airi-main`，不是旧工作区参考目录。代码迁移未实施，PRD 2.0仍在对齐，未把原版已有入口自动纳入一期。"
+        }
+      ],
+      "why_keep": "保存从摘包独立样机到完整原版桌面的方向澄清",
+      "context_contamination_risk": "末尾仍有“再按B–E”安排，应服从10-10直接继承→品牌→使用→优化，不按旧B–E重排",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P7-MVP后游戏探索.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P7-MVP后游戏探索.md",
+      "original_sha256": "004ad083201c3530f7673905e6f365b38efb331b05cd628b6c7ba13682be268b",
+      "bytes": 1533,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "后置游戏探索草案",
+      "context_contamination_risk": "雪夜庭院/三行动/引擎对比不是已批准开发任务",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P2-视觉与角色体验原型.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P2-视觉与角色体验原型.md",
+      "original_sha256": "5395e3ad104d2f78a6886692bdd259300a318a65272558ae2fc934b45472d671",
+      "bytes": 1416,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "旧A/B的角色界面先行原型",
+      "context_contamination_risk": "不能另造简版三屏作为新主线前置；当前沿用原版UI并先实际使用",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P0-产品定义与可行性闸门.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P0-产品定义与可行性闸门.md",
+      "original_sha256": "332f0b6ebe65ff5599ac4ecd8172494e03e35f3c98c0e1ff65a62c3f0164f399",
+      "bytes": 1580,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "正文明确2026-10-07批准；手册初稿日期未知",
+      "date_kind": "文内关联批准日，非手册创建日",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> 产品方向与 A–E 路线已于 2026-10-07 获批，见 [PRD-MVP-重构版.md](../PRD-MVP-重构版.md)。本手册用于维护基线和准备资产评审，不重复索取已批准范围授权。"
+        }
+      ],
+      "why_keep": "2026-10-07批准的产品基线",
+      "context_contamination_risk": "用户曾批准范围不是当前正式角色VRM、A–E或未答选择的再次冻结",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P1-AIRI底座与集成边界.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P1-AIRI底座与集成边界.md",
+      "original_sha256": "d3f891154ff6424b697d3909977d849dada68d778141f7670d568d58a4323fc9",
+      "bytes": 2134,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "旧A工程九包/CLI基线",
+      "context_contamination_risk": "重复摘包和自有CLI基线不能阻塞原版完整继承",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P4-语音屏幕与隐私.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P4-语音屏幕与隐私.md",
+      "original_sha256": "577974b85e6ef223bb5cb171bea728717abcaa42e4ac4b71a383c7376efa3b92",
+      "bytes": 2569,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "正文含2026-10-07原型补充；手册初稿未知",
+      "date_kind": "文内结果日期，非手册创建日",
+      "date_evidence": [
+        {
+          "line": 30,
+          "text": "2026-10-07已接入连续本地VAD/分段HTTP ASR/分句WAV TTS、确认语音替换旧段、按序播放/口型、单源video-only观察与授权取消。工程831测试/21个类型检查项目通过；假设备和本机服务的原生语音、看屏与恢复负例独立记录在[实施证据](../执行记录/2026-10-07-D实时交互原型.md)。"
+        }
+      ],
+      "why_keep": "旧D实时样机设计与2026-10-07原型结果",
+      "context_contamination_risk": "831tests与250ms/5秒策略只适用旧样机，隐藏/最小化停媒体不可直接迁新窗口规则",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/README.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/README.md",
+      "original_sha256": "22d9926de3d020ec651026e2384b820433125c19b65a4b0e0b5308dfe5910d3e",
+      "bytes": 1434,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "旧A–E/P编号映射",
+      "context_contamination_risk": "声称A–E为当前顺序、PRD-MVP为入口，易整批恢复旧路线",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/B-关键体验验证.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/B-关键体验验证.md",
+      "original_sha256": "a7590d11a21175665c0a85b7ee24c046bfe0eba6c2bb216663440d7cb4a7b20d",
+      "bytes": 2254,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "旧B语音/看屏实验",
+      "context_contamination_risk": "先B再C和旧输入抑制结论需重核；只复用验收场景，不按此强行阻塞原版继承",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P3-桌面对话垂直切片.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P3-桌面对话垂直切片.md",
+      "original_sha256": "8729be148b77ed8f77263cd34e640bfb7ea5de482691d39d586b755360bba30f",
+      "bytes": 1631,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "旧C独立桌面切片",
+      "context_contamination_risk": "按最小闭包搭Electron/一个VRM会复建旧样机；当前不整体迁旧UI",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P6-MVP硬化与发布.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P6-MVP硬化与发布.md",
+      "original_sha256": "9168305d2d13162ce2309f88c6111afb0791e347968548c91048c18346788ea8",
+      "bytes": 1416,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "旧E完整MVP交付设计",
+      "context_contamination_risk": "不能让旧完整MVP所有增量成为先交付原版Aimy的前置；固定VRM/签名步骤仍需实际任务",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/阶段技术手册/P5-主动陪伴与连续人格.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/阶段技术手册/P5-主动陪伴与连续人格.md",
+      "original_sha256": "086433ae4fc9875ff79637218a0e46be83f1013c172183143c4c90cae8107c15",
+      "bytes": 1655,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；内容关联旧2026-10-07 A–E路线",
+      "date_kind": "关联时期推定，精确初稿未知",
+      "date_evidence": [],
+      "why_keep": "旧E连续陪伴设计",
+      "context_contamination_risk": "先C/D后记忆、默认已确认事实、现有领域包等是旧安排；不能据此推迟新记忆优先或冻结确认方式",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-AIRI与Aimy完整功能清单.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-AIRI与Aimy完整功能清单.md",
+      "original_sha256": "028e48694135353dee8c5bc944af85c14308757b692df085709ce41b37c7a9be",
+      "bytes": 191734,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-10。这里的“现有 Aimy”指仍由 `pnpm start:desktop` 启动的旧独立样机，完整 AIRI 尚未迁为 Aimy 主工程。"
+        },
+        {
+          "line": 7,
+          "text": "本次核对桌面/共享页面、实际处理器和消费关系，再区分其它端、独立集成、实验、占位与开发工具。没有运行应用或新增模型/设备测试。已有运行证据见 [原版评估](2026-10-10-AIRI实测与能力差距.md) 与 [项目状态](../PROJECT_STATE.md)。"
+        },
+        {
+          "line": 13,
+          "text": "对应 [完整JSON](2026-10-10-AIRI与Aimy完整功能清单.json) 与 [可筛选CSV](2026-10-10-AIRI与Aimy完整功能清单.csv) 保留全部证据定位。本文每行列主要入口，完整路径集合保存在JSON/CSV。"
+        },
+        {
+          "line": 74,
+          "text": "| AIRI-D-001 透明桌面角色主窗口 | 已接入 | 打开独立透明角色舞台，在桌面看见人物。 限制：默认示例资源另有许可；不是最小化后的第二人物窗口。 真正minimize会令stagePaused=true；未实际最小化或验证后台音频，也没实现minimize后另留角色窗。 | 已验证：2026-10-10 Live2D示例渲染，两个截图帧姿态不同。 | [main/index.ts](/Users/mima1234/Documents/airi-main/apps/stage-tamagotchi/src/main/windows/main/index.ts)、[index.vue](/Users/mima1234/Documents/airi-main/apps/stage-tamagotchi/src/renderer/pages/index.vue) |"
+        },
+        {
+          "line": 83,
+          "text": "| AIRI-D-010 托盘菜单、隐藏重显与退出 | 已接入 | 从系统托盘切换窗口、尺寸、位置、字幕及退出应用。 限制：不能据正常退出外推所有托盘动作。 | 部分验证：2026-10-10正常UI退出与新进程启动已有证据。 | [tray/index.ts](/Users/mima1234/Documents/airi-main/apps/stage-tamagotchi/src/main/tray/index.ts) |"
+        }
+      ],
+      "why_keep": "保留原版100/生态76/旧样机58/73服务的源码定位与成熟度区分",
+      "context_contamination_risk": "条目数不表示完成度；所有原版入口不能自动纳入一期；旧Aimy字样必须限定历史样机",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-GitHub能力复用调查.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-GitHub能力复用调查.md",
+      "original_sha256": "903ded4ad3c048fbf8e358b914d1eabbfd91a602557e74b5802c5c5f9f26f08d",
+      "bytes": 20720,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，标题及固定commit快照",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 1,
+          "text": "# Aimy GitHub 能力复用调查（2026-10-10）"
+        },
+        {
+          "line": 18,
+          "text": "| [mem0ai/mem0](https://github.com/mem0ai/mem0) | main / [`b7ad69afda`](https://github.com/mem0ai/mem0/commit/b7ad69afda6b6ed030347c66d48a13e4de9dec08) | 2026-10-07T13:06:15Z | 2026-10-09T06:17:43Z | [Apache-2.0](https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/LICENSE) |"
+        },
+        {
+          "line": 19,
+          "text": "| [letta-ai/letta](https://github.com/letta-ai/letta) | main / [`5bcdd177d7`](https://github.com/letta-ai/letta/commit/5bcdd177d70fa2b31a754cfcd801e77b2e1ab16a) | 2026-09-10T17:59:06Z | 2026-09-10T17:59:08Z | [Apache-2.0](https://github.com/letta-ai/letta/blob/5bcdd177d70fa2b31a754cfcd801e77b2e1ab16a/LICENSE) |"
+        },
+        {
+          "line": 20,
+          "text": "| [letta-ai/letta-code](https://github.com/letta-ai/letta-code) | main / [`44d351ba06`](https://github.com/letta-ai/letta-code/commit/44d351ba06d33507756d7dd5b98fcbe1cc321565) | 2026-10-10T01:03:23Z | 2026-10-10T01:03:26Z | [Apache-2.0](https://github.com/letta-ai/letta-code/blob/44d351ba06d33507756d7dd5b98fcbe1cc321565/LICENSE) |"
+        },
+        {
+          "line": 21,
+          "text": "| [getzep/graphiti](https://github.com/getzep/graphiti) | main / [`a9ef13f7e2`](https://github.com/getzep/graphiti/commit/a9ef13f7e2cce23e92abd2f76947f42e270da25a) | 2026-10-09T16:47:25Z | 2026-10-09T16:47:28Z | [Apache-2.0](https://github.com/getzep/graphiti/blob/a9ef13f7e2cce23e92abd2f76947f42e270da25a/LICENSE) |"
+        }
+      ],
+      "why_keep": "保留8类候选5类深读、源码与许可快照",
+      "context_contamination_risk": "Mem0/MemOS/Pipecat优先实验是当次候选建议，不是新数据库/语音框架已选定；来源状态可能随版本变化",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-AIRI实测与能力差距.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-AIRI实测与能力差距.md",
+      "original_sha256": "e5eb70763bc562f8deee7b39c6cf590e85e652b237af564746812cf54cee8fd5",
+      "bytes": 14300,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-10。目标：按用户要求，先运行原版、调查可复用项目，再决定 Aimy 增量。**AIRI 适合保留为界面、角色、对话和音频底座；用户最重视的长期记忆、自然插话和主动陪伴仍需补强及真实验收。**"
+        },
+        {
+          "line": 11,
+          "text": "在 `.baseline/airi-evaluation-2026-10-10/source` 创建隔离副本，排除 `.env` 和私人运行数据。对 6,214 个原始文件记录 SHA-256；树指纹为 `d0917b7ea0d3283ff969297ef4b3ad198e2b821a589561124d3e9227910c7eba`。构建后原目录与副本中的既有文件均无变动。父仓库暂存 index 指纹维持 `cfed2c524e1f382ac46018366c06887b298bb74f84d1ece2e8e7aee851745c49`。"
+        },
+        {
+          "line": 46,
+          "text": "命令在隔离副本执行。第一次定向测试误用不存在的 project 名称，修正为配置原有的 `node` 后通过；没有修改配置或测试来消除失败。安装记录、构建记录及校验摘要见[机器记录](../执行记录/2026-10-10-AIRI原版评估.json)。"
+        },
+        {
+          "line": 85,
+          "text": "已查8类、深读5类，均固定 commit 并核对源码与许可证，详见[完整调查](2026-10-10-GitHub能力复用调查.md)。均未安装或运行，接入成本为工程推断。"
+        },
+        {
+          "line": 117,
+          "text": "![原版角色窗口](../执行记录/AIRI原版评估/2026-10-10-stage.png)"
+        }
+      ],
+      "why_keep": "保留隔离原版来源指纹、文字实测、记忆负例、退出问题与未验边界",
+      "context_contamination_risk": "第8节先做记忆/语音实验的接续建议已被同日更晚的直接继承→品牌→使用→优化顺序替代；不能据此阻塞原版继承；真实文字记录不代表多模态验收",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用与代码审查.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用与代码审查.md",
+      "original_sha256": "f54e0d2444e2b35ca1ddf7236ba9e849105412b53b2a2f5e570f3bbdd41e90ac",
+      "bytes": 21600,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-10。对象：Ryza AI Revive、AionsHome、Kirara AI、Chromatic。接入基线是 `/Users/mima1234/Documents/airi-main`，版本字段0.12.0-beta.5；该原版目录无Git提交信息，本次另保存关键文件指纹。旧 `apps/aimy-desktop` 继续作为历史样机，不作为这次拼合目标。"
+        },
+        {
+          "line": 26,
+          "text": "| [Ryza](https://github.com/zeroa234/ryza-ai-revive/tree/45e75ad6f6f0eb7952676b1bf24a674256082941) | `45e75ad6f6f0eb7952676b1bf24a674256082941` | 2026-10-05 | 87/87 |"
+        },
+        {
+          "line": 27,
+          "text": "| [AionsHome](https://github.com/death34018-hue/AionsHome/tree/c0d4c2e190ead5713f61d09ac572a641a0f5e727) | `c0d4c2e190ead5713f61d09ac572a641a0f5e727` | 2026-10-08 | 1,036/1,036 |"
+        },
+        {
+          "line": 28,
+          "text": "| [Kirara](https://github.com/lss233/kirara-ai/tree/8295a5deda0b289a3f70d946064b6c9a3e1b0753) | `8295a5deda0b289a3f70d946064b6c9a3e1b0753` | 2025-06-28 | 289/289 |"
+        },
+        {
+          "line": 29,
+          "text": "| [Chromatic](https://github.com/proj-airi/chromatic/tree/b5859e420de6006b458fcbb672136302ebe17eba) | `b5859e420de6006b458fcbb672136302ebe17eba` | 2026-08-03 | 23/23 |"
+        }
+      ],
+      "why_keep": "保留四项目模块、接点、缺陷、许可、固定远端与本地匹配证据",
+      "context_contamination_risk": "建议不等于用户已批准逐函数移植、进程、存储或角色方案；1435文件哈希核对不等于逐行人工审计",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-AIRI与Aimy完整功能清单.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-AIRI与Aimy完整功能清单.json",
+      "original_sha256": "9bb1546353211c029246087363b76b5050720d9664f4b97b3ac6eacce25337d1",
+      "bytes": 392315,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-AIRI与Aimy完整功能清单.csv",
+      "canonical_path": "docs/02-调研参考/2026-10-10-AIRI与Aimy完整功能清单.csv",
+      "original_sha256": "63ab0bae574cf2282968f04faa6213d90b0f57db14e35467693bc404d1607a1e",
+      "bytes": 144358,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/ryza-audit.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/ryza-audit.md",
+      "original_sha256": "ca796859257c4999908a9f1a1cfecc94ee204daaf1187d124081737b978077f1",
+      "bytes": 23281,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "审查日期：2026-10-10。只读来源：`/Users/mima1234/Documents/资料/ryza-ai-revive-master`。接入目标：`/Users/mima1234/Documents/airi-main` 原版完整桌面，非 aimy/digital-lover 历史样机。未修改来源或 Aimy 工程。没有发现适用于该源码目录的 AGENTS.md。"
+        },
+        {
+          "line": 7,
+          "text": "主 Agent 在线核验：GitHub 当前 master `45e75ad6f6f0eb7952676b1bf24a674256082941`（2026-10-05），87 个可比源码、脚本、样式与 HTML 的 Git blob SHA 与本地一致。本报告的具体代码检查基于本地副本；在线结果由主 Agent 统一提供。"
+        }
+      ],
+      "why_keep": "保留项目ryza-audit.md模块与缺陷可追踪证据",
+      "context_contamination_risk": "不可把隔离函数复现/静态语法通过当完整服务、真实设备、模型、许可发行或AIRI集成通过；复现脚本是证据不是应用开发入口",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/snapshot-summary.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/snapshot-summary.json",
+      "original_sha256": "57f74bd0a77371028bdbe5afb051b188f4c04949733d9b55d834673988eac71e",
+      "bytes": 987,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-directed-results.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-directed-results.json",
+      "original_sha256": "84b136ea47566ee810238756e815f8e9b292a07a045c4fd7e850ab89f9a3504f",
+      "bytes": 787,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-static-checks.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-static-checks.json",
+      "original_sha256": "0caec61b849355d1852b8ae941f75e4b2e9d63e3413cbaa184d30d279f75ec69",
+      "bytes": 1414,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-ai-master-source-manifest.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-ai-master-source-manifest.json",
+      "original_sha256": "eb8f5fa0762172c0a36a61e5354e67287f90ffae0950019a6f366214f23a9c69",
+      "bytes": 79783,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-directed-checks.py",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-directed-checks.py",
+      "original_sha256": "77b26a879b7b43d38a08651e4e08df32b107e996fe1e2653f68f45682180ba3e",
+      "bytes": 5659,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-audit-reproductions.test.ts",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-audit-reproductions.test.ts",
+      "original_sha256": "cbb1036be900c2865f68837b67e6d411c0e7407b9b21a34c2b4b55580dbe5ea9",
+      "bytes": 935,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/kirara-audit.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/kirara-audit.md",
+      "original_sha256": "cf0df98d74f181950c53678ce11d0ab1f25487d7437e37e359c82376ffd1d7d3",
+      "bytes": 18357,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "调查日期：2026-10-10。源码：`/Users/mima1234/Documents/资料/kirara-ai-master`。接入目标：原版完整 AIRI 桌面 `/Users/mima1234/Documents/airi-main`；不面向 aimy 旧历史样机。"
+        },
+        {
+          "line": 11,
+          "text": "主 Agent 已在线核验 GitHub 默认分支 `master` 的 HEAD 为 `8295a5deda0b289a3f70d946064b6c9a3e1b0753`，最后提交 2025-06-28；289 个可比源码 / 脚本 / 样式 / HTML 文件的 Git blob SHA 与本地全部一致，树未截断。因此这些代码问题适用于本次核验的当前默认 HEAD；维护年龄约 15 个月不能误写成本地与当前代码不一致。这里没有核验每个外部插件市场项目或 WebUI 的当前代码。"
+        }
+      ],
+      "why_keep": "保留项目kirara-audit.md模块与缺陷可追踪证据",
+      "context_contamination_risk": "不可把隔离函数复现/静态语法通过当完整服务、真实设备、模型、许可发行或AIRI集成通过；复现脚本是证据不是应用开发入口",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-audit.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-audit.md",
+      "original_sha256": "1a3366de3733069f696b8a8af8b431e6d12c110ac469586c952e0f48ae7ebe73",
+      "bytes": 23487,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "调查日期：2026-10-10。源码根目录：`/Users/mima1234/Documents/资料/AionsHome-main`。接入目标采用主控指定的 `/Users/mima1234/Documents/airi-main` 原版完整桌面，**不以历史 aimy-desktop 样机为接入目标**。本报告没有改动任何来源/Aimy 工程，没有安装依赖、启动服务或调用模型，没有读取 `data/`、个人聊天/世界书/配置/API Key 内容。仓库内及适用上级目录未发现 AGENTS.md。"
+        },
+        {
+          "line": 151,
+          "text": "上游版本校对由主控统一执行；主控报告本地可比源码与GitHub main `c0d4c2e190ead5713f61d09ac572a641a0f5e727`（2026-10-08）一致，本子Agent未独立联网重验。"
+        }
+      ],
+      "why_keep": "保留项目aions-audit.md模块与缺陷可追踪证据",
+      "context_contamination_risk": "不可把隔离函数复现/静态语法通过当完整服务、真实设备、模型、许可发行或AIRI集成通过；复现脚本是证据不是应用开发入口",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/ryza-isolated-checks.js",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/ryza-isolated-checks.js",
+      "original_sha256": "dca0f9203f4fb61afbec0ca2ed0f849b32a1195bbcd25da9e9278042539bce4a",
+      "bytes": 2960,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/github-metadata.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/github-metadata.json",
+      "original_sha256": "635119450567d0ca98ff078e886635e46f2158b87af6c10d07bf03d34ca85f05",
+      "bytes": 2762,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/airi-reference-manifest.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/airi-reference-manifest.json",
+      "original_sha256": "5af18c001cd58f9f549708c0ce1e4f5095a2fa53197bc232d8d3f21b5a6a5af9",
+      "bytes": 988,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/README.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/README.md",
+      "original_sha256": "171967b3d45af97eef8c0e03d06fc859aae2e81eb4e067ce763997b34a08cd52",
+      "bytes": 2592,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-10。总报告见[四项目复用与代码审查](/Users/mima1234/Documents/aimy/digital-lover/docs/调研/2026-10-10-四项目复用与代码审查.md)。本目录保存可持久访问的分项目报告与检查证据，报告里的`/tmp`路径是执行时的临时位置，对应文件已按原文件名复制到这里。"
+        }
+      ],
+      "why_keep": "保留项目README.md模块与缺陷可追踪证据",
+      "context_contamination_risk": "不可把隔离函数复现/静态语法通过当完整服务、真实设备、模型、许可发行或AIRI集成通过；复现脚本是证据不是应用开发入口",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-isolated-results.jsonl",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-isolated-results.jsonl",
+      "original_sha256": "a5bc669415a73682658c95eb3af1af0114414c1e4198e46c9307f379df0a9d2a",
+      "bytes": 614,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/post-review-source-check.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/post-review-source-check.json",
+      "original_sha256": "77e5850e34195bbaf452bb9a601ae4cde0366c578b0b0fa0c86183fa8d422a1b",
+      "bytes": 336,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-check-results.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-check-results.json",
+      "original_sha256": "2e646a74750dfe1fc01081ba431b96479d25ae304e222de1269adecd57978f29",
+      "bytes": 364,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/aions-isolated-check.py",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/aions-isolated-check.py",
+      "original_sha256": "18e8c1e359adfa3744d6bac9d7f8cd08fc97d69e2969cee78b562c9206d088e0",
+      "bytes": 8883,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/ryza-ai-revive-master-source-manifest.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/ryza-ai-revive-master-source-manifest.json",
+      "original_sha256": "e7e6a6a7865990530f4d7332197be27d09ae70ba4e01ffe8be1dd6588a60de2c",
+      "bytes": 23035,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/AionsHome-main-source-manifest.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/AionsHome-main-source-manifest.json",
+      "original_sha256": "fb708a44e1f15fc50313bc9bca05c9f4f5023cb4c942e8804b63b07580372023",
+      "bytes": 293809,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-audit.md",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-audit.md",
+      "original_sha256": "b637eca033e52aea837b503001bf963ab805f2dbc0439f03b69d0e4a85fb6fb0",
+      "bytes": 5381,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "2026-10-10，正文明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "日期：2026-10-10。来源：`/Users/mima1234/Documents/资料/chromatic-main`。GitHub 默认分支 main 的固定提交：`b5859e420de6006b458fcbb672136302ebe17eba`。23 个可比代码、脚本、样式和 HTML 文件与该提交全部一致。"
+        }
+      ],
+      "why_keep": "保留项目chromatic-audit.md模块与缺陷可追踪证据",
+      "context_contamination_risk": "不可把隔离函数复现/静态语法通过当完整服务、真实设备、模型、许可发行或AIRI集成通过；复现脚本是证据不是应用开发入口",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/调研/2026-10-10-四项目复用证据/chromatic-main-source-manifest.json",
+      "canonical_path": "docs/02-调研参考/2026-10-10-四项目复用证据/chromatic-main-source-manifest.json",
+      "original_sha256": "9727acc59bd1ac55f4f750843f0c07cd91d1efc5a9f3c1a0cb9e6346e3080e67",
+      "bytes": 6381,
+      "action": "move",
+      "status": "定向调研参考，绑定当时来源；不是选型决定或实施授权",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/visual/github/REFERENCE_LOCK.md",
+      "canonical_path": "docs/90-历史归档/旧样机展示/visual/github/REFERENCE_LOCK.md",
+      "original_sha256": "6f84f68c04ed1f66254d9de29f1270718482c9a5389b33168019c857fc4f889c",
+      "bytes": 2388,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-10-08，文内明确日期",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "2026-10-08，范围为仓库 README、品牌展示资产及 About 元信息，不改应用功能。"
+        }
+      ],
+      "why_keep": "保留已有SVG、截图设计依据与Refero回退事实",
+      "context_contamination_risk": "旧薄荷UI/VRoid截图不代表原版继承后的正式应用或已定Aimy品牌；保留范围仅README",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/visual/github/banner-light.svg",
+      "canonical_path": "docs/90-历史归档/旧样机展示/visual/github/banner-light.svg",
+      "original_sha256": "f9b89621645cf42663cb53f054142dc412ed03e25a17a2c350055ba1d349c739",
+      "bytes": 1082,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/visual/github/badge-status.svg",
+      "canonical_path": "docs/90-历史归档/旧样机展示/visual/github/badge-status.svg",
+      "original_sha256": "6b5e5794e8de09cad3dfd5ea671a9252ec851e25cb5b0231fe116911fe9d966d",
+      "bytes": 611,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/visual/github/badge-platform.svg",
+      "canonical_path": "docs/90-历史归档/旧样机展示/visual/github/badge-platform.svg",
+      "original_sha256": "553b6859faf95283aca7b4f5d7a1f85fd67cc73c49fe87bbe8ee2f78c2f4771e",
+      "bytes": 607,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/visual/github/banner-dark.svg",
+      "canonical_path": "docs/90-历史归档/旧样机展示/visual/github/banner-dark.svg",
+      "original_sha256": "340f75e4a0fcb395cbf6bb271ac4b9030551748606955bc075eda8995aac3896",
+      "bytes": 1081,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/visual/github/badge-models.svg",
+      "canonical_path": "docs/90-历史归档/旧样机展示/visual/github/badge-models.svg",
+      "original_sha256": "87e69873067a1df5335393c3193b6f1f4dbfe3cd3bd4e491a9b72a2dfc957339",
+      "bytes": 601,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/superpowers/plans/2026-09-23-t0-3-airi-core-agent.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/早期执行计划/2026-09-23-t0-3-airi-core-agent.md",
+      "original_sha256": "6104cd993ec3c0310a6dc047e75a159438d0b054c7e7f75c0551d047678ec7c6",
+      "bytes": 2728,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-09-23，仅文件名；正文无独立日期",
+      "date_kind": "文件名标注日期，非创建日期",
+      "date_evidence": [],
+      "why_keep": "九包选择性vendoring计划，解释早期代码来源",
+      "context_contamination_risk": "正文复选框与Task/步骤是旧指令，不是本轮执行授权；不得按计划重新复制包或改入口",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/docs/superpowers/plans/2026-09-24-m1-text-chat-cli.md",
+      "canonical_path": "docs/90-历史归档/旧Aimy样机/早期执行计划/2026-09-24-m1-text-chat-cli.md",
+      "original_sha256": "c14fc9075a2b7c62ead052b921a4cfea7eeeeeeececb873ef91b5171a7f57c35",
+      "bytes": 1039,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "2026-09-24，仅文件名；正文无独立日期",
+      "date_kind": "文件名标注日期，非创建日期",
+      "date_evidence": [],
+      "why_keep": "单轮CLI实施计划，解释早期代码来源",
+      "context_contamination_risk": "正文复选框与Task/步骤是旧指令，不是本轮执行授权；不得按计划重新复制包或改入口",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "数字恋人-产品PRD.md",
+      "canonical_path": "docs/90-历史归档/早期产品与游戏探索/数字恋人-产品PRD.md",
+      "original_sha256": "15d8f6648bfed345ed7ff6a76cb1b6cbfe267771dbb4e241fa36b3e6cccd0b03",
+      "bytes": 14098,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "v1.0/v1.1初稿日期未知；2026-10-07起历史",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> **历史文档：2026-10-07 起不作为当前需求或开工依据。** 当前唯一总纲为 [Aimy MVP 产品需求总纲](digital-lover/docs/PRD-MVP-重构版.md)，当前进度与验证见 [PROJECT_STATE](digital-lover/docs/PROJECT_STATE.md)。以下正文保留当时愿景、方案和决策记录，不代表现在全部锁定或已实现。"
+        }
+      ],
+      "why_keep": "保存关系五阶段、早期功能取舍和M路线缘由",
+      "context_contamination_risk": "完整系统提示词、七层架构、s组件和全部锁定容易扩大当前需求；订阅/自建角色/本地不外发/NSFW等已失效",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "数字恋人-新产品PRD-对齐中.md",
+      "canonical_path": "docs/90-历史归档/早期产品与游戏探索/数字恋人-新产品PRD-对齐中.md",
+      "original_sha256": "f32341d3a0f67d6fee744be2d27b4e2e9fcc8d082aa05afd2db78d4e12bec38d",
+      "bytes": 4145,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未知；2026-10-07起标记历史",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> **历史对齐记录：2026-10-07 起不作为当前总纲。** 已批准的统一产品方向见 [Aimy MVP 产品需求总纲](digital-lover/docs/PRD-MVP-重构版.md)，当前进度见 [PROJECT_STATE](digital-lover/docs/PROJECT_STATE.md)。正文保留早期对齐过程，原“全部锁定/已定稿”只描述当时记录。"
+        }
+      ],
+      "why_keep": "保存早期定位与“全部锁定”原因及后来纠正",
+      "context_contamination_risk": "免费订阅、全主动观察、NSFW后置、固定VRM、Windows承诺等已失效；头部指PRD-MVP也不是最新入口",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "AIRI-参考项目-拆解与反推PRD.md",
+      "canonical_path": "docs/90-历史归档/早期产品与游戏探索/AIRI-参考项目-拆解与反推PRD.md",
+      "original_sha256": "1f292c78a226ffced141717577c7adec0fe72df184602304252edbeb2ccb306b",
+      "bytes": 24438,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "初稿日期未知；2026-10-07范围纠正；针对旧aimy/airi-main",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 3,
+          "text": "> **历史 AIRI 拆解：范围纠正于 2026-10-07。** 本文针对当时本地 `airi-main` 的源码与核心包测试，不作为 Aimy 当前需求、产品完成度或全平台验收。当前产品总纲见 [PRD-MVP-重构版](digital-lover/docs/PRD-MVP-重构版.md)，进度及新验证见 [PROJECT_STATE](digital-lover/docs/PROJECT_STATE.md)。以下正文和测试数字保留历史，不宣称官方最新版本已重新验证。"
+        }
+      ],
+      "why_keep": "保存早期选AIRI的来源和核心147tests证据",
+      "context_contamination_risk": "生产级/全覆盖/全部能力/pgvector等旧断言已被纠正；旧路径版本同名不能替代10-10新来源",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "README.md",
+      "canonical_path": "docs/90-历史归档/入口快照/根README-旧样机介绍.md",
+      "original_sha256": "3f9664c468e2de80d654cc1d37e4eed403ab87614997a205cb0e678946432072",
+      "bytes": 7693,
+      "action": "archive_copy_then_replace_entry",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "内容明确截至2026-10-07工程验证；品牌参考记录为2026-10-08；README创建日未知",
+      "date_kind": "文内时期，非创建日期",
+      "date_evidence": [
+        {
+          "line": 97,
+          "text": "截至 **2026-10-07** 的工程与隔离原生结果："
+        },
+        {
+          "line": 105,
+          "text": "[工程证据](digital-lover/docs/执行记录/2026-10-07-D工程检查.json) · [实施记录](digital-lover/docs/执行记录/2026-10-07-D实时交互原型.md)"
+        }
+      ],
+      "why_keep": "保留公开介绍、截图、运行方法和历史能力说明",
+      "context_contamination_risk": "最显眼入口仍讲VRM独立样机、PRD-MVP、A–E和先B/D再E，会优先污染上下文；需根入口只导航当前方向并明确旧启动现状",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/README.md",
+      "canonical_path": "docs/90-历史归档/入口快照/digital-lover-README-旧样机说明.md",
+      "original_sha256": "35a8fe38976647d68b96c4a706de2626ea82cd98d80aba08165d1deb94004d00",
+      "bytes": 6227,
+      "action": "archive_copy_then_replace_entry",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "无独立日期；2026-10-07 A/C/D样机时期，后含2026-10-08发布索引",
+      "date_kind": "关联实现时期推定，非创建日期",
+      "date_evidence": [
+        {
+          "line": 11,
+          "text": "- [本轮实施证据](docs/执行记录/2026-10-07-A与B基线.md)"
+        },
+        {
+          "line": 12,
+          "text": "- [桌面样机证据](docs/执行记录/2026-10-07-C桌面样机.md)"
+        },
+        {
+          "line": 13,
+          "text": "- [实时交互原型证据](docs/执行记录/2026-10-07-D实时交互原型.md)"
+        }
+      ],
+      "why_keep": "当前旧代码仍存在，需要真实启动/验证说明可查",
+      "context_contamination_risk": "唯一需求总纲指PRD-MVP、A–E和默认start旧样机不能被当新产品主工程；迁移文档不代表包脚本已经切换",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "digital-lover/AGENTS.md",
+      "canonical_path": "docs/90-历史归档/入口快照/digital-lover-AGENTS-整理前规则.md",
+      "original_sha256": "bd22e6bd6c62ff6c43d25364af9a471dae4a16efe9c151eb9c25e0649f2ee150",
+      "bytes": 6563,
+      "action": "archive_copy_then_replace_entry",
+      "status": "整理前规则快照，不作为自动生效的AGENTS入口",
+      "artifact_period": "初稿日期未记录；2026-10-11盘点时已存在",
+      "date_kind": "日期未知，不使用mtime推定",
+      "date_evidence": [],
+      "why_keep": "保留包使用、版权来源或旧样机技术边界，供定向复核",
+      "context_contamination_risk": "只说明所在包或旧样机，不代表新Aimy产品已集成、批准或验收",
+      "risk_level": "中",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    },
+    {
+      "original_path": "我要开发一个类似“AI角色真实生活在3D游戏世界中，并能够和玩家自然互动”的游戏原型。/我要开发一个类似“AI角色真实生活在3D游戏世界中，并能够和玩家自然互动”的游戏原型。.md",
+      "canonical_path": "docs/90-历史归档/早期产品与游戏探索/3D游戏原型原始需求.md",
+      "original_sha256": "75158880fdf71bc44f0dbe85e8508c6d4d21cacdff3915167e14215d78017a9c",
+      "bytes": 12500,
+      "action": "move",
+      "status": "历史归档，不作为当前需求、技术选型或开工依据",
+      "artifact_period": "原文无日期，属于早期3D游戏愿景输入",
+      "date_kind": "原文无日期",
+      "date_evidence": [],
+      "why_keep": "保存用户当时的游戏愿景与不伪造AI能力原则",
+      "context_contamination_risk": "20节/12阶段与AICharacterState代码示例是旧附件内容，不是本轮用户执行指令；不能自动开发雪夜庭院、模型控制器或固定schema",
+      "risk_level": "高",
+      "read_policy": "按本次任务定向读取；不默认加载历史全文",
+      "publication_policy": "集中管理不等于授权公开；发布前按来源和用户范围复核"
+    }
+  ],
+  "scope": "First-party documentation and navigation only; no product code/lock/config/index changes"
+}

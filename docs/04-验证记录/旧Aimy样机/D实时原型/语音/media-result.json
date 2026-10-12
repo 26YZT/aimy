@@ -1,0 +1,2912 @@
+{
+  "status": "passed",
+  "scope": "full-media-suite",
+  "evidenceDirectory": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG",
+  "checks": [
+    "Default app opens no input device and sends no provider request",
+    "Missing transcript receipt, arbitrary synthesis text and revoked capture token are rejected by real main IPC before any HTTP request",
+    "Real bundled Silero initialization and silence rejection; actual AudioWorklet/file-backed stream",
+    "Real bundled Silero initialization and pulse rejection; actual AudioWorklet/file-backed stream",
+    "Two real Silero segments → SDK ASR → multi-turn Agent → SDK WAV TTS → ordered native playback; camera combination denied",
+    "A real 60ms spoken pulse does not confirm barge-in or interrupt ongoing native playback",
+    "Real confirmed barge-in aborts LLM/TTS, stops actual audio early, accepts another utterance and drops old audio",
+    "off: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "hide: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "reload: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "quit: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "Disabling speech aborts every pending TTS and no late WAV starts playback",
+    "Speech disabled during a real native decode drops its delayed completion without starting audio",
+    "asr-error: safe error, no exposed credential and text conversation remains usable",
+    "tts-error: safe error, no exposed credential and text conversation remains usable",
+    "tts-invalid: safe error, no exposed credential and text conversation remains usable"
+  ],
+  "fixtures": {
+    "files": {
+      "conversation": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/public-fixtures/conversation.wav",
+        "bytes": 507422,
+        "durationMs": 15855.5625,
+        "sha256": "76eedf381aef43ca83d59ddba3f153ae0525c4641905735c7d0f0ec963c7f64c"
+      },
+      "barge": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/public-fixtures/barge.wav",
+        "bytes": 392222,
+        "durationMs": 12255.5625,
+        "sha256": "8f695051cd8c6a22f0b5c583c06769676a9b186202fa0487a8cd7cf66c3080a0"
+      },
+      "single": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/public-fixtures/single.wav",
+        "bytes": 415082,
+        "durationMs": 12969.9375,
+        "sha256": "e1e5911abc27b4bd7c1c221fea746fcef2b23a3a073c4b6ae419a52c05630640"
+      },
+      "silence": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/public-fixtures/silence.wav",
+        "bytes": 384044,
+        "durationMs": 12000,
+        "sha256": "6e49db6ecc812f32cb043fb3c02e4aea55329fa8df27724c5b4e2a76ed57c360"
+      },
+      "pulse": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/public-fixtures/pulse.wav",
+        "bytes": 257964,
+        "durationMs": 8060,
+        "sha256": "a7c505eb20d64c5497cd8e01f4a5f912e81f277545d0d572d857f369194c02ef"
+      },
+      "shortBarge": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/public-fixtures/shortBarge.wav",
+        "bytes": 461802,
+        "durationMs": 14429.9375,
+        "sha256": "45fb491942972a3b11bb09aa385149802d4382f25dc4bf319cdc575669ee0f89"
+      }
+    },
+    "source": "offline macOS say public English text; file-backed fake microphone",
+    "vad": "real bundled Silero; no fake VAD",
+    "playbackFixture": "synthetic PCM tone; muted WebAudio; not natural TTS quality"
+  },
+  "observations": [
+    {
+      "case": "default",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "ipc-authority",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "silence",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "silence",
+      "events": [],
+      "controls": [
+        {
+          "type": "click",
+          "at": 1791388215905,
+          "control": "microphone-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388215906,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388215907,
+          "vad": "loading",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388216346,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "click",
+          "at": 1791388229592,
+          "control": "microphone-status",
+          "pressed": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388229594,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388229599,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "false",
+          "speech": "false"
+        }
+      ],
+      "mediaSnapshots": [
+        {
+          "at": 1791388214717,
+          "revision": 4,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388214858,
+          "revision": 5,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388214859,
+          "revision": 6,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388214859,
+          "revision": 7,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388214859,
+          "revision": 8,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388214967,
+          "revision": 9,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388214968,
+          "revision": 10,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388214968,
+          "revision": 11,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388215774,
+          "revision": 12,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388215775,
+          "revision": 13,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388215775,
+          "revision": 14,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388215841,
+          "revision": 15,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388215841,
+          "revision": 16,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388215841,
+          "revision": 17,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388215906,
+          "revision": 18,
+          "mic": true,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388229599,
+          "revision": 19,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        }
+      ],
+      "decoded": 0,
+      "decodeFailures": 0,
+      "vadFrames": 414,
+      "maxInputRms": 0,
+      "getUserMediaCalls": [
+        {
+          "at": 1791388215906,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "ended"
+        }
+      ]
+    },
+    {
+      "case": "pulse",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "pulse",
+      "events": [],
+      "controls": [
+        {
+          "type": "click",
+          "at": 1791388231606,
+          "control": "microphone-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388231607,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388231607,
+          "vad": "loading",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388232077,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "click",
+          "at": 1791388241377,
+          "control": "microphone-status",
+          "pressed": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388241379,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388241384,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "false",
+          "speech": "false"
+        }
+      ],
+      "mediaSnapshots": [
+        {
+          "at": 1791388230205,
+          "revision": 4,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388230532,
+          "revision": 5,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388230532,
+          "revision": 6,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388230532,
+          "revision": 7,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388230532,
+          "revision": 8,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231399,
+          "revision": 9,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231400,
+          "revision": 10,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231400,
+          "revision": 11,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231475,
+          "revision": 12,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231475,
+          "revision": 13,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231475,
+          "revision": 14,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231542,
+          "revision": 15,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231542,
+          "revision": 16,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231542,
+          "revision": 17,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388231607,
+          "revision": 18,
+          "mic": true,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388241384,
+          "revision": 19,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        }
+      ],
+      "decoded": 0,
+      "decodeFailures": 0,
+      "vadFrames": 291,
+      "maxInputRms": 0.5003242202196678,
+      "getUserMediaCalls": [
+        {
+          "at": 1791388231607,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "ended"
+        }
+      ]
+    },
+    {
+      "case": "conversation",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "conversation",
+      "events": [
+        {
+          "type": "start",
+          "id": 1,
+          "at": 1791388249583,
+          "durationMs": 650,
+          "rms": 0.10427801765759277,
+          "frequency": 605
+        },
+        {
+          "type": "stop",
+          "id": 1,
+          "at": 1791388250231
+        },
+        {
+          "type": "start",
+          "id": 2,
+          "at": 1791388250233,
+          "durationMs": 650,
+          "rms": 0.10427857235990455,
+          "frequency": 655
+        },
+        {
+          "type": "ended",
+          "id": 1,
+          "at": 1791388250234
+        },
+        {
+          "type": "stop",
+          "id": 2,
+          "at": 1791388250881
+        },
+        {
+          "type": "start",
+          "id": 3,
+          "at": 1791388250882,
+          "durationMs": 650,
+          "rms": 0.10427932516976596,
+          "frequency": 710
+        },
+        {
+          "type": "ended",
+          "id": 2,
+          "at": 1791388250883
+        },
+        {
+          "type": "stop",
+          "id": 3,
+          "at": 1791388251532
+        },
+        {
+          "type": "start",
+          "id": 4,
+          "at": 1791388251533,
+          "durationMs": 650,
+          "rms": 0.10428011209411979,
+          "frequency": 770
+        },
+        {
+          "type": "ended",
+          "id": 3,
+          "at": 1791388251533
+        },
+        {
+          "type": "stop",
+          "id": 4,
+          "at": 1791388252183
+        },
+        {
+          "type": "ended",
+          "id": 4,
+          "at": 1791388252183
+        },
+        {
+          "type": "start",
+          "id": 5,
+          "at": 1791388257201,
+          "durationMs": 650,
+          "rms": 0.10428085052878652,
+          "frequency": 820
+        },
+        {
+          "type": "stop",
+          "id": 5,
+          "at": 1791388257847
+        },
+        {
+          "type": "start",
+          "id": 6,
+          "at": 1791388257848,
+          "durationMs": 650,
+          "rms": 0.10428083443295585,
+          "frequency": 880
+        },
+        {
+          "type": "ended",
+          "id": 5,
+          "at": 1791388257848
+        },
+        {
+          "type": "stop",
+          "id": 6,
+          "at": 1791388258498
+        },
+        {
+          "type": "start",
+          "id": 7,
+          "at": 1791388258499,
+          "durationMs": 650,
+          "rms": 0.10428173864792721,
+          "frequency": 935
+        },
+        {
+          "type": "ended",
+          "id": 6,
+          "at": 1791388258500
+        },
+        {
+          "type": "stop",
+          "id": 7,
+          "at": 1791388259148
+        },
+        {
+          "type": "start",
+          "id": 8,
+          "at": 1791388259149,
+          "durationMs": 650,
+          "rms": 0.1042822836219025,
+          "frequency": 985
+        },
+        {
+          "type": "ended",
+          "id": 7,
+          "at": 1791388259150
+        },
+        {
+          "type": "stop",
+          "id": 8,
+          "at": 1791388259799
+        },
+        {
+          "type": "ended",
+          "id": 8,
+          "at": 1791388259800
+        }
+      ],
+      "controls": [
+        {
+          "type": "click",
+          "at": 1791388243223,
+          "control": "speech-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388243224,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "false",
+          "speech": "true"
+        },
+        {
+          "type": "click",
+          "at": 1791388243406,
+          "control": "microphone-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388243406,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388243407,
+          "vad": "loading",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388243732,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388249583,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388250233,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388250234,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388250882,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388250883,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388251532,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388251533,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388252183,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388257202,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388257848,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388257848,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388258499,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388258500,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388259149,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388259150,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388259800,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        }
+      ],
+      "mediaSnapshots": [
+        {
+          "at": 1791388242065,
+          "revision": 5,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388242065,
+          "revision": 6,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388242065,
+          "revision": 7,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388242066,
+          "revision": 8,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388242258,
+          "revision": 9,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388242258,
+          "revision": 10,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388242258,
+          "revision": 11,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388243058,
+          "revision": 12,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388243058,
+          "revision": 13,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388243058,
+          "revision": 14,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388243141,
+          "revision": 15,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388243141,
+          "revision": 16,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388243141,
+          "revision": 17,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388243224,
+          "revision": 18,
+          "mic": false,
+          "speech": true,
+          "screen": false
+        },
+        {
+          "at": 1791388243406,
+          "revision": 19,
+          "mic": true,
+          "speech": true,
+          "screen": false
+        }
+      ],
+      "decoded": 8,
+      "decodeFailures": 0,
+      "vadFrames": 504,
+      "maxInputRms": 0.3596944312834718,
+      "getUserMediaCalls": [
+        {
+          "at": 1791388243407,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "short-barge",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "short-barge",
+      "events": [
+        {
+          "type": "start",
+          "id": 1,
+          "at": 1791388268305,
+          "durationMs": 5000,
+          "rms": 0.10427801765759277,
+          "frequency": 605
+        },
+        {
+          "type": "stop",
+          "id": 1,
+          "at": 1791388273308
+        },
+        {
+          "type": "ended",
+          "id": 1,
+          "at": 1791388273310
+        }
+      ],
+      "controls": [
+        {
+          "type": "click",
+          "at": 1791388262007,
+          "control": "speech-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388262007,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "false",
+          "speech": "true"
+        },
+        {
+          "type": "click",
+          "at": 1791388262156,
+          "control": "microphone-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388262158,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388262159,
+          "vad": "loading",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388262481,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388268306,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388273310,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        }
+      ],
+      "mediaSnapshots": [
+        {
+          "at": 1791388260696,
+          "revision": 4,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388260818,
+          "revision": 5,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388260818,
+          "revision": 6,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388260818,
+          "revision": 7,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388260818,
+          "revision": 8,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261028,
+          "revision": 9,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261029,
+          "revision": 10,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261029,
+          "revision": 11,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261868,
+          "revision": 12,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261868,
+          "revision": 13,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261868,
+          "revision": 14,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261942,
+          "revision": 15,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261942,
+          "revision": 16,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388261942,
+          "revision": 17,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388262007,
+          "revision": 18,
+          "mic": false,
+          "speech": true,
+          "screen": false
+        },
+        {
+          "at": 1791388262158,
+          "revision": 19,
+          "mic": true,
+          "speech": true,
+          "screen": false
+        }
+      ],
+      "decoded": 1,
+      "decodeFailures": 0,
+      "vadFrames": 357,
+      "maxInputRms": 0.36590559921955196,
+      "getUserMediaCalls": [
+        {
+          "at": 1791388262158,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "barge",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "barge",
+      "events": [
+        {
+          "type": "start",
+          "id": 1,
+          "at": 1791388282136,
+          "durationMs": 5000,
+          "rms": 0.10427801765759277,
+          "frequency": 605
+        },
+        {
+          "type": "stop",
+          "id": 1,
+          "at": 1791388282898
+        },
+        {
+          "type": "ended",
+          "id": 1,
+          "at": 1791388282899
+        },
+        {
+          "type": "start",
+          "id": 2,
+          "at": 1791388291261,
+          "durationMs": 650,
+          "rms": 0.10428011209411979,
+          "frequency": 770
+        }
+      ],
+      "controls": [
+        {
+          "type": "click",
+          "at": 1791388275823,
+          "control": "speech-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388275824,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "false",
+          "speech": "true"
+        },
+        {
+          "type": "click",
+          "at": 1791388275973,
+          "control": "microphone-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388275973,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388275974,
+          "vad": "loading",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388276315,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388282136,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388282899,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388291262,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "true",
+          "mic": "true",
+          "speech": "true"
+        }
+      ],
+      "mediaSnapshots": [
+        {
+          "at": 1791388274534,
+          "revision": 4,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388274649,
+          "revision": 5,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388274649,
+          "revision": 6,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388274649,
+          "revision": 7,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388274649,
+          "revision": 8,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388274906,
+          "revision": 9,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388274906,
+          "revision": 10,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388274907,
+          "revision": 11,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388275691,
+          "revision": 12,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388275692,
+          "revision": 13,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388275692,
+          "revision": 14,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388275758,
+          "revision": 15,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388275759,
+          "revision": 16,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388275759,
+          "revision": 17,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388275824,
+          "revision": 18,
+          "mic": false,
+          "speech": true,
+          "screen": false
+        },
+        {
+          "at": 1791388275973,
+          "revision": 19,
+          "mic": true,
+          "speech": true,
+          "screen": false
+        }
+      ],
+      "decoded": 3,
+      "decodeFailures": 0,
+      "vadFrames": 479,
+      "maxInputRms": 0.3600453115044603,
+      "getUserMediaCalls": [
+        {
+          "at": 1791388275974,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "late-asr-off",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-off",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/profile-late-asr-off",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-asr-hide",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-hide",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/profile-late-asr-hide",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-asr-reload",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-reload",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/profile-late-asr-reload",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-asr-quit",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-quit",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-adjvEG/profile-late-asr-quit",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-tts-off",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-decode-off",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-decode-off",
+      "nativeDecodeNotificationDelayMs": 1500,
+      "events": [],
+      "controls": [
+        {
+          "type": "click",
+          "at": 1791388364457,
+          "control": "speech-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388364458,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "false",
+          "speech": "true"
+        },
+        {
+          "type": "click",
+          "at": 1791388364606,
+          "control": "microphone-status",
+          "pressed": "false"
+        },
+        {
+          "type": "dom",
+          "at": 1791388364607,
+          "vad": "off",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388364608,
+          "vad": "loading",
+          "listening": "false",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388364918,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "true"
+        },
+        {
+          "type": "click",
+          "at": 1791388370725,
+          "control": "speech-status",
+          "pressed": "true"
+        },
+        {
+          "type": "dom",
+          "at": 1791388370728,
+          "vad": "ready",
+          "listening": "true",
+          "speaking": "false",
+          "mic": "true",
+          "speech": "false"
+        }
+      ],
+      "mediaSnapshots": [
+        {
+          "at": 1791388363184,
+          "revision": 4,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388363411,
+          "revision": 5,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388363411,
+          "revision": 6,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388363412,
+          "revision": 7,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388363412,
+          "revision": 8,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364259,
+          "revision": 9,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364259,
+          "revision": 10,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364259,
+          "revision": 11,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364325,
+          "revision": 12,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364325,
+          "revision": 13,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364325,
+          "revision": 14,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364392,
+          "revision": 15,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364392,
+          "revision": 16,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364392,
+          "revision": 17,
+          "mic": false,
+          "speech": false,
+          "screen": false
+        },
+        {
+          "at": 1791388364457,
+          "revision": 18,
+          "mic": false,
+          "speech": true,
+          "screen": false
+        },
+        {
+          "at": 1791388364607,
+          "revision": 19,
+          "mic": true,
+          "speech": true,
+          "screen": false
+        },
+        {
+          "at": 1791388370728,
+          "revision": 20,
+          "mic": true,
+          "speech": false,
+          "screen": false
+        }
+      ],
+      "decoded": 1,
+      "decodeFailures": 0,
+      "vadFrames": 250,
+      "maxInputRms": 0.3708429506408074,
+      "getUserMediaCalls": [
+        {
+          "at": 1791388364607,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "asr-error",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "tts-error",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "tts-invalid",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    }
+  ],
+  "requests": [
+    {
+      "case": "conversation",
+      "kind": "asr",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388249256,
+      "finishedAt": 1791388249357,
+      "bytes": 98981,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 98604,
+      "sampleCount": 49280,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "conversation",
+      "kind": "llm",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388249377,
+      "finishedAt": 1791388249879,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388249390,
+      "finishedAt": 1791388249578,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791388249397,
+      "finishedAt": 1791388249459,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 3,
+      "startedAt": 1791388249790,
+      "finishedAt": 1791388249973,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 4,
+      "startedAt": 1791388249891,
+      "finishedAt": 1791388249954,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "asr",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791388256910,
+      "finishedAt": 1791388257003,
+      "bytes": 85669,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 85292,
+      "sampleCount": 42624,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "conversation",
+      "kind": "llm",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791388257011,
+      "finishedAt": 1791388257512,
+      "bytes": 944,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 5,
+      "startedAt": 1791388257014,
+      "finishedAt": 1791388257197,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 6,
+      "startedAt": 1791388257016,
+      "finishedAt": 1791388257077,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 7,
+      "startedAt": 1791388257419,
+      "finishedAt": 1791388257602,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 8,
+      "startedAt": 1791388257521,
+      "finishedAt": 1791388257584,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "short-barge",
+      "kind": "asr",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791388267968,
+      "finishedAt": 1791388268062,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "short-barge",
+      "kind": "llm",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791388268087,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "short-barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791388268099,
+      "finishedAt": 1791388268286,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 5000
+    },
+    {
+      "case": "short-barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791388268105,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "asr",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791388281812,
+      "finishedAt": 1791388281908,
+      "bytes": 94885,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 94508,
+      "sampleCount": 47232,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "barge",
+      "kind": "llm",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791388281927,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791388281939,
+      "finishedAt": 1791388282126,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 5000
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791388281945,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "asr",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791388285148,
+      "finishedAt": 1791388285242,
+      "bytes": 93861,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 93484,
+      "sampleCount": 46720,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "barge",
+      "kind": "llm",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791388285249,
+      "finishedAt": 1791388285750,
+      "bytes": 878,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 3,
+      "startedAt": 1791388285252,
+      "finishedAt": 1791388291256,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 4,
+      "startedAt": 1791388285253,
+      "finishedAt": 1791388291256,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 5,
+      "startedAt": 1791388291262,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 6,
+      "startedAt": 1791388291264,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-asr-off",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791388299585,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-asr-hide",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791388313520,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-asr-reload",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791388327549,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-asr-quit",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791388341428,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "asr",
+      "mode": "slow-tts",
+      "ordinal": 1,
+      "startedAt": 1791388355402,
+      "finishedAt": 1791388355498,
+      "bytes": 97957,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 97580,
+      "sampleCount": 48768,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "llm",
+      "mode": "slow-tts",
+      "ordinal": 1,
+      "startedAt": 1791388355520,
+      "finishedAt": 1791388356021,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "tts",
+      "mode": "slow-tts",
+      "ordinal": 1,
+      "startedAt": 1791388355529,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "tts",
+      "mode": "slow-tts",
+      "ordinal": 2,
+      "startedAt": 1791388355530,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "asr",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388370438,
+      "finishedAt": 1791388370533,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "llm",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388370553,
+      "finishedAt": 1791388371056,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791388370564,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791388370564,
+      "finishedAt": 1791388370627,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "asr",
+      "mode": "asr-error",
+      "ordinal": 1,
+      "startedAt": 1791388380690,
+      "finishedAt": 1791388380692,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "asr-error",
+      "kind": "llm",
+      "mode": "asr-error",
+      "ordinal": 1,
+      "startedAt": 1791388380768,
+      "finishedAt": 1791388381270,
+      "bytes": 682,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 1,
+      "startedAt": 1791388380778,
+      "finishedAt": 1791388380960,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 2,
+      "startedAt": 1791388380779,
+      "finishedAt": 1791388380840,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 3,
+      "startedAt": 1791388381174,
+      "finishedAt": 1791388381360,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 4,
+      "startedAt": 1791388381281,
+      "finishedAt": 1791388381352,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "tts-error",
+      "kind": "asr",
+      "mode": "tts-error",
+      "ordinal": 1,
+      "startedAt": 1791388389124,
+      "finishedAt": 1791388389217,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "tts-error",
+      "kind": "llm",
+      "mode": "tts-error",
+      "ordinal": 1,
+      "startedAt": 1791388389239,
+      "finishedAt": 1791388389744,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 1,
+      "startedAt": 1791388389252,
+      "finishedAt": 1791388389252,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 2,
+      "startedAt": 1791388389252,
+      "finishedAt": 1791388389252,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 3,
+      "startedAt": 1791388389649,
+      "finishedAt": 1791388389649,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 4,
+      "startedAt": 1791388389752,
+      "finishedAt": 1791388389752,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    },
+    {
+      "case": "tts-error",
+      "kind": "llm",
+      "mode": "tts-error",
+      "ordinal": 2,
+      "startedAt": 1791388389844,
+      "finishedAt": 1791388390345,
+      "bytes": 932,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 5,
+      "startedAt": 1791388389848,
+      "finishedAt": 1791388389848,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 6,
+      "startedAt": 1791388389849,
+      "finishedAt": 1791388389849,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 7,
+      "startedAt": 1791388390250,
+      "finishedAt": 1791388390250,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 8,
+      "startedAt": 1791388390354,
+      "finishedAt": 1791388390355,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "asr",
+      "mode": "tts-invalid",
+      "ordinal": 1,
+      "startedAt": 1791388398393,
+      "finishedAt": 1791388398487,
+      "bytes": 97957,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 97580,
+      "sampleCount": 48768,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "llm",
+      "mode": "tts-invalid",
+      "ordinal": 1,
+      "startedAt": 1791388398502,
+      "finishedAt": 1791388399003,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 1,
+      "startedAt": 1791388398511,
+      "finishedAt": 1791388398511,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 2,
+      "startedAt": 1791388398511,
+      "finishedAt": 1791388398511,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 3,
+      "startedAt": 1791388398907,
+      "finishedAt": 1791388398907,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 4,
+      "startedAt": 1791388399011,
+      "finishedAt": 1791388399011,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "llm",
+      "mode": "tts-invalid",
+      "ordinal": 2,
+      "startedAt": 1791388399095,
+      "finishedAt": 1791388399595,
+      "bytes": 932,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 5,
+      "startedAt": 1791388399098,
+      "finishedAt": 1791388399098,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 6,
+      "startedAt": 1791388399098,
+      "finishedAt": 1791388399098,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 7,
+      "startedAt": 1791388399499,
+      "finishedAt": 1791388399499,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 8,
+      "startedAt": 1791388399603,
+      "finishedAt": 1791388399604,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    }
+  ],
+  "scannedFiles": 880,
+  "limitations": [
+    "File-backed fake microphone and explicitly fake system permission; real macOS microphone permission not certified",
+    "Chromium AudioServiceSandbox disabled only in test process for file fixture access; renderer isolation and sandbox verified",
+    "Real bundled Silero, AudioWorklet, WebAudio and SDKs; ASR/LLM/TTS responses are localhost fixtures",
+    "Audio output is muted; actual hearing, echo, recognition quality, natural voice and viseme quality remain unverified",
+    "Native safeStorage calls tested; production Keychain policy not independently audited",
+    "No actual microphone/screen/camera or user Aimy window was operated"
+  ]
+}

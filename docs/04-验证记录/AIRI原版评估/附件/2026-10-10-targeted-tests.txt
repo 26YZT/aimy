@@ -1,0 +1,18 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../uno.config" without a file extension (vitest.config.ts:13:33). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../uno.config" without a file extension (vitest.config.ts:13:33). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../uno.config" without a file extension (vitest.config.ts:13:33). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/mima1234/Documents/aimy/.baseline/airi-evaluation-2026-10-10/source/packages/stage-ui
+
+
+ Test Files  6 passed (6)
+      Tests  25 passed (25)
+   Start at  11:52:01
+   Duration  2.61s (transform 128ms, setup 0ms, import 1.86s, tests 210ms, environment 1ms)
+

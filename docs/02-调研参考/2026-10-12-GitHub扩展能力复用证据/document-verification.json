@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-12",
+  "checks": "documentation/source-links and workspace only; no candidate runtime validation",
+  "primary_report_immutable_links": [
+    {
+      "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/promote.ts#L43-L74",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/mutation.rs#L3244-L3300",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/inference.py#L1-L63",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_response_arbiter.py#L979-L1082",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/streaming-asr.js#L36-L174",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/config/defaults.ts#L340-L356",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/mirrors.ts#L212-L230",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/keyword.ts#L76-L194",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/pipecat-ai/pipecat/blob/19fca83d2e2336b7c82145fe66b7b1cc76e44ac9/src/pipecat/audio/turn/smart_turn/local_smart_turn_v3.py#L138-L182",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts#L890-L935",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/retrieval/ranker.ts#L42-L59",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/package.json#L18-L28",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/static/app/app-screen.js#L2710-L2828",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/online-speech-denoiser.js#L8-L41",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/vector_stores/memory.ts#L40-L66",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/vad.js#L72-L128",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/repos/traces.ts#L746-L789",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts#L846-L864",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/search/rrf.ts#L5-L54",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/audio_utils.py#L4-L13",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/types/memories_track.rs#L363-L394",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/static/app/app-screen.js#L1648-L1762",
+      "ok": true,
+      "error": null
+    },
+    {
+      "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts#L2018-L2045",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "local_document_links_checked": 19,
+  "local_document_links_missing": [],
+  "tracked_non_document_files_checked": 5665,
+  "tracked_non_document_files_changed": [],
+  "git_index_unchanged": true,
+  "source_review_runtime_validated": false
+}

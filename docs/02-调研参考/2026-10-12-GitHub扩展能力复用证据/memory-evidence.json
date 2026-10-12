@@ -1,0 +1,1711 @@
+{
+  "as_of": "2026-10-12",
+  "generated_at_utc": "2026-10-12T02:44:45.357513+00:00",
+  "scope": "long term memory discovery and modular static review; no install execution model calls or product edits",
+  "search_queries": [
+    "memory local language:TypeScript stars:>100",
+    "memvid",
+    "cognee",
+    "MemOS",
+    "memory agent sqlite stars:>100"
+  ],
+  "search_backend": "agent-reach GitHub routing with gh search repos and gh api",
+  "fallback_note": "Python HTTPS raw source fetch failed local CA; gh API fallback retained TLS verification. web search/open returned no usable text.",
+  "candidates": [
+    {
+      "repo": "mem0ai/mem0",
+      "metadata": {
+        "full_name": "mem0ai/mem0",
+        "html_url": "https://github.com/mem0ai/mem0",
+        "description": "The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 67005,
+        "pushed_at": "2026-10-09T06:17:43Z",
+        "language": "Python",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "size": 65704,
+        "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+        "commit_date": "2026-10-07T13:06:15Z",
+        "commit_message": "docs(skills): refresh mem0 skills against SDK 2.2.1 / TS 3.3.1 (#7548)"
+      },
+      "review_level": "deep_static",
+      "verdict": "priority1_optional_oss_adapter",
+      "license_file": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/LICENSE",
+      "source_refs": [
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/package.json",
+          "line_start": 18,
+          "line_end": 28,
+          "claim": "TS hosted default export and OSS subpath are separate",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/package.json#L18-L28",
+          "sha256": "e222c72e4e593062b3d8c98990b43ce4dddef0268815ee17ebfa22b4137187e5"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/config/defaults.ts",
+          "line_start": 3,
+          "line_end": 34,
+          "claim": "OpenAI extraction and embedding defaults; local SQLite storage",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/config/defaults.ts#L3-L34",
+          "sha256": "8a156c6f355f990ec2d547c65ad1cc641e83b7c1a878f6918916011b8193be3c"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/vector_stores/memory.ts",
+          "line_start": 40,
+          "line_end": 66,
+          "claim": "memory vector provider uses better-sqlite3 persisted file",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/vector_stores/memory.ts#L40-L66",
+          "sha256": "1e71f3dd8471a89e4b822a482b37df9160c9da900f9f321bd7eaa256a9a9f52e"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/memory/index.ts",
+          "line_start": 846,
+          "line_end": 864,
+          "claim": "infer=false stores messages without inference",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts#L846-L864",
+          "sha256": "dd2077fe77e633dfb156641ba087d0c5c7fae68203e94a4e824f5154304ed008"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/memory/index.ts",
+          "line_start": 890,
+          "line_end": 935,
+          "claim": "infer=true recall then one model extraction call",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts#L890-L935",
+          "sha256": "dd2077fe77e633dfb156641ba087d0c5c7fae68203e94a4e824f5154304ed008"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/memory/index.ts",
+          "line_start": 1953,
+          "line_end": 2013,
+          "claim": "update changes vector payload and keeps prior history",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts#L1953-L2013",
+          "sha256": "dd2077fe77e633dfb156641ba087d0c5c7fae68203e94a4e824f5154304ed008"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/memory/index.ts",
+          "line_start": 2018,
+          "line_end": 2045,
+          "claim": "delete removes vector but logs previous text; entity cleanup best effort",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts#L2018-L2045",
+          "sha256": "dd2077fe77e633dfb156641ba087d0c5c7fae68203e94a4e824f5154304ed008"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/storage/SQLiteManager.ts",
+          "line_start": 17,
+          "line_end": 67,
+          "claim": "history stores previous/new text; messages retain raw text",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/storage/SQLiteManager.ts#L17-L67",
+          "sha256": "9e18733f478acd2d62979a8925cf07b0bed4c61ed5a48f074f7820fccb98c0c3"
+        },
+        {
+          "repo": "mem0ai/mem0",
+          "path": "mem0-ts/src/oss/src/utils/telemetry.ts",
+          "line_start": 13,
+          "line_end": 25,
+          "claim": "telemetry enabled unless MEM0_TELEMETRY=false",
+          "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+          "url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/utils/telemetry.ts#L13-L25",
+          "sha256": "474e599574c3ea87c4b356030b987008614716c3706910bbf9c2e9c9ddb42895"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "metadata": {
+        "full_name": "MemTensor/MemOS",
+        "html_url": "https://github.com/MemTensor/MemOS",
+        "description": "Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings and DeepSeek Harness support.",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 11816,
+        "pushed_at": "2026-10-10T07:55:31Z",
+        "language": "TypeScript",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "size": 73980,
+        "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+        "commit_date": "2026-09-22T01:51:03Z",
+        "commit_message": "ci: extend local plugin npm visibility timeout (#2400)\n\n## Summary\n\n- Extend the local-plugin npm registry visibility window from 150\nseconds to 360 seconds.\n- Keep the normal-release duplicate-version guard strict; existing npm\nversions still require explicit recovery after release-owner\nverification.\n- Make the six-minute default shared by the workflow, shell publisher,\nand Node verifier, with regression coverage.\n\n## Why\n\nnpm can acknowledge a publish before version, integrity, and dist-tag\nmetadata are visible through the public registry. The previous\n150-second window could fail a release after npm had already accepted\nit. This change gives propagation up to six minutes while preserving the\nno-second-publish safety behavior.\n\n## Validation\n\n- `node --test\n.github/scripts/wait-for-local-plugin-npm-release.test.mjs\n.github/scripts/publish-local-plugin.test.mjs\n.github/scripts/prepare-memos-release.test.mjs` (94/94)\n- `bash -n .github/scripts/publish-local-plugin.sh`\n- `git diff --check`\n\nNo npm publish, tag creation, GitHub Release, Docs sync, or deployment\nwas performed by this PR."
+      },
+      "review_level": "deep_static",
+      "verdict": "priority1_leaf_modules_only",
+      "license_file": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/LICENSE",
+      "source_refs": [
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/package.json",
+          "line_start": 87,
+          "line_end": 109,
+          "claim": "MIT package field; Node>=20; native SQLite and Transformers",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/package.json#L87-L109",
+          "sha256": "ac4d7e8c8fc91c19a266485583a29a98d557e0f7631c78ae7d18659b872c1327"
+        },
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/core/storage/keyword.ts",
+          "line_start": 76,
+          "line_end": 113,
+          "claim": "FTS query sanitation with CJK splitting",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/keyword.ts#L76-L113",
+          "sha256": "4375010c42ed119a36e38f8f7992a4943b943941456f78b74a4b495ff1825971"
+        },
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/core/storage/keyword.ts",
+          "line_start": 148,
+          "line_end": 194,
+          "claim": "Chinese bigrams and reciprocal rank helper",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/keyword.ts#L148-L194",
+          "sha256": "4375010c42ed119a36e38f8f7992a4943b943941456f78b74a4b495ff1825971"
+        },
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/core/retrieval/ranker.ts",
+          "line_start": 42,
+          "line_end": 59,
+          "claim": "ranker coupled to reward and plugin types",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/retrieval/ranker.ts#L42-L59",
+          "sha256": "c3ac5133f9433e0ee312102c6228745ce9250446d418465774b6abfe0e1341df"
+        },
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/core/storage/repos/traces.ts",
+          "line_start": 746,
+          "line_end": 789,
+          "claim": "delete trace and FTS; body patch does not update vectors",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/repos/traces.ts#L746-L789",
+          "sha256": "17177ea17cc9270b8fad33d0268be4c61794ce956d3dfe25e824f36866823a92"
+        },
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/core/storage/repos/policies.ts",
+          "line_start": 30,
+          "line_end": 44,
+          "claim": "policies carry episode feedback and trace source IDs",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/repos/policies.ts#L30-L44",
+          "sha256": "7c7a5f07cb28e6a6807df1cf2b7ca63fba5f66fdc7a93a99129a844b7d09855c"
+        },
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/core/config/defaults.ts",
+          "line_start": 340,
+          "line_end": 356,
+          "claim": "telemetry and unredacted prompt/completion logs default enabled",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/config/defaults.ts#L340-L356",
+          "sha256": "2c84dcfa6f09a335f889661aa756112d9519a9a1a34665b7600bf34fcd0f7dcb"
+        },
+        {
+          "repo": "MemTensor/MemOS",
+          "path": "apps/memos-local-plugin/core/embedding/providers/local.ts",
+          "line_start": 28,
+          "line_end": 58,
+          "claim": "cancel stops wait not shared Transformer loading",
+          "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+          "url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/embedding/providers/local.ts#L28-L58",
+          "sha256": "37c000c4007171f8d137260f35cfd78ccb5ef35b5b2445991a495c004c47362b"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "metadata": {
+        "full_name": "kitfunso/hippo-memory",
+        "html_url": "https://github.com/kitfunso/hippo-memory",
+        "description": "Stop re-teaching your agent. Make your agent's memory work like a brain. Hippo is long-term memory for coding agents. It's a critical layer for your AI harness that connects across your different tools (Cursor, Claude Code, Codex). It keeps your proprietary data completely local, and it actually learns over time.",
+        "default_branch": "master",
+        "archived": false,
+        "stargazers_count": 776,
+        "pushed_at": "2026-10-11T23:22:22Z",
+        "language": "TypeScript",
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+        "size": 347278,
+        "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+        "commit_date": "2026-10-11T23:00:42Z",
+        "commit_message": "chore: release 2.0.0 (#840)\n\n- bump every lockstep manifest and PACKAGE_VERSION to 2.0.0\n- fold 22 changelog fragments into the 2.0.0 section, including the store-kit subpath split\n- name the removed <C extends Context> generic and finishRecallAt, one bold style for BREAKING lines, test-timing notes under Internal\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01ABG5TcyyedFhDERT4eDyQm"
+      },
+      "review_level": "deep_static",
+      "verdict": "priority1_leaf_modules_and_design_reference",
+      "license_file": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/LICENSE",
+      "source_refs": [
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "package.json",
+          "line_start": 8,
+          "line_end": 15,
+          "claim": "store-kit exported subpath",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/package.json#L8-L15",
+          "sha256": "50ace60ec53b6d05e7405df081dd9f624fb45ea9a9fd108a53ed27685fee1e5c"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "package.json",
+          "line_start": 88,
+          "line_end": 113,
+          "claim": "MIT Node>=22.16 and optional Transformers",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/package.json#L88-L113",
+          "sha256": "50ace60ec53b6d05e7405df081dd9f624fb45ea9a9fd108a53ed27685fee1e5c"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/search/rrf.ts",
+          "line_start": 5,
+          "line_end": 54,
+          "claim": "generic weighted RRF no runtime imports",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/search/rrf.ts#L5-L54",
+          "sha256": "cbe9c7108fe0720ed8ad080800899b584dadf567671495488b551fc07dba74e9"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/db/sqlite.ts",
+          "line_start": 20,
+          "line_end": 27,
+          "claim": "node:sqlite DatabaseSync runtime",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/db/sqlite.ts#L20-L27",
+          "sha256": "c8ebf69a870e33af9c1857301301e7c6b6735181e8feb249a706de43bd56ec90"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/core/memory.ts",
+          "line_start": 33,
+          "line_end": 81,
+          "claim": "source parents session supersession and dirty summary fields",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/core/memory.ts#L33-L81",
+          "sha256": "435dbe3fada14f1acd31315e9604b8a05d33daced9d34dd35a0322d37efa87c4"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/api/promote.ts",
+          "line_start": 43,
+          "line_end": 74,
+          "claim": "supersede writes old and successor atomically through store",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/promote.ts#L43-L74",
+          "sha256": "272352084a9d56a789c90b46dd319c589ffe5445d11e2ddf98fcdf9164d5ff12"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/store/rejected-values.ts",
+          "line_start": 122,
+          "line_end": 164,
+          "claim": "reject deletes live/dormant matches then purges mirrors post commit",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/rejected-values.ts#L122-L164",
+          "sha256": "f7e04fb4444443e4f22def36d4c1be366c3ea584d9e891a0f5455318f5045eba"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/store/raw-archive.ts",
+          "line_start": 35,
+          "line_end": 60,
+          "claim": "raw archive stores metadata without content and removes source row",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/raw-archive.ts#L35-L60",
+          "sha256": "256e463a1ab90920b78601064b24c6a8edf92095b726fbb58c4e8a88550b4717"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/store/mirrors.ts",
+          "line_start": 212,
+          "line_end": 230,
+          "claim": "mirror purge is best effort and can leave files",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/mirrors.ts#L212-L230",
+          "sha256": "3c76218b0f915a675b70f085fb14279ccfbca7bc8bf11779f511eac02a0f57a1"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/trust/reject-flow.ts",
+          "line_start": 50,
+          "line_end": 57,
+          "claim": "personal rows cannot be rejected by ID; use forget",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/trust/reject-flow.ts#L50-L57",
+          "sha256": "032713fbd72689bb4af70cf283cefd918f58036a61ae82be646b654e7838a80c"
+        },
+        {
+          "repo": "kitfunso/hippo-memory",
+          "path": "src/embeddings/local.ts",
+          "line_start": 37,
+          "line_end": 53,
+          "claim": "default MiniLM and pooling/prefix helpers",
+          "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+          "url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/embeddings/local.ts#L37-L53",
+          "sha256": "3e0d330518dc20c5d6fe5bcdaf33173f27465d5b513017ada226c7cc852f5915"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "memvid/memvid",
+      "metadata": {
+        "full_name": "memvid/memvid",
+        "html_url": "https://github.com/memvid/memvid",
+        "description": "Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 16589,
+        "pushed_at": "2026-07-14T14:39:07Z",
+        "language": "Rust",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "size": 30510,
+        "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+        "commit_date": "2026-07-14T14:39:06Z",
+        "commit_message": "Update README.md"
+      },
+      "review_level": "deep_static",
+      "verdict": "defer_native_engine_forget_semantics_and_packaging",
+      "license_file": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/LICENSE",
+      "source_refs": [
+        {
+          "repo": "memvid/memvid",
+          "path": "Cargo.toml",
+          "line_start": 1,
+          "line_end": 13,
+          "claim": "Apache Rust>=1.85 core",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/Cargo.toml#L1-L13",
+          "sha256": "57ebd4a661792c7e30380fc2edf350d6e7fb926684627b01e5ae6ab13c298795"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "Cargo.toml",
+          "line_start": 99,
+          "line_end": 131,
+          "claim": "optional vector image audio API embedding features",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/Cargo.toml#L99-L131",
+          "sha256": "57ebd4a661792c7e30380fc2edf350d6e7fb926684627b01e5ae6ab13c298795"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "src/memvid/mutation.rs",
+          "line_start": 3244,
+          "line_end": 3300,
+          "claim": "delete is WAL tombstone not immediate payload erasure",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/mutation.rs#L3244-L3300",
+          "sha256": "bbd2725b8b944c8aba2341eb4dd04554df46436a8f810707845c101a04073ebd"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "src/memvid/mutation.rs",
+          "line_start": 3013,
+          "line_end": 3045,
+          "claim": "vacuum keeps active payloads and clears inactive offsets",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/mutation.rs#L3013-L3045",
+          "sha256": "bbd2725b8b944c8aba2341eb4dd04554df46436a8f810707845c101a04073ebd"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "src/types/memory_card.rs",
+          "line_start": 176,
+          "line_end": 219,
+          "claim": "memory card contains source frame and URI",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/types/memory_card.rs#L176-L219",
+          "sha256": "70ba120eddb9fa8cafe3abcb82dc5cbb933d0873661eafefd9f7b7449c39ca64"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "src/types/memories_track.rs",
+          "line_start": 363,
+          "line_end": 394,
+          "claim": "current/time getters skip retraction card and may reveal old value",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/types/memories_track.rs#L363-L394",
+          "sha256": "895ffbec33fec7b7f5917f82a608985b86b66d0cfca0b262fe8a11f0e087df94"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "src/memvid/memory.rs",
+          "line_start": 333,
+          "line_end": 338,
+          "claim": "clear all cards is a separate API",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/memory.rs#L333-L338",
+          "sha256": "56a9e261de8d5937dfcda1668bf280d7dc52cc541b55e7712bd28cf9e9102118"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "src/text_embed.rs",
+          "line_start": 170,
+          "line_end": 225,
+          "claim": "default text registry English bge-small-en-v1.5",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/text_embed.rs#L170-L225",
+          "sha256": "dfbf0db654f63584e7206cc0188c803ced5e23e2296559d02881dce41be24534"
+        },
+        {
+          "repo": "memvid/memvid",
+          "path": "src/text_embed.rs",
+          "line_start": 249,
+          "line_end": 260,
+          "claim": "local embedding default offline",
+          "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+          "url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/text_embed.rs#L249-L260",
+          "sha256": "dfbf0db654f63584e7206cc0188c803ced5e23e2296559d02881dce41be24534"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "metadata": {
+        "full_name": "topoteretes/cognee",
+        "html_url": "https://github.com/topoteretes/cognee",
+        "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with small models for free",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 32042,
+        "pushed_at": "2026-10-12T02:19:04Z",
+        "language": "Python",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "size": 267488,
+        "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+        "commit_date": "2026-10-08T07:36:40Z",
+        "commit_message": "chore: Sync cognee-mcp lock to cognee 1.6.3 [release] (#5525)\n\n<!-- .github/pull_request_template.md -->\n\n## Description\n<!--\nPlease provide a clear, human-generated description of the changes in\nthis PR.\nDO NOT use AI-generated descriptions. We want to understand your thought\nprocess and reasoning.\n-->\n\n## Acceptance Criteria\n<!--\n* Key requirements to the new feature or modification;\n* Proof that the changes work and meet the requirements;\n-->\n\n## Type of Change\n<!-- Please check the relevant option -->\n- [ ] Bug fix (non-breaking change that fixes an issue)\n- [ ] New feature (non-breaking change that adds functionality)\n- [ ] Code refactoring\n- [ ] Other (please specify):\n\n## Screenshots\n<!-- ADD SCREENSHOT OF LOCAL TESTS PASSING-->\n\n## Pre-submission Checklist\n<!-- Please check all boxes that apply before submitting your PR -->\n- [ ] **I have tested my changes thoroughly before submitting this PR**\n(See `CONTRIBUTING.md`)\n- [ ] **This PR contains minimal changes necessary to address the\nissue/feature**\n- [ ] My code follows the project's coding standards and style\nguidelines\n- [ ] I have added tests that prove my fix is effective or that my\nfeature works\n- [ ] I have added necessary documentation (if applicable)\n- [ ] All new and existing tests pass\n- [ ] I have searched existing PRs to ensure this change hasn't been\nsubmitted already\n- [ ] I have linked any relevant issues in the description\n- [ ] My commits have clear and descriptive messages\n\n## DCO Affirmation\nI affirm that all code in every commit of this pull request conforms to\nthe terms of the Topoteretes Developer Certificate of Origin."
+      },
+      "review_level": "shallow_static",
+      "verdict": "defer_separate_python_service",
+      "license_file": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/LICENSE",
+      "source_refs": [
+        {
+          "repo": "topoteretes/cognee",
+          "path": "pyproject.toml",
+          "line_start": 60,
+          "line_end": 108,
+          "claim": "Lance/Ladybug runtime and macOS version constraints",
+          "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+          "url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/pyproject.toml#L60-L108",
+          "sha256": "a45ce69db79ee03f296a5ccdf8736c316508d6b64b110f3b965b7e50fbf5bcb0"
+        },
+        {
+          "repo": "topoteretes/cognee",
+          "path": "cognee/api/v1/cognify/cognify.py",
+          "line_start": 43,
+          "line_end": 57,
+          "claim": "temporal graph extraction and source tracking tasks",
+          "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+          "url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/cognee/api/v1/cognify/cognify.py#L43-L57",
+          "sha256": "294613c19f0b7e66df61d59b398dc958f2f2f04ab1bf2c55166565486de91fa5"
+        },
+        {
+          "repo": "topoteretes/cognee",
+          "path": "cognee/api/v1/add/add.py",
+          "line_start": 220,
+          "line_end": 223,
+          "claim": "default local LanceDB and Ladybug",
+          "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+          "url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/cognee/api/v1/add/add.py#L220-L223",
+          "sha256": "dfaff8078bd73be3d7cd115c0fecabb0794845d3109771d63c6fad65026f92e1"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "metadata": {
+        "full_name": "CaviraOSS/LongMemory",
+        "html_url": "https://github.com/CaviraOSS/LongMemory",
+        "description": "Local persistent memory store for LLM applications including claude desktop, github copilot, codex, antigravity, etc.",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 4527,
+        "pushed_at": "2026-09-20T11:57:46Z",
+        "language": "TypeScript",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "size": 4137,
+        "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+        "commit_date": "2026-09-20T11:57:30Z",
+        "commit_message": "feat(recall): enhance associative recall and context building for improved query handling"
+      },
+      "review_level": "shallow_static",
+      "verdict": "secondary_reference_needs_forget_audit",
+      "license_file": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/LICENSE",
+      "source_refs": [
+        {
+          "repo": "CaviraOSS/LongMemory",
+          "path": "package.json",
+          "line_start": 23,
+          "line_end": 29,
+          "claim": "Node TypeScript library entry",
+          "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+          "url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/package.json#L23-L29",
+          "sha256": "deacf7d53e2e567fee271c13ab5323edc2894cb37510a85e9900a4e3f7cd4210"
+        },
+        {
+          "repo": "CaviraOSS/LongMemory",
+          "path": "package.json",
+          "line_start": 82,
+          "line_end": 90,
+          "claim": "native SQLite and ingestion/MCP dependency set",
+          "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+          "url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/package.json#L82-L90",
+          "sha256": "deacf7d53e2e567fee271c13ab5323edc2894cb37510a85e9900a4e3f7cd4210"
+        },
+        {
+          "repo": "CaviraOSS/LongMemory",
+          "path": "src/core/engine/ingest_engine.ts",
+          "line_start": 112,
+          "line_end": 157,
+          "claim": "entity world graph working memory coupled ingest",
+          "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+          "url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/src/core/engine/ingest_engine.ts#L112-L157",
+          "sha256": "097b833b5446fa8de9ea6f361b6d817a5f4c727e25195969a100e00629dd6a5e"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "getzep/graphiti",
+      "metadata": {
+        "full_name": "getzep/graphiti",
+        "html_url": "https://github.com/getzep/graphiti",
+        "description": "Build Real-Time Knowledge Graphs for AI Agents",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 31654,
+        "pushed_at": "2026-10-11T20:51:03Z",
+        "language": "Python",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "size": 16350,
+        "sha": "0a3b1711b018e5590cf5c44a3ee3e67d6733ee13",
+        "commit_date": "2026-10-11T20:51:01Z",
+        "commit_message": "@davenicoll has signed the CLA in getzep/graphiti#1992"
+      },
+      "review_level": "shallow_static",
+      "verdict": "defer_separate_temporal_graph_service",
+      "license_file": "https://github.com/getzep/graphiti/blob/0a3b1711b018e5590cf5c44a3ee3e67d6733ee13/LICENSE",
+      "source_refs": [
+        {
+          "repo": "getzep/graphiti",
+          "path": "pyproject.toml",
+          "line_start": 12,
+          "line_end": 41,
+          "claim": "Python with default Neo4j and optional embedded Kuzu/FalkorDBLite",
+          "sha": "0a3b1711b018e5590cf5c44a3ee3e67d6733ee13",
+          "url": "https://github.com/getzep/graphiti/blob/0a3b1711b018e5590cf5c44a3ee3e67d6733ee13/pyproject.toml#L12-L41",
+          "sha256": "b95a5450b3dbd705541da5a1006fea79ee61067a6a5287bd1e1b72c1d5a0e054"
+        },
+        {
+          "repo": "getzep/graphiti",
+          "path": "graphiti_core/graphiti.py",
+          "line_start": 1332,
+          "line_end": 1346,
+          "claim": "episode source and reference time API",
+          "sha": "0a3b1711b018e5590cf5c44a3ee3e67d6733ee13",
+          "url": "https://github.com/getzep/graphiti/blob/0a3b1711b018e5590cf5c44a3ee3e67d6733ee13/graphiti_core/graphiti.py#L1332-L1346",
+          "sha256": "f3a4a26094e681fea3ed333d70d89fcb5df5af49b1a9599d8e77d4fcaf8be45a"
+        },
+        {
+          "repo": "getzep/graphiti",
+          "path": "graphiti_core/graphiti.py",
+          "line_start": 2164,
+          "line_end": 2192,
+          "claim": "episode graph deletion flow",
+          "sha": "0a3b1711b018e5590cf5c44a3ee3e67d6733ee13",
+          "url": "https://github.com/getzep/graphiti/blob/0a3b1711b018e5590cf5c44a3ee3e67d6733ee13/graphiti_core/graphiti.py#L2164-L2192",
+          "sha256": "f3a4a26094e681fea3ed333d70d89fcb5df5af49b1a9599d8e77d4fcaf8be45a"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "memodb-io/memobase",
+      "metadata": {
+        "full_name": "memodb-io/memobase",
+        "html_url": "https://github.com/memodb-io/memobase",
+        "description": "User Profile-Based Long-Term Memory for AI Chatbot Applications. ",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 2930,
+        "pushed_at": "2026-01-11T03:51:40Z",
+        "language": "Python",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "size": 17198,
+        "sha": "358c16bbc6d687937d79bc2f984a11c3be8da901",
+        "commit_date": "2026-01-11T03:43:56Z",
+        "commit_message": "fix: increase max_tokens in llm_sanity_check for improved testing"
+      },
+      "review_level": "shallow_static",
+      "verdict": "reference_profile_schema",
+      "license_file": "https://github.com/memodb-io/memobase/blob/358c16bbc6d687937d79bc2f984a11c3be8da901/LICENSE",
+      "source_refs": [
+        {
+          "repo": "memodb-io/memobase",
+          "path": "src/server/api/pyproject.toml",
+          "line_start": 1,
+          "line_end": 20,
+          "claim": "FastAPI pgvector Redis dependencies",
+          "sha": "358c16bbc6d687937d79bc2f984a11c3be8da901",
+          "url": "https://github.com/memodb-io/memobase/blob/358c16bbc6d687937d79bc2f984a11c3be8da901/src/server/api/pyproject.toml#L1-L20",
+          "sha256": "759eef2534f218bd70114b2120708c435c960ce1c59297d6e1a72b07fda2ae8b"
+        },
+        {
+          "repo": "memodb-io/memobase",
+          "path": "src/server/docker-compose.yml",
+          "line_start": 1,
+          "line_end": 30,
+          "claim": "Postgres Redis stack",
+          "sha": "358c16bbc6d687937d79bc2f984a11c3be8da901",
+          "url": "https://github.com/memodb-io/memobase/blob/358c16bbc6d687937d79bc2f984a11c3be8da901/src/server/docker-compose.yml#L1-L30",
+          "sha256": "bd43193dcd286699493d3631ae583779153647408b1e894b5f22338d26540a61"
+        }
+      ],
+      "runtime_verified": false,
+      "integration_verified": false
+    },
+    {
+      "repo": "0xK3vin/MegaMemory",
+      "metadata": {
+        "full_name": "0xK3vin/MegaMemory",
+        "html_url": "https://github.com/0xK3vin/MegaMemory",
+        "description": "Persistent project knowledge graph for coding agents. MCP server with semantic search, in-process embeddings, and web explorer.",
+        "default_branch": "main",
+        "archived": false,
+        "stargazers_count": 723,
+        "pushed_at": "2026-05-03T00:22:07Z",
+        "language": "TypeScript",
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+        "size": 663,
+        "sha": "e0bb3c270d7fb4f6f280ae4685e0c538eb225d93",
+        "commit_date": "2026-05-03T00:21:51Z",
+        "commit_message": "chore: bump version to 1.6.2"
+      },
+      "review_level": "metadata_and_tree_only",
+      "verdict": "not_shortlisted_coding_project_domain",
+      "license_file": "https://github.com/0xK3vin/MegaMemory/blob/e0bb3c270d7fb4f6f280ae4685e0c538eb225d93/LICENSE",
+      "source_refs": [],
+      "runtime_verified": false,
+      "integration_verified": false
+    }
+  ],
+  "sources": [
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+      "path": "LICENSE",
+      "bytes": 11200,
+      "sha256": "f34bece2de63bf21dfea3bf034231beda315c10631f2174b539225746719420c",
+      "github_url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/LICENSE"
+    },
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+      "path": "package.json",
+      "bytes": 5016,
+      "sha256": "deacf7d53e2e567fee271c13ab5323edc2894cb37510a85e9900a4e3f7cd4210",
+      "github_url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/package.json"
+    },
+    {
+      "repo": "memodb-io/memobase",
+      "sha": "358c16bbc6d687937d79bc2f984a11c3be8da901",
+      "path": "LICENSE",
+      "bytes": 11338,
+      "sha256": "ad79127bef564bb5b553d630958ea64212a8a29ef3960d4b407cc1ad781b56a7",
+      "github_url": "https://github.com/memodb-io/memobase/blob/358c16bbc6d687937d79bc2f984a11c3be8da901/LICENSE"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "LICENSE",
+      "bytes": 1065,
+      "sha256": "c3e197e295e989f797bf994a98ee514179c5ea031320af0823b2bb4c8b05a09d",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/LICENSE"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "package.json",
+      "bytes": 3649,
+      "sha256": "50ace60ec53b6d05e7405df081dd9f624fb45ea9a9fd108a53ed27685fee1e5c",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/package.json"
+    },
+    {
+      "repo": "getzep/graphiti",
+      "sha": "0a3b1711b018e5590cf5c44a3ee3e67d6733ee13",
+      "path": "LICENSE",
+      "bytes": 11325,
+      "sha256": "2825300b20d7b951209835a4a331f29e24725a39d65168e4b831df53aa372650",
+      "github_url": "https://github.com/getzep/graphiti/blob/0a3b1711b018e5590cf5c44a3ee3e67d6733ee13/LICENSE"
+    },
+    {
+      "repo": "getzep/graphiti",
+      "sha": "0a3b1711b018e5590cf5c44a3ee3e67d6733ee13",
+      "path": "pyproject.toml",
+      "bytes": 2847,
+      "sha256": "b95a5450b3dbd705541da5a1006fea79ee61067a6a5287bd1e1b72c1d5a0e054",
+      "github_url": "https://github.com/getzep/graphiti/blob/0a3b1711b018e5590cf5c44a3ee3e67d6733ee13/pyproject.toml"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "154f9be8df2d55ceddcd4646c8d8d4206d48867ae1da2b81ce2ab86b51a5f075",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/LICENSE"
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+      "path": "LICENSE",
+      "bytes": 11344,
+      "sha256": "a471e34908f50c3f120e9a56f3c30cb34e133e4ede01a9cbd5ce718fc358ecd4",
+      "github_url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/LICENSE"
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+      "path": "pyproject.toml",
+      "bytes": 18027,
+      "sha256": "a45ce69db79ee03f296a5ccdf8736c316508d6b64b110f3b965b7e50fbf5bcb0",
+      "github_url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/pyproject.toml"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "LICENSE",
+      "bytes": 11349,
+      "sha256": "0bbcbe931c353293a2fafce08326181dfeea0e568c566afd4ce8337a70f5e219",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/LICENSE"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "Cargo.toml",
+      "bytes": 6766,
+      "sha256": "57ebd4a661792c7e30380fc2edf350d6e7fb926684627b01e5ae6ab13c298795",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/Cargo.toml"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "LICENSE",
+      "bytes": 10755,
+      "sha256": "fd64d7380c9889373ec5e3d99ee0e154c8f1707c036054090dc2437eb765cb98",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/LICENSE"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "README.md",
+      "bytes": 16847,
+      "sha256": "3a2f6a0fea87ed03b4b5a21de90a166ed005627c897a26807c33cd2fd854ce77",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/README.md"
+    },
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+      "path": "src/core/index.ts",
+      "bytes": 1255,
+      "sha256": "648a7e82605769bc250c38a0a3fc49a8d89cb9ad4eb442df6f3c2c1be302b1f8",
+      "github_url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/src/core/index.ts"
+    },
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+      "path": "src/core/recall/associative_recall.ts",
+      "bytes": 36971,
+      "sha256": "cab5024b1cb56649ea7b10627c95a45e0d65a70068f72122afaf0114c571d26e",
+      "github_url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/src/core/recall/associative_recall.ts"
+    },
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+      "path": "src/core/engine/ingest_engine.ts",
+      "bytes": 27868,
+      "sha256": "097b833b5446fa8de9ea6f361b6d817a5f4c727e25195969a100e00629dd6a5e",
+      "github_url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/src/core/engine/ingest_engine.ts"
+    },
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+      "path": "src/stores/sqlite/sqlite_store.ts",
+      "bytes": 26730,
+      "sha256": "2dfa3f7ceb2bd82911adf8687e7a4936bfbeb59303f1ba23a50aa849f3c2e03b",
+      "github_url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/src/stores/sqlite/sqlite_store.ts"
+    },
+    {
+      "repo": "CaviraOSS/LongMemory",
+      "sha": "9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5",
+      "path": "src/server/middleware/telemetry.ts",
+      "bytes": 2144,
+      "sha256": "d25ddbd4914b47a74433343a05e3d7ecdf27aa56efab34d0b32a62cd2b62d30b",
+      "github_url": "https://github.com/CaviraOSS/LongMemory/blob/9ee2c8e1ed42d83eb788afb9ffc3a82b84405da5/src/server/middleware/telemetry.ts"
+    },
+    {
+      "repo": "memodb-io/memobase",
+      "sha": "358c16bbc6d687937d79bc2f984a11c3be8da901",
+      "path": "src/server/docker-compose.yml",
+      "bytes": 1914,
+      "sha256": "bd43193dcd286699493d3631ae583779153647408b1e894b5f22338d26540a61",
+      "github_url": "https://github.com/memodb-io/memobase/blob/358c16bbc6d687937d79bc2f984a11c3be8da901/src/server/docker-compose.yml"
+    },
+    {
+      "repo": "memodb-io/memobase",
+      "sha": "358c16bbc6d687937d79bc2f984a11c3be8da901",
+      "path": "src/server/api/pyproject.toml",
+      "bytes": 787,
+      "sha256": "759eef2534f218bd70114b2120708c435c960ce1c59297d6e1a72b07fda2ae8b",
+      "github_url": "https://github.com/memodb-io/memobase/blob/358c16bbc6d687937d79bc2f984a11c3be8da901/src/server/api/pyproject.toml"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "scripts/postinstall.cjs",
+      "bytes": 391,
+      "sha256": "b874f31f90595663566cb9d8d01645e2f10a7da3c9250146a27b06ad5782f86f",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/scripts/postinstall.cjs"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/index.ts",
+      "bytes": 5587,
+      "sha256": "e90d05627bafae383951a24ff77295056b366880503b5c92837645d79062dcca",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/index.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/postinstall.ts",
+      "bytes": 3585,
+      "sha256": "9658452ed5d2565a16866d74f0c07220d13d5d8fb6fa78bc699fafb300b4833f",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/postinstall.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/embeddings/local.ts",
+      "bytes": 8864,
+      "sha256": "3e0d330518dc20c5d6fe5bcdaf33173f27465d5b513017ada226c7cc852f5915",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/embeddings/local.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/embeddings/transformers.ts",
+      "bytes": 4769,
+      "sha256": "d84e2d8358cc4fb6bf7421dd0e3fb31a877bb08f94bb4f54d3afbb91f8d9a570",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/embeddings/transformers.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/core/raw-append-only.ts",
+      "bytes": 234,
+      "sha256": "dad49dcec35199a13eaab342eea88c6052c563bb8ce4fc67b43be8877cedc44a",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/core/raw-append-only.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/core/memory.ts",
+      "bytes": 26152,
+      "sha256": "435dbe3fada14f1acd31315e9604b8a05d33daced9d34dd35a0322d37efa87c4",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/core/memory.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/core/config.ts",
+      "bytes": 21865,
+      "sha256": "376439bd45786abfeedf0c381a150ad91b0ae3829105d194ca2194278b50afb1",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/core/config.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/util/tokenize.ts",
+      "bytes": 676,
+      "sha256": "9eacf589b8ce85b3e138a72a51253fc2bcdc79192ec35714621869a64c688164",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/util/tokenize.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/entry/store-kit.ts",
+      "bytes": 4082,
+      "sha256": "8c28c8f099d776a338e7311ab55334a80370cbd16cf9ec6d3d698fa4d9f5c8ca",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/entry/store-kit.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/search/embed-memories.ts",
+      "bytes": 19790,
+      "sha256": "998f0d1e893bf28efefa5e6c9c17df197efa53f88e6f2384e37e0d04726fda46",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/search/embed-memories.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/search/rrf.ts",
+      "bytes": 2210,
+      "sha256": "cbe9c7108fe0720ed8ad080800899b584dadf567671495488b551fc07dba74e9",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/search/rrf.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/search/bm25-search.ts",
+      "bytes": 2424,
+      "sha256": "5b72c75e5eb5822a32156b088311a82a0664da15e483faf0a59a519ae648fbf7",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/search/bm25-search.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/search/hybrid.ts",
+      "bytes": 6736,
+      "sha256": "f3f21eb0ff0aab7fe5615406ee6d92667d1ae44973b1d265158da7b64faac391",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/search/hybrid.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/search/bm25.ts",
+      "bytes": 2179,
+      "sha256": "7b71439a2d77928234037b151fa73222a501c3f4f4f31851ef9aaa8d70bacd50",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/search/bm25.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/db/vector-store.ts",
+      "bytes": 12801,
+      "sha256": "85839dce31a74f566f016eb2a18a85736241e6782829fc8a08be6a4958dd88d8",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/db/vector-store.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/db/sqlite.ts",
+      "bytes": 944,
+      "sha256": "c8ebf69a870e33af9c1857301301e7c6b6735181e8feb249a706de43bd56ec90",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/db/sqlite.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/db/connect.ts",
+      "bytes": 4197,
+      "sha256": "8d81720bd56ffc8a811ea139de5b160e0f244593d6e7bcae9c2e832379f5d065",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/db/connect.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/remember.ts",
+      "bytes": 7997,
+      "sha256": "86f0d3c7470fb5080ef30cf56fea42aacbfaec70bf6865a599e0123ece06c227",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/remember.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/recall-core.ts",
+      "bytes": 7277,
+      "sha256": "8ce7b8f7a429e4c338b921621dce37155da548f46214e9e3f4b9d752b1638218",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/recall-core.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/recall-pipeline.ts",
+      "bytes": 20772,
+      "sha256": "b34426dc8e21aaacd9328c35b5082720061ab3a32d6a18d8f91501952e9ae35a",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/recall-pipeline.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/types.ts",
+      "bytes": 2690,
+      "sha256": "684826e7eb0972d12b7933aa74f340857b122ae6749b3f43ab06a963714ef8b0",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/types.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/promote.ts",
+      "bytes": 5025,
+      "sha256": "272352084a9d56a789c90b46dd319c589ffe5445d11e2ddf98fcdf9164d5ff12",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/promote.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/refine.ts",
+      "bytes": 793,
+      "sha256": "64c6e2f720ebbe6d62c05d027610515588a036db013ebeed4349a00a0ced5d0d",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/refine.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/remember-local.ts",
+      "bytes": 7592,
+      "sha256": "b25118ff627d5fac33fdb432bc8d64391149c8134bf06bd7d90ed08766a7a8de",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/remember-local.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/api/forget.ts",
+      "bytes": 4018,
+      "sha256": "a2b59f87c39a238f5682e6d82904e610a2b1f54670786573f14249ced4671012",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/api/forget.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/trust/reject-flow.ts",
+      "bytes": 4229,
+      "sha256": "032713fbd72689bb4af70cf283cefd918f58036a61ae82be646b654e7838a80c",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/trust/reject-flow.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/entry-writes.ts",
+      "bytes": 13464,
+      "sha256": "8f4af3eec70ec71b8f7029079a0e3a1f0884df021a95950de2b05d6abda48b50",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/entry-writes.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/mirrors.ts",
+      "bytes": 13906,
+      "sha256": "3c76218b0f915a675b70f085fb14279ccfbca7bc8bf11779f511eac02a0f57a1",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/mirrors.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/rejected-values.ts",
+      "bytes": 10370,
+      "sha256": "f7e04fb4444443e4f22def36d4c1be366c3ea584d9e891a0f5455318f5045eba",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/rejected-values.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/delete-and-batch.ts",
+      "bytes": 21294,
+      "sha256": "31ba631d82705931de98ad1c664d51d744865a8fb1be7966e4c3588aa454f3f0",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/delete-and-batch.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/summary-dirty.ts",
+      "bytes": 1295,
+      "sha256": "d88a7a6955fbc15a25b1951686cf5f9de2b238a4ac282b42fe76935f9b9bcbe6",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/summary-dirty.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/index.ts",
+      "bytes": 628,
+      "sha256": "7c8bc30cbd44d782ee9bb5e478699c94872e7ca6570d1ea775af467d46fde98c",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/index.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/raw-archive.ts",
+      "bytes": 4974,
+      "sha256": "256e463a1ab90920b78601064b24c6a8edf92095b726fbb58c4e8a88550b4717",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/raw-archive.ts"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "sha": "beea545715e6f62936f3204cd4a48fc7ef61a722",
+      "path": "src/store/rejection.ts",
+      "bytes": 5995,
+      "sha256": "de9e40b646a92438bde7659f70c3a1a943412b0d6f93f88f9178245fc85ab629",
+      "github_url": "https://github.com/kitfunso/hippo-memory/blob/beea545715e6f62936f3204cd4a48fc7ef61a722/src/store/rejection.ts"
+    },
+    {
+      "repo": "getzep/graphiti",
+      "sha": "0a3b1711b018e5590cf5c44a3ee3e67d6733ee13",
+      "path": "graphiti_core/graphiti.py",
+      "bytes": 90672,
+      "sha256": "f3a4a26094e681fea3ed333d70d89fcb5df5af49b1a9599d8e77d4fcaf8be45a",
+      "github_url": "https://github.com/getzep/graphiti/blob/0a3b1711b018e5590cf5c44a3ee3e67d6733ee13/graphiti_core/graphiti.py"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/package.json",
+      "bytes": 4632,
+      "sha256": "ac4d7e8c8fc91c19a266485583a29a98d557e0f7631c78ae7d18659b872c1327",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/package.json"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/index.ts",
+      "bytes": 11528,
+      "sha256": "e7d92724811b4d77965ccf94a57dc1b2b3b2c9c502a857099037417c9aa702bc",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/index.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/capture/summarizer.ts",
+      "bytes": 6355,
+      "sha256": "9aa3263330e282e1a9b93a1f83f81bc35be9be193b3964e0ce9981a2f8cc238d",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/capture/summarizer.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/capture/capture.ts",
+      "bytes": 59612,
+      "sha256": "8ef0cac7bf3ef80a3139b3ad454a232831c33bce03707d9bf430c8d153a51884",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/capture/capture.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/logger/redact.ts",
+      "bytes": 5363,
+      "sha256": "b05775cdc11b7f39c5b21c90f46b6ef108bf1cb2d10547ea3c7862b1fe5389d3",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/logger/redact.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/logger/index.ts",
+      "bytes": 14383,
+      "sha256": "36cb53dc92e61d5d5efd2870ad36c7d2210128b862e2d02afa4f35cabeb2f8e8",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/logger/index.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/config/schema.ts",
+      "bytes": 31920,
+      "sha256": "ef276f3f765272f4ff662bfaca76b37a13e4e0b5cf7799cccb3d1a2a5144cc48",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/config/schema.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/config/defaults.ts",
+      "bytes": 14433,
+      "sha256": "2c84dcfa6f09a335f889661aa756112d9519a9a1a34665b7600bf34fcd0f7dcb",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/config/defaults.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/storage/keyword.ts",
+      "bytes": 6836,
+      "sha256": "4375010c42ed119a36e38f8f7992a4943b943941456f78b74a4b495ff1825971",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/keyword.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/storage/connection.ts",
+      "bytes": 4996,
+      "sha256": "302e8f4844b4ebd3c8adb1794aee3e9a8ee4a9f91dc29dd0c167b91438c2009c",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/connection.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/storage/vector.ts",
+      "bytes": 11037,
+      "sha256": "f17cb0074ffee5199507ffee3b29d34fab9fde4657a0662fc66e56c12c272540",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/vector.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/retrieval/ranker.ts",
+      "bytes": 22492,
+      "sha256": "c3ac5133f9433e0ee312102c6228745ce9250446d418465774b6abfe0e1341df",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/retrieval/ranker.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/retrieval/retrieve.ts",
+      "bytes": 28469,
+      "sha256": "e9b229f026c934d22619291ed96dd0de09a97b063d799bebd1b8758dbc9ab089",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/retrieval/retrieve.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/retrieval/injector.ts",
+      "bytes": 22694,
+      "sha256": "54e9279cc7c9269f0f003a7bfa0c6c631ac63cfce1793823aff2cfb7315ee6f6",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/retrieval/injector.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/retrieval/profile.ts",
+      "bytes": 1288,
+      "sha256": "12af5aaf3960f7b750fe7bdf5d0546d978a2c425aab79d05d6fc99c50125ceab",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/retrieval/profile.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/retrieval/query-builder.ts",
+      "bytes": 7343,
+      "sha256": "6782f300976eb634812364b66a5804f9cea771e10cb253ece006d5625e9ef0c3",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/retrieval/query-builder.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/telemetry/index.ts",
+      "bytes": 93,
+      "sha256": "b1acbc2acec89ca4a8d0194dd1373cacdc3e2c37902e4e50a42e3c88e8e8b104",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/telemetry/index.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/telemetry/sender.ts",
+      "bytes": 10617,
+      "sha256": "dbc891ca0f92cf9c33f53b09cce26780d3e13d23785b5984fab46e45aa84f239",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/telemetry/sender.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/logger/sinks/llm-log.ts",
+      "bytes": 780,
+      "sha256": "ab62a4575274c84eff95289bc289bd55d6fd9e1afa6e4b47920a17f3227250ea",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/logger/sinks/llm-log.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/embedding/providers/local.ts",
+      "bytes": 4893,
+      "sha256": "37c000c4007171f8d137260f35cfd78ccb5ef35b5b2445991a495c004c47362b",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/embedding/providers/local.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/storage/repos/policies.ts",
+      "bytes": 20094,
+      "sha256": "7c7a5f07cb28e6a6807df1cf2b7ca63fba5f66fdc7a93a99129a844b7d09855c",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/repos/policies.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/storage/repos/traces.ts",
+      "bytes": 35581,
+      "sha256": "17177ea17cc9270b8fad33d0268be4c61794ce956d3dfe25e824f36866823a92",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/repos/traces.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/storage/repos/episodes.ts",
+      "bytes": 9909,
+      "sha256": "c94025e2196a19cfb8459ec56724b82cf7e662aba74e726b969e99a0d53bd4e7",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/repos/episodes.ts"
+    },
+    {
+      "repo": "MemTensor/MemOS",
+      "sha": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "path": "apps/memos-local-plugin/core/storage/migrations/001-initial.sql",
+      "bytes": 23639,
+      "sha256": "7971e3f8ee157b8b4e86b19a7216a7b2df98dd60634b810cac3501c849f0bc3d",
+      "github_url": "https://github.com/MemTensor/MemOS/blob/a7367d07e55db61099f7b4e2c1108bc5831a24f3/apps/memos-local-plugin/core/storage/migrations/001-initial.sql"
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+      "path": "cognee/api/v1/delete/delete.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "github_url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/cognee/api/v1/delete/delete.py"
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+      "path": "cognee/api/v1/cognify/cognify.py",
+      "bytes": 35618,
+      "sha256": "294613c19f0b7e66df61d59b398dc958f2f2f04ab1bf2c55166565486de91fa5",
+      "github_url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/cognee/api/v1/cognify/cognify.py"
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+      "path": "cognee/api/v1/search/search.py",
+      "bytes": 20130,
+      "sha256": "aeee7c0591ced93cae880d6784c093cf566649ab997dffb80cbca45b8dee3d07",
+      "github_url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/cognee/api/v1/search/search.py"
+    },
+    {
+      "repo": "topoteretes/cognee",
+      "sha": "0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1",
+      "path": "cognee/api/v1/add/add.py",
+      "bytes": 17979,
+      "sha256": "dfaff8078bd73be3d7cd115c0fecabb0794845d3109771d63c6fad65026f92e1",
+      "github_url": "https://github.com/topoteretes/cognee/blob/0ec7a9fa61c9ff04bf7e02e0d57af363a993a5e1/cognee/api/v1/add/add.py"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/package.json",
+      "bytes": 8404,
+      "sha256": "e222c72e4e593062b3d8c98990b43ce4dddef0268815ee17ebfa22b4137187e5",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/package.json"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/package.json",
+      "bytes": 1325,
+      "sha256": "e9e1dbf5cbdbbc0bff21d28b058c59bb371f7e32efa071fd7f1284f7622b4b3b",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/package.json"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/index.ts",
+      "bytes": 2326,
+      "sha256": "c33272741b63eb8076dcfd85cf096863bec6f0a094503a43bfd63c1ade0183bd",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/index.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/vector_stores/base.ts",
+      "bytes": 896,
+      "sha256": "0c866025ad01d4144a18346f057985223098a49f03f80943309601ebf382ec02",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/vector_stores/base.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/vector_stores/memory.ts",
+      "bytes": 14124,
+      "sha256": "1e71f3dd8471a89e4b822a482b37df9160c9da900f9f321bd7eaa256a9a9f52e",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/vector_stores/memory.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/embeddings/fastembed.ts",
+      "bytes": 3095,
+      "sha256": "d64ceb8e6efc25a8b234f84a212cc84868ad74c6b2596c22291330c927322723",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/embeddings/fastembed.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/memory/memory.types.ts",
+      "bytes": 1680,
+      "sha256": "ddfb5f55c4b2be17f39a24354885f0f6f236cf5c660fc9c7cdfe6875b4960f0e",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/memory.types.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/memory/index.ts",
+      "bytes": 70149,
+      "sha256": "dd2077fe77e633dfb156641ba087d0c5c7fae68203e94a4e824f5154304ed008",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/memory/index.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/config/manager.ts",
+      "bytes": 9666,
+      "sha256": "afa61cceb7b9f45e54fcbfecaefc64dc960cc5321a2cb39a8c1e0746ece0b8f1",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/config/manager.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/config/defaults.ts",
+      "bytes": 731,
+      "sha256": "8a156c6f355f990ec2d547c65ad1cc641e83b7c1a878f6918916011b8193be3c",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/config/defaults.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/utils/lemmatization.ts",
+      "bytes": 5208,
+      "sha256": "fadcf1037665227f25d2898c10a331468dba5341ae56ea6ef61c3183107c1dfa",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/utils/lemmatization.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/utils/factory.ts",
+      "bytes": 11006,
+      "sha256": "d4beed95d340a666a8f4a23adaacdf0c754b203b5c3475af2186662f83568c4c",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/utils/factory.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/utils/telemetry.ts",
+      "bytes": 4661,
+      "sha256": "474e599574c3ea87c4b356030b987008614716c3706910bbf9c2e9c9ddb42895",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/utils/telemetry.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/utils/bm25.ts",
+      "bytes": 1745,
+      "sha256": "007c3040318fddd1b6183d6d13595b0b05058808af602ac79cb6adce738e341d",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/utils/bm25.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/storage/MemoryHistoryManager.ts",
+      "bytes": 1469,
+      "sha256": "99273318e853d72470157182b281363fe6ae33a2c859832aff0cf9cd7816c413",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/storage/MemoryHistoryManager.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/storage/SQLiteManager.ts",
+      "bytes": 4484,
+      "sha256": "9e18733f478acd2d62979a8925cf07b0bed4c61ed5a48f074f7820fccb98c0c3",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/storage/SQLiteManager.ts"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08",
+      "path": "mem0-ts/src/oss/src/prompts/index.ts",
+      "bytes": 56092,
+      "sha256": "d9f526f5975559c5a8fde264e5b996579350ed651cb429c0d55b3611842206d4",
+      "github_url": "https://github.com/mem0ai/mem0/blob/b7ad69afda6b6ed030347c66d48a13e4de9dec08/mem0-ts/src/oss/src/prompts/index.ts"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/lib.rs",
+      "bytes": 52169,
+      "sha256": "a7f219e0fc616f097696f9f3dfb7404c45a26524a5caaa703e33cdbb1462d1de",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/lib.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/models.rs",
+      "bytes": 17029,
+      "sha256": "4c02d9a2e30896530d18bef6bd24680c5fafe07b437b0ec6f1797af859b46e74",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/models.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/clip.rs",
+      "bytes": 60368,
+      "sha256": "b5ee86729d7f70f38c3f526c912d77204d31770d27574e36fa6ba6b6dd77b602",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/clip.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/text_embed.rs",
+      "bytes": 38943,
+      "sha256": "dfbf0db654f63584e7206cc0188c803ced5e23e2296559d02881dce41be24534",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/text_embed.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/types/memory_card.rs",
+      "bytes": 18876,
+      "sha256": "70ba120eddb9fa8cafe3abcb82dc5cbb933d0873661eafefd9f7b7449c39ca64",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/types/memory_card.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/types/mod.rs",
+      "bytes": 5650,
+      "sha256": "8dfb6fd5d040d9c8b5084fa3d1ce23497796551e6c2325d37503ed159c35a0bf",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/types/mod.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/types/frame.rs",
+      "bytes": 11024,
+      "sha256": "e4ba69042ff7f3154bd8fa15630f14a27a35517ad6bc89557bce612602581d37",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/types/frame.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/types/memories_track.rs",
+      "bytes": 25725,
+      "sha256": "895ffbec33fec7b7f5917f82a608985b86b66d0cfca0b262fe8a11f0e087df94",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/types/memories_track.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/memvid/maintenance.rs",
+      "bytes": 6339,
+      "sha256": "ad57aba4105e257025b46a74ece9152da4fceb6faa531ccd05c3bb026d610c08",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/maintenance.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/memvid/mutation.rs",
+      "bytes": 164228,
+      "sha256": "bbd2725b8b944c8aba2341eb4dd04554df46436a8f810707845c101a04073ebd",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/mutation.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/memvid/memory.rs",
+      "bytes": 29508,
+      "sha256": "56a9e261de8d5937dfcda1668bf280d7dc52cc541b55e7712bd28cf9e9102118",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/memory.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/memvid/frame.rs",
+      "bytes": 24416,
+      "sha256": "37620c64d112d962f0f259fd76491b13fdf73b600ea682df78caa86b1de83536",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/frame.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/memvid/lifecycle.rs",
+      "bytes": 57853,
+      "sha256": "42f20ec06ec81fbe906d5c421ed63f79f52901fb7d8798bcf0240714045d55c9",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/lifecycle.rs"
+    },
+    {
+      "repo": "memvid/memvid",
+      "sha": "e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813",
+      "path": "src/memvid/search/api.rs",
+      "bytes": 38497,
+      "sha256": "bf5f7c0667f659659238e930dc208b918ba8a5dff26874d21494774febc77690",
+      "github_url": "https://github.com/memvid/memvid/blob/e6bd9f7b9c38cd8d5370fa0fc936ac1dcd751813/src/memvid/search/api.rs"
+    }
+  ],
+  "fetched_files_total": 116,
+  "limitations": [
+    "not exhaustive line-by-line audit",
+    "source presence is not runtime or user acceptance",
+    "model weight licenses not cleared for distribution",
+    "published benchmarks not accepted as Aimy quality proof"
+  ]
+}

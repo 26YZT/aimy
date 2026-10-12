@@ -1,0 +1,1716 @@
+{
+  "date": "2026-10-12",
+  "timezone": "Asia/Shanghai",
+  "method": "read-only gh GitHub API plus official HuggingFace model card/API",
+  "scope": "11 trees, four source previews, remaining bounded shallow review",
+  "metadata": [
+    {
+      "full_name": "TEN-framework/ten-vad",
+      "html_url": "https://github.com/TEN-framework/ten-vad",
+      "description": "Voice Activity Detector (VAD) : low-latency, high-performance and lightweight",
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "stargazers_count": 2283,
+      "pushed_at": "2026-10-09T08:53:06Z",
+      "updated_at": "2026-10-09T17:31:34Z",
+      "head_sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "commit_date": "2026-10-09T08:51:13Z",
+      "commit_message": "Update version"
+    },
+    {
+      "full_name": "TEN-framework/ten-framework",
+      "html_url": "https://github.com/TEN-framework/ten-framework",
+      "description": " Open-source framework for conversational voice AI agents",
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "stargazers_count": 11156,
+      "pushed_at": "2026-10-11T12:30:26Z",
+      "updated_at": "2026-10-11T22:33:31Z",
+      "head_sha": "ad20a1735293d2c03af6eeb00940d45d889dd0b0",
+      "commit_date": "2026-10-03T03:31:35Z",
+      "commit_message": "feat: add optional jev thinking-mode voice router (#2344)"
+    },
+    {
+      "full_name": "pipecat-ai/smart-turn",
+      "html_url": "https://github.com/pipecat-ai/smart-turn",
+      "description": null,
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "bsd-2-clause",
+        "name": "BSD 2-Clause \"Simplified\" License",
+        "spdx_id": "BSD-2-Clause",
+        "url": "https://api.github.com/licenses/bsd-2-clause",
+        "node_id": "MDc6TGljZW5zZTQ="
+      },
+      "stargazers_count": 1609,
+      "pushed_at": "2026-01-29T12:30:26Z",
+      "updated_at": "2026-10-11T15:40:02Z",
+      "head_sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "commit_date": "2026-01-29T12:29:53Z",
+      "commit_message": "Configurable output dir"
+    },
+    {
+      "full_name": "k2-fsa/sherpa-onnx",
+      "html_url": "https://github.com/k2-fsa/sherpa-onnx",
+      "description": "Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Internet connection. Support embedded systems, Android, iOS, HarmonyOS, Raspberry Pi, RISC-V, RK NPU, Axera NPU, Ascend NPU, x86_64 servers, websocket server/client, support 12 programming languages",
+      "default_branch": "master",
+      "archived": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "stargazers_count": 15225,
+      "pushed_at": "2026-10-12T01:35:56Z",
+      "updated_at": "2026-10-12T01:36:06Z",
+      "head_sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "commit_date": "2026-10-12T01:35:56Z",
+      "commit_message": "jni: convert C++ exceptions in recognizer/punctuation constructors to Java exceptions (#3988)"
+    },
+    {
+      "full_name": "Project-N-E-K-O/N.E.K.O",
+      "html_url": "https://github.com/Project-N-E-K-O/N.E.K.O",
+      "description": "A catgirl who lives with you in real time — reaching out first, sharing your media, and actually getting things done, powered by an embodied emotional engine.🐱❤️一只会主动找你玩的 AI 猫娘。",
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "stargazers_count": 3045,
+      "pushed_at": "2026-10-12T02:19:25Z",
+      "updated_at": "2026-10-12T01:25:19Z",
+      "head_sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "commit_date": "2026-10-12T01:25:14Z",
+      "commit_message": "test(node_harness): 重量级同步 top-level 用例改为在 node 内计时，不再受启动耗时影响 (#3400)"
+    },
+    {
+      "full_name": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "html_url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+      "description": "Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D avatar running locally across platforms",
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "stargazers_count": 14053,
+      "pushed_at": "2026-05-15T07:18:04Z",
+      "updated_at": "2026-10-12T02:31:37Z",
+      "head_sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "commit_date": "2026-05-15T07:18:03Z",
+      "commit_message": "docs(readme): Fix Trendshift badge link in README"
+    },
+    {
+      "full_name": "KoljaB/RealtimeSTT",
+      "html_url": "https://github.com/KoljaB/RealtimeSTT",
+      "description": "A robust, efficient, low-latency speech-to-text library with advanced voice activity detection, wake word activation and instant transcription.",
+      "default_branch": "master",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "stargazers_count": 10179,
+      "pushed_at": "2026-09-17T18:49:24Z",
+      "updated_at": "2026-10-11T19:18:34Z",
+      "head_sha": "777727553eedfa19aead15337ce66bab549add3f",
+      "commit_date": "2026-09-17T18:48:56Z",
+      "commit_message": "Verify only installed default models in release acceptance"
+    },
+    {
+      "full_name": "KoljaB/RealtimeTTS",
+      "html_url": "https://github.com/KoljaB/RealtimeTTS",
+      "description": "Converts text to speech in realtime",
+      "default_branch": "master",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "stargazers_count": 4042,
+      "pushed_at": "2026-10-09T13:46:36Z",
+      "updated_at": "2026-10-11T08:39:39Z",
+      "head_sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "commit_date": "2026-10-09T13:46:35Z",
+      "commit_message": "Merge pull request #381 from Lokeshm24/add-speechify"
+    },
+    {
+      "full_name": "pipecat-ai/pipecat",
+      "html_url": "https://github.com/pipecat-ai/pipecat",
+      "description": "Open Source framework for voice agents, multimodal apps, and realtime AI. Maintained by Daily and the community.",
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "bsd-2-clause",
+        "name": "BSD 2-Clause \"Simplified\" License",
+        "spdx_id": "BSD-2-Clause",
+        "url": "https://api.github.com/licenses/bsd-2-clause",
+        "node_id": "MDc6TGljZW5zZTQ="
+      },
+      "stargazers_count": 16377,
+      "pushed_at": "2026-10-12T02:18:36Z",
+      "updated_at": "2026-10-12T02:33:40Z",
+      "head_sha": "19fca83d2e2336b7c82145fe66b7b1cc76e44ac9",
+      "commit_date": "2026-10-12T01:32:41Z",
+      "commit_message": "Merge pull request #6064 from pipecat-ai/mb/evals-cloud-websocket"
+    },
+    {
+      "full_name": "livekit/agents",
+      "html_url": "https://github.com/livekit/agents",
+      "description": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "stargazers_count": 14699,
+      "pushed_at": "2026-10-12T02:32:06Z",
+      "updated_at": "2026-10-12T02:01:40Z",
+      "head_sha": "cfa9d85e69bcef513db055d1973d2ce6ca5ec15d",
+      "commit_date": "2026-10-11T22:57:15Z",
+      "commit_message": "Only send modern transcriptions to client sdks which can auto back convert modern -> legacy transcriptions internally (#7240)"
+    },
+    {
+      "full_name": "screenpipe/screenpipe",
+      "html_url": "https://github.com/screenpipe/screenpipe",
+      "description": "YC (S26) | Open Computer History | Continuously record your company computer work, map your workflows, help you find work worth automating, and power your agents' context",
+      "default_branch": "main",
+      "archived": false,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "stargazers_count": 21909,
+      "pushed_at": "2026-10-12T00:09:23Z",
+      "updated_at": "2026-10-12T01:52:17Z",
+      "head_sha": "0b8a1712ab7c0c813d2ee9b52dd3d4b776515f21",
+      "commit_date": "2026-10-11T21:02:29Z",
+      "commit_message": "docs: make Spanish language help directly searchable (#7588)"
+    }
+  ],
+  "search_queries": [
+    {
+      "query": "voice activity detection ten vad",
+      "exit": 0,
+      "result": []
+    },
+    {
+      "query": "smart turn detector",
+      "exit": 0,
+      "result": []
+    },
+    {
+      "query": "sherpa-onnx",
+      "exit": 0,
+      "result": [
+        {
+          "description": "Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Internet connection. Support embedded systems, Android, iOS, HarmonyOS, Ra",
+          "fullName": "k2-fsa/sherpa-onnx",
+          "stargazersCount": 15225,
+          "updatedAt": "2026-10-12T01:36:06Z",
+          "url": "https://github.com/k2-fsa/sherpa-onnx"
+        },
+        {
+          "description": "视频转字幕、字幕翻译、AI 配音与声音克隆、字幕烧录——免费开源的一站式桌面工具。基于 Whisper / FunASR 等本地模型离线语音转文字，批量处理 + 全平台 GPU 加速，跨 Windows / macOS / Linux。Free, open-source desktop app to generate, translate, dub & burn video subtitles — local Whisper speec",
+          "fullName": "buxuku/SmartSub",
+          "stargazersCount": 5648,
+          "updatedAt": "2026-10-12T02:22:56Z",
+          "url": "https://github.com/buxuku/SmartSub"
+        },
+        {
+          "description": "Voice input for Fcitx5 — local and cloud ASR, LLM rewriting, cross-distro packages",
+          "fullName": "xifan2333/fcitx5-vinput",
+          "stargazersCount": 488,
+          "updatedAt": "2026-10-11T21:01:59Z",
+          "url": "https://github.com/xifan2333/fcitx5-vinput"
+        },
+        {
+          "description": "早耳 - Real-time multilingual speech-to-text on CPU only. Live subtitles, browser dashboard, speaker labels, translation. No GPU, no cloud.",
+          "fullName": "oboroge0/hayamimi",
+          "stargazersCount": 407,
+          "updatedAt": "2026-10-12T02:31:06Z",
+          "url": "https://github.com/oboroge0/hayamimi"
+        },
+        {
+          "description": "Rust bindings to https://github.com/k2-fsa/sherpa-onnx",
+          "fullName": "thewh1teagle/sherpa-rs",
+          "stargazersCount": 314,
+          "updatedAt": "2026-09-07T14:08:44Z",
+          "url": "https://github.com/thewh1teagle/sherpa-rs"
+        }
+      ]
+    },
+    {
+      "query": "Open-LLM-VTuber",
+      "exit": 0,
+      "result": [
+        {
+          "description": "Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D avatar running locally across platforms",
+          "fullName": "Open-LLM-VTuber/Open-LLM-VTuber",
+          "stargazersCount": 14053,
+          "updatedAt": "2026-10-12T02:31:37Z",
+          "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber"
+        },
+        {
+          "description": "The Web/Electron frontend for Open-LLM-VTuber Project",
+          "fullName": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+          "stargazersCount": 182,
+          "updatedAt": "2026-10-05T11:12:05Z",
+          "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web"
+        },
+        {
+          "description": "",
+          "fullName": "Open-LLM-VTuber/Open-LLM-VTuber-Unity",
+          "stargazersCount": 49,
+          "updatedAt": "2026-09-17T07:54:18Z",
+          "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Unity"
+        },
+        {
+          "description": "Desktop-first open-source AI VTuber assistant with voice, hybrid memory, Live2D, desktop tools, and multi-provider LLM/TTS support.",
+          "fullName": "Rukafuu/LiraVtuber",
+          "stargazersCount": 24,
+          "updatedAt": "2026-10-12T01:49:15Z",
+          "url": "https://github.com/Rukafuu/LiraVtuber"
+        },
+        {
+          "description": "Documentation for Open-LLM-VTuber.",
+          "fullName": "Open-LLM-VTuber/open-llm-vtuber.github.io",
+          "stargazersCount": 20,
+          "updatedAt": "2026-10-02T04:22:14Z",
+          "url": "https://github.com/Open-LLM-VTuber/open-llm-vtuber.github.io"
+        }
+      ]
+    },
+    {
+      "query": "N.E.K.O",
+      "exit": 0,
+      "result": [
+        {
+          "description": "反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。Friends who live in China and have real name on account, please don't ",
+          "fullName": "cirosantilli/china-dictatorship",
+          "stargazersCount": 3258,
+          "updatedAt": "2026-10-11T18:22:37Z",
+          "url": "https://github.com/cirosantilli/china-dictatorship"
+        },
+        {
+          "description": "A catgirl who lives with you in real time — reaching out first, sharing your media, and actually getting things done, powered by an embodied emotional engine.🐱❤️一只会主动找你玩的 AI 猫娘。",
+          "fullName": "Project-N-E-K-O/N.E.K.O",
+          "stargazersCount": 3045,
+          "updatedAt": "2026-10-12T01:25:19Z",
+          "url": "https://github.com/Project-N-E-K-O/N.E.K.O"
+        },
+        {
+          "description": "这里是GitHub的草场，也是戈戈圈爱好者的交流地，主要讨论动漫、游戏、科技、人文、生活等所有话题，欢迎各位小伙伴们在此讨论趣事。This is GitHub grassland, and the community place for Gege circle lovers, mainly discusses anime, games, technology, lifing and other topics. You are welco",
+          "fullName": "gege-circle/.github",
+          "stargazersCount": 2039,
+          "updatedAt": "2026-10-12T00:08:07Z",
+          "url": "https://github.com/gege-circle/.github"
+        },
+        {
+          "description": "反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。Friends ",
+          "fullName": "cirosantilli/china-dictatroship-7",
+          "stargazersCount": 371,
+          "updatedAt": "2026-10-10T12:55:02Z",
+          "url": "https://github.com/cirosantilli/china-dictatroship-7"
+        },
+        {
+          "description": "反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。Friends ",
+          "fullName": "mRFWq7LwNPZjaVv5v6eo/cihna-dictattorshrip-8",
+          "stargazersCount": 211,
+          "updatedAt": "2026-10-10T13:17:50Z",
+          "url": "https://github.com/mRFWq7LwNPZjaVv5v6eo/cihna-dictattorshrip-8"
+        }
+      ]
+    },
+    {
+      "query": "RealtimeSTT",
+      "exit": 0,
+      "result": [
+        {
+          "description": "A robust, efficient, low-latency speech-to-text library with advanced voice activity detection, wake word activation and instant transcription.",
+          "fullName": "KoljaB/RealtimeSTT",
+          "stargazersCount": 10179,
+          "updatedAt": "2026-10-11T19:18:34Z",
+          "url": "https://github.com/KoljaB/RealtimeSTT"
+        },
+        {
+          "description": "A pattern for an always on AI Assistant powered by Deepseek-V3, RealtimeSTT, and Typer for engineering",
+          "fullName": "disler/always-on-ai-assistant",
+          "stargazersCount": 1003,
+          "updatedAt": "2026-10-05T01:44:44Z",
+          "url": "https://github.com/disler/always-on-ai-assistant"
+        },
+        {
+          "description": "Local AI talk with a custom voice based on Zephyr 7B model. Uses RealtimeSTT with faster_whisper for transcription and RealtimeTTS with Coqui XTTS for synthesis.",
+          "fullName": "KoljaB/LocalAIVoiceChat",
+          "stargazersCount": 736,
+          "updatedAt": "2026-10-05T11:03:09Z",
+          "url": "https://github.com/KoljaB/LocalAIVoiceChat"
+        },
+        {
+          "description": "实时STT，连接OpenAI接口/智谱AI（流式LLM）和GPT-SOVITS/Edge-TTS，通过网页的方式，进行跨网络的服务调用，实现实时对话的效果",
+          "fullName": "Ikaros-521/RealtimeSTT_LLM_TTS",
+          "stargazersCount": 434,
+          "updatedAt": "2026-10-06T06:32:42Z",
+          "url": "https://github.com/Ikaros-521/RealtimeSTT_LLM_TTS"
+        },
+        {
+          "description": "A library for real-time Speech to Text (STT), and Text to Speech (TTS) capability",
+          "fullName": "mallahyari/RealtimeSTT-TTS",
+          "stargazersCount": 50,
+          "updatedAt": "2026-10-07T08:33:25Z",
+          "url": "https://github.com/mallahyari/RealtimeSTT-TTS"
+        }
+      ]
+    },
+    {
+      "query": "TEN framework voice",
+      "exit": 0,
+      "result": [
+        {
+          "description": "TEN Framework voice AI agent with MCP integration and Railway deployment",
+          "fullName": "SKp80uw30/ten-chat-pipedream-mcp",
+          "stargazersCount": 0,
+          "updatedAt": "2025-08-05T04:35:59Z",
+          "url": "https://github.com/SKp80uw30/ten-chat-pipedream-mcp"
+        }
+      ]
+    },
+    {
+      "query": "pipecat",
+      "exit": 0,
+      "result": [
+        {
+          "description": "Open Source framework for voice agents, multimodal apps, and realtime AI. Maintained by Daily and the community.",
+          "fullName": "pipecat-ai/pipecat",
+          "stargazersCount": 16377,
+          "updatedAt": "2026-10-12T02:33:40Z",
+          "url": "https://github.com/pipecat-ai/pipecat"
+        },
+        {
+          "description": "Open source voice AI platform. Self-hosted alternative to Vapi and Retell. On Prem, BYOK across  Speech to Speech or LLM/STT/TTS, with a visual workflow builder, MCP native and telephony support.",
+          "fullName": "dograh-hq/dograh",
+          "stargazersCount": 5848,
+          "updatedAt": "2026-10-12T02:03:36Z",
+          "url": "https://github.com/dograh-hq/dograh"
+        },
+        {
+          "description": "Open source conversation framework for structured Pipecat dialogues",
+          "fullName": "pipecat-ai/pipecat-flows",
+          "stargazersCount": 626,
+          "updatedAt": "2026-09-22T12:59:45Z",
+          "url": "https://github.com/pipecat-ai/pipecat-flows"
+        },
+        {
+          "description": "Connect UNIX pipes and message queues",
+          "fullName": "lukasmartinelli/pipecat",
+          "stargazersCount": 435,
+          "updatedAt": "2026-09-24T09:46:53Z",
+          "url": "https://github.com/lukasmartinelli/pipecat"
+        },
+        {
+          "description": "Components, hooks and template apps for building React voice AI applications quickly. Designed to support and accelerate Pipecat AI development.",
+          "fullName": "pipecat-ai/voice-ui-kit",
+          "stargazersCount": 419,
+          "updatedAt": "2026-10-07T16:44:42Z",
+          "url": "https://github.com/pipecat-ai/voice-ui-kit"
+        }
+      ]
+    },
+    {
+      "query": "livekit agents",
+      "exit": 0,
+      "result": [
+        {
+          "description": "A complete voice AI frontend app for LiveKit Agents with Next.js",
+          "fullName": "livekit-examples/agent-starter-react",
+          "stargazersCount": 950,
+          "updatedAt": "2026-10-11T16:37:20Z",
+          "url": "https://github.com/livekit-examples/agent-starter-react"
+        },
+        {
+          "description": "Runnable examples for LiveKit Agents in Python",
+          "fullName": "livekit-examples/python-agents-examples",
+          "stargazersCount": 316,
+          "updatedAt": "2026-09-28T14:31:47Z",
+          "url": "https://github.com/livekit-examples/python-agents-examples"
+        },
+        {
+          "description": "A complete voice AI starter for LiveKit Agents with Python.",
+          "fullName": "livekit-examples/agent-starter-python",
+          "stargazersCount": 264,
+          "updatedAt": "2026-10-06T13:23:13Z",
+          "url": "https://github.com/livekit-examples/agent-starter-python"
+        },
+        {
+          "description": "A complete voice AI starter app for LiveKit Agents with Node.js",
+          "fullName": "livekit-examples/agent-starter-node",
+          "stargazersCount": 114,
+          "updatedAt": "2026-10-06T13:23:22Z",
+          "url": "https://github.com/livekit-examples/agent-starter-node"
+        },
+        {
+          "description": "LangGraph adapter for LiveKit Agents",
+          "fullName": "dqbd/langgraph-livekit-agents",
+          "stargazersCount": 82,
+          "updatedAt": "2026-07-05T17:20:38Z",
+          "url": "https://github.com/dqbd/langgraph-livekit-agents"
+        }
+      ]
+    },
+    {
+      "query": "screenpipe",
+      "exit": 0,
+      "result": [
+        {
+          "description": "YC (S26) | Open Computer History | Continuously record your company computer work, map your workflows, help you find work worth automating, and power your agents' context",
+          "fullName": "screenpipe/screenpipe",
+          "stargazersCount": 21909,
+          "updatedAt": "2026-10-12T01:52:17Z",
+          "url": "https://github.com/screenpipe/screenpipe"
+        },
+        {
+          "description": "Free open-source Screenpipe GUI + macOS automation agent. Search your screen history, view analytics, automate workflows — all local, no cloud. Works with the free Screenpipe CLI.",
+          "fullName": "hvardhan878/ghostwork",
+          "stargazersCount": 108,
+          "updatedAt": "2026-10-10T23:44:42Z",
+          "url": "https://github.com/hvardhan878/ghostwork"
+        },
+        {
+          "description": "",
+          "fullName": "tomara52/screenpipe",
+          "stargazersCount": 41,
+          "updatedAt": "2026-05-05T16:32:19Z",
+          "url": "https://github.com/tomara52/screenpipe"
+        },
+        {
+          "description": "",
+          "fullName": "LorenzoBloedow/screenpipe-tauri-template-dev",
+          "stargazersCount": 28,
+          "updatedAt": "2026-10-10T23:44:51Z",
+          "url": "https://github.com/LorenzoBloedow/screenpipe-tauri-template-dev"
+        },
+        {
+          "description": "",
+          "fullName": "neo773/screenpipe-electron",
+          "stargazersCount": 27,
+          "updatedAt": "2026-02-07T12:59:11Z",
+          "url": "https://github.com/neo773/screenpipe-electron"
+        }
+      ]
+    },
+    {
+      "query": "ten-vad",
+      "returncode": 0,
+      "result": [
+        {
+          "fullName": "meizhong986/WhisperJAV",
+          "url": "https://github.com/meizhong986/WhisperJAV"
+        },
+        {
+          "fullName": "TEN-framework/ten-vad",
+          "url": "https://github.com/TEN-framework/ten-vad"
+        },
+        {
+          "fullName": "FireRedTeam/FireRedVAD",
+          "url": "https://github.com/FireRedTeam/FireRedVAD"
+        },
+        {
+          "fullName": "Ryuk17/ten-vad-edge",
+          "url": "https://github.com/Ryuk17/ten-vad-edge"
+        },
+        {
+          "fullName": "wavekat/wavekat-vad",
+          "url": "https://github.com/wavekat/wavekat-vad"
+        }
+      ]
+    },
+    {
+      "query": "ten-framework",
+      "returncode": 0,
+      "result": [
+        {
+          "fullName": "TEN-framework/ten-framework",
+          "url": "https://github.com/TEN-framework/ten-framework"
+        },
+        {
+          "fullName": "GoAdminGroup/go-admin",
+          "url": "https://github.com/GoAdminGroup/go-admin"
+        },
+        {
+          "fullName": "Auromix/ROS-LLM",
+          "url": "https://github.com/Auromix/ROS-LLM"
+        },
+        {
+          "fullName": "vahidk/TensorflowFramework",
+          "url": "https://github.com/vahidk/TensorflowFramework"
+        },
+        {
+          "fullName": "swati1024/torrents",
+          "url": "https://github.com/swati1024/torrents"
+        }
+      ]
+    },
+    {
+      "query": "smart-turn",
+      "returncode": 0,
+      "result": [
+        {
+          "fullName": "BasedHardware/OpenGlass",
+          "url": "https://github.com/BasedHardware/OpenGlass"
+        },
+        {
+          "fullName": "mayukh4/linux-android",
+          "url": "https://github.com/mayukh4/linux-android"
+        },
+        {
+          "fullName": "WEIFENG2333/AsrTools",
+          "url": "https://github.com/WEIFENG2333/AsrTools"
+        },
+        {
+          "fullName": "Resinat/Resin",
+          "url": "https://github.com/Resinat/Resin"
+        },
+        {
+          "fullName": "pipecat-ai/smart-turn",
+          "url": "https://github.com/pipecat-ai/smart-turn"
+        }
+      ]
+    },
+    {
+      "query": "N.E.K.O in:name",
+      "returncode": 0,
+      "result": [
+        {
+          "fullName": "Project-N-E-K-O/N.E.K.O",
+          "url": "https://github.com/Project-N-E-K-O/N.E.K.O"
+        },
+        {
+          "fullName": "Olivia-account/Military-Equipment-Knowledge-Graph-Based-on-Deep-Learning-and-Neo4j",
+          "url": "https://github.com/Olivia-account/Military-Equipment-Knowledge-Graph-Based-on-Deep-Learning-and-Neo4j"
+        },
+        {
+          "fullName": "CliffNodes/Krea2-Multi-Character-Lora-Node-with-bounding-box-Scene-and-Outfit-Edit",
+          "url": "https://github.com/CliffNodes/Krea2-Multi-Character-Lora-Node-with-bounding-box-Scene-and-Outfit-Edit"
+        },
+        {
+          "fullName": "k-o-d-e-n/CGLayout",
+          "url": "https://github.com/k-o-d-e-n/CGLayout"
+        },
+        {
+          "fullName": "X95P7/-DP-0R-llQCeS-tb-i_lO-5n-N-wsx5jfZt4P-Hy-uW-bBN-Ll-Vs-z-k-m8jc-Om-srfd-M-UOC-L-W-D-l_f2hgY-e",
+          "url": "https://github.com/X95P7/-DP-0R-llQCeS-tb-i_lO-5n-N-wsx5jfZt4P-Hy-uW-bBN-Ll-Vs-z-k-m8jc-Om-srfd-M-UOC-L-W-D-l_f2hgY-e"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "LICENSE",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 2239,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/LICENSE"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "NOTICES",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 3751,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/NOTICES"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "README.md",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 29576,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/README.md"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "include/ten_vad.h",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 3157,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/include/ten_vad.h"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "src/ten_vad.cc",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 2036,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/src/ten_vad.cc"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "lib/Web/README.md",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 9144,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/lib/Web/README.md"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "lib/Web/ten_vad.d.ts",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 3063,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/lib/Web/ten_vad.d.ts"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "examples/test_node.js",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 19228,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/examples/test_node.js"
+    },
+    {
+      "repo": "TEN-framework/ten-vad",
+      "path": "examples/test_browser.html",
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "exit": 0,
+      "bytes": 16266,
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/examples/test_browser.html"
+    },
+    {
+      "repo": "pipecat-ai/smart-turn",
+      "path": "LICENSE",
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "exit": 0,
+      "bytes": 1301,
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/LICENSE"
+    },
+    {
+      "repo": "pipecat-ai/smart-turn",
+      "path": "README.md",
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "exit": 0,
+      "bytes": 8748,
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/README.md"
+    },
+    {
+      "repo": "pipecat-ai/smart-turn",
+      "path": "inference.py",
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "exit": 0,
+      "bytes": 2340,
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/inference.py"
+    },
+    {
+      "repo": "pipecat-ai/smart-turn",
+      "path": "predict.py",
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "exit": 0,
+      "bytes": 1554,
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/predict.py"
+    },
+    {
+      "repo": "pipecat-ai/smart-turn",
+      "path": "audio_utils.py",
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "exit": 0,
+      "bytes": 546,
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/audio_utils.py"
+    },
+    {
+      "repo": "pipecat-ai/smart-turn",
+      "path": "requirements_inference.txt",
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "exit": 0,
+      "bytes": 112,
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/requirements_inference.txt"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "LICENSE",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 11358,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/LICENSE"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "README.md",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 54754,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/README.md"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "nodejs-addon-examples/test_asr_streaming_transducer_microphone.js",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 2522,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/nodejs-addon-examples/test_asr_streaming_transducer_microphone.js"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "LICENSE",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 11357,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/LICENSE"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "pyproject.toml",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 11592,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/pyproject.toml"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "requirements.txt",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 58537,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/requirements.txt"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/omni_realtime_client/_response_arbiter.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 171460,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_response_arbiter.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/omni_realtime_client/_responses.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 144399,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_responses.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/omni_realtime_client/_audio.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 11307,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_audio.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/omni_realtime_client/_wire_trace.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 17136,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_wire_trace.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/omni_realtime_client/_transport.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 223096,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_transport.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "static/app/app-screen.js",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 191968,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/static/app/app-screen.js"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "static/app/desktop-capture-provider.js",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 3772,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/static/app/desktop-capture-provider.js"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_routers/capture_router.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 8751,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_routers/capture_router.py"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "LICENSE",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 1216,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "LICENSE-Live2D.md",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 57705,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE-Live2D.md"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "pyproject.toml",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 1840,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/pyproject.toml"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "src/open_llm_vtuber/conversations/conversation_handler.py",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 7958,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/conversation_handler.py"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "src/open_llm_vtuber/conversations/tts_manager.py",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 6542,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/tts_manager.py"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "src/open_llm_vtuber/conversations/single_conversation.py",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 6675,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/single_conversation.py"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 28012,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/basic_memory_agent.py"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": ".gitmodules",
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "exit": 0,
+      "bytes": 117,
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/.gitmodules"
+    },
+    {
+      "repo": "TEN-framework/ten-framework",
+      "path": "LICENSE",
+      "sha": "ad20a1735293d2c03af6eeb00940d45d889dd0b0",
+      "exit": 0,
+      "bytes": 2235,
+      "url": "https://github.com/TEN-framework/ten-framework/blob/ad20a1735293d2c03af6eeb00940d45d889dd0b0/LICENSE"
+    },
+    {
+      "repo": "TEN-framework/ten-framework",
+      "path": "README.md",
+      "sha": "ad20a1735293d2c03af6eeb00940d45d889dd0b0",
+      "exit": 0,
+      "bytes": 24148,
+      "url": "https://github.com/TEN-framework/ten-framework/blob/ad20a1735293d2c03af6eeb00940d45d889dd0b0/README.md"
+    },
+    {
+      "repo": "TEN-framework/ten-framework",
+      "path": "ai_agents/agents/ten_packages/extension/ten_turn_detection/extension.py",
+      "sha": "ad20a1735293d2c03af6eeb00940d45d889dd0b0",
+      "exit": 0,
+      "bytes": 6650,
+      "url": "https://github.com/TEN-framework/ten-framework/blob/ad20a1735293d2c03af6eeb00940d45d889dd0b0/ai_agents/agents/ten_packages/extension/ten_turn_detection/extension.py"
+    },
+    {
+      "repo": "TEN-framework/ten-framework",
+      "path": "ai_agents/agents/ten_packages/extension/ten_vad_python/extension.py",
+      "sha": "ad20a1735293d2c03af6eeb00940d45d889dd0b0",
+      "exit": 0,
+      "bytes": 6570,
+      "url": "https://github.com/TEN-framework/ten-framework/blob/ad20a1735293d2c03af6eeb00940d45d889dd0b0/ai_agents/agents/ten_packages/extension/ten_vad_python/extension.py"
+    },
+    {
+      "repo": "KoljaB/RealtimeSTT",
+      "path": "LICENSE",
+      "sha": "777727553eedfa19aead15337ce66bab549add3f",
+      "exit": 0,
+      "bytes": 1069,
+      "url": "https://github.com/KoljaB/RealtimeSTT/blob/777727553eedfa19aead15337ce66bab549add3f/LICENSE"
+    },
+    {
+      "repo": "KoljaB/RealtimeSTT",
+      "path": "setup.py",
+      "sha": "777727553eedfa19aead15337ce66bab549add3f",
+      "exit": 0,
+      "bytes": 12843,
+      "url": "https://github.com/KoljaB/RealtimeSTT/blob/777727553eedfa19aead15337ce66bab549add3f/setup.py"
+    },
+    {
+      "repo": "KoljaB/RealtimeSTT",
+      "path": "RealtimeSTT/audio_recorder.py",
+      "sha": "777727553eedfa19aead15337ce66bab549add3f",
+      "exit": 0,
+      "bytes": 47384,
+      "url": "https://github.com/KoljaB/RealtimeSTT/blob/777727553eedfa19aead15337ce66bab549add3f/RealtimeSTT/audio_recorder.py"
+    },
+    {
+      "repo": "KoljaB/RealtimeTTS",
+      "path": "LICENSE",
+      "sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "exit": 0,
+      "bytes": 1069,
+      "url": "https://github.com/KoljaB/RealtimeTTS/blob/cd1b4e92389308ee55e915c14a901ebe608fe868/LICENSE"
+    },
+    {
+      "repo": "KoljaB/RealtimeTTS",
+      "path": "setup.py",
+      "sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "exit": 0,
+      "bytes": 16311,
+      "url": "https://github.com/KoljaB/RealtimeTTS/blob/cd1b4e92389308ee55e915c14a901ebe608fe868/setup.py"
+    },
+    {
+      "repo": "KoljaB/RealtimeTTS",
+      "path": "RealtimeTTS/text_to_stream.py",
+      "sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "exit": 0,
+      "bytes": 57271,
+      "url": "https://github.com/KoljaB/RealtimeTTS/blob/cd1b4e92389308ee55e915c14a901ebe608fe868/RealtimeTTS/text_to_stream.py"
+    },
+    {
+      "repo": "livekit/agents",
+      "path": "LICENSE",
+      "sha": "cfa9d85e69bcef513db055d1973d2ce6ca5ec15d",
+      "exit": 0,
+      "bytes": 11357,
+      "url": "https://github.com/livekit/agents/blob/cfa9d85e69bcef513db055d1973d2ce6ca5ec15d/LICENSE"
+    },
+    {
+      "repo": "livekit/agents",
+      "path": "livekit-plugins/livekit-plugins-turn-detector/livekit/plugins/turn_detector/base.py",
+      "sha": "cfa9d85e69bcef513db055d1973d2ce6ca5ec15d",
+      "exit": 0,
+      "bytes": 10471,
+      "url": "https://github.com/livekit/agents/blob/cfa9d85e69bcef513db055d1973d2ce6ca5ec15d/livekit-plugins/livekit-plugins-turn-detector/livekit/plugins/turn_detector/base.py"
+    },
+    {
+      "repo": "pipecat-ai/pipecat",
+      "path": "LICENSE",
+      "sha": "19fca83d2e2336b7c82145fe66b7b1cc76e44ac9",
+      "exit": 0,
+      "bytes": 1301,
+      "url": "https://github.com/pipecat-ai/pipecat/blob/19fca83d2e2336b7c82145fe66b7b1cc76e44ac9/LICENSE"
+    },
+    {
+      "repo": "pipecat-ai/pipecat",
+      "path": "src/pipecat/audio/turn/smart_turn/local_smart_turn_v3.py",
+      "sha": "19fca83d2e2336b7c82145fe66b7b1cc76e44ac9",
+      "exit": 0,
+      "bytes": 7267,
+      "url": "https://github.com/pipecat-ai/pipecat/blob/19fca83d2e2336b7c82145fe66b7b1cc76e44ac9/src/pipecat/audio/turn/smart_turn/local_smart_turn_v3.py"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/README.md",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 698,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/README.md"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/package.json",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 1667,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/package.json"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/streaming-asr.js",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 4576,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/streaming-asr.js"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/vad.js",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 2971,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/vad.js"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/addon.js",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 2760,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/addon.js"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "wasm/vad/sherpa-onnx-vad.js",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 7772,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/wasm/vad/sherpa-onnx-vad.js"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "wasm/asr/sherpa-onnx-asr.js",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 54712,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/wasm/asr/sherpa-onnx-asr.js"
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/online-speech-denoiser.js",
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "exit": 0,
+      "bytes": 1286,
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/online-speech-denoiser.js"
+    },
+    {
+      "repo": "pipecat-ai/pipecat",
+      "path": "src/pipecat/audio/turn/smart_turn/_whisper_features.py",
+      "sha": "19fca83d2e2336b7c82145fe66b7b1cc76e44ac9",
+      "exit": 0,
+      "bytes": 7221,
+      "url": "https://github.com/pipecat-ai/pipecat/blob/19fca83d2e2336b7c82145fe66b7b1cc76e44ac9/src/pipecat/audio/turn/smart_turn/_whisper_features.py"
+    },
+    {
+      "repo": "pipecat-ai/pipecat",
+      "path": "src/pipecat/audio/turn/smart_turn/base_smart_turn.py",
+      "sha": "19fca83d2e2336b7c82145fe66b7b1cc76e44ac9",
+      "exit": 0,
+      "bytes": 11010,
+      "url": "https://github.com/pipecat-ai/pipecat/blob/19fca83d2e2336b7c82145fe66b7b1cc76e44ac9/src/pipecat/audio/turn/smart_turn/base_smart_turn.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "README.MD",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 34093,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/README.MD"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "utils/token_tracker/telemetry.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 26542,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/utils/token_tracker/telemetry.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "static/app/app-telemetry.js",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 4977,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/static/app/app-telemetry.js"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "docs/privacy.md",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 5126,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/docs/privacy.md"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/voice_identity_service/pvad/models/LICENSE",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 11358,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/voice_identity_service/pvad/models/LICENSE"
+    },
+    {
+      "repo": "livekit/agents",
+      "path": "MODEL_LICENSE",
+      "sha": "cfa9d85e69bcef513db055d1973d2ce6ca5ec15d",
+      "exit": 0,
+      "bytes": 5623,
+      "url": "https://github.com/livekit/agents/blob/cfa9d85e69bcef513db055d1973d2ce6ca5ec15d/MODEL_LICENSE"
+    },
+    {
+      "repo": "screenpipe/screenpipe",
+      "path": "LICENSE.md",
+      "sha": "0b8a1712ab7c0c813d2ee9b52dd3d4b776515f21",
+      "exit": 0,
+      "bytes": 3723,
+      "url": "https://github.com/screenpipe/screenpipe/blob/0b8a1712ab7c0c813d2ee9b52dd3d4b776515f21/LICENSE.md"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "config/__init__.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 37868,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/config/__init__.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "utils/token_tracker/_shared.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 4947,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/utils/token_tracker/_shared.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "utils/token_tracker/reporting.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 31730,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/utils/token_tracker/reporting.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "utils/token_tracker/recording.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 12574,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/utils/token_tracker/recording.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/proactive_delivery.py",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 43888,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/proactive_delivery.py"
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "NOTICE",
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "exit": 0,
+      "bytes": 771,
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/NOTICE"
+    },
+    {
+      "repo": "KoljaB/RealtimeTTS",
+      "path": "LICENSING_ADDENDUM.md",
+      "sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "exit": 0,
+      "bytes": 1512,
+      "url": "https://github.com/KoljaB/RealtimeTTS/blob/cd1b4e92389308ee55e915c14a901ebe608fe868/LICENSING_ADDENDUM.md#L1"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "pipecat-ai/smart-turn",
+      "path": "inference.py",
+      "line_start": 1,
+      "line_end": 63,
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/inference.py#L1-L63"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "pipecat-ai/smart-turn",
+      "path": "audio_utils.py",
+      "line_start": 4,
+      "line_end": 13,
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/audio_utils.py#L4-L13"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "pipecat-ai/smart-turn",
+      "path": "predict.py",
+      "line_start": 18,
+      "line_end": 37,
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/predict.py#L18-L37"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "pipecat-ai/smart-turn",
+      "path": "README.md",
+      "line_start": 1,
+      "line_end": 154,
+      "sha": "4786657e242dfe77dd138699ac564ee074a2a543",
+      "url": "https://github.com/pipecat-ai/smart-turn/blob/4786657e242dfe77dd138699ac564ee074a2a543/README.md#L1-L154"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "pipecat-ai/pipecat",
+      "path": "src/pipecat/audio/turn/smart_turn/local_smart_turn_v3.py",
+      "line_start": 35,
+      "line_end": 182,
+      "sha": "19fca83d2e2336b7c82145fe66b7b1cc76e44ac9",
+      "url": "https://github.com/pipecat-ai/pipecat/blob/19fca83d2e2336b7c82145fe66b7b1cc76e44ac9/src/pipecat/audio/turn/smart_turn/local_smart_turn_v3.py#L35-L182"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "pipecat-ai/pipecat",
+      "path": "src/pipecat/audio/turn/smart_turn/base_smart_turn.py",
+      "line_start": 26,
+      "line_end": 235,
+      "sha": "19fca83d2e2336b7c82145fe66b7b1cc76e44ac9",
+      "url": "https://github.com/pipecat-ai/pipecat/blob/19fca83d2e2336b7c82145fe66b7b1cc76e44ac9/src/pipecat/audio/turn/smart_turn/base_smart_turn.py#L26-L235"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/streaming-asr.js",
+      "line_start": 36,
+      "line_end": 174,
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/streaming-asr.js#L36-L174"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/vad.js",
+      "line_start": 72,
+      "line_end": 128,
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/vad.js#L72-L128"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/online-speech-denoiser.js",
+      "line_start": 8,
+      "line_end": 41,
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/online-speech-denoiser.js#L8-L41"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/lib/addon.js",
+      "line_start": 9,
+      "line_end": 58,
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/lib/addon.js#L9-L58"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "k2-fsa/sherpa-onnx",
+      "path": "scripts/node-addon-api/package.json",
+      "line_start": 1,
+      "line_end": 69,
+      "sha": "6e7ea3e409f90aaf1541c87f21a013c4f20b9680",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/6e7ea3e409f90aaf1541c87f21a013c4f20b9680/scripts/node-addon-api/package.json#L1-L69"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/omni_realtime_client/_response_arbiter.py",
+      "line_start": 940,
+      "line_end": 1082,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_response_arbiter.py#L940-L1082"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "static/app/app-screen.js",
+      "line_start": 1561,
+      "line_end": 1762,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/static/app/app-screen.js#L1561-L1762"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "static/app/app-screen.js",
+      "line_start": 2710,
+      "line_end": 2828,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/static/app/app-screen.js#L2710-L2828"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/proactive_delivery.py",
+      "line_start": 79,
+      "line_end": 210,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/proactive_delivery.py#L79-L210"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "main_logic/omni_realtime_client/_wire_trace.py",
+      "line_start": 15,
+      "line_end": 100,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/main_logic/omni_realtime_client/_wire_trace.py#L15-L100"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "utils/token_tracker/reporting.py",
+      "line_start": 39,
+      "line_end": 50,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/utils/token_tracker/reporting.py#L39-L50"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "utils/token_tracker/reporting.py",
+      "line_start": 464,
+      "line_end": 489,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/utils/token_tracker/reporting.py#L464-L489"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "pyproject.toml",
+      "line_start": 10,
+      "line_end": 127,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/pyproject.toml#L10-L127"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "path": "NOTICE",
+      "line_start": 1,
+      "line_end": 12,
+      "sha": "22a9be9215820a85763eb717acbf44cb0acd6d7f",
+      "url": "https://github.com/Project-N-E-K-O/N.E.K.O/blob/22a9be9215820a85763eb717acbf44cb0acd6d7f/NOTICE#L1-L12"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "TEN-framework/ten-vad",
+      "path": "include/ten_vad.h",
+      "line_start": 37,
+      "line_end": 74,
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/include/ten_vad.h#L37-L74"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "TEN-framework/ten-vad",
+      "path": "src/ten_vad.cc",
+      "line_start": 18,
+      "line_end": 66,
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/src/ten_vad.cc#L18-L66"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "TEN-framework/ten-vad",
+      "path": "lib/Web/ten_vad.d.ts",
+      "line_start": 10,
+      "line_end": 104,
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/lib/Web/ten_vad.d.ts#L10-L104"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "TEN-framework/ten-vad",
+      "path": "LICENSE",
+      "line_start": 3,
+      "line_end": 32,
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/LICENSE#L3-L32"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "TEN-framework/ten-vad",
+      "path": "examples/test_node.js",
+      "line_start": 184,
+      "line_end": 216,
+      "sha": "d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1",
+      "url": "https://github.com/TEN-framework/ten-vad/blob/d68ab71c8d5fbd8f98e97ae7c9986af76b5d72b1/examples/test_node.js#L184-L216"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "TEN-framework/ten-framework",
+      "path": "LICENSE",
+      "line_start": 3,
+      "line_end": 31,
+      "sha": "ad20a1735293d2c03af6eeb00940d45d889dd0b0",
+      "url": "https://github.com/TEN-framework/ten-framework/blob/ad20a1735293d2c03af6eeb00940d45d889dd0b0/LICENSE#L3-L31"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "LICENSE",
+      "line_start": 1,
+      "line_end": 23,
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE#L1-L23"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "LICENSE-Live2D.md",
+      "line_start": 24,
+      "line_end": 85,
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE-Live2D.md#L24-L85"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "src/open_llm_vtuber/conversations/conversation_handler.py",
+      "line_start": 112,
+      "line_end": 143,
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/conversation_handler.py#L112-L143"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "path": "src/open_llm_vtuber/conversations/tts_manager.py",
+      "line_start": 92,
+      "line_end": 182,
+      "sha": "992309c0aa19845960228f880013d4685fde93b5",
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/tts_manager.py#L92-L182"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "KoljaB/RealtimeSTT",
+      "path": "RealtimeSTT/audio_recorder.py",
+      "line_start": 105,
+      "line_end": 118,
+      "sha": "777727553eedfa19aead15337ce66bab549add3f",
+      "url": "https://github.com/KoljaB/RealtimeSTT/blob/777727553eedfa19aead15337ce66bab549add3f/RealtimeSTT/audio_recorder.py#L105-L118"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "KoljaB/RealtimeSTT",
+      "path": "RealtimeSTT/audio_recorder.py",
+      "line_start": 825,
+      "line_end": 878,
+      "sha": "777727553eedfa19aead15337ce66bab549add3f",
+      "url": "https://github.com/KoljaB/RealtimeSTT/blob/777727553eedfa19aead15337ce66bab549add3f/RealtimeSTT/audio_recorder.py#L825-L878"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "KoljaB/RealtimeSTT",
+      "path": "setup.py",
+      "line_start": 186,
+      "line_end": 260,
+      "sha": "777727553eedfa19aead15337ce66bab549add3f",
+      "url": "https://github.com/KoljaB/RealtimeSTT/blob/777727553eedfa19aead15337ce66bab549add3f/setup.py#L186-L260"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "KoljaB/RealtimeTTS",
+      "path": "RealtimeTTS/text_to_stream.py",
+      "line_start": 109,
+      "line_end": 184,
+      "sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "url": "https://github.com/KoljaB/RealtimeTTS/blob/cd1b4e92389308ee55e915c14a901ebe608fe868/RealtimeTTS/text_to_stream.py#L109-L184"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "KoljaB/RealtimeTTS",
+      "path": "RealtimeTTS/text_to_stream.py",
+      "line_start": 942,
+      "line_end": 965,
+      "sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "url": "https://github.com/KoljaB/RealtimeTTS/blob/cd1b4e92389308ee55e915c14a901ebe608fe868/RealtimeTTS/text_to_stream.py#L942-L965"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "KoljaB/RealtimeTTS",
+      "path": "LICENSING_ADDENDUM.md",
+      "line_start": 1,
+      "line_end": 24,
+      "sha": "cd1b4e92389308ee55e915c14a901ebe608fe868",
+      "url": "https://github.com/KoljaB/RealtimeTTS/blob/cd1b4e92389308ee55e915c14a901ebe608fe868/LICENSING_ADDENDUM.md#L1-L24"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "livekit/agents",
+      "path": "MODEL_LICENSE",
+      "line_start": 5,
+      "line_end": 53,
+      "sha": "cfa9d85e69bcef513db055d1973d2ce6ca5ec15d",
+      "url": "https://github.com/livekit/agents/blob/cfa9d85e69bcef513db055d1973d2ce6ca5ec15d/MODEL_LICENSE#L5-L53"
+    },
+    {
+      "kind": "reviewed_range",
+      "repo": "screenpipe/screenpipe",
+      "path": "LICENSE.md",
+      "line_start": 20,
+      "line_end": 90,
+      "sha": "0b8a1712ab7c0c813d2ee9b52dd3d4b776515f21",
+      "url": "https://github.com/screenpipe/screenpipe/blob/0b8a1712ab7c0c813d2ee9b52dd3d4b776515f21/LICENSE.md#L20-L90"
+    }
+  ],
+  "model_metadata": {
+    "id": "pipecat-ai/smart-turn-v3",
+    "sha": "f766f81d3cfdf7737ac64aad813d91bbfd56bf93",
+    "last_modified": "2026-01-07T18:00:39.000Z",
+    "license": "bsd-2-clause",
+    "artifact_names": [
+      ".gitattributes",
+      "README.md",
+      "benchmarks/smart-turn-v3.0.md",
+      "benchmarks/smart-turn-v3.1-cpu.md",
+      "benchmarks/smart-turn-v3.1-gpu.md",
+      "benchmarks/smart-turn-v3.2-cpu.md",
+      "benchmarks/smart-turn-v3.2-gpu.md",
+      "smart-turn-v3.0.onnx",
+      "smart-turn-v3.1-cpu.onnx",
+      "smart-turn-v3.1-gpu.onnx",
+      "smart-turn-v3.2-cpu.onnx",
+      "smart-turn-v3.2-gpu.onnx"
+    ],
+    "card_url": "https://huggingface.co/pipecat-ai/smart-turn-v3/blob/f766f81d3cfdf7737ac64aad813d91bbfd56bf93/README.md"
+  },
+  "candidates": [
+    {
+      "repo": "TEN-framework/ten-vad",
+      "depth": "deep",
+      "reuse": "VAD SDK 技术上轻量，但附加许可需先澄清；当前不优先引入",
+      "global_modules": "C/C++ DSP + ONNX 模型；include/src/lib(各平台/WASM)/examples/testset",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "TEN-framework/ten-framework",
+      "depth": "bounded-shallow",
+      "reuse": "整套不适合本地桌面；终端部署许可限制，参考架构",
+      "global_modules": "core 多语言 extension runtime；ai_agents、provider extensions、turn detection、tests",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "pipecat-ai/smart-turn",
+      "depth": "deep",
+      "reuse": "第一优先候选：模型+预处理适配成 AIRI 的端点判断器",
+      "global_modules": "Python inference/audio utils/training；模型另放 HF",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "depth": "deep",
+      "reuse": "已有 AIRI Sherpaw 基础；原生 SDK 按性能缺口再适配",
+      "global_modules": "C++ runtime、多语言 bindings、Node addon/WASM、ASR/TTS/VAD/降噪",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "Project-N-E-K-O/N.E.K.O",
+      "depth": "deep",
+      "reuse": "只定向拆截图防陈旧帧、响应所有权、图片预算；禁止整套并入",
+      "global_modules": "Python3.11 main_logic/main_routers/memory；JS frontend；app/desktop wrapper、Steam/plugin",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "depth": "bounded-shallow",
+      "reuse": "参考已听文本回写/分段音画 payload；Python 管线须重写适配",
+      "global_modules": "Python FastAPI/WebSocket、ASR/VAD/TTS factory、conversations、Live2D；Web/Electron 前端为 git submodule",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "KoljaB/RealtimeSTT",
+      "depth": "bounded-shallow",
+      "reuse": "离线对照或独立试验服务；不接管 AIRI 麦克风",
+      "global_modules": "Python recorder/core/server；多 ASR engines、VAD、录音/转写生命周期",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "KoljaB/RealtimeTTS",
+      "depth": "bounded-shallow",
+      "reuse": "音画定时参考；不引入第二播放器",
+      "global_modules": "Python engine adapters/StreamPlayer/文本分句/可选字词对齐",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "pipecat-ai/pipecat",
+      "depth": "bounded-shallow",
+      "reuse": "只取 Smart Turn DSP/端点规则参考；整套框架重复",
+      "global_modules": "Python frame pipeline、audio/turn/transport/services、tests",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "livekit/agents",
+      "depth": "bounded-shallow",
+      "reuse": "后期实时网络/媒体需求才考虑；模型不能独立拆入 AIRI",
+      "global_modules": "Python agent session/media RTC、plugin providers/turn detector；LiveKit media transport",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    },
+    {
+      "repo": "screenpipe/screenpipe",
+      "depth": "bounded-shallow",
+      "reuse": "不推荐当前源码嵌入；现许可、长期捕获与一期授权短时观察不匹配",
+      "global_modules": "Rust/Tauri 持续屏幕/音频录制+索引+历史与插件",
+      "runtime_verified": false,
+      "Aimy_integration_verified": false
+    }
+  ],
+  "warnings": [
+    "TEN Framework added no-end-user-device hosting condition",
+    "TEN VAD competition condition",
+    "Screenpipe current commercial license",
+    "LiveKit MODEL_LICENSE restricts models to LiveKit Agents",
+    "Smart Turn README/sample default artifact mismatch",
+    "NEKO telemetry opt-out and mic/screen semantics differ",
+    "Open-LLM-VTuber TTS clear cancellation concern is static only"
+  ],
+  "workspace_writes": false,
+  "dependency_installation": false,
+  "model_or_device_calls": false,
+  "raw_search_files": [
+    "search.json",
+    "search-refined.json"
+  ],
+  "search_note": "Unrelated wide N.E.K.O query results retained as discovery only; description summaries capped 220 chars."
+}

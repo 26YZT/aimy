@@ -1,0 +1,1704 @@
+{
+  "status": "passed",
+  "scope": "full-media-suite",
+  "evidenceDirectory": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB",
+  "checks": [
+    "Default app opens no input device and sends no provider request",
+    "Missing transcript receipt, arbitrary synthesis text and revoked capture token are rejected by real main IPC before any HTTP request",
+    "Real bundled Silero initialization and silence rejection; actual AudioWorklet/file-backed stream",
+    "Real bundled Silero initialization and pulse rejection; actual AudioWorklet/file-backed stream",
+    "Two real Silero segments → SDK ASR → multi-turn Agent → SDK WAV TTS → ordered native playback; camera combination denied",
+    "A real 60ms spoken pulse does not confirm barge-in or interrupt ongoing native playback",
+    "Real confirmed barge-in aborts LLM/TTS, stops actual audio early, accepts another utterance and drops old audio",
+    "off: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "hide: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "reload: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "quit: native capture stops, real ASR aborts, late reply causes zero new provider requests or playback",
+    "Disabling speech aborts every pending TTS and no late WAV starts playback",
+    "Speech disabled during a real native decode drops its delayed completion without starting audio",
+    "asr-error: safe error, no exposed credential and text conversation remains usable",
+    "tts-error: safe error, no exposed credential and text conversation remains usable",
+    "tts-invalid: safe error, no exposed credential and text conversation remains usable"
+  ],
+  "fixtures": {
+    "files": {
+      "conversation": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/public-fixtures/conversation.wav",
+        "bytes": 507422,
+        "durationMs": 15855.5625,
+        "sha256": "76eedf381aef43ca83d59ddba3f153ae0525c4641905735c7d0f0ec963c7f64c"
+      },
+      "barge": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/public-fixtures/barge.wav",
+        "bytes": 392222,
+        "durationMs": 12255.5625,
+        "sha256": "8f695051cd8c6a22f0b5c583c06769676a9b186202fa0487a8cd7cf66c3080a0"
+      },
+      "single": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/public-fixtures/single.wav",
+        "bytes": 415082,
+        "durationMs": 12969.9375,
+        "sha256": "e1e5911abc27b4bd7c1c221fea746fcef2b23a3a073c4b6ae419a52c05630640"
+      },
+      "silence": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/public-fixtures/silence.wav",
+        "bytes": 384044,
+        "durationMs": 12000,
+        "sha256": "6e49db6ecc812f32cb043fb3c02e4aea55329fa8df27724c5b4e2a76ed57c360"
+      },
+      "pulse": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/public-fixtures/pulse.wav",
+        "bytes": 257964,
+        "durationMs": 8060,
+        "sha256": "a7c505eb20d64c5497cd8e01f4a5f912e81f277545d0d572d857f369194c02ef"
+      },
+      "shortBarge": {
+        "path": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/public-fixtures/shortBarge.wav",
+        "bytes": 461802,
+        "durationMs": 14429.9375,
+        "sha256": "45fb491942972a3b11bb09aa385149802d4382f25dc4bf319cdc575669ee0f89"
+      }
+    },
+    "source": "offline macOS say public English text; file-backed fake microphone",
+    "vad": "real bundled Silero; no fake VAD",
+    "playbackFixture": "synthetic PCM tone; muted WebAudio; not natural TTS quality"
+  },
+  "observations": [
+    {
+      "case": "default",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "ipc-authority",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "silence",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "silence",
+      "events": [],
+      "decoded": 0,
+      "decodeFailures": 0,
+      "vadFrames": 414,
+      "maxInputRms": 0,
+      "getUserMediaCalls": [
+        {
+          "at": 1791384966916,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "ended"
+        }
+      ]
+    },
+    {
+      "case": "pulse",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "pulse",
+      "events": [],
+      "decoded": 0,
+      "decodeFailures": 0,
+      "vadFrames": 291,
+      "maxInputRms": 0.5330510178201978,
+      "getUserMediaCalls": [
+        {
+          "at": 1791384982632,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "ended"
+        }
+      ]
+    },
+    {
+      "case": "conversation",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "conversation",
+      "events": [
+        {
+          "type": "start",
+          "id": 1,
+          "at": 1791385000702,
+          "durationMs": 650,
+          "rms": 0.10427801765759277,
+          "frequency": 605
+        },
+        {
+          "type": "stop",
+          "id": 1,
+          "at": 1791385001351
+        },
+        {
+          "type": "start",
+          "id": 2,
+          "at": 1791385001353,
+          "durationMs": 650,
+          "rms": 0.10427857235990455,
+          "frequency": 655
+        },
+        {
+          "type": "ended",
+          "id": 1,
+          "at": 1791385001353
+        },
+        {
+          "type": "stop",
+          "id": 2,
+          "at": 1791385002001
+        },
+        {
+          "type": "start",
+          "id": 3,
+          "at": 1791385002002,
+          "durationMs": 650,
+          "rms": 0.10427932516976596,
+          "frequency": 710
+        },
+        {
+          "type": "ended",
+          "id": 2,
+          "at": 1791385002002
+        },
+        {
+          "type": "stop",
+          "id": 3,
+          "at": 1791385002652
+        },
+        {
+          "type": "start",
+          "id": 4,
+          "at": 1791385002653,
+          "durationMs": 650,
+          "rms": 0.10428011209411979,
+          "frequency": 770
+        },
+        {
+          "type": "ended",
+          "id": 3,
+          "at": 1791385002653
+        },
+        {
+          "type": "stop",
+          "id": 4,
+          "at": 1791385003302
+        },
+        {
+          "type": "ended",
+          "id": 4,
+          "at": 1791385003303
+        },
+        {
+          "type": "start",
+          "id": 5,
+          "at": 1791385008413,
+          "durationMs": 650,
+          "rms": 0.10428085052878652,
+          "frequency": 820
+        },
+        {
+          "type": "stop",
+          "id": 5,
+          "at": 1791385009063
+        },
+        {
+          "type": "start",
+          "id": 6,
+          "at": 1791385009064,
+          "durationMs": 650,
+          "rms": 0.10428083443295585,
+          "frequency": 880
+        },
+        {
+          "type": "ended",
+          "id": 5,
+          "at": 1791385009064
+        },
+        {
+          "type": "stop",
+          "id": 6,
+          "at": 1791385009714
+        },
+        {
+          "type": "start",
+          "id": 7,
+          "at": 1791385009715,
+          "durationMs": 650,
+          "rms": 0.10428173864792721,
+          "frequency": 935
+        },
+        {
+          "type": "ended",
+          "id": 6,
+          "at": 1791385009716
+        },
+        {
+          "type": "stop",
+          "id": 7,
+          "at": 1791385010364
+        },
+        {
+          "type": "start",
+          "id": 8,
+          "at": 1791385010365,
+          "durationMs": 650,
+          "rms": 0.1042822836219025,
+          "frequency": 985
+        },
+        {
+          "type": "ended",
+          "id": 7,
+          "at": 1791385010365
+        },
+        {
+          "type": "stop",
+          "id": 8,
+          "at": 1791385011014
+        },
+        {
+          "type": "ended",
+          "id": 8,
+          "at": 1791385011015
+        }
+      ],
+      "decoded": 8,
+      "decodeFailures": 0,
+      "vadFrames": 508,
+      "maxInputRms": 0.3661181509681637,
+      "getUserMediaCalls": [
+        {
+          "at": 1791384994532,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "short-barge",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "short-barge",
+      "events": [
+        {
+          "type": "start",
+          "id": 1,
+          "at": 1791385019675,
+          "durationMs": 5000,
+          "rms": 0.10427801765759277,
+          "frequency": 605
+        },
+        {
+          "type": "stop",
+          "id": 1,
+          "at": 1791385024677
+        },
+        {
+          "type": "ended",
+          "id": 1,
+          "at": 1791385024681
+        }
+      ],
+      "decoded": 1,
+      "decodeFailures": 0,
+      "vadFrames": 356,
+      "maxInputRms": 0.3698607373082969,
+      "getUserMediaCalls": [
+        {
+          "at": 1791385013551,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "barge",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "barge",
+      "events": [
+        {
+          "type": "start",
+          "id": 1,
+          "at": 1791385033509,
+          "durationMs": 5000,
+          "rms": 0.10427801765759277,
+          "frequency": 605
+        },
+        {
+          "type": "stop",
+          "id": 1,
+          "at": 1791385034270
+        },
+        {
+          "type": "ended",
+          "id": 1,
+          "at": 1791385034275
+        },
+        {
+          "type": "start",
+          "id": 2,
+          "at": 1791385042639,
+          "durationMs": 650,
+          "rms": 0.10428011209411979,
+          "frequency": 770
+        }
+      ],
+      "decoded": 3,
+      "decodeFailures": 0,
+      "vadFrames": 482,
+      "maxInputRms": 0.3661181509681637,
+      "getUserMediaCalls": [
+        {
+          "at": 1791385027349,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "late-asr-off",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-off",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/profile-late-asr-off",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-asr-hide",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-hide",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/profile-late-asr-hide",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-asr-reload",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-reload",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/profile-late-asr-reload",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-asr-quit",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-asr-quit",
+      "profile": "/var/folders/r7/gs0cbny53rz391_2ht9swv300000gn/T/aimy-media-smoke-8Z56BB/profile-late-asr-quit",
+      "aborted": true,
+      "noNewPosts": true
+    },
+    {
+      "case": "late-tts-off",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-decode-off",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "late-decode-off",
+      "nativeDecodeNotificationDelayMs": 1500,
+      "events": [],
+      "decoded": 1,
+      "decodeFailures": 0,
+      "vadFrames": 250,
+      "maxInputRms": 0.36590559921955196,
+      "getUserMediaCalls": [
+        {
+          "at": 1791385116782,
+          "audio": true,
+          "video": false
+        }
+      ],
+      "tracks": [
+        {
+          "kind": "audio",
+          "readyState": "live"
+        }
+      ]
+    },
+    {
+      "case": "asr-error",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "tts-error",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    },
+    {
+      "case": "tts-invalid",
+      "nativeProtection": {
+        "sandbox": true,
+        "contextIsolation": true,
+        "nodeIntegration": false,
+        "globalNoSandbox": false,
+        "audioUtilitySandboxDisabled": true,
+        "mockKeychain": false,
+        "encryptionAvailable": true
+      }
+    }
+  ],
+  "requests": [
+    {
+      "case": "conversation",
+      "kind": "asr",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791385000373,
+      "finishedAt": 1791385000479,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "conversation",
+      "kind": "llm",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791385000503,
+      "finishedAt": 1791385001006,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791385000515,
+      "finishedAt": 1791385000698,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791385000518,
+      "finishedAt": 1791385000579,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 3,
+      "startedAt": 1791385000915,
+      "finishedAt": 1791385001098,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 4,
+      "startedAt": 1791385001020,
+      "finishedAt": 1791385001083,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "asr",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791385008118,
+      "finishedAt": 1791385008212,
+      "bytes": 85669,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 85292,
+      "sampleCount": 42624,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "conversation",
+      "kind": "llm",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791385008220,
+      "finishedAt": 1791385008722,
+      "bytes": 944,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 5,
+      "startedAt": 1791385008224,
+      "finishedAt": 1791385008408,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 6,
+      "startedAt": 1791385008226,
+      "finishedAt": 1791385008288,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 7,
+      "startedAt": 1791385008627,
+      "finishedAt": 1791385008810,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "conversation",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 8,
+      "startedAt": 1791385008730,
+      "finishedAt": 1791385008793,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "short-barge",
+      "kind": "asr",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791385019346,
+      "finishedAt": 1791385019441,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "short-barge",
+      "kind": "llm",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791385019467,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "short-barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791385019476,
+      "finishedAt": 1791385019663,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 5000
+    },
+    {
+      "case": "short-barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791385019482,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "asr",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791385033177,
+      "finishedAt": 1791385033276,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "barge",
+      "kind": "llm",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791385033298,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 1,
+      "startedAt": 1791385033305,
+      "finishedAt": 1791385033493,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 5000
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791385033312,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "asr",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791385036521,
+      "finishedAt": 1791385036616,
+      "bytes": 93861,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 93484,
+      "sampleCount": 46720,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "barge",
+      "kind": "llm",
+      "mode": "barge",
+      "ordinal": 2,
+      "startedAt": 1791385036623,
+      "finishedAt": 1791385037123,
+      "bytes": 878,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 3,
+      "startedAt": 1791385036626,
+      "finishedAt": 1791385042632,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 4,
+      "startedAt": 1791385036628,
+      "finishedAt": 1791385042632,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 5,
+      "startedAt": 1791385042641,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "barge",
+      "kind": "tts",
+      "mode": "barge",
+      "ordinal": 6,
+      "startedAt": 1791385042642,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-asr-off",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791385051083,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-asr-hide",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791385065286,
+      "bytes": 94885,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 94508,
+      "sampleCount": 47232,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-asr-reload",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791385079323,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-asr-quit",
+      "kind": "asr",
+      "mode": "slow-asr",
+      "ordinal": 1,
+      "startedAt": 1791385093248,
+      "bytes": 95909,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-asr-model",
+      "audioBytes": 95532,
+      "sampleCount": 47744,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "asr",
+      "mode": "slow-tts",
+      "ordinal": 1,
+      "startedAt": 1791385107580,
+      "finishedAt": 1791385107677,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "llm",
+      "mode": "slow-tts",
+      "ordinal": 1,
+      "startedAt": 1791385107700,
+      "finishedAt": 1791385108201,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "tts",
+      "mode": "slow-tts",
+      "ordinal": 1,
+      "startedAt": 1791385107715,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-tts-off",
+      "kind": "tts",
+      "mode": "slow-tts",
+      "ordinal": 2,
+      "startedAt": 1791385107719,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "asr",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791385122593,
+      "finishedAt": 1791385122686,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "llm",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791385122713,
+      "finishedAt": 1791385123214,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 1,
+      "startedAt": 1791385122723,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "late-decode-off",
+      "kind": "tts",
+      "mode": "normal",
+      "ordinal": 2,
+      "startedAt": 1791385122724,
+      "finishedAt": 1791385122785,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "asr",
+      "mode": "asr-error",
+      "ordinal": 1,
+      "startedAt": 1791385132986,
+      "finishedAt": 1791385132991,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "asr-error",
+      "kind": "llm",
+      "mode": "asr-error",
+      "ordinal": 1,
+      "startedAt": 1791385133092,
+      "finishedAt": 1791385133594,
+      "bytes": 682,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 1,
+      "startedAt": 1791385133103,
+      "finishedAt": 1791385133286,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 2,
+      "startedAt": 1791385133104,
+      "finishedAt": 1791385133165,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 3,
+      "startedAt": 1791385133500,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "asr-error",
+      "kind": "tts",
+      "mode": "asr-error",
+      "ordinal": 4,
+      "startedAt": 1791385133605,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": true,
+      "finished": false,
+      "lateResponseAttempted": true,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17,
+      "audioDurationMs": 650
+    },
+    {
+      "case": "tts-error",
+      "kind": "asr",
+      "mode": "tts-error",
+      "ordinal": 1,
+      "startedAt": 1791385141744,
+      "finishedAt": 1791385141838,
+      "bytes": 96933,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 96556,
+      "sampleCount": 48256,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "tts-error",
+      "kind": "llm",
+      "mode": "tts-error",
+      "ordinal": 1,
+      "startedAt": 1791385141861,
+      "finishedAt": 1791385142363,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 1,
+      "startedAt": 1791385141874,
+      "finishedAt": 1791385141874,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 2,
+      "startedAt": 1791385141874,
+      "finishedAt": 1791385141874,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 3,
+      "startedAt": 1791385142269,
+      "finishedAt": 1791385142269,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 4,
+      "startedAt": 1791385142373,
+      "finishedAt": 1791385142373,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    },
+    {
+      "case": "tts-error",
+      "kind": "llm",
+      "mode": "tts-error",
+      "ordinal": 2,
+      "startedAt": 1791385142452,
+      "finishedAt": 1791385142954,
+      "bytes": 932,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 5,
+      "startedAt": 1791385142454,
+      "finishedAt": 1791385142454,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 6,
+      "startedAt": 1791385142456,
+      "finishedAt": 1791385142456,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 7,
+      "startedAt": 1791385142857,
+      "finishedAt": 1791385142857,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-error",
+      "kind": "tts",
+      "mode": "tts-error",
+      "ordinal": 8,
+      "startedAt": 1791385142963,
+      "finishedAt": 1791385142963,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "asr",
+      "mode": "tts-invalid",
+      "ordinal": 1,
+      "startedAt": 1791385150792,
+      "finishedAt": 1791385150885,
+      "bytes": 95909,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-asr-model",
+      "audioBytes": 95532,
+      "sampleCount": 47744,
+      "nonzeroAudio": true
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "llm",
+      "mode": "tts-invalid",
+      "ordinal": 1,
+      "startedAt": 1791385150908,
+      "finishedAt": 1791385151410,
+      "bytes": 688,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 1,
+      "assistantCount": 0,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 1,
+      "startedAt": 1791385150918,
+      "finishedAt": 1791385150919,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 2,
+      "startedAt": 1791385150919,
+      "finishedAt": 1791385150919,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 3,
+      "startedAt": 1791385151314,
+      "finishedAt": 1791385151314,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 4,
+      "startedAt": 1791385151419,
+      "finishedAt": 1791385151419,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "llm",
+      "mode": "tts-invalid",
+      "ordinal": 2,
+      "startedAt": 1791385151503,
+      "finishedAt": 1791385152002,
+      "bytes": 932,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-llm-model",
+      "userCount": 2,
+      "assistantCount": 1,
+      "toolsDisabled": true
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 5,
+      "startedAt": 1791385151511,
+      "finishedAt": 1791385151512,
+      "bytes": 97,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 3
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 6,
+      "startedAt": 1791385151513,
+      "finishedAt": 1791385151513,
+      "bytes": 121,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 11
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 7,
+      "startedAt": 1791385151908,
+      "finishedAt": 1791385151908,
+      "bytes": 124,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 12
+    },
+    {
+      "case": "tts-invalid",
+      "kind": "tts",
+      "mode": "tts-invalid",
+      "ordinal": 8,
+      "startedAt": 1791385152008,
+      "finishedAt": 1791385152008,
+      "bytes": 139,
+      "authenticated": true,
+      "aborted": false,
+      "finished": true,
+      "lateResponseAttempted": false,
+      "model": "fixture-tts-model",
+      "voice": "fixture-voice",
+      "textLength": 17
+    }
+  ],
+  "scannedFiles": 880,
+  "limitations": [
+    "File-backed fake microphone and explicitly fake system permission; real macOS microphone permission not certified",
+    "Chromium AudioServiceSandbox disabled only in test process for file fixture access; renderer isolation and sandbox verified",
+    "Real bundled Silero, AudioWorklet, WebAudio and SDKs; ASR/LLM/TTS responses are localhost fixtures",
+    "Audio output is muted; actual hearing, echo, recognition quality, natural voice and viseme quality remain unverified",
+    "Native safeStorage calls tested; production Keychain policy not independently audited",
+    "No actual microphone/screen/camera or user Aimy window was operated"
+  ]
+}

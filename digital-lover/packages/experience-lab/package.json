@@ -1,0 +1,25 @@
+{
+  "name": "@digital-lover/experience-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Explicit single-request AIRI service probes for Aimy",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@proj-airi/core-agent": "workspace:*",
+    "@proj-airi/provider-inference": "workspace:*",
+    "@xsai/generate-transcription": "0.5.0",
+    "@xsai/generate-speech": "0.5.0",
+    "dotenv": "16.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11",
+    "tsx": "4.23.12"
+  }
+}

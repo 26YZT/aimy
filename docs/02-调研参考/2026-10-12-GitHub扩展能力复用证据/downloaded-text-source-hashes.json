@@ -1,0 +1,2486 @@
+{
+  "date": "2026-10-12",
+  "purpose": "复核所取回文本源码字节；下载不等于逐行审计，来源SHA及审查级别以分项evidence为准。",
+  "source_files": [
+    {
+      "area": "memory",
+      "repository_token": "CaviraOSS--LongMemory",
+      "source_path": "LICENSE",
+      "sha256": "f34bece2de63bf21dfea3bf034231beda315c10631f2174b539225746719420c",
+      "bytes": 11200,
+      "lines": 213
+    },
+    {
+      "area": "memory",
+      "repository_token": "CaviraOSS--LongMemory",
+      "source_path": "package.json",
+      "sha256": "deacf7d53e2e567fee271c13ab5323edc2894cb37510a85e9900a4e3f7cd4210",
+      "bytes": 5016,
+      "lines": 92
+    },
+    {
+      "area": "memory",
+      "repository_token": "memodb-io--memobase",
+      "source_path": "LICENSE",
+      "sha256": "ad79127bef564bb5b553d630958ea64212a8a29ef3960d4b407cc1ad781b56a7",
+      "bytes": 11338,
+      "lines": 201
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "LICENSE",
+      "sha256": "c3e197e295e989f797bf994a98ee514179c5ea031320af0823b2bb4c8b05a09d",
+      "bytes": 1065,
+      "lines": 21
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "package.json",
+      "sha256": "50ace60ec53b6d05e7405df081dd9f624fb45ea9a9fd108a53ed27685fee1e5c",
+      "bytes": 3649,
+      "lines": 118
+    },
+    {
+      "area": "memory",
+      "repository_token": "getzep--graphiti",
+      "source_path": "LICENSE",
+      "sha256": "2825300b20d7b951209835a4a331f29e24725a39d65168e4b831df53aa372650",
+      "bytes": 11325,
+      "lines": 201
+    },
+    {
+      "area": "memory",
+      "repository_token": "getzep--graphiti",
+      "source_path": "pyproject.toml",
+      "sha256": "b95a5450b3dbd705541da5a1006fea79ee61067a6a5287bd1e1b72c1d5a0e054",
+      "bytes": 2847,
+      "lines": 107
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "LICENSE",
+      "sha256": "154f9be8df2d55ceddcd4646c8d8d4206d48867ae1da2b81ce2ab86b51a5f075",
+      "bytes": 11358,
+      "lines": 201
+    },
+    {
+      "area": "memory",
+      "repository_token": "topoteretes--cognee",
+      "source_path": "LICENSE",
+      "sha256": "a471e34908f50c3f120e9a56f3c30cb34e133e4ede01a9cbd5ce718fc358ecd4",
+      "bytes": 11344,
+      "lines": 201
+    },
+    {
+      "area": "memory",
+      "repository_token": "topoteretes--cognee",
+      "source_path": "pyproject.toml",
+      "sha256": "a45ce69db79ee03f296a5ccdf8736c316508d6b64b110f3b965b7e50fbf5bcb0",
+      "bytes": 18027,
+      "lines": 432
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "LICENSE",
+      "sha256": "0bbcbe931c353293a2fafce08326181dfeea0e568c566afd4ce8337a70f5e219",
+      "bytes": 11349,
+      "lines": 201
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "Cargo.toml",
+      "sha256": "57ebd4a661792c7e30380fc2edf350d6e7fb926684627b01e5ae6ab13c298795",
+      "bytes": 6766,
+      "lines": 164
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "LICENSE",
+      "sha256": "fd64d7380c9889373ec5e3d99ee0e154c8f1707c036054090dc2437eb765cb98",
+      "bytes": 10755,
+      "lines": 190
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "README.md",
+      "sha256": "3a2f6a0fea87ed03b4b5a21de90a166ed005627c897a26807c33cd2fd854ce77",
+      "bytes": 16847,
+      "lines": 514
+    },
+    {
+      "area": "memory",
+      "repository_token": "CaviraOSS--LongMemory",
+      "source_path": "src/core/index.ts",
+      "sha256": "648a7e82605769bc250c38a0a3fc49a8d89cb9ad4eb442df6f3c2c1be302b1f8",
+      "bytes": 1255,
+      "lines": 34
+    },
+    {
+      "area": "memory",
+      "repository_token": "CaviraOSS--LongMemory",
+      "source_path": "src/core/recall/associative_recall.ts",
+      "sha256": "cab5024b1cb56649ea7b10627c95a45e0d65a70068f72122afaf0114c571d26e",
+      "bytes": 36971,
+      "lines": 805
+    },
+    {
+      "area": "memory",
+      "repository_token": "CaviraOSS--LongMemory",
+      "source_path": "src/core/engine/ingest_engine.ts",
+      "sha256": "097b833b5446fa8de9ea6f361b6d817a5f4c727e25195969a100e00629dd6a5e",
+      "bytes": 27868,
+      "lines": 538
+    },
+    {
+      "area": "memory",
+      "repository_token": "CaviraOSS--LongMemory",
+      "source_path": "src/stores/sqlite/sqlite_store.ts",
+      "sha256": "2dfa3f7ceb2bd82911adf8687e7a4936bfbeb59303f1ba23a50aa849f3c2e03b",
+      "bytes": 26730,
+      "lines": 521
+    },
+    {
+      "area": "memory",
+      "repository_token": "CaviraOSS--LongMemory",
+      "source_path": "src/server/middleware/telemetry.ts",
+      "sha256": "d25ddbd4914b47a74433343a05e3d7ecdf27aa56efab34d0b32a62cd2b62d30b",
+      "bytes": 2144,
+      "lines": 47
+    },
+    {
+      "area": "memory",
+      "repository_token": "memodb-io--memobase",
+      "source_path": "src/server/docker-compose.yml",
+      "sha256": "bd43193dcd286699493d3631ae583779153647408b1e894b5f22338d26540a61",
+      "bytes": 1914,
+      "lines": 67
+    },
+    {
+      "area": "memory",
+      "repository_token": "memodb-io--memobase",
+      "source_path": "src/server/api/pyproject.toml",
+      "sha256": "759eef2534f218bd70114b2120708c435c960ce1c59297d6e1a72b07fda2ae8b",
+      "bytes": 787,
+      "lines": 33
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "scripts/postinstall.cjs",
+      "sha256": "b874f31f90595663566cb9d8d01645e2f10a7da3c9250146a27b06ad5782f86f",
+      "bytes": 391,
+      "lines": 16
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/index.ts",
+      "sha256": "e90d05627bafae383951a24ff77295056b366880503b5c92837645d79062dcca",
+      "bytes": 5587,
+      "lines": 166
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/postinstall.ts",
+      "sha256": "9658452ed5d2565a16866d74f0c07220d13d5d8fb6fa78bc699fafb300b4833f",
+      "bytes": 3585,
+      "lines": 88
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/embeddings/local.ts",
+      "sha256": "3e0d330518dc20c5d6fe5bcdaf33173f27465d5b513017ada226c7cc852f5915",
+      "bytes": 8864,
+      "lines": 195
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/embeddings/transformers.ts",
+      "sha256": "d84e2d8358cc4fb6bf7421dd0e3fb31a877bb08f94bb4f54d3afbb91f8d9a570",
+      "bytes": 4769,
+      "lines": 107
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/core/raw-append-only.ts",
+      "sha256": "dad49dcec35199a13eaab342eea88c6052c563bb8ce4fc67b43be8877cedc44a",
+      "bytes": 234,
+      "lines": 6
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/core/memory.ts",
+      "sha256": "435dbe3fada14f1acd31315e9604b8a05d33daced9d34dd35a0322d37efa87c4",
+      "bytes": 26152,
+      "lines": 590
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/core/config.ts",
+      "sha256": "376439bd45786abfeedf0c381a150ad91b0ae3829105d194ca2194278b50afb1",
+      "bytes": 21865,
+      "lines": 525
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/util/tokenize.ts",
+      "sha256": "9eacf589b8ce85b3e138a72a51253fc2bcdc79192ec35714621869a64c688164",
+      "bytes": 676,
+      "lines": 23
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/entry/store-kit.ts",
+      "sha256": "8c28c8f099d776a338e7311ab55334a80370cbd16cf9ec6d3d698fa4d9f5c8ca",
+      "bytes": 4082,
+      "lines": 54
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/search/embed-memories.ts",
+      "sha256": "998f0d1e893bf28efefa5e6c9c17df197efa53f88e6f2384e37e0d04726fda46",
+      "bytes": 19790,
+      "lines": 440
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/search/rrf.ts",
+      "sha256": "cbe9c7108fe0720ed8ad080800899b584dadf567671495488b551fc07dba74e9",
+      "bytes": 2210,
+      "lines": 54
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/search/bm25-search.ts",
+      "sha256": "5b72c75e5eb5822a32156b088311a82a0664da15e483faf0a59a519ae648fbf7",
+      "bytes": 2424,
+      "lines": 53
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/search/hybrid.ts",
+      "sha256": "f3f21eb0ff0aab7fe5615406ee6d92667d1ae44973b1d265158da7b64faac391",
+      "bytes": 6736,
+      "lines": 121
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/search/bm25.ts",
+      "sha256": "7b71439a2d77928234037b151fa73222a501c3f4f4f31851ef9aaa8d70bacd50",
+      "bytes": 2179,
+      "lines": 69
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/db/vector-store.ts",
+      "sha256": "85839dce31a74f566f016eb2a18a85736241e6782829fc8a08be6a4958dd88d8",
+      "bytes": 12801,
+      "lines": 293
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/db/sqlite.ts",
+      "sha256": "c8ebf69a870e33af9c1857301301e7c6b6735181e8feb249a706de43bd56ec90",
+      "bytes": 944,
+      "lines": 27
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/db/connect.ts",
+      "sha256": "8d81720bd56ffc8a811ea139de5b160e0f244593d6e7bcae9c2e832379f5d065",
+      "bytes": 4197,
+      "lines": 90
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/remember.ts",
+      "sha256": "86f0d3c7470fb5080ef30cf56fea42aacbfaec70bf6865a599e0123ece06c227",
+      "bytes": 7997,
+      "lines": 151
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/recall-core.ts",
+      "sha256": "8ce7b8f7a429e4c338b921621dce37155da548f46214e9e3f4b9d752b1638218",
+      "bytes": 7277,
+      "lines": 138
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/recall-pipeline.ts",
+      "sha256": "b34426dc8e21aaacd9328c35b5082720061ab3a32d6a18d8f91501952e9ae35a",
+      "bytes": 20772,
+      "lines": 408
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/types.ts",
+      "sha256": "684826e7eb0972d12b7933aa74f340857b122ae6749b3f43ab06a963714ef8b0",
+      "bytes": 2690,
+      "lines": 62
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/promote.ts",
+      "sha256": "272352084a9d56a789c90b46dd319c589ffe5445d11e2ddf98fcdf9164d5ff12",
+      "bytes": 5025,
+      "lines": 116
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/refine.ts",
+      "sha256": "64c6e2f720ebbe6d62c05d027610515588a036db013ebeed4349a00a0ced5d0d",
+      "bytes": 793,
+      "lines": 14
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/remember-local.ts",
+      "sha256": "b25118ff627d5fac33fdb432bc8d64391149c8134bf06bd7d90ed08766a7a8de",
+      "bytes": 7592,
+      "lines": 145
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/api/forget.ts",
+      "sha256": "a2b59f87c39a238f5682e6d82904e610a2b1f54670786573f14249ced4671012",
+      "bytes": 4018,
+      "lines": 85
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/trust/reject-flow.ts",
+      "sha256": "032713fbd72689bb4af70cf283cefd918f58036a61ae82be646b654e7838a80c",
+      "bytes": 4229,
+      "lines": 98
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/entry-writes.ts",
+      "sha256": "8f4af3eec70ec71b8f7029079a0e3a1f0884df021a95950de2b05d6abda48b50",
+      "bytes": 13464,
+      "lines": 280
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/mirrors.ts",
+      "sha256": "3c76218b0f915a675b70f085fb14279ccfbca7bc8bf11779f511eac02a0f57a1",
+      "bytes": 13906,
+      "lines": 372
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/rejected-values.ts",
+      "sha256": "f7e04fb4444443e4f22def36d4c1be366c3ea584d9e891a0f5455318f5045eba",
+      "bytes": 10370,
+      "lines": 208
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/delete-and-batch.ts",
+      "sha256": "31ba631d82705931de98ad1c664d51d744865a8fb1be7966e4c3588aa454f3f0",
+      "bytes": 21294,
+      "lines": 459
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/summary-dirty.ts",
+      "sha256": "d88a7a6955fbc15a25b1951686cf5f9de2b238a4ac282b42fe76935f9b9bcbe6",
+      "bytes": 1295,
+      "lines": 36
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/index.ts",
+      "sha256": "7c8bc30cbd44d782ee9bb5e478699c94872e7ca6570d1ea775af467d46fde98c",
+      "bytes": 628,
+      "lines": 8
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/raw-archive.ts",
+      "sha256": "256e463a1ab90920b78601064b24c6a8edf92095b726fbb58c4e8a88550b4717",
+      "bytes": 4974,
+      "lines": 107
+    },
+    {
+      "area": "memory",
+      "repository_token": "kitfunso--hippo-memory",
+      "source_path": "src/store/rejection.ts",
+      "sha256": "de9e40b646a92438bde7659f70c3a1a943412b0d6f93f88f9178245fc85ab629",
+      "bytes": 5995,
+      "lines": 148
+    },
+    {
+      "area": "memory",
+      "repository_token": "getzep--graphiti",
+      "source_path": "graphiti_core/graphiti.py",
+      "sha256": "f3a4a26094e681fea3ed333d70d89fcb5df5af49b1a9599d8e77d4fcaf8be45a",
+      "bytes": 90672,
+      "lines": 2192
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/package.json",
+      "sha256": "ac4d7e8c8fc91c19a266485583a29a98d557e0f7631c78ae7d18659b872c1327",
+      "bytes": 4632,
+      "lines": 154
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/index.ts",
+      "sha256": "e7d92724811b4d77965ccf94a57dc1b2b3b2c9c502a857099037417c9aa702bc",
+      "bytes": 11528,
+      "lines": 450
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/capture/summarizer.ts",
+      "sha256": "9aa3263330e282e1a9b93a1f83f81bc35be9be193b3964e0ce9981a2f8cc238d",
+      "bytes": 6355,
+      "lines": 171
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/capture/capture.ts",
+      "sha256": "8ef0cac7bf3ef80a3139b3ad454a232831c33bce03707d9bf430c8d153a51884",
+      "bytes": 59612,
+      "lines": 1770
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/logger/redact.ts",
+      "sha256": "b05775cdc11b7f39c5b21c90f46b6ef108bf1cb2d10547ea3c7862b1fe5389d3",
+      "bytes": 5363,
+      "lines": 174
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/logger/index.ts",
+      "sha256": "36cb53dc92e61d5d5efd2870ad36c7d2210128b862e2d02afa4f35cabeb2f8e8",
+      "bytes": 14383,
+      "lines": 431
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/config/schema.ts",
+      "sha256": "ef276f3f765272f4ff662bfaca76b37a13e4e0b5cf7799cccb3d1a2a5144cc48",
+      "bytes": 31920,
+      "lines": 705
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/config/defaults.ts",
+      "sha256": "2c84dcfa6f09a335f889661aa756112d9519a9a1a34665b7600bf34fcd0f7dcb",
+      "bytes": 14433,
+      "lines": 391
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/storage/keyword.ts",
+      "sha256": "4375010c42ed119a36e38f8f7992a4943b943941456f78b74a4b495ff1825971",
+      "bytes": 6836,
+      "lines": 194
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/storage/connection.ts",
+      "sha256": "302e8f4844b4ebd3c8adb1794aee3e9a8ee4a9f91dc29dd0c167b91438c2009c",
+      "bytes": 4996,
+      "lines": 151
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/storage/vector.ts",
+      "sha256": "f17cb0074ffee5199507ffee3b29d34fab9fde4657a0662fc66e56c12c272540",
+      "bytes": 11037,
+      "lines": 298
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/retrieval/ranker.ts",
+      "sha256": "c3ac5133f9433e0ee312102c6228745ce9250446d418465774b6abfe0e1341df",
+      "bytes": 22492,
+      "lines": 626
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/retrieval/retrieve.ts",
+      "sha256": "e9b229f026c934d22619291ed96dd0de09a97b063d799bebd1b8758dbc9ab089",
+      "bytes": 28469,
+      "lines": 809
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/retrieval/injector.ts",
+      "sha256": "54e9279cc7c9269f0f003a7bfa0c6c631ac63cfce1793823aff2cfb7315ee6f6",
+      "bytes": 22694,
+      "lines": 675
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/retrieval/profile.ts",
+      "sha256": "12af5aaf3960f7b750fe7bdf5d0546d978a2c425aab79d05d6fc99c50125ceab",
+      "bytes": 1288,
+      "lines": 28
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/retrieval/query-builder.ts",
+      "sha256": "6782f300976eb634812364b66a5804f9cea771e10cb253ece006d5625e9ef0c3",
+      "bytes": 7343,
+      "lines": 205
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/telemetry/index.ts",
+      "sha256": "b1acbc2acec89ca4a8d0194dd1373cacdc3e2c37902e4e50a42e3c88e8e8b104",
+      "bytes": 93,
+      "lines": 2
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/telemetry/sender.ts",
+      "sha256": "dbc891ca0f92cf9c33f53b09cce26780d3e13d23785b5984fab46e45aa84f239",
+      "bytes": 10617,
+      "lines": 357
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/logger/sinks/llm-log.ts",
+      "sha256": "ab62a4575274c84eff95289bc289bd55d6fd9e1afa6e4b47920a17f3227250ea",
+      "bytes": 780,
+      "lines": 29
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/embedding/providers/local.ts",
+      "sha256": "37c000c4007171f8d137260f35cfd78ccb5ef35b5b2445991a495c004c47362b",
+      "bytes": 4893,
+      "lines": 139
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/storage/repos/policies.ts",
+      "sha256": "7c7a5f07cb28e6a6807df1cf2b7ca63fba5f66fdc7a93a99129a844b7d09855c",
+      "bytes": 20094,
+      "lines": 624
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/storage/repos/traces.ts",
+      "sha256": "17177ea17cc9270b8fad33d0268be4c61794ce956d3dfe25e824f36866823a92",
+      "bytes": 35581,
+      "lines": 985
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/storage/repos/episodes.ts",
+      "sha256": "c94025e2196a19cfb8459ec56724b82cf7e662aba74e726b969e99a0d53bd4e7",
+      "bytes": 9909,
+      "lines": 279
+    },
+    {
+      "area": "memory",
+      "repository_token": "MemTensor--MemOS",
+      "source_path": "apps/memos-local-plugin/core/storage/migrations/001-initial.sql",
+      "sha256": "7971e3f8ee157b8b4e86b19a7216a7b2df98dd60634b810cac3501c849f0bc3d",
+      "bytes": 23639,
+      "lines": 486
+    },
+    {
+      "area": "memory",
+      "repository_token": "topoteretes--cognee",
+      "source_path": "cognee/api/v1/delete/delete.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "area": "memory",
+      "repository_token": "topoteretes--cognee",
+      "source_path": "cognee/api/v1/cognify/cognify.py",
+      "sha256": "294613c19f0b7e66df61d59b398dc958f2f2f04ab1bf2c55166565486de91fa5",
+      "bytes": 35618,
+      "lines": 751
+    },
+    {
+      "area": "memory",
+      "repository_token": "topoteretes--cognee",
+      "source_path": "cognee/api/v1/search/search.py",
+      "sha256": "aeee7c0591ced93cae880d6784c093cf566649ab997dffb80cbca45b8dee3d07",
+      "bytes": 20130,
+      "lines": 427
+    },
+    {
+      "area": "memory",
+      "repository_token": "topoteretes--cognee",
+      "source_path": "cognee/api/v1/add/add.py",
+      "sha256": "dfaff8078bd73be3d7cd115c0fecabb0794845d3109771d63c6fad65026f92e1",
+      "bytes": 17979,
+      "lines": 383
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/package.json",
+      "sha256": "e222c72e4e593062b3d8c98990b43ce4dddef0268815ee17ebfa22b4137187e5",
+      "bytes": 8404,
+      "lines": 325
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/package.json",
+      "sha256": "e9e1dbf5cbdbbc0bff21d28b058c59bb371f7e32efa071fd7f1284f7622b4b3b",
+      "bytes": 1325,
+      "lines": 53
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/index.ts",
+      "sha256": "c33272741b63eb8076dcfd85cf096863bec6f0a094503a43bfd63c1ade0183bd",
+      "bytes": 2326,
+      "lines": 60
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/vector_stores/base.ts",
+      "sha256": "0c866025ad01d4144a18346f057985223098a49f03f80943309601ebf382ec02",
+      "bytes": 896,
+      "lines": 34
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/vector_stores/memory.ts",
+      "sha256": "1e71f3dd8471a89e4b822a482b37df9160c9da900f9f321bd7eaa256a9a9f52e",
+      "bytes": 14124,
+      "lines": 491
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/embeddings/fastembed.ts",
+      "sha256": "d64ceb8e6efc25a8b234f84a212cc84868ad74c6b2596c22291330c927322723",
+      "bytes": 3095,
+      "lines": 96
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/memory/memory.types.ts",
+      "sha256": "ddfb5f55c4b2be17f39a24354885f0f6f236cf5c660fc9c7cdfe6875b4960f0e",
+      "bytes": 1680,
+      "lines": 60
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/memory/index.ts",
+      "sha256": "dd2077fe77e633dfb156641ba087d0c5c7fae68203e94a4e824f5154304ed008",
+      "bytes": 70149,
+      "lines": 2201
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/config/manager.ts",
+      "sha256": "afa61cceb7b9f45e54fcbfecaefc64dc960cc5321a2cb39a8c1e0746ece0b8f1",
+      "bytes": 9666,
+      "lines": 223
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/config/defaults.ts",
+      "sha256": "8a156c6f355f990ec2d547c65ad1cc641e83b7c1a878f6918916011b8193be3c",
+      "bytes": 731,
+      "lines": 35
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/utils/lemmatization.ts",
+      "sha256": "fadcf1037665227f25d2898c10a331468dba5341ae56ea6ef61c3183107c1dfa",
+      "bytes": 5208,
+      "lines": 278
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/utils/factory.ts",
+      "sha256": "d4beed95d340a666a8f4a23adaacdf0c754b203b5c3475af2186662f83568c4c",
+      "bytes": 11006,
+      "lines": 297
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/utils/telemetry.ts",
+      "sha256": "474e599574c3ea87c4b356030b987008614716c3706910bbf9c2e9c9ddb42895",
+      "bytes": 4661,
+      "lines": 171
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/utils/bm25.ts",
+      "sha256": "007c3040318fddd1b6183d6d13595b0b05058808af602ac79cb6adce738e341d",
+      "bytes": 1745,
+      "lines": 64
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/storage/MemoryHistoryManager.ts",
+      "sha256": "99273318e853d72470157182b281363fe6ae33a2c859832aff0cf9cd7816c413",
+      "bytes": 1469,
+      "lines": 58
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/storage/SQLiteManager.ts",
+      "sha256": "9e18733f478acd2d62979a8925cf07b0bed4c61ed5a48f074f7820fccb98c0c3",
+      "bytes": 4484,
+      "lines": 177
+    },
+    {
+      "area": "memory",
+      "repository_token": "mem0ai--mem0",
+      "source_path": "mem0-ts/src/oss/src/prompts/index.ts",
+      "sha256": "d9f526f5975559c5a8fde264e5b996579350ed651cb429c0d55b3611842206d4",
+      "bytes": 56092,
+      "lines": 1042
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/lib.rs",
+      "sha256": "a7f219e0fc616f097696f9f3dfb7404c45a26524a5caaa703e33cdbb1462d1de",
+      "bytes": 52169,
+      "lines": 1409
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/models.rs",
+      "sha256": "4c02d9a2e30896530d18bef6bd24680c5fafe07b437b0ec6f1797af859b46e74",
+      "bytes": 17029,
+      "lines": 540
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/clip.rs",
+      "sha256": "b5ee86729d7f70f38c3f526c912d77204d31770d27574e36fa6ba6b6dd77b602",
+      "bytes": 60368,
+      "lines": 1754
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/text_embed.rs",
+      "sha256": "dfbf0db654f63584e7206cc0188c803ced5e23e2296559d02881dce41be24534",
+      "bytes": 38943,
+      "lines": 1183
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/types/memory_card.rs",
+      "sha256": "70ba120eddb9fa8cafe3abcb82dc5cbb933d0873661eafefd9f7b7449c39ca64",
+      "bytes": 18876,
+      "lines": 651
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/types/mod.rs",
+      "sha256": "8dfb6fd5d040d9c8b5084fa3d1ce23497796551e6c2325d37503ed159c35a0bf",
+      "bytes": 5650,
+      "lines": 131
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/types/frame.rs",
+      "sha256": "e4ba69042ff7f3154bd8fa15630f14a27a35517ad6bc89557bce612602581d37",
+      "bytes": 11024,
+      "lines": 358
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/types/memories_track.rs",
+      "sha256": "895ffbec33fec7b7f5917f82a608985b86b66d0cfca0b262fe8a11f0e087df94",
+      "bytes": 25725,
+      "lines": 840
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/memvid/maintenance.rs",
+      "sha256": "ad57aba4105e257025b46a74ece9152da4fceb6faa531ccd05c3bb026d610c08",
+      "bytes": 6339,
+      "lines": 176
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/memvid/mutation.rs",
+      "sha256": "bbd2725b8b944c8aba2341eb4dd04554df46436a8f810707845c101a04073ebd",
+      "bytes": 164228,
+      "lines": 4179
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/memvid/memory.rs",
+      "sha256": "56a9e261de8d5937dfcda1668bf280d7dc52cc541b55e7712bd28cf9e9102118",
+      "bytes": 29508,
+      "lines": 895
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/memvid/frame.rs",
+      "sha256": "37620c64d112d962f0f259fd76491b13fdf73b600ea682df78caa86b1de83536",
+      "bytes": 24416,
+      "lines": 681
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/memvid/lifecycle.rs",
+      "sha256": "42f20ec06ec81fbe906d5c421ed63f79f52901fb7d8798bcf0240714045d55c9",
+      "bytes": 57853,
+      "lines": 1598
+    },
+    {
+      "area": "memory",
+      "repository_token": "memvid--memvid",
+      "source_path": "src/memvid/search/api.rs",
+      "sha256": "bf5f7c0667f659659238e930dc208b918ba8a5dff26874d21494774febc77690",
+      "bytes": 38497,
+      "lines": 1107
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": "LICENSE",
+      "sha256": "c48a8498e88fbb1e6da5438f19e919e6eb926cd7d25372b2ed35ff92b2631bd1",
+      "bytes": 1216,
+      "lines": 23
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": "pyproject.toml",
+      "sha256": "65b6f81d92183fb0f7b65a0dfd2d5ca2826d0a1b6f3ede021305c092fb8f2d7d",
+      "bytes": 1840,
+      "lines": 68
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": ".gitmodules",
+      "sha256": "ac12c202b81ee003ad9957de0c6148f258db0b3c53fbe557120a948ee3aa2394",
+      "bytes": 117,
+      "lines": 4
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": "LICENSE-Live2D.md",
+      "sha256": "5e2b759bba52c9d01bc79fcd3ea589aa0a7d50e4f6010a62185309947b657371",
+      "bytes": 57705,
+      "lines": 646
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": "src/open_llm_vtuber/conversations/single_conversation.py",
+      "sha256": "fb1d57d19fe4709e3ee4b26c47ef427a903478963d909de68eddd554d3dac96b",
+      "bytes": 6675,
+      "lines": 174
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": "src/open_llm_vtuber/conversations/conversation_handler.py",
+      "sha256": "98a285b0c956376f9c219d1802a2f027ba927b7f95f609dc04242f473305efa1",
+      "bytes": 7958,
+      "lines": 213
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": "src/open_llm_vtuber/conversations/tts_manager.py",
+      "sha256": "55d94e8ddd134d4b1dd5565d6c6e7025b46a8ec05bb7a98c6eeebbc81aca55b0",
+      "bytes": 6542,
+      "lines": 182
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "source_path": "src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+      "sha256": "d0124df26b4ca24fd5e135959927b355f9e388350f4d9bbbae575dc714d2e1b7",
+      "bytes": 28012,
+      "lines": 702
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "livekit__agents",
+      "source_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "lines": 201
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "livekit__agents",
+      "source_path": "MODEL_LICENSE",
+      "sha256": "dfd8e206e8d2f207c6e4ca174600610287afc649005127dabe68be74ccf60348",
+      "bytes": 5623,
+      "lines": 113
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "livekit__agents",
+      "source_path": "livekit-plugins/livekit-plugins-turn-detector/livekit/plugins/turn_detector/base.py",
+      "sha256": "111d719058e7a9a914aada32f57e65d4f9d022bd99415e0a3f198b394ff2ca77",
+      "bytes": 10471,
+      "lines": 297
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "KoljaB__RealtimeTTS",
+      "source_path": "LICENSING_ADDENDUM.md",
+      "sha256": "300ab899ffb0375071c10c8365cb0411cc326715250bc98737e962f18812afc6",
+      "bytes": 1512,
+      "lines": 26
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "KoljaB__RealtimeTTS",
+      "source_path": "LICENSE",
+      "sha256": "bb7881916bddc6666a4bb8f44375b9e7282c845112823883c846aa1c3dbf6cc9",
+      "bytes": 1069,
+      "lines": 21
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "KoljaB__RealtimeTTS",
+      "source_path": "setup.py",
+      "sha256": "5afd8ee7ae3f5a1d5bda345fed4565e63da20afa2f50931ba3577534bb976636",
+      "bytes": 16311,
+      "lines": 384
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "KoljaB__RealtimeTTS",
+      "source_path": "RealtimeTTS/text_to_stream.py",
+      "sha256": "063852db342309973319a84221646cad38f39e6b70d3f9d6ba03f17c982a6648",
+      "bytes": 57271,
+      "lines": 1403
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "LICENSE",
+      "sha256": "03d862b922867b8c3406a0c17791e256ed3d76f197d88c1996c4aebfb79f688e",
+      "bytes": 2239,
+      "lines": 47
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "NOTICES",
+      "sha256": "83a1d666450e06c846be76efcdd311294c28d07417bed0cb119d6400ba3cdc3b",
+      "bytes": 3751,
+      "lines": 68
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "README.md",
+      "sha256": "96fc31c9382066c4b469f14074d006dc5e6c9f99cdd71a208a2d3fe1bff73286",
+      "bytes": 29576,
+      "lines": 782
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "include/ten_vad.h",
+      "sha256": "21409e22b80a104d1eeeb11527812baeaf96f9a59819e2e2fb3b3d462c609f7f",
+      "bytes": 3157,
+      "lines": 87
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "examples/test_browser.html",
+      "sha256": "5247aacabbbc1218af23bb66a7ee94f48ce84afc63d85ef63f6576a3ac0e8799",
+      "bytes": 16266,
+      "lines": 424
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "examples/test_node.js",
+      "sha256": "1204973e699383928013bf5bd1b43d3ed3fd9a988917ab4ae618c9293840ff92",
+      "bytes": 19228,
+      "lines": 564
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "src/ten_vad.cc",
+      "sha256": "53c14b8328d35eda6c016ceb2254860839ac30d79f0ebdcc4fe61a139a4c6fac",
+      "bytes": 2036,
+      "lines": 69
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "lib/Web/README.md",
+      "sha256": "58b216e1438e0af397bff10f890ab9bb49c8ea11b6b7056f76c19761d117f5a0",
+      "bytes": 9144,
+      "lines": 281
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-vad",
+      "source_path": "lib/Web/ten_vad.d.ts",
+      "sha256": "4f41f449b52f7c4a1066fe2a56c9bc137c8f79ac88678bd779bdb5178298009f",
+      "bytes": 3063,
+      "lines": 111
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__pipecat",
+      "source_path": "LICENSE",
+      "sha256": "e31a733ecb79cbffafd5474e964e5eca15e0a0876a42b1d7253b51b198eb61aa",
+      "bytes": 1301,
+      "lines": 24
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__pipecat",
+      "source_path": "src/pipecat/audio/turn/smart_turn/local_smart_turn_v3.py",
+      "sha256": "8bd3bc15ed96fd54539ec63400ce64ce86ce82a388d0aa467e641c9a27a2f970",
+      "bytes": 7267,
+      "lines": 183
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__pipecat",
+      "source_path": "src/pipecat/audio/turn/smart_turn/_whisper_features.py",
+      "sha256": "139b047d10dee42ad5b4894489012e515a882d8f5e2bffe8ad27b30728fc9968",
+      "bytes": 7221,
+      "lines": 185
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__pipecat",
+      "source_path": "src/pipecat/audio/turn/smart_turn/base_smart_turn.py",
+      "sha256": "8c5c11aa3a72abb9d37447baa58475126bee7eb5932d5c8a17ee56d858be6c8a",
+      "bytes": 11010,
+      "lines": 282
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "lines": 202
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "README.md",
+      "sha256": "791db4d7e547bb2a1a36e8f46fcbcfdf0d7c707c24edbbb2f13b35df8d5c37c8",
+      "bytes": 54754,
+      "lines": 765
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "nodejs-addon-examples/test_asr_streaming_transducer_microphone.js",
+      "sha256": "9c61078d69d362ec09ac35015ff48e0189495de02ca4392c00e24e238550c995",
+      "bytes": 2522,
+      "lines": 87
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "wasm/asr/sherpa-onnx-asr.js",
+      "sha256": "fff0b2059f4e203d8d3c9fc4af997d146e724236c081b9f5af1e5df05c5a421b",
+      "bytes": 54712,
+      "lines": 2037
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "wasm/vad/sherpa-onnx-vad.js",
+      "sha256": "893f01168d529add8318c0a6055cf725e788585fda9b81722564a8c3c3f60e34",
+      "bytes": 7772,
+      "lines": 331
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "scripts/node-addon-api/README.md",
+      "sha256": "af617236c250e2e126e211808150db5a1b0c5da958468d7592e25e0cef7f7383",
+      "bytes": 698,
+      "lines": 27
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "scripts/node-addon-api/package.json",
+      "sha256": "1ad3200d04bd58ddb62bf09c1034a9e3e8fc4fd6b18f93a7e3cac1132dc293b6",
+      "bytes": 1667,
+      "lines": 70
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "scripts/node-addon-api/lib/addon.js",
+      "sha256": "ccdfdd81775611bb1b4de2f30fc22a987f9d6936b280c91b6a0c597e02f3c839",
+      "bytes": 2760,
+      "lines": 98
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "scripts/node-addon-api/lib/online-speech-denoiser.js",
+      "sha256": "40c060d62e8080e4d37fbc4bce37273afaadd42ad19ff3f6ce35c008755b7eef",
+      "bytes": 1286,
+      "lines": 46
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "scripts/node-addon-api/lib/vad.js",
+      "sha256": "516759499cfd4479f6feaf8dd81452d8189c4909ad402923dd983fba71496c38",
+      "bytes": 2971,
+      "lines": 134
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "k2-fsa__sherpa-onnx",
+      "source_path": "scripts/node-addon-api/lib/streaming-asr.js",
+      "sha256": "e201af0cf90abbfdd6cb4336c2262d4d85142de09829f7f0f0efe546412d110a",
+      "bytes": 4576,
+      "lines": 181
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "KoljaB__RealtimeSTT",
+      "source_path": "LICENSE",
+      "sha256": "bb7881916bddc6666a4bb8f44375b9e7282c845112823883c846aa1c3dbf6cc9",
+      "bytes": 1069,
+      "lines": 21
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "KoljaB__RealtimeSTT",
+      "source_path": "setup.py",
+      "sha256": "db98aca56bb39e0a369ec3fc8cbb9bd7133619d0a5f4c26ee06757009a72173b",
+      "bytes": 12843,
+      "lines": 354
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "KoljaB__RealtimeSTT",
+      "source_path": "RealtimeSTT/audio_recorder.py",
+      "sha256": "ddaadb8a9e3b230f25486463a263a39415e51fd3efb998e44caa4e85f99e418c",
+      "bytes": 47384,
+      "lines": 943
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__smart-turn",
+      "source_path": "LICENSE",
+      "sha256": "0d66364067f678c08586ebb60a16a2aed4fa081ec11057df35585759ce0e774f",
+      "bytes": 1301,
+      "lines": 24
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__smart-turn",
+      "source_path": "predict.py",
+      "sha256": "435076cf8e8050b2fa73d21fc94d457891a12fc3550ea14893eea7440e62a582",
+      "bytes": 1554,
+      "lines": 50
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__smart-turn",
+      "source_path": "README.md",
+      "sha256": "ddac4b3e1346e43c1a04ed751af35a0bca86f677ca7dddc371da489a6d2b4d46",
+      "bytes": 8748,
+      "lines": 180
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__smart-turn",
+      "source_path": "audio_utils.py",
+      "sha256": "22fed11a57d019350d6e4821895ce749220ed06203220e8c44a7c32ab31f2595",
+      "bytes": 546,
+      "lines": 13
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__smart-turn",
+      "source_path": "inference.py",
+      "sha256": "39a6422beb864788a4428e631ba7c45a69ce4c58e913ead383450766b9bd8683",
+      "bytes": 2340,
+      "lines": 73
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "pipecat-ai__smart-turn",
+      "source_path": "requirements_inference.txt",
+      "sha256": "876b6521a6e7f2bb20cd5d62076fe2822f1bcfda86bebcab4668f97917f7f183",
+      "bytes": 112,
+      "lines": 9
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-framework",
+      "source_path": "LICENSE",
+      "sha256": "3fefe43b7c421797c4b7d2f2bb797af7be0a155d39b90ad14bed9fbf7c50acb9",
+      "bytes": 2235,
+      "lines": 45
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-framework",
+      "source_path": "README.md",
+      "sha256": "f1a5935cee83ae468cf6f866883fd0f5c4776687897390db4fe11a72c5ce18e2",
+      "bytes": 24148,
+      "lines": 618
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-framework",
+      "source_path": "ai_agents/agents/ten_packages/extension/ten_turn_detection/extension.py",
+      "sha256": "86c880f14410e595dbfa3acf0d0f763cf821b76cf22f710dc62bce45b60124e2",
+      "bytes": 6650,
+      "lines": 197
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "TEN-framework__ten-framework",
+      "source_path": "ai_agents/agents/ten_packages/extension/ten_vad_python/extension.py",
+      "sha256": "681d109ecd4cf8ca3996c7f6e6a4bf40b335a0ee71faa97f85e3c3070a772826",
+      "bytes": 6570,
+      "lines": 193
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "screenpipe__screenpipe",
+      "source_path": "LICENSE.md",
+      "sha256": "38b8fa09849f507b7be084b8f1591693388ddbb7646a93ae8e823f07d4acea4c",
+      "bytes": 3723,
+      "lines": 90
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "LICENSE",
+      "sha256": "0d99b64baf1323c3a7f70a28075b14d573df6d773aa2d33d827053cc775062d8",
+      "bytes": 11357,
+      "lines": 202
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "requirements.txt",
+      "sha256": "131ac08027f7f8c9565c76aaff27dc1002b11ddff2b96c4a566bd46ecfb9cf07",
+      "bytes": 58537,
+      "lines": 1425
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "pyproject.toml",
+      "sha256": "c18a747990561dd99a4f1ea8cf88755a67f0b25d08b9adf00701a5bfc7ac3ea2",
+      "bytes": 11592,
+      "lines": 286
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "NOTICE",
+      "sha256": "96199da23327c5086c4f562e4c1a05685e18643ab32ce896f13934b15b4a8aca",
+      "bytes": 771,
+      "lines": 21
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "README.MD",
+      "sha256": "51ef270a917df9572c83a8f4c769e1de02dc10cea8dc62f696637ac63652fb62",
+      "bytes": 34093,
+      "lines": 737
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "config/__init__.py",
+      "sha256": "65ae1e571f7831519e19c3fe1d0a23218b4b0b629ab812a1fe1ee05dc0c01335",
+      "bytes": 37868,
+      "lines": 1147
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "docs/privacy.md",
+      "sha256": "663cfd8227d3322d4731a391c30ee290b00b64d93a3b90c6f35c61dd1049d32f",
+      "bytes": 5126,
+      "lines": 81
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_routers/capture_router.py",
+      "sha256": "b153b4e45b1947972a8beb5a159c87ccc9fc6c96ae60ef7470c42a9bc605b639",
+      "bytes": 8751,
+      "lines": 219
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_logic/proactive_delivery.py",
+      "sha256": "2c1441fa7dbf391328ae4c031577afe7fcd15a2e8b8f398470aea56455155d1f",
+      "bytes": 43888,
+      "lines": 893
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "utils/token_tracker/recording.py",
+      "sha256": "49054f3ebcb2a33535ce2772ea051597702fcb5df71013f7c092e6ec883577e9",
+      "bytes": 12574,
+      "lines": 303
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "utils/token_tracker/telemetry.py",
+      "sha256": "31f0495ddeb2fc138cc997730802135e346086adde94d97e04581a38110ab97b",
+      "bytes": 26542,
+      "lines": 589
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "utils/token_tracker/_shared.py",
+      "sha256": "12a60164ab294a8b9c8cffddbb235907ecf095aba2c016095927b2379847d3b0",
+      "bytes": 4947,
+      "lines": 123
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "utils/token_tracker/reporting.py",
+      "sha256": "3b0467bfc6ca9592f2d1a79835aa066748f4115b124856c838cb3fe7c0bd5fb7",
+      "bytes": 31730,
+      "lines": 619
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "static/app/app-screen.js",
+      "sha256": "1a07d7d8a18f67858d4d5c61ff7b1874fc989c74b94a0231bc35f1951f22ef53",
+      "bytes": 191968,
+      "lines": 3862
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "static/app/desktop-capture-provider.js",
+      "sha256": "6968b78c86d871c24a06d51932d74433f48acbb16865398431de24a28d771b53",
+      "bytes": 3772,
+      "lines": 98
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "static/app/app-telemetry.js",
+      "sha256": "1abb3974d0e42956abe36bc05347d5f131e7d58b0d9c6d35b9c17220ab659820",
+      "bytes": 4977,
+      "lines": 135
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_logic/omni_realtime_client/_responses.py",
+      "sha256": "31359994a6d6efc2ddbb7a79e4525abe52e80ab940d0186203e45c02c0555b17",
+      "bytes": 144399,
+      "lines": 2972
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_logic/omni_realtime_client/_transport.py",
+      "sha256": "b36eed2c0d0919ca05fe752453b9ab036eac97250305a6a74acc92cfc62d0442",
+      "bytes": 223096,
+      "lines": 4373
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_logic/omni_realtime_client/_wire_trace.py",
+      "sha256": "6c40e194d0c37ed3795ab93ad18bed9e32d3234e5902709f149a6534c3e594ce",
+      "bytes": 17136,
+      "lines": 432
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_logic/omni_realtime_client/_audio.py",
+      "sha256": "f82fe6723947868195b09e015823cc65ae0d3929be6cf5dbc9cf3e9f5dfb4372",
+      "bytes": 11307,
+      "lines": 240
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_logic/omni_realtime_client/_response_arbiter.py",
+      "sha256": "26f2c7a29c191059ab485adb0ec3467b0baa4bca3250f1daea986710c016f4b3",
+      "bytes": 171460,
+      "lines": 3688
+    },
+    {
+      "area": "multimodal",
+      "repository_token": "Project-N-E-K-O__N.E.K.O",
+      "source_path": "main_logic/voice_identity_service/pvad/models/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "lines": 202
+    },
+    {
+      "area": "character",
+      "repository_token": "hecomi__uLipSync",
+      "source_path": "LICENSE.md",
+      "sha256": "d1897e0b1bad123c8ceefdfc3d57356141da9745577e152e01fa3434aeacbefa",
+      "bytes": 1073,
+      "lines": 20
+    },
+    {
+      "area": "character",
+      "repository_token": "hecomi__uLipSync",
+      "source_path": "README.md",
+      "sha256": "9908ffa49e126e0e78ee9442277725f276d4c21a98b72abe796d10609ab176da",
+      "bytes": 30440,
+      "lines": 576
+    },
+    {
+      "area": "character",
+      "repository_token": "kwaroran__character-card-spec-v3",
+      "source_path": "LICENSE",
+      "sha256": "9805dc6bf59dcf8d9eaedc8987f2798dc434bc3c8e6dafbbf23eb2147d74db95",
+      "bytes": 1051,
+      "lines": 20
+    },
+    {
+      "area": "character",
+      "repository_token": "kwaroran__character-card-spec-v3",
+      "source_path": "README.md",
+      "sha256": "6341479450f9095c39ee8b013bb38480e28d300a4beb3ea419e6424e912b4ff5",
+      "bytes": 955,
+      "lines": 21
+    },
+    {
+      "area": "character",
+      "repository_token": "kwaroran__character-card-spec-v3",
+      "source_path": "SPEC_V3.md",
+      "sha256": "3c472a16eeda5d018837e90d30fce2816b0982f07f4dba14c8fcc89aa11fe76c",
+      "bytes": 48247,
+      "lines": 605
+    },
+    {
+      "area": "character",
+      "repository_token": "Live2D__CubismWebFramework",
+      "source_path": "LICENSE.md",
+      "sha256": "7ed849bff1e6499aa7cd882e47d246ddbbe06817c1e84cb974df949488302614",
+      "bytes": 2234,
+      "lines": 45
+    },
+    {
+      "area": "character",
+      "repository_token": "Live2D__CubismWebFramework",
+      "source_path": "README.md",
+      "sha256": "aa64939625fe8c0cfd77e95991c9e2ddbbddaf5e043c4851a2d9ac604be8fadd",
+      "bytes": 5036,
+      "lines": 170
+    },
+    {
+      "area": "character",
+      "repository_token": "Live2D__CubismWebFramework",
+      "source_path": "package.json",
+      "sha256": "3e7d34431ec5b50d0f0fc361de7ac3ad0ad4d2b5685e587971a6c7774ee9da9f",
+      "bytes": 447,
+      "lines": 20
+    },
+    {
+      "area": "character",
+      "repository_token": "Live2D__CubismWebFramework",
+      "source_path": "src/effect/cubismeyeblink.ts",
+      "sha256": "a1c26cfcf2656424f370e17d4b4cb0f9642db2dd452af8f562c67ced26ba64de",
+      "bytes": 7222,
+      "lines": 234
+    },
+    {
+      "area": "character",
+      "repository_token": "Live2D__CubismWebFramework",
+      "source_path": "src/effect/cubismbreath.ts",
+      "sha256": "06da2c2c10e91782fb99833c94842e6267dc996ddb35a1bfb99765f053c7729a",
+      "bytes": 3765,
+      "lines": 123
+    },
+    {
+      "area": "character",
+      "repository_token": "Live2D__CubismWebFramework",
+      "source_path": "src/motion/cubismmotionqueuemanager.ts",
+      "sha256": "1aa0f6a39ffe9d83e0e06217a9cf6ebdf3a6e593242ff84d08684bbd2f4a01bb",
+      "bytes": 10707,
+      "lines": 329
+    },
+    {
+      "area": "character",
+      "repository_token": "Live2D__CubismWebFramework",
+      "source_path": "src/model/cubismusermodel.ts",
+      "sha256": "41707e75f0ab36808a3ba42d40a477d0b33e7c7da73cbce5a3de0771bd957a9c",
+      "bytes": 15104,
+      "lines": 521
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__TalkingHead",
+      "source_path": "LICENSE",
+      "sha256": "a168d1f90b70b313fb594ddb07e03c9dea08fe2a43df2b4f607db6920ce69cfa",
+      "bytes": 1075,
+      "lines": 21
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__TalkingHead",
+      "source_path": "README.md",
+      "sha256": "1415c35c3c328f000fc9408456861f2d74bd0fb7bd365cfe1d14e510fa9a2fa4",
+      "bytes": 70296,
+      "lines": 1013
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__TalkingHead",
+      "source_path": "package.json",
+      "sha256": "903b9414999bf002f9f5debe10525e9f36e5203f15d4e92c0df99041dc970a2f",
+      "bytes": 857,
+      "lines": 35
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__TalkingHead",
+      "source_path": "modules/retargeter.mjs",
+      "sha256": "aae6954f90f35263d6116737b3e34a202f3f1430ffd1ce1368f7af7d2e8774cd",
+      "bytes": 9646,
+      "lines": 316
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__TalkingHead",
+      "source_path": "modules/talkinghead.mjs",
+      "sha256": "2580bfb965f432e3c6eed0115417d5a2814f4ad0689e031a0977122b42817f6b",
+      "bytes": 219509,
+      "lines": 4895
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__TalkingHead",
+      "source_path": "modules/dynamicbones.mjs",
+      "sha256": "e3e754a8c4296b470a763be3705694d10dfa00cb7a0b311fa6d4751297ab8d82",
+      "bytes": 33959,
+      "lines": 1053
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__TalkingHead",
+      "source_path": "blender/build-visemes-from-arkit.py",
+      "sha256": "1ddd8eb1742fde38abf6372da9dba33945fbf73a197e49b5f65b10f775b9190c",
+      "bytes": 5297,
+      "lines": 136
+    },
+    {
+      "area": "character",
+      "repository_token": "pixiv__three-vrm",
+      "source_path": "LICENSE",
+      "sha256": "279ec82987aec7e72ecb9850bb704a87e352d577bc7581454c30f3551a88ea92",
+      "bytes": 1072,
+      "lines": 22
+    },
+    {
+      "area": "character",
+      "repository_token": "pixiv__three-vrm",
+      "source_path": "README.md",
+      "sha256": "09cd85c8a6d8b2616bd43b190ed78fd34dbc5b35cd9b1d93b196c976a09c804d",
+      "bytes": 4455,
+      "lines": 145
+    },
+    {
+      "area": "character",
+      "repository_token": "pixiv__three-vrm",
+      "source_path": "packages/three-vrm-animation/package.json",
+      "sha256": "37962412a7ceae1eb7fa654f6d4d58fe0ce5ae719c69b01be11a5c2bdbd61134",
+      "bytes": 2019,
+      "lines": 60
+    },
+    {
+      "area": "character",
+      "repository_token": "pixiv__three-vrm",
+      "source_path": "packages/three-vrm-animation/src/VRMAnimationLoaderPlugin.ts",
+      "sha256": "dd945896d33334d01b1e589311de4ae00708b0e81a16ba019331d5626bfdb3cb",
+      "bytes": 10076,
+      "lines": 295
+    },
+    {
+      "area": "character",
+      "repository_token": "pixiv__three-vrm",
+      "source_path": "packages/three-vrm-animation/src/createVRMAnimationClip.ts",
+      "sha256": "c14317f1e063b5a9721bcc8b2bb8b35c2612d1c158efbbf2060a17e48e85b112",
+      "bytes": 5052,
+      "lines": 150
+    },
+    {
+      "area": "character",
+      "repository_token": "pixiv__three-vrm",
+      "source_path": "packages/three-vrm-core/src/expressions/VRMExpressionManager.ts",
+      "sha256": "38b670acaafb35a0f611bd75ae48c7feb8b8c2fd82d3eec5c4bbd72480bd0e00",
+      "bytes": 7928,
+      "lines": 268
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "LICENSE",
+      "sha256": "10fef79cae2e204d67bc33f79657101e38a8ad51f197dc8f2c74e652e298a408",
+      "bytes": 1063,
+      "lines": 21
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "README.md",
+      "sha256": "0ee614fca5dbf11b40651ed09891955e3bc3f7f783a5302081e08f0e68c8870d",
+      "bytes": 10420,
+      "lines": 250
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "package.json",
+      "sha256": "ff74e5bb472548c938fde5f4358fcd23b4cd5c916f27ece833d842053b7e92a7",
+      "bytes": 1118,
+      "lines": 46
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "docs/API.md",
+      "sha256": "d46b8e1e0ab23f1f21a045777628d3f2967085c7cb0c0cd18830e4d53736acad",
+      "bytes": 5987,
+      "lines": 145
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "src/motions.json",
+      "sha256": "0d2de98e3edae8144e09322e5bb9423893f85808c6db69d08d81d28ff0fc10ee",
+      "bytes": 80602,
+      "lines": 5291
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "src/MotionEngine.js",
+      "sha256": "167002b9eebedc87dba2c7ca22de36e0505973ecbed3d29e7508b5289b4eea77",
+      "bytes": 20851,
+      "lines": 629
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "src/FaceMirror.js",
+      "sha256": "6481cce231da4d04e17c5f2363436ed03fd69bfda593d996515c341ce5fa8d07",
+      "bytes": 14796,
+      "lines": 469
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "src/OverlayManager.js",
+      "sha256": "f2f88565c357968773e4be24978b21e694542f70ec3e2a88b90eb2f931856816",
+      "bytes": 3051,
+      "lines": 100
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "src/utils.js",
+      "sha256": "57155b7586ea6f059eb14755d6acf3e3bd61a1ed75466b0e910a08f5a76932b0",
+      "bytes": 1156,
+      "lines": 37
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "src/MotionStudio.js",
+      "sha256": "40d5ac589161c7a2ec82acf86efc10bdcc1135f70a340d1916a011adadb7beb2",
+      "bytes": 9986,
+      "lines": 322
+    },
+    {
+      "area": "character",
+      "repository_token": "lhupyn__motion-engine",
+      "source_path": "src/motions_th.json",
+      "sha256": "ac2e0b21cefb05dc23ad18f186c34b67d7e67fa5b02eab55868347d9cd0ebdd0",
+      "bytes": 17140,
+      "lines": 357
+    },
+    {
+      "area": "character",
+      "repository_token": "DanielSWolf__rhubarb-lip-sync",
+      "source_path": "LICENSE.md",
+      "sha256": "c9a10d99959990ec6802c5e2d519fb23665affa7ba32abbdea5b251ee5f93af6",
+      "bytes": 27808,
+      "lines": 272
+    },
+    {
+      "area": "character",
+      "repository_token": "DanielSWolf__rhubarb-lip-sync",
+      "source_path": "README.adoc",
+      "sha256": "3c7dcb74008ca9eb96f5f258ca4f82e9a49ed9614d93f89bc98bd27ac3a22b43",
+      "bytes": 23164,
+      "lines": 408
+    },
+    {
+      "area": "character",
+      "repository_token": "DanielSWolf__rhubarb-lip-sync",
+      "source_path": "rhubarb/CMakeLists.txt",
+      "sha256": "0face35c0ef256db13d88cb79c682c190d8f5aeda398ae03bd7a16e67a8ca948",
+      "bytes": 18606,
+      "lines": 597
+    },
+    {
+      "area": "character",
+      "repository_token": "DanielSWolf__rhubarb-lip-sync",
+      "source_path": "rhubarb/src/exporters/JsonExporter.cpp",
+      "sha256": "3976aeb8fe9dc5f305bf3097d52d011f40e9301df615acc0cc68383f17ef1b03",
+      "bytes": 1129,
+      "lines": 28
+    },
+    {
+      "area": "character",
+      "repository_token": "DanielSWolf__rhubarb-lip-sync",
+      "source_path": "rhubarb/src/audio/AudioClip.cpp",
+      "sha256": "d33b085697e0680afb233ec8416cc411ef4d4f24ca22f4fd640f83a888ae9e26",
+      "bytes": 1777,
+      "lines": 69
+    },
+    {
+      "area": "character",
+      "repository_token": "DanielSWolf__rhubarb-lip-sync",
+      "source_path": "rhubarb/src/rhubarb/main.cpp",
+      "sha256": "a1027b79a22dbb83cdd1f4aa98554bf323dad898a658fe628f46c88e0629bd39",
+      "bytes": 9787,
+      "lines": 308
+    },
+    {
+      "area": "character",
+      "repository_token": "DanielSWolf__rhubarb-lip-sync",
+      "source_path": "rhubarb/src/recognition/PhoneticRecognizer.cpp",
+      "sha256": "4fb467074dba37cae0655b1e8355a3cc41b34d062901c7c52c7c5947fbf0f94b",
+      "bytes": 3794,
+      "lines": 113
+    },
+    {
+      "area": "character",
+      "repository_token": "SillyTavern__SillyTavern",
+      "source_path": "LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "bytes": 34523,
+      "lines": 661
+    },
+    {
+      "area": "character",
+      "repository_token": "SillyTavern__SillyTavern",
+      "source_path": "package.json",
+      "sha256": "5b6e0634a63872c33603bf803217613a388f2e5dbd5990f7b30d254bfbf027c2",
+      "bytes": 5941,
+      "lines": 175
+    },
+    {
+      "area": "character",
+      "repository_token": "SillyTavern__SillyTavern",
+      "source_path": "src/character-card-parser.js",
+      "sha256": "b74541cd54bb3fe3ab39b3e040f6dba824b263ed9344e4dcf98363e4e148e07c",
+      "bytes": 3284,
+      "lines": 98
+    },
+    {
+      "area": "character",
+      "repository_token": "SillyTavern__SillyTavern",
+      "source_path": "public/scripts/PromptManager.js",
+      "sha256": "b0054793b763d92b265f5f487645b68b4eca0867cb5ad6b5deb1034004b2c1cc",
+      "bytes": 90717,
+      "lines": 2144
+    },
+    {
+      "area": "character",
+      "repository_token": "SillyTavern__SillyTavern",
+      "source_path": "public/scripts/world-info.js",
+      "sha256": "111c7f47945839e75b021e09bdbb112a54f0a9b7857d2b95435f573efc7cd9a5",
+      "bytes": 265081,
+      "lines": 6408
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "README.md",
+      "sha256": "8e6f6f17b58a0368cc22ec204c5b2205460f431c95e781daaa737bf7a9de29d2",
+      "bytes": 17616,
+      "lines": 199
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "Notice.txt",
+      "sha256": "3fcf35915563c64c9a7b58fcdfd0a4ce1d0dfcb855bf7a0e829358bcdd019f56",
+      "bytes": 741,
+      "lines": 21
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "LICENSE_MAIN.txt",
+      "sha256": "3dbe3cd3576670bc2f698a44ec9905e5b7d80edab3c57fc6a5d587d3df9c2dd0",
+      "bytes": 24,
+      "lines": 1
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "docs/en-us/animation/index.md",
+      "sha256": "ce0713e5530e0f46aa5867cb767335892caca86d56d4dfd34dc52a671f95d39f",
+      "bytes": 1036,
+      "lines": 63
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "src/io_scene_vrm/__init__.py",
+      "sha256": "11b84f94159398ba5d781c39aa23f969cebae642db1693fb239a0e4d42fa422b",
+      "bytes": 1078,
+      "lines": 41
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "src/io_scene_vrm/importer/license_validation.py",
+      "sha256": "b1a3e786053ac8a4035a814739fd24381b0174ae177c3306f9dede1e86c929b2",
+      "bytes": 6169,
+      "lines": 198
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "src/io_scene_vrm/exporter/vrm1_exporter.py",
+      "sha256": "d2e451f356ac7ccb8878ca9ebd62806a1cbf2279b938d22cc3f43c62390d36a5",
+      "bytes": 144202,
+      "lines": 3682
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "src/io_scene_vrm/exporter/vrm_animation_exporter.py",
+      "sha256": "2a1e11aae26b26622ce3c9e340d567883c55f95ad1a45991a2db46647ac0fe5a",
+      "bytes": 34403,
+      "lines": 1035
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "src/io_scene_vrm/common/vrm1/expression_preset.py",
+      "sha256": "271bbf48f26a034e5ff7b1d49f2c10a75c45b2355a1e4b70bb136a926ad23515",
+      "bytes": 5519,
+      "lines": 207
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "src/io_scene_vrm/common/human_bone_mapper/human_bone_mapper.py",
+      "sha256": "623c60a8a1ba381f6047ea456682209add73faafd6afccc2b9d142d0026217bd",
+      "bytes": 7108,
+      "lines": 203
+    },
+    {
+      "area": "character",
+      "repository_token": "saturday06__VRM-Addon-for-Blender",
+      "source_path": "src/io_scene_vrm/editor/vrm1/property_group.py",
+      "sha256": "e18a559409f0be10ceeae253e98d7aabf4493f856bb11af71db02492ab4dee0a",
+      "bytes": 85438,
+      "lines": 2087
+    },
+    {
+      "area": "character",
+      "repository_token": "kwaroran__RisuAI",
+      "source_path": "LICENSE",
+      "sha256": "919fa976e07af5d75768b3b45724854c42db3636ae5ccbd0d801a49690623835",
+      "bytes": 35108,
+      "lines": 674
+    },
+    {
+      "area": "character",
+      "repository_token": "kwaroran__RisuAI",
+      "source_path": "package.json",
+      "sha256": "ad570b963250a0494a3aee67d9a082c8be115aadf70676b199dc47b3544cc29c",
+      "bytes": 4067,
+      "lines": 134
+    },
+    {
+      "area": "character",
+      "repository_token": "kwaroran__RisuAI",
+      "source_path": "src/ts/process/lorebook.svelte.ts",
+      "sha256": "8738a280188a3ec11644d66dfa8ac3381a025791fac48478b39fd85444f5239e",
+      "bytes": 27690,
+      "lines": 771
+    },
+    {
+      "area": "character",
+      "repository_token": "kwaroran__RisuAI",
+      "source_path": "src/ts/process/prompt.ts",
+      "sha256": "42db2f25b447e8cf830294884cbb3c37b11b2c1aa91cc458393848a0f27885c2",
+      "bytes": 14555,
+      "lines": 498
+    },
+    {
+      "area": "character",
+      "repository_token": "guansss__pixi-live2d-display",
+      "source_path": "LICENSE",
+      "sha256": "8ccace668a041e78ed525d091b0b5daf8b623ff447f912616de535415e4f302f",
+      "bytes": 1061,
+      "lines": 21
+    },
+    {
+      "area": "character",
+      "repository_token": "guansss__pixi-live2d-display",
+      "source_path": "README.md",
+      "sha256": "6d80b559537255c73b8ebd0eed5845701e2f47db166964090bdf052b8da55b5a",
+      "bytes": 6210,
+      "lines": 183
+    },
+    {
+      "area": "character",
+      "repository_token": "guansss__pixi-live2d-display",
+      "source_path": "package.json",
+      "sha256": "5765f320cf5de31dc2a91b51478e119d153101df615ebef21d4c80dd1a1e0dd1",
+      "bytes": 2659,
+      "lines": 86
+    },
+    {
+      "area": "character",
+      "repository_token": "guansss__pixi-live2d-display",
+      "source_path": "src/Live2DModel.ts",
+      "sha256": "0cb4dee673f162796591f9e224b581712b2b45940d7dd37c41a71b4c7398c2eb",
+      "bytes": 14414,
+      "lines": 393
+    },
+    {
+      "area": "character",
+      "repository_token": "scaredyfish__blender-rhubarb-lipsync",
+      "source_path": "__init__.py",
+      "sha256": "1454d5cfd6db5fff05cb93f916063705e20d8e8cc88c25b31918ca8438aba947",
+      "bytes": 1103,
+      "lines": 39
+    },
+    {
+      "area": "character",
+      "repository_token": "scaredyfish__blender-rhubarb-lipsync",
+      "source_path": "README.md",
+      "sha256": "0d2b692dab5a8c0cf6568b7d1d3c72b377cebd039d1219ba52e6029d79dab2cc",
+      "bytes": 3251,
+      "lines": 54
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "LICENSE",
+      "sha256": "d45d4192f4e7502846c6b01d743eddbff20b3752e4c350a88418f59e4587a60f",
+      "bytes": 1070,
+      "lines": 21
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "README.md",
+      "sha256": "7f4e5605a0384d2b87d78fd2e8af77830014dc69767dc547cf6e353f43cc5b64",
+      "bytes": 20015,
+      "lines": 460
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "package.json",
+      "sha256": "6e28baaa564b2619a9a1bc2c8068b207168020ab674a0bf5a7c7b98d69e51e3d",
+      "bytes": 971,
+      "lines": 39
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "modules/processor.mjs",
+      "sha256": "55be8fb5600754cefb0ce786e3dc922eeae5e58e5f5804e78c23bdb19d6dcf0e",
+      "bytes": 12009,
+      "lines": 412
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "modules/headaudio.mjs",
+      "sha256": "2c0b0e2c36d843b2077ca81e749ae78e20a123a3f38a5439b4f9e76810a435b8",
+      "bytes": 6856,
+      "lines": 267
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "modules/vadgate.mjs",
+      "sha256": "63039b57289789e2cea8045fbc41dbfb02a5af51dfa17c904819fb941bb43b75",
+      "bytes": 2649,
+      "lines": 123
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "modules/parameters.mjs",
+      "sha256": "d8c0c42a26b1c7caddd073cdb80e0809ed9e7c19431488563460a15a19240317",
+      "bytes": 2221,
+      "lines": 37
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "modules/classifier.mjs",
+      "sha256": "6a3e983b4f47e9968da2727f7ab3af2592f8503609a64c3e73e36dd05d0e8ec9",
+      "bytes": 5169,
+      "lines": 224
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "modules/mfcc.mjs",
+      "sha256": "d447ec4951920ce200d5e663f9c6736bb9c074ff99ce8402fb39ec47742c6a6b",
+      "bytes": 8700,
+      "lines": 285
+    },
+    {
+      "area": "character",
+      "repository_token": "met4citizen__HeadAudio",
+      "source_path": "modules/headworklet.mjs",
+      "sha256": "d97c6e1ee0d4c51aa849944e526341cfc654e9da523a92f920ebec431a99bbbc",
+      "bytes": 3476,
+      "lines": 109
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "asg017__sqlite-vec",
+      "source_path": "LICENSE-APACHE",
+      "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc",
+      "bytes": 10931,
+      "lines": 201
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "asg017__sqlite-vec",
+      "source_path": "README.md",
+      "sha256": "9116ef6e0b78eb0caf5c6bb6419ccf4f8c6523967eef2045928c33dc66053d64",
+      "bytes": 9390,
+      "lines": 160
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "asg017__sqlite-vec",
+      "source_path": "sqlite-vec.c",
+      "sha256": "905a4bc025a63553aff1da9af0b9efcd5c18beec6e6ab2c25428f24a696aa19b",
+      "bytes": 345529,
+      "lines": 10716
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "asg017__sqlite-vec",
+      "source_path": "LICENSE-MIT",
+      "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea",
+      "bytes": 1068,
+      "lines": 21
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "asg017__sqlite-vec",
+      "source_path": "examples/simple-node/package.json",
+      "sha256": "70abfcd59ff92ffdf5cdc8ac6c8e2323da8df263b9882c514057ff5319e2bfe7",
+      "bytes": 302,
+      "lines": 16
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "asg017__sqlite-vec",
+      "source_path": "examples/simple-node/demo.mjs",
+      "sha256": "cb0ae37b7e7f6ad198e9c47c108b990bef282bc081ed322974b7df72d3f9451f",
+      "bytes": 1115,
+      "lines": 52
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "lines": 202
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "README.md",
+      "sha256": "66f60c2040f4505eec4ceaf17528d248880e0134955fb1c48beedf44ef2410b4",
+      "bytes": 109405,
+      "lines": 456
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "package.json",
+      "sha256": "42ca7ab07eeaabcaaf28714d6ad700c126ff0aafec696ab37dbabb9bb4067b4b",
+      "bytes": 1552,
+      "lines": 63
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "packages/transformers/package.json",
+      "sha256": "4eef242269846fe99b7d1bdc56af6a3da9fca4194a46646ffbf9f3433f594efb",
+      "bytes": 2649,
+      "lines": 86
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "packages/transformers/src/env.js",
+      "sha256": "c8e49b39fd3ddc483c905b20e3d29253553f4cb7fd367096c790a3182093b5d0",
+      "bytes": 12664,
+      "lines": 289
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "packages/transformers/src/pipelines.js",
+      "sha256": "79914461be74f6468328e7cf50a171484b3805f9b186dc2b39a2fb32867bbb31",
+      "bytes": 12668,
+      "lines": 274
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "packages/transformers/src/pipelines/feature-extraction.js",
+      "sha256": "bc1c398f0cce782e0ee096bb7580156002d7f4eb7604b14dd148e7cd5059715b",
+      "bytes": 5241,
+      "lines": 140
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "huggingface__transformers.js",
+      "source_path": "packages/transformers/src/utils/hub.js",
+      "sha256": "9382b54d91d52397848928fc3165f6ef474d2a88cc8045a6ed9c6630481aade5",
+      "bytes": 27373,
+      "lines": 593
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "LICENSE",
+      "sha256": "bf813686553f451e1b833fbd827488aee49b60b189626915bf3108d10b754e44",
+      "bytes": 1053,
+      "lines": 19
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "README.md",
+      "sha256": "9419faaa9d56675b923462d5052a176b3da58f60bf66c84af23159bf3d63c270",
+      "bytes": 4596,
+      "lines": 98
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "package.json",
+      "sha256": "3f8ec6a716f6323f27f2ce3be8f956909e16fe9c245777a2db68f4c5c8f633c1",
+      "bytes": 14677,
+      "lines": 437
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "src/evaluator.ts",
+      "sha256": "b5e9857d3410e4191f38430aec44f287c123de0aa1ea316831d78214781a8fd6",
+      "bytes": 197599,
+      "lines": 6302
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "src/telemetry.ts",
+      "sha256": "6431fe36152bf1d06c73d7700452a3732488a3651beff53644475c61a5fe8371",
+      "bytes": 8726,
+      "lines": 271
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "src/providers/scriptCompletion.ts",
+      "sha256": "095c61560c8ca48ab8af04f2810c586f800d9bfa2822c1f7bb1f24c0125922b1",
+      "bytes": 4788,
+      "lines": 135
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "src/providers/scriptBasedProvider.ts",
+      "sha256": "cd78b25663becf5c5811d86287190bf57725aca074cbcab81366a6edc606fb73",
+      "bytes": 2042,
+      "lines": 55
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "src/providers/index.ts",
+      "sha256": "1fad29805197373da0a334aae60e5ec8217da99279298f5c2a90aaf0401da0c8",
+      "bytes": 19732,
+      "lines": 557
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "promptfoo__promptfoo",
+      "source_path": "src/assertions/index.ts",
+      "sha256": "4ca41190729c1ff01f016c139bd5fa2d9e785520e26f99d4e8202f842fbc6c3f",
+      "bytes": 32998,
+      "lines": 973
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "LICENSE.md",
+      "sha256": "2fb8478a8966725c8798106c6a6d006f63af4b119e66fb017de63e4fa9242686",
+      "bytes": 556,
+      "lines": 13
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "README.md",
+      "sha256": "0fa4e45dcfc416b1abaa7c579e7838c0f332802f80346c069858362f01a3b774",
+      "bytes": 12114,
+      "lines": 291
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/tokenizers/LICENSE.md",
+      "sha256": "27ae9e365c876919b2b1fca32bfa820cee62e24769ae3a0b87c9a2b96694031c",
+      "bytes": 557,
+      "lines": 13
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/tokenizers/package.json",
+      "sha256": "40df80eaee2293a0c73a3f9c8d3f694b87ae2842a8ac07c2394d7b2f61b7b5a1",
+      "bytes": 2199,
+      "lines": 97
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/LICENSE.md",
+      "sha256": "c6a43f1d2439f7e79a586a66cbae73692f560bb6702be755175a590fdc216de3",
+      "bytes": 556,
+      "lines": 13
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/package.json",
+      "sha256": "5b42e53f411b4b3ee8e8261c27ef4b71254617dc245990b63797c84604838a1f",
+      "bytes": 4914,
+      "lines": 181
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/plugin-data-persistence/LICENSE.md",
+      "sha256": "c6a43f1d2439f7e79a586a66cbae73692f560bb6702be755175a590fdc216de3",
+      "bytes": 556,
+      "lines": 13
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/tokenizers/src/mandarin.ts",
+      "sha256": "9f0443fab57d2ffdb02bd65a9f16eec6ce50ee88363f899858058d2ad9c8b457",
+      "bytes": 2222,
+      "lines": 94
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/src/methods/serialization.ts",
+      "sha256": "5b8f833dda5796829a001e9e15e7341394f9ca2fe55565d8b6ecbc1e1b1b4095",
+      "bytes": 1185,
+      "lines": 31
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/src/methods/search-vector.ts",
+      "sha256": "4310f37f348b7cf2092e8b7b7cb28e602c70fef11346d317c03a01769d00604b",
+      "bytes": 4762,
+      "lines": 139
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/src/methods/search-hybrid.ts",
+      "sha256": "69ef12073c91c2dff15bdb460f5435582400decd1aa8e27e760e8160fa86e266",
+      "bytes": 5904,
+      "lines": 168
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/src/methods/remove.ts",
+      "sha256": "8ab22be99ab1fbc0e069eedf00c1d3e85cb841a7b1580aed24f4758177ed4d94",
+      "bytes": 7734,
+      "lines": 318
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/src/methods/create.ts",
+      "sha256": "b8fac0ff1ee345c7796992528e678b34b9ba495ce8440dbec9ea0685dd2f319a",
+      "bytes": 6134,
+      "lines": 222
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/src/methods/update.ts",
+      "sha256": "d1708ee8ce14677719a7ead96cae976842d8fb2ff52e12f7e27531da20885b7e",
+      "bytes": 4577,
+      "lines": 159
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/orama/src/components/tokenizer/languages.ts",
+      "sha256": "02d687bdfbb7f3844a76e17541417c666d8911064131c2bf9f20f9dda7ef32b6",
+      "bytes": 3672,
+      "lines": 89
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/plugin-data-persistence/src/index.ts",
+      "sha256": "620f2942cca01a67347a4654aed79a839ee4f3b39c7a2fcef264fa8d1ea66692",
+      "bytes": 4615,
+      "lines": 176
+    },
+    {
+      "area": "auxiliary",
+      "repository_token": "oramasearch__orama",
+      "source_path": "packages/plugin-data-persistence/src/server.ts",
+      "sha256": "42fecab6b2322de5822972a87d39b3c5c252325a3f3cc8729191e86fae5dacc0",
+      "bytes": 8368,
+      "lines": 290
+    }
+  ]
+}

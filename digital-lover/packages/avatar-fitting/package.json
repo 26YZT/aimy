@@ -1,0 +1,18 @@
+{
+  "name": "@digital-lover/avatar-fitting",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "VRM 导入建模机制：校验 → 骨骼/表情/口型映射 → 形态归一化",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

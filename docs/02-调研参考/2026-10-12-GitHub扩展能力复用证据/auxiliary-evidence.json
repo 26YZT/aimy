@@ -1,0 +1,449 @@
+{
+  "date": "2026-10-12",
+  "review_level": "tree-and-targeted-static-source",
+  "runtime_validated": false,
+  "search_queries": [
+    "transformers.js",
+    "promptfoo",
+    "sqlite vector",
+    "typescript fulltext vector search",
+    "LLM evaluation",
+    "local search vector typescript sqlite"
+  ],
+  "metadata": [
+    {
+      "repo": "asg017/sqlite-vec",
+      "head_sha": "04d28bd21773981e2d266bbf6aa4efbd011eb4f6",
+      "head_commit_date": "2026-05-18T06:50:43Z",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 8179,
+      "license_api": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "head_sha": "511bb61a7c46b73e33f1af3fb308fbd1afe98c02",
+      "head_commit_date": "2026-10-06T16:32:20Z",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 16342,
+      "license_api": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "head_sha": "801428268b5e421b2f6994332f6a06f86b27bb1f",
+      "head_commit_date": "2026-10-11T21:53:17Z",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 25906,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "repo": "oramasearch/orama",
+      "head_sha": "b030e1bd1d330327bad1483f2d9c88a9ea0d493c",
+      "head_commit_date": "2026-07-03T15:02:42Z",
+      "default_branch": "main",
+      "archived": false,
+      "stars": 10574,
+      "license_api": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    }
+  ],
+  "source_manifest": [
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "LICENSE-APACHE",
+      "url": "https://github.com/asg017/sqlite-vec/blob/04d28bd21773981e2d266bbf6aa4efbd011eb4f6/LICENSE-APACHE",
+      "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc",
+      "bytes": 10931,
+      "lines": 201,
+      "status": "ok"
+    },
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "LICENSE-MIT",
+      "url": "https://github.com/asg017/sqlite-vec/blob/04d28bd21773981e2d266bbf6aa4efbd011eb4f6/LICENSE-MIT",
+      "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea",
+      "bytes": 1068,
+      "lines": 21,
+      "status": "ok"
+    },
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "README.md",
+      "url": "https://github.com/asg017/sqlite-vec/blob/04d28bd21773981e2d266bbf6aa4efbd011eb4f6/README.md",
+      "sha256": "9116ef6e0b78eb0caf5c6bb6419ccf4f8c6523967eef2045928c33dc66053d64",
+      "bytes": 9390,
+      "lines": 160,
+      "status": "ok"
+    },
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "sqlite-vec.c",
+      "url": "https://github.com/asg017/sqlite-vec/blob/04d28bd21773981e2d266bbf6aa4efbd011eb4f6/sqlite-vec.c",
+      "sha256": "905a4bc025a63553aff1da9af0b9efcd5c18beec6e6ab2c25428f24a696aa19b",
+      "bytes": 345529,
+      "lines": 10716,
+      "status": "ok"
+    },
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "examples/simple-node/demo.mjs",
+      "url": "https://github.com/asg017/sqlite-vec/blob/04d28bd21773981e2d266bbf6aa4efbd011eb4f6/examples/simple-node/demo.mjs",
+      "sha256": "cb0ae37b7e7f6ad198e9c47c108b990bef282bc081ed322974b7df72d3f9451f",
+      "bytes": 1115,
+      "lines": 52,
+      "status": "ok"
+    },
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "examples/simple-node/package.json",
+      "url": "https://github.com/asg017/sqlite-vec/blob/04d28bd21773981e2d266bbf6aa4efbd011eb4f6/examples/simple-node/package.json",
+      "sha256": "70abfcd59ff92ffdf5cdc8ac6c8e2323da8df263b9882c514057ff5319e2bfe7",
+      "bytes": 302,
+      "lines": 16,
+      "status": "ok"
+    },
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "bindings/node/index.mjs",
+      "status": "error",
+      "error": "Command '['/Users/mima1234/bin/gh', 'api', '-H', 'Accept: application/vnd.github.raw+json', 'repos/asg017/sqlite-vec/contents/bindings/node/index.mjs?ref=04d28bd21773981e2d266bbf6aa4efbd011eb4f6']' returned non-zero exit status 1."
+    },
+    {
+      "repo": "asg017/sqlite-vec",
+      "path": "bindings/node/package.json",
+      "status": "error",
+      "error": "Command '['/Users/mima1234/bin/gh', 'api', '-H', 'Accept: application/vnd.github.raw+json', 'repos/asg017/sqlite-vec/contents/bindings/node/package.json?ref=04d28bd21773981e2d266bbf6aa4efbd011eb4f6']' returned non-zero exit status 1."
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "LICENSE.md",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/LICENSE.md",
+      "sha256": "2fb8478a8966725c8798106c6a6d006f63af4b119e66fb017de63e4fa9242686",
+      "bytes": 556,
+      "lines": 13,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "README.md",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/README.md",
+      "sha256": "0fa4e45dcfc416b1abaa7c579e7838c0f332802f80346c069858362f01a3b774",
+      "bytes": 12114,
+      "lines": 291,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/LICENSE.md",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/LICENSE.md",
+      "sha256": "c6a43f1d2439f7e79a586a66cbae73692f560bb6702be755175a590fdc216de3",
+      "bytes": 556,
+      "lines": 13,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/package.json",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/package.json",
+      "sha256": "5b42e53f411b4b3ee8e8261c27ef4b71254617dc245990b63797c84604838a1f",
+      "bytes": 4914,
+      "lines": 181,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/src/methods/create.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/src/methods/create.ts",
+      "sha256": "b8fac0ff1ee345c7796992528e678b34b9ba495ce8440dbec9ea0685dd2f319a",
+      "bytes": 6134,
+      "lines": 222,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/src/methods/search-hybrid.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/src/methods/search-hybrid.ts",
+      "sha256": "69ef12073c91c2dff15bdb460f5435582400decd1aa8e27e760e8160fa86e266",
+      "bytes": 5904,
+      "lines": 168,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/src/methods/search-vector.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/src/methods/search-vector.ts",
+      "sha256": "4310f37f348b7cf2092e8b7b7cb28e602c70fef11346d317c03a01769d00604b",
+      "bytes": 4762,
+      "lines": 139,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/src/methods/remove.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/src/methods/remove.ts",
+      "sha256": "8ab22be99ab1fbc0e069eedf00c1d3e85cb841a7b1580aed24f4758177ed4d94",
+      "bytes": 7734,
+      "lines": 318,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/src/methods/update.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/src/methods/update.ts",
+      "sha256": "d1708ee8ce14677719a7ead96cae976842d8fb2ff52e12f7e27531da20885b7e",
+      "bytes": 4577,
+      "lines": 159,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/src/methods/serialization.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/src/methods/serialization.ts",
+      "sha256": "5b8f833dda5796829a001e9e15e7341394f9ca2fe55565d8b6ecbc1e1b1b4095",
+      "bytes": 1185,
+      "lines": 31,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/plugin-data-persistence/LICENSE.md",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/plugin-data-persistence/LICENSE.md",
+      "sha256": "c6a43f1d2439f7e79a586a66cbae73692f560bb6702be755175a590fdc216de3",
+      "bytes": 556,
+      "lines": 13,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/plugin-data-persistence/src/index.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/plugin-data-persistence/src/index.ts",
+      "sha256": "620f2942cca01a67347a4654aed79a839ee4f3b39c7a2fcef264fa8d1ea66692",
+      "bytes": 4615,
+      "lines": 176,
+      "status": "ok"
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/plugin-data-persistence/src/server.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/plugin-data-persistence/src/server.ts",
+      "sha256": "42fecab6b2322de5822972a87d39b3c5c252325a3f3cc8729191e86fae5dacc0",
+      "bytes": 8368,
+      "lines": 290,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "LICENSE",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "lines": 202,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "README.md",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/README.md",
+      "sha256": "66f60c2040f4505eec4ceaf17528d248880e0134955fb1c48beedf44ef2410b4",
+      "bytes": 109405,
+      "lines": 456,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "package.json",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/package.json",
+      "sha256": "42ca7ab07eeaabcaaf28714d6ad700c126ff0aafec696ab37dbabb9bb4067b4b",
+      "bytes": 1552,
+      "lines": 63,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "packages/transformers/package.json",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/packages/transformers/package.json",
+      "sha256": "4eef242269846fe99b7d1bdc56af6a3da9fca4194a46646ffbf9f3433f594efb",
+      "bytes": 2649,
+      "lines": 86,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "packages/transformers/src/env.js",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/packages/transformers/src/env.js",
+      "sha256": "c8e49b39fd3ddc483c905b20e3d29253553f4cb7fd367096c790a3182093b5d0",
+      "bytes": 12664,
+      "lines": 289,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "packages/transformers/src/pipelines.js",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/packages/transformers/src/pipelines.js",
+      "sha256": "79914461be74f6468328e7cf50a171484b3805f9b186dc2b39a2fb32867bbb31",
+      "bytes": 12668,
+      "lines": 274,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "packages/transformers/src/utils/hub.js",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/packages/transformers/src/utils/hub.js",
+      "sha256": "9382b54d91d52397848928fc3165f6ef474d2a88cc8045a6ed9c6630481aade5",
+      "bytes": 27373,
+      "lines": 593,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "LICENSE",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/LICENSE",
+      "sha256": "bf813686553f451e1b833fbd827488aee49b60b189626915bf3108d10b754e44",
+      "bytes": 1053,
+      "lines": 19,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "README.md",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/README.md",
+      "sha256": "9419faaa9d56675b923462d5052a176b3da58f60bf66c84af23159bf3d63c270",
+      "bytes": 4596,
+      "lines": 98,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "package.json",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/package.json",
+      "sha256": "3f8ec6a716f6323f27f2ce3be8f956909e16fe9c245777a2db68f4c5c8f633c1",
+      "bytes": 14677,
+      "lines": 437,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "src/evaluator.ts",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/src/evaluator.ts",
+      "sha256": "b5e9857d3410e4191f38430aec44f287c123de0aa1ea316831d78214781a8fd6",
+      "bytes": 197599,
+      "lines": 6302,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "src/assertions/index.ts",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/src/assertions/index.ts",
+      "sha256": "4ca41190729c1ff01f016c139bd5fa2d9e785520e26f99d4e8202f842fbc6c3f",
+      "bytes": 32998,
+      "lines": 973,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "src/telemetry.ts",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/src/telemetry.ts",
+      "sha256": "6431fe36152bf1d06c73d7700452a3732488a3651beff53644475c61a5fe8371",
+      "bytes": 8726,
+      "lines": 271,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "src/providers/scriptCompletion.ts",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/src/providers/scriptCompletion.ts",
+      "sha256": "095c61560c8ca48ab8af04f2810c586f800d9bfa2822c1f7bb1f24c0125922b1",
+      "bytes": 4788,
+      "lines": 135,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "src/providers/scriptBasedProvider.ts",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/src/providers/scriptBasedProvider.ts",
+      "sha256": "cd78b25663becf5c5811d86287190bf57725aca074cbcab81366a6edc606fb73",
+      "bytes": 2042,
+      "lines": 55,
+      "status": "ok"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "path": "src/providers/index.ts",
+      "url": "https://github.com/promptfoo/promptfoo/blob/801428268b5e421b2f6994332f6a06f86b27bb1f/src/providers/index.ts",
+      "sha256": "1fad29805197373da0a334aae60e5ec8217da99279298f5c2a90aaf0401da0c8",
+      "bytes": 19732,
+      "lines": 557,
+      "status": "ok"
+    },
+    {
+      "repo": "huggingface/transformers.js",
+      "path": "packages/transformers/src/pipelines/feature-extraction.js",
+      "url": "https://github.com/huggingface/transformers.js/blob/511bb61a7c46b73e33f1af3fb308fbd1afe98c02/packages/transformers/src/pipelines/feature-extraction.js",
+      "status": "ok",
+      "sha256": "bc1c398f0cce782e0ee096bb7580156002d7f4eb7604b14dd148e7cd5059715b",
+      "bytes": 5241,
+      "lines": 140
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/tokenizers/src/mandarin.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/tokenizers/src/mandarin.ts",
+      "status": "ok",
+      "sha256": "9f0443fab57d2ffdb02bd65a9f16eec6ce50ee88363f899858058d2ad9c8b457",
+      "bytes": 2222,
+      "lines": 94
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/tokenizers/package.json",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/tokenizers/package.json",
+      "status": "ok",
+      "sha256": "40df80eaee2293a0c73a3f9c8d3f694b87ae2842a8ac07c2394d7b2f61b7b5a1",
+      "bytes": 2199,
+      "lines": 97
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/tokenizers/LICENSE.md",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/tokenizers/LICENSE.md",
+      "status": "ok",
+      "sha256": "27ae9e365c876919b2b1fca32bfa820cee62e24769ae3a0b87c9a2b96694031c",
+      "bytes": 557,
+      "lines": 13
+    },
+    {
+      "repo": "oramasearch/orama",
+      "path": "packages/orama/src/components/tokenizer/languages.ts",
+      "url": "https://github.com/oramasearch/orama/blob/b030e1bd1d330327bad1483f2d9c88a9ea0d493c/packages/orama/src/components/tokenizer/languages.ts",
+      "status": "ok",
+      "sha256": "02d687bdfbb7f3844a76e17541417c666d8911064131c2bf9f20f9dda7ef32b6",
+      "bytes": 3672,
+      "lines": 89
+    }
+  ]
+}

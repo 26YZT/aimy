@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-07",
+  "command": "pnpm verify",
+  "exit_code": 0,
+  "scope": "dependency closure and desktop build; all workspace typechecks; unit and browser tests",
+  "tests_passed": 705,
+  "test_files_passed": 81,
+  "node_tests_passed": 641,
+  "browser_tests_passed": 64,
+  "typecheck_projects_passed": 21,
+  "typecheck_projects": [
+    "packages/audio",
+    "packages/companion-engine",
+    "packages/avatar-fitting",
+    "packages/better-ws",
+    "packages/model-driver-lipsync",
+    "packages/electron-screen-capture",
+    "packages/memory",
+    "packages/plugin-protocol",
+    "packages/pipelines-audio",
+    "packages/stream-kit",
+    "packages/relationship-engine",
+    "packages/ui",
+    "packages/server-shared",
+    "packages/stage-shared",
+    "packages/provider-inference",
+    "packages/server-sdk",
+    "packages/stage-ui-three",
+    "packages/core-agent",
+    "packages/text-chat-cli",
+    "packages/experience-lab",
+    "apps/aimy-desktop"
+  ],
+  "output_sha256": "42f3db3379e4bd5598d7126b648890fc08df3d9f02642d03019808ae5b10caf6",
+  "raw_output": "/tmp/aimy-desktop-final-verify-20261007.log",
+  "native_desktop_smoke": "separate evidence",
+  "real_models": "not_verified",
+  "actual_capture": "not_enabled",
+  "user_experience_acceptance": "not_verified",
+  "followup_checks": [
+    {
+      "command": "pnpm --filter @digital-lover/aimy-desktop typecheck",
+      "exit_code": 0,
+      "reason": "last native window event adaptation"
+    },
+    {
+      "command": "pnpm --filter @digital-lover/aimy-desktop build",
+      "exit_code": 0,
+      "reason": "native window adaptation and final privacy text CSS"
+    },
+    {
+      "command": "pnpm test:desktop",
+      "exit_code": 0,
+      "behavior_checks_passed": 13,
+      "actual_local_fake_sdk_requests": 11,
+      "fresh_processes": 4,
+      "evidence": "C桌面样机/result.json"
+    }
+  ],
+  "visual_preview": {
+    "status": "passed",
+    "evidence": "C桌面样机/preview.json",
+    "profile": "fresh empty isolated profile",
+    "http_requests": 0,
+    "viewports": [
+      [
+        1040,
+        760
+      ],
+      [
+        760,
+        580
+      ]
+    ],
+    "privacy_font_px": 11,
+    "privacy_contrast": 5.46
+  },
+  "final_app_source_sha256": {
+    "apps/aimy-desktop/.gitignore": "69a05ef99ed44f07153ce46580602c261ae8835e036b992d0eaf92af42285bf2",
+    "apps/aimy-desktop/README.md": "250b31d12ed64d985f018bedbcef4f558e3097117c88fb20e258f86b3221471e",
+    "apps/aimy-desktop/electron.vite.config.ts": "f5bb4632ef0b0c17a0b2b47b810c3ad29c67823d4093ab7768b103be849794c9",
+    "apps/aimy-desktop/package.json": "abf87310102f31b879626787c4bbffa3719d23c7b21144afbcb55383d8ac98f8",
+    "apps/aimy-desktop/scripts/prepare-assets.mjs": "668cbbad248c98af9d330d2ffbcfd987c6e249615a50d37fd36a47359d65aeee",
+    "apps/aimy-desktop/src/main/chat-service.test.ts": "ef8fdc815afc65cc4753719816799d8aa5d835cc1355ee095ea5f00a1a51f8f5",
+    "apps/aimy-desktop/src/main/chat-service.ts": "6dcfa072f6f058e979b2da86067189d9caef14b8fc36ea8b9654f48173619498",
+    "apps/aimy-desktop/src/main/index.ts": "ac4dc012e76044bb3d253935fb1ee06e00ac3b21499dc0342bcc74558dc4c691",
+    "apps/aimy-desktop/src/main/settings-store.test.ts": "aee15a7795ede4d1bd884f94345dfba24fe3bb134f2f732797c95be1b8065aa9",
+    "apps/aimy-desktop/src/main/settings-store.ts": "578e9e3ccd77425b6b67b135c0919104e4c5a48a9d3eed9c2a60253a267d6d4d",
+    "apps/aimy-desktop/src/preload/index.ts": "29202214e3560fe81a094e864c6578bddea84076ec1223a1d614833f8de10542",
+    "apps/aimy-desktop/src/renderer/App.vue": "d2929c2e8fd5849168b72885921f82a023302312dd59e036cf98854e266a5ec9",
+    "apps/aimy-desktop/src/renderer/airi-local/README.md": "ac0b6e89e86ea992c9b29f044fcf3f455a062ce030999975d853df052e9cf3b7",
+    "apps/aimy-desktop/src/renderer/airi-local/database/repos/chat-sessions.repo.ts": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35",
+    "apps/aimy-desktop/src/renderer/airi-local/database/storage.ts": "35e6915847417185fe0e0080d7366819cfad6a4adf43f71f18a296a96fe03163",
+    "apps/aimy-desktop/src/renderer/airi-local/types/chat-session.ts": "b27ddc3ec59d304c2a162fcb3e92acd1bd39f3d6d7da449ad43a6ca22c7cde5d",
+    "apps/aimy-desktop/src/renderer/airi-local/types/chat.ts": "c0612be5a727b5d54b468cd01b32beb91105766c965e5b21f4a26c229938acdc",
+    "apps/aimy-desktop/src/renderer/components/AppIcon.vue": "4f33bfc9355e2403892065c27397535a5fbad2e472b85629ab5eb4ad136971fa",
+    "apps/aimy-desktop/src/renderer/components/AvatarStage.vue": "f4b30583294e38a3dfe1be240d76934b8db36137d2a9e1179d5076c880e9030e",
+    "apps/aimy-desktop/src/renderer/components/SettingsDrawer.vue": "97d05e6e90f5902427e10d98326552894ec042fad0f94d57b2c9645f51a10cd5",
+    "apps/aimy-desktop/src/renderer/composables/use-local-conversation.ts": "5bf34a44a0f3cacc2e342d9184d377aa88e3781a005b62f2900c502232b2b306",
+    "apps/aimy-desktop/src/renderer/index.html": "ad93cf10b0df3378d60b1d7c40bee742dc6eae11074b6ddf7ca54c9a88e00007",
+    "apps/aimy-desktop/src/renderer/main.ts": "4b8f1f34bfd446e2a798f9f752caf1f7dd6f55cb059a095b3dfb1e15dbb85abd",
+    "apps/aimy-desktop/src/renderer/style.css": "9583ab01f0b40f6b29d2bcc987af21426d7badcbcecadea04a0efcd3fe231404",
+    "apps/aimy-desktop/src/renderer/window.d.ts": "a881886d50b54971b84c89b5e528884a26d1155b6b120253a76883cb196ac0e4",
+    "apps/aimy-desktop/src/shared/contracts.ts": "ab06837a101c31a6481afc565b945c707d451e6121610ed943a0cc4fa3b496b3",
+    "apps/aimy-desktop/tests/desktop-smoke.ts": "68efd35d534728c04f124534b35bb11adda3c6b7178000ecf0a9b4ad97eeaa4e",
+    "apps/aimy-desktop/tests/visual-preview.mjs": "39663013655fc7492b68f4b82fb6088cced0390babb995bca5fa6fc12454199c",
+    "apps/aimy-desktop/tsconfig.json": "1cf2269b3629d3ca90a47044c1170dcbc4b9db2cc394b475085bd71a10a56e04",
+    "apps/aimy-desktop/vitest.config.ts": "11dd550099f762759cd002275ab86d56fa25988a259f12f17f84a4feaa94b46e"
+  }
+}

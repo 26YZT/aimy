@@ -1,0 +1,15 @@
+packages:
+  - packages/**
+  - apps/*
+
+# Keep CI and local runs on the same isolated workspace dependency layout.
+enableGlobalVirtualStore: false
+
+allowBuilds:
+  esbuild: true
+  protobufjs: true
+  sharp: true
+  onnxruntime-node: false
+
+patchedDependencies:
+  '@xsai-ext/responses@0.5.0': patches/@xsai-ext__responses@0.5.0.patch

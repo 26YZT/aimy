@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-10",
+  "scope": "Read-only direct apps/packages manifests and source paths; no credentials/runtime data",
+  "old_workspace": "/Users/mima1234/Documents/aimy/digital-lover",
+  "new_evaluation_workspace": "/Users/mima1234/Documents/aimy/.baseline/airi-evaluation-2026-10-10/source",
+  "new_source_commit": "unknown; source fingerprint fixed in original evaluation",
+  "same_named_packages": 14,
+  "same_path_src_files": 394,
+  "identical_src_files": 340,
+  "different_src_files": 54,
+  "interpretation": "Differences can include upstream evolution and local customization; not a patch list or quality score",
+  "product_entry": "digital-lover/package.json still starts @digital-lover/aimy-desktop; original evaluation copy remains separate",
+  "rows": [
+    {
+      "package": "@proj-airi/audio",
+      "same_path_files": 5,
+      "identical_files": 4,
+      "different_files": [
+        "encoding/index.ts"
+      ],
+      "only_in_old": [
+        "audio-context/index.ts",
+        "audio-context/processor.worklet.ts"
+      ],
+      "only_in_new": [
+        "browser.browser.test.ts",
+        "browser/audio-output.ts",
+        "browser/capture.worklet.ts",
+        "browser/index.ts",
+        "browser/media-stream.ts",
+        "browser/playback.ts",
+        "browser/sources.ts",
+        "encoding/media-file.test.ts",
+        "encoding/media-file.ts",
+        "encoding/pcm-stream.browser.test.ts",
+        "encoding/pcm-stream.test.ts",
+        "encoding/pcm-stream.ts"
+      ]
+    },
+    {
+      "package": "@proj-airi/better-ws",
+      "same_path_files": 14,
+      "identical_files": 14,
+      "different_files": [],
+      "only_in_old": [],
+      "only_in_new": []
+    },
+    {
+      "package": "@proj-airi/core-agent",
+      "same_path_files": 65,
+      "identical_files": 47,
+      "different_files": [
+        "agents/spark-command/schema.ts",
+        "agents/spark-command/tools.test.ts",
+        "agents/spark-command/tools.ts",
+        "index.ts",
+        "messages/chat-completions.ts",
+        "runtime/chat-completions.test.ts",
+        "runtime/chat-completions.ts",
+        "runtime/chat-orchestrator-runtime.test.ts",
+        "runtime/chat-orchestrator-runtime.ts",
+        "runtime/generation.ts",
+        "runtime/llm-service.test.ts",
+        "runtime/llm-service.ts",
+        "runtime/request-context.ts",
+        "runtime/response-categoriser.ts",
+        "runtime/responses.test.ts",
+        "runtime/responses.ts",
+        "types/chat.ts",
+        "types/llm.ts"
+      ],
+      "only_in_old": [
+        "runtime/response-categoriser-errors.test.ts",
+        "utils/error-message.ts"
+      ],
+      "only_in_new": [
+        "runtime/request-switch.ts",
+        "testing/audio.ts",
+        "utils/error.ts",
+        "voice/controller.test.ts",
+        "voice/controller.ts",
+        "voice/index.ts",
+        "voice/input/attempt-types.ts",
+        "voice/input/attempt.ts",
+        "voice/input/end-detection.test.ts",
+        "voice/input/end-detection.ts",
+        "voice/input/snapshot.ts",
+        "voice/input/speech-input.ts",
+        "voice/input/submission.ts",
+        "voice/input/transcript.ts",
+        "voice/interruption.ts",
+        "voice/output/response.test.ts",
+        "voice/output/response.ts",
+        "voice/plugins/input-plugins.ts",
+        "voice/plugins/registry.ts",
+        "voice/plugins/task-lifetime.ts",
+        "voice/plugins/types.ts",
+        "voice/turn.ts"
+      ]
+    },
+    {
+      "package": "@proj-airi/electron-screen-capture",
+      "same_path_files": 6,
+      "identical_files": 6,
+      "different_files": [],
+      "only_in_old": [],
+      "only_in_new": []
+    },
+    {
+      "package": "@proj-airi/model-driver-lipsync",
+      "same_path_files": 7,
+      "identical_files": 6,
+      "different_files": [
+        "runtime/wlipsync/index.ts"
+      ],
+      "only_in_old": [],
+      "only_in_new": []
+    },
+    {
+      "package": "@proj-airi/pipelines-audio",
+      "same_path_files": 24,
+      "identical_files": 16,
+      "different_files": [
+        "index.ts",
+        "managers/playback-manager.test.ts",
+        "managers/playback-manager.ts",
+        "processors/tts-chunker.test.ts",
+        "processors/tts-chunker.ts",
+        "speech-pipeline.ts",
+        "stream.ts",
+        "types.ts"
+      ],
+      "only_in_old": [
+        "transcript-buffer.test.ts",
+        "transcript-buffer.ts"
+      ],
+      "only_in_new": [
+        "audio-input.test.ts",
+        "audio-input.ts",
+        "capture.ts",
+        "observe.ts",
+        "playback.test.ts",
+        "playback.ts",
+        "scope.ts"
+      ]
+    },
+    {
+      "package": "@proj-airi/plugin-protocol",
+      "same_path_files": 4,
+      "identical_files": 3,
+      "different_files": [
+        "types/events.ts"
+      ],
+      "only_in_old": [],
+      "only_in_new": []
+    },
+    {
+      "package": "@proj-airi/provider-inference",
+      "same_path_files": 79,
+      "identical_files": 72,
+      "different_files": [
+        "index.ts",
+        "model-catalog.test.ts",
+        "model-catalog.ts",
+        "providers/cloud/minimax-speech/index.ts",
+        "providers/local/browser-web-speech-api/index.browser.test.ts",
+        "providers/local/browser-web-speech-api/provider.ts",
+        "types.ts"
+      ],
+      "only_in_old": [],
+      "only_in_new": [
+        "providers/cloud/minimax-speech/index.test.ts",
+        "providers/local/sherpaw-transcription/index.test.ts",
+        "providers/local/sherpaw-transcription/index.ts",
+        "providers/local/sherpaw-transcription/models.test.ts",
+        "providers/local/sherpaw-transcription/models.ts",
+        "providers/local/sherpaw-transcription/runtime.ts",
+        "providers/local/sherpaw-transcription/transcript.test.ts",
+        "providers/local/sherpaw-transcription/transcript.ts"
+      ]
+    },
+    {
+      "package": "@proj-airi/server-sdk",
+      "same_path_files": 6,
+      "identical_files": 6,
+      "different_files": [],
+      "only_in_old": [],
+      "only_in_new": []
+    },
+    {
+      "package": "@proj-airi/server-shared",
+      "same_path_files": 5,
+      "identical_files": 5,
+      "different_files": [],
+      "only_in_old": [],
+      "only_in_new": []
+    },
+    {
+      "package": "@proj-airi/stage-shared",
+      "same_path_files": 45,
+      "identical_files": 41,
+      "different_files": [
+        "composables/use-local-storage-manual-reset/index.test.ts",
+        "composables/use-local-storage-manual-reset/index.ts",
+        "index.ts",
+        "types/io-trace.ts"
+      ],
+      "only_in_old": [],
+      "only_in_new": [
+        "presence-bubble/advance.test.ts",
+        "presence-bubble/advance.ts",
+        "presence-bubble/clock.test.ts",
+        "presence-bubble/clock.ts",
+        "presence-bubble/content.test.ts",
+        "presence-bubble/content.ts",
+        "presence-bubble/follow.test.ts",
+        "presence-bubble/follow.ts",
+        "presence-bubble/index.ts",
+        "presence-bubble/painter.test.ts",
+        "presence-bubble/painter.ts",
+        "presence-bubble/placement.test.ts",
+        "presence-bubble/placement.ts",
+        "screen-ambient-light/environment.test.ts",
+        "screen-ambient-light/environment.ts",
+        "screen-ambient-light/index.ts",
+        "screen-ambient-light/sampling.test.ts",
+        "screen-ambient-light/sampling.ts",
+        "stores/screen-ambient-light.ts"
+      ]
+    },
+    {
+      "package": "@proj-airi/stage-ui-three",
+      "same_path_files": 47,
+      "identical_files": 41,
+      "different_files": [
+        "components/Model/VRMModel.vue",
+        "components/ThreeScene.vue",
+        "composables/vrm/animation.test.ts",
+        "composables/vrm/animation.ts",
+        "composables/vrm/lip-sync.ts",
+        "stores/model-store.ts"
+      ],
+      "only_in_old": [
+        "composables/vrm/lip-sync.test.ts"
+      ],
+      "only_in_new": [
+        "components/presence-bubble-palette.ts",
+        "components/presence-bubble.vue"
+      ]
+    },
+    {
+      "package": "@proj-airi/stream-kit",
+      "same_path_files": 2,
+      "identical_files": 2,
+      "different_files": [],
+      "only_in_old": [],
+      "only_in_new": []
+    },
+    {
+      "package": "@proj-airi/ui",
+      "same_path_files": 85,
+      "identical_files": 77,
+      "different_files": [
+        "components/form/index.ts",
+        "components/form/textarea/basic-text-area.vue",
+        "components/layouts/bottom-drawer.vue",
+        "components/layouts/index.ts",
+        "components/layouts/screen.vue",
+        "components/layouts/scrollable-area.vue",
+        "components/misc/index.ts",
+        "components/misc/progress.vue"
+      ],
+      "only_in_old": [
+        "components/form/content-editable/basic-content-editable.vue",
+        "components/form/content-editable/index.ts"
+      ],
+      "only_in_new": [
+        "components/layouts/settings-card.vue",
+        "components/misc/dropdown-menu.vue"
+      ]
+    }
+  ],
+  "source_changes": false,
+  "migration_or_deletion_executed": false,
+  "git_index_sha256": "cfed2c524e1f382ac46018366c06887b298bb74f84d1ece2e8e7aee851745c49"
+}

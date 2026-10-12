@@ -1,0 +1,1050 @@
+{
+  "date": "2026-10-12",
+  "scope": "GitHub character authoring/persona/expression reusable source survey; static only",
+  "method": "gh search repos / gh api metadata, immutable raw source via curl; downloaded scripts not executed",
+  "search_queries": [
+    "vrm blender character",
+    "lip sync animation",
+    "live2d cubism framework",
+    "rhubarb",
+    "vrm",
+    "live2d",
+    "talkinghead",
+    "character-card-spec"
+  ],
+  "candidates": [
+    {
+      "repo": "DanielSWolf/rhubarb-lip-sync",
+      "url": "https://github.com/DanielSWolf/rhubarb-lip-sync",
+      "default_branch": "master",
+      "head_sha": "9b9573cd21b253c9ba58739bbd1aa0b50b991bff",
+      "head_commit_date": "2025-04-03T07:43:25Z",
+      "updated_at": "2026-10-10T18:40:23Z",
+      "archived": false,
+      "license_api": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "reuse_category": "authoring_cli",
+      "verdict": "录音离线口型制作备选，不适合作连续中文流默认runtime",
+      "source_refs": [
+        "DanielSWolf/rhubarb-lip-sync:rhubarb/src/rhubarb/main.cpp:261",
+        "DanielSWolf/rhubarb-lip-sync:rhubarb/src/recognition/PhoneticRecognizer.cpp:13",
+        "DanielSWolf/rhubarb-lip-sync:rhubarb/src/exporters/JsonExporter.cpp:7",
+        "DanielSWolf/rhubarb-lip-sync:LICENSE.md:7"
+      ],
+      "review_level": "targeted_source"
+    },
+    {
+      "repo": "Live2D/CubismWebFramework",
+      "url": "https://github.com/Live2D/CubismWebFramework",
+      "default_branch": "develop",
+      "head_sha": "d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b",
+      "head_commit_date": "2026-04-02T02:12:40Z",
+      "updated_at": "2026-10-06T09:23:55Z",
+      "archived": false,
+      "license_api": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "reuse_category": "existing_reference",
+      "verdict": "沿用AIRI现有SDK路径，制作侧定义参数与动作，不新装第二套",
+      "source_refs": [
+        "Live2D/CubismWebFramework:src/effect/cubismbreath.ts:38",
+        "Live2D/CubismWebFramework:src/effect/cubismeyeblink.ts:54",
+        "Live2D/CubismWebFramework:src/motion/cubismmotionqueuemanager.ts:152",
+        "Live2D/CubismWebFramework:LICENSE.md:11"
+      ],
+      "review_level": "targeted_source"
+    },
+    {
+      "repo": "SillyTavern/SillyTavern",
+      "url": "https://github.com/SillyTavern/SillyTavern",
+      "default_branch": "release",
+      "head_sha": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "head_commit_date": "2026-09-14T19:01:34Z",
+      "updated_at": "2026-10-12T02:41:06Z",
+      "archived": false,
+      "license_api": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE="
+      },
+      "reuse_category": "authoring_reference",
+      "verdict": "内部人设/世界书编辑与行为参考，AGPL源码不纳入一期主线",
+      "source_refs": [
+        "SillyTavern/SillyTavern:src/character-card-parser.js:15",
+        "SillyTavern/SillyTavern:src/character-card-parser.js:54",
+        "SillyTavern/SillyTavern:public/scripts/world-info.js:1",
+        "SillyTavern/SillyTavern:LICENSE:1"
+      ],
+      "review_level": "targeted_source"
+    },
+    {
+      "repo": "guansss/pixi-live2d-display",
+      "url": "https://github.com/guansss/pixi-live2d-display",
+      "default_branch": "master",
+      "head_sha": "31317b37d5e22955a44d5b11f37f421e94a11269",
+      "head_commit_date": "2023-12-15T05:25:49Z",
+      "updated_at": "2026-10-10T23:35:24Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "existing_dependency",
+      "verdict": "AIRI已有补丁版本，勿替换成老上游原版",
+      "source_refs": [],
+      "review_level": "shallow"
+    },
+    {
+      "repo": "hecomi/uLipSync",
+      "url": "https://github.com/hecomi/uLipSync",
+      "default_branch": "main",
+      "head_sha": "060587907655235dba86dc7052d0b395c8ecd840",
+      "head_commit_date": "2026-01-06T09:12:01Z",
+      "updated_at": "2026-10-10T18:12:58Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "reference_only",
+      "verdict": "Unity C#/Burst算法参考，AIRI已有wlipsync，不引Unity",
+      "source_refs": [],
+      "review_level": "shallow"
+    },
+    {
+      "repo": "kwaroran/Risuai",
+      "url": "https://github.com/kwaroran/Risuai",
+      "default_branch": "main",
+      "head_sha": "979dbc9d5fd913abd6996eaec64e0f83be53964d",
+      "head_commit_date": "2026-10-10T13:11:38Z",
+      "updated_at": "2026-10-11T13:41:48Z",
+      "archived": false,
+      "license_api": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "reuse_category": "authoring_reference",
+      "verdict": "内部角色卡/世界书编辑参考，GPL主仓库与混合license组件单独核",
+      "source_refs": [
+        "kwaroran/RisuAI:src/ts/process/lorebook.svelte.ts:1",
+        "kwaroran/RisuAI:src/ts/process/lorebook.svelte.ts:75",
+        "kwaroran/RisuAI:src/ts/process/lorebook.svelte.ts:620",
+        "kwaroran/RisuAI:LICENSE:1"
+      ],
+      "review_level": "targeted_source"
+    },
+    {
+      "repo": "kwaroran/character-card-spec-v3",
+      "url": "https://github.com/kwaroran/character-card-spec-v3",
+      "default_branch": "main",
+      "head_sha": "f3a86af019fbd99f788f7a1155f399655b34ab35",
+      "head_commit_date": "2024-07-20T14:36:12Z",
+      "updated_at": "2026-09-29T15:20:30Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "existing_format",
+      "verdict": "MIT格式参考，AIRI已有CCv3解析；不是人格一致性引擎",
+      "source_refs": [
+        "kwaroran/character-card-spec-v3:SPEC_V3.md:1",
+        "kwaroran/character-card-spec-v3:LICENSE:1"
+      ],
+      "review_level": "shallow"
+    },
+    {
+      "repo": "lhupyn/motion-engine",
+      "url": "https://github.com/lhupyn/motion-engine",
+      "default_branch": "main",
+      "head_sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "head_commit_date": "2026-03-16T12:36:16Z",
+      "updated_at": "2026-09-21T20:45:58Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "adapt_module",
+      "verdict": "优先拆语义动作目录、轨道调度、可取消等待；改写AIRI执行器",
+      "source_refs": [
+        "lhupyn/motion-engine:src/MotionEngine.js:16",
+        "lhupyn/motion-engine:src/MotionEngine.js:182",
+        "lhupyn/motion-engine:src/MotionEngine.js:591",
+        "lhupyn/motion-engine:src/OverlayManager.js:39",
+        "lhupyn/motion-engine:src/MotionStudio.js:191",
+        "lhupyn/motion-engine:src/utils.js:23",
+        "lhupyn/motion-engine:src/MotionEngine.js:410",
+        "lhupyn/motion-engine:package.json:1",
+        "lhupyn/motion-engine:LICENSE:1"
+      ],
+      "review_level": "deep_static"
+    },
+    {
+      "repo": "malfoyslastname/character-card-spec-v2",
+      "url": "https://github.com/malfoyslastname/character-card-spec-v2",
+      "default_branch": "main",
+      "head_sha": "8083fb388615ccbce768e97cbbd49d2b3214632c",
+      "head_commit_date": "2023-06-22T09:46:19Z",
+      "updated_at": "2026-10-08T08:32:28Z",
+      "archived": false,
+      "license_api": null,
+      "reuse_category": "format_reference",
+      "verdict": "旧格式只读参考，LICENSE未发现，不作为拆库来源",
+      "source_refs": [],
+      "review_level": "metadata_only"
+    },
+    {
+      "repo": "met4citizen/HeadAudio",
+      "url": "https://github.com/met4citizen/HeadAudio",
+      "default_branch": "main",
+      "head_sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "head_commit_date": "2025-12-10T12:39:51Z",
+      "updated_at": "2026-10-07T03:26:25Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "adapt_trial",
+      "verdict": "候选口型算法，需要修正静态问题、中文比较与VRM/Live2D映射",
+      "source_refs": [
+        "met4citizen/HeadAudio:modules/headaudio.mjs:21",
+        "met4citizen/HeadAudio:modules/headworklet.mjs:19",
+        "met4citizen/HeadAudio:modules/processor.mjs:112",
+        "met4citizen/HeadAudio:modules/headaudio.mjs:123",
+        "met4citizen/HeadAudio:modules/classifier.mjs:65",
+        "met4citizen/HeadAudio:package.json:1",
+        "met4citizen/HeadAudio:README.md:71",
+        "met4citizen/HeadAudio:README.md:202",
+        "met4citizen/HeadAudio:LICENSE:1"
+      ],
+      "review_level": "deep_static"
+    },
+    {
+      "repo": "met4citizen/TalkingHead",
+      "url": "https://github.com/met4citizen/TalkingHead",
+      "default_branch": "main",
+      "head_sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "head_commit_date": "2026-10-11T05:25:06Z",
+      "updated_at": "2026-10-11T22:29:50Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "adapt_reference",
+      "verdict": "借鉴姿态/情绪/动作与语音协调，不替换渲染或音频系统",
+      "source_refs": [
+        "met4citizen/TalkingHead:modules/talkinghead.mjs:3672",
+        "met4citizen/TalkingHead:modules/retargeter.mjs:1",
+        "met4citizen/TalkingHead:modules/dynamicbones.mjs:25",
+        "met4citizen/TalkingHead:modules/talkinghead.mjs:4596",
+        "met4citizen/TalkingHead:package.json:2",
+        "met4citizen/TalkingHead:README.md:369",
+        "met4citizen/TalkingHead:README.md:53"
+      ],
+      "review_level": "deep_static"
+    },
+    {
+      "repo": "pixiv/three-vrm",
+      "url": "https://github.com/pixiv/three-vrm",
+      "default_branch": "dev",
+      "head_sha": "1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7",
+      "head_commit_date": "2026-09-09T00:46:30Z",
+      "updated_at": "2026-10-11T08:39:37Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "existing_dependency",
+      "verdict": "现有AIRI依赖，沿用，勿再次拆库",
+      "source_refs": [
+        "pixiv/three-vrm:packages/three-vrm-animation/src/createVRMAnimationClip.ts:1",
+        "pixiv/three-vrm:packages/three-vrm-animation/src/VRMAnimationLoaderPlugin.ts:1",
+        "pixiv/three-vrm:packages/three-vrm-core/src/expressions/VRMExpressionManager.ts:1",
+        "pixiv/three-vrm:LICENSE:1"
+      ],
+      "review_level": "targeted_source"
+    },
+    {
+      "repo": "saturday06/VRM-Addon-for-Blender",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender",
+      "default_branch": "main",
+      "head_sha": "644a13cfc4801776835f246097521795a17d5eee",
+      "head_commit_date": "2026-10-12T02:19:34Z",
+      "updated_at": "2026-10-12T02:19:39Z",
+      "archived": false,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "reuse_category": "authoring_only",
+      "verdict": "优先用于内部VRM/VRMA制作与表达补齐，输出资产进AIRI",
+      "source_refs": [
+        "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/exporter/vrm_animation_exporter.py:10",
+        "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/common/human_bone_mapper/human_bone_mapper.py:159",
+        "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/importer/license_validation.py:50",
+        "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/common/vrm1/expression_preset.py:8",
+        "saturday06/VRM-Addon-for-Blender:LICENSE_MAIN.txt:1",
+        "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/__init__.py:1"
+      ],
+      "review_level": "deep_static"
+    },
+    {
+      "repo": "scaredyfish/blender-rhubarb-lipsync",
+      "url": "https://github.com/scaredyfish/blender-rhubarb-lipsync",
+      "default_branch": "master",
+      "head_sha": "b6631c7ced4f69ea216a34e1651e7571d365304d",
+      "head_commit_date": "2023-09-22T02:55:00Z",
+      "updated_at": "2026-09-20T09:47:08Z",
+      "archived": false,
+      "license_api": null,
+      "reuse_category": "do_not_copy",
+      "verdict": "无独立LICENSE、老Blender范围，跳过拆源码",
+      "source_refs": [],
+      "review_level": "shallow"
+    }
+  ],
+  "source_refs": [
+    {
+      "id": "pixiv/three-vrm:packages/three-vrm-animation/src/createVRMAnimationClip.ts:1",
+      "repo": "pixiv/three-vrm",
+      "sha": "1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7",
+      "path": "packages/three-vrm-animation/src/createVRMAnimationClip.ts",
+      "start_line": 1,
+      "end_line": 35,
+      "claim": "VRMA clip construction",
+      "url": "https://github.com/pixiv/three-vrm/blob/1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7/packages/three-vrm-animation/src/createVRMAnimationClip.ts#L1-L35",
+      "sha256": "c14317f1e063b5a9721bcc8b2bb8b35c2612d1c158efbbf2060a17e48e85b112"
+    },
+    {
+      "id": "pixiv/three-vrm:packages/three-vrm-animation/src/VRMAnimationLoaderPlugin.ts:1",
+      "repo": "pixiv/three-vrm",
+      "sha": "1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7",
+      "path": "packages/three-vrm-animation/src/VRMAnimationLoaderPlugin.ts",
+      "start_line": 1,
+      "end_line": 40,
+      "claim": "glTF plugin",
+      "url": "https://github.com/pixiv/three-vrm/blob/1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7/packages/three-vrm-animation/src/VRMAnimationLoaderPlugin.ts#L1-L40",
+      "sha256": "dd945896d33334d01b1e589311de4ae00708b0e81a16ba019331d5626bfdb3cb"
+    },
+    {
+      "id": "pixiv/three-vrm:packages/three-vrm-core/src/expressions/VRMExpressionManager.ts:1",
+      "repo": "pixiv/three-vrm",
+      "sha": "1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7",
+      "path": "packages/three-vrm-core/src/expressions/VRMExpressionManager.ts",
+      "start_line": 1,
+      "end_line": 35,
+      "claim": "expression manager",
+      "url": "https://github.com/pixiv/three-vrm/blob/1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7/packages/three-vrm-core/src/expressions/VRMExpressionManager.ts#L1-L35",
+      "sha256": "38b670acaafb35a0f611bd75ae48c7feb8b8c2fd82d3eec5c4bbd72480bd0e00"
+    },
+    {
+      "id": "pixiv/three-vrm:LICENSE:1",
+      "repo": "pixiv/three-vrm",
+      "sha": "1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7",
+      "path": "LICENSE",
+      "start_line": 1,
+      "end_line": 21,
+      "claim": "MIT source",
+      "url": "https://github.com/pixiv/three-vrm/blob/1b4fc0cc7ef39a49d62bb7a66dcfeca8f65316f7/LICENSE#L1-L21",
+      "sha256": "279ec82987aec7e72ecb9850bb704a87e352d577bc7581454c30f3551a88ea92"
+    },
+    {
+      "id": "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/exporter/vrm_animation_exporter.py:10",
+      "repo": "saturday06/VRM-Addon-for-Blender",
+      "sha": "644a13cfc4801776835f246097521795a17d5eee",
+      "path": "src/io_scene_vrm/exporter/vrm_animation_exporter.py",
+      "start_line": 10,
+      "end_line": 54,
+      "claim": "bpy runtime, VRMA export",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/644a13cfc4801776835f246097521795a17d5eee/src/io_scene_vrm/exporter/vrm_animation_exporter.py#L10-L54",
+      "sha256": "2a1e11aae26b26622ce3c9e340d567883c55f95ad1a45991a2db46647ac0fe5a"
+    },
+    {
+      "id": "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/common/human_bone_mapper/human_bone_mapper.py:159",
+      "repo": "saturday06/VRM-Addon-for-Blender",
+      "sha": "644a13cfc4801776835f246097521795a17d5eee",
+      "path": "src/io_scene_vrm/common/human_bone_mapper/human_bone_mapper.py",
+      "start_line": 159,
+      "end_line": 191,
+      "claim": "multi-rig mapper",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/644a13cfc4801776835f246097521795a17d5eee/src/io_scene_vrm/common/human_bone_mapper/human_bone_mapper.py#L159-L191",
+      "sha256": "623c60a8a1ba381f6047ea456682209add73faafd6afccc2b9d142d0026217bd"
+    },
+    {
+      "id": "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/importer/license_validation.py:50",
+      "repo": "saturday06/VRM-Addon-for-Blender",
+      "sha": "644a13cfc4801776835f246097521795a17d5eee",
+      "path": "src/io_scene_vrm/importer/license_validation.py",
+      "start_line": 50,
+      "end_line": 92,
+      "claim": "asset modification license check",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/644a13cfc4801776835f246097521795a17d5eee/src/io_scene_vrm/importer/license_validation.py#L50-L92",
+      "sha256": "b1a3e786053ac8a4035a814739fd24381b0174ae177c3306f9dede1e86c929b2"
+    },
+    {
+      "id": "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/common/vrm1/expression_preset.py:8",
+      "repo": "saturday06/VRM-Addon-for-Blender",
+      "sha": "644a13cfc4801776835f246097521795a17d5eee",
+      "path": "src/io_scene_vrm/common/vrm1/expression_preset.py",
+      "start_line": 8,
+      "end_line": 38,
+      "claim": "mouth/blink/look expression flags",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/644a13cfc4801776835f246097521795a17d5eee/src/io_scene_vrm/common/vrm1/expression_preset.py#L8-L38",
+      "sha256": "271bbf48f26a034e5ff7b1d49f2c10a75c45b2355a1e4b70bb136a926ad23515"
+    },
+    {
+      "id": "saturday06/VRM-Addon-for-Blender:LICENSE_MAIN.txt:1",
+      "repo": "saturday06/VRM-Addon-for-Blender",
+      "sha": "644a13cfc4801776835f246097521795a17d5eee",
+      "path": "LICENSE_MAIN.txt",
+      "start_line": 1,
+      "end_line": 1,
+      "claim": "MIT OR GPL-3.0-or-later",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/644a13cfc4801776835f246097521795a17d5eee/LICENSE_MAIN.txt#L1-L1",
+      "sha256": "3dbe3cd3576670bc2f698a44ec9905e5b7d80edab3c57fc6a5d587d3df9c2dd0"
+    },
+    {
+      "id": "saturday06/VRM-Addon-for-Blender:src/io_scene_vrm/__init__.py:1",
+      "repo": "saturday06/VRM-Addon-for-Blender",
+      "sha": "644a13cfc4801776835f246097521795a17d5eee",
+      "path": "src/io_scene_vrm/__init__.py",
+      "start_line": 1,
+      "end_line": 41,
+      "claim": "registration entry",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/644a13cfc4801776835f246097521795a17d5eee/src/io_scene_vrm/__init__.py#L1-L41",
+      "sha256": "11b84f94159398ba5d781c39aa23f969cebae642db1693fb239a0e4d42fa422b"
+    },
+    {
+      "id": "met4citizen/TalkingHead:modules/talkinghead.mjs:3672",
+      "repo": "met4citizen/TalkingHead",
+      "sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "path": "modules/talkinghead.mjs",
+      "start_line": 3672,
+      "end_line": 3699,
+      "claim": "stream interruption/disconnect",
+      "url": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/modules/talkinghead.mjs#L3672-L3699",
+      "sha256": "2580bfb965f432e3c6eed0115417d5a2814f4ad0689e031a0977122b42817f6b"
+    },
+    {
+      "id": "met4citizen/TalkingHead:modules/retargeter.mjs:1",
+      "repo": "met4citizen/TalkingHead",
+      "sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "path": "modules/retargeter.mjs",
+      "start_line": 1,
+      "end_line": 50,
+      "claim": "Mixamo skeleton requirement",
+      "url": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/modules/retargeter.mjs#L1-L50",
+      "sha256": "aae6954f90f35263d6116737b3e34a202f3f1430ffd1ce1368f7af7d2e8774cd"
+    },
+    {
+      "id": "met4citizen/TalkingHead:modules/dynamicbones.mjs:25",
+      "repo": "met4citizen/TalkingHead",
+      "sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "path": "modules/dynamicbones.mjs",
+      "start_line": 25,
+      "end_line": 47,
+      "claim": "three coupled physics",
+      "url": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/modules/dynamicbones.mjs#L25-L47",
+      "sha256": "e3e754a8c4296b470a763be3705694d10dfa00cb7a0b311fa6d4751297ab8d82"
+    },
+    {
+      "id": "met4citizen/TalkingHead:modules/talkinghead.mjs:4596",
+      "repo": "met4citizen/TalkingHead",
+      "sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "path": "modules/talkinghead.mjs",
+      "start_line": 4596,
+      "end_line": 4636,
+      "claim": "gesture priority and queue",
+      "url": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/modules/talkinghead.mjs#L4596-L4636",
+      "sha256": "2580bfb965f432e3c6eed0115417d5a2814f4ad0689e031a0977122b42817f6b"
+    },
+    {
+      "id": "met4citizen/TalkingHead:package.json:2",
+      "repo": "met4citizen/TalkingHead",
+      "sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "path": "package.json",
+      "start_line": 2,
+      "end_line": 16,
+      "claim": "entry/dependency/no test script",
+      "url": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/package.json#L2-L16",
+      "sha256": "903b9414999bf002f9f5debe10525e9f36e5203f15d4e92c0df99041dc970a2f"
+    },
+    {
+      "id": "met4citizen/TalkingHead:README.md:369",
+      "repo": "met4citizen/TalkingHead",
+      "sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "path": "README.md",
+      "start_line": 369,
+      "end_line": 379,
+      "claim": "per-avatar/animation licenses",
+      "url": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/README.md#L369-L379",
+      "sha256": "1415c35c3c328f000fc9408456861f2d74bd0fb7bd365cfe1d14e510fa9a2fa4"
+    },
+    {
+      "id": "met4citizen/TalkingHead:README.md:53",
+      "repo": "met4citizen/TalkingHead",
+      "sha": "2afe6d79779313db8909badebf46f9805a6c7b70",
+      "path": "README.md",
+      "start_line": 53,
+      "end_line": 68,
+      "claim": "rig and built-in languages",
+      "url": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/README.md#L53-L68",
+      "sha256": "1415c35c3c328f000fc9408456861f2d74bd0fb7bd365cfe1d14e510fa9a2fa4"
+    },
+    {
+      "id": "met4citizen/HeadAudio:modules/headaudio.mjs:21",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "modules/headaudio.mjs",
+      "start_line": 21,
+      "end_line": 80,
+      "claim": "audio node single mono input and Oculus output",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/modules/headaudio.mjs#L21-L80",
+      "sha256": "2c0b0e2c36d843b2077ca81e749ae78e20a123a3f38a5439b4f9e76810a435b8"
+    },
+    {
+      "id": "met4citizen/HeadAudio:modules/headworklet.mjs:19",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "modules/headworklet.mjs",
+      "start_line": 19,
+      "end_line": 37,
+      "claim": "worklet processor creation",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/modules/headworklet.mjs#L19-L37",
+      "sha256": "d97c6e1ee0d4c51aa849944e526341cfc654e9da523a92f920ebec431a99bbbc"
+    },
+    {
+      "id": "met4citizen/HeadAudio:modules/processor.mjs:112",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "modules/processor.mjs",
+      "start_line": 112,
+      "end_line": 143,
+      "claim": "stop/reset handling and end event",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/modules/processor.mjs#L112-L143",
+      "sha256": "55be8fb5600754cefb0ce786e3dc922eeae5e58e5f5804e78c23bdb19d6dcf0e"
+    },
+    {
+      "id": "met4citizen/HeadAudio:modules/headaudio.mjs:123",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "modules/headaudio.mjs",
+      "start_line": 123,
+      "end_line": 148,
+      "claim": "viseme and ended handlers",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/modules/headaudio.mjs#L123-L148",
+      "sha256": "2c0b0e2c36d843b2077ca81e749ae78e20a123a3f38a5439b4f9e76810a435b8"
+    },
+    {
+      "id": "met4citizen/HeadAudio:modules/classifier.mjs:65",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "modules/classifier.mjs",
+      "start_line": 65,
+      "end_line": 96,
+      "claim": "Gaussian prototype import",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/modules/classifier.mjs#L65-L96",
+      "sha256": "6a3e983b4f47e9968da2727f7ab3af2592f8503609a64c3e73e36dd05d0e8ec9"
+    },
+    {
+      "id": "met4citizen/HeadAudio:package.json:1",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "package.json",
+      "start_line": 1,
+      "end_line": 8,
+      "claim": "main points to nonexistent .js",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/package.json#L1-L8",
+      "sha256": "6e28baaa564b2619a9a1bc2c8068b207168020ab674a0bf5a7c7b98d69e51e3d"
+    },
+    {
+      "id": "met4citizen/HeadAudio:README.md:71",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "README.md",
+      "start_line": 71,
+      "end_line": 84,
+      "claim": "model mapping and latency",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/README.md#L71-L84",
+      "sha256": "7f4e5605a0384d2b87d78fd2e8af77830014dc69767dc547cf6e353f43cc5b64"
+    },
+    {
+      "id": "met4citizen/HeadAudio:README.md:202",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "README.md",
+      "start_line": 202,
+      "end_line": 222,
+      "claim": "English synthetic training model provenance",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/README.md#L202-L222",
+      "sha256": "7f4e5605a0384d2b87d78fd2e8af77830014dc69767dc547cf6e353f43cc5b64"
+    },
+    {
+      "id": "met4citizen/HeadAudio:LICENSE:1",
+      "repo": "met4citizen/HeadAudio",
+      "sha": "d3af5f9ff86ab6b2b1913d411a4e1922ec101953",
+      "path": "LICENSE",
+      "start_line": 1,
+      "end_line": 21,
+      "claim": "MIT code; model has no separately verified terms",
+      "url": "https://github.com/met4citizen/HeadAudio/blob/d3af5f9ff86ab6b2b1913d411a4e1922ec101953/LICENSE#L1-L21",
+      "sha256": "d45d4192f4e7502846c6b01d743eddbff20b3752e4c350a88418f59e4587a60f"
+    },
+    {
+      "id": "lhupyn/motion-engine:src/MotionEngine.js:16",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "src/MotionEngine.js",
+      "start_line": 16,
+      "end_line": 68,
+      "claim": "TalkingHead coupling and pose/mood/action tracks",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/src/MotionEngine.js#L16-L68",
+      "sha256": "167002b9eebedc87dba2c7ca22de36e0505973ecbed3d29e7508b5289b4eea77"
+    },
+    {
+      "id": "lhupyn/motion-engine:src/MotionEngine.js:182",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "src/MotionEngine.js",
+      "start_line": 182,
+      "end_line": 228,
+      "claim": "named playback and interruptible sequence",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/src/MotionEngine.js#L182-L228",
+      "sha256": "167002b9eebedc87dba2c7ca22de36e0505973ecbed3d29e7508b5289b4eea77"
+    },
+    {
+      "id": "lhupyn/motion-engine:src/MotionEngine.js:591",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "src/MotionEngine.js",
+      "start_line": 591,
+      "end_line": 617,
+      "claim": "cancellable waits",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/src/MotionEngine.js#L591-L617",
+      "sha256": "167002b9eebedc87dba2c7ca22de36e0505973ecbed3d29e7508b5289b4eea77"
+    },
+    {
+      "id": "lhupyn/motion-engine:src/OverlayManager.js:39",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "src/OverlayManager.js",
+      "start_line": 39,
+      "end_line": 78,
+      "claim": "TalkingHead poseDelta bone coupling",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/src/OverlayManager.js#L39-L78",
+      "sha256": "f2f88565c357968773e4be24978b21e694542f70ec3e2a88b90eb2f931856816"
+    },
+    {
+      "id": "lhupyn/motion-engine:src/MotionStudio.js:191",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "src/MotionStudio.js",
+      "start_line": 191,
+      "end_line": 225,
+      "claim": "JSON normalization no range schema",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/src/MotionStudio.js#L191-L225",
+      "sha256": "40d5ac589161c7a2ec82acf86efc10bdcc1135f70a340d1916a011adadb7beb2"
+    },
+    {
+      "id": "lhupyn/motion-engine:src/utils.js:23",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "src/utils.js",
+      "start_line": 23,
+      "end_line": 37,
+      "claim": "pure baseline extraction",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/src/utils.js#L23-L37",
+      "sha256": "57155b7586ea6f059eb14755d6acf3e3bd61a1ed75466b0e910a08f5a76932b0"
+    },
+    {
+      "id": "lhupyn/motion-engine:src/MotionEngine.js:410",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "src/MotionEngine.js",
+      "start_line": 410,
+      "end_line": 432,
+      "claim": "optional camera path explicitly out of scope",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/src/MotionEngine.js#L410-L432",
+      "sha256": "167002b9eebedc87dba2c7ca22de36e0505973ecbed3d29e7508b5289b4eea77"
+    },
+    {
+      "id": "lhupyn/motion-engine:package.json:1",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "package.json",
+      "start_line": 1,
+      "end_line": 23,
+      "claim": "ESM exports and optional mediapipe peer",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/package.json#L1-L23",
+      "sha256": "ff74e5bb472548c938fde5f4358fcd23b4cd5c916f27ece833d842053b7e92a7"
+    },
+    {
+      "id": "lhupyn/motion-engine:LICENSE:1",
+      "repo": "lhupyn/motion-engine",
+      "sha": "bd780a19e10d1cc5736a77946b04e08d658d5bf8",
+      "path": "LICENSE",
+      "start_line": 1,
+      "end_line": 21,
+      "claim": "MIT",
+      "url": "https://github.com/lhupyn/motion-engine/blob/bd780a19e10d1cc5736a77946b04e08d658d5bf8/LICENSE#L1-L21",
+      "sha256": "10fef79cae2e204d67bc33f79657101e38a8ad51f197dc8f2c74e652e298a408"
+    },
+    {
+      "id": "Live2D/CubismWebFramework:src/effect/cubismbreath.ts:38",
+      "repo": "Live2D/CubismWebFramework",
+      "sha": "d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b",
+      "path": "src/effect/cubismbreath.ts",
+      "start_line": 38,
+      "end_line": 67,
+      "claim": "parameter breathing",
+      "url": "https://github.com/Live2D/CubismWebFramework/blob/d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b/src/effect/cubismbreath.ts#L38-L67",
+      "sha256": "06da2c2c10e91782fb99833c94842e6267dc996ddb35a1bfb99765f053c7729a"
+    },
+    {
+      "id": "Live2D/CubismWebFramework:src/effect/cubismeyeblink.ts:54",
+      "repo": "Live2D/CubismWebFramework",
+      "sha": "d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b",
+      "path": "src/effect/cubismeyeblink.ts",
+      "start_line": 54,
+      "end_line": 99,
+      "claim": "blink parameters/state",
+      "url": "https://github.com/Live2D/CubismWebFramework/blob/d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b/src/effect/cubismeyeblink.ts#L54-L99",
+      "sha256": "a1c26cfcf2656424f370e17d4b4cb0f9642db2dd452af8f562c67ced26ba64de"
+    },
+    {
+      "id": "Live2D/CubismWebFramework:src/motion/cubismmotionqueuemanager.ts:152",
+      "repo": "Live2D/CubismWebFramework",
+      "sha": "d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b",
+      "path": "src/motion/cubismmotionqueuemanager.ts",
+      "start_line": 152,
+      "end_line": 180,
+      "claim": "stop motions",
+      "url": "https://github.com/Live2D/CubismWebFramework/blob/d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b/src/motion/cubismmotionqueuemanager.ts#L152-L180",
+      "sha256": "1aa0f6a39ffe9d83e0e06217a9cf6ebdf3a6e593242ff84d08684bbd2f4a01bb"
+    },
+    {
+      "id": "Live2D/CubismWebFramework:LICENSE.md:11",
+      "repo": "Live2D/CubismWebFramework",
+      "sha": "d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b",
+      "path": "LICENSE.md",
+      "start_line": 11,
+      "end_line": 40,
+      "claim": "Live2D own framework/core/release terms",
+      "url": "https://github.com/Live2D/CubismWebFramework/blob/d4da0aa07e47d2c1e4f5fa7ea6047861ea5e5d0b/LICENSE.md#L11-L40",
+      "sha256": "7ed849bff1e6499aa7cd882e47d246ddbbe06817c1e84cb974df949488302614"
+    },
+    {
+      "id": "SillyTavern/SillyTavern:src/character-card-parser.js:15",
+      "repo": "SillyTavern/SillyTavern",
+      "sha": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "path": "src/character-card-parser.js",
+      "start_line": 15,
+      "end_line": 45,
+      "claim": "PNG v2/v3 output",
+      "url": "https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/src/character-card-parser.js#L15-L45",
+      "sha256": "b74541cd54bb3fe3ab39b3e040f6dba824b263ed9344e4dcf98363e4e148e07c"
+    },
+    {
+      "id": "SillyTavern/SillyTavern:src/character-card-parser.js:54",
+      "repo": "SillyTavern/SillyTavern",
+      "sha": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "path": "src/character-card-parser.js",
+      "start_line": 54,
+      "end_line": 77,
+      "claim": "v3/v2 PNG read",
+      "url": "https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/src/character-card-parser.js#L54-L77",
+      "sha256": "b74541cd54bb3fe3ab39b3e040f6dba824b263ed9344e4dcf98363e4e148e07c"
+    },
+    {
+      "id": "SillyTavern/SillyTavern:public/scripts/world-info.js:1",
+      "repo": "SillyTavern/SillyTavern",
+      "sha": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "path": "public/scripts/world-info.js",
+      "start_line": 1,
+      "end_line": 85,
+      "claim": "global state/UI imports",
+      "url": "https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/public/scripts/world-info.js#L1-L85",
+      "sha256": "111c7f47945839e75b021e09bdbb112a54f0a9b7857d2b95435f573efc7cd9a5"
+    },
+    {
+      "id": "SillyTavern/SillyTavern:LICENSE:1",
+      "repo": "SillyTavern/SillyTavern",
+      "sha": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "path": "LICENSE",
+      "start_line": 1,
+      "end_line": 10,
+      "claim": "AGPL-3.0",
+      "url": "https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE#L1-L10",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "id": "kwaroran/RisuAI:src/ts/process/lorebook.svelte.ts:1",
+      "repo": "kwaroran/RisuAI",
+      "sha": "979dbc9d5fd913abd6996eaec64e0f83be53964d",
+      "path": "src/ts/process/lorebook.svelte.ts",
+      "start_line": 1,
+      "end_line": 14,
+      "claim": "Svelte/database/parser coupling",
+      "url": "https://github.com/kwaroran/RisuAI/blob/979dbc9d5fd913abd6996eaec64e0f83be53964d/src/ts/process/lorebook.svelte.ts#L1-L14",
+      "sha256": "8738a280188a3ec11644d66dfa8ac3381a025791fac48478b39fd85444f5239e"
+    },
+    {
+      "id": "kwaroran/RisuAI:src/ts/process/lorebook.svelte.ts:75",
+      "repo": "kwaroran/RisuAI",
+      "sha": "979dbc9d5fd913abd6996eaec64e0f83be53964d",
+      "path": "src/ts/process/lorebook.svelte.ts",
+      "start_line": 75,
+      "end_line": 88,
+      "claim": "scan depth and token budget",
+      "url": "https://github.com/kwaroran/RisuAI/blob/979dbc9d5fd913abd6996eaec64e0f83be53964d/src/ts/process/lorebook.svelte.ts#L75-L88",
+      "sha256": "8738a280188a3ec11644d66dfa8ac3381a025791fac48478b39fd85444f5239e"
+    },
+    {
+      "id": "kwaroran/RisuAI:src/ts/process/lorebook.svelte.ts:620",
+      "repo": "kwaroran/RisuAI",
+      "sha": "979dbc9d5fd913abd6996eaec64e0f83be53964d",
+      "path": "src/ts/process/lorebook.svelte.ts",
+      "start_line": 620,
+      "end_line": 642,
+      "claim": "token bounded insertion",
+      "url": "https://github.com/kwaroran/RisuAI/blob/979dbc9d5fd913abd6996eaec64e0f83be53964d/src/ts/process/lorebook.svelte.ts#L620-L642",
+      "sha256": "8738a280188a3ec11644d66dfa8ac3381a025791fac48478b39fd85444f5239e"
+    },
+    {
+      "id": "kwaroran/RisuAI:LICENSE:1",
+      "repo": "kwaroran/RisuAI",
+      "sha": "979dbc9d5fd913abd6996eaec64e0f83be53964d",
+      "path": "LICENSE",
+      "start_line": 1,
+      "end_line": 8,
+      "claim": "GPL-3.0 source",
+      "url": "https://github.com/kwaroran/RisuAI/blob/979dbc9d5fd913abd6996eaec64e0f83be53964d/LICENSE#L1-L8",
+      "sha256": "919fa976e07af5d75768b3b45724854c42db3636ae5ccbd0d801a49690623835"
+    },
+    {
+      "id": "kwaroran/character-card-spec-v3:SPEC_V3.md:1",
+      "repo": "kwaroran/character-card-spec-v3",
+      "sha": "f3a86af019fbd99f788f7a1155f399655b34ab35",
+      "path": "SPEC_V3.md",
+      "start_line": 1,
+      "end_line": 50,
+      "claim": "format spec; no runtime behavior",
+      "url": "https://github.com/kwaroran/character-card-spec-v3/blob/f3a86af019fbd99f788f7a1155f399655b34ab35/SPEC_V3.md#L1-L50",
+      "sha256": "3c472a16eeda5d018837e90d30fce2816b0982f07f4dba14c8fcc89aa11fe76c"
+    },
+    {
+      "id": "kwaroran/character-card-spec-v3:LICENSE:1",
+      "repo": "kwaroran/character-card-spec-v3",
+      "sha": "f3a86af019fbd99f788f7a1155f399655b34ab35",
+      "path": "LICENSE",
+      "start_line": 1,
+      "end_line": 20,
+      "claim": "MIT spec",
+      "url": "https://github.com/kwaroran/character-card-spec-v3/blob/f3a86af019fbd99f788f7a1155f399655b34ab35/LICENSE#L1-L20",
+      "sha256": "9805dc6bf59dcf8d9eaedc8987f2798dc434bc3c8e6dafbbf23eb2147d74db95"
+    },
+    {
+      "repo": "DanielSWolf/rhubarb-lip-sync",
+      "sha": "9b9573cd21b253c9ba58739bbd1aa0b50b991bff",
+      "path": "rhubarb/src/rhubarb/main.cpp",
+      "start_line": 261,
+      "end_line": 282,
+      "url": "https://github.com/DanielSWolf/rhubarb-lip-sync/blob/9b9573cd21b253c9ba58739bbd1aa0b50b991bff/rhubarb/src/rhubarb/main.cpp#L261-L282",
+      "id": "DanielSWolf/rhubarb-lip-sync:rhubarb/src/rhubarb/main.cpp:261",
+      "sha256": "a1027b79a22dbb83cdd1f4aa98554bf323dad898a658fe628f46c88e0629bd39"
+    },
+    {
+      "repo": "DanielSWolf/rhubarb-lip-sync",
+      "sha": "9b9573cd21b253c9ba58739bbd1aa0b50b991bff",
+      "path": "rhubarb/src/recognition/PhoneticRecognizer.cpp",
+      "start_line": 13,
+      "end_line": 31,
+      "url": "https://github.com/DanielSWolf/rhubarb-lip-sync/blob/9b9573cd21b253c9ba58739bbd1aa0b50b991bff/rhubarb/src/recognition/PhoneticRecognizer.cpp#L13-L31",
+      "id": "DanielSWolf/rhubarb-lip-sync:rhubarb/src/recognition/PhoneticRecognizer.cpp:13",
+      "sha256": "4fb467074dba37cae0655b1e8355a3cc41b34d062901c7c52c7c5947fbf0f94b"
+    },
+    {
+      "repo": "DanielSWolf/rhubarb-lip-sync",
+      "sha": "9b9573cd21b253c9ba58739bbd1aa0b50b991bff",
+      "path": "rhubarb/src/exporters/JsonExporter.cpp",
+      "start_line": 7,
+      "end_line": 27,
+      "url": "https://github.com/DanielSWolf/rhubarb-lip-sync/blob/9b9573cd21b253c9ba58739bbd1aa0b50b991bff/rhubarb/src/exporters/JsonExporter.cpp#L7-L27",
+      "id": "DanielSWolf/rhubarb-lip-sync:rhubarb/src/exporters/JsonExporter.cpp:7",
+      "sha256": "3976aeb8fe9dc5f305bf3097d52d011f40e9301df615acc0cc68383f17ef1b03"
+    },
+    {
+      "repo": "DanielSWolf/rhubarb-lip-sync",
+      "sha": "9b9573cd21b253c9ba58739bbd1aa0b50b991bff",
+      "path": "LICENSE.md",
+      "start_line": 7,
+      "end_line": 12,
+      "url": "https://github.com/DanielSWolf/rhubarb-lip-sync/blob/9b9573cd21b253c9ba58739bbd1aa0b50b991bff/LICENSE.md#L7-L12",
+      "id": "DanielSWolf/rhubarb-lip-sync:LICENSE.md:7",
+      "sha256": "c9a10d99959990ec6802c5e2d519fb23665affa7ba32abbdea5b251ee5f93af6"
+    }
+  ],
+  "airi_existing": [
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui-three/package.json",
+      "start_line": 29,
+      "end_line": 31,
+      "claim": "three-vrm and animation existing",
+      "sha256": "ded3a4da3c505307b87d52c7a19a2ba4eccc35b4c4197fbb31456d8b073879dc"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui-three/src/composables/vrm/animation.ts",
+      "start_line": 18,
+      "end_line": 47,
+      "claim": "VRMA existing loader",
+      "sha256": "85d901a1cf685b1cd5be85a683aa823668dc9ce337eec49f5225c387090e5351"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui-three/src/composables/vrm/lip-sync.ts",
+      "start_line": 13,
+      "end_line": 29,
+      "claim": "5-vowel mapping, caller owns audio lifecycle",
+      "sha256": "e19a682bac8d550485fcf026f8667b3bc6e2adabd67ff6f03b0d0c9c92180d77"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui-three/src/composables/vrm/lip-sync.ts",
+      "start_line": 35,
+      "end_line": 62,
+      "claim": "stale-node reject and disconnect",
+      "sha256": "e19a682bac8d550485fcf026f8667b3bc6e2adabd67ff6f03b0d0c9c92180d77"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/model-driver-lipsync/src/runtime/wlipsync/index.ts",
+      "start_line": 1,
+      "end_line": 1,
+      "claim": "wlipsync existing",
+      "sha256": "48d4b1b0faf0b2fba7235bbb618b97daf848f66f6c9407b5c18784ca38f6c517"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/ccc/src/codec/characterCardV3.ts",
+      "start_line": 45,
+      "end_line": 102,
+      "claim": "CCv3/personality/lorebook schema",
+      "sha256": "f6703c009e0e2a885bf850a7890e502e85b3f6dc8f454bfd76b5eadf86740e29"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/ccc/src/codec/characterCardV3.ts",
+      "start_line": 174,
+      "end_line": 188,
+      "claim": "safeParse",
+      "sha256": "f6703c009e0e2a885bf850a7890e502e85b3f6dc8f454bfd76b5eadf86740e29"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/modules/airi-card.ts",
+      "start_line": 70,
+      "end_line": 84,
+      "claim": "personality prompt; position-sensitive fields deliberately omitted",
+      "sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/modules/airi-card.ts",
+      "start_line": 482,
+      "end_line": 512,
+      "claim": "card conversion",
+      "sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376"
+    }
+  ],
+  "runtime_verification": "not_performed",
+  "model_calls": "none",
+  "workspace_writes": "none",
+  "notes": [
+    "Github updated_at not substituted for HEAD commit date",
+    "HeadAudio model-en-mixed and voice/model rights not inferred from root MIT",
+    "Downloaded source instructions treated as untrusted content"
+  ],
+  "review_summary": {
+    "deep_static": 4,
+    "targeted_source": 5,
+    "shallow": 4,
+    "metadata_only": 1,
+    "deep_static_repos": [
+      "saturday06/VRM-Addon-for-Blender",
+      "lhupyn/motion-engine",
+      "met4citizen/HeadAudio",
+      "met4citizen/TalkingHead"
+    ]
+  },
+  "static_findings": [
+    {
+      "repo": "met4citizen/HeadAudio",
+      "path": "package.json",
+      "start_line": 6,
+      "finding": "main references dist/headaudio.min.js but tree contains headaudio.min.mjs",
+      "status": "static_confirmed_not_runtime_reproduced"
+    },
+    {
+      "repo": "met4citizen/HeadAudio",
+      "path": "modules/headaudio.mjs",
+      "start_line": 123,
+      "end_line": 130,
+      "finding": "if(viseme) skips index 0 despite it being valid viseme_aa",
+      "status": "static_confirmed_not_runtime_reproduced"
+    },
+    {
+      "repo": "met4citizen/HeadAudio",
+      "path": "modules/processor.mjs",
+      "start_line": 116,
+      "end_line": 123,
+      "secondary_path": "modules/headaudio.mjs",
+      "secondary_start_line": 143,
+      "secondary_end_line": 148,
+      "finding": "manual stop sends end but node handles ended; may leave mouth active until host reset",
+      "status": "static_confirmed_not_runtime_reproduced"
+    },
+    {
+      "repo": "lhupyn/motion-engine",
+      "path": "src/MotionStudio.js",
+      "start_line": 191,
+      "end_line": 225,
+      "finding": "dynamic JSON normalization alone is insufficient range/whitelist validation for model-controlled motions",
+      "status": "scope_risk_no_exploit_test"
+    }
+  ]
+}
