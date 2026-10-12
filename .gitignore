@@ -21,3 +21,7 @@ coverage/
 /airi-main/
 /agent-blueprint-aimy-main/
 /ai-product-starter-kit-main*/
+
+# AIRI upstream website content: large blog/tutorial media, not needed to run or
+# build the product (R1 manual §3). Kept on disk for reference only.
+/aimy-app/docs/content/
