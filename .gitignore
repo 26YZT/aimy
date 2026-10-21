@@ -25,3 +25,16 @@ coverage/
 # AIRI upstream website content: large blog/tutorial media, not needed to run or
 # build the product (R1 manual §3). Kept on disk for reference only.
 /aimy-app/docs/content/
+
+# Keep local build inventories, runtime test attachments, and original design
+# reference images on disk without publishing them.
+/docs/04-验证记录/*/evidence/builds/**/build-manifest.json.gz
+/docs/04-验证记录/*/evidence/builds/**/prepare-manifest.json.gz
+/docs/02-调研参考/**/PR09-surfacing-synthetic.sqlite
+/docs/04-验证记录/2026-10-18-其余模型服务连接验证/mimo-tts-test.wav
+/docs/06-视觉设计/2026-10-20-MasterGo参考/
+/docs/05-实施手册/2026-10-20-侧栏头像语音与雾蒙粉/颜色参考.png
+/docs/06-视觉设计/*.zip
+
+# Historical local credential scratch file. Never publish it again.
+/digital-lover/x
