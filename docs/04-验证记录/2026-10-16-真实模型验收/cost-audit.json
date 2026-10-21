@@ -1,0 +1,25 @@
+{
+  "realRequests": 56,
+  "settled": 56,
+  "unknown": 0,
+  "totalMicroYuan": 206679,
+  "conservativeYuan": 0.206679,
+  "remainingYuan": 9.793321,
+  "byArm": {
+    "airi": {
+      "requests": 20,
+      "microYuan": 86178,
+      "inputTokens": 24562,
+      "outputTokens": 6355
+    },
+    "aimy": {
+      "requests": 36,
+      "microYuan": 120501,
+      "inputTokens": 41693,
+      "outputTokens": 7647
+    }
+  },
+  "billing": "官方高峰费率保守核算，含失败与复测；不是平台账户实际扣款查询",
+  "repeatedCase": "USER-V2-05，一次复测仍失败",
+  "semanticScoring": "助手基于用户期待进行非盲证据审阅，非独立人工校准、非统计结论"
+}

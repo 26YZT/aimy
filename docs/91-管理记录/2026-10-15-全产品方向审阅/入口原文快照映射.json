@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-15",
+  "note": "原字节快照，相对链接按original_path解释；当前入口已校正，快照不作为新实施指令",
+  "files": [
+    {
+      "original_path": "docs/README.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/README.md",
+      "sha256": "1df1f8592e65f55d72edd388b317544b4a4bce8ab927619f4bf86a0144a90de4"
+    },
+    {
+      "original_path": "docs/PROJECT_STATE.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/PROJECT_STATE.md",
+      "sha256": "4f3b25d43bbf53c0a0727913879018840cd3c6ee2274cd676bd4b37778934dcd"
+    },
+    {
+      "original_path": "docs/任务编排.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/任务编排.md",
+      "sha256": "6f4d3d0e7167d02fd441a84461c2ed9e143e25009bbb7c3725cd415e184b75f2"
+    },
+    {
+      "original_path": "docs/00-当前方向/开发方向与边界.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/00-当前方向/开发方向与边界.md",
+      "sha256": "e373cb3a6c52de0c0a28dd97ff9edb3f14c767dbc365fa3101b779f24f46cb4c"
+    },
+    {
+      "original_path": "docs/00-当前方向/PRD-2.0-对齐草案.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/00-当前方向/PRD-2.0-对齐草案.md",
+      "sha256": "738a88a097349869bff36c631cd7aef2f30f921fe516113c8407fa4f51572172"
+    },
+    {
+      "original_path": "docs/05-实施手册/README.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/README.md",
+      "sha256": "99230fc6cc4157866171c999c5ab5cf1c6b17f96b9756e91aaa728caecc4d018"
+    },
+    {
+      "original_path": "docs/05-实施手册/R1-主工程切换手册.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/R1-主工程切换手册.md",
+      "sha256": "085b046ffe999a2ef2178f705e5257812f6a3b4fc4eec062ad5b7bb1223b17c3"
+    },
+    {
+      "original_path": "docs/05-实施手册/R2-品牌定制手册.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/R2-品牌定制手册.md",
+      "sha256": "b90ada946c420140397b4f6e92c6ce3be656dff801dd5067854f4fa65ec335b1"
+    },
+    {
+      "original_path": "docs/05-实施手册/R3-体验验收清单.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/R3-体验验收清单.md",
+      "sha256": "d4b19e31aae7f6ed506664cb02f8301fb53cabcfc4e5c0f0913dab66cefcab1e"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/README.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/README.md",
+      "sha256": "9dc72e8e194edac5ef2280f93b91bad32ee28f917367841f07b44812b4a19101"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+      "sha256": "c4a9ea358551464e62ca0a9defea9b5a6e9dcc17d71f4fb7fcd9930ad2a5aacb"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/02-产品PRD.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/02-产品PRD.md",
+      "sha256": "d18c7440ad68074e78d69eaa876391913df70e0a1689db36b2967e303b647f36"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/审定账本.json",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/审定账本.json",
+      "sha256": "ab3cc06fed198a581d1f1eac5c9dbba6d8a46c497c2fb01e836a0fb744247cfa"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/README.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/README.md",
+      "sha256": "4a47772c463cd4f7814a059683b49c5660aacf17fe786e1e2e9a62d29a0e0785"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/05-任务文件边界与实施顺序.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/05-任务文件边界与实施顺序.md",
+      "sha256": "1b99a2ba701ba51cbf1ecbe8611916bea7b41a7ea1f1ebb91332d5aec01bb3da"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/06-验收与评测目标.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/06-验收与评测目标.md",
+      "sha256": "bd5ece2d68c16d7714bfe157005bb564b3106d30e07a7e566a1acbd5b6024970"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/最终审定摘要.md",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/最终审定摘要.md",
+      "sha256": "46595094953853c8994307e458e556b84f7e3a0761ec62da7f71a86750d53410"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/审定清单.json",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/审定清单.json",
+      "sha256": "a396a279e227b57b2122370fb8b480d76cc8586598fd580d834cbe428ffbf878"
+    },
+    {
+      "original_path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/追溯矩阵.json",
+      "snapshot_path": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/追溯矩阵.json",
+      "sha256": "9cb7e7d5166333cb6430dddde14b0e523f5afb15c793d3de414f170632a44de5"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "edit": "Edit {name}’s avatar",
+  "title": "{name}’s avatar",
+  "description": "Saved on this computer only. Character models and voices stay unchanged.",
+  "preview": "Avatar preview",
+  "choose": "Choose local image",
+  "limits": "PNG, JPEG or WebP, up to 2 MiB and 4096 pixels. Resized locally to a 256-pixel avatar.",
+  "preparing": "Preparing image…",
+  "remove": "Remove avatar",
+  "cancel": "Cancel",
+  "save": "Save",
+  "saving": "Saving…",
+  "errors": {
+    "format": "Choose a PNG, JPEG or WebP image.",
+    "size": "The image exceeds 2 MiB. Choose a smaller image.",
+    "image": "This image could not be decoded. Choose another image.",
+    "dimensions": "Image dimensions exceed 4096 pixels. Resize it first.",
+    "encoded-size": "The processed image is still too large. Choose a smaller image.",
+    "missing": "This character is no longer available.",
+    "changed": "The character or avatar changed. Open the editor again.",
+    "storage": "The avatar could not be saved. Your previous avatar is preserved. Check local storage space."
+  }
+}

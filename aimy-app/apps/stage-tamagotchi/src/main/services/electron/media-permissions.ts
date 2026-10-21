@@ -155,9 +155,12 @@ export function shouldGrantElectronPermission(
   requestingOrigin?: string,
   details?: ElectronPermissionDetails,
   isDesktopCaptureAuthorized: () => boolean = () => false,
+  isResourceAuthorized: (kind: 'microphone' | 'screen') => boolean = () => false,
 ): boolean {
+  if (details && 'isMainFrame' in details && details.isMainFrame === false)
+    return false
   if (shouldGrantAudioCapturePermission(webContents, permission, requestingOrigin, details))
-    return true
+    return isResourceAuthorized('microphone')
 
   // Desktop capture arrives as a `media` operation, so it has to be resolved back to the reviewed
   // `display-capture` entry before the allowlist is consulted. Camera and microphone operations keep
@@ -168,7 +171,7 @@ export function shouldGrantElectronPermission(
   // constraint here, and only the former is routed through `setDisplayMediaRequestHandler`. Requiring an
   // authorized source keeps the legacy path from capturing the full desktop behind AIRI's picker, and
   // costs the supported path nothing: without that handler Electron answers `NOT_SUPPORTED` regardless.
-  if (isDesktopCapture && !isDesktopCaptureAuthorized())
+  if ((isDesktopCapture || permission === 'display-capture') && (!isDesktopCaptureAuthorized() || !isResourceAuthorized('screen')))
     return false
 
   const allowlistPermission = isDesktopCapture ? 'display-capture' : permission
@@ -193,14 +196,15 @@ export function shouldGrantElectronPermission(
  */
 export function setupPermissionHandlers(
   targetSession: Pick<Session, 'setDevicePermissionHandler' | 'setPermissionCheckHandler' | 'setPermissionRequestHandler'>,
-  isDesktopCaptureAuthorized: () => boolean,
+  isDesktopCaptureAuthorized: (sender: WebContents | null) => boolean,
+  isResourceAuthorized: (sender: WebContents | null, kind: 'microphone' | 'screen') => boolean = () => false,
 ): void {
   targetSession.setPermissionRequestHandler((webContents, permission, callback, details) => {
-    callback(shouldGrantElectronPermission(webContents, permission, undefined, details, isDesktopCaptureAuthorized))
+    callback(shouldGrantElectronPermission(webContents, permission, undefined, details, () => isDesktopCaptureAuthorized(webContents), kind => isResourceAuthorized(webContents, kind)))
   })
 
   targetSession.setPermissionCheckHandler((webContents, permission, requestingOrigin, details) => {
-    return shouldGrantElectronPermission(webContents, permission, requestingOrigin, details, isDesktopCaptureAuthorized)
+    return shouldGrantElectronPermission(webContents, permission, requestingOrigin, details, () => isDesktopCaptureAuthorized(webContents), kind => isResourceAuthorized(webContents, kind))
   })
 
   targetSession.setDevicePermissionHandler(shouldGrantDevicePermission)

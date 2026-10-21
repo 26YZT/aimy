@@ -1,0 +1,688 @@
+{
+  "generatedAt": "2026-10-18T05:21:38.055Z",
+  "timezone": "Asia/Shanghai",
+  "baseline": "/Users/mima1234/Documents/airi-main",
+  "aimy": "/Users/mima1234/Documents/aimy/aimy-app",
+  "realModelCalls": 0,
+  "sourceEvaluation": "Actual functions/modules; exact AST extracted callbacks; named external fixture boundaries. Absent feature is not assigned a fake baseline output.",
+  "observations": [
+    {
+      "id": "VAD-SHORT",
+      "dimension": "same 32ms VAD score windows",
+      "baseline": {
+        "ends": [
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 1728
+          }
+        ],
+        "events": [
+          {
+            "id": 1,
+            "kind": "begin",
+            "at": 32
+          },
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 1728
+          }
+        ],
+        "finalSilenceWaitMs": 1216
+      },
+      "aimy": {
+        "ends": [
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 1312
+          }
+        ],
+        "events": [
+          {
+            "id": 1,
+            "kind": "begin",
+            "at": 32
+          },
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 1312
+          }
+        ],
+        "finalSilenceWaitMs": 800,
+        "disabledEqualsBaseline": true
+      },
+      "interpretation": "416ms less policy wait in this quantized fixture",
+      "limits": [
+        "Detector scores and input controls are synthetic; no microphone, ASR accuracy or end-to-end latency measurement"
+      ]
+    },
+    {
+      "id": "VAD-LONG",
+      "dimension": "same 32ms VAD score windows",
+      "baseline": {
+        "ends": [
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 3264
+          }
+        ],
+        "events": [
+          {
+            "id": 1,
+            "kind": "begin",
+            "at": 32
+          },
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 3264
+          }
+        ],
+        "finalSilenceWaitMs": 1216
+      },
+      "aimy": {
+        "ends": [
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 3264
+          }
+        ],
+        "events": [
+          {
+            "id": 1,
+            "kind": "begin",
+            "at": 32
+          },
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 3264
+          }
+        ],
+        "finalSilenceWaitMs": 1216,
+        "disabledEqualsBaseline": true
+      },
+      "interpretation": "equal for long input",
+      "limits": [
+        "Detector scores and input controls are synthetic; no microphone, ASR accuracy or end-to-end latency measurement"
+      ]
+    },
+    {
+      "id": "VAD-PAUSE",
+      "dimension": "same 32ms VAD score windows",
+      "baseline": {
+        "ends": [
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 3136
+          }
+        ],
+        "events": [
+          {
+            "id": 1,
+            "kind": "begin",
+            "at": 32
+          },
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 3136
+          }
+        ],
+        "finalSilenceWaitMs": 1216
+      },
+      "aimy": {
+        "ends": [
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 1312
+          },
+          {
+            "id": 2,
+            "kind": "end",
+            "at": 2720
+          }
+        ],
+        "events": [
+          {
+            "id": 1,
+            "kind": "begin",
+            "at": 32
+          },
+          {
+            "id": 1,
+            "kind": "end",
+            "at": 1312
+          },
+          {
+            "id": 2,
+            "kind": "begin",
+            "at": 1440
+          },
+          {
+            "id": 2,
+            "kind": "end",
+            "at": 2720
+          }
+        ],
+        "finalSilenceWaitMs": 800,
+        "disabledEqualsBaseline": true
+      },
+      "interpretation": "tradeoff: 896ms within-sentence pause splits the input when enabled",
+      "limits": [
+        "Detector scores and input controls are synthetic; no microphone, ASR accuracy or end-to-end latency measurement"
+      ]
+    },
+    {
+      "id": "ECHO-LOOP",
+      "dimension": "post-ASR text admission",
+      "baseline": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "aimy": {
+        "status": "drafted",
+        "automaticSends": 0,
+        "draftCount": 1
+      },
+      "interpretation": "additional echo gate after baseline voice gate",
+      "limits": [
+        "Text only; audio gate not exercised; LOOP and INTENTIONAL-REPEAT have identical text and cannot be distinguished by this policy"
+      ]
+    },
+    {
+      "id": "ECHO-INTENTIONAL-REPEAT",
+      "dimension": "post-ASR text admission",
+      "baseline": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "aimy": {
+        "status": "drafted",
+        "automaticSends": 0,
+        "draftCount": 1
+      },
+      "interpretation": "tradeoff: intentional repetition also requires manual send",
+      "limits": [
+        "Text only; audio gate not exercised; LOOP and INTENTIONAL-REPEAT have identical text and cannot be distinguished by this policy"
+      ]
+    },
+    {
+      "id": "ECHO-SHORT",
+      "dimension": "post-ASR text admission",
+      "baseline": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "aimy": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "interpretation": "equal; valid unrelated/short/expired input preserved",
+      "limits": [
+        "Text only; audio gate not exercised; LOOP and INTENTIONAL-REPEAT have identical text and cannot be distinguished by this policy"
+      ]
+    },
+    {
+      "id": "ECHO-OTHER",
+      "dimension": "post-ASR text admission",
+      "baseline": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "aimy": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "interpretation": "equal; valid unrelated/short/expired input preserved",
+      "limits": [
+        "Text only; audio gate not exercised; LOOP and INTENTIONAL-REPEAT have identical text and cannot be distinguished by this policy"
+      ]
+    },
+    {
+      "id": "ECHO-EXPIRED",
+      "dimension": "post-ASR text admission",
+      "baseline": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "aimy": {
+        "status": "committed",
+        "automaticSends": 1,
+        "draftCount": 0
+      },
+      "interpretation": "equal; valid unrelated/short/expired input preserved",
+      "limits": [
+        "Text only; audio gate not exercised; LOOP and INTENTIONAL-REPEAT have identical text and cannot be distinguished by this policy"
+      ]
+    },
+    {
+      "id": "HIT-HEAD",
+      "dimension": "exact Model.vue hit callbacks",
+      "baseline": [],
+      "aimy": [
+        "tap_head"
+      ],
+      "interpretation": "additional configured head response",
+      "limits": [
+        "Synthetic model motion sink; no rendered animation or user preference judgement"
+      ]
+    },
+    {
+      "id": "HIT-BODY",
+      "dimension": "exact Model.vue hit callbacks",
+      "baseline": [
+        "tap_body"
+      ],
+      "aimy": [
+        "tap_body"
+      ],
+      "interpretation": "same result for shared input",
+      "limits": [
+        "Synthetic model motion sink; no rendered animation or user preference judgement"
+      ]
+    },
+    {
+      "id": "HIT-RAPID",
+      "dimension": "exact Model.vue hit callbacks",
+      "baseline": [
+        "tap_body",
+        "tap_body",
+        "tap_body"
+      ],
+      "aimy": [
+        "tap_body",
+        "tap_body"
+      ],
+      "interpretation": "extra cooldown; deliberately ignores a rapid repeat",
+      "limits": [
+        "Synthetic model motion sink; no rendered animation or user preference judgement"
+      ]
+    },
+    {
+      "id": "HIT-UNKNOWN",
+      "dimension": "exact Model.vue hit callbacks",
+      "baseline": [],
+      "aimy": [],
+      "interpretation": "same result for shared input",
+      "limits": [
+        "Synthetic model motion sink; no rendered animation or user preference judgement"
+      ]
+    },
+    {
+      "id": "HIT-REPEAT",
+      "dimension": "optional weighted selection and avoidance",
+      "baseline": {
+        "configuredHeadSelection": "no same configurable mapping in baseline hit callback"
+      },
+      "aimy": [
+        "tap_head",
+        "wave",
+        "tap_head",
+        "tap_head"
+      ],
+      "interpretation": "more configurable; avoidance can override 9:1 weights and repeats return when every group is recent",
+      "limits": [
+        "Fixed RNG, synthetic groups; not a measured animation-quality improvement"
+      ]
+    },
+    {
+      "id": "IMPORT-SAVE-OK",
+      "dimension": "same original and current import function with identical storage outcome",
+      "baseline": {
+        "outcome": "resolved",
+        "published": 1,
+        "writes": 1
+      },
+      "aimy": {
+        "outcome": "resolved",
+        "published": 1,
+        "writes": 1
+      },
+      "interpretation": "equal successful import",
+      "limits": [
+        "Thumbnail and storage IO injected; no real disk-full condition"
+      ]
+    },
+    {
+      "id": "IMPORT-SAVE-FAIL",
+      "dimension": "same original and current import function with identical storage outcome",
+      "baseline": {
+        "outcome": "resolved",
+        "published": 1,
+        "writes": 0
+      },
+      "aimy": {
+        "outcome": "rejected",
+        "published": 0,
+        "writes": 0
+      },
+      "interpretation": "improved failure honesty: no unsaved avatar published",
+      "limits": [
+        "Thumbnail and storage IO injected; no real disk-full condition"
+      ]
+    },
+    {
+      "id": "TTS-OFF",
+      "dimension": "speech preprocessing",
+      "baseline": {
+        "text": "请不要加糖。",
+        "basis": "baseline createOutput passes request.text to its existing SSML or TTS; separately executed original generateSSML below"
+      },
+      "aimy": {
+        "result": {
+          "text": "请不要加糖。"
+        },
+        "requests": 0,
+        "status": {
+          "translation": "idle",
+          "director": "idle"
+        }
+      },
+      "interpretation": "additional optional step or unchanged fallback",
+      "limits": [
+        "Injected model result, not real model output or accuracy score; original full speech store not executed in this case"
+      ]
+    },
+    {
+      "id": "TTS-TRANSLATE",
+      "dimension": "speech preprocessing",
+      "baseline": {
+        "text": "请不要加糖。",
+        "basis": "baseline createOutput passes request.text to its existing SSML or TTS; separately executed original generateSSML below"
+      },
+      "aimy": {
+        "result": {
+          "text": "Please do not add sugar."
+        },
+        "requests": 1,
+        "status": {
+          "translation": "ready",
+          "director": "idle"
+        }
+      },
+      "interpretation": "additional optional step or unchanged fallback",
+      "limits": [
+        "Injected model result, not real model output or accuracy score; original full speech store not executed in this case"
+      ]
+    },
+    {
+      "id": "TTS-WRONG-TRANSLATION",
+      "dimension": "speech preprocessing",
+      "baseline": {
+        "text": "请不要加糖。",
+        "basis": "baseline createOutput passes request.text to its existing SSML or TTS; separately executed original generateSSML below"
+      },
+      "aimy": {
+        "result": {
+          "text": "Please add sugar."
+        },
+        "requests": 1,
+        "status": {
+          "translation": "ready",
+          "director": "idle"
+        }
+      },
+      "interpretation": "unproven quality: syntactically valid wrong translation is accepted",
+      "limits": [
+        "Injected model result, not real model output or accuracy score; original full speech store not executed in this case"
+      ]
+    },
+    {
+      "id": "TTS-TRANSLATE-FAIL",
+      "dimension": "speech preprocessing",
+      "baseline": {
+        "text": "请不要加糖。",
+        "basis": "baseline createOutput passes request.text to its existing SSML or TTS; separately executed original generateSSML below"
+      },
+      "aimy": {
+        "result": {
+          "text": "请不要加糖。"
+        },
+        "requests": 1,
+        "status": {
+          "translation": "failed",
+          "director": "idle"
+        }
+      },
+      "interpretation": "additional optional step or unchanged fallback",
+      "limits": [
+        "Injected model result, not real model output or accuracy score; original full speech store not executed in this case"
+      ]
+    },
+    {
+      "id": "DIRECTOR-VALID",
+      "dimension": "speech preprocessing",
+      "baseline": {
+        "text": "请不要加糖。",
+        "basis": "baseline createOutput passes request.text to its existing SSML or TTS; separately executed original generateSSML below"
+      },
+      "aimy": {
+        "result": {
+          "text": "请不要加糖。",
+          "prosody": {
+            "speed": 0.95,
+            "volume": -5
+          }
+        },
+        "requests": 1,
+        "status": {
+          "translation": "failed",
+          "director": "ready"
+        }
+      },
+      "interpretation": "adds checked model call but prosody preset is deterministic; baseline already supports prosody",
+      "limits": [
+        "Injected model result, not real model output or accuracy score; original full speech store not executed in this case"
+      ]
+    },
+    {
+      "id": "DIRECTOR-CHANGED-WORDS",
+      "dimension": "speech preprocessing",
+      "baseline": {
+        "text": "请不要加糖。",
+        "basis": "baseline createOutput passes request.text to its existing SSML or TTS; separately executed original generateSSML below"
+      },
+      "aimy": {
+        "result": {
+          "text": "请不要加糖。"
+        },
+        "requests": 1,
+        "status": {
+          "translation": "failed",
+          "director": "rejected"
+        }
+      },
+      "interpretation": "additional optional step or unchanged fallback",
+      "limits": [
+        "Injected model result, not real model output or accuracy score; original full speech store not executed in this case"
+      ]
+    },
+    {
+      "id": "DIRECTOR-UNSUPPORTED",
+      "dimension": "speech preprocessing",
+      "baseline": {
+        "text": "请不要加糖。",
+        "basis": "baseline createOutput passes request.text to its existing SSML or TTS; separately executed original generateSSML below"
+      },
+      "aimy": {
+        "result": {
+          "text": "请不要加糖。"
+        },
+        "requests": 0,
+        "status": {
+          "translation": "failed",
+          "director": "unsupported-provider"
+        }
+      },
+      "interpretation": "additional optional step or unchanged fallback",
+      "limits": [
+        "Injected model result, not real model output or accuracy score; original full speech store not executed in this case"
+      ]
+    },
+    {
+      "id": "DIRECTOR-BASELINE-PROSODY",
+      "dimension": "original AIRI generateSSML",
+      "baseline": {
+        "xml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"zh-CN\"><voice name=\"synthetic-voice\" gender=\"female\"><prosody rate=\"0.95\" volume=\"-5%\">请不要加糖。</prosody></voice></speak>",
+        "extraModelCalls": 0
+      },
+      "aimy": {
+        "preset": {
+          "speed": 0.95,
+          "volume": -5
+        },
+        "directorExtraModelCalls": 1
+      },
+      "interpretation": "no demonstrated advantage in expressiveness: original can set same prosody without director call",
+      "limits": [
+        "Actual SSML serialization; no TTS synthesis or listening"
+      ]
+    },
+    {
+      "id": "REVIEW-GROUP",
+      "dimension": "whole-entry period grouping",
+      "baseline": {
+        "basis": "original notebook already has diary/focus entries; no equivalent source-bound period grouping in examined default store"
+      },
+      "aimy": [
+        {
+          "id": "f4fd1d8f-3dff-47a4-8e2f-ebef00e89761",
+          "period": "2026-10-12",
+          "cadence": "week",
+          "createdAt": 1792296000000,
+          "status": "current",
+          "entries": [
+            {
+              "factId": "f",
+              "revision": 1,
+              "text": "考虑买围巾，还没有买。",
+              "sourceVersions": [
+                {
+                  "sourceId": "s",
+                  "sourceRevision": 1,
+                  "contentHash": "synthetic"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "interpretation": "new organization and invalidation mechanism, not understanding/compression/recall improvement",
+      "limits": [
+        "Aimy pure function; no baseline quality score or model summary"
+      ]
+    },
+    {
+      "id": "FLOW-LOCAL",
+      "dimension": "configurable local keyword routing",
+      "baseline": {
+        "basis": "baseline has workflow engine, separately exercised below"
+      },
+      "aimy": {
+        "match": {
+          "ruleId": "work",
+          "action": {
+            "type": "followup",
+            "delayMinutes": 2
+          }
+        },
+        "miss": null
+      },
+      "interpretation": "new declarative companion entry, not proof of a stronger general workflow engine",
+      "limits": []
+    },
+    {
+      "id": "FLOW-BASELINE",
+      "dimension": "original AIRI workflow engine",
+      "baseline": {
+        "status": "completed",
+        "commands": [
+          "工作",
+          "回顾"
+        ]
+      },
+      "aimy": {
+        "basis": "new local rule output above"
+      },
+      "interpretation": "AIRI already has executable workflows; engines have different scopes",
+      "limits": [
+        "Fake action sink; no shell command or external send executed"
+      ]
+    },
+    {
+      "id": "VRM-minimal-no-face.vrm",
+      "dimension": "asset declaration preflight",
+      "baseline": {
+        "basis": "AIRI already loads these fixtures; original/new loader compare separately"
+      },
+      "aimy": {
+        "status": "warning",
+        "version": "1",
+        "bytes": 2436,
+        "capabilities": {
+          "humanoid": true,
+          "mouth": false,
+          "blink": false,
+          "emotion": false,
+          "lookAt": false,
+          "spring": false,
+          "mtoon": true
+        },
+        "errors": [],
+        "warnings": [
+          "missing-mouth",
+          "missing-blink",
+          "missing-emotion",
+          "missing-lookAt",
+          "missing-spring"
+        ]
+      },
+      "interpretation": "additional pre-import explanation; no stronger rendering implied",
+      "limits": [
+        "Declaration checks, not visual asset quality"
+      ]
+    },
+    {
+      "id": "VRM-authored-capabilities.vrm",
+      "dimension": "asset declaration preflight",
+      "baseline": {
+        "basis": "AIRI already loads these fixtures; original/new loader compare separately"
+      },
+      "aimy": {
+        "status": "ready",
+        "version": "1",
+        "bytes": 4160,
+        "capabilities": {
+          "humanoid": true,
+          "mouth": true,
+          "blink": true,
+          "emotion": true,
+          "lookAt": true,
+          "spring": true,
+          "mtoon": true
+        },
+        "errors": [],
+        "warnings": []
+      },
+      "interpretation": "additional pre-import explanation; no stronger rendering implied",
+      "limits": [
+        "Declaration checks, not visual asset quality"
+      ]
+    }
+  ]
+}

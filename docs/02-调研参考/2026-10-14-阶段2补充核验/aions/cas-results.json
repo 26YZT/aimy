@@ -1,0 +1,48 @@
+{
+  "scope": "Actual installed idb-keyval 6.3.0 update/get; deterministic ObjectStore event simulator and proposed wrapper. NOT real browser IndexedDB, NOT production MemoryRepo.",
+  "checks": [
+    {
+      "check": "installed_idb_keyval_update_sync_CAS_concurrent",
+      "results": [
+        {
+          "status": "committed",
+          "revision": 2,
+          "epoch": 0
+        },
+        {
+          "status": "conflict",
+          "revision": 2,
+          "epoch": 0
+        }
+      ]
+    },
+    {
+      "check": "updater_exception_rejects_without_hanging",
+      "result": {
+        "status": "conflict",
+        "revision": 2,
+        "epoch": 0
+      }
+    },
+    {
+      "check": "transaction_abort_does_not_return_committed_receipt",
+      "result": {
+        "status": "failed",
+        "errorName": "QuotaExceededError"
+      }
+    },
+    {
+      "check": "forget_barrier_rejects_captured_model_revision_epoch",
+      "barrier": {
+        "status": "committed",
+        "revision": 3,
+        "epoch": 1
+      },
+      "stale": {
+        "status": "conflict",
+        "revision": 3,
+        "epoch": 1
+      }
+    }
+  ]
+}

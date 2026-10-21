@@ -11,9 +11,9 @@ import { controlsIslandPlacementKey } from './use-controls-island-placement'
 const speechMuted = ref(false)
 const toggleSpeechMutedMock = vi.fn()
 const placement: ControlsIslandPlacement = {
-  dock: shallowRef('bottom-right'),
+  dock: shallowRef('top-right'),
   isLeft: shallowRef(false),
-  isTop: shallowRef(false),
+  isTop: shallowRef(true),
   motionPhase: shallowRef('idle'),
 }
 

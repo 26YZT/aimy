@@ -10,7 +10,7 @@ import { useProviderValidation } from '@proj-airi/stage-ui/composables/use-provi
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
 import { useProviderConfigStore } from '@proj-airi/stage-ui/stores/providers/config'
 import { useProviderStore } from '@proj-airi/stage-ui/stores/providers/provider'
-import { FieldCombobox, FieldTextArea } from '@proj-airi/ui'
+import { BasicButton, FieldCombobox, FieldTextArea } from '@proj-airi/ui'
 import { storeToRefs } from 'pinia'
 import { computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -108,7 +108,9 @@ const voiceSample = computed({
   },
 })
 
-const apiKeyConfigured = computed(() => !!providers.value[providerId]?.apiKey)
+// The reference proves a previous save, not current key validity. The actual preview resolves credentials when requested.
+const apiKeyConfigured = computed(() => Boolean(providerStore.getProvider(providerId)?.secretReference)
+  || (typeof config.value?.apiKey === 'string' && config.value.apiKey.trim().length > 0))
 
 onMounted(async () => {
   ensureProviderConfig()
@@ -117,7 +119,6 @@ onMounted(async () => {
     model.value = defaultModel
   }
 
-  await providersStore.loadModelsForConfiguredProviders()
   await providersStore.fetchModelsForProvider(providerId)
   await speechStore.loadVoicesForProvider(providerId)
 })
@@ -176,6 +177,12 @@ const {
         :options="modelOptions"
         placeholder="Select a MiMo model..."
       />
+      <p :class="['text-sm text-neutral-500']">
+        {{ t('tamagotchi.messenger.voiceStreamingNote') }}
+      </p>
+      <BasicButton variant="secondary" @click="stylePrompt = t('tamagotchi.messenger.naturalVoicePrompt')">
+        {{ t('tamagotchi.messenger.naturalVoiceSuggestion') }}
+      </BasicButton>
       <FieldTextArea
         v-model="stylePrompt"
         :label="stylePromptLabel"

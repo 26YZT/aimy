@@ -1,0 +1,86 @@
+/* Aimy Quiet Rose / 静玫 — v2 proposal, 2026-10-12. */
+:root {
+  color-scheme: light;
+  --canvas: #F6F5F7;
+  --surface: #FFFFFF;
+  --surface-subtle: #F5F3F6;
+  --surface-raised: #FFFFFF;
+  --text: #26232A;
+  --text-secondary: #69636E;
+  --text-tertiary: #716A78;
+  --border: #E4E0E7;
+  --control-border: #8E8396;
+  --action: #2F2933;
+  --action-hover: #49414E;
+  --action-pressed: #1E1922;
+  --on-action: #FFFFFF;
+  --accent: #96415D;
+  --accent-hover: #7E334D;
+  --accent-pressed: #66253D;
+  --accent-soft: #F6EAF0;
+  --on-accent: #FFFFFF;
+  --focus: #96415D;
+  --success: #35634E;
+  --success-soft: #EBF3EF;
+  --warning: #805C23;
+  --warning-soft: #FBF2E1;
+  --danger: #A53546;
+  --danger-soft: #FBEDEF;
+  --disabled: #EBE7EE;
+  --on-disabled: #887D91;
+  --on-danger: #FFFFFF;
+}
+[data-theme="dark"], .theme-dark {
+  color-scheme: dark;
+  --canvas: #19181D;
+  --surface: #222026;
+  --surface-subtle: #2B2830;
+  --surface-raised: #343039;
+  --text: #F4F0F6;
+  --text-secondary: #BAB1C3;
+  --text-tertiary: #ADA0B9;
+  --border: #403A47;
+  --control-border: #8D7E9B;
+  --action: #EDE6F2;
+  --action-hover: #FFFFFF;
+  --action-pressed: #D4C7DF;
+  --on-action: #2B2332;
+  --accent: #E3A4BB;
+  --accent-hover: #F2BCD0;
+  --accent-pressed: #D48AA7;
+  --accent-soft: #3C2A36;
+  --on-accent: #2A1822;
+  --focus: #E3A4BB;
+  --success: #A4CCB9;
+  --success-soft: #24372E;
+  --warning: #E3C38D;
+  --warning-soft: #3B3123;
+  --danger: #F4A5B2;
+  --danger-soft: #432B34;
+  --disabled: #3C3444;
+  --on-disabled: #A89AB4;
+  --on-danger: #2A1822;
+}
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Consolas, monospace;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --radius-small: 6px;
+  --radius-control: 8px;
+  --radius-message: 14px;
+  --radius-window: 16px;
+  --radius-pill: 999px;
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --duration: 160ms;
+  --shadow-window: 0 18px 48px #261D3210, 0 2px 8px #261D3208;
+}
+[data-theme="dark"],.theme-dark { --shadow-window: 0 18px 48px #00000025; }

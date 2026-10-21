@@ -1,0 +1,17 @@
+{
+  "local_links_missing": [],
+  "svg_parse_passed": true,
+  "json_parse_passed": true,
+  "v1_files_preserved": 81,
+  "v1_preserved": true,
+  "browser_checks_passed": 33,
+  "browser_checks_total": 33,
+  "theme_regression": {
+    "dark_secondary_surface": true,
+    "dark_secondary_text": true,
+    "dark_label": true,
+    "dark_symbol": true
+  },
+  "product_integration": "not_performed",
+  "human_approval": "pending"
+}

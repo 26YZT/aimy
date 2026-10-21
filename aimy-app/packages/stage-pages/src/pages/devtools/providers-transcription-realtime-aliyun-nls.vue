@@ -7,6 +7,7 @@ import { toPCM16FromFloat32 } from '@proj-airi/audio/encoding'
 import { errorMessageFromValue } from '@proj-airi/stage-shared'
 import { createAliyunNLSProvider } from '@proj-airi/stage-ui/libs/providers/providers/aliyun-nls'
 import { streamTranscription } from '@proj-airi/stage-ui/libs/providers/stream-transcription'
+import { captureResourceStream, onResourceRevoked, requestResourceAccess } from '@proj-airi/stage-ui/services/resource-policy'
 import { Button, FieldCombobox, FieldInput } from '@proj-airi/ui'
 import { computed, nextTick, onBeforeUnmount, reactive, ref, shallowRef, watch } from 'vue'
 
@@ -135,6 +136,8 @@ async function startRecording() {
   if (!canStartRecording.value)
     return
 
+  await requestResourceAccess('microphone')
+
   resetTranscriptionOutput()
   resetRecordingCounters()
 
@@ -202,7 +205,7 @@ async function startRecording() {
     })
 
   try {
-    const stream = await navigator.mediaDevices.getUserMedia({
+    const stream = await captureResourceStream('microphone', () => navigator.mediaDevices.getUserMedia({
       audio: {
         channelCount: 1,
         sampleRate: SAMPLE_RATE,
@@ -210,7 +213,7 @@ async function startRecording() {
         noiseSuppression: true,
         autoGainControl: true,
       },
-    })
+    }))
 
     mediaStream.value = stream
     await initializeAudioGraph(stream)
@@ -344,6 +347,12 @@ onBeforeUnmount(async () => {
   await stopRecording()
   abortTranscription()
 })
+
+const stopOnResourceRevoked = onResourceRevoked((_, kind) => {
+  if (!kind || kind === 'microphone')
+    void stopRecording()
+})
+onBeforeUnmount(stopOnResourceRevoked)
 </script>
 
 <template>

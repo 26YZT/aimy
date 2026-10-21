@@ -1,0 +1,152 @@
+[
+  {
+    "id": "R01",
+    "candidate": "后置共享画像的来源/版本/撤权规则",
+    "verdict": "适配叶子 + 借鉴设计",
+    "priority": "高",
+    "cost": "中高",
+    "dependencies_and_scope": "消费AIRI已持久化消息；Repository/ModelGateway/EventSink均需AIRI适配；不用原config/ws/FastAPI",
+    "minimum_future_acceptance": "原文改删、关闭再开、手动revision变更时旧模型结果不能写；新进程恢复队列；输出只据本人证据",
+    "feature_ids": "AH-F01..08"
+  },
+  {
+    "id": "R02",
+    "candidate": "原子记忆+源消息管理",
+    "verdict": "借鉴设计",
+    "priority": "高",
+    "cost": "高",
+    "dependencies_and_scope": "AIRI现有聊天session/message ID作来源；原子写入、主进程持久化、管理UI共三层",
+    "minimum_future_acceptance": "自动写→重启召回；纠正只留新事实；删后原文/向量/派生的预期范围明示并验证",
+    "feature_ids": "AH-M01/02/09/10/11"
+  },
+  {
+    "id": "R03",
+    "candidate": "主动搜索/时间解析/证据预算",
+    "verdict": "适配叶子",
+    "priority": "高",
+    "cost": "中",
+    "dependencies_and_scope": "提取纯parse/rank/format规则到TS，输入Repository与EmbeddingGateway；保留AIRI工具循环",
+    "minimum_future_acceptance": "日期/否定/同事件重复/embedding失败文本后备；回执有source ID；注入攻击当历史证据",
+    "feature_ids": "AH-M04/07"
+  },
+  {
+    "id": "R04",
+    "candidate": "彻底忘记的派生清理契约",
+    "verdict": "借鉴失败经验；不直接复用删除实现",
+    "priority": "高",
+    "cost": "高",
+    "dependencies_and_scope": "先明确删除一条记录与忘记事实范围，再设计统一写入口；源记录、画像、压缩、缓存需同epoch语义",
+    "minimum_future_acceptance": "正在总结/压缩时删除；旧API兼容；同义重抽取；派生摘要不得复活已忘记事实",
+    "feature_ids": "AH-M12/13/14/F04"
+  },
+  {
+    "id": "R05",
+    "candidate": "日历压缩与lineage",
+    "verdict": "适配叶子 + 借鉴设计，后置",
+    "priority": "中",
+    "cost": "高",
+    "dependencies_and_scope": "CalendarPlanner/LineageValidator可叶子化；模型/事务/索引适配量高，需源revision检查",
+    "minimum_future_acceptance": "候选在model await期间删改即拒写；冷档来源可追溯；无膨胀；失败输入保持active",
+    "feature_ids": "AH-M14/15"
+  },
+  {
+    "id": "R06",
+    "candidate": "自然续聊NEXT_CHAT语义",
+    "verdict": "借鉴设计",
+    "priority": "高",
+    "cost": "中",
+    "dependencies_and_scope": "AIRI已有spark notify/内存task；只增持久调度/开关/静默与预算策略，生成仍走AIRI聊天",
+    "minimum_future_acceptance": "关开关、新用户消息、切会话、隐藏/退出后pending及in-flight均不得错发；重启过期策略",
+    "feature_ids": "AH-P01/02/03"
+  },
+  {
+    "id": "R07",
+    "candidate": "闲时回忆/休息/轻主动",
+    "verdict": "借鉴设计，缩范围",
+    "priority": "中",
+    "cost": "中高",
+    "dependencies_and_scope": "仅本地rest/memory_browse/private_chat思想，依赖记忆和R06；不接购物/外发/摄像头",
+    "minimum_future_acceptance": "idle中用户回来即使结果失效；DND/每日期望预算；不凭AI感想更新用户事实",
+    "feature_ids": "AH-P04/05/06/07/08"
+  },
+  {
+    "id": "R08",
+    "candidate": "受控语音导演/台词一致校验",
+    "verdict": "适配叶子",
+    "priority": "中",
+    "cost": "中",
+    "dependencies_and_scope": "解析与validate规则小；AIRI现有speech output/取消/voice provider；需确定音色所支持tag",
+    "minimum_future_acceptance": "导演不能改词义/加字；取消拒晚结果；错误不重复扣费；口型/表现与语音一体实测",
+    "feature_ids": "AH-V08"
+  },
+  {
+    "id": "R09",
+    "candidate": "TTS队列/缓存/半双工唤醒",
+    "verdict": "不引入本期；保留AIRI链",
+    "priority": "无新增",
+    "cost": "整体替换高",
+    "dependencies_and_scope": "AIRI已VAD/ASR/provider/speech bus/interrupt，复制带第二音频生命周期",
+    "minimum_future_acceptance": "只对比具体首包/背压缺口后再定；真实中文延迟、顺序、抢话验证",
+    "feature_ids": "AH-V01..07"
+  },
+  {
+    "id": "R10",
+    "candidate": "VoiceCallPolicy纯JS阈值/打断guard",
+    "verdict": "可直接复用叶子，采用待选",
+    "priority": "低",
+    "cost": "低",
+    "dependencies_and_scope": "17行无依赖UMD；AIRI已有silence/VAD参数，优先行为对照，非新pipeline",
+    "minimum_future_acceptance": "短长停顿语料A/B；打断仅指向当前turn；不会因背景噪音打断",
+    "feature_ids": "AH-V11"
+  },
+  {
+    "id": "R11",
+    "candidate": "图像来源/新鲜度/失败上下文规则",
+    "verdict": "适配叶子",
+    "priority": "中",
+    "cost": "中",
+    "dependencies_and_scope": "沿用AIRI屏幕采集与Vision推理/ReplaceSelf上下文，不拷camera/activity链",
+    "minimum_future_acceptance": "只在独立看屏授权有效时采；陈旧/失败不得编造；撤权拒晚结果；原图不长期留存",
+    "feature_ids": "AH-S01/02"
+  },
+  {
+    "id": "R12",
+    "candidate": "反馈复盘before/after/diff",
+    "verdict": "借鉴设计，后置",
+    "priority": "低",
+    "cost": "中",
+    "dependencies_and_scope": "AIRI已有角色卡/会话；只记录建议和可回退差异；关键安全边界仍代码固定",
+    "minimum_future_acceptance": "反馈可追溯；重复反馈不重复改；身份/权限/未成年人/危机规则不能被模型改",
+    "feature_ids": "AH-C03"
+  },
+  {
+    "id": "R13",
+    "candidate": "多角色群聊/Visitor Lounge",
+    "verdict": "不纳入本期",
+    "priority": "无新增",
+    "cost": "高",
+    "dependencies_and_scope": "一期主要单角色；双角色表和Codex/访客OAuth/多端增加运行时与身份面",
+    "minimum_future_acceptance": "若以后立项须单列角色/访客scope、独立身份和模型预算，不能悄悄扩一期",
+    "feature_ids": "AH-C01/02/05"
+  },
+  {
+    "id": "R14",
+    "candidate": "生活功能/设备/外部社交/成人模块",
+    "verdict": "不纳入本期；只登记",
+    "priority": "无新增",
+    "cost": "高",
+    "dependencies_and_scope": "基金、定位、家居、购物、微信/小红书、Android、成人外设均超当前边界；无来源选择",
+    "minimum_future_acceptance": "未来真实需求另立项；不得把调研功能表变成需求表",
+    "feature_ids": "AH-I01/04"
+  },
+  {
+    "id": "R15",
+    "candidate": "整套FastAPI/原生JS/Windows采集/配置",
+    "verdict": "不复用整体运行时",
+    "priority": "无新增",
+    "cost": "高",
+    "dependencies_and_scope": "不是Python法律禁用：技术上可sidecar，但部署、进程、DB、音频、权限和版本成本高，当前未定",
+    "minimum_future_acceptance": "未来若考虑sidecar先固定IPC/schema/生命周期/凭证边界与macOS包验收；当前仍AIRI唯一owner",
+    "feature_ids": "AH-I01/02/05"
+  }
+]

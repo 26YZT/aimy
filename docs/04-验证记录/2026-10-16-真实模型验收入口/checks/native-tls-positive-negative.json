@@ -1,0 +1,25 @@
+{
+  "mode": "isolated-electron-local-tls",
+  "certificateChecks": [
+    {
+      "hostname": "api.deepseek.com",
+      "dataType": "string",
+      "startsWithPem": true,
+      "fingerprintLength": 51,
+      "fingerprintParts": 1
+    }
+  ],
+  "success": true,
+  "cloudCalls": 0,
+  "status": 200,
+  "fixedFixture": true,
+  "fixedResponse": true,
+  "wrongPinRejected": true,
+  "fixture": {
+    "requests": 1,
+    "chat": 1,
+    "memory": 0,
+    "authRejected": 0,
+    "noRemoteCalls": true
+  }
+}

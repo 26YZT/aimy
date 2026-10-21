@@ -1,0 +1,138 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+    "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+    "symbol": "whole pure policy module",
+    "start": 1,
+    "end": 203,
+    "scope": "original pure module, time boundary replaced after loading"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_Analysis",
+    "start": 29,
+    "end": 31,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_profile_user_name",
+    "start": 40,
+    "end": 41,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "ensure_schema",
+    "start": 44,
+    "end": 86,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_read",
+    "start": 89,
+    "end": 92,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "snapshot",
+    "start": 95,
+    "end": 121,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_entry",
+    "start": 124,
+    "end": 133,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_check_budget",
+    "start": 136,
+    "end": 139,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "save_manual",
+    "start": 142,
+    "end": 201,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "invalidate_pending",
+    "start": 204,
+    "end": 209,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "enqueue_event",
+    "start": 212,
+    "end": 235,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_context_for_job",
+    "start": 254,
+    "end": 278,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_analysis_prompt",
+    "start": 281,
+    "end": 330,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_profile_refs",
+    "start": 354,
+    "end": 355,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "_apply_analysis",
+    "start": 358,
+    "end": 498,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "run_pending_once",
+    "start": 501,
+    "end": 570,
+    "scope": "original AST class/function body, unchanged"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "symbol": "build_context",
+    "start": 573,
+    "end": 581,
+    "scope": "original AST class/function body, unchanged"
+  }
+]

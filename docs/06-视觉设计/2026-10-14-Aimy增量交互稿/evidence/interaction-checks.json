@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-14",
+  "scope": "浏览器文档原型，内存示例；非产品/模型/设备验证",
+  "checks": [
+    {
+      "id": "UI-01",
+      "pass": true,
+      "detail": "搜索空状态"
+    },
+    {
+      "id": "UI-02",
+      "pass": true,
+      "detail": "来源详情为示例用户原文"
+    },
+    {
+      "id": "UI-03",
+      "pass": true,
+      "detail": "失败保留编辑输入"
+    },
+    {
+      "id": "UI-04",
+      "pass": true,
+      "detail": "重试保存更新列表"
+    },
+    {
+      "id": "UI-05",
+      "pass": true,
+      "detail": "默认只删除记忆"
+    },
+    {
+      "id": "UI-06",
+      "pass": true,
+      "detail": "扩大删除范围回执"
+    },
+    {
+      "id": "UI-07",
+      "pass": true,
+      "detail": "模拟拒绝后不进入运行"
+    },
+    {
+      "id": "UI-08",
+      "pass": true,
+      "detail": "授权中停止即时失效"
+    },
+    {
+      "id": "UI-09",
+      "pass": true,
+      "detail": "模拟在飞迟到结果不复活"
+    },
+    {
+      "id": "UI-10",
+      "pass": true,
+      "detail": "预算暂停可见"
+    },
+    {
+      "id": "UI-11",
+      "pass": true,
+      "detail": "收起聊天不改变聆听或角色可见"
+    },
+    {
+      "id": "UI-12",
+      "pass": true,
+      "detail": "隐藏角色停止模拟采集"
+    },
+    {
+      "id": "UI-13",
+      "pass": true,
+      "detail": "安静状态阻止自动观察预览"
+    },
+    {
+      "id": "UI-14",
+      "pass": true,
+      "detail": "深色同结构"
+    },
+    {
+      "id": "UI-15",
+      "pass": true,
+      "detail": "800px窄窗口无横向溢出"
+    }
+  ]
+}

@@ -23,11 +23,14 @@ import { Live2DFactory, Live2DModel, MotionPriority } from 'pixi-live2d-display/
 import { computed, onMounted, onUnmounted, ref, shallowRef, toRef, watch } from 'vue'
 
 import {
+  CompanionMotionPolicy,
   createBeatSyncController,
   createLive2DHeadTracker,
   createLive2DMotionSpring,
   disableLive2DSdkBreath,
+  eligibleIdleMotionIndices,
   live2DCanvasRectToParent,
+  registerCompanionMotionModel,
   useExpressionController,
   useLive2DMotionManagerUpdate,
   useMotionUpdatePluginAutoEyeBlink,
@@ -103,6 +106,8 @@ const emits = defineEmits<{
   (e: 'modelLoaded'): void
   (e: 'error', error: Error): void
 }>()
+
+let disposeCompanionModel: (() => void) | undefined
 
 const componentState = defineModel<'pending' | 'loading' | 'mounted'>('state', { default: 'pending' })
 const { position, scale } = useL2dViewControl()
@@ -304,6 +309,8 @@ async function performModelLoad() {
 
   // REVIEW: here as await until(...) guarded the pixiApp and stage to be valid.
   if (model.value && pixiApp.value?.stage) {
+    disposeCompanionModel?.()
+    disposeCompanionModel = undefined
     // Dispose expression controller before destroying the old model
     expressionController.dispose()
     internalModelRef.value = undefined
@@ -360,7 +367,16 @@ async function performModelLoad() {
 
     // --- Interaction
 
+    const companionMotion = new CompanionMotionPolicy(pendingModel.id ?? '')
     model.value.on('hit', (hitAreas) => {
+      if (isUnmounted || props.paused || !model.value)
+        return
+      const selected = companionMotion.tap(hitAreas, Object.keys(model.value.internalModel.motionManager.definitions), Date.now())
+      if (selected !== undefined) {
+        if (selected)
+          void model.value.motion(selected)
+        return
+      }
       if (model.value && hitAreas.includes('body'))
         model.value.motion('tap_body')
     })
@@ -370,6 +386,24 @@ async function performModelLoad() {
     const internalModel = model.value.internalModel
     const coreModel = internalModel.coreModel
     const motionManager = internalModel.motionManager
+    disposeCompanionModel = registerCompanionMotionModel({
+      modelId: pendingModel.id ?? '',
+      areas: Object.keys(internalModel.hitAreas),
+      groups: Object.keys(motionManager.definitions),
+    })
+    const startRandomMotion = motionManager.startRandomMotion.bind(motionManager)
+    motionManager.startRandomMotion = async (group, priority) => {
+      if (props.paused || isUnmounted || motionManager.destroyed)
+        return false
+      if (group !== motionManager.groups.idle)
+        return startRandomMotion(group, priority)
+      const index = companionMotion.idle(group, eligibleIdleMotionIndices(motionManager, group), Date.now(), nowSpeaking.value)
+      if (index === undefined)
+        return startRandomMotion(group, priority)
+      if (index === null)
+        return false
+      return motionManager.startMotion(group, index, priority)
+    }
     disableLive2DSdkBreath(internalModel)
     coreModel.setParameterValueById('ParamMouthOpenY', mouthOpenSize.value)
 
@@ -468,6 +502,8 @@ async function performModelLoad() {
     }
 
     motionManager.on('motionStart', (group, index) => {
+      if (group !== motionManager.groups.idle)
+        companionMotion.noteSemanticMotion(Date.now())
       localCurrentMotion.value = { group, index }
     })
 
@@ -904,6 +940,8 @@ onMounted(async () => {
 
 onUnmounted(() => {
   isUnmounted = true
+  disposeCompanionModel?.()
+  disposeCompanionModel = undefined
   resizeAnimation?.pause()
   disposeShouldUpdateView?.()
   expressionController.dispose()

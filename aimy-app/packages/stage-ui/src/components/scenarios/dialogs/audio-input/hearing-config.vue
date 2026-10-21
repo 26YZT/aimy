@@ -2,9 +2,12 @@
 import { FieldCheckbox, FieldCombobox } from '@proj-airi/ui'
 import { storeToRefs } from 'pinia'
 import { computed, shallowRef } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { useAudioAnalyzer } from '../../../../composables'
+import { getResourcePolicy } from '../../../../services/resource-policy'
 import { useSettingsAudioDevice } from '../../../../stores'
+import { useVoiceControlsStore } from '../../../../stores/voice-controls'
 
 const props = defineProps<{
   /** Runs before permission or stream requests from the enable button. Automatic requests skip this hook. */
@@ -12,8 +15,12 @@ const props = defineProps<{
 }>()
 
 const deviceStore = useSettingsAudioDevice()
+const { t } = useI18n()
 const { askPermission } = deviceStore
-const { audioInputOptions, enabled, permissionGranted, selectedAudioInput } = storeToRefs(deviceStore)
+const { audioInputOptions, enabled: localEnabled, permissionGranted, selectedAudioInput } = storeToRefs(deviceStore)
+const controls = useVoiceControlsStore()
+const useHost = computed(() => !!getResourcePolicy() || controls.snapshot.connected)
+const enabled = computed(() => useHost.value ? controls.microphoneEnabled || controls.microphonePending : localEnabled.value)
 const { volumeLevel } = useAudioAnalyzer()
 const enabling = shallowRef(false)
 
@@ -23,7 +30,7 @@ const autoSendEnabled = computed({
   get: () => autoSend.value ?? false,
   set: value => autoSend.value = value,
 })
-const hearingToggleLabel = computed(() => enabled.value ? 'Disable microphone input' : 'Enable microphone input')
+const hearingToggleLabel = computed(() => t(enabled.value ? 'stage.chat.voice-composer.microphone-disable' : 'stage.chat.voice-composer.microphone-enable'))
 const hearingToggleClass = computed(() => [
   'absolute left-1/2 top-1/2 grid h-16 w-16 place-items-center outline-none -translate-x-1/2 -translate-y-1/2',
   'rounded-2xl backdrop-blur-md',
@@ -50,11 +57,27 @@ const ringEnabledClass = computed(() => enabled.value
 )
 
 async function toggleHearingEnabled() {
+  if (useHost.value) {
+    if (enabled.value) {
+      await controls.setMicrophoneEnabled(false).catch(() => {})
+      return
+    }
+    if (enabling.value)
+      return
+    enabling.value = true
+    try {
+      await props.beforeEnable?.()
+      await controls.setMicrophoneEnabled(true)
+    }
+    catch { /* The host snapshot carries the microphone failure. */ }
+    finally { enabling.value = false }
+    return
+  }
   if (enabling.value)
     return
 
   if (enabled.value) {
-    enabled.value = false
+    localEnabled.value = false
     return
   }
 
@@ -64,13 +87,13 @@ async function toggleHearingEnabled() {
       await props.beforeEnable()
 
     if (selectedAudioInput.value !== '' && permissionGranted.value) {
-      enabled.value = true
+      localEnabled.value = true
       return
     }
 
     if (!permissionGranted.value) {
       await askPermission()
-      enabled.value = permissionGranted.value
+      localEnabled.value = permissionGranted.value
     }
   }
   finally {
@@ -103,10 +126,11 @@ async function toggleHearingEnabled() {
 
         <!-- Mic icon button -->
         <button
+          data-testid="microphone-access-button"
           :aria-label="hearingToggleLabel"
           :title="hearingToggleLabel"
           :class="hearingToggleClass"
-          :disabled="enabling"
+          :disabled="enabling && !enabled"
           :aria-busy="enabling"
           @click="toggleHearingEnabled"
         >
@@ -136,5 +160,8 @@ async function toggleHearingEnabled() {
         layout="vertical"
       />
     </div>
+    <p v-if="useHost && (controls.error || controls.snapshot.microphone?.error)" role="alert" :class="['text-sm text-red-600 dark:text-red-300']">
+      {{ controls.error || controls.snapshot.microphone?.error }}
+    </p>
   </div>
 </template>

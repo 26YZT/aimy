@@ -1,0 +1,37 @@
+[
+  {
+    "source": "/tmp/aimy-20261014-handoff-scope-review/review.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/复核记录/scope/review.md",
+    "sha256": "f212b77b82557927e51bdcd7341af6ed06619a6c9891c40978f532676c0819b4"
+  },
+  {
+    "source": "/tmp/aimy-20261014-handoff-scope-review/findings.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/复核记录/scope/findings.json",
+    "sha256": "1fa8113ca785f85e1581217be05dff4e80ece68de7b4085355a0a3b2132da8f1"
+  },
+  {
+    "source": "/tmp/aimy-20261014-handoff-tech-review/review.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/复核记录/tech/review.md",
+    "sha256": "e573cb6dc1b70d50b0fc7bd66b9abcf5da80b0170300034ba02513b564cc6392"
+  },
+  {
+    "source": "/tmp/aimy-20261014-handoff-tech-review/findings.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/复核记录/tech/findings.json",
+    "sha256": "251d71e1f31199538ec5ba7f5343d138adfde8bd21b557ed5d86ea66458d8d18"
+  },
+  {
+    "source": "/tmp/aimy-20261014-handoff-scope-review/final-review.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/复核记录/scope/final-review.md",
+    "sha256": "cf45e896dcfbf28282ebec285e1183dac0ede3a804d96ca83fe7f0f7e6b9d2cf"
+  },
+  {
+    "source": "/tmp/aimy-20261014-handoff-tech-review/final-review.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/复核记录/tech/final-review.md",
+    "sha256": "dc067db0b87028e722e867f803a43237386382b6e1ba165d90a34516069324e5"
+  },
+  {
+    "source": "/tmp/aimy-20261014-handoff-review/verify-docs.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/复核记录/verify-docs.py",
+    "sha256": "f7cb646c87a309610bc8372038b2e3b61037b4d4e97ed10d7fdf9449906283f5"
+  }
+]

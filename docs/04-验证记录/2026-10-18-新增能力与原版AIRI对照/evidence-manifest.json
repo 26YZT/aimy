@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-18",
+  "copyPolicy": "original bytes; harness failures and final observations separated",
+  "files": [
+    {
+      "path": "evidence/compare.cjs",
+      "sha256": "4f907fca029fe6e4fa3399f59c7e12e34ff6aa1188ca197cda5a7113c80ab008",
+      "bytes": 16843
+    },
+    {
+      "path": "evidence/mechanism-results.json",
+      "sha256": "38bbce509867af0edb7c58fec9726d99bfaf1a6ac52201c691e22ccc96106e17",
+      "bytes": 19811
+    },
+    {
+      "path": "evidence/mechanism-source-manifest.json",
+      "sha256": "6078cc08f6f92a50d7a62093a5a19909002cb826acae40e7ad2f7c812054bef3",
+      "bytes": 28690
+    },
+    {
+      "path": "evidence/mechanism.log",
+      "sha256": "b6834c3c9da2b3b8830062598bef3ea5a4a220187b6a4adf2e47775502c87732",
+      "bytes": 522
+    },
+    {
+      "path": "evidence/motion-repeat-observed.log",
+      "sha256": "f33e38079d0ea5489ffab60d4af92120905d0c5948c5d39379dab2423e68c19b",
+      "bytes": 381
+    },
+    {
+      "path": "evidence/airi-proactive.mjs",
+      "sha256": "b579b1c3b5f1d4137129c5a998e534672cf17b054a7422c7988dbbde6c4f9b10",
+      "bytes": 13478
+    },
+    {
+      "path": "evidence/airi-results.json",
+      "sha256": "acf070d5eea138c9e72cca5fed160e17a2b51dc27b06cacbe718d6dc253ee42a",
+      "bytes": 55031
+    },
+    {
+      "path": "evidence/airi-source-manifest.json",
+      "sha256": "c94711408b47d963faba799dc5eeeb9ce4149966313fd6e8817c78712c753c98",
+      "bytes": 2555
+    },
+    {
+      "path": "evidence/airi-proactive.log",
+      "sha256": "a2bc18cddc699e5a23e1c0f0d71f8e152fec4210138e85c8dd02a37a8854e690",
+      "bytes": 1186
+    },
+    {
+      "path": "evidence/proactive-fixtures.json",
+      "sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+      "bytes": 36415
+    },
+    {
+      "path": "evidence/baseline-validation.json",
+      "sha256": "30de51151fd3c47d8d7de46520a0407b5edc21ba7b6d85a32ba1b63148430983",
+      "bytes": 1668
+    },
+    {
+      "path": "evidence/compare.browser.test.ts",
+      "sha256": "aa8646408b7f624caa257d543a48502b093a82cc1531e66a702849ac585de984",
+      "bytes": 7371
+    },
+    {
+      "path": "evidence/vitest.config.mts",
+      "sha256": "c40bbc2947f1f3c4101ae2da1d8ab8e657b5914fdbc7655eb9d7be485d264278",
+      "bytes": 1225
+    },
+    {
+      "path": "evidence/browser.log",
+      "sha256": "88d9061c6e5c267b3363cc36ec00e2a289b80171228e9df443c497049cf8400d",
+      "bytes": 3654
+    },
+    {
+      "path": "evidence/browser-2.log",
+      "sha256": "e4342933cd5ad20dc3dd875ea9dd1efe6025f47b33aeeb2eb18671fd88e3d6db",
+      "bytes": 217
+    },
+    {
+      "path": "evidence/browser-final.log",
+      "sha256": "fc6d063d198055bc57227a4b3c3b273ceac3a0276ce7f878bd434b0ef54acba9",
+      "bytes": 72
+    },
+    {
+      "path": "evidence/browser-report.json",
+      "sha256": "b1f9ed28ac666296a28955660d0a07acc1d6b11e44ca915108761dd15d29fb1f",
+      "bytes": 2320
+    },
+    {
+      "path": "evidence/browser-observations.json",
+      "sha256": "097f77f7785c68ebf04e480ba1dffd898d7340007fed35ecfacff658733855e4",
+      "bytes": 3264
+    },
+    {
+      "path": "evidence/vrm-compare.mjs",
+      "sha256": "041828671d0e3692f5577854f84c861e3e5dfbe734463dbebf339323fe18d732",
+      "bytes": 3760
+    },
+    {
+      "path": "evidence/vrm-results.json",
+      "sha256": "7842ebba17d52edac7e55cd1f2dfbbd7667601e8a85374a237c1e3768cd1eb34",
+      "bytes": 4315
+    },
+    {
+      "path": "evidence/vrm.log",
+      "sha256": "f8cd34a7768348fc3942bdb8d5ec4f8b96669d5e9fc7fbd01e410f4230b068ef",
+      "bytes": 244
+    },
+    {
+      "path": "evidence/baseline-vrm-loader.mjs",
+      "sha256": "1886d1f6b700c92e70eff6b32207941b72044d4dec5783249f529b9d7e873ad9",
+      "bytes": 4644
+    },
+    {
+      "path": "evidence/current-vrm-loader.mjs",
+      "sha256": "1886d1f6b700c92e70eff6b32207941b72044d4dec5783249f529b9d7e873ad9",
+      "bytes": 4644
+    },
+    {
+      "path": "evidence/inspect-vrm.mjs",
+      "sha256": "3f9a80b23f7f0d164dfd4c274c00b5b0f7df30f4e6e6f2f41e7963f966e066bc",
+      "bytes": 8025
+    },
+    {
+      "path": "evidence/baseline/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7",
+      "bytes": 3947
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "apple": [
+    {
+      "events": 12,
+      "expected": "这是Aimy语音连接测试。",
+      "id": "sample-0",
+      "text": "这是艾米语音连接测试"
+    }
+  ],
+  "captureAfter": {
+    "microphone": false,
+    "screen": false
+  },
+  "captureBefore": {
+    "microphone": false,
+    "screen": false
+  },
+  "cloudRequests": [
+    {
+      "status": 200
+    },
+    {
+      "status": 200
+    }
+  ],
+  "mimo": [
+    {
+      "expected": "请检查麦克风和语音识别服务是否正常。",
+      "id": "sample-2",
+      "text": "请检查麦克风和语音识别服务是否正常。"
+    }
+  ],
+  "selectionsAfter": {
+    "chat": {
+      "model": "deepseek-flash",
+      "provider": "deepseek"
+    },
+    "hearing": {
+      "model": "apple-speech",
+      "provider": "apple-speech-transcription"
+    },
+    "speech": {
+      "model": "mimo-v2.5-tts",
+      "provider": "mimo-audio-speech",
+      "voice": "冰糖"
+    },
+    "vision": {
+      "model": "deepseek-flash",
+      "provider": "vision-deepseek"
+    }
+  },
+  "selectionsBefore": {
+    "chat": {
+      "model": "deepseek-flash",
+      "provider": "deepseek"
+    },
+    "hearing": {
+      "model": "apple-speech",
+      "provider": "apple-speech-transcription"
+    },
+    "speech": {
+      "model": "mimo-v2.5-tts",
+      "provider": "mimo-audio-speech",
+      "voice": "冰糖"
+    },
+    "vision": {
+      "model": "deepseek-flash",
+      "provider": "vision-deepseek"
+    }
+  },
+  "status": "passed",
+  "tts": {
+    "bytes": 99884,
+    "duration": 2.08,
+    "rms": 0.08071557036616807
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "head": "992309c0aa19845960228f880013d4685fde93b5",
+  "tracked_entries": 254,
+  "backend_py_files": 107,
+  "backend_py_lines": 15690,
+  "source_tree_status": "",
+  "submodule": "-06a659b114fff788cf0daaa86e484576db4975bf frontend\n",
+  "py_modules_by_directory": {
+    "src/open_llm_vtuber": 11,
+    "src/open_llm_vtuber/agent": 6,
+    "src/open_llm_vtuber/agent/agents": 6,
+    "src/open_llm_vtuber/agent/stateless_llm": 7,
+    "src/open_llm_vtuber/asr": 11,
+    "src/open_llm_vtuber/config_manager": 13,
+    "src/open_llm_vtuber/conversations": 7,
+    "src/open_llm_vtuber/live": 2,
+    "src/open_llm_vtuber/mcpp": 7,
+    "src/open_llm_vtuber/mcpp/utils": 1,
+    "src/open_llm_vtuber/translate": 5,
+    "src/open_llm_vtuber/tts": 22,
+    "src/open_llm_vtuber/utils": 5,
+    "src/open_llm_vtuber/vad": 4
+  },
+  "tracked_manifest_sha256": "bc7e1c312deda9d76aeaadb0f250795a9c943b9acd97dcb54f84f9aeb1bae082",
+  "backend_modules_fully_read_count": 55,
+  "capabilities_count": 63,
+  "source_status_after": "",
+  "source_ref_after": "992309c0aa19845960228f880013d4685fde93b5"
+}

@@ -1,0 +1,8 @@
+{
+  "installed": "/Users/mima1234/Applications/Aimy体验版.app",
+  "backup": "/Users/mima1234/Applications/Aimy体验版-20261018-MiMo修复前.app",
+  "newArchiveSha256": "fb0c506eaaade067530f8cbb4d412984c27a96bd6791493c239a205006a947f8",
+  "userDataTouchedByInstaller": false,
+  "installedSignatureVerified": true,
+  "quitMethod": "native Cmd-Q after SIGTERM did not exit"
+}

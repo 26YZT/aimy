@@ -1,15 +1,19 @@
-import type { SpeechOutput, TurnRef } from '@proj-airi/core-agent'
-import type { SpeechProviderWithExtraOptions } from '@xsai-ext/providers/utils'
+import type { SpeechAudio, SpeechOutput, TurnRef } from '@proj-airi/core-agent'
+import type { PcmBlock } from '@proj-airi/pipelines-audio'
+import type { MimoStreamingSpeechProvider } from '@proj-airi/provider-inference'
+import type { SpeechProvider, SpeechProviderWithExtraOptions } from '@xsai-ext/providers/utils'
 import type {} from 'pinia-plugin-synced'
 
 import type { AiriExtension } from '../../types/airiCard'
 import type { VoiceCatalogConfiguration, VoiceCatalogIdentity, VoiceInfo } from '../providers/provider'
 
 import { errorMessageFrom } from '@moeru/std'
+import { chunkTtsInput } from '@proj-airi/pipelines-audio'
 import { useLocalStorageManualReset } from '@proj-airi/stage-shared/composables'
 import { refManualReset } from '@vueuse/core'
 import { generateSpeech } from '@xsai/generate-speech'
 import { isEqual } from 'es-toolkit'
+import { nanoid } from 'nanoid/non-secure'
 import { defineStore, getActivePinia, storeToRefs } from 'pinia'
 import { computed, hasInjectionContext, inject, onScopeDispose, toRaw, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -20,8 +24,15 @@ import { injectKeyPiniaSynced } from '../../libs/pinia/synced-context'
 import { getDefinedProvider } from '../../libs/providers/providers'
 import { OFFICIAL_SPEECH_PROVIDER_ID, OFFICIAL_SPEECH_STREAMING_PROVIDER_ID, pickOfficialSpeechVoice } from '../../libs/providers/providers/official'
 import { streamSpeech } from '../../libs/speech/streaming-pipeline'
+import { getCompanionPreferences, onCompanionPreferencesChange } from '../../services/companion/preferences'
+import { reportCompanionStreamingSupport, transformCompanionSpeech } from '../../services/companion/speech-transform'
+import { recentSpeechEcho } from '../../services/companion/voice-policy'
+import { onResourceRevoked } from '../../services/resource-policy'
+import { useLLM } from '../ai/chat-llm/llm'
+import { AcceptanceBudgetError, getAcceptanceBudget } from '../memory/budget'
 import { useProviderConfigStore } from '../providers/config'
 import { useProviderStore } from '../providers/provider'
+import { useConsciousnessStore } from './consciousness'
 
 export function toSignedPercent(value: number): string {
   if (value > 0)
@@ -49,6 +60,102 @@ interface SpeechAnalytics {
   source: 'chat_auto_tts' | 'manual_preview' | 'settings_test'
   voice_type?: 'official_default' | 'official_selected' | 'custom_configured' | 'voice_pack'
   turn_id?: string
+}
+
+/** Keeps MiMo sentence requests ordered while the original playback owner consumes each live PCM stream. */
+function streamMimoSpeech(provider: Promise<MimoStreamingSpeechProvider>, text: ReadableStream<string>, selection: { model: string, voice: string }, signal: AbortSignal): ReadableStream<SpeechAudio> {
+  const lifetime = new AbortController()
+  const workSignal = AbortSignal.any([signal, lifetime.signal])
+  const input = text.pipeThrough(new TextEncoderStream(), { signal: workSignal }).getReader()
+  let closed = false
+  let cancelAudio: (() => Promise<void>) | undefined
+  let finishSegment: (() => void) | undefined
+  let output: ReadableStreamDefaultController<SpeechAudio>
+  function stop(error?: unknown) {
+    if (closed)
+      return
+    closed = true
+    workSignal.removeEventListener('abort', abort)
+    lifetime.abort(error ?? new DOMException('Speech closed', 'AbortError'))
+    void input.cancel().catch(() => {})
+    void cancelAudio?.()
+    finishSegment?.()
+    if (error)
+      output.error(error)
+  }
+  function abort() {
+    stop(workSignal.reason)
+  }
+  return new ReadableStream<SpeechAudio>({
+    start(controller) {
+      output = controller
+      workSignal.addEventListener('abort', abort, { once: true })
+      void (async () => {
+        try {
+          workSignal.throwIfAborted()
+          const client = await provider
+          workSignal.throwIfAborted()
+          for await (const chunk of chunkTtsInput(input)) {
+            workSignal.throwIfAborted()
+            if (!chunk.text.trim())
+              continue
+            const pcm = await client.streamSpeech(chunk.text, { ...selection, signal: workSignal })
+            workSignal.throwIfAborted()
+            const reader = pcm.getReader()
+            const finished = Promise.withResolvers<void>()
+            finishSegment = () => finished.resolve()
+            const sourceId = nanoid()
+            let frame = 0
+            let released = false
+            function release() {
+              if (released)
+                return
+              released = true
+              reader.releaseLock()
+              cancelAudio = undefined
+              finished.resolve()
+            }
+            cancelAudio = () => reader.cancel().catch(() => {}).finally(release)
+            const audio = new ReadableStream<PcmBlock>({
+              async pull(blocks) {
+                try {
+                  workSignal.throwIfAborted()
+                  const next = await reader.read()
+                  workSignal.throwIfAborted()
+                  if (next.done) {
+                    blocks.close()
+                    release()
+                    return
+                  }
+                  const startFrame = frame
+                  frame += next.value.length
+                  blocks.enqueue({ sampleRate: 24000, range: { sourceId, startFrame, endFrame: frame }, channels: [next.value] })
+                }
+                catch (error) {
+                  blocks.error(error)
+                  release()
+                  stop(error)
+                }
+              },
+              async cancel(reason) {
+                await reader.cancel(reason).catch(() => {})
+                release()
+                stop(new DOMException('Speech playback cancelled', 'AbortError'))
+              },
+            }, { highWaterMark: 0 })
+            controller.enqueue({ audio, text: chunk.text })
+            await finished.promise
+          }
+          workSignal.throwIfAborted()
+          stop()
+          controller.close()
+        }
+        catch (error) { stop(error) }
+        finally { input.releaseLock() }
+      })()
+    },
+    cancel() { stop() },
+  }, { highWaterMark: 0 })
 }
 
 // Request status belongs to this renderer's RPC wait, not to replicated speech settings.
@@ -517,17 +624,19 @@ export const useSpeechStore = defineStore('speech', () => {
    * @returns ArrayBuffer containing the audio data
    */
   async function speech(
-    provider: SpeechProviderWithExtraOptions<string, any>,
+    provider: SpeechProvider | SpeechProviderWithExtraOptions<string, Record<string, unknown>>,
     model: string,
     input: string,
     voice: string,
-    providerConfig: Record<string, any> = {},
+    providerConfig: Record<string, unknown> = {},
     analytics: SpeechAnalytics = {
       trigger: 'manual',
       source: 'manual_preview',
       voice_type: resolveVoiceType(voice),
     },
   ): Promise<ArrayBuffer> {
+    if (getAcceptanceBudget())
+      throw new AcceptanceBudgetError('paid-validation-disabled')
     const requestProviderConfig = activeSpeechProvider.value === OFFICIAL_SPEECH_PROVIDER_ID
       || activeSpeechProvider.value === OFFICIAL_SPEECH_STREAMING_PROVIDER_ID
       ? withAiriTtsAnalytics(providerConfig, analytics)
@@ -543,26 +652,48 @@ export const useSpeechStore = defineStore('speech', () => {
 
   /** Captures one response's provider, voice, model, and settings before any asynchronous work. */
   function createOutput(turn: TurnRef, selection: AiriExtension['modules']['speech'], output: Pick<SpeechOutput, 'playback' | 'onPlaybackStart' | 'onPlaybackEnd' | 'onSpecial'>, audioContext: AudioContext): SpeechOutput {
+    if (getAcceptanceBudget())
+      return { ...output, synthesize: async () => null }
     const providerId = selection.provider
+    const definitionId = providersStore.findProviderDefinition(providerId)?.id ?? providerId
     const config = structuredClone(toRaw(providerStore.getProviderConfig(providerId) ?? {}))
     const selectedVoice = availableVoices.value[providerId]?.find(voice => voice.id === selection.voice_id)
     const voice = selectedVoice ? structuredClone(toRaw(selectedVoice)) : undefined
     const model = selection.model || (typeof config.model === 'string' ? config.model : '')
     const voiceId = selection.voice_id || (typeof config.voice === 'string' ? config.voice : '')
     const useSSML = ssmlEnabled.value
-    const canUseSSML = ['elevenlabs', 'microsoft-speech', 'azure-speech'].includes(providerId) || (providerId === 'alibaba-cloud-model-studio' && model === 'cosyvoice-v2')
+    const canUseSSML = ['elevenlabs', 'microsoft-speech', 'azure-speech'].includes(definitionId) || (definitionId === 'alibaba-cloud-model-studio' && model === 'cosyvoice-v2')
     const pitchValue = pitch.value
+    const spokenText = new Map<string, string>()
+    const presentation = { ...output, onPlaybackStart(clip: Parameters<NonNullable<SpeechOutput['onPlaybackStart']>>[0]) {
+      if (getCompanionPreferences().speech.echoFilterEnabled)
+        recentSpeechEcho.remember(turn.sessionId, spokenText.get(clip.id) ?? clip.text)
+      spokenText.delete(clip.id)
+      output.onPlaybackStart?.(clip)
+    } }
     const voiceType = providerId === OFFICIAL_SPEECH_PROVIDER_ID || providerId === OFFICIAL_SPEECH_STREAMING_PROVIDER_ID
       ? 'official_selected' as const
       : 'custom_configured' as const
     if (!providerId || providerId === 'speech-noop')
       return { ...output, synthesize: async () => null }
-    if (getDefinedProvider(providerId)?.capabilities?.speech?.transport === 'bidirectional-ws') {
+    // Translation retains its sentence transform. MiMo voice design and cloning remain non-streaming.
+    if (definitionId === 'mimo-audio-speech' && model === 'mimo-v2.5-tts' && !getCompanionPreferences().speech.translationEnabled) {
+      if (!voiceId)
+        throw new Error('Speech requires a voice')
+      reportCompanionStreamingSupport()
+      return { ...presentation, stream: async (text, signal) => {
+        signal.throwIfAborted()
+        const client = providersStore.getProviderInstance<MimoStreamingSpeechProvider>(providerId)
+        return streamMimoSpeech(client, text, { model, voice: voiceId }, signal)
+      } }
+    }
+    if (getDefinedProvider(definitionId)?.capabilities?.speech?.transport === 'bidirectional-ws') {
+      reportCompanionStreamingSupport()
       const streamingModel = model.includes('/') ? model : providersStore.getDefaultModelForProvider(providerId)
       if (!streamingModel?.includes('/') || !voiceId)
         throw new Error('Streaming speech requires a model and voice')
       const resource = streamingModel.split('/', 2)[1]
-      return { ...output, stream: async (text, signal) => streamSpeech({
+      return { ...presentation, stream: async (text, signal) => streamSpeech({
         audioContext,
         model: streamingModel,
         voice: voiceId,
@@ -575,16 +706,104 @@ export const useSpeechStore = defineStore('speech', () => {
     if (!model || !voiceId)
       throw new Error('Speech requires a model and voice')
     const provider = providersStore.getProviderInstance<SpeechProviderWithExtraOptions<string, Record<string, unknown>>>(providerId)
-    return { ...output, synthesize: async (request, signal) => {
+    return { ...presentation, synthesize: async (request, signal) => {
+      if (getAcceptanceBudget())
+        return null
       signal.throwIfAborted()
       const client = await provider
+      if (getAcceptanceBudget())
+        return null
       signal.throwIfAborted()
-      const input = voice && useSSML && canUseSSML ? generateSSML(request.text, voice, { ...config, pitch: pitchValue }) : request.text
-      const settings = providerId === OFFICIAL_SPEECH_PROVIDER_ID
-        ? { ...config, extraBody: { ...(config.extraBody as Record<string, unknown> | undefined), airi_analytics: { trigger: 'auto', source: 'chat_auto_tts', voice_type: voiceType, turn_id: turn.turnId } } }
-        : config
-      const audio = await generateSpeech({ ...client.speech(model, settings), input, voice: voiceId, abortSignal: signal })
-      return new Blob([audio])
+      const initialPreferences = getCompanionPreferences().speech
+      const hasTransforms = initialPreferences.translationEnabled || initialPreferences.directorEnabled
+      const speechPreferences = JSON.stringify(initialPreferences)
+      const controller = new AbortController()
+      const workSignal = AbortSignal.any([signal, controller.signal])
+      const unwatch = onCompanionPreferencesChange(() => {
+        if (hasTransforms && JSON.stringify(getCompanionPreferences().speech) !== speechPreferences)
+          controller.abort(new DOMException('Speech preferences changed', 'AbortError'))
+      })
+      const unrevoke = onResourceRevoked((_reason, kind) => {
+        if (hasTransforms && !kind)
+          controller.abort(new DOMException('Speech was suspended', 'AbortError'))
+      })
+      try {
+        const transformed = await transformCompanionSpeech({
+          text: request.text,
+          signal: workSignal,
+          supportsDirectedProsody: !!voice && useSSML && ['microsoft-speech', 'azure-speech'].includes(definitionId),
+          generate: async (instructions, input, transformSignal) => {
+            const modelController = new AbortController()
+            const modelSignal = AbortSignal.any([transformSignal, modelController.signal])
+            const consciousness = useConsciousnessStore(pinia)
+            const chatProviderId = consciousness.activeProvider
+            const chatModel = consciousness.activeModel
+            const revision = providerStore.getProviderConfigRevision(chatProviderId)
+            if (!chatProviderId || !chatModel)
+              throw new Error('COMPANION_MODEL_MISSING')
+            const assertCurrent = () => {
+              modelSignal.throwIfAborted()
+              if (getAcceptanceBudget() || consciousness.activeProvider !== chatProviderId || consciousness.activeModel !== chatModel
+                || providerStore.getProviderConfigRevision(chatProviderId) !== revision) {
+                throw new DOMException('Chat model configuration changed', 'AbortError')
+              }
+            }
+            const stopModelWatch = watch([
+              () => consciousness.activeProvider,
+              () => consciousness.activeModel,
+              () => providerStore.getProviderConfigRevision(chatProviderId),
+            ], () => controller.abort(new DOMException('Chat model configuration changed', 'AbortError')), { flush: 'sync' })
+            try {
+              assertCurrent()
+              const chatProvider = await consciousness.getChatProviderInstance(chatProviderId)
+              assertCurrent()
+              let result = ''
+              await useLLM(pinia).stream(chatModel, chatProvider, { turns: [
+                { id: 'speech-transform-instructions', type: 'system', authority: 'system', content: [{ type: 'text', text: instructions }] },
+                { id: 'speech-transform-text', type: 'user', content: [{ type: 'text', text: input }] },
+              ] }, {
+                providerId: chatProviderId,
+                supportsTools: false,
+                abortSignal: modelSignal,
+                assertCurrent,
+                maxInputTokens: 16_000,
+                maxOutputTokens: 1024,
+                temperature: 0,
+                outputTokenLimitField: ['openai', 'azure-openai'].includes(providersStore.findProviderDefinition(chatProviderId)?.id ?? '') ? 'max_completion_tokens' : undefined,
+                onStreamEvent(event) {
+                  assertCurrent()
+                  if (event.type === 'text-delta') {
+                    result += event.text
+                    if (result.length > 4000) {
+                      modelController.abort(new Error('SPEECH_TRANSFORM_TOO_LONG'))
+                      throw new Error('SPEECH_TRANSFORM_TOO_LONG')
+                    }
+                  }
+                },
+              })
+              assertCurrent()
+              return result
+            }
+            finally {
+              stopModelWatch()
+            }
+          },
+        })
+        workSignal.throwIfAborted()
+        // Explicit provider prosody, including zero, takes precedence over the optional delivery preset.
+        const input = voice && useSSML && canUseSSML ? generateSSML(transformed.text, voice, { ...transformed.prosody, ...config, pitch: pitchValue }) : transformed.text
+        const settings = providerId === OFFICIAL_SPEECH_PROVIDER_ID
+          ? { ...config, extraBody: { ...(config.extraBody as Record<string, unknown> | undefined), airi_analytics: { trigger: 'auto', source: 'chat_auto_tts', voice_type: voiceType, turn_id: turn.turnId } } }
+          : config
+        const audio = await generateSpeech({ ...client.speech(model, settings), input, voice: voiceId, abortSignal: workSignal })
+        workSignal.throwIfAborted()
+        spokenText.set(request.segmentId, transformed.text)
+        return new Blob([audio])
+      }
+      finally {
+        unwatch()
+        unrevoke()
+      }
     } }
   }
 

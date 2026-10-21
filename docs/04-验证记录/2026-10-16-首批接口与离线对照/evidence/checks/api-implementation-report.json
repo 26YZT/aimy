@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-16",
+  "task": "API-CLOSE",
+  "status": "implemented; product write ownership returned to root",
+  "apis": {
+    "readProfile": {
+      "input": "MemoryReadRequest = { expectedScope?: MemoryScope } (optional)",
+      "output": "MemoryProfileSnapshot { scope, snapshotRevision, completionState, initialProfile: { submissionId, fields: [{fieldId,value,source}] } | null }",
+      "notes": [
+        "value is the saved normalized source text, not reconstructed raw input or current inferred facts",
+        "missing source text is null",
+        "read does not restore removed memories"
+      ]
+    },
+    "listMemory": {
+      "input": "{stateFilter: current|history, cursor?:string, expectedScope?:MemoryScope}",
+      "output": "{scope,facts,snapshotRevision,nextCursor?}",
+      "notes": [
+        "fixed page size 50",
+        "order: committedAt descending, factId binary ascending, fact revision descending",
+        "current uses getEffectiveFacts; history uses superseded/removed/invalidated revisions",
+        "pending source changes do not convert current facts into history",
+        "strict cursor contains version/scope/filter/revision/offset; stale revision throws CURSOR_EXPIRED",
+        "scope/filter/offset/malformed cursors are rejected; no caller scope authority"
+      ]
+    },
+    "readSourceSnapshot": {
+      "input": "({factId,factRevision?}|{sourceId,sourceRevision?}) & {expectedScope?:MemoryScope}",
+      "output": "{scope,snapshotRevision,sources:[{ref,lifecycle,status,text?}],lineage:[{factId,factRevision,status,sourceVersions,dependsOnFactIds}]}",
+      "notes": [
+        "source status is available/missing/changed/deleted",
+        "text exists only for available exact bytes",
+        "omitted fact revision selects effective fact; omitted source revision selects latest stored source",
+        "late scope/context invalidation rejects response",
+        "native storage errors never become missing evidence",
+        "readSource(factId) keeps its original array contract for existing UI"
+      ]
+    },
+    "diagnosticsSummary": {
+      "input": "MemoryReadRequest (optional)",
+      "output": "MemoryDiagnosticsSummary {scope,snapshotRevision,memoryEpoch,state,busy,enabled,recoveryUntil,errorCode,counts,operations,sources,truncated}",
+      "notes": [
+        "current authorized scope only, no second owner",
+        "state is ready/not-ready/recovering/unavailable",
+        "metadata-only whitelist; no fact text, source text, prompts, result payloads, or provider configuration",
+        "operations and sources each capped at 20",
+        "diagnostics does not claim an unexpired foreign lease or rewrite unsupported schema",
+        "budget and resource aggregation remain root-owned"
+      ]
+    },
+    "writeActions": {
+      "methods": [
+        "submitProfile",
+        "setEnabled",
+        "setModelPolicy",
+        "correctFact",
+        "removeFact"
+      ],
+      "output": "MemoryActionReceipt = MemoryReceipt & {resultStatus: recorded|not-recorded}",
+      "notes": [
+        "top-level existing receipt fields remain compatible",
+        "optional result is persisted atomically, metadata-only, and returned unchanged for the same operation retry",
+        "old receipts omit result and explicitly return resultStatus=not-recorded",
+        "no fabricated pending/partial operation resource",
+        "setEnabled(value, options?) and setModelPolicy(policy, options?) accept {operationId,expectedRevision,expectedScope?}",
+        "existing single-argument policy callers remain supported with owner-assigned operation IDs",
+        "profile accepts optional operationId/expectedRevision/expectedScope; existing stable submission ID remains supported",
+        "same-value policy commands use the existing activation and do not cancel pending jobs"
+      ]
+    },
+    "getOperation": {
+      "input": "operationId:string",
+      "output": "{receipt:MemoryActionReceipt|null,revision}",
+      "notes": [
+        "missing stays null/unknown",
+        "query never replays a mutation or fills an old result from current state"
+      ]
+    }
+  },
+  "compatibility": {
+    "database": "same IndexedDB mount and one scope envelope",
+    "schemaVersion": 1,
+    "migration": false,
+    "optional_receipt_result": "old receipts remain valid and unchanged",
+    "ui": "existing facts/profileState/revision projection and folded maintenance remain; no history UI added",
+    "policy_ui": "stable plain command objects retain operation ID and observed revision after write failure; explicit refresh permits a new command",
+    "result_state_machine": false,
+    "new_dependency": false,
+    "new_http_service": false
+  },
+  "coordinated_gate_change": "memory worker now passes providers.findProviderDefinition(route.providerId) to acceptanceAttemptGate; no string/provider-instance-ID fallback",
+  "verification": {
+    "node_policy": {
+      "tests": 27,
+      "exit_code": 0,
+      "command": "pnpm -F @proj-airi/stage-ui exec vitest run --project node src/stores/memory/policy.test.ts",
+      "log": "/tmp/aimy-closure-20261016/api/policy-final.log"
+    },
+    "browser": {
+      "tests": 65,
+      "breakdown": {
+        "integration": 34,
+        "repository": 22,
+        "about_me_ui": 9
+      },
+      "exit_code": 0,
+      "command": "pnpm -F @proj-airi/stage-ui exec vitest run --project browser src/stores/memory-integration.browser.test.ts src/database/repos/memory.repo.browser.test.ts src/components/scenarios/settings/about-me.browser.test.ts",
+      "log": "/tmp/aimy-closure-20261016/api/browser-final.log"
+    },
+    "unique_tests": 92,
+    "stage_ui_typecheck": {
+      "exit_code": 0,
+      "command": "pnpm -F @proj-airi/stage-ui exec vue-tsc --noEmit",
+      "log": "/tmp/aimy-closure-20261016/api/stage-ui-typecheck-final.log"
+    },
+    "stage_pages_typecheck": {
+      "exit_code": 0,
+      "command": "pnpm -F @proj-airi/stage-pages exec vue-tsc --noEmit",
+      "log": "/tmp/aimy-closure-20261016/api/stage-pages-typecheck-final.log"
+    },
+    "scoped_eslint": {
+      "exit_code": 0,
+      "file_count": 10,
+      "log": "/tmp/aimy-closure-20261016/api/lint-final.log"
+    },
+    "known_non_failure_output": [
+      "existing Vite native config import warnings",
+      "existing UnoCSS scrollbar warnings",
+      "fixture router and motion directive warnings",
+      "expected injected persistence warning lines"
+    ],
+    "pre_fix_evidence": [
+      {
+        "log": "/tmp/aimy-closure-20261016/api/contracts-red.log",
+        "failures": 5,
+        "reason": "missing read APIs and dropped write receipts"
+      },
+      {
+        "log": "/tmp/aimy-closure-20261016/api/ui-red-verified.log",
+        "failures": 1,
+        "reason": "policy UI provided no command identity/version"
+      },
+      {
+        "log": "/tmp/aimy-closure-20261016/api/model-retry-red.log",
+        "failures": 1,
+        "reason": "model policy projection refresh reset the pending retry identity"
+      }
+    ]
+  },
+  "limits": [
+    "Full root workspace typecheck/lint and final Electron build are delegated to root after its clock/gate/harness integration freezes.",
+    "No paid model calls, model-quality acceptance, history UI, data migration, or Git publication.",
+    "Hashes below are observed at report creation. Root owns later clock changes in memory.ts and must refresh the final integrated fingerprint."
+  ],
+  "product_files": [
+    "packages/stage-ui/src/types/memory.ts",
+    "packages/stage-ui/src/stores/memory/schema.ts",
+    "packages/stage-ui/src/stores/memory/policy.ts",
+    "packages/stage-ui/src/stores/memory/policy.test.ts",
+    "packages/stage-ui/src/stores/memory.ts",
+    "packages/stage-ui/src/database/repos/memory.repo.ts",
+    "packages/stage-ui/src/database/repos/memory.repo.browser.test.ts",
+    "packages/stage-ui/src/stores/memory-integration.browser.test.ts",
+    "packages/stage-ui/src/components/scenarios/settings/about-me.vue",
+    "packages/stage-ui/src/components/scenarios/settings/about-me.browser.test.ts"
+  ],
+  "source_sha256_at_report": {
+    "packages/stage-ui/src/types/memory.ts": "4ea6f60aaf6f185973e4ff1322739c8be88661f73c39c287ff6dc830fe8c85fd",
+    "packages/stage-ui/src/stores/memory/schema.ts": "a95344d8f8916018445ca34905beb978b938150d17c9e24b41a4158c73f973c2",
+    "packages/stage-ui/src/stores/memory/policy.ts": "d033b83310dedc01bfe59a841077b01eb82e6583a4aace37542ff3f72f44c992",
+    "packages/stage-ui/src/stores/memory/policy.test.ts": "04639b66500ad8da200d42cf21747115758cd9fcbf3e0f4e58d064433aa3debb",
+    "packages/stage-ui/src/stores/memory.ts": "1af332386f432f4aa0edc04e0b024fc3274cc7e4186c0efdd783142a698cea53",
+    "packages/stage-ui/src/database/repos/memory.repo.ts": "faba661b97d0e773fffebca7765864c0cd4bd9bf15fdb4de758e60e6db67b132",
+    "packages/stage-ui/src/database/repos/memory.repo.browser.test.ts": "e6eafd0a0c8ccad4e1e0d859ed79a86e29b52db95b3f78d85f8d7218f321173d",
+    "packages/stage-ui/src/stores/memory-integration.browser.test.ts": "9185fbdcfbe1ca923c8e26b5e9ac692248502ef724600f58df59a4e9d483d8a5",
+    "packages/stage-ui/src/components/scenarios/settings/about-me.vue": "398c0e3274cc328d3bc8cacfad4882568ff231b357409913d2783d3a9bafc408",
+    "packages/stage-ui/src/components/scenarios/settings/about-me.browser.test.ts": "42147de6c1b7c3832b6d930c0ab8120a9442a22f9ab6e3668dd76fd2ce7e4631"
+  },
+  "preserved_failure_screenshots": [
+    {
+      "path": "/tmp/aimy-closure-20261016/api/failure-screenshots/API-CLOSE-snapshot-and-receipt-contracts-returns-source-versions-and-historical-lineage-without-substituting-changed-chat-text-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-closure-20261016/api/failure-screenshots/API-CLOSE-snapshot-and-receipt-contracts-returns-diagnostics-metadata-without-copying-evidence--prompts-or-provider-secrets-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-closure-20261016/api/failure-screenshots/API-CLOSE-snapshot-and-receipt-contracts-returns-the-original-policy-receipt-and-rejects-a-new-stale-command-without-changing-policy-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-closure-20261016/api/failure-screenshots/API-CLOSE-snapshot-and-receipt-contracts-returns-bounded-pages-and-refuses-a-cursor-from-another-snapshot-or-scope-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-closure-20261016/api/failure-screenshots/API-CLOSE-snapshot-and-receipt-contracts-reads-saved-initial-fields-without-reconstructing-them-from-later-corrected-facts-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-closure-20261016/api/failure-screenshots/about-me-and-first-profile-api-close-keeps-the-same-model-policy-command-after-a-native-storage-failure-1.png",
+      "sha256": "74afbf8cb0435eb76ccefa9fe7fc2904df57d0be714b93c37f3052285d0d60f1"
+    },
+    {
+      "path": "/tmp/aimy-closure-20261016/api/failure-screenshots/about-me-and-first-profile-API-CLOSE-keeps-the-same-policy-command-after-a-native-storage-failure-1.png",
+      "sha256": "858d7fc2b7d82b1da6f33154548f1df430eca1a158edcedcb0356438c68f4f8b"
+    }
+  ]
+}

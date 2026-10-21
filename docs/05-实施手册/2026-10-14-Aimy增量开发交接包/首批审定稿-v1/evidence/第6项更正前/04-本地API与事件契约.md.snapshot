@@ -1,0 +1,69 @@
+# 本地API与事件契约 v2
+
+日期：2026-10-15。状态：**18项拟定操作，0项本次新实现**。用途：把初始化、模型覆盖和首批可靠性纳入同一合同，替代旧17项全局草案的首批部分。来源：技术稿/前端稿/当前Eventa及synced actions。不是HTTP端点，也不对模型开放写库工具。
+
+## 公共调用与回执
+
+Memory操作由renderer leader服务处理，follower沿原同步动作转发。main资源/退出通过版本化Eventa窄桥。signal/guard闭包只在进程内，跨桥传requestId及取消消息，不序列化AbortSignal或模型完整config。所有操作 `model_callable=false`；前端/host资格由owner校验。
+
+```ts
+// 拟定公共封套
+type MemoryCommand<T> = {
+  contractVersion: 2; requestId: string; scope: MemoryScope
+  mutationId?: string; expectedRevision?: number; payload: T
+}
+type InternalJobCommand<T> = {
+  contractVersion: 2; requestId: string; scope: MemoryScope
+  jobId?: string; sourceVersions: unknown; lease: unknown; payload: T
+}
+type AppCommand<T> = {
+  contractVersion: 2; requestId: string; windowId?: number
+  resourceEpoch?: number; shutdownId?: string; payload: T
+}
+type Receipt<T> = {
+  operationId: string; status: 'pending'|'succeeded'|'partial'|'failed'|'unknown'
+  revision: number; memoryEpoch: number; persistedAt?: number; data?: T
+  error?: { code: string; retryable: boolean; safeMessage: string }
+}
+```
+
+Memory UI写操作必须有mutationId/expectedRevision，同ID不同payload拒绝；内部入队/commit使用job/source版本与lease及事务时实际revision，不冒充UI命令。资源/取消/退出用独立App/ResourceCommand，**不因记忆revision冲突阻止停止**；先同步撤资格，再汇总回执。过期的单资源lease不能误停另一新lease，用户off/stopAll/quit由host核当前资源统一撤权。
+
+`succeeded`只在真正提交后；partial说明已落屏障但清理未完；unknown保留operationId待查。读操作回snapshotRevision，游标带revision，快照变化返回CURSOR_EXPIRED而非拼混列表。上述Receipt是Memory持久回执；资源回执按目录给epoch/停止明细，不能假装资源停止也写过MemoryEnvelope。
+
+MemoryScope没有sessionId；`resolveContext`额外需ChatRequestScope。资源和退出使用AppScope/ResourceScope（窗口、资源种类、epoch、租约）而非伪造记忆session。main桥校验实际sender/window身份，不信任payload自称。
+
+## 首批操作目录
+
+完整字段、任务与验收ID见[接口目录.json](接口目录.json)。下表18项以机器目录为计数依据。
+
+| 操作 | 输入重点 | 输出 / 约束 |
+|---|---|---|
+| `profile.read` | MemoryScope | 同库初始资料/填写状态/来源，不读取另一用户或角色 |
+| `profile.submit` | submissionId、字段答案/skip、版本 | typed来源及直接字段/待整理状态的持久回执；空白不成事实，无需session |
+| `memory.list` | scope、current/history过滤、cursor | 快照列表、revision；当前/历史明确分开 |
+| `memory.source` | factId或sourceId、可选维护预览 | 原文/时间/精确血缘与host maintenancePreview（受影响当前条目/派生种类/范围/snapshotRevision/impactDigest）；missing明确 |
+| `memory.correct` | factId、新本人修正、expectedRevision | 新correction来源+新版本+失效旧投影，回执后UI更新 |
+| `memory.remove` | factId、预览revision/digest、确认affectedIds | 事务复算影响集，和同revision确认集不符即冲突要求重看；停止使用屏障与清理回执，无delete-chat模式 |
+| `memory.setPolicy` | 自动整理enabled、版本 | activation/epoch；关闭取消未提交job，重开不回填关闭期间 |
+| `memory.setModelPolicy` | follow-chat或override非敏感配置 | 持久策略revision、旧job失效；不改聊天模型/角色卡 |
+| `memory.resolveContext` | ChatRequestScope、TurnRef、query、虚拟/实际clock | owner进程内有效事实、included IDs/拒绝原因、guard；follower只发可序列化聊天命令，不能跨窗口返回闭包/signal |
+| `memory.enqueueSource` | 已持久SourceRef/receipt、activation | source+job幂等回执；仅host内部，不接受模型自报来源 |
+| `memory.commitCandidates` | jobId、捕获版本/lease、已校验候选 | 原子事实/回执；重新核来源/epoch/路线，不直接信模型JSON |
+| `operation.get` | scope、operationId | pending/partial/最终状态；查询不会重新执行一个新操作 |
+| `perception.start` | 资源kind、真实用户授权、window/epoch | 本窗口资源lease；screen/mic独立默认off，关/隐藏/退出拒绝 |
+| `perception.stop` | resource lease、reason | 立即撤资格，停止tracks，有限回执；迟到授权不得复活 |
+| `perception.stopAll` | AppScope、reason、epoch | 对应应用所有已有消费者停止明细；不是全系统清理 |
+| `presentation.cancel` | request/turn/资源epoch、reason | 取消文字/声音/动作及后续持久交付资格；不把网络费用抹零 |
+| `shutdown.prepare` | main发起的shutdownId/deadline | 已撤新调用、采集/队列停止明细与剩余项；有限等待 |
+| `diagnostics.summary` | 当前scope或应用授权范围 | 非敏感状态、operation/source IDs/费用摘要；无密钥/完整原文/图像 |
+
+首批没有后台计划领取、定时主动发言、视觉推理新配置、外部消息或资产制作API；旧目录同类条目留后批，不按接口存在就自动做。
+
+## 错误与事件
+
+公共错误：NOT_READY、SCOPE_MISMATCH、REVISION_CONFLICT、STALE_OWNER、CANCELLED/STALE_RESULT、INVALID_INPUT、SOURCE_MISSING/CHANGED/SUPPRESSED、IDEMPOTENCY_MISMATCH、STORAGE_FAILED/UNKNOWN、CURSOR_EXPIRED、MODEL_UNAVAILABLE、BUDGET_PAUSED、PERMISSION_DENIED。schema未知版本不自动覆盖，错误safeMessage不含秘密。具体retryable见机器目录；旧来源/owner/屏障失效不能作为transient自动重发旧payload。
+
+拟事件：`memory.changed(scope,revision,epoch)`只促使重新读；`memory.job-state(operationId,status)`不带原文/密钥；`operation.updated`回执变更；`resource.revoked(window,kind,epoch,reason)`同步阻新调用并取消晚到；`shutdown.receipt(shutdownId,stopped,persisted,pending)`限时汇总。事件丢失能以持久snapshot/operation恢复，不能靠只发一次广播保证删除。
+
+删除/更正屏障、模型路线改变、scope切换和资源撤权都使guard失效。原两协议、每步、重试和真正fetch，以及呈现/提交均须再次检查；UI收到changed不等于网络已安全停止。API验收看真实状态与最终payload，见[验收合同](06-验收与评测目标.md)。

@@ -1,0 +1,93 @@
+{
+  "status": "3个去重功能slice；不是16个新增功能，第三个为带阻断条件的候选",
+  "slices": [
+    {
+      "slice_id": "MEM-F01",
+      "user_function": "自动形成可管理、可追溯的跨会话当前事实记忆",
+      "candidate_ids": [
+        "AH-R01",
+        "AH-R02"
+      ],
+      "engineering_reference_ids": [
+        "AH-R04"
+      ],
+      "not_separate_features": [
+        "source IDs",
+        "revision/epoch",
+        "删除屏障",
+        "来源UI",
+        "索引失效"
+      ],
+      "airi_gap": "当前主桌面已核路径缺少自动事实提取/当前版本/来源纠正闭环；history/notebook/compaction不冒充事实记忆",
+      "source_implementation": "post_sentinel自动job/共享画像与memory_library原子记录CRUD，二者在来源项目仍是不同数据链；Aimy应归一个能力与事实权威",
+      "positive_test_ids": [
+        "DM-P01",
+        "DM-P02",
+        "DM-P09",
+        "DM-P10"
+      ],
+      "negative_test_ids": [
+        "DM-N01",
+        "DM-N02",
+        "DM-N03",
+        "DM-N04",
+        "DM-N05",
+        "DM-N06",
+        "DM-N09"
+      ],
+      "counterexample_ids": [
+        "DM-C01",
+        "DM-C02",
+        "DM-C05"
+      ],
+      "current_verdict": "真实新增功能可列短名单；原实现不直接采用；局部规则可改写适配，质量与彻底忘记尚未证明"
+    },
+    {
+      "slice_id": "MEM-F02",
+      "user_function": "按来源、时间与当前状态想起相关事实，允许自然提起与沉默",
+      "candidate_ids": [
+        "AH-R03"
+      ],
+      "supporting_candidate_ids": [
+        "AH-R01",
+        "AH-R07"
+      ],
+      "airi_gap": "已核主桌面无事实级时间/当前状态召回；已有MCP/tools/context不重复算新能力",
+      "positive_test_ids": [
+        "DM-P03",
+        "DM-P04",
+        "DM-P05",
+        "DM-P06"
+      ],
+      "negative_test_ids": [
+        "DM-N07"
+      ],
+      "counterexample_ids": [
+        "DM-C03"
+      ],
+      "current_verdict": "确定性时间/rank/证据预算真实可执行；真实召回质量和自然主动提起仍是假设，策略需实际模型AB"
+    },
+    {
+      "slice_id": "PRO-F01",
+      "user_function": "用户授权后在适当时刻续聊，跨进程保存待续聊意图",
+      "candidate_ids": [
+        "AH-R06"
+      ],
+      "supporting_candidate_ids": [
+        "AH-R07"
+      ],
+      "airi_gap": "AIRI已有内存notify/task；缺的是持久follow-up与专属陪伴策略，不是Agent/播放器",
+      "positive_test_ids": [
+        "DM-P07",
+        "DM-P08"
+      ],
+      "negative_test_ids": [
+        "DM-N08"
+      ],
+      "counterexample_ids": [
+        "DM-C04"
+      ],
+      "current_verdict": "持久规则是窄新增；原禁用缺陷未修，不可称整套正确；自然度/打扰/成本收益未AB"
+    }
+  ]
+}

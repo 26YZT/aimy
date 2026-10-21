@@ -1,0 +1,174 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "executed": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "symbol": "LongTerm whole module",
+      "start": 1,
+      "end": 412,
+      "execution": "Original JavaScript; localStorage fake; no LLM"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7",
+      "symbol": "original module",
+      "start": 1,
+      "end": 151,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/types.ts",
+      "sha256": "497b40b242dc7716753aa8c33277ca8aa25bce96b4af46761652f5bc6ba439a7",
+      "symbol": "original module",
+      "start": 1,
+      "end": 75,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/merge.ts",
+      "sha256": "0f7632c172c9340c3d76b6a11a35ebb02151f10ab4a4eb6518a64839d289ef68",
+      "symbol": "original module",
+      "start": 1,
+      "end": 247,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/manager.ts",
+      "sha256": "99ac0d163d6e154ea7b72b51abcea4ddd1cdc3d2921a2085bdc7b74778e39bf5",
+      "symbol": "original module",
+      "start": 1,
+      "end": 151,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/context-registry.ts",
+      "sha256": "80b7202a70ede6aaf07c3d27597f10f85381665190a1f4f60f6403f644d2cc48",
+      "symbol": "original module",
+      "start": 1,
+      "end": 164,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/utils/event-source.ts",
+      "sha256": "7fef974944eb5bafeb653d556fa093c3e2c2355e913a587234ed55e3ece02cac",
+      "symbol": "original module",
+      "start": 1,
+      "end": 46,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/context-store.ts",
+      "sha256": "6a903814528e2a320c1c43e0dd9cd969fbc99d8c95ad8823f656a61c9da0856e",
+      "symbol": "original module",
+      "start": 1,
+      "end": 79,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/plugin-protocol/src/types/events.ts",
+      "sha256": "e346c44beeabd4418191e82704c8c1d2be316dfd56e50e9df11d4c87a16dc70e",
+      "symbol": "ContextUpdateStrategy",
+      "start": 545,
+      "end": 548,
+      "execution": "Original enum only; no Eventa/bootstrap"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/context-providers/runtime-prompt.ts",
+      "sha256": "1222d2caab9bc8dec10ae356d04dccc7ba0797fe1276a9970be9a7b54bad75f3",
+      "symbol": "original module",
+      "start": 1,
+      "end": 24,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/context-prompt.ts",
+      "sha256": "a80172e216049a1f47ff17a966e137d4386d80df94894bb3cc9655cbd11c9a00",
+      "symbol": "original module",
+      "start": 1,
+      "end": 80,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/render-context.ts",
+      "sha256": "f2ba4b135f94230609bef78b7dddcb94ea37d6b398d290ae5c40d49ead43d5d8",
+      "symbol": "original module",
+      "start": 1,
+      "end": 88,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/turns.ts",
+      "sha256": "840ddf2fc25e3455312c8b72dc01b8a470a0a1bb517933cda2b0520bc9d6b0ef",
+      "symbol": "original module",
+      "start": 1,
+      "end": 108,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+      "sha256": "706747b89b705108eded64c8736b4194f5bfac52f41714a2355f6b4b12238d8f",
+      "symbol": "original module",
+      "start": 1,
+      "end": 194,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/datetime-prefix.ts",
+      "sha256": "b8d541d38b257565e6373e41bc9187cba5f2f1d21920ff7b317867dbcb0d2489",
+      "symbol": "original module",
+      "start": 1,
+      "end": 35,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "prependTextToContent",
+      "start": 28,
+      "end": 45,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "getMessageText",
+      "start": 47,
+      "end": 58,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "formatReplyPromptPrefix",
+      "start": 69,
+      "end": 84,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "getStablePromptTimestamp",
+      "start": 560,
+      "end": 566,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "buildContext",
+      "start": 568,
+      "end": 580,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "runtime-context append fragment",
+      "start": 881,
+      "end": 888,
+      "execution": "Exact original fragment wrapper; deps.context.snapshot returns actual contextStore snapshot, lifecycle recorder noop"
+    }
+  ],
+  "source_hashes_unchanged": true
+}

@@ -1,0 +1,1071 @@
+{
+  "recovered_documents_full_read": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/主对话可读记录.md",
+      "sha256": "d285193e26baa2056b06480a45079ef402887bed6a2b81454497be384bf2efc9",
+      "lines": 867,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/01-AionsHome记忆系统.md",
+      "sha256": "61eaab80f37236e80d56b791caff57a614129ad211d92801f878e0d1b5adb149",
+      "lines": 414,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/02-AionsHome主动行为.md",
+      "sha256": "9d78c032b1677186c39ce8bb4f85eff03fa716c96fe5116bd30b9a4369232726",
+      "lines": 359,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/03-AionsHome感知系统.md",
+      "sha256": "f9482e51e8bafaf0d4c556cc2f981c4af03fea292501e77309667cc6c34bfd14",
+      "lines": 442,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/04-AionsHome生活功能.md",
+      "sha256": "48394981d128a3233ebcfda7e9d57df73898e1d98ea797b95d57cfc03dd9bf0d",
+      "lines": 269,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/05-AionsHome基础设施与前端.md",
+      "sha256": "161069e8f854500eb035b523bb2e49337876d706d26079b6fea31df63fb17bc7",
+      "lines": 559,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/06-AionsHome访客客厅.md",
+      "sha256": "3b1c6f3ff843b0592352d24252f0c5ca3027489e6c753a64715c3d68d1fb4771",
+      "lines": 338,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/07-AionsHome自主循环启动与配置.md",
+      "sha256": "85f179628d44019654c87131caaad98fa23a406c1bd185347e602c4eccf76e88",
+      "lines": 148,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/未完成分支/01-AionsHome总报告未完成.md",
+      "sha256": "61b55878b9c698943c8fdc6b41b3d4a373cf95f08b4684570f8632d09cf05428",
+      "lines": 148,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/未完成分支/05-AionsHome文档盘点未完成.md",
+      "sha256": "3a11a08e82a86fdf985d38a7a6c6d75b81a45aa3af232f956aa8f27886a938c9",
+      "lines": 181,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/未完成分支/06-AionsHome多角色与语音未完成.md",
+      "sha256": "584ffb0a76b83f63d670877df29dd362be1a58787f6fa47659d465438de0c326",
+      "lines": 131,
+      "range": "全部正文；来源助手结论未自动视为已验证"
+    }
+  ],
+  "current_source_manual_read_ranges": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+      "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9",
+      "total_lines": 24,
+      "ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 24
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de",
+      "total_lines": 16,
+      "ranges": [
+        [
+          1,
+          16
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 16
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/audio/voice-controller.ts",
+      "sha256": "7843f7a4f63c8f2efa24e41fe2a76a0870a019fb30658b326e5045ea903ec14f",
+      "total_lines": 55,
+      "ranges": [
+        [
+          1,
+          55
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 55
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/use-chat-session/summary.ts",
+      "sha256": "252811b780d1ecd2b1679fb1c63fde71bc8f822d2642a95b039aea86f67fbf5d",
+      "total_lines": 76,
+      "ranges": [
+        [
+          1,
+          76
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 76
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+      "sha256": "677bbabe28e8eaa9527f71630397bc86b4a9154c147ae3fe81f9e3de7ac2f3c0",
+      "total_lines": 155,
+      "ranges": [
+        [
+          1,
+          126
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 126
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/ai/models/vad.ts",
+      "sha256": "bdca34f578a465c496f599e1ade7881ef1e243e97d52dd11fb10468e6a4143fc",
+      "total_lines": 273,
+      "ranges": [
+        [
+          65,
+          179
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 115
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7",
+      "total_lines": 150,
+      "ranges": [
+        [
+          1,
+          150
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 150
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+      "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e",
+      "total_lines": 324,
+      "ranges": [
+        [
+          1,
+          110
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 110
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "total_lines": 1758,
+      "ranges": [
+        [
+          278,
+          319
+        ],
+        [
+          340,
+          400
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 103
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+      "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa",
+      "total_lines": 131,
+      "ranges": [
+        [
+          43,
+          120
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 78
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/speech-output-control.ts",
+      "sha256": "0ddac07b5a9c2bcba5077aae46b2bd15af0ee3908901b9ef63b94c3737afc536",
+      "total_lines": 55,
+      "ranges": [
+        [
+          1,
+          55
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 55
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/AionsHome-Visitor-Lounge/config/visitor-lounge.toml",
+      "sha256": "1f8883983a36bb22a5c3644f79f4a21431548e6a2788a81c328e3c64c4cd33a3",
+      "total_lines": 32,
+      "ranges": [
+        [
+          1,
+          32
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 32
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/AionsHome-Visitor-Lounge/pyproject.toml",
+      "sha256": "020fed6f59c24a08ef953e9c83539e02729b0a160b0bda07a2ebbc1b544cb96e",
+      "total_lines": 29,
+      "ranges": [
+        [
+          1,
+          29
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 29
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/AionsHome-Visitor-Lounge/src/visitor_lounge/home_context_bridge.py",
+      "sha256": "e54fa8f3126b2645660d6c76002962227475c2cce9aca9e482c7e33bdffa68b9",
+      "total_lines": 91,
+      "ranges": [
+        [
+          1,
+          91
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 91
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/AionsHome-Visitor-Lounge/src/visitor_lounge/security.py",
+      "sha256": "f5eb367652792ce99768cd57d0d10c0e34d3565146886fd0d4ce95886dfaa383",
+      "total_lines": 217,
+      "ranges": [
+        [
+          1,
+          91
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 91
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/Connor-Codex/package.json",
+      "sha256": "3bdca3455c7411b1e6198de4a6f7148b6ad2eef38f872ae296d9fdc7feb74b5c",
+      "total_lines": 17,
+      "ranges": [
+        [
+          1,
+          17
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 17
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/LICENSE",
+      "sha256": "4e165eb607354538d5e67d1f8c12a8be474fbf9f425e1b2649771e98b6b37e5f",
+      "total_lines": 21,
+      "ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 21
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "total_lines": 570,
+      "ranges": [
+        [
+          1,
+          68
+        ],
+        [
+          150,
+          242
+        ],
+        [
+          260,
+          295
+        ],
+        [
+          539,
+          570
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 229
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/activity.py",
+      "sha256": "4882851908935f7e57484a66b4d2e1b5c121a83b9b486e3b1ea9189c3350da6a",
+      "total_lines": 1274,
+      "ranges": [
+        [
+          149,
+          208
+        ],
+        [
+          395,
+          416
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 82
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/ai_providers.py",
+      "sha256": "b4ccaa0ba5f9728217e30c130f121c6507a41e6555dda67833fb0c1651e22c6b",
+      "total_lines": 1843,
+      "ranges": [
+        [
+          1769,
+          1843
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 75
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/asr.py",
+      "sha256": "044c029064e560e6708463dfa2c53833c499640b7b0f9375f57d06f72bea54b7",
+      "total_lines": 157,
+      "ranges": [
+        [
+          1,
+          157
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 157
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy.py",
+      "sha256": "5075f86d2ffeb1bd18ec5f029687ad69037c98e4ea041ee64e8ac62047441d04",
+      "total_lines": 2394,
+      "ranges": [
+        [
+          595,
+          776
+        ],
+        [
+          865,
+          941
+        ],
+        [
+          1370,
+          1459
+        ],
+        [
+          2173,
+          2394
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 571
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_niches.py",
+      "sha256": "4096bac4017775fcac3e0e79fa023d84a7e934891f46dab6421dc05c7b8ee80a",
+      "total_lines": 319,
+      "ranges": [
+        [
+          118,
+          171
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 54
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_state.py",
+      "sha256": "53a2d53c420d0ee02ff958f2439383d258fc0d41dbcdc8485439bf35337b1b5f",
+      "total_lines": 706,
+      "ranges": [
+        [
+          16,
+          42
+        ],
+        [
+          198,
+          248
+        ],
+        [
+          250,
+          350
+        ],
+        [
+          632,
+          650
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 198
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/camera.py",
+      "sha256": "f16cfaa8bb402512d90e900f2e4cb5a38b78c38c03d9fa2248d68ccf3db09e36",
+      "total_lines": 2693,
+      "ranges": [
+        [
+          424,
+          455
+        ],
+        [
+          760,
+          799
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 72
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+      "sha256": "536ca6b023868e1ae43e47a230b33ecc4b7f498cda4f0fe2ce6f9f32da499c4d",
+      "total_lines": 772,
+      "ranges": [
+        [
+          455,
+          480
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 26
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/chatroom.py",
+      "sha256": "28fd309cced9aa49c6b3efb15c9d7c33fc642427787704403db4e0fd542a0303",
+      "total_lines": 1415,
+      "ranges": [
+        [
+          1,
+          92
+        ],
+        [
+          156,
+          226
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 163
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/config.py",
+      "sha256": "0c14a86aa6524f79b9455fe09b23a948d15d461b18288d28dd69621ba9218e58",
+      "total_lines": 544,
+      "ranges": [
+        [
+          1,
+          84
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 84
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/context_builder.py",
+      "sha256": "b36aee31e764559e6e7a2125d3d3ef5ee32e4eb29026b6601c73fca64f4d07bd",
+      "total_lines": 987,
+      "ranges": [
+        [
+          250,
+          275
+        ],
+        [
+          328,
+          502
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 201
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/database.py",
+      "sha256": "b1429034c0f886809e560cb390e1e8ee75811cba0cccecdc7a2b07b4a10a9217",
+      "total_lines": 1051,
+      "ranges": [
+        [
+          656,
+          764
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 109
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/elevenlabs_tts.py",
+      "sha256": "b8fbcca8b9ce0eaf3e2db8930162375031ffdd06c78cc3c3ecd809bf31c36e44",
+      "total_lines": 77,
+      "ranges": [
+        [
+          1,
+          77
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 77
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/expressive_voice.py",
+      "sha256": "f60912f3767e8ff3f4456b91e538749f519586c8065e7b8696fd95848931e9b6",
+      "total_lines": 273,
+      "ranges": [
+        [
+          1,
+          273
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 273
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/generation_control.py",
+      "sha256": "8f29c8d3fc529945c738f0ab995d1ac1d0b0d1cef363edbd18e543cabc4fca0d",
+      "total_lines": 270,
+      "ranges": [
+        [
+          1,
+          150
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 150
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/lounge_receptions.py",
+      "sha256": "63f5534b50858ec550c145b55928f9429c8323a3865971015710713460d0402c",
+      "total_lines": 107,
+      "ranges": [
+        [
+          1,
+          76
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 76
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+      "sha256": "c142bd1142d7a642e021a77478b5484841138c84b7d730fb84166a509ed7bde4",
+      "total_lines": 642,
+      "ranges": [
+        [
+          124,
+          309
+        ],
+        [
+          311,
+          377
+        ],
+        [
+          428,
+          479
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 305
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/mcp_client.py",
+      "sha256": "ed161076e362f890e91cd11bd122218fe0fc0ad083ce6060ceb2bc1430c12b77",
+      "total_lines": 421,
+      "ranges": [
+        [
+          198,
+          240
+        ],
+        [
+          305,
+          343
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 82
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+      "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3",
+      "total_lines": 1624,
+      "ranges": [
+        [
+          175,
+          194
+        ],
+        [
+          280,
+          328
+        ],
+        [
+          426,
+          529
+        ],
+        [
+          641,
+          758
+        ],
+        [
+          935,
+          1038
+        ],
+        [
+          1554,
+          1563
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 405
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+      "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a",
+      "total_lines": 1248,
+      "ranges": [
+        [
+          25,
+          57
+        ],
+        [
+          241,
+          255
+        ],
+        [
+          642,
+          701
+        ],
+        [
+          813,
+          1019
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 315
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression_scheduler.py",
+      "sha256": "49ce02aa79493d6ed13e0ab810257e601c9e258d7ef56730b5f500e607c30d55",
+      "total_lines": 161,
+      "ranges": [
+        [
+          48,
+          116
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 69
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/persona_evolution.py",
+      "sha256": "5681377dec7304ff2beddbc972f57d246cbd87b98a9a1ff36b3c11bfbbcd735a",
+      "total_lines": 1461,
+      "ranges": [
+        [
+          1,
+          38
+        ],
+        [
+          111,
+          148
+        ],
+        [
+          306,
+          333
+        ],
+        [
+          376,
+          419
+        ],
+        [
+          817,
+          838
+        ],
+        [
+          866,
+          960
+        ],
+        [
+          1165,
+          1292
+        ],
+        [
+          1432,
+          1461
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 423
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "total_lines": 699,
+      "ranges": [
+        [
+          1,
+          699
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 699
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+      "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+      "total_lines": 194,
+      "ranges": [
+        [
+          1,
+          194
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 194
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/requirements.txt",
+      "sha256": "3da104e19c9da9f811ccc88891c6c0646bb8dd724ae0d3c0e82ede13ac58513a",
+      "total_lines": 23,
+      "ranges": [
+        [
+          1,
+          23
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 23
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/capabilities.py",
+      "sha256": "fa439856aa72bc92543be91d4ec312ac4da581e2e36c36934889edf4713256e5",
+      "total_lines": 150,
+      "ranges": [
+        [
+          86,
+          101
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 16
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/chatroom.py",
+      "sha256": "ad5bc529186ebfe841eac767c9b8f5fbd88cea6c08401a77bd6cada018dc8e47",
+      "total_lines": 4603,
+      "ranges": [
+        [
+          2035,
+          2067
+        ],
+        [
+          3850,
+          3928
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 112
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/lounge_context_bridge.py",
+      "sha256": "9babebf66c75b0f1da16bbc917911f41ccac5311d8620efd72d5575f538c124b",
+      "total_lines": 95,
+      "ranges": [
+        [
+          45,
+          91
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 47
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memories.py",
+      "sha256": "1cb9a84ec73bcb20966be47d537e79cd7fe531bed608cf43140da7d221ecaa68",
+      "total_lines": 706,
+      "ranges": [
+        [
+          302,
+          425
+        ],
+        [
+          634,
+          706
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 197
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+      "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+      "total_lines": 368,
+      "ranges": [
+        [
+          1,
+          368
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 368
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/private_memos.py",
+      "sha256": "144d58054f7b2cd7ba9619cc9b98156f378de44b8a1f1ae344b38a1159e6fe56",
+      "total_lines": 128,
+      "ranges": [
+        [
+          1,
+          128
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 128
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/user_profile.py",
+      "sha256": "f7086c4e3a80e3b2b15e41434833f88d6eb27266797b74956b12d9dfd9e71849",
+      "total_lines": 60,
+      "ranges": [
+        [
+          1,
+          60
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 60
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/voice.py",
+      "sha256": "0e1e87d3aa65b6b34e4f6ad0f86801d31cfbfd421aaa49259faa34c890101332",
+      "total_lines": 79,
+      "ranges": [
+        [
+          1,
+          79
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 79
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/schedule.py",
+      "sha256": "3f4fa4270ab51992a93311942bab365288c5f13c2c055559da1922438d0c91c7",
+      "total_lines": 1535,
+      "ranges": [
+        [
+          274,
+          327
+        ],
+        [
+          865,
+          932
+        ],
+        [
+          1070,
+          1195
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 248
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/security_access.py",
+      "sha256": "f897b0d33874fd8eeb9d98c42b91fc863af7ad86a0a99f732ab20499a9eb3294",
+      "total_lines": 993,
+      "ranges": [
+        [
+          948,
+          993
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 46
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/capabilities.html",
+      "sha256": "af26bcaa578b0745143b974bd268ddb0e3014936c785dd3a89f1417edcfc9c87",
+      "total_lines": 357,
+      "ranges": [
+        [
+          210,
+          230
+        ],
+        [
+          317,
+          330
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 35
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/chatroom.js",
+      "sha256": "888b1d3d39138e52ddf1add5f3ad5bd5767e20b3c01eaf43147c3bc56f16b069",
+      "total_lines": 7067,
+      "ranges": [
+        [
+          6641,
+          6705
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 65
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/memory-library.js",
+      "sha256": "6cbd0aa273a1fd7f7deb179efcc12b6427d5f7e79aab69b809cb87b5d9beac02",
+      "total_lines": 394,
+      "ranges": [
+        [
+          1,
+          62
+        ],
+        [
+          245,
+          271
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 89
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/memory.html",
+      "sha256": "99c2c33954d373379ba6e0dbbcdf366c92bdd517a78c97d3b46ecc7861aad9a2",
+      "total_lines": 168,
+      "ranges": [
+        [
+          1,
+          40
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 40
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/tts-loudness-settings.js",
+      "sha256": "9e9daf89f97a027c14a50d39b4fa86c8cbdc0c9dd684fd4ee1f9bb4e3b98efdd",
+      "total_lines": 45,
+      "ranges": [
+        [
+          1,
+          45
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 45
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/tts-voices.js",
+      "sha256": "e14d8aa7d3cf4a2b70481403e76ce13bb3d913573115a0c84a45b59d4093910a",
+      "total_lines": 42,
+      "ranges": [
+        [
+          1,
+          42
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 42
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/voice-call-policy.js",
+      "sha256": "592d2b3f45a6752eceeb3d2e3611002f170057fd10cc6ab81d30b840b1af1d5f",
+      "total_lines": 17,
+      "ranges": [
+        [
+          1,
+          17
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 17
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/sync_events.py",
+      "sha256": "f00eb8089db6159c2c07177cf57e4e42984480ab9619237f639f74169497df80",
+      "total_lines": 128,
+      "ranges": [
+        [
+          1,
+          128
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 128
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+      "sha256": "6b225d3e4f9a3647a3e7238ac73b7ffec8f9abe18c5b12735073794266fa2a45",
+      "total_lines": 910,
+      "ranges": [
+        [
+          1,
+          910
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 910
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "total_lines": 203,
+      "ranges": [
+        [
+          1,
+          203
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 203
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/voice.py",
+      "sha256": "e3ae872b601d45a3f337ef94389b7a904967f29d22e6111b8330c4bd8692bd6f",
+      "total_lines": 391,
+      "ranges": [
+        [
+          1,
+          391
+        ]
+      ],
+      "full_read": true,
+      "reviewed_lines": 391
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/ws.py",
+      "sha256": "50baea470e8712eae5d77f5e43a9dfa1f5a4d30e7a77e0a31d1003f8a6bafb57",
+      "total_lines": 304,
+      "ranges": [
+        [
+          238,
+          304
+        ]
+      ],
+      "full_read": false,
+      "reviewed_lines": 67
+    }
+  ],
+  "machine_inventory": "snapshot-manifest.json and parsed-python-paths.json; hashing/AST parsing is NOT semantic reading",
+  "excluded": "No data DB, actual settings/worldbook, API text, auth stores, env, keys, credentials, raw user messages or audio/images were opened."
+}

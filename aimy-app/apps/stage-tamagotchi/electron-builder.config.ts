@@ -41,8 +41,8 @@ else {
 }
 
 export default {
-  appId: 'ai.moeru.airi',
-  productName: 'AIRI',
+  appId: 'ai.aimy.desktop',
+  productName: 'Aimy',
   directories: {
     output: 'dist',
     buildResources: 'build',

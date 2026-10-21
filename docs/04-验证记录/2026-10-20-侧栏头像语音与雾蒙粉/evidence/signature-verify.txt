@@ -1,0 +1,20 @@
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper (Plugin).app
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper (GPU).app
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper (Plugin).app
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper (GPU).app
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper (Renderer).app
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper.app
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper (Renderer).app
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Aimy体验版 Helper.app
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+--prepared:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app: valid on disk
+/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app: satisfies its Designated Requirement

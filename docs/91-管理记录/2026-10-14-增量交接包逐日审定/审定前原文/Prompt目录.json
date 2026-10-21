@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-14",
+  "prompts": [
+    {
+      "prompt_id": "P-SYS-01",
+      "version": "0.1-proposal",
+      "file": "prompts/01-行为边界.txt",
+      "sha256": "09ccbbe9f6b1318639f8374aa8f65b2dd71ce2752d3b12ef71f6f0acc374792c",
+      "status": "未接入/未真实模型评测"
+    },
+    {
+      "prompt_id": "P-ROLE-01",
+      "version": "0.1-proposal",
+      "file": "prompts/02-角色体验.txt",
+      "sha256": "8f08298458ab246cae1a0e979f6c97ba33dfc9614e7298cddfbeba717923a590",
+      "status": "未接入/未真实模型评测"
+    },
+    {
+      "prompt_id": "P-MEM-01",
+      "version": "0.1-proposal",
+      "file": "prompts/03-自动记忆提取.txt",
+      "sha256": "2973b6766f09ce9637324babdd3a846babd0b2da31a35639bc6ec23dc51205fa",
+      "status": "未接入/未真实模型评测"
+    },
+    {
+      "prompt_id": "P-PRO-01",
+      "version": "0.1-proposal",
+      "file": "prompts/04-主动陪伴决策.txt",
+      "sha256": "24eb83e4a2654cd905065c3d6802a5930dfcead3d0e4e2725593b163f5e3ea60",
+      "status": "未接入/未真实模型评测"
+    },
+    {
+      "prompt_id": "P-VIS-01",
+      "version": "0.1-proposal",
+      "file": "prompts/05-当前画面理解.txt",
+      "sha256": "0478d03a4645a24573ce5c51a2baed92680442953dbd87f9c15685955a5b8520",
+      "status": "未接入/未真实模型评测"
+    }
+  ]
+}

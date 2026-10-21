@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-14",
+  "product_root": "/Users/mima1234/Documents/aimy/aimy-app",
+  "method": "Read-only current source and scoped consumer search; no imports or runtime startup.",
+  "executed_tests_this_supplement": 0,
+  "real_model_calls": 0,
+  "user_data_or_credentials_read": false,
+  "item09_selected": null,
+  "consumer_search": {
+    "symbol": "compactConversationEntries|summarizeCompactedHistory",
+    "scope": "first-party production TS/Vue/TSX under aimy-app, excluding tests/node_modules/dist",
+    "observed": "definition plus export; no default desktop consumer found"
+  },
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/consciousness.ts",
+      "sha256": "18a1f01bb3f08a93541f7c9e6e58ce8d414aa21679b7f629c2298de1c3fb41b3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/compaction.ts",
+      "sha256": "dfd32990796ed56c7a058480d4569c4bbf247e284a264e15358993a0f11fb578"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-short-term.vue",
+      "sha256": "5f0110ca0d084a169f29fc40bc4fcfb7a73804416c73b5e99381a234eaaf4bda"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+      "sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+      "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/server/register-task-memory.ts",
+      "sha256": "d5302217b7215c47d7f52b73e4f7b7130972f6609391b7de50537439bbfdc248"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/manager.ts",
+      "sha256": "99ac0d163d6e154ea7b72b51abcea4ddd1cdc3d2921a2085bdc7b74778e39bf5"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/server/runtime.ts",
+      "sha256": "fc0a92a486d04932dd4eb5b678bb9235c139eadb2a16dc89bd03722b9c452c4b"
+    }
+  ]
+}

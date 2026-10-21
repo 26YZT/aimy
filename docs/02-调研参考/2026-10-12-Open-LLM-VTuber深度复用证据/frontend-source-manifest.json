@@ -1,0 +1,482 @@
+[
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "LICENSE",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/LICENSE",
+    "ok": true,
+    "bytes": 2018,
+    "sha256": "12f7da34b1480c006316978a4460bb8cfbff57adabe30288d20c0e01f93fa550",
+    "lines": 29
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "README.md",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/README.md",
+    "ok": true,
+    "bytes": 543,
+    "sha256": "5ba630601c7547824e1a57c3df42319ef5cd5fb7bf96af1588967271b785d508",
+    "lines": 34
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "package.json",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/package.json",
+    "ok": true,
+    "bytes": 2727,
+    "sha256": "a42f988ed9b266ecc7e1e8fe714b6976bcbd241b64245117f82e588948f175ba",
+    "lines": 72
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/main/index.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/main/index.ts",
+    "ok": true,
+    "bytes": 3662,
+    "sha256": "0b621445e318c88bb82a1d84acdf19c5ea1b5624003158c5b6e960183074816e",
+    "lines": 146
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/main/menu-manager.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/main/menu-manager.ts",
+    "ok": true,
+    "bytes": 5564,
+    "sha256": "5f90c3143e07af86455fd5beb69f13c030ae3345e3b85f162f476b74e39353db",
+    "lines": 215
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/main/window-manager.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/main/window-manager.ts",
+    "ok": true,
+    "bytes": 9000,
+    "sha256": "4d94f0948631fb75720cdccef64aea11a24780d08b4059bc35de449fcd01d4ee",
+    "lines": 328
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/preload/index.d.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/preload/index.d.ts",
+    "ok": true,
+    "bytes": 1122,
+    "sha256": "1459b76e9a44ba4cfabe14a8886f83420c0280552b622532782e519c1aa67c7f",
+    "lines": 28
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/preload/index.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/preload/index.ts",
+    "ok": true,
+    "bytes": 3653,
+    "sha256": "1a33a3d94b47d48c7c3080d222f87390115f0859a98d8bda58e61ad571f0b770",
+    "lines": 97
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/App.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/App.tsx",
+    "ok": true,
+    "bytes": 7569,
+    "sha256": "80af6a41f62bac79c5e6494a8ecddfd62e5e9a119428da7cbfe01526cec7ab59",
+    "lines": 205
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/ai-state-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/ai-state-context.tsx",
+    "ok": true,
+    "bytes": 4144,
+    "sha256": "caff88c001d47c839c41bcf6f5642d2b1a217290b1d1437c4b10af8cfcc4f95c",
+    "lines": 174
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/bgurl-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/bgurl-context.tsx",
+    "ok": true,
+    "bytes": 3244,
+    "sha256": "e7f08a305e72facd0a3eb167d586f4bcd75480ff5888edc1588bcd66d836015d",
+    "lines": 112
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/browser-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/browser-context.tsx",
+    "ok": true,
+    "bytes": 1758,
+    "sha256": "00d9cbc1aab9015c3ae7e9925678461e88fe534b6718a5172e623b4dd10b5b78",
+    "lines": 68
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/camera-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/camera-context.tsx",
+    "ok": true,
+    "bytes": 5292,
+    "sha256": "3a89b03836f9bcb2a2741c87715420bcb4436b04f7e9dfde71a1325112c6f991",
+    "lines": 193
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/character-config-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/character-config-context.tsx",
+    "ok": true,
+    "bytes": 2354,
+    "sha256": "ab5e2de9123e4c1c68c1ad257b65cd09463de8ff11eb492ea3cab3897191759e",
+    "lines": 94
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/chat-history-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/chat-history-context.tsx",
+    "ok": true,
+    "bytes": 8354,
+    "sha256": "1318518ee0e5c55230deac31f92dfcdaca882fc56a46b1614bb3651da83b6a5d",
+    "lines": 255
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/group-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/group-context.tsx",
+    "ok": true,
+    "bytes": 1531,
+    "sha256": "b9909c2d2d286a85bdebc9270fb71360df6ac71b61747a1f9162947adfe98590",
+    "lines": 59
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/live2d-config-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/live2d-config-context.tsx",
+    "ok": true,
+    "bytes": 4085,
+    "sha256": "f9630cda3794ebf45956a88ca9d0570e4fbf20f24aec1a85c6447b162ee2ad4a",
+    "lines": 178
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/mode-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/mode-context.tsx",
+    "ok": true,
+    "bytes": 2774,
+    "sha256": "dc8f8bb9eae22e5fb28d8865d7ecb6839422ffa02ab0a8bf83d7657a6409e61b",
+    "lines": 87
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/proactive-speak-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/proactive-speak-context.tsx",
+    "ok": true,
+    "bytes": 2751,
+    "sha256": "5cbf303f620c847cdaff9e8c0bbfae00e4dd430d94cf45e1c77d4fd6d3397493",
+    "lines": 93
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/screen-capture-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/screen-capture-context.tsx",
+    "ok": true,
+    "bytes": 2792,
+    "sha256": "bfd655f41dd2c6418e1a1e7d34e0fdb19cdcce5c3c797bada41341fb1d4a21b0",
+    "lines": 97
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/subtitle-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/subtitle-context.tsx",
+    "ok": true,
+    "bytes": 1845,
+    "sha256": "b5163db9985527e104f8faa8a8802d604f2a4f483d77217230ea04da5c46e5d0",
+    "lines": 78
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/vad-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/vad-context.tsx",
+    "ok": true,
+    "bytes": 11205,
+    "sha256": "57fda891796abd9114ea0cb6cd37ac469daf80a758ff01f28e6ae21e1c726bf0",
+    "lines": 406
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/context/websocket-context.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/websocket-context.tsx",
+    "ok": true,
+    "bytes": 2052,
+    "sha256": "7474568ffb44b3fa4720e05ec6fbbbc15d9d56a8804102c3585f7b298d6bfe95",
+    "lines": 73
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/canvas/use-live2d-expression.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/canvas/use-live2d-expression.ts",
+    "ok": true,
+    "bytes": 2565,
+    "sha256": "555795ce41e96dd6edf5267eb6330e3390a42956dc42a23f873b290e18830ace",
+    "lines": 86
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/canvas/use-live2d-model.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/canvas/use-live2d-model.ts",
+    "ok": true,
+    "bytes": 19785,
+    "sha256": "b5861631713d7359366a05dcfc64821b6efac1b37f18fe0a0ae9100e064b91a0",
+    "lines": 542
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/footer/use-text-input.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/footer/use-text-input.tsx",
+    "ok": true,
+    "bytes": 1797,
+    "sha256": "ba80eef120988f5e11185d69c4e6e94ce3db901d90c5b26097af40b8408e7582",
+    "lines": 62
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/sidebar/use-camera-panel.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/sidebar/use-camera-panel.ts",
+    "ok": true,
+    "bytes": 1042,
+    "sha256": "cedd015233e8d333e0f19f4d358c146c7387b86d35355f20465f194deca0bf78",
+    "lines": 43
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/sidebar/use-capture-screen.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/sidebar/use-capture-screen.ts",
+    "ok": true,
+    "bytes": 867,
+    "sha256": "52ebc69737bc315fcf5bcef71188bee0b83380d227ead4234d460caac4868436",
+    "lines": 36
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-audio-task.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-audio-task.ts",
+    "ok": true,
+    "bytes": 8246,
+    "sha256": "3b551a78479fc1bcb6821aa09f471d0d9f3f69679ec88600efe341639243d3de",
+    "lines": 269
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-force-ignore-mouse.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-force-ignore-mouse.ts",
+    "ok": true,
+    "bytes": 846,
+    "sha256": "b4f94b034eaf69fd05807c19d612783df565e735ad7f7201ada2ec72d4824fdd",
+    "lines": 28
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-interrupt.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-interrupt.ts",
+    "ok": true,
+    "bytes": 1226,
+    "sha256": "0bd652f354cb9a773136b1f5e6acac59781201b16457a854edfa61f86350b9eb",
+    "lines": 42
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-ipc-handlers.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-ipc-handlers.ts",
+    "ok": true,
+    "bytes": 3633,
+    "sha256": "82716c3649db22c6ce8cc4a4a83033a8a15fda4bb18039822afc7c8bb9952725",
+    "lines": 102
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-local-storage.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-local-storage.ts",
+    "ok": true,
+    "bytes": 1001,
+    "sha256": "33f09428d9bf714e4c0a0a3ef717b3d18e5426b4265014d554f7020b4ed171e8",
+    "lines": 33
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-media-capture.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-media-capture.tsx",
+    "ok": true,
+    "bytes": 3859,
+    "sha256": "848bd9bb4f19e3ee1cd805fb41b1c3427319df361499d860915ef8adabbf34b3",
+    "lines": 136
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-mic-toggle.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-mic-toggle.ts",
+    "ok": true,
+    "bytes": 498,
+    "sha256": "bafd9ed7d4efe808c354bbdfe5407da4a5228a0e0f957367fe2d72f48081bcd4",
+    "lines": 23
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-send-audio.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-send-audio.tsx",
+    "ok": true,
+    "bytes": 1022,
+    "sha256": "096c7b8bc5d0e0e17f7ca6b20e755fc15daedff53cee879772b7288377f6b5f1",
+    "lines": 34
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-switch-character.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-switch-character.tsx",
+    "ok": true,
+    "bytes": 1448,
+    "sha256": "97844edb6a12c8ea42a2c46f40e125a590b1ff7138a7984efe61fafdf67cb67e",
+    "lines": 39
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/utils/use-trigger-speak.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-trigger-speak.ts",
+    "ok": true,
+    "bytes": 612,
+    "sha256": "f2f86a75121d8bf7be7d8b62ae197102a00c5b21e7c5494f35fe128cdcdfd1c0",
+    "lines": 24
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/utils/audio-manager.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/utils/audio-manager.ts",
+    "ok": true,
+    "bytes": 2409,
+    "sha256": "7761dcb4df0478a598d2dd74fa6b6db09996f1a46d5dba19e1f16c6cf81ce246",
+    "lines": 79
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/utils/task-queue.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/utils/task-queue.ts",
+    "ok": true,
+    "bytes": 1847,
+    "sha256": "c699e2abcc41a546d14782ca2a1948b639a9f82f4fbd11c10ce3bafa6b2b5234",
+    "lines": 76
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/services/websocket-handler.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/services/websocket-handler.tsx",
+    "ok": true,
+    "bytes": 11787,
+    "sha256": "270e4932a1dff84b8585004781314c6eec91615a5ff715c0a406232117d160d6",
+    "lines": 324
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/services/websocket-service.tsx",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/services/websocket-service.tsx",
+    "ok": true,
+    "bytes": 5430,
+    "sha256": "89b4891f889361cc349a4e4e2d075e2380b39388a8bc8466f540339a262d2e5b",
+    "lines": 219
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/src/hooks/sidebar/setting/use-general-settings.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/sidebar/setting/use-general-settings.ts",
+    "ok": true,
+    "bytes": 7984,
+    "sha256": "b5a2ad3d3be7927e32bde8507e471332f27c42fdcf8e15e8db387a5270c36109",
+    "lines": 260
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/WebSDK/src/lapplive2dmanager.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/WebSDK/src/lapplive2dmanager.ts",
+    "ok": true,
+    "bytes": 7285,
+    "sha256": "1856dc8b51c653b88e0e5bdb656a8274470a61bd2f996c22e29d49aa2cf9beb2",
+    "lines": 237
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/WebSDK/src/lappmodel.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/WebSDK/src/lappmodel.ts",
+    "ok": true,
+    "bytes": 44038,
+    "sha256": "0546db05e93a2b310e46b2f5c40c26431a25837f5d3c0f0028bb071904b95863",
+    "lines": 1345
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/WebSDK/src/lappwavfilehandler.ts",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/WebSDK/src/lappwavfilehandler.ts",
+    "ok": true,
+    "bytes": 13721,
+    "sha256": "8b17ec9e10b823a49d63c2e2c63a3b2b0df4874ddfd60a5c8f63ebdeba66ef75",
+    "lines": 429
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/WebSDK/Core/LICENSE.md",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/WebSDK/Core/LICENSE.md",
+    "ok": true,
+    "bytes": 520,
+    "sha256": "b81e37048010ef1d336106151201a0323c3309cae44aecdedf57831fe88fa991",
+    "lines": 7
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+    "sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "path": "src/renderer/WebSDK/Framework/LICENSE.md",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/WebSDK/Framework/LICENSE.md",
+    "ok": true,
+    "bytes": 2234,
+    "sha256": "7ed849bff1e6499aa7cd882e47d246ddbbe06817c1e84cb974df949488302614",
+    "lines": 45
+  }
+]

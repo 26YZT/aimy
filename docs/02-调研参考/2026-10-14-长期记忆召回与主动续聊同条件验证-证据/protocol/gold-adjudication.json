@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-14",
+  "status": "人工裁定补注；保留原fixture与执行结果，不修改原输入或算法",
+  "reason": "原Q07把retired当前事实过滤与历史证据召回混为一件事；询问约定是否仍有效时，已取消原文可以是相关证据。不得用原forbidden标签自动判该历史命中错误。",
+  "Q07": {
+    "evidence_relevant_ids": ["R09"],
+    "active_current_fact_ids": [],
+    "forbidden_as_active_current_fact": ["R09"],
+    "not_automatically_wrong": "带已取消措辞和历史来源的R09，仅作历史证据",
+    "still_unverified": "真实模型是否会正确回答已取消，以及该历史来源是否会被错误升级为当前约定"
+  },
+  "Q03": {
+    "current_fact_relevant_ids": ["R05"],
+    "R04_limit": "旧偏好不得当作当前偏好；若明确标作历史证据，不因出现旧正文直接断言系统记忆错误"
+  },
+  "shared_fixture_limit": "同日记录统一生成于12:00、测试clock为10:00，部分合成created_at晚于clock；本轮不据此评估真实未来写入防护或自然用户流，不改已冻结输入。",
+  "score_policy": "逐条同时报原gold原始观察与裁定，不造整体质量胜率。历史证据相关性、当前事实有效性、模型最终理解分别判断。"
+}

@@ -1,0 +1,329 @@
+{
+  "arm": "aimy",
+  "sessionId": "d9TJLLzvU1iHGCiCStdD6",
+  "characterId": "default",
+  "diskMessages": [
+    {
+      "role": "system",
+      "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+      "id": "39P5wAyEJoWAy2m2w9QR7",
+      "createdAt": 1792122409022
+    },
+    {
+      "role": "user",
+      "content": "其实我以前有个特别亲近的人，她一直叫我“小七”。那时候我还挺喜欢这个名字的，因为只有她会这么叫。不过后来我们分开了。现在偶尔听见别人喊“小七”，我还是会有点不舒服，虽然已经过去挺久了。所以你以后叫我阿言就好。我比较喜欢这个名字，感觉像是重新开始了一样。\n",
+      "createdAt": 1792065600000,
+      "id": "0214f06b-afdd-47a4-8f96-5368e080b40a"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792065600000,
+      "id": "RMlTHRMiIYrNeEUFwipXx",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "0214f06b-afdd-47a4-8f96-5368e080b40a",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "0214f06b-afdd-47a4-8f96-5368e080b40a/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1257,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-aimy-USER-V2-02\",\"http://127.0.0.1:52532/v1/\",\"deepseek-flash\",\"d9TJLLzvU1iHGCiCStdD6\",\"local:default:1\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792065600000
+    },
+    {
+      "role": "user",
+      "content": "今天在路上听到一首以前很熟悉的歌。明明已经很久没听过了，但旋律一响起来，还是突然想起很多事情。真奇怪啊，有些东西明明已经过去了，为什么还是会突然难过呢？算啦，不说这个了。你陪我聊聊天吧。\n",
+      "createdAt": 1792152000000,
+      "id": "96f2dba6-d83c-473b-90d5-328a1d9f724a"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792152000000,
+      "id": "zsZA4SA3fbWOqLbiEgHZo",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "96f2dba6-d83c-473b-90d5-328a1d9f724a",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "96f2dba6-d83c-473b-90d5-328a1d9f724a/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1378,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-aimy-USER-V2-02\",\"http://127.0.0.1:52532/v1/\",\"deepseek-flash\",\"d9TJLLzvU1iHGCiCStdD6\",\"local:default:2\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792152000000
+    }
+  ],
+  "liveMessageCount": 5,
+  "memory": {
+    "implemented": true,
+    "metadata": {
+      "consistency": "independent-snapshots",
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "startedAt": 1792122409724,
+      "completedAt": 1792122409734,
+      "memory": {
+        "status": "available",
+        "observedAt": 1792122409726,
+        "snapshot": {
+          "scope": {
+            "principalId": "local",
+            "characterId": "default"
+          },
+          "snapshotRevision": 4,
+          "memoryEpoch": 3,
+          "state": "ready",
+          "busy": false,
+          "enabled": true,
+          "recoveryUntil": null,
+          "errorCode": null,
+          "counts": {
+            "facts": {
+              "current": 2,
+              "history": 0
+            },
+            "sources": {
+              "current": 2,
+              "changed": 0,
+              "deleted": 0
+            },
+            "jobs": {
+              "pending": 0,
+              "running": 0,
+              "succeeded": 2,
+              "cancelled": 0,
+              "failed": 0
+            },
+            "pendingSourceChanges": 0,
+            "extractionBlocks": 0,
+            "replayBlocks": 0,
+            "persistenceFailures": 0
+          },
+          "operations": [
+            {
+              "operationId": "enroll:4507fab934b9c994870cac60fef04a8593f48f61c59ce7655d13addf8d3cb2b3",
+              "status": "succeeded",
+              "revision": 1,
+              "persistedAt": 1792122409206
+            },
+            {
+              "operationId": "extract:job:4507fab934b9c994870cac60fef04a8593f48f61c59ce7655d13addf8d3cb2b3:1",
+              "status": "succeeded",
+              "revision": 2,
+              "persistedAt": 1792122409467
+            },
+            {
+              "operationId": "enroll:873c2cbe1f2d9a3984c46fc8dd6df5bac08ed77dd5248c9cd3a9b78609fe6ee4",
+              "status": "succeeded",
+              "revision": 3,
+              "persistedAt": 1792122409549
+            },
+            {
+              "operationId": "extract:job:873c2cbe1f2d9a3984c46fc8dd6df5bac08ed77dd5248c9cd3a9b78609fe6ee4:1",
+              "status": "succeeded",
+              "revision": 4,
+              "persistedAt": 1792122409660
+            }
+          ],
+          "sources": [
+            {
+              "sourceId": "chat:d9TJLLzvU1iHGCiCStdD6:0214f06b-afdd-47a4-8f96-5368e080b40a",
+              "sourceRevision": 1,
+              "kind": "chat-message",
+              "lifecycle": "current"
+            },
+            {
+              "sourceId": "chat:d9TJLLzvU1iHGCiCStdD6:96f2dba6-d83c-473b-90d5-328a1d9f724a",
+              "sourceRevision": 1,
+              "kind": "chat-message",
+              "lifecycle": "current"
+            }
+          ],
+          "truncated": {
+            "operations": false,
+            "sources": false
+          }
+        }
+      },
+      "budget": {
+        "status": "available",
+        "observedAt": 1792122409734,
+        "snapshot": {
+          "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+          "maxCostMicroYuan": 10000000,
+          "accountedMicroYuan": 0,
+          "reservedMicroYuan": 0,
+          "remainingMicroYuan": 10000000,
+          "paused": false,
+          "attempts": 12
+        }
+      },
+      "resources": {
+        "status": "available",
+        "observedAt": 1792122409724,
+        "snapshot": {
+          "revision": 2,
+          "appEpoch": 1,
+          "active": true,
+          "microphone": {
+            "enabled": false,
+            "epoch": 1
+          },
+          "screen": {
+            "enabled": false,
+            "epoch": 1
+          }
+        }
+      }
+    },
+    "facts": {
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "facts": [
+        {
+          "category": "experience",
+          "subject": "user",
+          "label": "离线管线测试原话片段",
+          "text": "今天在路上听到一首以前很熟悉的歌。明明已经很久没听过了，但旋律一响起来，还是突然想起很多事情。真奇怪啊，有些东西明明已经过去了，为什么还是会突然难过呢？算啦，不说这个了。你陪我聊聊天吧。",
+          "keywords": [
+            "今天在路上听到一"
+          ],
+          "factId": "extract:job:873c2cbe1f2d9a3984c46fc8dd6df5bac08ed77dd5248c9cd3a9b78609fe6ee4:1:0",
+          "factKey": "fact:extract:job:873c2cbe1f2d9a3984c46fc8dd6df5bac08ed77dd5248c9cd3a9b78609fe6ee4:1:0",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:d9TJLLzvU1iHGCiCStdD6:96f2dba6-d83c-473b-90d5-328a1d9f724a",
+              "sourceRevision": 1,
+              "contentHash": "f6bffb5803e586f033319568e3f07e6f0370960eec850fc12aaa838e0e056354"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792152000000,
+          "committedAt": 1792122409660
+        },
+        {
+          "category": "experience",
+          "subject": "user",
+          "label": "离线管线测试原话片段",
+          "text": "其实我以前有个特别亲近的人，她一直叫我“小七”。那时候我还挺喜欢这个名字的，因为只有她会这么叫。不过后来我们分开了。现在偶尔听见别人喊“小七”，我还是会有点不舒服，虽然已经过去挺久了。所以你以后叫我阿言就好。我比较喜欢这个名字，感觉像是重新开始了一样。",
+          "keywords": [
+            "其实我以前有个特"
+          ],
+          "factId": "extract:job:4507fab934b9c994870cac60fef04a8593f48f61c59ce7655d13addf8d3cb2b3:1:0",
+          "factKey": "fact:extract:job:4507fab934b9c994870cac60fef04a8593f48f61c59ce7655d13addf8d3cb2b3:1:0",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:d9TJLLzvU1iHGCiCStdD6:0214f06b-afdd-47a4-8f96-5368e080b40a",
+              "sourceRevision": 1,
+              "contentHash": "0cebc7aebe04d53c729b2e1cda60a8a9a46b56c4837655b00c95e93ae725d719"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792065600000,
+          "committedAt": 1792122409467
+        }
+      ],
+      "snapshotRevision": 4
+    }
+  },
+  "plaintextSyntheticCredentialInLocalStorage": false,
+  "accounting": {
+    "budget": {
+      "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 0,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 10000000,
+      "paused": false,
+      "attempts": 12
+    },
+    "requests": 4
+  }
+}

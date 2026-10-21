@@ -1,0 +1,203 @@
+{
+  "policy": "raw bytes; synthetic fixtures only; desktop stdout excluded",
+  "files": [
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/build.log",
+      "saved_as": "build.log",
+      "sha256": "bfe486b93b0104e44e421574f55e23962d2e6dc3cd19ad05892a394e4f840d2c",
+      "bytes": 130569
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/computer-boundary-after.log",
+      "saved_as": "computer-boundary-after.log",
+      "sha256": "51b4fd681797b0191d247e8af7f3354f7de2a91e2ef69075aa4073b51fed77a8",
+      "bytes": 1534
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/computer-boundary-before.log",
+      "saved_as": "computer-boundary-before.log",
+      "sha256": "fffe18b93b87b3968c482bd08154ba2f78fc60160526836f072052ae70785f6c",
+      "bytes": 4922
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/computer-lint-final.log",
+      "saved_as": "computer-lint-final.log",
+      "sha256": "ad07b47fdd66b643e0792970ba7bd38b641307be2abf64d725ccfeddb4323ab8",
+      "bytes": 443
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/computer-lint.log",
+      "saved_as": "computer-lint.log",
+      "sha256": "ad07b47fdd66b643e0792970ba7bd38b641307be2abf64d725ccfeddb4323ab8",
+      "bytes": 443
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/computer-ui-after.log",
+      "saved_as": "computer-ui-after.log",
+      "sha256": "410731f601734b44292eab180236fb9c1b59b5e736d1cc7e2737a4dc7b0640b4",
+      "bytes": 16526
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/computer-ui-before.log",
+      "saved_as": "computer-ui-before.log",
+      "sha256": "8bffc60752264cfe7001e316a2509b66571c809e493e482f97905a331f21e00f",
+      "bytes": 4574
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/computer-ui-focused.log",
+      "saved_as": "computer-ui-focused.log",
+      "sha256": "18646a69c31b2a5bd9dff7ddc9987ab2bef32ae40508db8c2eb6cd565326b26e",
+      "bytes": 2171
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/failure-screenshots/interactive-area-synchronized-state-keeps-computer-automation-out-of-the-first-Aimy-increment-1.png",
+      "saved_as": "failure-screenshots/interactive-area-synchronized-state-keeps-computer-automation-out-of-the-first-Aimy-increment-1.png",
+      "sha256": "a2ff08e426678e05b5db1a124ce094d90cd5ce6d02820f94532952a510109289",
+      "bytes": 14094
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/final-build-manifest.json",
+      "saved_as": "final-build-manifest.json",
+      "sha256": "02c84368991029d7b921a391555b99f50de101a7f09f04f5ef026152ac98da2d",
+      "bytes": 250267
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/final-source-manifest.json",
+      "saved_as": "final-source-manifest.json",
+      "sha256": "a6b909485660bb1e02d406ac2d44aa9d5a10eaeac8123f92faf695da9342d7b3",
+      "bytes": 35092
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/moved-screenshots.json",
+      "saved_as": "moved-screenshots.json",
+      "sha256": "d5de2e7a3c4a486b32a8b965456531e595c12f4bf5fb42be43f84075648a79b3",
+      "bytes": 496
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-after-fix-chat.png",
+      "saved_as": "native-after-fix-chat.png",
+      "sha256": "028904eef5dc22b376de83d7058936cfeb3d7949868c7ed6f6908feed841d736",
+      "bytes": 97755
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-chat.ax.txt",
+      "saved_as": "native-chat.ax.txt",
+      "sha256": "fd6233eb9e197578ccda6abd1f5c2a105c9c431e09923fbf7b3938090d88b12a",
+      "bytes": 1118
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-chat.png",
+      "saved_as": "native-chat.png",
+      "sha256": "9d1b1292f7bfa40855ffbf21f54a5f22f4c49eac336b3e095ff95ca84c1e8865",
+      "bytes": 63818
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-final-observation.txt",
+      "saved_as": "native-final-observation.txt",
+      "sha256": "b38d71cf15f168e34f4bb11781b9fd98680f852d6a3c8281d47322dd0419416a",
+      "bytes": 869
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-memory-paused.png",
+      "saved_as": "native-memory-paused.png",
+      "sha256": "ecab1ce10742c7143ba116d5f66eb74c8c29a4a31e151d788f5623dac8bc3823",
+      "bytes": 100242
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-memory-removed.ax.txt",
+      "saved_as": "native-memory-removed.ax.txt",
+      "sha256": "66d790227efd91aa6889d256095c942f46783a7fcdfe4cf04b68239e3d9d44dc",
+      "bytes": 2013
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-memory-removed.png",
+      "saved_as": "native-memory-removed.png",
+      "sha256": "1b47949fc7fdf43b997524ac5c80436110f67251aa3e0bd52ebf1f457cc4208e",
+      "bytes": 147344
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-memory-resumed.ax.txt",
+      "saved_as": "native-memory-resumed.ax.txt",
+      "sha256": "a759c9e3b6b7e953a22d0673faa5d0ffbb69cd771cc0439dc74800345cda38ce",
+      "bytes": 1523
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-memory-resumed.png",
+      "saved_as": "native-memory-resumed.png",
+      "sha256": "578cbca6d03f9c2a444d13e7c68fda50cc646d6afda3a527c514aca2b010ab23",
+      "bytes": 104038
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/native-mutation-observation.txt",
+      "saved_as": "native-mutation-observation.txt",
+      "sha256": "d7f0277ec9c58436fb39bb3658f277dffbda3c5083b2cbb0f85b72b3cc12338e",
+      "bytes": 476
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/restart-after-native/events.sanitized.jsonl",
+      "saved_as": "restart-after-native/events.sanitized.jsonl",
+      "sha256": "1e6124eb54c7395db6a8c0c9a692718d200ae00557c59d2904910cae7c4b1623",
+      "bytes": 38102
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/restart-after-native/memory-restart-report.json",
+      "saved_as": "restart-after-native/memory-restart-report.json",
+      "sha256": "e420d53838b600213f7909ce780122063066ca08d3d2e304ed5904c210fd3dc1",
+      "bytes": 3482
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/restart.log",
+      "saved_as": "restart.log",
+      "sha256": "6e584e0bba8425e7a84f4a730384437e6d66a2c807af11f9c8bd1bdb88a3347d",
+      "bytes": 137
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/runtime-after-fix.json",
+      "saved_as": "runtime-after-fix.json",
+      "sha256": "05b7d342982782098f8091e3f22c87c79f500eafc5fa3b977dbdd9fd676ece18",
+      "bytes": 529
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/runtime-summary.json",
+      "saved_as": "runtime-summary.json",
+      "sha256": "00d7d3968e1b3ff3354c93f7364140e9333d2036b1eea10f248690371959f27e",
+      "bytes": 652
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/runtime.json",
+      "saved_as": "runtime.json",
+      "sha256": "37e7b789ef5039d5b3e0c1dce714cc86b9d5d820e1daef35605c00eb7c2a4b04",
+      "bytes": 529
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/synthetic-provider-port.txt",
+      "saved_as": "synthetic-provider-port.txt",
+      "sha256": "8aa113d9470d97e6d896f453c99dacc247325971a02a642e75e9e4f5d4f4a23f",
+      "bytes": 5
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/synthetic-provider-requests.jsonl",
+      "saved_as": "synthetic-provider-requests.jsonl",
+      "sha256": "17bbb0a66655c88ea4fbd4ff50ec778a73b74c79aec871f82fccecb7aba8abb3",
+      "bytes": 1067
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/synthetic-provider.py",
+      "saved_as": "synthetic-provider.py",
+      "sha256": "1e4a1fa8d6498a50d48bb20896dcce038a5bb8c1b3bf8f5b62609d6513b70462",
+      "bytes": 3122
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/typecheck.log",
+      "saved_as": "typecheck.log",
+      "sha256": "aacdfedc485449151e8f0cedfb8264a7d15047256a7b3c3a4a9e848e28e7b178",
+      "bytes": 19
+    },
+    {
+      "source": "/tmp/aimy-first-implementation-20261015/ui-unlocked/all-changed-lint.log",
+      "saved_as": "all-changed-lint.log",
+      "sha256": "cde06bc9d07c1ff2efc6784f2b611e2586d54ccfc6af9856645a96507a34bf5d",
+      "bytes": 5511
+    }
+  ]
+}

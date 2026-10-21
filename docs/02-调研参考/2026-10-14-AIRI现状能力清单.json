@@ -1,0 +1,1571 @@
+{
+  "date": "2026-10-14",
+  "source_root": "/Users/mima1234/Documents/aimy/aimy-app",
+  "capabilities": [
+    {
+      "id": "A01",
+      "dimension": "桌面与窗口",
+      "capability": "透明桌面角色与置顶",
+      "source_status": "已有接线",
+      "observed": "保留无边框透明窗口、跨工作区、置顶；不另造桌面壳",
+      "gap_or_limit": "用户体验与系统行为仍需macOS实测",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+          "line": 173,
+          "symbol_or_quote": "setWindowAlwaysOnTop(window, true)",
+          "file_sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24"
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "dimension": "桌面与窗口",
+      "capability": "点击穿透",
+      "source_status": "已有接线",
+      "observed": "主舞台、浮动聊天、字幕有各自的穿透策略",
+      "gap_or_limit": "按原有窗口职责复用；不全局强制同一规则",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/utils/fade-on-hover.ts",
+          "line": 41,
+          "symbol_or_quote": "ignoreMouseEvents:",
+          "file_sha256": "a831bd99e1115cf7b258d84b4d74fc00c063eeb27e062c6bee6eec2bec283809"
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "dimension": "桌面与窗口",
+      "capability": "聊天窗口与浮动模式",
+      "source_status": "已有接线",
+      "observed": "独立chat/floating装配，不是旧Aimy极简窗口",
+      "gap_or_limit": "收起聊天与隐藏主舞台需分别验收",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/chat/index.ts",
+          "line": 73,
+          "symbol_or_quote": "export",
+          "file_sha256": "7687c84510dfdc3d70de17f787cb6cf2d905c39704b1a0812dbe35769fe9352b"
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "dimension": "桌面与窗口",
+      "capability": "字幕与小组件窗口",
+      "source_status": "已有接线",
+      "observed": "caption/widgets等保留原版",
+      "gap_or_limit": "不把多窗口存在当一期全部必用",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/caption/index.ts",
+          "line": 23,
+          "symbol_or_quote": "createConfig",
+          "file_sha256": "1e4b8c76df2f0d78855fb6a331bb43286b22c2fce556353c591534a2b6df90d7"
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "dimension": "桌面与窗口",
+      "capability": "多显示器定位与窗口恢复",
+      "source_status": "部分已有",
+      "observed": "有显示器相关定位、保存与恢复",
+      "gap_or_limit": "未查见display-added/removed订阅；热插拔行为待测",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/shared/display.ts",
+          "line": 30,
+          "symbol_or_quote": "computeCenteredWindowBounds",
+          "file_sha256": "b262940da90c17e1fb36412c18fd78781518880a1cecdbae635967c7c4f79e1f"
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "dimension": "桌面与窗口",
+      "capability": "全局快捷键",
+      "source_status": "已有接线",
+      "observed": "Spotlight快捷键与自定义绑定已有服务",
+      "gap_or_limit": "不用从Ryza整搬快捷键层",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/global-shortcut.ts",
+          "line": 21,
+          "symbol_or_quote": "export",
+          "file_sha256": "84516cc76c4c4dfa84c480d2b16d198f98144a365151e97cc4cc9f98cf0572cc"
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "dimension": "桌面与窗口",
+      "capability": "开机自启",
+      "source_status": "本次未见产品实现",
+      "observed": "全局应用配置未包含登录启动项",
+      "gap_or_limit": "真实需求出现再补；不由竞品功能清单自动立项",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/configs/global.ts",
+          "line": 10,
+          "symbol_or_quote": "globalAppConfigSchema",
+          "file_sha256": "42302fe5b74cd527831e233b402466aec81726c7dc10ed6375fdf4d53183cb1c"
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "dimension": "桌面与窗口",
+      "capability": "Godot渲染分支",
+      "source_status": "可选独立路径",
+      "observed": "Godot管理器存在；不属于Stage.vue五路表情派发",
+      "gap_or_limit": "不当作五种Web渲染器都具备的同等能力",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/airi/godot-stage/index.ts",
+          "line": 112,
+          "symbol_or_quote": "export",
+          "file_sha256": "0c71ed56e93b27a4a18fdc0fd0282b2e0a95454fda9f036903685b8cdc8c018c"
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "dimension": "桌面与窗口",
+      "capability": "Aimy品牌改动",
+      "source_status": "现存工作区增量",
+      "observed": "appId和productName已改，图标已替换",
+      "gap_or_limit": "本次不继续品牌代码修改；窗口文案仍待处理",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/electron-builder.config.ts",
+          "line": 45,
+          "symbol_or_quote": "productName: 'Aimy'",
+          "file_sha256": "7711eb5bd6e90d004c4693420da66e6719af792fd1dd97230849e7f671d36f50"
+        }
+      ]
+    },
+    {
+      "id": "B01",
+      "dimension": "对话与模型",
+      "capability": "流式对话核心",
+      "source_status": "已有接线",
+      "observed": "core-agent聊天编排和stream端口存在",
+      "gap_or_limit": "保留现有会话/流主链",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "line": 470,
+          "symbol_or_quote": "export function createChatOrchestratorRuntime",
+          "file_sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1"
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "dimension": "对话与模型",
+      "capability": "Chat Completions与Responses",
+      "source_status": "已有实现",
+      "observed": "已有协议路由与两种消息渲染",
+      "gap_or_limit": "供应商实际兼容性逐模型验证",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-switch.ts",
+          "line": 5,
+          "symbol_or_quote": "export",
+          "file_sha256": "7e69cf6f95ba3a773237f667d1abe111716c4975c18f37546b4231988d5929ad"
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "dimension": "对话与模型",
+      "capability": "多模态图片消息",
+      "source_status": "已有实现",
+      "observed": "消息内容包含图片，图像投影与工具图片分开",
+      "gap_or_limit": "不是从候选整体导入图片聊天框",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/image-projection.ts",
+          "line": 11,
+          "symbol_or_quote": "export",
+          "file_sha256": "755e73f8fafebb04edbcbfecdd6408e06a9d89d303dd3aaaabc3361d3c79121e"
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "dimension": "对话与模型",
+      "capability": "上下文注册与替换",
+      "source_status": "已有实现",
+      "observed": "runtime context registry维护上下文来源",
+      "gap_or_limit": "可供看屏、记忆投影接入；不建立第二会话权威",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/context-registry.ts",
+          "line": 16,
+          "symbol_or_quote": "export",
+          "file_sha256": "80b7202a70ede6aaf07c3d27597f10f85381665190a1f4f60f6403f644d2cc48"
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "dimension": "对话与模型",
+      "capability": "历史压缩",
+      "source_status": "已有实现",
+      "observed": "旧轮次可转summary项，保留近期历史",
+      "gap_or_limit": "summary不等于可纠正/删除/重启恢复的事实记忆",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/compaction.ts",
+          "line": 101,
+          "symbol_or_quote": "export function compactConversationEntries",
+          "file_sha256": "dfd32990796ed56c7a058480d4569c4bbf247e284a264e15358993a0f11fb578"
+        }
+      ]
+    },
+    {
+      "id": "B06",
+      "dimension": "对话与模型",
+      "capability": "Provider注册表",
+      "source_status": "已有接线",
+      "observed": "可移植定义+Stage定义两层，按id与顺序管理",
+      "gap_or_limit": "目录数不是可用模型数，避免机械追供应商数量",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/registry.ts",
+          "line": 30,
+          "symbol_or_quote": "export function createProviderRegistry",
+          "file_sha256": "51577cf8f2f62dd61c3be54763dbe80a00419fcf07bf1709dc929ed6bf62725b"
+        }
+      ]
+    },
+    {
+      "id": "B07",
+      "dimension": "对话与模型",
+      "capability": "Provider配置校验与目录",
+      "source_status": "已有实现",
+      "observed": "配置与模型/音色目录、校验器分离",
+      "gap_or_limit": "模型未配置不等于核心不具备该能力",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/validators/run.ts",
+          "line": 12,
+          "symbol_or_quote": "export",
+          "file_sha256": "6668d52e4f6fb50c87123d1149f8ed328fb0ceeccdbd8dd5f29b2c88ddb499b8"
+        }
+      ]
+    },
+    {
+      "id": "B08",
+      "dimension": "对话与模型",
+      "capability": "工具兼容性回退",
+      "source_status": "已有实现",
+      "observed": "模型拒绝tools时会记录兼容状态",
+      "gap_or_limit": "仍需针对所选模型验证；不用复制另一Agent核心",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+          "line": 326,
+          "symbol_or_quote": "TOOLS_RELATED_ERROR_PATTERNS",
+          "file_sha256": "f7474bfc16bafb4166124aa30e85e0cfe1a12bf98abd1f7c89c673f394fadd60"
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "dimension": "语音与取消",
+      "capability": "麦克风授权与共享输入",
+      "source_status": "已有接线",
+      "observed": "默认enabled=false；订阅持有与撤销独立管理",
+      "gap_or_limit": "隐藏/关闭/退出的应用级撤权语义另验",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "line": 21,
+          "symbol_or_quote": "'settings/audio/input/enabled', false",
+          "file_sha256": "046e4452947ca992d1950cfda4bd2bf661b5288be6a45d32d8204404774b4cca"
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "dimension": "语音与取消",
+      "capability": "VAD与起止判定",
+      "source_status": "已有接线",
+      "observed": "Silero分数进入VoiceActivityPlugin，阈值/前卷/静音结束规则存在",
+      "gap_or_limit": "中文自然轮次与误触发待真实设备测量",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+          "line": 25,
+          "symbol_or_quote": "export function createVoiceActivityPlugin",
+          "file_sha256": "e905772d5c74dcd6b2f7d858e6d504c5d23c2ff2565c77409e11353e85db7014"
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "dimension": "语音与取消",
+      "capability": "手动与自动语音输入",
+      "source_status": "已有实现",
+      "observed": "VoiceController统一beginInput并维护输入attempt",
+      "gap_or_limit": "不另造第二录音器/输入store",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/controller.ts",
+          "line": 116,
+          "symbol_or_quote": "beginInput(options:",
+          "file_sha256": "9b4e8c35b5319c0c50b62832630c232cdae80f5785a191a368cb6c9aa48bdab2"
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "dimension": "语音与取消",
+      "capability": "用户开口打断旧回复",
+      "source_status": "已有接线",
+      "observed": "speech-onset携带activeTurns；先停旧回复并等silence receipts",
+      "gap_or_limit": "不是仅有工具函数；效果仍受回声消除门限影响",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt.ts",
+          "line": 240,
+          "symbol_or_quote": "private async admitCapture()",
+          "file_sha256": "12718b37961e2749bd3b4e8f7bea6d0ae9137aef6c2462bc46ab2dd2d61ce782"
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "dimension": "语音与取消",
+      "capability": "播放静音回执与生产者取消",
+      "source_status": "已有实现",
+      "observed": "stop播放组、abort生产者、取消全部stream",
+      "gap_or_limit": "保留现有取消权威，检查候选不要降级",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+          "line": 351,
+          "symbol_or_quote": "private stop(reason:",
+          "file_sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7"
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "dimension": "语音与取消",
+      "capability": "ASR多提供方与流式路径",
+      "source_status": "已有实现",
+      "observed": "hearing包含WebSpeech、Sherpaw、Apple等分支",
+      "gap_or_limit": "可选provider的实际可用性另验",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/hearing.ts",
+          "line": 21,
+          "symbol_or_quote": "createHearingTranscriber",
+          "file_sha256": "02feb5e416fa1d8e0dac3d165d630d919f42af1bb0432d16964b27d15284b02c"
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "dimension": "语音与取消",
+      "capability": "TTS流式分句与并发",
+      "source_status": "已有实现",
+      "observed": "默认并发4、分句策略和intent取消在pipelines-audio",
+      "gap_or_limit": "标点规则可比较；整体替换收益未证实",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio/src/speech-pipeline.ts",
+          "line": 65,
+          "symbol_or_quote": "export function createSpeechPipeline",
+          "file_sha256": "485b4bde5fbb8a94ce897ae0144a7868a37d11935cb98e423c988a1965c9d83a"
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "dimension": "语音与取消",
+      "capability": "播放调度与优先级",
+      "source_status": "已有实现",
+      "observed": "playback-manager按owner/intent排队、抢占与取消",
+      "gap_or_limit": "spark事件priority不自动等于语音优先级接通",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio/src/managers/playback-manager.ts",
+          "line": 11,
+          "symbol_or_quote": "export",
+          "file_sha256": "a666975b1fb75d4e98be55245d2b83f2ae8c50a831b7c08cf020a32668fd1b1c"
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "dimension": "语音与取消",
+      "capability": "回声与自动插话门控",
+      "source_status": "已有接线",
+      "observed": "acceptSpeech检查正在说话与source.echoCancellation",
+      "gap_or_limit": "存在门控，不可声称半双工文件未引用就没有真实打断",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 418,
+          "symbol_or_quote": "acceptSpeech: options.acceptSpeech",
+          "file_sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "dimension": "语音与取消",
+      "capability": "跨窗口语音主机",
+      "source_status": "已有接线",
+      "observed": "共享VoiceStore和输出host，UI窗口只发命令",
+      "gap_or_limit": "保留单一音频主链与turn身份",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 407,
+          "symbol_or_quote": "function startListening(",
+          "file_sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "dimension": "语音与取消",
+      "capability": "输入转写与草稿",
+      "source_status": "已有实现",
+      "observed": "流式转写投影到可编辑输入，保留草稿发送状态",
+      "gap_or_limit": "候选的visible/TTS分离仅作局部规则参考",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-hearing-input-channel.ts",
+          "line": 10,
+          "symbol_or_quote": "export function useHearingInputChannel",
+          "file_sha256": "054038a159e7c3797e8b697bc4834eca4c1a3a9256a967f1398463b506e9ff44"
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "dimension": "感知与看屏",
+      "capability": "Electron屏幕源选择",
+      "source_status": "已有接线",
+      "observed": "预载桥接、macOS权限与source选择存在",
+      "gap_or_limit": "仅复用同一捕获链；摄像头不纳入一期",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/electron-screen-capture/src/main/index.ts",
+          "line": 154,
+          "symbol_or_quote": "initScreenCaptureForWindow",
+          "file_sha256": "cc49c6a4acd7cb01abe8cb527def95bdca2dd76e487c77386e4eae26c2783aec"
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "dimension": "感知与看屏",
+      "capability": "视频流取帧与释放",
+      "source_status": "已有实现",
+      "observed": "取JPEG帧、缩放；停止会stop全部track",
+      "gap_or_limit": "关闭后迟到任务/隐藏场景仍需专项证明",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+          "line": 57,
+          "symbol_or_quote": "function clearActiveStream()",
+          "file_sha256": "5435f5534daf2f346f3c6dca67b5e245ea07a36b9ad47ed4729d5492dde4f759"
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "dimension": "感知与看屏",
+      "capability": "间隔观察与跳过忙帧",
+      "source_status": "已有实现",
+      "observed": "默认3000ms，正在处理则skip，不积压ticker",
+      "gap_or_limit": "3秒不是已确认的低费用预算；需按体验定频率",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/processing-store.ts",
+          "line": 15,
+          "symbol_or_quote": "const DEFAULT_CAPTURE_INTERVAL_MS = 3000",
+          "file_sha256": "3bf998c611caea71357ead67d6eed2bee77f4d41dd94d9d6b2d0a11705531f77"
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "dimension": "感知与看屏",
+      "capability": "视觉读取排队",
+      "source_status": "已有实现",
+      "observed": "图片/工具/看屏共享VisionReadQueue",
+      "gap_or_limit": "不另加AionsHome摄像头轮询与第二视觉provider层",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+          "line": 15,
+          "symbol_or_quote": "VisionReadQueue",
+          "file_sha256": "677bbabe28e8eaa9527f71630397bc86b4a9154c147ae3fe81f9e3de7ac2f3c0"
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "dimension": "感知与看屏",
+      "capability": "视觉结果上下文投影",
+      "source_status": "已有实现",
+      "observed": "ReplaceSelf更新带sourceId/workload的context",
+      "gap_or_limit": "未见processCapture在await后重检授权generation；作为风险待验",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+          "line": 93,
+          "symbol_or_quote": "strategy: ContextUpdateStrategy.ReplaceSelf",
+          "file_sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa"
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "dimension": "感知与看屏",
+      "capability": "产品设置的间隔与统计",
+      "source_status": "已有产品页面",
+      "observed": "正常Vision设置已有captureIntervalMs和调用统计",
+      "gap_or_limit": "旧报告“所有视觉界面仅devtools”过宽",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/vision.vue",
+          "line": 381,
+          "symbol_or_quote": "v-model=\"captureIntervalMs\"",
+          "file_sha256": "fa37d690cf1633d421d142a99647fa5d74df9ead8424e1735d3abca926e7763c"
+        }
+      ]
+    },
+    {
+      "id": "D07",
+      "dimension": "感知与看屏",
+      "capability": "看屏启动停止控制",
+      "source_status": "开发者页面接线",
+      "observed": "source选择、startCaptureLoop/stopCaptureLoop在devtools/vision",
+      "gap_or_limit": "需产品化的是这些控制及可见反馈，非重写整条视觉链",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/devtools/vision.vue",
+          "line": 202,
+          "symbol_or_quote": "async function startCaptureLoop()",
+          "file_sha256": "cec84f073da077be93d642186c400895ef79bdd0f5edb9892c27552d63a76449"
+        }
+      ]
+    },
+    {
+      "id": "D08",
+      "dimension": "感知与看屏",
+      "capability": "停止后的迟到结果",
+      "source_status": "待专项验证",
+      "observed": "stopTicker清interval，processCapture仍可能有在飞推理",
+      "gap_or_limit": "未来必须证明停流、取消、拒绝陈旧结果三项；本轮只读",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/processing-store.ts",
+          "line": 140,
+          "symbol_or_quote": "function stopTicker()",
+          "file_sha256": "3bf998c611caea71357ead67d6eed2bee77f4d41dd94d9d6b2d0a11705531f77"
+        }
+      ]
+    },
+    {
+      "id": "D09",
+      "dimension": "感知与看屏",
+      "capability": "Apple Vision桥接",
+      "source_status": "已有平台模块",
+      "observed": "macOS OCR/视觉桥接已在main注入",
+      "gap_or_limit": "平台模型/权限不等于真实体验验收",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/airi/apple-vision/index.ts",
+          "line": 33,
+          "symbol_or_quote": "export",
+          "file_sha256": "88bf718bfbf42371e763999113588d3fc4bfe628201733fee29ed56707173da7"
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "dimension": "角色与表现",
+      "capability": "人设与角色卡",
+      "source_status": "已有接线",
+      "observed": "systemPrompt/description/personality/scenario组装，CCv3导入导出",
+      "gap_or_limit": "补人格内容与稳定性评测，不重造角色卡协议",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/airi-card.ts",
+          "line": 70,
+          "symbol_or_quote": "function resolveSystemPrompt",
+          "file_sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "dimension": "角色与表现",
+      "capability": "五种渲染器与导入模型",
+      "source_status": "已有接线",
+      "observed": "Live2D/VRM/MMD/Spine/Tachie，模型放localforage",
+      "gap_or_limit": "正式角色格式待定，不因竞品报告锁死VRM",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/display-models.ts",
+          "line": 8,
+          "symbol_or_quote": "export enum DisplayModelFormat",
+          "file_sha256": "1eb9620cc7caa64dd1be04f4583f6370017c2ea7b085de39c4a30de62f46fb49"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "dimension": "角色与表现",
+      "capability": "逐轮情绪与动作协议",
+      "source_status": "已有接线",
+      "observed": "ACT token被校验后分发给不同渲染器",
+      "gap_or_limit": "逐轮表演不是跨天情绪状态或关系成长",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenes/Stage.vue",
+          "line": 294,
+          "symbol_or_quote": "function toStageEmotionPayload",
+          "file_sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "dimension": "角色与表现",
+      "capability": "Live2D表情参数工具",
+      "source_status": "已有实现",
+      "observed": "exp3参数与LLM工具调用存在",
+      "gap_or_limit": "情绪动作映射与参数工具分开，不能判Live2D不支持表情",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-live2d/src/tools/expression-tools.ts",
+          "line": 135,
+          "symbol_or_quote": "export const expressionTools",
+          "file_sha256": "81a524c2e0f59d86f5d3b221330ca9c8c8112bcdf12ae4dea4d3caf0f232bc98"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "dimension": "角色与表现",
+      "capability": "口型、音素与渲染器写入",
+      "source_status": "已有实现",
+      "observed": "共享wLipSync驱动，各renderer自己写weights",
+      "gap_or_limit": "用现有驱动；实际资产是否有viseme/bindings仍须验",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/model-driver-lipsync/src/shared/wlipsync/vowel-driver.ts",
+          "line": 4,
+          "symbol_or_quote": "export",
+          "file_sha256": "06dc6abd647cd1261ec1331da1bd64f949e05e6a807eb2a65ca8023969c7b530"
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "dimension": "角色与表现",
+      "capability": "待机、眨眼与视线",
+      "source_status": "已有实现",
+      "observed": "VRM/Live2D/MMD各自有动画与注视逻辑",
+      "gap_or_limit": "模型所带骨骼/表情决定有效性，不能靠库名保证",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/src/composables/vrm/animation.ts",
+          "line": 14,
+          "symbol_or_quote": "export",
+          "file_sha256": "85d901a1cf685b1cd5be85a683aa823668dc9ce337eec49f5225c387090e5351"
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "dimension": "角色与表现",
+      "capability": "程序化动作MAGIC",
+      "source_status": "已有独立模块",
+      "observed": "VAR/AR-HMM等生成运动，不是人类情绪模型",
+      "gap_or_limit": "不把动作随机生成当陪伴策略",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/motion-driver-magic/src/index.ts",
+          "line": 1,
+          "symbol_or_quote": "export",
+          "file_sha256": "3a9de8c749decab12594edf7e06452b32302c06d7d4d5e13a2e519e98624eddf"
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "dimension": "角色与表现",
+      "capability": "长期情绪与关系值",
+      "source_status": "本次未见确定性实体",
+      "observed": "核查的card/notebook/存储主链没有持续关系值实体",
+      "gap_or_limit": "真实缺口需产品定义和评测后再设计，不采用未证实设定",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 34,
+          "symbol_or_quote": "const entries = ref",
+          "file_sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "dimension": "角色与表现",
+      "capability": "模型制作与资产生产",
+      "source_status": "不在当前桌面链",
+      "observed": "AIRI导入成品，未见从图像建模的桌面主路径",
+      "gap_or_limit": "Charakuru只作生产侧候选；不自动引入Blender或定VRM",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/display-models.ts",
+          "line": 69,
+          "symbol_or_quote": "async",
+          "file_sha256": "1eb9620cc7caa64dd1be04f4583f6370017c2ea7b085de39c4a30de62f46fb49"
+        }
+      ]
+    },
+    {
+      "id": "F01",
+      "dimension": "记忆与持久化",
+      "capability": "聊天会话持久化",
+      "source_status": "已有接线",
+      "observed": "IndexedDB airi-local存session/index",
+      "gap_or_limit": "聊天恢复不等于事实召回",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+          "line": 10,
+          "symbol_or_quote": "indexedDbDriver({ base: 'airi-local' })",
+          "file_sha256": "fc54da57c438fd82abe010c2170752ab0748feef716a73b095812bf5e9199ce4"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "dimension": "记忆与持久化",
+      "capability": "会话删除tombstone与outbox",
+      "source_status": "已有实现",
+      "observed": "离线删除与待发送队列有持久状态",
+      "gap_or_limit": "可借用删除一致性经验，不能由此推断事实记忆已完备",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 70,
+          "symbol_or_quote": "async addTombstone",
+          "file_sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "dimension": "记忆与持久化",
+      "capability": "对话摘要",
+      "source_status": "已有实现",
+      "observed": "compactConversationEntries生成history summary",
+      "gap_or_limit": "只解决上下文长度，非长期事实引擎",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/compaction.ts",
+          "line": 44,
+          "symbol_or_quote": "compactHistoryBlock",
+          "file_sha256": "dfd32990796ed56c7a058480d4569c4bbf247e284a264e15358993a0f11fb578"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "dimension": "记忆与持久化",
+      "capability": "笔记、日记与任务",
+      "source_status": "仅内存实现",
+      "observed": "entries/tasks是ref数组，有创建条目、修改任务状态与到期查询API",
+      "gap_or_limit": "需要跨重启的部分仍是增量；不必重造概念",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 35,
+          "symbol_or_quote": "const tasks = ref",
+          "file_sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "dimension": "记忆与持久化",
+      "capability": "memory-pgvector模块",
+      "source_status": "占位",
+      "observed": "只建Client和空module:configure监听",
+      "gap_or_limit": "不能列为可用向量库或RAG能力",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "symbol_or_quote": "client.onEvent('module:configure'",
+          "file_sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "dimension": "记忆与持久化",
+      "capability": "记忆设置页面",
+      "source_status": "占位",
+      "observed": "memory/short-term/long-term页面是WIP",
+      "gap_or_limit": "不能以路由存在宣告记忆功能完成",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+          "line": 6,
+          "symbol_or_quote": "<WIP />",
+          "file_sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "dimension": "记忆与持久化",
+      "capability": "自动事实保存、纠正与删除",
+      "source_status": "待增量设计",
+      "observed": "当前已核主链缺少统一事实有效性与来源记录闭环",
+      "gap_or_limit": "优先借鉴AionsHome新版画像/溯源规则；自动保存仍为用户明确方向",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "symbol_or_quote": "export const chatSessionsRepo",
+          "file_sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ]
+    },
+    {
+      "id": "G01",
+      "dimension": "主动与任务",
+      "capability": "Spark通知Agent",
+      "source_status": "已有接线",
+      "observed": "App初始化orchestrator、订阅spark:notify并运行Agent",
+      "gap_or_limit": "不能说AIRI完全没有主动性",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 267,
+          "symbol_or_quote": "function initialize()",
+          "file_sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "dimension": "主动与任务",
+      "capability": "定时任务与到期通知",
+      "source_status": "已有内存机制",
+      "observed": "2秒ticker将notebook任务转reminder",
+      "gap_or_limit": "任务恢复、授权与长期防打扰尚需增量",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 183,
+          "symbol_or_quote": "function enqueueDueTasks",
+          "file_sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "dimension": "主动与任务",
+      "capability": "主动通知重排",
+      "source_status": "已有实现",
+      "observed": "按urgency排队，失败最多3次",
+      "gap_or_limit": "需补角色/会话/授权代次，不能照搬旧timer漏洞",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 73,
+          "symbol_or_quote": "function computeNextRunAt",
+          "file_sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "dimension": "主动与任务",
+      "capability": "Spark emit处理",
+      "source_status": "占位",
+      "observed": "handleSparkEmit明确no-op",
+      "gap_or_limit": "事件名存在不算完整闭环",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 262,
+          "symbol_or_quote": "async function handleSparkEmit",
+          "file_sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        }
+      ]
+    },
+    {
+      "id": "G05",
+      "dimension": "主动与任务",
+      "capability": "自主绘图",
+      "source_status": "已有模块",
+      "observed": "artistry-autonomous基于上下文触发图像生成",
+      "gap_or_limit": "不是自动日常搭话或事实记忆；本期不自动扩范围",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/artistry-autonomous.ts",
+          "line": 21,
+          "symbol_or_quote": "export",
+          "file_sha256": "7a13924bbfa3fb95f2172553bc7a48f4b5e1c3ddccc9649531846accbe9d109c"
+        }
+      ]
+    },
+    {
+      "id": "G06",
+      "dimension": "主动与任务",
+      "capability": "通知到语音策略",
+      "source_status": "需逐链核验",
+      "observed": "事件priority和interrupt字段存在；speech intent默认queue",
+      "gap_or_limit": "不可把字段声明当优先语音已接通，也不据此否定独立语音打断",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+          "line": 151,
+          "symbol_or_quote": "pipeline.openIntent({ turnId:",
+          "file_sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7"
+        }
+      ]
+    },
+    {
+      "id": "G07",
+      "dimension": "主动与任务",
+      "capability": "长期防打扰与预算策略",
+      "source_status": "待补产品规则",
+      "observed": "当前通知调度是通用机制，非完整陪伴节奏策略",
+      "gap_or_limit": "冷却、静默时段、预算、取消和重启须按单角色桌面设计",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 39,
+          "symbol_or_quote": "const attentionConfig = ref",
+          "file_sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        }
+      ]
+    },
+    {
+      "id": "G08",
+      "dimension": "主动与任务",
+      "capability": "Spark卸载与在飞结果",
+      "source_status": "已知源码清理缺口",
+      "observed": "App fullRuntime.dispose未调用orchestrator.dispose；store.dispose只停ticker/退订",
+      "gap_or_limit": "未清队列或取消在飞模型；须补生命周期与关闭后陈旧结果拒发，非声称进程退出后JS仍运行",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/App.vue",
+          "line": 326,
+          "symbol_or_quote": "contextBridgeStore.dispose()",
+          "file_sha256": "cc350e25147e59d63ffa5ef68e9eb2a2929ff97d03cff8e4a6b2db8bf4429550"
+        }
+      ]
+    },
+    {
+      "id": "H01",
+      "dimension": "工具与扩展",
+      "capability": "MCP客户端",
+      "source_status": "已有接线",
+      "observed": "stdio与StreamableHTTP、工具刷新、关闭服务都有实现",
+      "gap_or_limit": "保留现有MCP owner；不复制第二MCP连接池",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/airi/mcp-servers/index.ts",
+          "line": 479,
+          "symbol_or_quote": "export async function setupMcpManager",
+          "file_sha256": "c5a11812b4c3d9a5e7e2e9468289dfb60eafd7f7c4650f92a9e250bc13d894ae"
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "dimension": "工具与扩展",
+      "capability": "插件manifest与激活计划",
+      "source_status": "已有接线",
+      "observed": "严格manifest v2解析，目录导入与owner校验",
+      "gap_or_limit": "不引入kirara运行时pip安装",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/plugin-sdk/src/plugin-host/shared/manifest.ts",
+          "line": 26,
+          "symbol_or_quote": "export function parseExtensionManifest",
+          "file_sha256": "1db1eaacfe77e7fd1a4b17a758d42820bf2befdc458ba3519cb7ee30ba155878"
+        }
+      ]
+    },
+    {
+      "id": "H03",
+      "dimension": "工具与扩展",
+      "capability": "权限声明与Kit契约",
+      "source_status": "已有实现",
+      "observed": "Kit依赖、能力匹配和grants机制存在",
+      "gap_or_limit": "权限检查不等于独立进程/内存沙箱，须看调用边界",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/plugin-sdk/src/plugin-host/runtimes/shared/services/permissions.ts",
+          "line": 269,
+          "symbol_or_quote": "export",
+          "file_sha256": "ca9549223383376c92155e2dd4345397c5e7d5cb7ceda77612472c76d7dd7ec4"
+        }
+      ]
+    },
+    {
+      "id": "H04",
+      "dimension": "工具与扩展",
+      "capability": "跨进程事件与Channel服务",
+      "source_status": "已有接线",
+      "observed": "Eventa与server-sdk/runtime有路由和存活机制",
+      "gap_or_limit": "保留现有传输，不另起第二全局messagebus",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/server-sdk/src/client.ts",
+          "line": 214,
+          "symbol_or_quote": "export class Client",
+          "file_sha256": "ef5de22c103d341018605c10ad3897cb892e19e2cb2fc021d36cc1108975eb0b"
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "dimension": "工具与扩展",
+      "capability": "外部IM集成",
+      "source_status": "生态独立包已有",
+      "observed": "Discord/Telegram/Satori等在integrations；桌面配置页不是全部实现",
+      "gap_or_limit": "未形成统一IMAdapter并非完全无IM；一期桌面不自动纳入",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/adapters/airi-adapter.ts",
+          "line": 55,
+          "symbol_or_quote": "export class DiscordAdapter",
+          "file_sha256": "f3985458e440008e85dd6e140a2193739806e092b40952297f349aa7d4570271"
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "dimension": "工具与扩展",
+      "capability": "联网搜索",
+      "source_status": "已有模块",
+      "observed": "web-search模块与工具桥接存在",
+      "gap_or_limit": "供应商、网络与当前配置仍须另验",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/web-search.ts",
+          "line": 18,
+          "symbol_or_quote": "export",
+          "file_sha256": "946d73e7abdde42b4f950a6b429cd7db6332f0f52c6a65b8b8c6c340e0ff03b5"
+        }
+      ]
+    },
+    {
+      "id": "H07",
+      "dimension": "工具与扩展",
+      "capability": "小组件与图像生成",
+      "source_status": "已有生态模块",
+      "observed": "widgets/artistry提供不同图像服务后端",
+      "gap_or_limit": "不把图像生成误作角色3D建模",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/airi/widgets/index.ts",
+          "line": 61,
+          "symbol_or_quote": "export",
+          "file_sha256": "87b45cb32b00e55170c18b51ca60a24254d9e90d5e484d39a1ae534130d37101"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "dimension": "工具与扩展",
+      "capability": "电脑自动操作",
+      "source_status": "上游存在且一期后置",
+      "observed": "main装配setupComputerUse",
+      "gap_or_limit": "继承代码不等于用户授权开放自动操作",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "line": 381,
+          "symbol_or_quote": "setupComputerUse(context)",
+          "file_sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136"
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "dimension": "工具与扩展",
+      "capability": "Home Assistant",
+      "source_status": "上游存在且一期后置",
+      "observed": "main已装配HomeAssistant",
+      "gap_or_limit": "不因候选出现日常工具就自动扩产品范围",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "line": 382,
+          "symbol_or_quote": "setupHomeAssistant(context)",
+          "file_sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136"
+        }
+      ]
+    },
+    {
+      "id": "H10",
+      "dimension": "工具与扩展",
+      "capability": "可视化工作流编排",
+      "source_status": "本次未见桌面实现",
+      "observed": "核查的桌面设置、插件与Agent主路径未提供kirara式积木编辑器",
+      "gap_or_limit": "属于后置候选与架构范式差异，不自动成为当前必补缺口",
+      "evidence_level": "源码核验及限定范围检索",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/index.vue",
+          "line": 32,
+          "symbol_or_quote": "settingsEntry",
+          "file_sha256": "177ffa70b6a367822297a9af83a93489cebcf2f92e0657623180211c795b9bdc"
+        }
+      ]
+    },
+    {
+      "id": "I01",
+      "dimension": "设置与工程",
+      "capability": "共享设置路由",
+      "source_status": "已有接线",
+      "observed": "settingsEntry元数据动态生成入口",
+      "gap_or_limit": "增量复用现有Vue/UnoCSS设置框架",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/index.vue",
+          "line": 32,
+          "symbol_or_quote": "settingsEntry",
+          "file_sha256": "177ffa70b6a367822297a9af83a93489cebcf2f92e0657623180211c795b9bdc"
+        }
+      ]
+    },
+    {
+      "id": "I02",
+      "dimension": "设置与工程",
+      "capability": "Chromatic配色与主题UI",
+      "source_status": "已有接线",
+      "observed": "现有依赖与正式color-scheme页面提供色相/动态开关",
+      "gap_or_limit": "旧报告仅Storybook的说法过宽；不再复制调色库",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/system/color-scheme.vue",
+          "line": 91,
+          "symbol_or_quote": "<ColorHueRange",
+          "file_sha256": "1721a0f367f9eadc13237c60f4a557e1f9ec593c00d99497d0e61c2881fcc851"
+        }
+      ]
+    },
+    {
+      "id": "I03",
+      "dimension": "设置与工程",
+      "capability": "跨窗口同步",
+      "source_status": "已有接线",
+      "observed": "模型与stores使用pinia-plugin-synced保持单一有效选择",
+      "gap_or_limit": "同步不是长期事实记忆，也不等同云同步",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/stage-model.ts",
+          "line": 31,
+          "symbol_or_quote": "synced:",
+          "file_sha256": "5e2a96a6eae8a8f2a4c345eda6bbfb6ddd446a14b5a267ed90d880f884f4eb53"
+        }
+      ]
+    },
+    {
+      "id": "I04",
+      "dimension": "设置与工程",
+      "capability": "密钥配置边界",
+      "source_status": "需安全专项验收",
+      "observed": "Provider配置存在localStorage；已登录后dirty且configured的用户Provider会自动把完整config上传",
+      "gap_or_limit": "读取声明未读真实值；角色卡同步开关不控制此路径；远端存储/加密与独立opt-in未在本轮证明",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/config.ts",
+          "line": 50,
+          "symbol_or_quote": "'settings/providers/configured'",
+          "file_sha256": "fd2250a95cc4cd34adaf02e3a6c6bf40f44c8c4fd2ef417e039be38a5c22654e"
+        }
+      ]
+    },
+    {
+      "id": "I05",
+      "dimension": "设置与工程",
+      "capability": "角色卡云同步默认",
+      "source_status": "已有开关且默认关闭",
+      "observed": "CHARACTER_CARD_SYNC_FLAG defaultEnabled=false",
+      "gap_or_limit": "只代表角色卡同步；Provider与聊天的已登录同步另有自动路径，不能由此认定所有数据默认留本地",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/feature-flags.ts",
+          "line": 37,
+          "symbol_or_quote": "defaultEnabled: false",
+          "file_sha256": "912ae2f921be14a914d2cccfbc903c989a5b77223438996c33be621e3c688b1a"
+        }
+      ]
+    },
+    {
+      "id": "I06",
+      "dimension": "设置与工程",
+      "capability": "本地IO追踪",
+      "source_status": "已有实现",
+      "observed": "io-trace-recording可记录调用span",
+      "gap_or_limit": "日志内容和隐私脱敏仍需产品策略，不能默认长存敏感输入",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/airi/io-trace-recording/index.ts",
+          "line": 17,
+          "symbol_or_quote": "export",
+          "file_sha256": "a636214793b063216a64a99a55ea624d7f798c4568ed1003617155186b34e8d8"
+        }
+      ]
+    },
+    {
+      "id": "I07",
+      "dimension": "设置与工程",
+      "capability": "Electron媒体权限策略",
+      "source_status": "已有实现",
+      "observed": "区分audio、desktop capture等permission与source状态",
+      "gap_or_limit": "权限handler存在不等于已满足隐藏时停采集与拒新调用",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+          "line": 152,
+          "symbol_or_quote": "export function shouldGrantElectronPermission",
+          "file_sha256": "d0704953e37dc3197cf425cf60e73cdc87176a78de9405e303f6ae6e8a882563"
+        }
+      ]
+    },
+    {
+      "id": "I08",
+      "dimension": "设置与工程",
+      "capability": "退出清理",
+      "source_status": "已有接线待真实验收",
+      "observed": "before-quit拦截并执行服务stop/日志flush",
+      "gap_or_limit": "旧评估退出失败与本次离线测试都不能替代当前真机退出验收",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "line": 464,
+          "symbol_or_quote": "app.on('before-quit'",
+          "file_sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136"
+        }
+      ]
+    },
+    {
+      "id": "I09",
+      "dimension": "设置与工程",
+      "capability": "更新通道",
+      "source_status": "已有实现",
+      "observed": "auto-updater与builder publish仍为上游通道",
+      "gap_or_limit": "遵循先不跟、预留通道；本轮不改更新或发布",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/auto-updater.ts",
+          "line": 81,
+          "symbol_or_quote": "export",
+          "file_sha256": "6e375a676acc025f0245462bbf7cfbfddf064bd6db3a15c8bc0d3079790072e6"
+        }
+      ]
+    },
+    {
+      "id": "I10",
+      "dimension": "设置与工程",
+      "capability": "国际化",
+      "source_status": "已有实现",
+      "observed": "i18n包与界面/主进程文案接线存在",
+      "gap_or_limit": "品牌文案与翻译是内容定制，不改内部包名",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/i18n/src/index.ts",
+          "line": 1,
+          "symbol_or_quote": "export",
+          "file_sha256": "dcd5194343a8d0c9fe7b77fd41b433474e1a9dc68b72e70963b70b12247237aa"
+        }
+      ]
+    },
+    {
+      "id": "I11",
+      "dimension": "设置与工程",
+      "capability": "构建与打包",
+      "source_status": "已有工程链",
+      "observed": "electron-vite与electron-builder配置在桌面包内",
+      "gap_or_limit": "本轮未重打包；既有品牌图标产物不是当前完整安装验收",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/package.json",
+          "line": 23,
+          "symbol_or_quote": "\"build\"",
+          "file_sha256": "4bb70a98e6ece230fbc1a07aa3881628321f9bc87ee8589446ad2b0df0ebcbce"
+        }
+      ]
+    },
+    {
+      "id": "I12",
+      "dimension": "设置与工程",
+      "capability": "测试与静态检查",
+      "source_status": "已有工程链",
+      "observed": "Vitest多包/Node与Browser项目存在",
+      "gap_or_limit": "本轮只跑12个定向文件130项离线测试，不称全仓或真实设备通过",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/vitest.config.ts",
+          "line": 1,
+          "symbol_or_quote": "defineConfig",
+          "file_sha256": "8ef7aa4aa9d40d2bf7b44dfef6632a5ad71b202c0f216b86331f744c2670ba08"
+        }
+      ]
+    },
+    {
+      "id": "I13",
+      "dimension": "设置与工程",
+      "capability": "登录后的聊天云同步",
+      "source_status": "已有条件接线",
+      "observed": "非local用户消息写outbox并尝试WS发送；local匿名路径跳过",
+      "gap_or_limit": "不受角色卡同步默认关控制；本轮未看当前登录态、未读取或传送真实聊天",
+      "evidence_level": "源码核验",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 1211,
+          "symbol_or_quote": "if (userId === 'local')",
+          "file_sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31"
+        }
+      ]
+    }
+  ],
+  "unresolved_anchors": [],
+  "limited_negative_searches": [
+    {
+      "query_id": "startup",
+      "pattern": "setLoginItemSettings|openAtLogin|loginItemSettings",
+      "scope": [
+        "apps/stage-tamagotchi/src",
+        "packages"
+      ],
+      "exit_code": 1,
+      "matches": []
+    },
+    {
+      "query_id": "display_hotplug",
+      "pattern": "display-added|display-removed|display-metrics-changed",
+      "scope": [
+        "apps/stage-tamagotchi/src",
+        "packages"
+      ],
+      "exit_code": 1,
+      "matches": []
+    },
+    {
+      "query_id": "workflow_editor",
+      "pattern": "WorkflowExecutor|BlockRegistry|CodeBlock",
+      "scope": [
+        "apps/stage-tamagotchi/src",
+        "packages"
+      ],
+      "exit_code": 1,
+      "matches": []
+    },
+    {
+      "query_id": "plugin_vm",
+      "pattern": "isolated-vm|isolated_vm",
+      "scope": [
+        "packages/plugin-sdk/src",
+        "apps/stage-tamagotchi/src/main/services/airi/plugins"
+      ],
+      "exit_code": 1,
+      "matches": []
+    },
+    {
+      "query_id": "input_suppression",
+      "pattern": "shouldSuppressVoiceInput",
+      "scope": [
+        "apps/stage-tamagotchi/src",
+        "packages"
+      ],
+      "exit_code": 0,
+      "matches": [
+        "apps/stage-tamagotchi/src/renderer/utils/voice-input-suppression.ts:21:export function shouldSuppressVoiceInput(options: VoiceInputSuppressionOptions, now = Date.now()) {"
+      ]
+    }
+  ],
+  "status": "只读源码核验与定向离线测试，不代表完整产品体验验收",
+  "baseline": {
+    "version": "0.12.0-beta.5",
+    "r1_import_commit": "bf41903",
+    "current_repository_head": "b851ef3334320d13dd86cb8cafb449a70d154c9b",
+    "tracked_and_brand_extra_files": 5336,
+    "manifest_digest": "892cde4a5bce131f67230960a44aec49ed0ae31162ee269ef149e6a8a1c390f5",
+    "source_root": "/Users/mima1234/Documents/aimy/aimy-app",
+    "scope_excludes": [
+      "node_modules",
+      "out/dist生成物",
+      "旧digital-lover样机",
+      "仓内旧airi-main",
+      "真实凭证与用户数据"
+    ]
+  },
+  "counts": {
+    "capabilities": 84,
+    "dimensions": 9,
+    "portable_provider_cloud_directories": 40,
+    "portable_provider_local_directories": 8,
+    "speech_settings_pages": 21,
+    "transcription_settings_pages": 9
+  },
+  "unit_checks": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "src/voice/controller.test.ts",
+        "src/voice/output/response.test.ts",
+        "src/voice/input/end-detection.test.ts",
+        "src/messages/compaction.test.ts",
+        "src/runtime/chat-orchestrator-runtime.test.ts",
+        "src/runtime/llm-marker-parser.test.ts"
+      ],
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent",
+      "exit_code": 0,
+      "log": "/tmp/aimy-20261014-primary-checks/core-agent.log"
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "src/speech-pipeline.test.ts",
+        "src/managers/playback-manager.test.ts",
+        "src/processors/tts-chunker.test.ts"
+      ],
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio",
+      "exit_code": 0,
+      "log": "/tmp/aimy-20261014-primary-checks/pipelines-audio.log"
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "--project",
+        "node",
+        "src/stores/character/orchestrator/index.test.ts",
+        "src/stores/modules/vision/orchestrator.test.ts",
+        "src/database/repos/chat-sessions.repo.test.ts"
+      ],
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui",
+      "exit_code": 0,
+      "log": "/tmp/aimy-20261014-primary-checks/stage-ui.log"
+    }
+  ],
+  "review_resolution": {
+    "review": "2026-10-14-拆解接续证据/aions/review-airi.md",
+    "addressed": [
+      "Provider与聊天登录后同步已明确写入I04/I05/I13",
+      "Spark清理接线与在飞结果写入G08",
+      "F04 API范围收窄"
+    ],
+    "final_capability_count": 84
+  }
+}

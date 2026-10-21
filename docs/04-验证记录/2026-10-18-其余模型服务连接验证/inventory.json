@@ -1,0 +1,158 @@
+{
+  "providers": [
+    {
+      "added": true,
+      "apiKeyPresent": true,
+      "catalogDefaultModel": null,
+      "configuredBy": "user",
+      "definition": "deepseek",
+      "endpoint": "https://api.deepseek.com/",
+      "hasSecureReference": true,
+      "id": "deepseek",
+      "otherSecretFieldsPresent": {},
+      "requiresCredentials": true,
+      "secretStorageReadable": true,
+      "selected": true,
+      "status": "configured",
+      "tasks": [
+        "chat"
+      ]
+    },
+    {
+      "added": false,
+      "apiKeyPresent": false,
+      "catalogDefaultModel": null,
+      "configuredBy": "user",
+      "definition": "apple-speech-transcription",
+      "endpoint": "local",
+      "hasSecureReference": false,
+      "id": "apple-speech-transcription",
+      "otherSecretFieldsPresent": {},
+      "requiresCredentials": false,
+      "secretStorageReadable": true,
+      "selected": true,
+      "status": "configured",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt",
+        "streaming-transcription"
+      ]
+    },
+    {
+      "added": true,
+      "apiKeyPresent": true,
+      "catalogDefaultModel": null,
+      "configuredBy": "user",
+      "definition": "deepseek",
+      "endpoint": "https://api.deepseek.com/",
+      "hasSecureReference": true,
+      "id": "vision-deepseek",
+      "otherSecretFieldsPresent": {},
+      "requiresCredentials": true,
+      "secretStorageReadable": true,
+      "selected": true,
+      "status": "configured",
+      "tasks": [
+        "chat"
+      ]
+    },
+    {
+      "added": true,
+      "apiKeyPresent": false,
+      "catalogDefaultModel": null,
+      "configuredBy": "user",
+      "definition": "voicevox",
+      "endpoint": "http://localhost:50021/",
+      "hasSecureReference": false,
+      "id": "voicevox",
+      "otherSecretFieldsPresent": {},
+      "requiresCredentials": true,
+      "secretStorageReadable": true,
+      "selected": false,
+      "status": "invalid",
+      "tasks": [
+        "text-to-speech"
+      ]
+    },
+    {
+      "added": true,
+      "apiKeyPresent": false,
+      "catalogDefaultModel": null,
+      "configuredBy": "user",
+      "definition": "aivis-speech",
+      "endpoint": "http://localhost:10101/",
+      "hasSecureReference": false,
+      "id": "aivis-speech",
+      "otherSecretFieldsPresent": {},
+      "requiresCredentials": true,
+      "secretStorageReadable": true,
+      "selected": false,
+      "status": "invalid",
+      "tasks": [
+        "text-to-speech"
+      ]
+    },
+    {
+      "added": true,
+      "apiKeyPresent": true,
+      "catalogDefaultModel": null,
+      "configuredBy": "user",
+      "definition": "mimo-audio-speech",
+      "endpoint": "https://api.xiaomimimo.com/v1/",
+      "hasSecureReference": true,
+      "id": "mimo-audio-speech",
+      "model": "mimo-v2.5-tts",
+      "otherSecretFieldsPresent": {},
+      "requiresCredentials": true,
+      "secretStorageReadable": true,
+      "selected": true,
+      "status": "configured",
+      "tasks": [
+        "text-to-speech"
+      ]
+    },
+    {
+      "added": true,
+      "apiKeyPresent": true,
+      "catalogDefaultModel": null,
+      "configuredBy": "user",
+      "definition": "mimo-audio-transcription",
+      "endpoint": "https://api.xiaomimimo.com/v1/",
+      "hasSecureReference": true,
+      "id": "mimo-audio-transcription",
+      "model": "mimo-v2-omni",
+      "otherSecretFieldsPresent": {},
+      "requiresCredentials": true,
+      "secretStorageReadable": true,
+      "selected": false,
+      "status": "configured",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt"
+      ]
+    }
+  ],
+  "selections": {
+    "chat": {
+      "model": "deepseek-flash",
+      "provider": "deepseek"
+    },
+    "speech": {
+      "model": "mimo-v2.5-tts",
+      "provider": "mimo-audio-speech",
+      "voice": "冰糖"
+    },
+    "transcription": {
+      "model": "apple-speech",
+      "provider": "apple-speech-transcription"
+    },
+    "vision": {
+      "model": "deepseek-flash",
+      "provider": "vision-deepseek"
+    }
+  }
+}

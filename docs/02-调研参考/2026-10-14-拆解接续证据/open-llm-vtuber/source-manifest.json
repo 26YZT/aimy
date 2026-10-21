@@ -1,0 +1,6291 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.cursor/rules/olv-core-rules.mdc",
+    "relative_path": ".cursor/rules/olv-core-rules.mdc",
+    "bytes": 6107,
+    "sha256": "2017933ce75a6b8a5c41dd51c03e98d17b5c7a83f11bf867a906aad6c80435e7"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.dockerignore",
+    "relative_path": ".dockerignore",
+    "bytes": 994,
+    "sha256": "c1b4466d1911e2ffe231d62d90eb8d675204381d226d8452ba7db04fb548403f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.gemini/GEMINI.md",
+    "relative_path": ".gemini/GEMINI.md",
+    "bytes": 6079,
+    "sha256": "79e10ae24ac8ec9d9528f32c699448077c8ccc1c0b7c2a1cff8745e19c30ae90"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.gemini/styleguide.md",
+    "relative_path": ".gemini/styleguide.md",
+    "bytes": 12143,
+    "sha256": "2b3b98535c00e61680f3b2483faae3570a99e819a69b9c1eb0195ff9686bef09"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.gitattributes",
+    "relative_path": ".gitattributes",
+    "bytes": 31,
+    "sha256": "0faeab14cb6231ef89b4bbb591b97c310b582a17e1da2c72e4fa32377a10e140"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/FUNDING.yml",
+    "relative_path": ".github/FUNDING.yml",
+    "bytes": 824,
+    "sha256": "3f923e6fe4078f2c42d907ff21fc71b581e5eac37046210114a329b5352c3658"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/ISSUE_TEMPLATE/bug---question---get-help---bug---提问---求助.md",
+    "relative_path": ".github/ISSUE_TEMPLATE/bug---question---get-help---bug---提问---求助.md",
+    "bytes": 2217,
+    "sha256": "031c3bdfe2e6181287b01e176d37f2fbd67d8bccde9f19109f823719802448d8"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/ISSUE_TEMPLATE/feature-request---功能建议.md",
+    "relative_path": ".github/ISSUE_TEMPLATE/feature-request---功能建议.md",
+    "bytes": 2249,
+    "sha256": "c112d3fd8079ede9667739612de6b2f82720760c70ea9387c4d5d7b8676c0add"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/copilot-instructions.md",
+    "relative_path": ".github/copilot-instructions.md",
+    "bytes": 6079,
+    "sha256": "79e10ae24ac8ec9d9528f32c699448077c8ccc1c0b7c2a1cff8745e19c30ae90"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/workflows/codeql.yml",
+    "relative_path": ".github/workflows/codeql.yml",
+    "bytes": 4301,
+    "sha256": "2ca9867e4c6d71694d358a80fa547671ad465c5c9ea7b62980676e99eb749d8c"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/workflows/create_release.yml",
+    "relative_path": ".github/workflows/create_release.yml",
+    "bytes": 10106,
+    "sha256": "0c3012d393d8dea2678a31fa0922c71a65714982692f12998b86d7d1d4113a18"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/workflows/docker-blacksmith.yml",
+    "relative_path": ".github/workflows/docker-blacksmith.yml",
+    "bytes": 6524,
+    "sha256": "14b75bbd583c16e62e559560e486c9b664d87a059e69ecf396fb937a53dfaded"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/workflows/fossa_scan.yml",
+    "relative_path": ".github/workflows/fossa_scan.yml",
+    "bytes": 270,
+    "sha256": "7cb7a4c7e47f226c1e2e000ad465cbc99677137bd6184267c3518785ab6e18d1"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/workflows/ruff.yml",
+    "relative_path": ".github/workflows/ruff.yml",
+    "bytes": 162,
+    "sha256": "435a08ed5df931c1134872dbaabeba241aae7e3c9399066261316647fedaca5f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.github/workflows/update-requirements.yml",
+    "relative_path": ".github/workflows/update-requirements.yml",
+    "bytes": 916,
+    "sha256": "54a86500a354888453efeebb14416f0960a629692b806b94cbd1a7b527e6b9d0"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.gitignore",
+    "relative_path": ".gitignore",
+    "bytes": 1128,
+    "sha256": "1c343218731b36bd86177a5c72482f8eba22ae9606932a81dbda07361d25710c"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.gitmodules",
+    "relative_path": ".gitmodules",
+    "bytes": 117,
+    "sha256": "ac12c202b81ee003ad9957de0c6148f258db0b3c53fbe557120a948ee3aa2394"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.pre-commit-config.yaml",
+    "relative_path": ".pre-commit-config.yaml",
+    "bytes": 186,
+    "sha256": "3aa23b4ca6049ab8b64cb3201b4a4758d7585c9310c4b0ac8d5c0eeec7c63b0c"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/.python-version",
+    "relative_path": ".python-version",
+    "bytes": 5,
+    "sha256": "7a41a41354ab8049091ef1a00253ca00567f5a1d3f9aef5502c0b4b5ce9ae707"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/CLAUDE.md",
+    "relative_path": "CLAUDE.md",
+    "bytes": 6237,
+    "sha256": "a7a98f26bc1923854fac180ad1d1777d26f5f3eb955eabb958ffcc7e53409cd5"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/CONTRIBUTING.md",
+    "relative_path": "CONTRIBUTING.md",
+    "bytes": 342,
+    "sha256": "13142db92d257a88c9bad903ea5ed4b0e922007075dcc417f8bb1163dec63455"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/LICENSE",
+    "relative_path": "LICENSE",
+    "bytes": 1216,
+    "sha256": "c48a8498e88fbb1e6da5438f19e919e6eb926cd7d25372b2ed35ff92b2631bd1"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/LICENSE-Live2D.md",
+    "relative_path": "LICENSE-Live2D.md",
+    "bytes": 57705,
+    "sha256": "5e2b759bba52c9d01bc79fcd3ea589aa0a7d50e4f6010a62185309947b657371"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/README.CN.md",
+    "relative_path": "README.CN.md",
+    "bytes": 10280,
+    "sha256": "e65126762bc3f0b161ef55ca3fa7c2f62597e84aa1fb3af4186906c671641dfe"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/README.JP.md",
+    "relative_path": "README.JP.md",
+    "bytes": 14617,
+    "sha256": "e9ba0b4987a648100b8bd0a2983e6f017f581a55bcf3260e269197b0ee2d332d"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/README.KR.md",
+    "relative_path": "README.KR.md",
+    "bytes": 13124,
+    "sha256": "63674873e97b2d7319aaaefe92ef4af77d7794ec8e292f29e1fe2ade1f3037ec"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/README.md",
+    "relative_path": "README.md",
+    "bytes": 11536,
+    "sha256": "3b6cf6adbf7c49a00e89d99c0fdb582a316054f8bb44332f7c95800fdd674140"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/banner.cn.jpg",
+    "relative_path": "assets/banner.cn.jpg",
+    "bytes": 23704,
+    "sha256": "9ece62b4183b73cb33ff586449afa15c34a536117edfe3471140880bc80bf833"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/banner.jpg",
+    "relative_path": "assets/banner.jpg",
+    "bytes": 24087,
+    "sha256": "60f7e649713895948f77ef122f7a8ed8b2fa0966266eed636220fc1eb0bc5356"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/banner.kr.jpg",
+    "relative_path": "assets/banner.kr.jpg",
+    "bytes": 42615,
+    "sha256": "47080b7170efe41308a0a597c5230fd9d33e205cd614b7a9c1dbdd33a4b05a36"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i1.jpg",
+    "relative_path": "assets/i1.jpg",
+    "bytes": 274456,
+    "sha256": "27c829426bdf5c1ce73bb1703597dc6072ef33d0a99eb1cedfb55df9e8e69702"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i1_app_mode.jpg",
+    "relative_path": "assets/i1_app_mode.jpg",
+    "bytes": 175419,
+    "sha256": "d03ab96d2ec29d176b07e2d7de8b7c272729235d749dc2f93107b8f41a37cd3a"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i2.jpg",
+    "relative_path": "assets/i2.jpg",
+    "bytes": 534559,
+    "sha256": "72628ba6803dddecadd53e948c64e56231207ca544478128566f3a57937ed690"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i2_pet_vscode.jpg",
+    "relative_path": "assets/i2_pet_vscode.jpg",
+    "bytes": 534559,
+    "sha256": "72628ba6803dddecadd53e948c64e56231207ca544478128566f3a57937ed690"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i3.jpg",
+    "relative_path": "assets/i3.jpg",
+    "bytes": 315206,
+    "sha256": "38d880d0fb1dbcdfba98ec7d0bd9a8814be23dad64a785e1b7c23f3e59b3e0db"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i3_browser_world_fun.jpg",
+    "relative_path": "assets/i3_browser_world_fun.jpg",
+    "bytes": 223657,
+    "sha256": "93206c51be939132d6543f990abdef2b2da1ade64f344746bd38c6627b04ec8d"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i4.jpg",
+    "relative_path": "assets/i4.jpg",
+    "bytes": 348937,
+    "sha256": "7da80e20da5fcafae3931834b672415570d68b02d62f47873627aa788b5c5b63"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/assets/i4_pet_desktop.jpg",
+    "relative_path": "assets/i4_pet_desktop.jpg",
+    "bytes": 461516,
+    "sha256": "b1d461ad6a2f2166d2d5d58970f14cf8158e3741f2ae3d7e3d4a35e44e43917d"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/avatars/mao.png",
+    "relative_path": "avatars/mao.png",
+    "bytes": 432032,
+    "sha256": "b38a1f1f4e3455021a518e309f7bc9d0db217647cdf4556c95fddd33fbe77e87"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/avatars/shizuku.png",
+    "relative_path": "avatars/shizuku.png",
+    "bytes": 427786,
+    "sha256": "c4ff601ead345b70cc7cd46a90b8e40191129214ddd13fe0377369f937311de3"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/README.md",
+    "relative_path": "backgrounds/README.md",
+    "bytes": 159,
+    "sha256": "b0894f273a09243ab438af17cd2bd821b3130003a98bbbf179d2d871185bf1cb"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/cartoon-night-landscape-moon.jpeg",
+    "relative_path": "backgrounds/cartoon-night-landscape-moon.jpeg",
+    "bytes": 156701,
+    "sha256": "9294c7da355f3268fc65fa12f89c61188263b4e1f064779c059a95c0473e02c2"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/ceiling-window-room-night.jpeg",
+    "relative_path": "backgrounds/ceiling-window-room-night.jpeg",
+    "bytes": 96297,
+    "sha256": "ae86b7f7071a7ff8c4dac2dd8f788e280f9969881ba0c8ea676008e9ad293971"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/cityscape.jpeg",
+    "relative_path": "backgrounds/cityscape.jpeg",
+    "bytes": 317265,
+    "sha256": "e8dd7717f27a6342f86068605c387100c4675dc37d89346d84be3be45d8e13a9"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/computer-room-illustration.jpeg",
+    "relative_path": "backgrounds/computer-room-illustration.jpeg",
+    "bytes": 302120,
+    "sha256": "de313058b3c2eaafe724d4783c9153448cb74a6d3036f824a2a94873f22ce8c0"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/congress.jpg",
+    "relative_path": "backgrounds/congress.jpg",
+    "bytes": 976033,
+    "sha256": "52b9094a6d9e1f02a40f11acecdf6c1991da517aedcd962852bcab3cdde47204"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/field-night-painting-moon.jpeg",
+    "relative_path": "backgrounds/field-night-painting-moon.jpeg",
+    "bytes": 248485,
+    "sha256": "1b5a8ac127cdc41371eeb64b63522f346984d927a7c56530d1efde14ec66dcb2"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/lernado-diff-classroom-center.jpeg",
+    "relative_path": "backgrounds/lernado-diff-classroom-center.jpeg",
+    "bytes": 160247,
+    "sha256": "15007d5364374cc9b0b6d9ebcf4f94e612976d1e007b54dd2a37da7351aa3544"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/moon-over-mountain.jpeg",
+    "relative_path": "backgrounds/moon-over-mountain.jpeg",
+    "bytes": 245705,
+    "sha256": "e0252fe0af2887ea752d1cfe3e0291a8d19803aa6799e607ca3e229a6026f452"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/mountain-range-illustration.jpeg",
+    "relative_path": "backgrounds/mountain-range-illustration.jpeg",
+    "bytes": 226384,
+    "sha256": "c985437efcf3343affbd62464ead983e696b716ecc1830ad29e9d4338b5352d3"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/night-landscape-grass-moon.jpeg",
+    "relative_path": "backgrounds/night-landscape-grass-moon.jpeg",
+    "bytes": 347583,
+    "sha256": "ccaec05af893b009b0d86cf0d9b5930dac28658d21ac1f450e841b19d0713e14"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/night-scene-cartoon-moon.jpeg",
+    "relative_path": "backgrounds/night-scene-cartoon-moon.jpeg",
+    "bytes": 147901,
+    "sha256": "16bf928e5122dc6c0ad568e6a8ae255d1962f45a1e0692babc83a5e25188ff4f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/painting-valley-night-sky. 2.jpeg",
+    "relative_path": "backgrounds/painting-valley-night-sky. 2.jpeg",
+    "bytes": 465562,
+    "sha256": "eac201b599144ef4ecfdff0386c8f9bf74ab7f71141d65ae8350bb2de80ea0c5"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/room-interior-illustration.jpeg",
+    "relative_path": "backgrounds/room-interior-illustration.jpeg",
+    "bytes": 302391,
+    "sha256": "7ac26a9a73814026e10f6f256dfddb19c48d4b117a9561ca20d6ecc0614bc37f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/backgrounds/sdxl-classroom-door-view.jpeg",
+    "relative_path": "backgrounds/sdxl-classroom-door-view.jpeg",
+    "bytes": 221783,
+    "sha256": "c1d2f183e5f86f34c768f5582deae2446a16506e0c3658a366f670cfff277ea4"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/README.md",
+    "relative_path": "characters/README.md",
+    "bytes": 5554,
+    "sha256": "4717d127bcf84753b535234d1e919a25001d9236495d54f2eafe3130e2357f62"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/en_nuke_debate.yaml",
+    "relative_path": "characters/en_nuke_debate.yaml",
+    "bytes": 744,
+    "sha256": "4d1532707b157d2c1e2d938e7a559af92b67ebbcb5f07a27b37fd04739a7c8a6"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/en_unhelpful_ai.yaml",
+    "relative_path": "characters/en_unhelpful_ai.yaml",
+    "bytes": 375,
+    "sha256": "78e6324c0276666f94aa803c69bda9857a0040b85572a18ad9f6645b7d00acf5"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/zh_米粒.yaml",
+    "relative_path": "characters/zh_米粒.yaml",
+    "bytes": 414,
+    "sha256": "875cf76878167e91dbdaa3d7da46de83dd6fef0d242b659bdf1498cb7e278a26"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/zh_翻译腔.yaml",
+    "relative_path": "characters/zh_翻译腔.yaml",
+    "bytes": 1736,
+    "sha256": "8d1d977c01aa81f1d9ad24636743877f27e1b7e11025b713aab1d867b031aa3f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/config_templates/README.md",
+    "relative_path": "config_templates/README.md",
+    "bytes": 300,
+    "sha256": "f72772c2a71cfe060c1e1ea6df0dc2be7327911176ab064f4ca5b8e0d396dbd4"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/config_templates/conf.ZH.default.yaml",
+    "relative_path": "config_templates/conf.ZH.default.yaml",
+    "bytes": 26287,
+    "sha256": "c7b514f0fd204f4faf9d82cf1ec63f4f9e041095d731fd0968a3c8ec7e49d2c3"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/config_templates/conf.default.yaml",
+    "relative_path": "config_templates/conf.default.yaml",
+    "bytes": 25210,
+    "sha256": "d065ad0f1e40a5eb355b5cb152fddac9dad2400ae78ad383115064b690fd423c"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/doc/README.md",
+    "relative_path": "doc/README.md",
+    "bytes": 427,
+    "sha256": "07448313a08532529ff5d016486b125314ab97d3d12774d4628e4c5facb54e67"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/doc/sample_conf/sherpaASRTTS_sense_voice_melo.yaml",
+    "relative_path": "doc/sample_conf/sherpaASRTTS_sense_voice_melo.yaml",
+    "bytes": 4936,
+    "sha256": "ef5e5470b99577d2d81136af29e8d497bc5fc293b11d3200aa5f184ec8f4480a"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/doc/sample_conf/sherpaASRTTS_sense_voice_piper_en.yaml",
+    "relative_path": "doc/sample_conf/sherpaASRTTS_sense_voice_piper_en.yaml",
+    "bytes": 4661,
+    "sha256": "f21ba1160908bf72e7744ec3cdda06ceab3bdfec27952ed70a5044578dfadd01"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/doc/sample_conf/sherpaASRTTS_sense_voice_vits_zh.yaml",
+    "relative_path": "doc/sample_conf/sherpaASRTTS_sense_voice_vits_zh.yaml",
+    "bytes": 4908,
+    "sha256": "3674252c021cbbbd6a9e23958bb4133b1db3e38b493364cd2aef7edea93c4097"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/doc/sample_conf/sherpaASR_paraformer.yaml",
+    "relative_path": "doc/sample_conf/sherpaASR_paraformer.yaml",
+    "bytes": 3841,
+    "sha256": "524d7d6d4938697beeaf27f9719fc38c97a0cdd635db3bb429b9210cdb4a6d0a"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/doc/sample_conf/sherpaASR_sense_voice.yaml",
+    "relative_path": "doc/sample_conf/sherpaASR_sense_voice.yaml",
+    "bytes": 3784,
+    "sha256": "92a0ac980c2ebecf8ca0d8c48019510af1f1beeecad2441d7f779f0c499d4044"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/dockerfile",
+    "relative_path": "dockerfile",
+    "bytes": 2165,
+    "sha256": "2ba86239dbe3be8f5a5e225ef5c05050afbe264228a960fca13881d93d605a67"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/frontend",
+    "relative_path": "frontend",
+    "status": "submodule_or_missing"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/ReadMe.txt",
+    "relative_path": "live2d-models/mao_pro/ReadMe.txt",
+    "bytes": 2595,
+    "sha256": "451853cc3d5bd22ed71d4a6296d5930af1894e90cc8ae960e50676cd1422d3ad"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_01.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_01.exp3.json",
+    "bytes": 1981,
+    "sha256": "afbe54559e428acdaf43190d1c497792048c35ed37979f33d9a37c70181ddf5b"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_02.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_02.exp3.json",
+    "bytes": 1981,
+    "sha256": "6d35132627f9e362e526c0ce8c2152ece2b305c9abd3368da43460c2af8538f6"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_03.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_03.exp3.json",
+    "bytes": 1981,
+    "sha256": "460a3077d61adfdd1e6b9a062d0d7c3fcc2fb74c80f67ec3649982a9fab49bee"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_04.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_04.exp3.json",
+    "bytes": 1985,
+    "sha256": "abad61f4ec7f1a157d6b914643e5bd4ffb29964e67f538cace420ebc9f69a716"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_05.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_05.exp3.json",
+    "bytes": 1986,
+    "sha256": "331fe0d9c78861496a9cc9acba9650f295a72af8c36df7036ab8a372840d2cc1"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_06.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_06.exp3.json",
+    "bytes": 1985,
+    "sha256": "52f1e391008d61efb17a33602c004a637a42bdb8af8aca3d2319ac5dac215ed1"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_07.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_07.exp3.json",
+    "bytes": 1987,
+    "sha256": "8bf587d3d7bef509166c8ff95cc9f47c23c895eaf55f9d95110263e44452a53a"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/expressions/exp_08.exp3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/expressions/exp_08.exp3.json",
+    "bytes": 1982,
+    "sha256": "761190452e48d22727fce91e76270af2c27b0bb0ee3d04b2c6b0dc6cec49f88d"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/mao_pro.4096/texture_00.png",
+    "relative_path": "live2d-models/mao_pro/runtime/mao_pro.4096/texture_00.png",
+    "bytes": 8209997,
+    "sha256": "0a5f5436f26dcc908cf7c5ec1f8b54ff36b895cacaf9804daba31b92d424c594"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/mao_pro.cdi3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/mao_pro.cdi3.json",
+    "bytes": 15929,
+    "sha256": "ec699097d81d19bee7d4dda85dc85d8261e1d3de032faae857452cf7d99e4c58"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/mao_pro.moc3",
+    "relative_path": "live2d-models/mao_pro/runtime/mao_pro.moc3",
+    "bytes": 870272,
+    "sha256": "247d028f9900be2a46e4530816ece5749524d35013ba77424bd943598e0e54ff"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/mao_pro.model3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/mao_pro.model3.json",
+    "bytes": 1645,
+    "sha256": "27b71a0e5476d870ba69d1b52f5bd068ed5a03113739b4f5337e579e954b7e2a"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/mao_pro.physics3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/mao_pro.physics3.json",
+    "bytes": 21803,
+    "sha256": "b52221fe919dd7b84b74e594f50ac9a7878bf3a128ab6b4e3153447a037e2055"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/mao_pro.pose3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/mao_pro.pose3.json",
+    "bytes": 254,
+    "sha256": "efac160eccb7183ee6555d4e53a739042e1c55b92f59a99c2e4bed8e73a5ab91"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/motions/mtn_01.motion3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/motions/mtn_01.motion3.json",
+    "bytes": 27147,
+    "sha256": "5456d9ee0b2e13ab1174918a077490cb79fb3f73cad74c962f5f78214e98b007"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/motions/mtn_02.motion3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/motions/mtn_02.motion3.json",
+    "bytes": 23760,
+    "sha256": "d5d4bd768336d88839d3e8d17802c8ce4fe4f232bd06b7507e02bd876f15a9d6"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/motions/mtn_03.motion3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/motions/mtn_03.motion3.json",
+    "bytes": 22428,
+    "sha256": "2e7f784918acde7c6cac0e9243cf5f826f64b4f18fadc3d27069f92c46679c5f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/motions/mtn_04.motion3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/motions/mtn_04.motion3.json",
+    "bytes": 26840,
+    "sha256": "c84387bde7f862fda9f5e8fa29703664623649828de585650d170045f86a6bbc"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/motions/special_01.motion3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/motions/special_01.motion3.json",
+    "bytes": 33723,
+    "sha256": "846d5bbac4fc80c7451688f5d56a5cb60f01d951b5c719a36bbdfa46fe08b49f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/motions/special_02.motion3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/motions/special_02.motion3.json",
+    "bytes": 41295,
+    "sha256": "6bc5d29371ea5edffe030271bd09a1a4fd51d35eaa511d977fbfb5703de75a57"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/mao_pro/runtime/motions/special_03.motion3.json",
+    "relative_path": "live2d-models/mao_pro/runtime/motions/special_03.motion3.json",
+    "bytes": 47803,
+    "sha256": "5e3b89bb95f5abe067cdec47395c19c88882846051b4b35e5f7c8bc875b83d17"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/ReadMe.txt",
+    "relative_path": "live2d-models/shizuku/ReadMe.txt",
+    "bytes": 2393,
+    "sha256": "81c54959d096cc43d5f76bc40a0bb7e63ceb79c70ace289fb989ea9fb2de71c7"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/motion/01.motion3.json",
+    "relative_path": "live2d-models/shizuku/runtime/motion/01.motion3.json",
+    "bytes": 6081,
+    "sha256": "79f29fbe47d51ec0eab8f1b95681725165e52a4f828646daf8a933cbf2b0c96f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/motion/02.motion3.json",
+    "relative_path": "live2d-models/shizuku/runtime/motion/02.motion3.json",
+    "bytes": 11099,
+    "sha256": "53e0a3a17301959d1d1b9d8771cde4a3c46ed5001bcfbad9d42ef08f4ffe28ec"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/motion/03.motion3.json",
+    "relative_path": "live2d-models/shizuku/runtime/motion/03.motion3.json",
+    "bytes": 6587,
+    "sha256": "e7221a9c00d6e5ec328f397123afd1c1688350a0a432807f9f1ba5333b721901"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/motion/04.motion3.json",
+    "relative_path": "live2d-models/shizuku/runtime/motion/04.motion3.json",
+    "bytes": 6233,
+    "sha256": "cec5bfeec113d133215408815eb3e06fa680eaecfd684c0ab4b44928d8a798cd"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.1024/texture_00.png",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.1024/texture_00.png",
+    "bytes": 581818,
+    "sha256": "ead4e9a764ae2f9210ee8f78af59fe43ca1d8e1f821f76337b6a80113c10b38a"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.1024/texture_01.png",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.1024/texture_01.png",
+    "bytes": 1039960,
+    "sha256": "576ddc54a1f53fcb6a9febc172eb17ad57bd58561b8e47d85228166d96ef352f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.1024/texture_02.png",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.1024/texture_02.png",
+    "bytes": 1256245,
+    "sha256": "a9bdc3d13f64a15a975329c8089df19ea8bc97202c6ed55e8e4545a8041f7cff"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.1024/texture_03.png",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.1024/texture_03.png",
+    "bytes": 534673,
+    "sha256": "c0de2f11935525019aa878eafc810abf5487c69d7ece1d16a7dfe7aa0a591dad"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.1024/texture_04.png",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.1024/texture_04.png",
+    "bytes": 1038025,
+    "sha256": "acdfb823e2e1a6e914e0e76242b62460e9142dfee69c0a3446ca876e1f955584"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.cdi3.json",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.cdi3.json",
+    "bytes": 6329,
+    "sha256": "4576c0c2a762c02e804ee1d0edd6a069ee353fd33c05b336bab0de133a9aa0fa"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.moc3",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.moc3",
+    "bytes": 761472,
+    "sha256": "c61cfd02474386a4f2ee19d82cc4a873472b226ad725118f772f15088e74556c"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.model3.json",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.model3.json",
+    "bytes": 917,
+    "sha256": "cad88160d5ec3c2f8ef41119e08d85a36b0c3b3a3d87f65eabc507bf4d2d50ce"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.physics3.json",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.physics3.json",
+    "bytes": 4267,
+    "sha256": "b64a0763a87872dd2b3f47a1bb09be4896379cab9d978f808784bf1233c71917"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/live2d-models/shizuku/runtime/shizuku.pose3.json",
+    "relative_path": "live2d-models/shizuku/runtime/shizuku.pose3.json",
+    "bytes": 286,
+    "sha256": "3c2339b80a805b846a4528cf2c45bdae7904e7e89027a536cd0b71529ed187db"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/mcp_servers.json",
+    "relative_path": "mcp_servers.json",
+    "bytes": 250,
+    "sha256": "f6e90cb3f156aa009b8f9cde3aa3c13bf41f08658edeac1b7f4b44e9df48dfcb"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/model_dict.json",
+    "relative_path": "model_dict.json",
+    "bytes": 679,
+    "sha256": "fa83d9e0a5063a81906d7116581048b4c90b0e85e088be3553915d46b5cf2202"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/pixi.lock",
+    "relative_path": "pixi.lock",
+    "bytes": 89773,
+    "sha256": "eb4b79d1a209af2c40c17700e235ec414d59dfda393aa1b9dcb5d5370954c21c"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/README.md",
+    "relative_path": "prompts/README.md",
+    "bytes": 720,
+    "sha256": "52e2693a28269b8c0559265986ee1dd78a582c02c7291b10331d900100792573"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/__init__.py",
+    "relative_path": "prompts/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "extra_ast_symbols": []
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/prompt_loader.py",
+    "relative_path": "prompts/prompt_loader.py",
+    "bytes": 2294,
+    "sha256": "4d920850a7c769aafe2cc4a8605f680b0343ea17321fae7c45732d409a851cb1",
+    "extra_ast_symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "_load_file_content",
+        "line": 12,
+        "end_line": 54
+      },
+      {
+        "type": "FunctionDef",
+        "name": "load_persona",
+        "line": 57,
+        "end_line": 64
+      },
+      {
+        "type": "FunctionDef",
+        "name": "load_util",
+        "line": 67,
+        "end_line": 74
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/concise_style_prompt.txt",
+    "relative_path": "prompts/utils/concise_style_prompt.txt",
+    "bytes": 479,
+    "sha256": "8918f8f33a0158da90aea02d0cf9c7b20868cfbb60733390eb53d0799fdd60e6"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/group_conversation_prompt.txt",
+    "relative_path": "prompts/utils/group_conversation_prompt.txt",
+    "bytes": 396,
+    "sha256": "0dcfe15bbe2639911112ee17ec2083f0ef1679f9a9cd86232d5b2dd764683ae5"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/live2d_expression_prompt.txt",
+    "relative_path": "prompts/utils/live2d_expression_prompt.txt",
+    "bytes": 572,
+    "sha256": "16f7774498182c0c1a8a082ef622185057691b6c6b949fadc6b3218c557ddaac"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/live_prompt.txt",
+    "relative_path": "prompts/utils/live_prompt.txt",
+    "bytes": 427,
+    "sha256": "96fe9c22139d41b335b1c906047f84a25c849afb69072c99e30d0b1efee3e3c2"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/mcp_prompt.txt",
+    "relative_path": "prompts/utils/mcp_prompt.txt",
+    "bytes": 1693,
+    "sha256": "a0b5d598d201ba9e430071a2feec12158e32e71ccc6cfaab70adeedae8075231"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/proactive_speak_prompt.txt",
+    "relative_path": "prompts/utils/proactive_speak_prompt.txt",
+    "bytes": 84,
+    "sha256": "0520ccd58da8c9c114842bff19fdd1297b4e7a16d0e96daf70d2a1aef99ff5f9"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/speakable_prompt.txt",
+    "relative_path": "prompts/utils/speakable_prompt.txt",
+    "bytes": 1280,
+    "sha256": "dd5691e792608462b906b799b92adad6201b5e2631e325fa13c0e67eb668116a"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/think_tag_prompt.txt",
+    "relative_path": "prompts/utils/think_tag_prompt.txt",
+    "bytes": 428,
+    "sha256": "2dfc6593cf199cdc050dd1263b59440f193127fc2dbd5d120feac62282a78e01"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/tool_guidance_prompt.txt",
+    "relative_path": "prompts/utils/tool_guidance_prompt.txt",
+    "bytes": 256,
+    "sha256": "3a679d35e62ff976426cdc68959d15a9cc532969f6ca0ef99a940e7942313560"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/pyproject.toml",
+    "relative_path": "pyproject.toml",
+    "bytes": 1840,
+    "sha256": "65b6f81d92183fb0f7b65a0dfd2d5ca2826d0a1b6f3ede021305c092fb8f2d7d"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/requirements-bilibili.txt",
+    "relative_path": "requirements-bilibili.txt",
+    "bytes": 783,
+    "sha256": "6b6de3293927f69742c959576d55b2a14ef5fd00f46a9af684f04214824f5e11"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/requirements.txt",
+    "relative_path": "requirements.txt",
+    "bytes": 42047,
+    "sha256": "a9630175fc7c518604f6153b8f5df2e4bddf74b47b277eb0e467ea3db84460b3"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/run_server.py",
+    "relative_path": "run_server.py",
+    "bytes": 6916,
+    "sha256": "85b8e8c8cf637615addae4703b8436d350fe91bd6fef2a4afe7140fda7c7054d",
+    "extra_ast_symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "get_version",
+        "line": 22,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_logger",
+        "line": 28,
+        "end_line": 47
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_frontend_submodule",
+        "line": 50,
+        "end_line": 107
+      },
+      {
+        "type": "FunctionDef",
+        "name": "parse_args",
+        "line": 110,
+        "end_line": 116
+      },
+      {
+        "type": "FunctionDef",
+        "name": "run",
+        "line": 120,
+        "end_line": 164
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/scripts/run_bilibili_live.py",
+    "relative_path": "scripts/run_bilibili_live.py",
+    "bytes": 2023,
+    "sha256": "48c5d2662b8bcc62d89bf84c9646fdf5633601fe225d13c15c585fe2765eedd6",
+    "extra_ast_symbols": [
+      {
+        "type": "AsyncFunctionDef",
+        "name": "main",
+        "line": 14,
+        "end_line": 53
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/__init__.py",
+    "relative_path": "src/open_llm_vtuber/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/__init__.py",
+    "relative_path": "src/open_llm_vtuber/agent/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agent_factory.py",
+    "relative_path": "src/open_llm_vtuber/agent/agent_factory.py",
+    "bytes": 5393,
+    "sha256": "a965695d277c2c7b89a96d5e55f5a52b60db3ac28e7e719fcfe1f59be92e6eeb",
+    "lines": 132,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AgentFactory",
+        "line": 15,
+        "end_line": 132
+      },
+      {
+        "type": "FunctionDef",
+        "name": "create_agent",
+        "line": 17,
+        "end_line": 132
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/__init__.py",
+    "relative_path": "src/open_llm_vtuber/agent/agents/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/agent_interface.py",
+    "relative_path": "src/open_llm_vtuber/agent/agents/agent_interface.py",
+    "bytes": 1771,
+    "sha256": "934da3dc1f0878b0510ead83aaf67ce9fb59d59cceb737237f7ff3d3df442595",
+    "lines": 54,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AgentInterface",
+        "line": 9,
+        "end_line": 54
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat",
+        "line": 13,
+        "end_line": 29
+      },
+      {
+        "type": "FunctionDef",
+        "name": "handle_interrupt",
+        "line": 32,
+        "end_line": 43
+      },
+      {
+        "type": "FunctionDef",
+        "name": "set_memory_from_history",
+        "line": 46,
+        "end_line": 54
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+    "relative_path": "src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+    "bytes": 28012,
+    "sha256": "d0124df26b4ca24fd5e135959927b355f9e388350f4d9bbbae575dc714d2e1b7",
+    "lines": 702,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "BasicMemoryAgent",
+        "line": 33,
+        "end_line": 702
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 38,
+        "end_line": 112
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_set_llm",
+        "line": 114,
+        "end_line": 117
+      },
+      {
+        "type": "FunctionDef",
+        "name": "set_system",
+        "line": 119,
+        "end_line": 126
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_add_message",
+        "line": 128,
+        "end_line": 174
+      },
+      {
+        "type": "FunctionDef",
+        "name": "set_memory_from_history",
+        "line": 176,
+        "end_line": 193
+      },
+      {
+        "type": "FunctionDef",
+        "name": "handle_interrupt",
+        "line": 195,
+        "end_line": 223
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_to_text_prompt",
+        "line": 225,
+        "end_line": 240
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_to_messages",
+        "line": 242,
+        "end_line": 288
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_claude_tool_interaction_loop",
+        "line": 290,
+        "end_line": 401
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_openai_tool_interaction_loop",
+        "line": 403,
+        "end_line": 579
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_chat_function_factory",
+        "line": 581,
+        "end_line": 662
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat",
+        "line": 664,
+        "end_line": 671
+      },
+      {
+        "type": "FunctionDef",
+        "name": "reset_interrupt",
+        "line": 673,
+        "end_line": 675
+      },
+      {
+        "type": "FunctionDef",
+        "name": "start_group_conversation",
+        "line": 677,
+        "end_line": 702
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat_with_memory",
+        "line": 594,
+        "end_line": 660
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/hume_ai.py",
+    "relative_path": "src/open_llm_vtuber/agent/agents/hume_ai.py",
+    "bytes": 9099,
+    "sha256": "133c1343f7f6ee76271019ac934a81b329989468687eb05386127cb4a9079366",
+    "lines": 256,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "HumeAIAgent",
+        "line": 15,
+        "end_line": 256
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 23,
+        "end_line": 54
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "connect",
+        "line": 56,
+        "end_line": 101
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_reset_idle_timer",
+        "line": 103,
+        "end_line": 115
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_ensure_connection",
+        "line": 117,
+        "end_line": 120
+      },
+      {
+        "type": "FunctionDef",
+        "name": "set_memory_from_history",
+        "line": 122,
+        "end_line": 155
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat",
+        "line": 157,
+        "end_line": 237
+      },
+      {
+        "type": "FunctionDef",
+        "name": "handle_interrupt",
+        "line": 239,
+        "end_line": 241
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__del__",
+        "line": 243,
+        "end_line": 256
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "disconnect_after_timeout",
+        "line": 108,
+        "end_line": 113
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_RANGES",
+    "read_ranges": [
+      [
+        65,
+        256
+      ]
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/letta_agent.py",
+    "relative_path": "src/open_llm_vtuber/agent/agents/letta_agent.py",
+    "bytes": 4431,
+    "sha256": "ee482486575d35713133cefba3d999f5ffc53f838481cc9cd74ee68024a4ca01",
+    "lines": 128,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "LettaAgent",
+        "line": 15,
+        "end_line": 128
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 20,
+        "end_line": 51
+      },
+      {
+        "type": "FunctionDef",
+        "name": "set_memory_from_history",
+        "line": 53,
+        "end_line": 55
+      },
+      {
+        "type": "FunctionDef",
+        "name": "handle_interrupt",
+        "line": 57,
+        "end_line": 58
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "generator_to_async",
+        "line": 60,
+        "end_line": 62
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat",
+        "line": 64,
+        "end_line": 89
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_to_text_prompt",
+        "line": 91,
+        "end_line": 110
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_to_messages",
+        "line": 112,
+        "end_line": 128
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/mem0_llm.py",
+    "relative_path": "src/open_llm_vtuber/agent/agents/mem0_llm.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/input_types.py",
+    "relative_path": "src/open_llm_vtuber/agent/input_types.py",
+    "bytes": 2313,
+    "sha256": "8ac302d9fd635049639f5362b0f43385589587e4483ef7ac6c37d3574911edfa",
+    "lines": 94,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ImageSource",
+        "line": 6,
+        "end_line": 12
+      },
+      {
+        "type": "ClassDef",
+        "name": "TextSource",
+        "line": 15,
+        "end_line": 19
+      },
+      {
+        "type": "ClassDef",
+        "name": "ImageData",
+        "line": 23,
+        "end_line": 35
+      },
+      {
+        "type": "ClassDef",
+        "name": "FileData",
+        "line": 39,
+        "end_line": 51
+      },
+      {
+        "type": "ClassDef",
+        "name": "TextData",
+        "line": 55,
+        "end_line": 67
+      },
+      {
+        "type": "ClassDef",
+        "name": "BaseInput",
+        "line": 70,
+        "end_line": 73
+      },
+      {
+        "type": "ClassDef",
+        "name": "BatchInput",
+        "line": 77,
+        "end_line": 94
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/output_types.py",
+    "relative_path": "src/open_llm_vtuber/agent/output_types.py",
+    "bytes": 2259,
+    "sha256": "e14963eac1d24cbc24841b87a1533c6b068fd33052f5d87096cf18495bed7c38",
+    "lines": 77,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "Actions",
+        "line": 7,
+        "end_line": 16
+      },
+      {
+        "type": "ClassDef",
+        "name": "BaseOutput",
+        "line": 19,
+        "end_line": 25
+      },
+      {
+        "type": "ClassDef",
+        "name": "DisplayText",
+        "line": 29,
+        "end_line": 42
+      },
+      {
+        "type": "ClassDef",
+        "name": "SentenceOutput",
+        "line": 46,
+        "end_line": 63
+      },
+      {
+        "type": "ClassDef",
+        "name": "AudioOutput",
+        "line": 67,
+        "end_line": 77
+      },
+      {
+        "type": "FunctionDef",
+        "name": "to_dict",
+        "line": 14,
+        "end_line": 16
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__aiter__",
+        "line": 23,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "to_dict",
+        "line": 36,
+        "end_line": 38
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__str__",
+        "line": 40,
+        "end_line": 42
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "__aiter__",
+        "line": 61,
+        "end_line": 63
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "__aiter__",
+        "line": 75,
+        "end_line": 77
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/__init__.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/claude_llm.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm/claude_llm.py",
+    "bytes": 11879,
+    "sha256": "5f6d354ae0e5b09596e95ee80678f6b20b3832cfc69ff7fde06bb9fa57fc435f",
+    "lines": 246,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AsyncLLM",
+        "line": 15,
+        "end_line": 246
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 16,
+        "end_line": 41
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_convert_message_format",
+        "line": 43,
+        "end_line": 82
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat_completion",
+        "line": 84,
+        "end_line": 246
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/llama_cpp_llm.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm/llama_cpp_llm.py",
+    "bytes": 2611,
+    "sha256": "91514bdf60ccf69e84b57d2119ed6064c29da12396fe140b561e7c6f875803a0",
+    "lines": 76,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "LLM",
+        "line": 13,
+        "end_line": 76
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 14,
+        "end_line": 32
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat_completion",
+        "line": 34,
+        "end_line": 76
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/ollama_llm.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm/ollama_llm.py",
+    "bytes": 2565,
+    "sha256": "c8b322ea5d78c14e5fe362feb32428bb1a00b9ddfae0802cc31de06ddbd958a3",
+    "lines": 73,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "OllamaLLM",
+        "line": 7,
+        "end_line": 73
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 8,
+        "end_line": 52
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__del__",
+        "line": 54,
+        "end_line": 56
+      },
+      {
+        "type": "FunctionDef",
+        "name": "cleanup",
+        "line": 58,
+        "end_line": 73
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/openai_compatible_llm.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm/openai_compatible_llm.py",
+    "bytes": 10717,
+    "sha256": "1c413175789c137c3236ec66fad4ec8f1e5461a3a8c469443cc6a20e470ba26d",
+    "lines": 237,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AsyncLLM",
+        "line": 24,
+        "end_line": 237
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 25,
+        "end_line": 58
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat_completion",
+        "line": 60,
+        "end_line": 237
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/stateless_llm_interface.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm/stateless_llm_interface.py",
+    "bytes": 2328,
+    "sha256": "13fcacb2714979a8c073d438f6968dd173e6f4f6d54649d674a3f8b11ac3a89d",
+    "lines": 64,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "StatelessLLMInterface",
+        "line": 5,
+        "end_line": 64
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat_completion",
+        "line": 22,
+        "end_line": 64
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/stateless_llm_with_template.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm/stateless_llm_with_template.py",
+    "bytes": 6850,
+    "sha256": "1d7d570648fa3b0948b12c5b736aa4c5b51787f0cd311745a86b151b3c47fb2b",
+    "lines": 195,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AsyncLLMWithTemplate",
+        "line": 86,
+        "end_line": 195
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 87,
+        "end_line": 119
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "chat_completion",
+        "line": 121,
+        "end_line": 184
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_clean_raw_bytes",
+        "line": 186,
+        "end_line": 190
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_process_line",
+        "line": 192,
+        "end_line": 195
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm_factory.py",
+    "relative_path": "src/open_llm_vtuber/agent/stateless_llm_factory.py",
+    "bytes": 3173,
+    "sha256": "70cf729e499e2f610c6a5ade123efb3c4eb0d8bfb7206bb4550119f3a459301b",
+    "lines": 82,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "LLMFactory",
+        "line": 14,
+        "end_line": 78
+      },
+      {
+        "type": "FunctionDef",
+        "name": "create_llm",
+        "line": 16,
+        "end_line": 78
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/transformers.py",
+    "relative_path": "src/open_llm_vtuber/agent/transformers.py",
+    "bytes": 7959,
+    "sha256": "9ed81560afce8f88226102c2d6a432a27fedfcb4b4b854e9bf0dbcb68c958d8f",
+    "lines": 217,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "sentence_divider",
+        "line": 12,
+        "end_line": 55
+      },
+      {
+        "type": "FunctionDef",
+        "name": "actions_extractor",
+        "line": 58,
+        "end_line": 100
+      },
+      {
+        "type": "FunctionDef",
+        "name": "display_processor",
+        "line": 103,
+        "end_line": 154
+      },
+      {
+        "type": "FunctionDef",
+        "name": "tts_filter",
+        "line": 157,
+        "end_line": 217
+      },
+      {
+        "type": "FunctionDef",
+        "name": "decorator",
+        "line": 26,
+        "end_line": 53
+      },
+      {
+        "type": "FunctionDef",
+        "name": "decorator",
+        "line": 63,
+        "end_line": 98
+      },
+      {
+        "type": "FunctionDef",
+        "name": "decorator",
+        "line": 108,
+        "end_line": 152
+      },
+      {
+        "type": "FunctionDef",
+        "name": "decorator",
+        "line": 165,
+        "end_line": 215
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "wrapper",
+        "line": 34,
+        "end_line": 50
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "wrapper",
+        "line": 71,
+        "end_line": 96
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "wrapper",
+        "line": 119,
+        "end_line": 150
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "wrapper",
+        "line": 176,
+        "end_line": 213
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/__init__.py",
+    "relative_path": "src/open_llm_vtuber/asr/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/asr_factory.py",
+    "relative_path": "src/open_llm_vtuber/asr/asr_factory.py",
+    "bytes": 2434,
+    "sha256": "4d049c53686c76b23b392ecad317f5fd964cf123cceb8e2b23030033689b89b2",
+    "lines": 62,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ASRFactory",
+        "line": 5,
+        "end_line": 62
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_asr_system",
+        "line": 7,
+        "end_line": 62
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/asr_interface.py",
+    "relative_path": "src/open_llm_vtuber/asr/asr_interface.py",
+    "bytes": 1840,
+    "sha256": "01512d27333849e4300492ed086563f1dce780404c0edaf296d7e6f2ef3d9e54",
+    "lines": 57,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ASRInterface",
+        "line": 6,
+        "end_line": 57
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "async_transcribe_np",
+        "line": 11,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 28,
+        "end_line": 34
+      },
+      {
+        "type": "FunctionDef",
+        "name": "nparray_to_audio_file",
+        "line": 36,
+        "end_line": 57
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/azure_asr.py",
+    "relative_path": "src/open_llm_vtuber/asr/azure_asr.py",
+    "bytes": 5354,
+    "sha256": "a1b6b553d56469501a5283c4e8e42573b653bd358b2d646bc07ffe4b71533c50",
+    "lines": 155,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VoiceRecognition",
+        "line": 14,
+        "end_line": 151
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 15,
+        "end_line": 44
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_create_speech_recognizer",
+        "line": 46,
+        "end_line": 65
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "async_transcribe_np",
+        "line": 67,
+        "end_line": 125
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 127,
+        "end_line": 151
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/faster_whisper_asr.py",
+    "relative_path": "src/open_llm_vtuber/asr/faster_whisper_asr.py",
+    "bytes": 1544,
+    "sha256": "ce623d6248bf1b626804cc5a91229aa7d2cb4b3d612ad9027d5a84c794d53d5d",
+    "lines": 50,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VoiceRecognition",
+        "line": 6,
+        "end_line": 50
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 10,
+        "end_line": 27
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 29,
+        "end_line": 50
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/fun_asr.py",
+    "relative_path": "src/open_llm_vtuber/asr/fun_asr.py",
+    "bytes": 4983,
+    "sha256": "27e1136cd39c449638f4bbad630de0993687300ba7326b5d5eb9b2f9122b55a6",
+    "lines": 131,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VoiceRecognition",
+        "line": 39,
+        "end_line": 131
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 40,
+        "end_line": 72
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_get_final_model_input",
+        "line": 74,
+        "end_line": 101
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 103,
+        "end_line": 124
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_numpy_to_wav_in_memory",
+        "line": 126,
+        "end_line": 131
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/groq_whisper_asr.py",
+    "relative_path": "src/open_llm_vtuber/asr/groq_whisper_asr.py",
+    "bytes": 1846,
+    "sha256": "05ee6ea23ee325bffa75a0c439a5eb279a0a39c0f5fc688daa34dc87d3347836",
+    "lines": 56,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VoiceRecognition",
+        "line": 9,
+        "end_line": 56
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 12,
+        "end_line": 18
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 20,
+        "end_line": 56
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/openai_whisper_asr.py",
+    "relative_path": "src/open_llm_vtuber/asr/openai_whisper_asr.py",
+    "bytes": 739,
+    "sha256": "09adf03671b23b8e3d8e5a9c8ff7b78309cb6f625d00d71179746be30bf4410a",
+    "lines": 27,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VoiceRecognition",
+        "line": 6,
+        "end_line": 27
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 7,
+        "end_line": 19
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 21,
+        "end_line": 27
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/sherpa_onnx_asr.py",
+    "relative_path": "src/open_llm_vtuber/asr/sherpa_onnx_asr.py",
+    "bytes": 10234,
+    "sha256": "0c8d75423cfe538c4d8d47c03d22ba82160355a3e313eef9f6d896c1dced1e06",
+    "lines": 219,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VoiceRecognition",
+        "line": 10,
+        "end_line": 219
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 11,
+        "end_line": 87
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_create_recognizer",
+        "line": 89,
+        "end_line": 213
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 215,
+        "end_line": 219
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/utils.py",
+    "relative_path": "src/open_llm_vtuber/asr/utils.py",
+    "bytes": 6230,
+    "sha256": "b4e968d70dd6ad6cc468969ff9d643f81bbeba6db9671804d57537a6006fee26",
+    "lines": 176,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "get_github_asset_url",
+        "line": 9,
+        "end_line": 48
+      },
+      {
+        "type": "FunctionDef",
+        "name": "download_and_extract",
+        "line": 51,
+        "end_line": 118
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_and_extract_local_file",
+        "line": 121,
+        "end_line": 161
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/whisper_cpp_asr.py",
+    "relative_path": "src/open_llm_vtuber/asr/whisper_cpp_asr.py",
+    "bytes": 1097,
+    "sha256": "efb6691f5733695ed158d1954ec5a7812d550faa828d89c08c32bca752d2b704",
+    "lines": 37,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VoiceRecognition",
+        "line": 8,
+        "end_line": 37
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 9,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "transcribe_np",
+        "line": 27,
+        "end_line": 37
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/chat_group.py",
+    "relative_path": "src/open_llm_vtuber/chat_group.py",
+    "bytes": 12064,
+    "sha256": "75f13dcfc1857d7e9014ca552c07358771d3231ba4a139f7b029f1f26b558e32",
+    "lines": 299,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "Group",
+        "line": 9,
+        "end_line": 12
+      },
+      {
+        "type": "ClassDef",
+        "name": "ChatGroupManager",
+        "line": 15,
+        "end_line": 160
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_group_operation",
+        "line": 163,
+        "end_line": 259
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_client_disconnect",
+        "line": 262,
+        "end_line": 284
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "broadcast_to_group",
+        "line": 287,
+        "end_line": 299
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 16,
+        "end_line": 18
+      },
+      {
+        "type": "FunctionDef",
+        "name": "create_group_for_client",
+        "line": 20,
+        "end_line": 26
+      },
+      {
+        "type": "FunctionDef",
+        "name": "add_client_to_group",
+        "line": 28,
+        "end_line": 62
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_client_from_group",
+        "line": 64,
+        "end_line": 97
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_client",
+        "line": 99,
+        "end_line": 136
+      },
+      {
+        "type": "FunctionDef",
+        "name": "cleanup_disconnected_clients",
+        "line": 138,
+        "end_line": 142
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_client_group",
+        "line": 144,
+        "end_line": 149
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_group_members",
+        "line": 151,
+        "end_line": 156
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_group_by_id",
+        "line": 158,
+        "end_line": 160
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/chat_history_manager.py",
+    "relative_path": "src/open_llm_vtuber/chat_history_manager.py",
+    "bytes": 12540,
+    "sha256": "fb63f7764d54087371cd80d7b4d346c97001aad8d0795888cde6320fe074762c",
+    "lines": 374,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "HistoryMessage",
+        "line": 10,
+        "end_line": 16
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_is_safe_filename",
+        "line": 19,
+        "end_line": 27
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_sanitize_path_component",
+        "line": 30,
+        "end_line": 38
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_ensure_conf_dir",
+        "line": 41,
+        "end_line": 49
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_get_safe_history_path",
+        "line": 52,
+        "end_line": 60
+      },
+      {
+        "type": "FunctionDef",
+        "name": "create_new_history",
+        "line": 63,
+        "end_line": 90
+      },
+      {
+        "type": "FunctionDef",
+        "name": "store_message",
+        "line": 93,
+        "end_line": 147
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_metadata",
+        "line": 150,
+        "end_line": 167
+      },
+      {
+        "type": "FunctionDef",
+        "name": "update_metadate",
+        "line": 170,
+        "end_line": 206
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_history",
+        "line": 209,
+        "end_line": 230
+      },
+      {
+        "type": "FunctionDef",
+        "name": "delete_history",
+        "line": 233,
+        "end_line": 247
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_history_list",
+        "line": 250,
+        "end_line": 308
+      },
+      {
+        "type": "FunctionDef",
+        "name": "modify_latest_message",
+        "line": 311,
+        "end_line": 351
+      },
+      {
+        "type": "FunctionDef",
+        "name": "rename_history_file",
+        "line": 354,
+        "end_line": 374
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/__init__.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/__init__.py",
+    "bytes": 2831,
+    "sha256": "4e06615556c7552f5dc2cc21773886d605b5c0120c1938a3dda04dec1b0385e4",
+    "lines": 125,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/agent.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/agent.py",
+    "bytes": 8726,
+    "sha256": "9133de6f72318e25dc983fb9807860d3de3e3e825f18e3be78256d0c9cc391aa",
+    "lines": 226,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "BasicMemoryAgentConfig",
+        "line": 14,
+        "end_line": 58
+      },
+      {
+        "type": "ClassDef",
+        "name": "Mem0VectorStoreConfig",
+        "line": 61,
+        "end_line": 74
+      },
+      {
+        "type": "ClassDef",
+        "name": "Mem0LLMConfig",
+        "line": 77,
+        "end_line": 88
+      },
+      {
+        "type": "ClassDef",
+        "name": "Mem0EmbedderConfig",
+        "line": 91,
+        "end_line": 102
+      },
+      {
+        "type": "ClassDef",
+        "name": "Mem0Config",
+        "line": 105,
+        "end_line": 116
+      },
+      {
+        "type": "ClassDef",
+        "name": "HumeAIConfig",
+        "line": 122,
+        "end_line": 145
+      },
+      {
+        "type": "ClassDef",
+        "name": "LettaConfig",
+        "line": 151,
+        "end_line": 172
+      },
+      {
+        "type": "ClassDef",
+        "name": "AgentSettings",
+        "line": 175,
+        "end_line": 196
+      },
+      {
+        "type": "ClassDef",
+        "name": "AgentConfig",
+        "line": 199,
+        "end_line": 226
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/asr.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/asr.py",
+    "bytes": 16640,
+    "sha256": "0b87ca781cc593d006f35b983e9c36f72be62579946aef9f5b36693a699d58de",
+    "lines": 375,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AzureASRConfig",
+        "line": 7,
+        "end_line": 25
+      },
+      {
+        "type": "ClassDef",
+        "name": "FasterWhisperConfig",
+        "line": 28,
+        "end_line": 62
+      },
+      {
+        "type": "ClassDef",
+        "name": "WhisperCPPConfig",
+        "line": 65,
+        "end_line": 94
+      },
+      {
+        "type": "ClassDef",
+        "name": "WhisperConfig",
+        "line": 97,
+        "end_line": 116
+      },
+      {
+        "type": "ClassDef",
+        "name": "FunASRConfig",
+        "line": 119,
+        "end_line": 159
+      },
+      {
+        "type": "ClassDef",
+        "name": "GroqWhisperASRConfig",
+        "line": 162,
+        "end_line": 181
+      },
+      {
+        "type": "ClassDef",
+        "name": "SherpaOnnxASRConfig",
+        "line": 184,
+        "end_line": 307
+      },
+      {
+        "type": "ClassDef",
+        "name": "ASRConfig",
+        "line": 310,
+        "end_line": 375
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_model_paths",
+        "line": 263,
+        "end_line": 307
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_asr_config",
+        "line": 356,
+        "end_line": 375
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/character.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/character.py",
+    "bytes": 3324,
+    "sha256": "0647ec0a75be41291bc858e69a4b59f6f0a66e4e54a03e8f391032a273052089",
+    "lines": 84,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "CharacterConfig",
+        "line": 13,
+        "end_line": 84
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_default_persona_prompt",
+        "line": 73,
+        "end_line": 78
+      },
+      {
+        "type": "FunctionDef",
+        "name": "set_default_character_name",
+        "line": 81,
+        "end_line": 84
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/i18n.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/i18n.py",
+    "bytes": 4302,
+    "sha256": "67755f9133465815d30039e057269f7b47d490a321b3a4576cfdcab46d44d737",
+    "lines": 139,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "MultiLingualString",
+        "line": 6,
+        "end_line": 24
+      },
+      {
+        "type": "ClassDef",
+        "name": "Description",
+        "line": 27,
+        "end_line": 76
+      },
+      {
+        "type": "ClassDef",
+        "name": "I18nMixin",
+        "line": 79,
+        "end_line": 139
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get",
+        "line": 14,
+        "end_line": 24
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_text",
+        "line": 36,
+        "end_line": 46
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_notes",
+        "line": 48,
+        "end_line": 58
+      },
+      {
+        "type": "FunctionDef",
+        "name": "from_str",
+        "line": 61,
+        "end_line": 76
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_field_description",
+        "line": 89,
+        "end_line": 105
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_field_notes",
+        "line": 108,
+        "end_line": 122
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_field_options",
+        "line": 125,
+        "end_line": 139
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/live.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/live.py",
+    "bytes": 1100,
+    "sha256": "e9f04f3ac6b3a96dc88b7984ae8ea2fd1068df1f3aa43ecac6e31ab544f6e812",
+    "lines": 34,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "BiliBiliLiveConfig",
+        "line": 6,
+        "end_line": 20
+      },
+      {
+        "type": "ClassDef",
+        "name": "LiveConfig",
+        "line": 23,
+        "end_line": 34
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/main.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/main.py",
+    "bytes": 1022,
+    "sha256": "ad0ee1cd5f36fa4233caea6f3011c736a3c5a2ae485bd20a9092851dfc655b31",
+    "lines": 30,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "Config",
+        "line": 11,
+        "end_line": 30
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/stateless_llm.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/stateless_llm.py",
+    "bytes": 11209,
+    "sha256": "56b73b612f2c464e76cbd696c580ac05517b65445e2f1746dbe382ca824ea588",
+    "lines": 285,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "StatelessLLMBaseConfig",
+        "line": 7,
+        "end_line": 22
+      },
+      {
+        "type": "ClassDef",
+        "name": "StatelessLLMWithTemplate",
+        "line": 25,
+        "end_line": 55
+      },
+      {
+        "type": "ClassDef",
+        "name": "OpenAICompatibleConfig",
+        "line": 58,
+        "end_line": 87
+      },
+      {
+        "type": "ClassDef",
+        "name": "OllamaConfig",
+        "line": 93,
+        "end_line": 123
+      },
+      {
+        "type": "ClassDef",
+        "name": "LmStudioConfig",
+        "line": 126,
+        "end_line": 133
+      },
+      {
+        "type": "ClassDef",
+        "name": "OpenAIConfig",
+        "line": 136,
+        "end_line": 142
+      },
+      {
+        "type": "ClassDef",
+        "name": "GeminiConfig",
+        "line": 145,
+        "end_line": 153
+      },
+      {
+        "type": "ClassDef",
+        "name": "MistralConfig",
+        "line": 156,
+        "end_line": 162
+      },
+      {
+        "type": "ClassDef",
+        "name": "ZhipuConfig",
+        "line": 165,
+        "end_line": 168
+      },
+      {
+        "type": "ClassDef",
+        "name": "DeepseekConfig",
+        "line": 171,
+        "end_line": 174
+      },
+      {
+        "type": "ClassDef",
+        "name": "GroqConfig",
+        "line": 177,
+        "end_line": 183
+      },
+      {
+        "type": "ClassDef",
+        "name": "ClaudeConfig",
+        "line": 186,
+        "end_line": 209
+      },
+      {
+        "type": "ClassDef",
+        "name": "LlamaCppConfig",
+        "line": 212,
+        "end_line": 229
+      },
+      {
+        "type": "ClassDef",
+        "name": "StatelessLLMConfigs",
+        "line": 232,
+        "end_line": 285
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/system.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/system.py",
+    "bytes": 1588,
+    "sha256": "12fed4a92e2a430af39d1037e70fb245a2cf70b0404d52f15092109de82eab99",
+    "lines": 39,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "SystemConfig",
+        "line": 7,
+        "end_line": 39
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_port",
+        "line": 35,
+        "end_line": 39
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/tts.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/tts.py",
+    "bytes": 32724,
+    "sha256": "8ad15bf1ae03702db822701339dd6d2457b0fc6182b1a9e18c6b11e989e63c0c",
+    "lines": 816,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AzureTTSConfig",
+        "line": 114,
+        "end_line": 135
+      },
+      {
+        "type": "ClassDef",
+        "name": "BarkTTSConfig",
+        "line": 138,
+        "end_line": 147
+      },
+      {
+        "type": "ClassDef",
+        "name": "EdgeTTSConfig",
+        "line": 150,
+        "end_line": 160
+      },
+      {
+        "type": "ClassDef",
+        "name": "CosyvoiceTTSConfig",
+        "line": 163,
+        "end_line": 194
+      },
+      {
+        "type": "ClassDef",
+        "name": "Cosyvoice2TTSConfig",
+        "line": 197,
+        "end_line": 232
+      },
+      {
+        "type": "ClassDef",
+        "name": "MeloTTSConfig",
+        "line": 235,
+        "end_line": 256
+      },
+      {
+        "type": "ClassDef",
+        "name": "XTTSConfig",
+        "line": 259,
+        "end_line": 276
+      },
+      {
+        "type": "ClassDef",
+        "name": "GPTSoVITSConfig",
+        "line": 279,
+        "end_line": 308
+      },
+      {
+        "type": "ClassDef",
+        "name": "FishAPITTSConfig",
+        "line": 311,
+        "end_line": 333
+      },
+      {
+        "type": "ClassDef",
+        "name": "CoquiTTSConfig",
+        "line": 336,
+        "end_line": 359
+      },
+      {
+        "type": "ClassDef",
+        "name": "SherpaOnnxTTSConfig",
+        "line": 362,
+        "end_line": 408
+      },
+      {
+        "type": "ClassDef",
+        "name": "SiliconFlowTTSConfig",
+        "line": 411,
+        "end_line": 448
+      },
+      {
+        "type": "ClassDef",
+        "name": "OpenAITTSConfig",
+        "line": 451,
+        "end_line": 481
+      },
+      {
+        "type": "ClassDef",
+        "name": "SparkTTSConfig",
+        "line": 484,
+        "end_line": 518
+      },
+      {
+        "type": "ClassDef",
+        "name": "MinimaxTTSConfig",
+        "line": 521,
+        "end_line": 538
+      },
+      {
+        "type": "ClassDef",
+        "name": "PiperTTSConfig",
+        "line": 541,
+        "end_line": 585
+      },
+      {
+        "type": "ClassDef",
+        "name": "ElevenLabsTTSConfig",
+        "line": 588,
+        "end_line": 630
+      },
+      {
+        "type": "ClassDef",
+        "name": "CartesiaTTSConfig",
+        "line": 633,
+        "end_line": 680
+      },
+      {
+        "type": "ClassDef",
+        "name": "TTSConfig",
+        "line": 683,
+        "end_line": 816
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_tts_config",
+        "line": 775,
+        "end_line": 816
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/tts_preprocessor.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/tts_preprocessor.py",
+    "bytes": 4818,
+    "sha256": "6a4c5b47a575125ca244e10565897131f6070fe7d8ea7c9309ae9796040de29e",
+    "lines": 118,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "DeepLXConfig",
+        "line": 9,
+        "end_line": 23
+      },
+      {
+        "type": "ClassDef",
+        "name": "TencentConfig",
+        "line": 26,
+        "end_line": 50
+      },
+      {
+        "type": "ClassDef",
+        "name": "TranslatorConfig",
+        "line": 56,
+        "end_line": 97
+      },
+      {
+        "type": "ClassDef",
+        "name": "TTSPreprocessorConfig",
+        "line": 100,
+        "end_line": 118
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_translator_config",
+        "line": 83,
+        "end_line": 97
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/utils.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/utils.py",
+    "bytes": 5399,
+    "sha256": "5060ad55c036b88bec0e5b8a33bd427da5e1ba2c9c62a2832c450254e16bb3bf",
+    "lines": 181,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "read_yaml",
+        "line": 16,
+        "end_line": 52
+      },
+      {
+        "type": "FunctionDef",
+        "name": "validate_config",
+        "line": 55,
+        "end_line": 74
+      },
+      {
+        "type": "FunctionDef",
+        "name": "load_text_file_with_guess_encoding",
+        "line": 77,
+        "end_line": 104
+      },
+      {
+        "type": "FunctionDef",
+        "name": "save_config",
+        "line": 107,
+        "end_line": 124
+      },
+      {
+        "type": "FunctionDef",
+        "name": "scan_config_alts_directory",
+        "line": 127,
+        "end_line": 171
+      },
+      {
+        "type": "FunctionDef",
+        "name": "scan_bg_directory",
+        "line": 174,
+        "end_line": 181
+      },
+      {
+        "type": "FunctionDef",
+        "name": "replacer",
+        "line": 42,
+        "end_line": 44
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/vad.py",
+    "relative_path": "src/open_llm_vtuber/config_manager/vad.py",
+    "bytes": 2700,
+    "sha256": "344f6593f88d546a005eb6a84e9eedc57cb989776f89ffa8ca1c67156c9d0c54",
+    "lines": 64,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "SileroVADConfig",
+        "line": 7,
+        "end_line": 38
+      },
+      {
+        "type": "ClassDef",
+        "name": "VADConfig",
+        "line": 41,
+        "end_line": 64
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_asr_config",
+        "line": 57,
+        "end_line": 64
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/__init__.py",
+    "relative_path": "src/open_llm_vtuber/conversations/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/conversation_handler.py",
+    "relative_path": "src/open_llm_vtuber/conversations/conversation_handler.py",
+    "bytes": 7958,
+    "sha256": "98a285b0c956376f9c219d1802a2f027ba927b7f95f609dc04242f473305efa1",
+    "lines": 213,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_conversation_trigger",
+        "line": 19,
+        "end_line": 109
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_individual_interrupt",
+        "line": 112,
+        "end_line": 143
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_group_interrupt",
+        "line": 146,
+        "end_line": 213
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/conversation_utils.py",
+    "relative_path": "src/open_llm_vtuber/conversations/conversation_utils.py",
+    "bytes": 8050,
+    "sha256": "ddf48e7124a08da35118f4fafd35d67e997a7e23d4e4df486c7bc1cdacd0fc0b",
+    "lines": 293,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "create_batch_input",
+        "line": 20,
+        "end_line": 42
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "process_agent_output",
+        "line": 45,
+        "end_line": 81
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_sentence_output",
+        "line": 84,
+        "end_line": 113
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_audio_output",
+        "line": 116,
+        "end_line": 130
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "send_conversation_start_signals",
+        "line": 133,
+        "end_line": 143
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "process_user_input",
+        "line": 146,
+        "end_line": 159
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "finalize_conversation_turn",
+        "line": 162,
+        "end_line": 190
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "send_conversation_end_signal",
+        "line": 193,
+        "end_line": 212
+      },
+      {
+        "type": "FunctionDef",
+        "name": "cleanup_conversation",
+        "line": 215,
+        "end_line": 218
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/group_conversation.py",
+    "relative_path": "src/open_llm_vtuber/conversations/group_conversation.py",
+    "bytes": 13865,
+    "sha256": "21a2f39b7e9458e5748d9eb01eb1553c92fd8f044280c3cbfc11515ce3293748",
+    "lines": 394,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "AsyncFunctionDef",
+        "name": "process_group_conversation",
+        "line": 29,
+        "end_line": 153
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_group_conversation_state",
+        "line": 156,
+        "end_line": 165
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_group_conversation_contexts",
+        "line": 168,
+        "end_line": 188
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "process_group_input",
+        "line": 191,
+        "end_line": 206
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "broadcast_transcription",
+        "line": 209,
+        "end_line": 223
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_group_member_turn",
+        "line": 226,
+        "end_line": 309
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "broadcast_thinking_state",
+        "line": 312,
+        "end_line": 323
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_member_error",
+        "line": 326,
+        "end_line": 338
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "process_member_response",
+        "line": 341,
+        "end_line": 394
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/single_conversation.py",
+    "relative_path": "src/open_llm_vtuber/conversations/single_conversation.py",
+    "bytes": 6675,
+    "sha256": "fb1d57d19fe4709e3ee4b26c47ef427a903478963d909de68eddd554d3dac96b",
+    "lines": 174,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "AsyncFunctionDef",
+        "name": "process_single_conversation",
+        "line": 25,
+        "end_line": 174
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/tts_manager.py",
+    "relative_path": "src/open_llm_vtuber/conversations/tts_manager.py",
+    "bytes": 6542,
+    "sha256": "55d94e8ddd134d4b1dd5565d6c6e7025b46a8ec05bb7a98c6eeebbc81aca55b0",
+    "lines": 182,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSTaskManager",
+        "line": 16,
+        "end_line": 182
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 19,
+        "end_line": 28
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "speak",
+        "line": 30,
+        "end_line": 90
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_process_payload_queue",
+        "line": 92,
+        "end_line": 114
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_send_silent_payload",
+        "line": 116,
+        "end_line": 128
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_process_tts",
+        "line": 130,
+        "end_line": 164
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_generate_audio",
+        "line": 166,
+        "end_line": 172
+      },
+      {
+        "type": "FunctionDef",
+        "name": "clear",
+        "line": 174,
+        "end_line": 182
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/types.py",
+    "relative_path": "src/open_llm_vtuber/conversations/types.py",
+    "bytes": 2033,
+    "sha256": "ef4eb60542f5bb44efd5cc88c042da8d8fadb98b4174ee6897d650ea9a6db3f2",
+    "lines": 68,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "AudioPayload",
+        "line": 12,
+        "end_line": 21
+      },
+      {
+        "type": "ClassDef",
+        "name": "BroadcastContext",
+        "line": 25,
+        "end_line": 30
+      },
+      {
+        "type": "ClassDef",
+        "name": "ConversationConfig",
+        "line": 33,
+        "end_line": 39
+      },
+      {
+        "type": "ClassDef",
+        "name": "GroupConversationState",
+        "line": 43,
+        "end_line": 68
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__post_init__",
+        "line": 56,
+        "end_line": 58
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_state",
+        "line": 61,
+        "end_line": 63
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_state",
+        "line": 66,
+        "end_line": 68
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/live/bilibili_live.py",
+    "relative_path": "src/open_llm_vtuber/live/bilibili_live.py",
+    "bytes": 12093,
+    "sha256": "57e24df0105e385408ebe2f3eb9dbc599f4c52050e675dee2f6f996ac78b996a",
+    "lines": 351,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "BiliBiliLivePlatform",
+        "line": 33,
+        "end_line": 351
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 39,
+        "end_line": 60
+      },
+      {
+        "type": "FunctionDef",
+        "name": "is_connected",
+        "line": 63,
+        "end_line": 75
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_init_session",
+        "line": 77,
+        "end_line": 85
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "connect",
+        "line": 87,
+        "end_line": 107
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "disconnect",
+        "line": 109,
+        "end_line": 139
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "send_message",
+        "line": 141,
+        "end_line": 156
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "register_message_handler",
+        "line": 158,
+        "end_line": 168
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_danmaku",
+        "line": 170,
+        "end_line": 181
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_send_to_proxy",
+        "line": 183,
+        "end_line": 205
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "start_receiving",
+        "line": 207,
+        "end_line": 246
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_incoming_messages",
+        "line": 248,
+        "end_line": 260
+      },
+      {
+        "type": "ClassDef",
+        "name": "VtuberHandler",
+        "line": 262,
+        "end_line": 296
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "run",
+        "line": 298,
+        "end_line": 351
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 267,
+        "end_line": 269
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_on_danmaku",
+        "line": 271,
+        "end_line": 282
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_on_heartbeat",
+        "line": 284,
+        "end_line": 296
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/live/live_interface.py",
+    "relative_path": "src/open_llm_vtuber/live/live_interface.py",
+    "bytes": 3528,
+    "sha256": "c7885258c6fd91e2ef08dffb0d68f43b75e48a8e2d1f3ffd59cbb758987e06df",
+    "lines": 141,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "LivePlatformInterface",
+        "line": 6,
+        "end_line": 95
+      },
+      {
+        "type": "ClassDef",
+        "name": "MessageQueue",
+        "line": 98,
+        "end_line": 141
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "connect",
+        "line": 15,
+        "end_line": 25
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "disconnect",
+        "line": 28,
+        "end_line": 32
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "send_message",
+        "line": 35,
+        "end_line": 45
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "register_message_handler",
+        "line": 48,
+        "end_line": 57
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "start_receiving",
+        "line": 60,
+        "end_line": 65
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "run",
+        "line": 68,
+        "end_line": 74
+      },
+      {
+        "type": "FunctionDef",
+        "name": "is_connected",
+        "line": 78,
+        "end_line": 85
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_incoming_messages",
+        "line": 88,
+        "end_line": 95
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 103,
+        "end_line": 105
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "put",
+        "line": 107,
+        "end_line": 114
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "get",
+        "line": 116,
+        "end_line": 123
+      },
+      {
+        "type": "FunctionDef",
+        "name": "empty",
+        "line": 125,
+        "end_line": 132
+      },
+      {
+        "type": "FunctionDef",
+        "name": "qsize",
+        "line": 134,
+        "end_line": 141
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/live2d_model.py",
+    "relative_path": "src/open_llm_vtuber/live2d_model.py",
+    "bytes": 7183,
+    "sha256": "0267907013e0b6ec6bf1ab87b06b71b2870a528d2ea4f28228c64004256b82d5",
+    "lines": 194,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "Live2dModel",
+        "line": 10,
+        "end_line": 194
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 28,
+        "end_line": 33
+      },
+      {
+        "type": "FunctionDef",
+        "name": "set_model",
+        "line": 35,
+        "end_line": 51
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_load_file_content",
+        "line": 55,
+        "end_line": 82
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_lookup_model_info",
+        "line": 84,
+        "end_line": 144
+      },
+      {
+        "type": "FunctionDef",
+        "name": "extract_emotion",
+        "line": 146,
+        "end_line": 172
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_emotion_keywords",
+        "line": 174,
+        "end_line": 194
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/json_detector.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/json_detector.py",
+    "bytes": 5317,
+    "sha256": "b83d6c21db0639f1688bbd4c0ce90408308a3529424c390c13dd5dfb8cebf217",
+    "lines": 158,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "StreamJSONDetector",
+        "line": 6,
+        "end_line": 136
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 9,
+        "end_line": 13
+      },
+      {
+        "type": "FunctionDef",
+        "name": "process_chunk",
+        "line": 15,
+        "end_line": 34
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_find_potential_starts",
+        "line": 36,
+        "end_line": 44
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_is_in_processed_range",
+        "line": 46,
+        "end_line": 58
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_try_parse_jsons",
+        "line": 60,
+        "end_line": 88
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_extract_json",
+        "line": 90,
+        "end_line": 121
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_all_jsons",
+        "line": 123,
+        "end_line": 129
+      },
+      {
+        "type": "FunctionDef",
+        "name": "reset",
+        "line": 131,
+        "end_line": 136
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/mcp_client.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/mcp_client.py",
+    "bytes": 7661,
+    "sha256": "0f2c54b391ffd1b914509fb3e7841f165ad2307c2e65ea8dc5c1088cbe5c3ddb",
+    "lines": 197,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "MCPClient",
+        "line": 17,
+        "end_line": 176
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 22,
+        "end_line": 41
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_ensure_server_running_and_get_session",
+        "line": 43,
+        "end_line": 81
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "list_tools",
+        "line": 83,
+        "end_line": 99
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "call_tool",
+        "line": 101,
+        "end_line": 155
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "aclose",
+        "line": 157,
+        "end_line": 166
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "__aenter__",
+        "line": 168,
+        "end_line": 170
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "__aexit__",
+        "line": 172,
+        "end_line": 176
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/server_registry.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/server_registry.py",
+    "bytes": 3770,
+    "sha256": "026112f20cedf744cdc75807114f2aaff744c335f7517363d73a20c45ac58f5f",
+    "lines": 103,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ServerRegistry",
+        "line": 16,
+        "end_line": 103
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 19,
+        "end_line": 41
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_detect_runtime",
+        "line": 43,
+        "end_line": 46
+      },
+      {
+        "type": "FunctionDef",
+        "name": "load_servers",
+        "line": 48,
+        "end_line": 91
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_server",
+        "line": 93,
+        "end_line": 99
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_server",
+        "line": 101,
+        "end_line": 103
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/tool_adapter.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/tool_adapter.py",
+    "bytes": 10520,
+    "sha256": "270d01b601db0b5bb12943edb8b274857ace84a4f3dc29b506c68bb7fccdd32c",
+    "lines": 232,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ToolAdapter",
+        "line": 11,
+        "end_line": 232
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 14,
+        "end_line": 16
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "get_server_and_tool_info",
+        "line": 18,
+        "end_line": 83
+      },
+      {
+        "type": "FunctionDef",
+        "name": "construct_mcp_prompt_string",
+        "line": 85,
+        "end_line": 135
+      },
+      {
+        "type": "FunctionDef",
+        "name": "format_tools_for_api",
+        "line": 137,
+        "end_line": 217
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "get_tools",
+        "line": 219,
+        "end_line": 232
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/tool_executor.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/tool_executor.py",
+    "bytes": 15699,
+    "sha256": "ff8ef482d6ad6f2ee4a24d7a6dcf2da4bdb0a58ee9f4488c6cfea2fd38b7c063",
+    "lines": 382,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ToolExecutor",
+        "line": 18,
+        "end_line": 382
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 19,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "parse_tool_call",
+        "line": 27,
+        "end_line": 76
+      },
+      {
+        "type": "FunctionDef",
+        "name": "format_tool_result",
+        "line": 78,
+        "end_line": 122
+      },
+      {
+        "type": "FunctionDef",
+        "name": "process_tool_from_prompt_json",
+        "line": 124,
+        "end_line": 153
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "execute_tools",
+        "line": 155,
+        "end_line": 301
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "run_single_tool",
+        "line": 303,
+        "end_line": 382
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/tool_manager.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/tool_manager.py",
+    "bytes": 1819,
+    "sha256": "466aae21af755b910e97723557f18585fe5ded3400eafca8d18338c54da2491c",
+    "lines": 50,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ToolManager",
+        "line": 7,
+        "end_line": 50
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 10,
+        "end_line": 30
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_tool",
+        "line": 32,
+        "end_line": 40
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_formatted_tools",
+        "line": 42,
+        "end_line": 50
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/types.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/types.py",
+    "bytes": 3099,
+    "sha256": "e2136521dd83292f9932c4b28646a489005776071987997fbbc4c71f67761b19",
+    "lines": 93,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "MCPServer",
+        "line": 7,
+        "end_line": 25
+      },
+      {
+        "type": "ClassDef",
+        "name": "FormattedTool",
+        "line": 29,
+        "end_line": 42
+      },
+      {
+        "type": "ClassDef",
+        "name": "ToolCallFunctionObject",
+        "line": 46,
+        "end_line": 57
+      },
+      {
+        "type": "ClassDef",
+        "name": "ToolCallObject",
+        "line": 61,
+        "end_line": 93
+      },
+      {
+        "type": "FunctionDef",
+        "name": "from_dict",
+        "line": 79,
+        "end_line": 93
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/utils/path.py",
+    "relative_path": "src/open_llm_vtuber/mcpp/utils/path.py",
+    "bytes": 783,
+    "sha256": "fbadd0b5fb668aea651db4cc10af910f45b3a57ee6ca0368a9d67a546763e547",
+    "lines": 24,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "validate_file",
+        "line": 7,
+        "end_line": 24
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/message_handler.py",
+    "relative_path": "src/open_llm_vtuber/message_handler.py",
+    "bytes": 3093,
+    "sha256": "5169cfc8f4c8d7593e888a164ef69e60f2dbedde86630f120e644122931024d7",
+    "lines": 92,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "MessageHandler",
+        "line": 7,
+        "end_line": 89
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 8,
+        "end_line": 14
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "wait_for_response",
+        "line": 16,
+        "end_line": 54
+      },
+      {
+        "type": "FunctionDef",
+        "name": "handle_message",
+        "line": 56,
+        "end_line": 76
+      },
+      {
+        "type": "FunctionDef",
+        "name": "cleanup_client",
+        "line": 78,
+        "end_line": 89
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/proxy_handler.py",
+    "relative_path": "src/open_llm_vtuber/proxy_handler.py",
+    "bytes": 12034,
+    "sha256": "8c6e5e85bed885bbd6e3a5563377dbe87679ef989f81bd70377daddbaaf9dad2",
+    "lines": 311,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ProxyHandler",
+        "line": 13,
+        "end_line": 311
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 19,
+        "end_line": 37
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "connect_to_server",
+        "line": 39,
+        "end_line": 69
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_maintain_connection",
+        "line": 71,
+        "end_line": 90
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_client_connection",
+        "line": 92,
+        "end_line": 145
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_client_disconnect",
+        "line": 147,
+        "end_line": 161
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "disconnect",
+        "line": 163,
+        "end_line": 190
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "forward_to_server",
+        "line": 192,
+        "end_line": 204
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "forward_server_messages",
+        "line": 206,
+        "end_line": 249
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "broadcast_to_clients",
+        "line": 251,
+        "end_line": 294
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "forward_with_broadcast",
+        "line": 296,
+        "end_line": 311
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/proxy_message_queue.py",
+    "relative_path": "src/open_llm_vtuber/proxy_message_queue.py",
+    "bytes": 6546,
+    "sha256": "c1a2a35658bacedd6f83dbb7f9c76e162ac491b0789da3ac518a8d30d3939f61",
+    "lines": 164,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ProxyMessageQueue",
+        "line": 7,
+        "end_line": 164
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 13,
+        "end_line": 20
+      },
+      {
+        "type": "FunctionDef",
+        "name": "initialize",
+        "line": 22,
+        "end_line": 30
+      },
+      {
+        "type": "FunctionDef",
+        "name": "queue_message",
+        "line": 32,
+        "end_line": 48
+      },
+      {
+        "type": "FunctionDef",
+        "name": "conversation_active",
+        "line": 51,
+        "end_line": 53
+      },
+      {
+        "type": "FunctionDef",
+        "name": "conversation_active",
+        "line": 56,
+        "end_line": 69
+      },
+      {
+        "type": "FunctionDef",
+        "name": "has_pending_messages",
+        "line": 71,
+        "end_line": 78
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_ensure_consumer_running",
+        "line": 80,
+        "end_line": 89
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_consume_loop",
+        "line": 91,
+        "end_line": 132
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_forward_message",
+        "line": 134,
+        "end_line": 153
+      },
+      {
+        "type": "FunctionDef",
+        "name": "stop",
+        "line": 155,
+        "end_line": 159
+      },
+      {
+        "type": "FunctionDef",
+        "name": "clear",
+        "line": 161,
+        "end_line": 164
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/routes.py",
+    "relative_path": "src/open_llm_vtuber/routes.py",
+    "bytes": 9097,
+    "sha256": "237d1987363c6b647efecafa436a05b1a4702e485dfbdd4c5ae59876a731b131",
+    "lines": 254,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "init_client_ws_route",
+        "line": 15,
+        "end_line": 45
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_proxy_route",
+        "line": 48,
+        "end_line": 70
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_webtool_routes",
+        "line": 73,
+        "end_line": 254
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "websocket_endpoint",
+        "line": 30,
+        "end_line": 43
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "proxy_endpoint",
+        "line": 62,
+        "end_line": 68
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "web_tool_redirect",
+        "line": 87,
+        "end_line": 89
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "web_tool_redirect_alt",
+        "line": 92,
+        "end_line": 94
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "get_live2d_folder_info",
+        "line": 97,
+        "end_line": 139
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "transcribe_audio",
+        "line": 142,
+        "end_line": 199
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "tts_endpoint",
+        "line": 202,
+        "end_line": 252
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/server.py",
+    "relative_path": "src/open_llm_vtuber/server.py",
+    "bytes": 5973,
+    "sha256": "05bb8978adbd338c5253661c221f27f8616596fb441f766d4d4efe55f6c4ff77",
+    "lines": 162,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "CORSStaticFiles",
+        "line": 23,
+        "end_line": 40
+      },
+      {
+        "type": "ClassDef",
+        "name": "AvatarStaticFiles",
+        "line": 43,
+        "end_line": 53
+      },
+      {
+        "type": "ClassDef",
+        "name": "WebSocketServer",
+        "line": 56,
+        "end_line": 162
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "get_response",
+        "line": 29,
+        "end_line": 40
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "get_response",
+        "line": 48,
+        "end_line": 53
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 74,
+        "end_line": 149
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "initialize",
+        "line": 151,
+        "end_line": 154
+      },
+      {
+        "type": "FunctionDef",
+        "name": "clean_cache",
+        "line": 157,
+        "end_line": 162
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/service_context.py",
+    "relative_path": "src/open_llm_vtuber/service_context.py",
+    "bytes": 23234,
+    "sha256": "5519a87db596f531d33578a2fe99fe05f80089321beec0f6fd8f5fbdceec281c",
+    "lines": 572,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ServiceContext",
+        "line": 41,
+        "end_line": 559
+      },
+      {
+        "type": "FunctionDef",
+        "name": "deep_merge",
+        "line": 562,
+        "end_line": 572
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 45,
+        "end_line": 73
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__str__",
+        "line": 75,
+        "end_line": 91
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_init_mcp_components",
+        "line": 95,
+        "end_line": 188
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "close",
+        "line": 190,
+        "end_line": 199
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "load_cache",
+        "line": 201,
+        "end_line": 247
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "load_from_config",
+        "line": 249,
+        "end_line": 312
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_live2d",
+        "line": 314,
+        "end_line": 321
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_asr",
+        "line": 323,
+        "end_line": 333
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_tts",
+        "line": 335,
+        "end_line": 345
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_vad",
+        "line": 347,
+        "end_line": 362
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "init_agent",
+        "line": 364,
+        "end_line": 405
+      },
+      {
+        "type": "FunctionDef",
+        "name": "init_translate",
+        "line": 407,
+        "end_line": 432
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "construct_system_prompt",
+        "line": 436,
+        "end_line": 470
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_config_switch",
+        "line": 472,
+        "end_line": 559
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/translate/__init__.py",
+    "relative_path": "src/open_llm_vtuber/translate/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/translate/deeplx.py",
+    "relative_path": "src/open_llm_vtuber/translate/deeplx.py",
+    "bytes": 965,
+    "sha256": "1a8efed4303b59eb2f987775ce1e748cb8c24b996786e1d57456937c440e784d",
+    "lines": 28,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "DeepLXTranslate",
+        "line": 7,
+        "end_line": 28
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 11,
+        "end_line": 13
+      },
+      {
+        "type": "FunctionDef",
+        "name": "translate",
+        "line": 16,
+        "end_line": 28
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/translate/tencent.py",
+    "relative_path": "src/open_llm_vtuber/translate/tencent.py",
+    "bytes": 4017,
+    "sha256": "8edfe62810bee9d87574973cc40876e34fc8f41d98a595c23105cb8dba454d7d",
+    "lines": 121,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "sign",
+        "line": 13,
+        "end_line": 15
+      },
+      {
+        "type": "ClassDef",
+        "name": "TencentTranslate",
+        "line": 18,
+        "end_line": 121
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 19,
+        "end_line": 38
+      },
+      {
+        "type": "FunctionDef",
+        "name": "create_signature",
+        "line": 40,
+        "end_line": 45
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_prepare_headers",
+        "line": 47,
+        "end_line": 94
+      },
+      {
+        "type": "FunctionDef",
+        "name": "translate",
+        "line": 96,
+        "end_line": 121
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/translate/translate_factory.py",
+    "relative_path": "src/open_llm_vtuber/translate/translate_factory.py",
+    "bytes": 1152,
+    "sha256": "37f04a2e61cbb0ea65655b92b28a46533ddc22b26ebac10e1757a3a98b6ca1dc",
+    "lines": 26,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TranslateFactory",
+        "line": 6,
+        "end_line": 26
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_translator",
+        "line": 8,
+        "end_line": 26
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/translate/translate_interface.py",
+    "relative_path": "src/open_llm_vtuber/translate/translate_interface.py",
+    "bytes": 235,
+    "sha256": "a8b953fec550cee1db8e11d83923968eca29fedadde867b41d3303ba13954f33",
+    "lines": 9,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TranslateInterface",
+        "line": 4,
+        "end_line": 9
+      },
+      {
+        "type": "FunctionDef",
+        "name": "translate",
+        "line": 6,
+        "end_line": 9
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/__init__.py",
+    "relative_path": "src/open_llm_vtuber/tts/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/azure_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/azure_tts.py",
+    "bytes": 5351,
+    "sha256": "9e8c2f4c981a9780660d0582aaff9a50834612a145106153a76853d0cedc75b7",
+    "lines": 151,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 11,
+        "end_line": 133
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 16,
+        "end_line": 44
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 46,
+        "end_line": 63
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__speak_with_audio_config",
+        "line": 65,
+        "end_line": 133
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/bark_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/bark_tts.py",
+    "bytes": 1929,
+    "sha256": "ac1a7550542f6474852c20349a678b5334a2878561833a215028edb8453f936e",
+    "lines": 68,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 14,
+        "end_line": 68
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 15,
+        "end_line": 31
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 33,
+        "end_line": 68
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/cartesia_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/cartesia_tts.py",
+    "bytes": 5679,
+    "sha256": "58bdb2329424bc4d5a8d2ac56c83eb727d25086806cb2e07f485fd86ad5a554d",
+    "lines": 164,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 42,
+        "end_line": 153
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 48,
+        "end_line": 92
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 94,
+        "end_line": 153
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/coqui_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/coqui_tts.py",
+    "bytes": 4184,
+    "sha256": "4e88844e70b2b1ab1025302e5773d4c5e4c69b0804d1bfbc0da9038d3ee5f7b2",
+    "lines": 128,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 9,
+        "end_line": 128
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 14,
+        "end_line": 56
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 58,
+        "end_line": 94
+      },
+      {
+        "type": "FunctionDef",
+        "name": "list_available_models",
+        "line": 97,
+        "end_line": 107
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_speaker_info",
+        "line": 109,
+        "end_line": 128
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/cosyvoice2_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/cosyvoice2_tts.py",
+    "bytes": 1967,
+    "sha256": "d7f416f86a4884bf1b8bb24a561fc7df787b0e51889a35c8437fa818b70bc58a",
+    "lines": 54,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 6,
+        "end_line": 54
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 7,
+        "end_line": 32
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 34,
+        "end_line": 54
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/cosyvoice_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/cosyvoice_tts.py",
+    "bytes": 1786,
+    "sha256": "17540ab780b0fe3a03b31126fba8af59765ee5d887376c66f818141510aaa705",
+    "lines": 48,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 6,
+        "end_line": 48
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 7,
+        "end_line": 28
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 30,
+        "end_line": 48
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/edge_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/edge_tts.py",
+    "bytes": 1503,
+    "sha256": "11e6e83297ba8e89b415072d96d43dbada6dd9e484625873117aeb60ac99d19f",
+    "lines": 55,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 16,
+        "end_line": 50
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 17,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 27,
+        "end_line": 50
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/elevenlabs_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/elevenlabs_tts.py",
+    "bytes": 5244,
+    "sha256": "2f72f445d27510ed1e3dc5c29d4a5f743c3c47ef52f9b4e940719b480b215b45",
+    "lines": 146,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 11,
+        "end_line": 131
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 17,
+        "end_line": 68
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 70,
+        "end_line": 131
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/fish_api_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/fish_api_tts.py",
+    "bytes": 1862,
+    "sha256": "0be8e46998c69f8bf4cd27ce1975996b120819e4ab0e079c287324db22478832",
+    "lines": 60,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 7,
+        "end_line": 60
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 14,
+        "end_line": 42
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 44,
+        "end_line": 60
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/gpt_sovits_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/gpt_sovits_tts.py",
+    "bytes": 2168,
+    "sha256": "de6594d3110e4f755f8490717a00d51816fd9a755f2ddff114687e5c22485c40",
+    "lines": 64,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 11,
+        "end_line": 64
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 12,
+        "end_line": 32
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 34,
+        "end_line": 64
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/melo_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/melo_tts.py",
+    "bytes": 2006,
+    "sha256": "c1fc5add27babfd0a8f3f325a640b259460855b949a2b96bb6fd236792fe952b",
+    "lines": 73,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 12,
+        "end_line": 73
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 13,
+        "end_line": 35
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 37,
+        "end_line": 73
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/minimax_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/minimax_tts.py",
+    "bytes": 3157,
+    "sha256": "4e639ec3ab3ad3a28b22c0417946aba91619325acf11445da70ab14f634f9318",
+    "lines": 89,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 7,
+        "end_line": 89
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 8,
+        "end_line": 24
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 26,
+        "end_line": 89
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/openai_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/openai_tts.py",
+    "bytes": 5671,
+    "sha256": "b59fd3f1a96a7f83616c557eb549717f9b317f76e132a5a59c8af01ec550a0f3",
+    "lines": 131,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 16,
+        "end_line": 118
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 23,
+        "end_line": 63
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 65,
+        "end_line": 118
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/piper_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/piper_tts.py",
+    "bytes": 4221,
+    "sha256": "09247a6a9332935fcf01e072d138eac8e8ca4b651a55d898fdd3475c67902275",
+    "lines": 117,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 27,
+        "end_line": 117
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 28,
+        "end_line": 91
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 93,
+        "end_line": 117
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/pyttsx3_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/pyttsx3_tts.py",
+    "bytes": 1906,
+    "sha256": "0b6bf50b9513a3d29cd24b96a5633166ba97171e9038f605848db08e8d01dde3",
+    "lines": 65,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 17,
+        "end_line": 37
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 18,
+        "end_line": 26
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 29,
+        "end_line": 37
+      },
+      {
+        "type": "FunctionDef",
+        "name": "worker",
+        "line": 46,
+        "end_line": 48
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/sherpa_onnx_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/sherpa_onnx_tts.py",
+    "bytes": 3486,
+    "sha256": "f6e7768dad4dcd0b633d107b170c1373ed492d7eaaa65d10d4af9400ecea60e9",
+    "lines": 112,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 13,
+        "end_line": 112
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 14,
+        "end_line": 48
+      },
+      {
+        "type": "FunctionDef",
+        "name": "initialize_tts",
+        "line": 50,
+        "end_line": 77
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 79,
+        "end_line": 112
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/siliconflow_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/siliconflow_tts.py",
+    "bytes": 2480,
+    "sha256": "fd35da5be0bd660b13ddf8fec3d568a2766e42dfe9f9c22b1c588eadf5ebf11a",
+    "lines": 72,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "SiliconFlowTTS",
+        "line": 6,
+        "end_line": 72
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 7,
+        "end_line": 27
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 29,
+        "end_line": 66
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_file",
+        "line": 68,
+        "end_line": 69
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_cache_file_name",
+        "line": 71,
+        "end_line": 72
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/spark_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/spark_tts.py",
+    "bytes": 2239,
+    "sha256": "0299779b2329f92c57cf77b5b58538e175557366f255c215ea073711d9236b01",
+    "lines": 60,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 7,
+        "end_line": 60
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 8,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 27,
+        "end_line": 60
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/tts_factory.py",
+    "relative_path": "src/open_llm_vtuber/tts/tts_factory.py",
+    "bytes": 9805,
+    "sha256": "a6303176a8d7bed0accc54e63fcba4fb5ed7061b9e7faf9acd59b737a85779bc",
+    "lines": 227,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSFactory",
+        "line": 5,
+        "end_line": 215
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_tts_engine",
+        "line": 7,
+        "end_line": 215
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/tts_interface.py",
+    "relative_path": "src/open_llm_vtuber/tts/tts_interface.py",
+    "bytes": 2691,
+    "sha256": "c6feacca2bda961dd3d5c7a3b442df09b85ed705ace4d87de76ebdaab0f913c5",
+    "lines": 81,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSInterface",
+        "line": 8,
+        "end_line": 81
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "async_generate_audio",
+        "line": 9,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 28,
+        "end_line": 40
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_file",
+        "line": 42,
+        "end_line": 59
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_cache_file_name",
+        "line": 61,
+        "end_line": 81
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/x_tts.py",
+    "relative_path": "src/open_llm_vtuber/tts/x_tts.py",
+    "bytes": 1398,
+    "sha256": "2dafb812d166e93d9f4c8ae3f1b9e06994fc3b15509da52b67d53061dae76ab8",
+    "lines": 43,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "TTSEngine",
+        "line": 6,
+        "end_line": 43
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 7,
+        "end_line": 17
+      },
+      {
+        "type": "FunctionDef",
+        "name": "generate_audio",
+        "line": 19,
+        "end_line": 43
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/__init__.py",
+    "relative_path": "src/open_llm_vtuber/utils/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/install_utils.py",
+    "relative_path": "src/open_llm_vtuber/utils/install_utils.py",
+    "bytes": 4937,
+    "sha256": "1076070850846ba0ac7a56b4673a8584a1558c5f13f54a8e54468d4abacc0d8b",
+    "lines": 140,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "InstallationManager",
+        "line": 14,
+        "end_line": 140
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 17,
+        "end_line": 30
+      },
+      {
+        "type": "FunctionDef",
+        "name": "download_miniconda",
+        "line": 32,
+        "end_line": 55
+      },
+      {
+        "type": "FunctionDef",
+        "name": "install_miniconda",
+        "line": 57,
+        "end_line": 70
+      },
+      {
+        "type": "FunctionDef",
+        "name": "create_environment",
+        "line": 72,
+        "end_line": 84
+      },
+      {
+        "type": "FunctionDef",
+        "name": "install_conda_dependencies",
+        "line": 86,
+        "end_line": 99
+      },
+      {
+        "type": "FunctionDef",
+        "name": "install_pip_dependencies",
+        "line": 101,
+        "end_line": 118
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_environment",
+        "line": 120,
+        "end_line": 131
+      },
+      {
+        "type": "FunctionDef",
+        "name": "setup",
+        "line": 133,
+        "end_line": 140
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/sentence_divider.py",
+    "relative_path": "src/open_llm_vtuber/utils/sentence_divider.py",
+    "bytes": 20028,
+    "sha256": "55db1a29976e8404cdf529e13c54b7f00fd8aacc9347dba700cc5123756d533f",
+    "lines": 608,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "detect_language",
+        "line": 76,
+        "end_line": 86
+      },
+      {
+        "type": "FunctionDef",
+        "name": "is_complete_sentence",
+        "line": 89,
+        "end_line": 106
+      },
+      {
+        "type": "FunctionDef",
+        "name": "contains_comma",
+        "line": 109,
+        "end_line": 119
+      },
+      {
+        "type": "FunctionDef",
+        "name": "comma_splitter",
+        "line": 122,
+        "end_line": 141
+      },
+      {
+        "type": "FunctionDef",
+        "name": "has_punctuation",
+        "line": 144,
+        "end_line": 157
+      },
+      {
+        "type": "FunctionDef",
+        "name": "contains_end_punctuation",
+        "line": 160,
+        "end_line": 170
+      },
+      {
+        "type": "FunctionDef",
+        "name": "segment_text_by_regex",
+        "line": 173,
+        "end_line": 210
+      },
+      {
+        "type": "FunctionDef",
+        "name": "segment_text_by_pysbd",
+        "line": 213,
+        "end_line": 266
+      },
+      {
+        "type": "ClassDef",
+        "name": "TagState",
+        "line": 269,
+        "end_line": 276
+      },
+      {
+        "type": "ClassDef",
+        "name": "TagInfo",
+        "line": 280,
+        "end_line": 290
+      },
+      {
+        "type": "ClassDef",
+        "name": "SentenceWithTags",
+        "line": 294,
+        "end_line": 298
+      },
+      {
+        "type": "ClassDef",
+        "name": "SentenceDivider",
+        "line": 301,
+        "end_line": 608
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__str__",
+        "line": 286,
+        "end_line": 290
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 302,
+        "end_line": 322
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_get_current_tags",
+        "line": 324,
+        "end_line": 331
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_get_current_tag",
+        "line": 333,
+        "end_line": 340
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_extract_tag",
+        "line": 342,
+        "end_line": 403
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_process_buffer",
+        "line": 405,
+        "end_line": 526
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_flush_buffer",
+        "line": 528,
+        "end_line": 547
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "process_stream",
+        "line": 549,
+        "end_line": 591
+      },
+      {
+        "type": "FunctionDef",
+        "name": "complete_response",
+        "line": 594,
+        "end_line": 596
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_segment_text",
+        "line": 598,
+        "end_line": 602
+      },
+      {
+        "type": "FunctionDef",
+        "name": "reset",
+        "line": 604,
+        "end_line": 608
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/stream_audio.py",
+    "relative_path": "src/open_llm_vtuber/utils/stream_audio.py",
+    "bytes": 2877,
+    "sha256": "f0f4cf89dfc0563dee1a5eaba2d3c924213514627339030bddff625426dccd50",
+    "lines": 86,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "_get_volume_by_chunks",
+        "line": 8,
+        "end_line": 24
+      },
+      {
+        "type": "FunctionDef",
+        "name": "prepare_audio_payload",
+        "line": 27,
+        "end_line": 82
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/tts_preprocessor.py",
+    "relative_path": "src/open_llm_vtuber/utils/tts_preprocessor.py",
+    "bytes": 5679,
+    "sha256": "09643044af1e749d21c054c3f3e349767c7241ea14c467d3b1237754c5cddbd0",
+    "lines": 196,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "tts_filter",
+        "line": 7,
+        "end_line": 80
+      },
+      {
+        "type": "FunctionDef",
+        "name": "remove_special_characters",
+        "line": 83,
+        "end_line": 105
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_filter_nested",
+        "line": 108,
+        "end_line": 138
+      },
+      {
+        "type": "FunctionDef",
+        "name": "filter_brackets",
+        "line": 141,
+        "end_line": 151
+      },
+      {
+        "type": "FunctionDef",
+        "name": "filter_parentheses",
+        "line": 154,
+        "end_line": 164
+      },
+      {
+        "type": "FunctionDef",
+        "name": "filter_angle_brackets",
+        "line": 167,
+        "end_line": 177
+      },
+      {
+        "type": "FunctionDef",
+        "name": "filter_asterisks",
+        "line": 180,
+        "end_line": 196
+      },
+      {
+        "type": "FunctionDef",
+        "name": "is_valid_char",
+        "line": 95,
+        "end_line": 102
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/vad/__init__.py",
+    "relative_path": "src/open_llm_vtuber/vad/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lines": 0,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [],
+    "syntax": "pass",
+    "reading_level": "EMPTY_FILE_CONFIRMED"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/vad/silero.py",
+    "relative_path": "src/open_llm_vtuber/vad/silero.py",
+    "bytes": 7642,
+    "sha256": "49b70a7bd3da324871cf10efe1316efad9cf5db5ee079be544eaf3990b7f65e6",
+    "lines": 227,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "SileroVADConfig",
+        "line": 14,
+        "end_line": 21
+      },
+      {
+        "type": "ClassDef",
+        "name": "VADEngine",
+        "line": 24,
+        "end_line": 75
+      },
+      {
+        "type": "ClassDef",
+        "name": "State",
+        "line": 79,
+        "end_line": 82
+      },
+      {
+        "type": "ClassDef",
+        "name": "StateMachine",
+        "line": 85,
+        "end_line": 188
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "vad_main",
+        "line": 191,
+        "end_line": 222
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 25,
+        "end_line": 46
+      },
+      {
+        "type": "FunctionDef",
+        "name": "load_vad_model",
+        "line": 49,
+        "end_line": 51
+      },
+      {
+        "type": "FunctionDef",
+        "name": "detect_speech",
+        "line": 53,
+        "end_line": 75
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 86,
+        "end_line": 103
+      },
+      {
+        "type": "FunctionDef",
+        "name": "calculate_db",
+        "line": 106,
+        "end_line": 108
+      },
+      {
+        "type": "FunctionDef",
+        "name": "update",
+        "line": 110,
+        "end_line": 113
+      },
+      {
+        "type": "FunctionDef",
+        "name": "reset_buffers",
+        "line": 115,
+        "end_line": 118
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_smoothed_values",
+        "line": 120,
+        "end_line": 125
+      },
+      {
+        "type": "FunctionDef",
+        "name": "process",
+        "line": 127,
+        "end_line": 185
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_result",
+        "line": 187,
+        "end_line": 188
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "data_wrapper",
+        "line": 197,
+        "end_line": 199
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "audio_handler",
+        "line": 201,
+        "end_line": 207
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "empty_run",
+        "line": 209,
+        "end_line": 211
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "start_websocket_server",
+        "line": 213,
+        "end_line": 220
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/vad/vad_factory.py",
+    "relative_path": "src/open_llm_vtuber/vad/vad_factory.py",
+    "bytes": 689,
+    "sha256": "94fae3acd230bd69ac37538506a5d547afae82d3f04fbb295fc6ee932a511226",
+    "lines": 21,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VADFactory",
+        "line": 5,
+        "end_line": 21
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_vad_engine",
+        "line": 7,
+        "end_line": 21
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/vad/vad_interface.py",
+    "relative_path": "src/open_llm_vtuber/vad/vad_interface.py",
+    "bytes": 377,
+    "sha256": "2ebbc27cf957766e9a7e759b7e22d5119ce9ce3b3123eb4c862e1fe8152cf3ec",
+    "lines": 12,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VADInterface",
+        "line": 4,
+        "end_line": 12
+      },
+      {
+        "type": "FunctionDef",
+        "name": "detect_speech",
+        "line": 6,
+        "end_line": 12
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "DIRECTORY_AND_COMPLETE_AST_SYMBOL_INDEX_ONLY"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/websocket_handler.py",
+    "relative_path": "src/open_llm_vtuber/websocket_handler.py",
+    "bytes": 23172,
+    "sha256": "977c8870ead0969a62fdc7dc1ad39a2016f9f8b9ed7ef7dbef4d641627119b9d",
+    "lines": 612,
+    "symbol_index_level": "AST_PARSE_ONLY",
+    "symbols": [
+      {
+        "type": "ClassDef",
+        "name": "MessageType",
+        "line": 32,
+        "end_line": 45
+      },
+      {
+        "type": "ClassDef",
+        "name": "WSMessage",
+        "line": 48,
+        "end_line": 58
+      },
+      {
+        "type": "ClassDef",
+        "name": "WebSocketHandler",
+        "line": 61,
+        "end_line": 612
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 64,
+        "end_line": 74
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_init_message_handlers",
+        "line": 76,
+        "end_line": 98
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_new_connection",
+        "line": 100,
+        "end_line": 133
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_store_client_data",
+        "line": 135,
+        "end_line": 147
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_send_initial_messages",
+        "line": 149,
+        "end_line": 176
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_init_service_context",
+        "line": 178,
+        "end_line": 202
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_websocket_communication",
+        "line": 204,
+        "end_line": 237
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_route_message",
+        "line": 239,
+        "end_line": 260
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_group_operation",
+        "line": 262,
+        "end_line": 278
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "handle_disconnect",
+        "line": 280,
+        "end_line": 316
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_cleanup_failed_connection",
+        "line": 318,
+        "end_line": 331
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "broadcast_to_group",
+        "line": 333,
+        "end_line": 342
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "send_group_update",
+        "line": 344,
+        "end_line": 367
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_interrupt",
+        "line": 369,
+        "end_line": 392
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_history_list_request",
+        "line": 394,
+        "end_line": 402
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_fetch_history",
+        "line": 404,
+        "end_line": 430
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_create_history",
+        "line": 432,
+        "end_line": 451
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_delete_history",
+        "line": 453,
+        "end_line": 476
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_audio_data",
+        "line": 478,
+        "end_line": 487
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_raw_audio_data",
+        "line": 489,
+        "end_line": 511
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_conversation_trigger",
+        "line": 513,
+        "end_line": 529
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_fetch_configs",
+        "line": 531,
+        "end_line": 539
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_config_switch",
+        "line": 541,
+        "end_line": 548
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_fetch_backgrounds",
+        "line": 550,
+        "end_line": 557
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_audio_play_start",
+        "line": 559,
+        "end_line": 577
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_group_info",
+        "line": 579,
+        "end_line": 583
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_init_config_request",
+        "line": 585,
+        "end_line": 603
+      },
+      {
+        "type": "AsyncFunctionDef",
+        "name": "_handle_heartbeat",
+        "line": 605,
+        "end_line": 612
+      }
+    ],
+    "syntax": "pass",
+    "reading_level": "HUMAN_SOURCE_FULL"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade.py",
+    "relative_path": "upgrade.py",
+    "bytes": 5769,
+    "sha256": "375711cb6f447a61b598e39763c836362381d86a2effe22cf478fea9c201641a",
+    "extra_ast_symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "run_upgrade",
+        "line": 9,
+        "end_line": 167
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/__init__.py",
+    "relative_path": "upgrade_codes/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "extra_ast_symbols": []
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/compare_yaml.py",
+    "relative_path": "upgrade_codes/compare_yaml.py",
+    "bytes": 2966,
+    "sha256": "6f0cf4adfcf59d79e67a7a6013113b314c835c3bcca3f0a892c18593a3a38809",
+    "extra_ast_symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "collect_all_key_paths",
+        "line": 7,
+        "end_line": 14
+      },
+      {
+        "type": "FunctionDef",
+        "name": "collect_leaf_key_paths",
+        "line": 17,
+        "end_line": 25
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_value_by_path",
+        "line": 28,
+        "end_line": 36
+      },
+      {
+        "type": "FunctionDef",
+        "name": "compare_yaml_keys",
+        "line": 39,
+        "end_line": 44
+      },
+      {
+        "type": "FunctionDef",
+        "name": "compare_yaml_values",
+        "line": 47,
+        "end_line": 71
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/config_sync.py",
+    "relative_path": "upgrade_codes/config_sync.py",
+    "bytes": 12152,
+    "sha256": "de2f60e03e496d132fc11820c6670a017bab67c57da42c0d00e11442872f16c8",
+    "extra_ast_symbols": [
+      {
+        "type": "ClassDef",
+        "name": "ConfigSynchronizer",
+        "line": 22,
+        "end_line": 313
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 23,
+        "end_line": 34
+      },
+      {
+        "type": "FunctionDef",
+        "name": "sync_user_config",
+        "line": 36,
+        "end_line": 50
+      },
+      {
+        "type": "FunctionDef",
+        "name": "update_user_config",
+        "line": 52,
+        "end_line": 96
+      },
+      {
+        "type": "FunctionDef",
+        "name": "backup_user_config",
+        "line": 98,
+        "end_line": 106
+      },
+      {
+        "type": "FunctionDef",
+        "name": "merge_and_update_user_config",
+        "line": 108,
+        "end_line": 118
+      },
+      {
+        "type": "FunctionDef",
+        "name": "merge_configs",
+        "line": 120,
+        "end_line": 145
+      },
+      {
+        "type": "FunctionDef",
+        "name": "collect_all_subkeys",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_missing_keys",
+        "line": 159,
+        "end_line": 178
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_extra_keys",
+        "line": 180,
+        "end_line": 200
+      },
+      {
+        "type": "FunctionDef",
+        "name": "delete_extra_keys",
+        "line": 202,
+        "end_line": 237
+      },
+      {
+        "type": "FunctionDef",
+        "name": "compare_field_keys",
+        "line": 239,
+        "end_line": 266
+      },
+      {
+        "type": "FunctionDef",
+        "name": "compare_comments",
+        "line": 268,
+        "end_line": 274
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_latest_version",
+        "line": 276,
+        "end_line": 279
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_old_version",
+        "line": 281,
+        "end_line": 313
+      },
+      {
+        "type": "FunctionDef",
+        "name": "merge",
+        "line": 128,
+        "end_line": 136
+      },
+      {
+        "type": "FunctionDef",
+        "name": "delete_key_by_path",
+        "line": 211,
+        "end_line": 219
+      },
+      {
+        "type": "FunctionDef",
+        "name": "field_compare_fn",
+        "line": 242,
+        "end_line": 255
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/from_version/__init__.py",
+    "relative_path": "upgrade_codes/from_version/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "extra_ast_symbols": []
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/from_version/v_1_1_1.py",
+    "relative_path": "upgrade_codes/from_version/v_1_1_1.py",
+    "bytes": 4346,
+    "sha256": "1f96488028ad7648d50c967b5fb31f7917fe85e4d397e9889840bfb3e7610a22",
+    "extra_ast_symbols": [
+      {
+        "type": "ClassDef",
+        "name": "to_v_1_2_1",
+        "line": 5,
+        "end_line": 119
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 6,
+        "end_line": 37
+      },
+      {
+        "type": "FunctionDef",
+        "name": "upgrade",
+        "line": 39,
+        "end_line": 46
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_upgrade_live2d_models",
+        "line": 48,
+        "end_line": 75
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_upgrade_conf_yaml",
+        "line": 77,
+        "end_line": 112
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_migrate_field",
+        "line": 114,
+        "end_line": 119
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/upgrade_core/__init__.py",
+    "relative_path": "upgrade_codes/upgrade_core/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "extra_ast_symbols": []
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/upgrade_core/comment_diff_fn.py",
+    "relative_path": "upgrade_codes/upgrade_core/comment_diff_fn.py",
+    "bytes": 1604,
+    "sha256": "9a7d826a7427a98cd9cd631b6194d7479ad5e3e8b29075b5363a5248a02bc69d",
+    "extra_ast_symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "get_comment_text",
+        "line": 6,
+        "end_line": 17
+      },
+      {
+        "type": "FunctionDef",
+        "name": "extract_comments",
+        "line": 20,
+        "end_line": 38
+      },
+      {
+        "type": "FunctionDef",
+        "name": "comment_diff_fn",
+        "line": 41,
+        "end_line": 54
+      },
+      {
+        "type": "FunctionDef",
+        "name": "recurse",
+        "line": 27,
+        "end_line": 35
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/upgrade_core/comment_sync.py",
+    "relative_path": "upgrade_codes/upgrade_core/comment_sync.py",
+    "bytes": 2099,
+    "sha256": "5d23b9366c84213aa03b92b8e67b5d2f51ad3fc2abe3a0c95e26e1cf17cf6627",
+    "extra_ast_symbols": [
+      {
+        "type": "ClassDef",
+        "name": "CommentSynchronizer",
+        "line": 8,
+        "end_line": 56
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 9,
+        "end_line": 21
+      },
+      {
+        "type": "FunctionDef",
+        "name": "sync",
+        "line": 23,
+        "end_line": 56
+      },
+      {
+        "type": "FunctionDef",
+        "name": "sync_comments",
+        "line": 30,
+        "end_line": 44
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/upgrade_core/constants.py",
+    "relative_path": "upgrade_codes/upgrade_core/constants.py",
+    "bytes": 16147,
+    "sha256": "72403b394135df2cc9fc21177f6a2968861a0064418cea1a598e03d51a024eeb",
+    "extra_ast_symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "load_user_config",
+        "line": 18,
+        "end_line": 24
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_current_script_version",
+        "line": 27,
+        "end_line": 31
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/upgrade_core/language.py",
+    "relative_path": "upgrade_codes/upgrade_core/language.py",
+    "bytes": 1777,
+    "sha256": "67bad93574f22c40da49a178301163fc4da2b330ef8766e0f6cce3802aa81fde",
+    "extra_ast_symbols": [
+      {
+        "type": "FunctionDef",
+        "name": "get_system_language",
+        "line": 9,
+        "end_line": 54
+      },
+      {
+        "type": "FunctionDef",
+        "name": "select_language",
+        "line": 57,
+        "end_line": 61
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/upgrade_core/upgrade_utils.py",
+    "relative_path": "upgrade_codes/upgrade_core/upgrade_utils.py",
+    "bytes": 4889,
+    "sha256": "30348e8866b4a9ff4f50989913be1eee59e5c0da408aaf86d0315ede92958975",
+    "extra_ast_symbols": [
+      {
+        "type": "ClassDef",
+        "name": "UpgradeUtility",
+        "line": 10,
+        "end_line": 147
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 11,
+        "end_line": 15
+      },
+      {
+        "type": "FunctionDef",
+        "name": "run_command",
+        "line": 17,
+        "end_line": 36
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_git_installed",
+        "line": 38,
+        "end_line": 45
+      },
+      {
+        "type": "FunctionDef",
+        "name": "log_system_info",
+        "line": 47,
+        "end_line": 71
+      },
+      {
+        "type": "FunctionDef",
+        "name": "time_operation",
+        "line": 73,
+        "end_line": 79
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_submodule_list",
+        "line": 81,
+        "end_line": 99
+      },
+      {
+        "type": "FunctionDef",
+        "name": "has_submodules",
+        "line": 101,
+        "end_line": 103
+      },
+      {
+        "type": "FunctionDef",
+        "name": "compare_dicts",
+        "line": 105,
+        "end_line": 147
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/upgrade_manager.py",
+    "relative_path": "upgrade_codes/upgrade_manager.py",
+    "bytes": 2113,
+    "sha256": "115695aaa30468b0b93860024484ca74eff477defa9cc5fe0be02cafa968116c",
+    "extra_ast_symbols": [
+      {
+        "type": "ClassDef",
+        "name": "UpgradeManager",
+        "line": 11,
+        "end_line": 67
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 12,
+        "end_line": 18
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_user_config_exists",
+        "line": 20,
+        "end_line": 23
+      },
+      {
+        "type": "FunctionDef",
+        "name": "_configure_logger",
+        "line": 25,
+        "end_line": 43
+      },
+      {
+        "type": "FunctionDef",
+        "name": "sync_user_config",
+        "line": 45,
+        "end_line": 46
+      },
+      {
+        "type": "FunctionDef",
+        "name": "update_user_config",
+        "line": 48,
+        "end_line": 49
+      },
+      {
+        "type": "FunctionDef",
+        "name": "log_system_info",
+        "line": 51,
+        "end_line": 52
+      },
+      {
+        "type": "FunctionDef",
+        "name": "check_git_installed",
+        "line": 54,
+        "end_line": 55
+      },
+      {
+        "type": "FunctionDef",
+        "name": "run_command",
+        "line": 57,
+        "end_line": 58
+      },
+      {
+        "type": "FunctionDef",
+        "name": "time_operation",
+        "line": 60,
+        "end_line": 61
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_submodule_list",
+        "line": 63,
+        "end_line": 64
+      },
+      {
+        "type": "FunctionDef",
+        "name": "has_submodules",
+        "line": 66,
+        "end_line": 67
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/upgrade_codes/version_manager.py",
+    "relative_path": "upgrade_codes/version_manager.py",
+    "bytes": 3580,
+    "sha256": "070880b8b2574e1ad2fdb7d2fe8087950c52e76b1bc79e4479cdf04e82aa70a0",
+    "extra_ast_symbols": [
+      {
+        "type": "ClassDef",
+        "name": "VersionUpgradeManager",
+        "line": 8,
+        "end_line": 94
+      },
+      {
+        "type": "FunctionDef",
+        "name": "__init__",
+        "line": 9,
+        "end_line": 14
+      },
+      {
+        "type": "FunctionDef",
+        "name": "get_upgrade_mapping",
+        "line": 16,
+        "end_line": 38
+      },
+      {
+        "type": "FunctionDef",
+        "name": "resolve_upgrade_task",
+        "line": 40,
+        "end_line": 51
+      },
+      {
+        "type": "FunctionDef",
+        "name": "upgrade",
+        "line": 53,
+        "end_line": 94
+      }
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/uv.lock",
+    "relative_path": "uv.lock",
+    "bytes": 699817,
+    "sha256": "cb3b4db366714eed5a05f3cb40c33e069931859d59411f5ddee92452c057fc78"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/web_tool/README.md",
+    "relative_path": "web_tool/README.md",
+    "bytes": 904,
+    "sha256": "85bbcf57e1ad73a6a5f308f153c538f3a296a00125773053512208708bee64eb"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/web_tool/index.html",
+    "relative_path": "web_tool/index.html",
+    "bytes": 3737,
+    "sha256": "5419e35a34ac8c8e8739dea82b8cca3f484d290f9a14465636e0a1866251b2b0"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/web_tool/main.js",
+    "relative_path": "web_tool/main.js",
+    "bytes": 14162,
+    "sha256": "4ab5fb3b279e4dc9c0c5dbe27224b78ce1f5f0f735728b27f5d33c562575e8d5"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/web_tool/recorder.js",
+    "relative_path": "web_tool/recorder.js",
+    "bytes": 4471,
+    "sha256": "b65c450947d9a5cfb452902e4d1e38b71f2a3e53c1e7037dc26b13930f4def2d"
+  }
+]

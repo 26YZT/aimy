@@ -5,6 +5,7 @@ import type {
   StageViewSnapshotPayload,
 } from '@proj-airi/stage-shared/godot-stage'
 import type { Live2DExpressionSettingsCommand } from '@proj-airi/stage-ui-live2d/stores/expression-store'
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
 
 import type { DisplayModel } from '../../../../stores/display-models'
 import type { ModelSettingsRuntimeSnapshot } from './runtime'
@@ -27,6 +28,7 @@ import { ModelSelectorDialog } from '../../dialogs/model-selector'
 import { resolveModelSettingsPanelRenderer } from './runtime'
 
 interface ModelSettingsPanelProps {
+  playVrmGesture?: (gesture: VrmGesture) => boolean | Promise<boolean>
   palette: string[]
   settingsClass?: string | string[]
   allowExtractColors?: boolean
@@ -116,6 +118,7 @@ async function handleModelPick(selectedModel: DisplayModel | undefined) {
       />
       <VRM
         v-if="effectiveRenderer === 'vrm'"
+        :play-gesture="playVrmGesture"
         :allow-extract-colors="allowExtractColors"
         :palette="palette"
         :runtime-snapshot="runtimeSnapshot"

@@ -1,0 +1,88 @@
+/* Aimy v3 2026-10-13. Derived from tokens.json. */
+:root {
+  color-scheme: light;
+  --canvas: #F7F3F6;
+  --surface: #FFFFFF;
+  --surface-subtle: #F3EDF1;
+  --surface-raised: #FFFFFF;
+  --text: #332A31;
+  --text-secondary: #71616A;
+  --text-tertiary: #75616C;
+  --border: #E3D9E0;
+  --control-border: #8F7886;
+  --action: #A34368;
+  --action-hover: #8E3659;
+  --action-pressed: #752A49;
+  --on-action: #FFFFFF;
+  --accent: #A34368;
+  --accent-hover: #8E3659;
+  --accent-pressed: #752A49;
+  --accent-soft: #F7E7EE;
+  --on-accent: #FFFFFF;
+  --focus: #A34368;
+  --success: #35634E;
+  --success-soft: #EBF3EF;
+  --warning: #805C23;
+  --warning-soft: #FBF2E1;
+  --danger: #A53546;
+  --danger-soft: #FBEDEF;
+  --disabled: #EBE7EE;
+  --on-disabled: #887D91;
+  --on-danger: #FFFFFF;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #201C21;
+  --surface: #2A242B;
+  --surface-subtle: #352C35;
+  --surface-raised: #41343F;
+  --text: #F5EDF3;
+  --text-secondary: #C6B4C0;
+  --text-tertiary: #B8A3B1;
+  --border: #50404B;
+  --control-border: #A28799;
+  --action: #E6A6BE;
+  --action-hover: #F0BDCF;
+  --action-pressed: #D58EAC;
+  --on-action: #301D27;
+  --accent: #E6A6BE;
+  --accent-hover: #F2BCD0;
+  --accent-pressed: #D48AA7;
+  --accent-soft: #4A2D3C;
+  --on-accent: #301D27;
+  --focus: #E6A6BE;
+  --success: #A4CCB9;
+  --success-soft: #24372E;
+  --warning: #E3C38D;
+  --warning-soft: #3B3123;
+  --danger: #F4A5B2;
+  --danger-soft: #432B34;
+  --disabled: #3C3444;
+  --on-disabled: #A89AB4;
+  --on-danger: #2A1822;
+}
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Consolas, monospace;
+  --radius-small: 6px;
+  --radius-control: 12px;
+  --radius-message: 16px;
+  --radius-window: 20px;
+  --radius-pill: 999px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --message-size: 15px;
+  --duration: 180ms;
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --shadow-window: 0 12px 40px #35242E16;
+  --stage-background: #EFE7ED;
+}
+[data-theme="dark"] { --shadow-window: 0 12px 40px #00000038; --stage-background: #19171B; }

@@ -1,0 +1,34 @@
+{
+  "task": "SETUP-NO-SPEND",
+  "status": "complete",
+  "scope": [
+    "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.ts",
+    "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts",
+    "apps/stage-tamagotchi/src/main/index.ts"
+  ],
+  "mainIndexChange": "Only registerAcceptanceBudget adds configurationOnly: env.AIMY_ACCEPTANCE_SETUP_ONLY === true string.",
+  "behavior": "Configuration-only reserve checks sender and configured ledger first, then rejects paid-validation-disabled without invoking ledger.reserve. Info/status remain available. Default run remains unchanged.",
+  "checks": {
+    "red": "1 failed and 14 passed. Setup reserve incorrectly succeeded before patch.",
+    "green": "15 passed",
+    "desktopVueTypecheck": "exit 0",
+    "targetedLint": "exit 0 with two existing max-comment-length warnings at main/index.ts lines 100 and 133",
+    "diffCheck": "exit 0"
+  },
+  "testBoundary": "Actual Eventa main and renderer adapters and durable temporary ledger. Only native Electron IPC objects are replaced.",
+  "realModelCalls": 0,
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.ts",
+      "sha256": "61b4b4d39866e1c4a9365e32c5bad3f52dbb4c84eeb4e6d859a8bca0afe6521c"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts",
+      "sha256": "36b6905bacecf90c1b3a46a8d7202e576d33ef99036326a884d7bb7b20a153f7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+      "sha256": "ac65e9eb7b2143fb8f4d93d42e25fc4ecb0f91800a6b15ef7e5ad02175878b1b"
+    }
+  ]
+}

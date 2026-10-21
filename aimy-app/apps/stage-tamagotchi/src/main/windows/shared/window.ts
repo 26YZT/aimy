@@ -51,6 +51,8 @@ export function transparentWindowConfig(): BrowserWindowConstructorOptions {
  * - Nothing; installs navigation and popup guards on the window's web contents
  */
 export function protectPrivilegedWindowNavigation(window: BrowserWindow): void {
+  // The host names each window role. Shared renderer documents do not replace that title.
+  window.webContents.on('page-title-updated', event => event.preventDefault())
   function openSafeExternalUrl(rawUrl: string): void {
     try {
       const url = new URL(rawUrl)

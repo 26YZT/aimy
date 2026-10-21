@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-18",
+  "sources": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+      "bytes": 6780,
+      "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy.py",
+      "bytes": 101933,
+      "sha256": "5075f86d2ffeb1bd18ec5f029687ad69037c98e4ea041ee64e8ac62047441d04",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+      "bytes": 54289,
+      "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/expressive_voice.py",
+      "bytes": 13406,
+      "sha256": "f60912f3767e8ff3f4456b91e538749f519586c8065e7b8696fd95848931e9b6",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/voice-call-policy.js",
+      "bytes": 630,
+      "sha256": "592d2b3f45a6752eceeb3d2e3611002f170057fd10cc6ab81d30b840b1af1d5f",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+      "bytes": 12080,
+      "sha256": "11fbb6fae5def1214cf939d275d001460fe6da02dcfd08165c56c286932c5611",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/echo.js",
+      "bytes": 4927,
+      "sha256": "168f7e04a36a34a1b1273f126093cbbac73b7b408edf4164d816b020bdd4c212",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/avatar.js",
+      "bytes": 146367,
+      "sha256": "0ba836f1c2ee1ca8ab447d0eeb6fedd1430a73866073a9d6054cae35a57ffb12",
+      "role": "fixed local reference; not a runtime dependency"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/conversation_utils.py",
+      "bytes": 8050,
+      "sha256": "ddf48e7124a08da35118f4fafd35d67e997a7e23d4e4df486c7bc1cdacd0fc0b",
+      "role": "fixed local reference; not a runtime dependency"
+    }
+  ],
+  "limits": [
+    "Kirara general behavior independently implemented, no Python copied",
+    "Charakuru Kit archive unavailable today, historical evidence and authored fixtures only",
+    "OLV frontend behavior reference only, no restricted source or character copied"
+  ]
+}

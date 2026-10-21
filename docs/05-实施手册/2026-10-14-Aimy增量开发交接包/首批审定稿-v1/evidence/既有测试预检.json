@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-15",
+  "execution": "existence/schema check only, no product tests run",
+  "test_paths": [
+    {
+      "path": "packages/core-agent/src/runtime/llm-service.test.ts",
+      "exists": true
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-completions.test.ts",
+      "exists": true
+    },
+    {
+      "path": "packages/core-agent/src/runtime/responses.test.ts",
+      "exists": true
+    },
+    {
+      "path": "packages/stage-ui/src/database/repos/chat-sessions.repo.test.ts",
+      "exists": true
+    },
+    {
+      "path": "packages/stage-ui/src/stores/providers/config.test.ts",
+      "exists": true
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store-lifecycle.browser.test.ts",
+      "exists": true
+    },
+    {
+      "path": "packages/stage-ui/src/stores/settings/audio-device.browser.test.ts",
+      "exists": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/media-permissions.test.ts",
+      "exists": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.test.ts",
+      "exists": true
+    }
+  ]
+}

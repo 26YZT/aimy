@@ -1,0 +1,19 @@
+{
+  "mode": "save",
+  "cardId": "default",
+  "avatarMatches": true,
+  "avatarSha256": "8de7cbc1bc1b55be3cd3bbdd4f3cc575a87b0039e750b99260a15fdf3a33d02c",
+  "theme": "aimy-misty-pink",
+  "accent": "#98546c",
+  "voice": {
+    "connected": true,
+    "microphone": {
+      "enabled": false,
+      "ready": false,
+      "listening": false,
+      "recording": false,
+      "pending": false
+    },
+    "drafts": []
+  }
+}

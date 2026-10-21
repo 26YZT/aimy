@@ -2,8 +2,10 @@ import type { SerializableDesktopCapturerSource } from '@proj-airi/electron-scre
 import type { SourcesOptions } from 'electron'
 import type { MaybeRefOrGetter } from 'vue'
 
-import { useElectronScreenCapture } from '@proj-airi/electron-screen-capture/vue'
-import { computed, ref, shallowRef, watch } from 'vue'
+import { setupElectronScreenCapture } from '@proj-airi/electron-screen-capture/renderer'
+import { getElectronEventaContext } from '@proj-airi/electron-vueuse'
+import { captureResourceStream, getResourcePolicy, onResourceRevoked } from '@proj-airi/stage-ui/services/resource-policy'
+import { computed, ref, shallowRef, toValue, watch } from 'vue'
 
 import { createObjectUrlFromBytes } from '../utils/create-object-url-from-bytes'
 
@@ -27,12 +29,15 @@ interface ScreenCaptureSource extends SerializableDesktopCapturerSource {
  * - Reactive source lists, active stream state, and helpers for refetching, starting, stopping, and capturing frames
  */
 export function useVisionScreenCapture(sourcesOptions: MaybeRefOrGetter<SourcesOptions>) {
+  let startVersion = 0
   const sources = ref<ScreenCaptureSource[]>([])
   const isRefetching = ref(false)
   const hasFetchedOnce = ref(false)
   const activeSourceId = ref('')
   const activeStream = shallowRef<MediaStream | null>(null)
   const activeStreamSourceId = ref('')
+  const captureSignal = shallowRef<AbortSignal>()
+  let activeCapture: AbortController | undefined
 
   watch(activeSourceId, (nextId) => {
     if (activeStreamSourceId.value && activeStreamSourceId.value !== nextId) {
@@ -40,10 +45,11 @@ export function useVisionScreenCapture(sourcesOptions: MaybeRefOrGetter<SourcesO
     }
   })
 
-  const {
-    getSources,
-    selectWithSource,
-  } = useElectronScreenCapture(window.electron.ipcRenderer, sourcesOptions)
+  const screenCapture = setupElectronScreenCapture(getElectronEventaContext())
+
+  async function getSources() {
+    return await screenCapture.getSources(toValue(sourcesOptions))
+  }
 
   const activeSource = computed(() => sources.value.find(source => source.id === activeSourceId.value) || null)
 
@@ -55,6 +61,10 @@ export function useVisionScreenCapture(sourcesOptions: MaybeRefOrGetter<SourcesO
   }
 
   function clearActiveStream() {
+    startVersion++
+    activeCapture?.abort(new DOMException('Screen capture ended or changed', 'AbortError'))
+    activeCapture = undefined
+    captureSignal.value = undefined
     const stream = activeStream.value
     if (!stream) {
       activeStream.value = null
@@ -80,8 +90,7 @@ export function useVisionScreenCapture(sourcesOptions: MaybeRefOrGetter<SourcesO
     stream.getTracks().forEach((track) => {
       track.addEventListener('ended', () => {
         if (activeStream.value === stream && activeStreamSourceId.value === sourceId) {
-          activeStream.value = null
-          activeStreamSourceId.value = ''
+          clearActiveStream()
         }
       }, { once: true })
     })
@@ -127,17 +136,21 @@ export function useVisionScreenCapture(sourcesOptions: MaybeRefOrGetter<SourcesO
 
     clearActiveStream()
 
-    const stream = await selectWithSource(
+    const version = startVersion
+    const stream = await captureResourceStream('screen', () => screenCapture.selectWithSource(
       () => sourceId,
       async () => await navigator.mediaDevices.getDisplayMedia({ video: true, audio: false }),
-    )
-    if (!isActiveStream(stream)) {
+      { sourcesOptions: toValue(sourcesOptions) },
+    ))
+    if (version !== startVersion || !isActiveStream(stream)) {
       stream.getTracks().forEach(track => track.stop())
       throw new Error('Selected source did not provide a live video track')
     }
 
     activeStream.value = stream
     activeStreamSourceId.value = sourceId
+    activeCapture = new AbortController()
+    captureSignal.value = activeCapture.signal
     attachStreamLifecycle(stream, sourceId)
 
     return stream
@@ -147,12 +160,20 @@ export function useVisionScreenCapture(sourcesOptions: MaybeRefOrGetter<SourcesO
     clearActiveStream()
   }
 
+  const offRevoked = onResourceRevoked((_, kind) => {
+    if (!kind || kind === 'screen')
+      clearActiveStream()
+  })
+
   function cleanup() {
+    offRevoked()
     stopStream()
     revokeSourceObjectUrls(sources.value)
   }
 
   function captureFrame(video: HTMLVideoElement, quality = 0.82, maxWidth = 1280, maxHeight = 720) {
+    const lease = getResourcePolicy()?.acquire('screen')
+    lease?.release()
     if (!video || video.readyState < 2)
       return null
 
@@ -179,6 +200,7 @@ export function useVisionScreenCapture(sourcesOptions: MaybeRefOrGetter<SourcesO
     activeSourceId,
     activeSource,
     activeStream,
+    captureSignal,
     isRefetching,
     hasFetchedOnce,
     refetchSources,

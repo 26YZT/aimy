@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-12",
+  "scope": "standalone design preview only",
+  "checks": [
+    {
+      "name": "default_permissions_off",
+      "passed": true
+    },
+    {
+      "name": "nested_dark_text_uses_dark_token",
+      "passed": true
+    },
+    {
+      "name": "send_labeled_sample",
+      "passed": true
+    },
+    {
+      "name": "voice_requires_explanation",
+      "passed": true
+    },
+    {
+      "name": "voice_demo_only_after_enable",
+      "passed": true
+    },
+    {
+      "name": "mic_off_stops_voice_demo",
+      "passed": true
+    },
+    {
+      "name": "escape_cancels_and_returns_focus",
+      "passed": true
+    },
+    {
+      "name": "settings_keyboard_tabs",
+      "passed": true
+    },
+    {
+      "name": "connection_explicitly_simulated",
+      "passed": true
+    },
+    {
+      "name": "reduced_motion_setting",
+      "passed": true
+    },
+    {
+      "name": "theme_controls_synced",
+      "passed": true
+    },
+    {
+      "name": "voice_state_idle",
+      "passed": true
+    },
+    {
+      "name": "voice_state_listening",
+      "passed": true
+    },
+    {
+      "name": "voice_state_thinking",
+      "passed": true
+    },
+    {
+      "name": "voice_state_speaking",
+      "passed": true
+    },
+    {
+      "name": "voice_state_interrupted",
+      "passed": true
+    },
+    {
+      "name": "voice_state_error",
+      "passed": true
+    },
+    {
+      "name": "interrupt_visual_state",
+      "passed": true
+    },
+    {
+      "name": "destructive_confirm_style",
+      "passed": true
+    },
+    {
+      "name": "refresh_ephemeral_preview",
+      "passed": true
+    },
+    {
+      "name": "all_images_loaded",
+      "passed": true
+    },
+    {
+      "name": "desktop_1440_overview_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_1440_foundations_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_1440_components_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_1440_windows_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_1440_states_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_1440_handoff_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_390_overview_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_390_foundations_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_390_components_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_390_windows_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_390_states_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_390_handoff_no_overflow",
+      "passed": true
+    }
+  ]
+}

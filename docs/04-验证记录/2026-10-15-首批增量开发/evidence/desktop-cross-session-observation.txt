@@ -1,0 +1,1 @@
+"{\"purpose\":\"synthetic-only-runtime-observation\",\"ready\":false,\"enabled\":true,\"facts\":[{\"text\":\"用户希望被称为测试团团。\"},{\"text\":\"用户喜欢喝乌龙茶。\"}],\"sessionId\":\"9JUz1lqJX2jbrHPq4Lg7J\",\"messages\":[{\"role\":\"user\",\"content\":\"我想喝点东西，有什么建议？\"},{\"role\":\"assistant\",\"content\":\"测试团团，可以泡一杯你喜欢的乌龙茶。这是离线测试回应。\"}],\"failedJobCount\":0,\"pendingJobCount\":0}"

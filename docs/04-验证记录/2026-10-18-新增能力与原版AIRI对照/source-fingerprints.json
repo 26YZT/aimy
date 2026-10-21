@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-18",
+  "baseline": "/Users/mima1234/Documents/airi-main",
+  "baselineGitMetadata": "No .git; hashes pinned; not latest upstream claim",
+  "current": "/Users/mima1234/Documents/aimy/aimy-app",
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/companion/voice-policy.ts",
+      "sha256": "097cb26959938a793460ab20674141eaa6504d3f4b395108328144695ef7bf6e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+      "sha256": "e905772d5c74dcd6b2f7d858e6d504c5d23c2ff2565c77409e11353e85db7014"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+      "sha256": "2e500b7f991537b9eb49a5d32202ce346d244a0155ca7606a133563bf730d791"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/composables/voice-drafts.ts",
+      "sha256": "43cc50fcc939d5c730680d0ad5efd8809bf2a50e9a40af1ad47d15f39f91d8c6"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/voice-drafts.ts",
+      "sha256": "e1ebb6e0a66f5193a25f8bf60ff94efec60b39c20828648643fcda61c4f3cdd2"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-live2d/src/composables/live2d/companion-motion.ts",
+      "sha256": "9c3ce2abd862b9d8d5d9c4198fb2e6d846b7a8b87b7cabb2d35c63b1843f6547"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui-live2d/src/components/scenes/live2d/Model.vue",
+      "sha256": "5877531db5600d77d14d61c8be6ba35c93a332d9f4701b5042fc2c1036f7b6f4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-live2d/src/components/scenes/live2d/Model.vue",
+      "sha256": "2b33d4bc902418cced0119f236729401e801d384627e5134de58de677619a1cd"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/display-models.ts",
+      "sha256": "1eb9620cc7caa64dd1be04f4583f6370017c2ea7b085de39c4a30de62f46fb49"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/display-models.ts",
+      "sha256": "06de0d2c6cb717fe8124a82ead640d3c94269925a5bc384afe20c8531ae8adec"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/companion/preferences.ts",
+      "sha256": "a54654f6bf2ce10299cc5613a6a7a30ab32dec0f676ed09cf5967c02605a14cb"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/companion.ts",
+      "sha256": "a60bb32d0a1b8ffab07c284d3e2cfdfafd80f3ce9eaf8216653aa7211656924a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/companion/speech-transform.ts",
+      "sha256": "188098f30249ddcde8f619313f7370179b3606a4feae2f05a2477f7bbd7be7b6"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/resource-policy.ts",
+      "sha256": "108674609773060c1c516f2c3d4c533312d368ae6eafbe08f39280f261ee1489"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/modules/speech.ts",
+      "sha256": "bdbfe0b14c630ed1d969492a8fcbdbaf4af1433171cea0ee45c9435d9ec3050c"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/companion/review.ts",
+      "sha256": "ba1c2d120754764875e0521ae798dbaf419b0c03b374dcb77ce8c35bff2b971b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/companion/workflow.ts",
+      "sha256": "0036702294185a9b5db0f780fa76e4008ae6fbc649068f73df7cfcb13b7a8b40"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/workflows/engine.ts",
+      "sha256": "b84faf1eaca1a952569f0de552c9e321ddb15bf433a622c3118fb9d612ff2854"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/strategy.ts",
+      "sha256": "28550a19f0eeb7199d568b15d1872fd75a5aa27556b08fea1c9cc06946bb9d4f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/app-aliases.ts",
+      "sha256": "4b85e9eadf5d3e5cafd36f1ffa06533058caf798c7e8e949bb79d5cc4d6bc8e4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/transparency.ts",
+      "sha256": "5b28e0e026c2a4427a1f5f8ed4777cb3f668a8acfc3cf72373abf91781b682f4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/utils/error-message.ts",
+      "sha256": "7aca92ceeb21c63c47518104c1930cc2eb836a6b4045a27bc540cd65a228d844"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/workflows/surface-resolver.ts",
+      "sha256": "063e8137268fa20b56d227914adea5aedbf0185bb7caf45ef6846efb7ce4ace7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/terminal/interactive-patterns.ts",
+      "sha256": "57c46f8134d4783a6a04903de391d74a4ddca47fcf7ccdf5a2ef04be8aa5124a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/workflows/types.ts",
+      "sha256": "f5f292082e8e77afe4d16eca7fecd7080c29ee9806d579fb0cf54e38ee895505"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/services/computer-use-mcp/src/state.ts",
+      "sha256": "066f70ea4305e61e5cb5ac4861094ab834f2d3f46fbbb5f9f8f0f5737b59a1fe"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/models/vrm-inspection.ts",
+      "sha256": "6a0c17aeb47e889b3fac6313166035a2949eaca27823a610e62fd2dc8f01ea0a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui-three/src/composables/vrm/loader.ts",
+      "sha256": "84e1cf24155dcab5f1553dd9177c8d8c95ae8e80d4279dcee18452bb28ac5d47"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/src/composables/vrm/loader.ts",
+      "sha256": "84e1cf24155dcab5f1553dd9177c8d8c95ae8e80d4279dcee18452bb28ac5d47"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/event-source.ts",
+      "sha256": "f53fcb4bd118466890bac4e3e6bb4c57882b6b41b6c7b236cc2d117839ac0c87"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/plugins/builtin-tools.ts",
+      "sha256": "1d4266fb8df6e40e5b45fd2c0f0a2e7aed852795e9f00b8a77858ef4b97292f1"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/plugins/reaction.ts",
+      "sha256": "f634bf07dc5ad7bbe08a1df57abfdff3ebdfdf355ce8e39fcd8da8dda7800243"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/agent.ts",
+      "sha256": "27fb1addc12e2ea8193a7b15e6636a6072d7a15622c5691b95e669e2ebd18d8a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/character/index.ts",
+      "sha256": "8d1113ad823a746ef2ce01045e10c9921e84b8b50ac92f7876084488e32f6118"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/character/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+      "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+    }
+  ]
+}

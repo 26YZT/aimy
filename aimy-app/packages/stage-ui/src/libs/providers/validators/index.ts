@@ -1,10 +1,10 @@
+export { validateProvider } from './run'
 export {
   createConfigValidationSteps,
   createOpenAICompatibleValidators,
   createProviderValidationSteps,
   getProviderValidationIntervalMs,
   getValidatorsOfProvider,
-  validateProvider,
 } from '@proj-airi/provider-inference'
 export type {
   ProviderValidationCallbacks,

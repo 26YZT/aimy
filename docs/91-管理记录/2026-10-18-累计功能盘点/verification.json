@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-18",
+  "uniqueCuratedRows": 92,
+  "categoryCounts": {
+    "沿用AIRI": 39,
+    "真正新增的操作或机制": 15,
+    "适配增强与修复": 17,
+    "未完整接入、未开放或排除": 21
+  },
+  "allRequiredFieldsPresent": true,
+  "unmappedBaselineDesktopRows": 0,
+  "unmappedAuditRows": 0,
+  "unmappedCandidateRows": 0,
+  "unmappedEcosystemRows": 0,
+  "currentSourceReferences": 290,
+  "uniqueSourcePaths": 229,
+  "missingSourcePaths": 0,
+  "brokenDocumentLinks": 0,
+  "checkedSourceHashesUnchanged": true,
+  "installedPackageMatchesDelivered": true,
+  "productCodeWritten": false,
+  "installedAppWritten": false,
+  "privateDataRead": false,
+  "modelCalls": 0,
+  "limitation": "Documentation/source/package audit only; no new runtime, vendor, model, device or user acceptance tests"
+}

@@ -18,6 +18,7 @@ import type {
   WebGLRenderer,
 } from 'three'
 
+import type { VrmGesture } from '../../composables/vrm/gestures'
 import type {
   VrmDisposeHookContext,
   VrmFrameHookContext,
@@ -75,6 +76,7 @@ import {
 } from '../../composables/vrm/animation'
 import { loadVrm } from '../../composables/vrm/core'
 import { useVRMEmote } from '../../composables/vrm/expression'
+import { VrmGesturePlayer } from '../../composables/vrm/gestures'
 import { createVrmInteractionColliders } from '../../composables/vrm/interaction'
 import { resolveInternalVrmHooks } from '../../composables/vrm/internal-hooks'
 import { useVRMLipSync } from '../../composables/vrm/lip-sync'
@@ -192,6 +194,7 @@ const raycaster = new Raycaster()
 
 // Animation related ref
 const vrmAnimationMixer = ref<AnimationMixer>()
+let gesturePlayer: VrmGesturePlayer | undefined
 const { onBeforeRender, stop, start } = useLoop()
 
 const vrmHooks: readonly VrmHook[] = resolveInternalVrmHooks()
@@ -316,6 +319,8 @@ function getActiveManagedVrmInstance() {
 }
 
 function clearActiveManagedVrmRefs() {
+  gesturePlayer?.cancel()
+  gesturePlayer = undefined
   vrmAnimationMixer.value = undefined
   vrmEmote.value = undefined
   vrm.value = undefined
@@ -333,6 +338,8 @@ function applyModelTransform(group: Group) {
 }
 
 function applyManagedVrmInstance(instance: ManagedVrmInstance) {
+  gesturePlayer?.cancel()
+  gesturePlayer = new VrmGesturePlayer(instance.vrm, instance.mixer)
   // A reload creates a new group while the saved transform can stay unchanged.
   // Apply it during every commit because the value watchers will not run again.
   applyModelTransform(instance.group)
@@ -461,6 +468,7 @@ function bindManagedVrmInstanceRenderLoop() {
 
     const animationMixerMs = measureFrameStep(tracingEnabled, () => {
       vrmAnimationMixer.value?.update(delta)
+      gesturePlayer?.update()
     })
     const activeVrm = vrm.value
     const activeVrmGroup = vrmGroup.value
@@ -986,6 +994,7 @@ onMounted(async () => {
   // watch if the animation should be paused
   watch(paused, (isPaused) => {
     if (isPaused) {
+      gesturePlayer?.cancel()
       stop()
     }
     else {
@@ -1102,6 +1111,9 @@ function headAnchor() {
 }
 
 defineExpose({
+  playGesture(gesture: VrmGesture) {
+    return !props.paused && modelLoaded.value && (gesturePlayer?.play(gesture) ?? false)
+  },
   headAnchor,
   getInteractionColliders: () => interactionColliders.value?.colliders ?? [],
   setExpression(expression: string, intensity = 1) {

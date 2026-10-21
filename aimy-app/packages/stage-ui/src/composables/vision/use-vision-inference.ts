@@ -20,6 +20,8 @@ export interface VisionInferenceInput {
   promptOverride?: string
   /** Cancels this read when its owning chat turn ends. */
   abortSignal?: AbortSignal
+  /** Screen consumers recheck their capture lease before sending or publishing a result. */
+  assertCurrent?: () => void
   /** Background chat supplies its character's vision selection. Other callers use the current module settings. */
   selection?: { provider: string, model: string }
 }
@@ -55,8 +57,12 @@ export function useVisionInference() {
 
   /** Reads one image with the given vision provider and returns the trimmed text. */
   async function describeImage(providerId: string, modelId: string, input: VisionInferenceInput) {
+    input.abortSignal?.throwIfAborted()
+    input.assertCurrent?.()
     const thinking = ollamaThinkingEnabled.value
     const provider = await providersStore.getChatProviderInstance(providerId)
+    input.abortSignal?.throwIfAborted()
+    input.assertCurrent?.()
     const workload = getVisionWorkload(input.workloadId)
     const prompt = input.promptOverride ?? workload.prompt
     const { url } = parseDataUrl(input.imageDataUrl)
@@ -88,8 +94,11 @@ export function useVisionInference() {
         // A frame description calls no tools. The chat tool list only costs context,
         // and a provider without tool calling rejects it.
         supportsTools: false,
+        assertCurrent: input.assertCurrent,
         abortSignal: input.abortSignal ? AbortSignal.any([input.abortSignal, abortController.signal]) : abortController.signal,
         onStreamEvent: (event) => {
+          input.abortSignal?.throwIfAborted()
+          input.assertCurrent?.()
           if (event.type === 'text-delta') {
             buffer += event.text
           }
@@ -133,7 +142,10 @@ export function useVisionInference() {
     }
 
     try {
-      lastText.value = await describeImage(providerId, modelId, input)
+      const result = await describeImage(providerId, modelId, input)
+      input.abortSignal?.throwIfAborted()
+      input.assertCurrent?.()
+      lastText.value = result
     }
     catch (error) {
       if (!input.abortSignal?.aborted)

@@ -1,0 +1,22 @@
+const fs = await import('node:fs/promises');
+const task = await taskSpace(53);
+const page = task.page('p1');
+const result = await page.evaluate(async () => {
+  const f = await fetch('/fixtures.json').then(r => r.json());
+  const c = f.memory_cases.find(c => c.id === 'LM01');
+  const userId = 'SYNTHETIC-MEMORY-AB-USER';
+  const characterId = 'SYNTHETIC-CHARACTER';
+  const sessionId = 'SYNTHETIC-SESSION-A';
+  const meta = {sessionId,userId,characterId,createdAt:f.clock_epoch*1000,updatedAt:f.clock_epoch*1000};
+  const before = {chat:await AiriAudit.chatSessionsRepo.getSession(sessionId),ryza:LongTerm.list()};
+  if (before.chat !== null || before.ryza.length !== 0) throw new Error('Expected unused synthetic origin; no clearing allowed');
+  await AiriAudit.chatSessionsRepo.saveIndex({userId,characters:{[characterId]:{activeSessionId:sessionId,sessions:{[sessionId]:meta}}}});
+  await AiriAudit.chatSessionsRepo.saveSession(sessionId,{meta,messages:c.messages.map(m => ({id:m.id,role:'user',content:m.text,createdAt:f.clock_epoch*1000}))});
+  LongTerm.setClock(() => ({iso:f.clock_iso,day:'2026-10-14'}));
+  const fact = LongTerm.add(c.fixed_candidates[0].content,{date:'2026-10-14',category:'preference',importance:3,keywords:['咖啡','饮料']});
+  window.__syntheticRealmMarker = true;
+  const chat = await AiriAudit.chatSessionsRepo.getSession(sessionId);
+  return {phase:'write_immediate_read',clock:f.clock_iso,fixtureCase:'LM01',before,after:{chat,ryza:LongTerm.list()},ryzaWriteOk:LongTerm.lastWriteOk(),factId:fact.id,index:await AiriAudit.chatSessionsRepo.getIndex(userId),browserUserAgent:navigator.userAgent,indexedDBIsNative:typeof indexedDB.open==='function',limitations:['AIRI chat history is not a current-fact ledger','fixed candidate, no extraction semantics measured','no provider, cloud or device modules loaded']};
+});
+await fs.writeFile('/tmp/aimy-20261014-memory-ab-browser/write-immediate-read.json',JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({phase:result.phase,chatMessages:result.after.chat.messages.length,ryzaEntries:result.after.ryza.length,ryzaWriteOk:result.ryzaWriteOk}));

@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-14",
+  "current_request": "通读Claude任务目标及恢复结果，补齐三个项目拆解报告与AIRI能力清单，再汇总复用裁决；产品代码只读。",
+  "recovered_complete_results": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/01-AionsHome记忆系统.md",
+      "reader": "AionsHome只读核查分支完整阅读",
+      "sha256": "61eaab80f37236e80d56b791caff57a614129ad211d92801f878e0d1b5adb149"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/02-AionsHome主动行为.md",
+      "reader": "AionsHome只读核查分支完整阅读",
+      "sha256": "9d78c032b1677186c39ce8bb4f85eff03fa716c96fe5116bd30b9a4369232726"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/03-AionsHome感知系统.md",
+      "reader": "AionsHome只读核查分支完整阅读",
+      "sha256": "f9482e51e8bafaf0d4c556cc2f981c4af03fea292501e77309667cc6c34bfd14"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/04-AionsHome生活功能.md",
+      "reader": "AionsHome只读核查分支完整阅读",
+      "sha256": "48394981d128a3233ebcfda7e9d57df73898e1d98ea797b95d57cfc03dd9bf0d"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/05-AionsHome基础设施与前端.md",
+      "reader": "AionsHome只读核查分支完整阅读",
+      "sha256": "161069e8f854500eb035b523bb2e49337876d706d26079b6fea31df63fb17bc7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/06-AionsHome访客客厅.md",
+      "reader": "AionsHome只读核查分支完整阅读",
+      "sha256": "3b1c6f3ff843b0592352d24252f0c5ca3027489e6c753a64715c3d68d1fb4771"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/07-AionsHome自主循环启动与配置.md",
+      "reader": "AionsHome只读核查分支完整阅读",
+      "sha256": "85f179628d44019654c87131caaad98fa23a406c1bd185347e602c4eccf76e88"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/08-AIRI桌面窗口能力.md",
+      "reader": "主写者完整阅读",
+      "sha256": "42a1bf035cf079bf7c0b6557020367111ba91a04d49e0b932050a1a5b5319123"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/09-AIRI插件与服务端能力.md",
+      "reader": "主写者完整阅读",
+      "sha256": "d23e3f9795a56153294371da71fde3d7c15cedb4cec7de00ec052b763cecde52"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/10-AIRI表情与角色行为.md",
+      "reader": "主写者完整阅读",
+      "sha256": "9347e502c0d8a425d6aa9935ec30de30d4b7c4316d673fa7036d7aa70d0a1c35"
+    }
+  ],
+  "existing_reports": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-Charakuru拆解复用评估.md",
+      "reader": "主写者及独立复核完整阅读",
+      "sha256": "3ca936e5712540aad5201daa89cfe833e43144b7550c56b219a341665ae85d7c"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-Open-LLM-VTuber前端拆解复用评估.md",
+      "reader": "OLV后端核查分支完整阅读",
+      "sha256": "f6e0366929f9cd05977a80275e824b8dcb152ca64698c35d5ba054d8230f4030"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-chromatic拆解复用评估.md",
+      "reader": "主写者及独立复核完整阅读",
+      "sha256": "2832c94ee5b2a10c26125f0bf2c6baa5ac6e0d81798a7090211857b1bb3bbbe5"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-kirara-ai拆解复用评估.md",
+      "reader": "主写者及独立复核完整阅读",
+      "sha256": "6311ec9fe2849387fbae78945594c77c734c3005f750565726558292177a73be"
+    }
+  ],
+  "conversation": {
+    "path": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/主对话可读记录.md",
+    "reader": "主写者与各只读核查分支完整阅读"
+  },
+  "original_reference_doc": {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/类似的一款产品.doc",
+    "read_method": "textutil只读转换",
+    "scope": "Open-LLM-VTuber需拆解；Eikanya Live2D模型库明确不做拆解"
+  },
+  "pending_branch_closure": {
+    "AionsHome总报告/文档盘点/多角色语音": "2026-10-14-AionsHome拆解复用评估.md",
+    "Ryza总报告": "2026-10-14-Ryza拆解复用评估.md",
+    "OLV后端总报告": "2026-10-14-Open-LLM-VTuber后端拆解复用评估.md",
+    "AIRI统一清单/现状对照": "2026-10-14-AIRI现状能力清单.md"
+  },
+  "not_claimed": [
+    "全仓每行逐字语义审计",
+    "真实设备或模型验收",
+    "所有供应商已运行",
+    "正式角色/音色/数据库/sidecar已选型",
+    "八件套规划或产品实现完成"
+  ]
+}

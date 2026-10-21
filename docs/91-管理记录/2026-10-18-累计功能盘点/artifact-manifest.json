@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-18",
+  "files": [
+    {
+      "path": "docs/91-管理记录/2026-10-18-累计功能盘点/inventory.json",
+      "sha256": "cbe804bdb66ca7361b348782dff4d93b724fdd7b7c6604edfcb36eb45bb2068b"
+    },
+    {
+      "path": "docs/91-管理记录/2026-10-18-累计功能盘点/README.md",
+      "sha256": "34f771893bf93a2ad06d2c5e792ab742b425ae7dec82d7898ab1dea6d561dddb"
+    },
+    {
+      "path": "docs/91-管理记录/2026-10-18-累计功能盘点/覆盖核对.md",
+      "sha256": "ce1ffdf6a5ec64f9b0d1fab50e57976d620894750adb60e619f03a61145ef4b2"
+    },
+    {
+      "path": "docs/91-管理记录/2026-10-18-累计功能盘点/source-checks.json",
+      "sha256": "2b3e697f479235476df5626eb727011d1247019d96f2a572f32c3a538f28c56a"
+    },
+    {
+      "path": "docs/91-管理记录/2026-10-18-累计功能盘点/package-proof.json",
+      "sha256": "b9b0bb066b16ff45fb83af30da151b5bd61634be06830f0a60c2e0221c47b499"
+    },
+    {
+      "path": "docs/91-管理记录/2026-10-18-累计功能盘点/verification.json",
+      "sha256": "c54e3864a061da639d4d0481c71e2381a204ecfd7a4a8961fe31a01a08fbba50"
+    },
+    {
+      "path": "docs/00-当前方向/Aimy当前累计功能清单.md",
+      "sha256": "3edeb98f62d635a3a9cf7c80598ed8a8b0ca36e6f9e3886395da4392bea4daf9"
+    }
+  ]
+}

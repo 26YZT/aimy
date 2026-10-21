@@ -1,0 +1,21 @@
+{
+  "application": "/Users/mima1234/Applications/Aimy体验版.app",
+  "desktopShortcut": "/Users/mima1234/Desktop/Aimy体验版.app",
+  "dataDirectory": "/Users/mima1234/Library/Application Support/Aimy-Preview",
+  "bundleId": "ai.aimy.preview",
+  "displayName": "Aimy体验版",
+  "version": "0.12.0-beta.5",
+  "asarSha256": "619f8275c040417981c704c43e9bf05fd13dba11b7f339314cf579ad7aad5177",
+  "asarBytes": 1354730242,
+  "sourceChanges": false,
+  "realModelRequestsByAssistant": 0,
+  "nativeLaunch": "Onboarding rendered through installed app; user then began configuration",
+  "quitTest": "Not completed: user started entering configuration, so no further UI interruption",
+  "upstreamUpdaterDisabled": true,
+  "signed": "local ad-hoc; not notarized",
+  "knownOptionalPackagingWarnings": [
+    "Godot binary absent",
+    "optional non-arm64 platform dependencies absent",
+    "@xsai/generate-transcription@0.5.0-beta.8 unresolved nested dependency; no new voice capability claim"
+  ]
+}

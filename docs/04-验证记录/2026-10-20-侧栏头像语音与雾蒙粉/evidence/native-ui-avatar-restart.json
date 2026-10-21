@@ -1,0 +1,12 @@
+{
+  "cardId": "default",
+  "sha256": "2956623fff4697de19e674aa827f0dde07d7a6df3ca98dfe27c6d8d56213f71b",
+  "bytes": 5051,
+  "mic": {
+    "enabled": false,
+    "ready": false,
+    "listening": false,
+    "recording": false,
+    "pending": false
+  }
+}

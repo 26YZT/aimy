@@ -1,0 +1,12 @@
+[
+  {
+    "fast": true,
+    "text": "这是艾米与英灵接测试",
+    "events": 12
+  },
+  {
+    "fast": false,
+    "text": "这是艾米与英灵接测试",
+    "events": 13
+  }
+]

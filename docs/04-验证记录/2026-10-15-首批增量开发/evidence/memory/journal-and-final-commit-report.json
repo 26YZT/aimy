@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-15",
+  "status": "implemented and targeted verification passed; parent owns final Electron and human/model acceptance",
+  "fixes": [
+    {
+      "problem": "Unacknowledged old source prevents every later journal entry after durable source edit or deletion",
+      "evidence_before": "journal-red-browser.log: 5 failures, 1 read-failure control passed",
+      "solution": "Validate durable source hash and owner scope; terminally acknowledge replaced/deleted versions without extracting them, invalidate current source if required, retain real read failures; wait while local history writes remain pending; confirm whole-session absence before clearing exact acknowledgment debt."
+    },
+    {
+      "problem": "Host cancellation/model change inside final repository digest await could still commit old model output",
+      "evidence_before": "commit-guard-red-browser.log: 2 failures with stale facts committed",
+      "solution": "Run optional in-process host guard inside commitCandidates IDB updater before any mutation; normalize host revocation to STALE_RESULT, defer the same attempt without resurrecting cancelled work or reporting a storage failure."
+    }
+  ],
+  "public_api": {
+    "name": "useMemoryStore().getOperation",
+    "signature": "getOperation(operationId: string): Promise<{ receipt: MemoryReceipt | null, revision: number }>",
+    "authority": "Synced action executes in the existing owner. No caller-provided scope. ID validation and owner/scope/lease rechecks surround the repository read. Null is unknown, not failed; the query never repeats the operation."
+  },
+  "verification": {
+    "unique_browser_tests": 44,
+    "integration": {
+      "passed": 24,
+      "log": "/tmp/aimy-first-implementation-20261015/memory/journal-integration-final-browser.log"
+    },
+    "repository": {
+      "passed": 20,
+      "combined_log": "/tmp/aimy-first-implementation-20261015/memory/journal-commit-final-browser.log"
+    },
+    "scoped_eslint": {
+      "exit_code": 0,
+      "log": "/tmp/aimy-first-implementation-20261015/memory/journal-commit-lint-final.log"
+    },
+    "stage_ui_typecheck": {
+      "exit_code": 0,
+      "log": "/tmp/aimy-first-implementation-20261015/memory/journal-commit-typecheck.log"
+    },
+    "new_cases": [
+      "follower receipt query own scope, invalid payload and foreign scope isolation",
+      "native ack quota fault then delete/edit and new input, same owner and restarted owner",
+      "whole-session deletion clears exact acknowledgment debt",
+      "native IDB read failure must remain pending",
+      "cancel/model change during real final SubtleCrypto digest must reject candidate commit"
+    ]
+  },
+  "read_only_review": {
+    "checked": [
+      "memory source lifecycle and replay barriers",
+      "chat-session journal/source finalization transaction boundaries",
+      "lease renewal and expired crashed-owner recovery",
+      "latest chat request reasoning/sampling/voice target guard",
+      "core pre-fetch and stream result guard",
+      "two-phase global shutdown and fixed main-window cleanup"
+    ],
+    "conclusion": "No additional precise P1 found within the requested chain after these fixes. This is not semantic model-quality or full product acceptance."
+  },
+  "boundary": {
+    "modified_product_files": [
+      "packages/stage-ui/src/stores/memory.ts",
+      "packages/stage-ui/src/stores/memory-integration.browser.test.ts",
+      "packages/stage-ui/src/database/repos/memory.repo.ts"
+    ],
+    "durable_schema_changed": false,
+    "new_http_or_service": false,
+    "new_dependency": false,
+    "real_model_calls": false,
+    "git_actions": false
+  },
+  "source_sha256": {
+    "packages/stage-ui/src/stores/memory.ts": "c9b6e1c4db0c77123765d1717521db7df019a0e7b10d02673bf28152bbc8ad1d",
+    "packages/stage-ui/src/stores/memory-integration.browser.test.ts": "5335fb945f04461446997ef8b6a106e6de21ce76d9016932144e2a395c88e846",
+    "packages/stage-ui/src/database/repos/memory.repo.ts": "08ce70f9c1a3638233bcc969850305a58e352163a0b0f4662f82adce3dea5783"
+  },
+  "preserved_failure_screenshots": [
+    {
+      "path": "/tmp/aimy-first-implementation-20261015/memory/journal-failure-screenshots/persistence-failure-and-lease-recovery-settles-an-unacknowledged-edit-source-without-blocking-later-input--restart-false--1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-first-implementation-20261015/memory/journal-failure-screenshots/persistence-failure-and-lease-recovery-settles-an-unacknowledged-edit-source-without-blocking-later-input--restart-true--1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-first-implementation-20261015/memory/journal-failure-screenshots/persistence-failure-and-lease-recovery-settles-an-unacknowledged-delete-source-without-blocking-later-input--restart-true--1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-first-implementation-20261015/memory/journal-failure-screenshots/persistence-failure-and-lease-recovery-settles-an-unacknowledged-delete-source-without-blocking-later-input--restart-false--1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-first-implementation-20261015/memory/journal-failure-screenshots/persistence-failure-and-lease-recovery-clears-only-the-acknowledgment-debt-for-a-durably-deleted-session-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-first-implementation-20261015/memory/journal-failure-screenshots/existing-chat-plus-durable-memory-owner-rejects-candidate-commit-if-model-change-occurs-inside-the-final-digest-await-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    },
+    {
+      "path": "/tmp/aimy-first-implementation-20261015/memory/journal-failure-screenshots/existing-chat-plus-durable-memory-owner-rejects-candidate-commit-if-cancel-occurs-inside-the-final-digest-await-1.png",
+      "sha256": "0a157c250dcc942cb0f7ff7b76b82b83ead2517b136b5e9ec2ca4f08242cf3dd"
+    }
+  ]
+}

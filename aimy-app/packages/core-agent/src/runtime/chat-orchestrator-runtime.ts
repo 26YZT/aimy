@@ -15,6 +15,7 @@ import { formatTimePrefix } from '../messages/datetime-prefix'
 import { renderConversationPreview } from '../messages/preview'
 import { createChatHooks } from './agent-hooks'
 import { useLlmmarkerParser } from './llm-marker-parser'
+import { projectGenerationFailure, publicGenerationError } from './llm-service'
 import { categorizeResponse, createStreamingCategorizer } from './response-categoriser'
 
 const REASONING_UI_FLUSH_CHUNK_SIZE = 24
@@ -121,6 +122,8 @@ export type ChatAttachment
 
 /** Options accepted by the chat orchestrator runtime for one user send. */
 export interface ChatOrchestratorSendOptions {
+  /** Host-owned lifecycle/model eligibility, checked before sending and delivering output. */
+  assertCurrent?: () => void
   /** Identity captured with chatProvider. Omission selects the active provider when the request is enqueued. */
   providerId?: string
   /** Model capabilities captured before the request enters its session queue. */
@@ -272,6 +275,13 @@ interface ChatRoundCorrelation {
  * Dependency surface used by the platform-agnostic chat orchestrator runtime.
  */
 export interface ChatOrchestratorRuntimeDeps {
+  /** Resolves scoped evidence at the actual provider Conversation boundary. */
+  resolveRequestContext?: (input: { sessionId: string, history: ChatHistoryItem[], query: string }) => Promise<{
+    history: ChatHistoryItem[]
+    supplement: string
+    contextRevision?: string
+    assertCurrent: () => void
+  }>
   /** Session persistence and generation guard port. */
   session: ChatOrchestratorSessionPort
   /** Context registry facade used for runtime context ingest and prompt snapshots. */
@@ -641,7 +651,23 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
     })
 
     const isStaleGeneration = () => deps.session.getSessionGeneration(sessionId) !== generation
-    const shouldAbort = () => isStaleGeneration() || abortSignal.aborted
+    let requestContext: Awaited<ReturnType<NonNullable<ChatOrchestratorRuntimeDeps['resolveRequestContext']>>> | undefined
+    const assertCurrent = () => {
+      abortSignal.throwIfAborted()
+      if (isStaleGeneration())
+        throw new DOMException('Conversation changed', 'AbortError')
+      options.assertCurrent?.()
+      requestContext?.assertCurrent()
+    }
+    const shouldAbort = () => {
+      try {
+        assertCurrent()
+        return false
+      }
+      catch {
+        return true
+      }
+    }
     if (shouldAbort())
       return
 
@@ -859,7 +885,9 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
         ],
       })
 
-      const context = buildContext(sessionMessagesForSend)
+      requestContext = await deps.resolveRequestContext?.({ sessionId, history: sessionMessagesForSend, query: sendingMessage })
+      assertCurrent()
+      const context = buildContext(requestContext?.history ?? sessionMessagesForSend)
       const stickerPrompt = stickers?.length
         ? [
             'You can send one optional sticker per reply with a marker from this catalog.',
@@ -869,7 +897,7 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
             ...stickers.map(sticker => `<|STICKER ${sticker.id}|>: ${sticker.description}`),
           ].join('\n')
         : ''
-      const systemPromptSupplement = [options.systemPromptSupplement?.trim(), stickerPrompt].filter(Boolean).join('\n\n')
+      const systemPromptSupplement = [options.systemPromptSupplement?.trim(), stickerPrompt, requestContext?.supplement].filter(Boolean).join('\n\n')
       if (systemPromptSupplement) {
         const systemMessage = context.turns.find(turn => turn.type === 'system' && turn.authority === 'system')
         if (systemMessage?.type === 'system')
@@ -925,6 +953,8 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
       })
 
       await waitForProvider(deps.llm.stream(options.model, options.chatProvider, context, {
+        assertCurrent,
+        contextRevision: requestContext?.contextRevision,
         headers,
         providerId: activeProvider,
         supportsAudioInput: options.supportsAudioInput,
@@ -1048,7 +1078,8 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
         })
       }
       catch (error) {
-        console.error('Assistant response observer failed:', error)
+        const failure = projectGenerationFailure(error)
+        console.error('Assistant response observer failed:', { code: failure.code, status: failure.status })
       }
 
       if (!shouldAbort() && (buildingMessage.slices.length > 0 || generatedTurn?.rounds.length)) {
@@ -1116,7 +1147,7 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
       }
     }
     catch (error) {
-      if (shouldAbort())
+      if (shouldAbort() || projectGenerationFailure(error).code === 'GENERATION_ABORTED')
         return
       failed = true
 
@@ -1127,7 +1158,8 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
       }
       resetForegroundStream(sessionId)
 
-      console.error('Error sending message:', error)
+      const failure = projectGenerationFailure(error)
+      console.error('Error sending message:', { code: failure.code, status: failure.status })
       deps.onMessageRoundFailed?.({
         ...correlation,
         source: sendSource,
@@ -1146,7 +1178,7 @@ export function createChatOrchestratorRuntime(deps: ChatOrchestratorRuntimeDeps)
           errorCode: 'llm_response_failed',
         })
       }
-      throw error
+      throw publicGenerationError(error)
     }
     finally {
       if (!assistantStored

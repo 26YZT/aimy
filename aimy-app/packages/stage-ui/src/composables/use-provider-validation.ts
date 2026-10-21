@@ -1,5 +1,3 @@
-import type { RemovableRef } from '@vueuse/core'
-
 import type { ProviderMode } from './use-analytics'
 
 import { errorMessageFrom } from '@moeru/std'
@@ -11,6 +9,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 
 import { selectProviderMetadata } from '../libs/providers/metadata'
+import { isCloudReplicaEnabled } from '../services/local-data-policy'
 import { useProviderConfigStore } from '../stores/providers/config'
 import { useProviderStore } from '../stores/providers/provider'
 import { useAnalytics } from './use-analytics'
@@ -36,7 +35,9 @@ export function useProviderValidation(providerId: string) {
     trackProviderConnectionTestCompleted,
     trackProviderConnectionTestStarted,
   } = useAnalytics()
-  const { configs: providers } = storeToRefs(providerStore) as { configs: RemovableRef<Record<string, any>> }
+  const { configs: providers } = storeToRefs(providerStore)
+  const localOnly = !isCloudReplicaEnabled()
+  const draft = ref<Record<string, unknown>>({})
 
   const providerMetadata = computedAsync(async () => {
     const definition = providersStore.getProviderDefinition(providerId)
@@ -47,11 +48,15 @@ export function useProviderValidation(providerId: string) {
   }, undefined)
 
   // --- Internal Computed Properties for Credentials ---
-  const credentials = computed(() => providers.value[providerId] || {})
+  const credentials = computed(() => ({ ...providers.value[providerId], ...draft.value }))
 
   const apiKey = computed({
-    get: () => credentials.value.apiKey || '',
+    get: () => typeof credentials.value.apiKey === 'string' ? credentials.value.apiKey : '',
     set: (value) => {
+      if (localOnly) {
+        draft.value = { ...draft.value, apiKey: value }
+        return
+      }
       if (!providers.value[providerId])
         providers.value[providerId] = {}
       providers.value[providerId].apiKey = value
@@ -59,8 +64,12 @@ export function useProviderValidation(providerId: string) {
   })
 
   const baseUrl = computed({
-    get: () => credentials.value.baseUrl || '',
+    get: () => typeof credentials.value.baseUrl === 'string' ? credentials.value.baseUrl : '',
     set: (value) => {
+      if (localOnly) {
+        draft.value = { ...draft.value, baseUrl: value }
+        return
+      }
       if (!providers.value[providerId])
         providers.value[providerId] = {}
       providers.value[providerId].baseUrl = value
@@ -68,8 +77,12 @@ export function useProviderValidation(providerId: string) {
   })
 
   const accountId = computed({
-    get: () => credentials.value.accountId || '',
+    get: () => typeof credentials.value.accountId === 'string' ? credentials.value.accountId : '',
     set: (value) => {
+      if (localOnly) {
+        draft.value = { ...draft.value, accountId: value }
+        return
+      }
       if (!providers.value[providerId])
         providers.value[providerId] = {}
       providers.value[providerId].accountId = value
@@ -105,14 +118,31 @@ export function useProviderValidation(providerId: string) {
    * `structuredClone` rejects a Vue reactive proxy. A shallow copy keeps the
    * nested values as proxies, so this copy must be deep.
    */
-  function configToValidate(): Record<string, any> {
+  function configToValidate(): Record<string, unknown> {
     const config = cloneDeep(credentials.value)
-    if (config.apiKey)
+    if (typeof config.apiKey === 'string')
       config.apiKey = config.apiKey.trim()
-    if (config.baseUrl)
+    if (typeof config.baseUrl === 'string')
       config.baseUrl = config.baseUrl.trim()
 
     return config
+  }
+
+  async function persistDraft() {
+    if (!localOnly)
+      return
+    await providerStore.flushProviderConfig(providerId)
+    if (Object.keys(draft.value).length === 0)
+      return
+    const snapshot = { ...draft.value }
+    if (!await providerStore.patchProviderConfig(providerId, snapshot))
+      throw new Error('Provider configuration is unavailable')
+    const remaining = { ...draft.value }
+    for (const [key, value] of Object.entries(snapshot)) {
+      if (remaining[key] === value)
+        delete remaining[key]
+    }
+    draft.value = remaining
   }
 
   async function validateConfiguration() {
@@ -125,6 +155,7 @@ export function useProviderValidation(providerId: string) {
     let finalValidationMessage = ''
 
     try {
+      await persistDraft()
       // Settings pages always skip chat ping check during automatic validation
       // to avoid unexpected API billing. Users can trigger it manually.
       const validationResult = await providersStore.validateProviderConfig(providerId, configToValidate(), {
@@ -170,6 +201,7 @@ export function useProviderValidation(providerId: string) {
     trackProviderConnectionTestStarted(providerConnectionTestAnalyticsBase())
 
     try {
+      await persistDraft()
       const result = await providersStore.validateProviderConfig(providerId, configToValidate(), {
         onlyChatPingCheck: true,
       })
@@ -207,12 +239,39 @@ export function useProviderValidation(providerId: string) {
   }
 
   async function shouldValidateConfiguration() {
-    const definition = providersStore.getProviderDefinition(providerId)
-    return await definition.validationRequiredWhen?.(credentials.value) ?? false
+    try {
+      const definition = providersStore.getProviderDefinition(providerId)
+      // An opaque reference proves only that credentials were saved. Native access belongs to validation or an actual request.
+      if (localOnly && providerStore.getProvider(providerId)?.secretReference)
+        return true
+      return await definition.validationRequiredWhen?.(credentials.value) ?? false
+    }
+    catch {
+      // Automatic checks run from mounted hooks and debounced callbacks.
+      // Preserve the failure without exposing storage errors or clearing it as unconfigured.
+      isValid.value = false
+      providerStore.setProviderStatus(providerId, 'invalid')
+      validationMessage.value = t('settings.dialogs.onboarding.validationFailed')
+      return undefined
+    }
+  }
+
+  function restoreSavedValidationState(): boolean {
+    const saved = providerStore.getProvider(providerId)
+    if (!localOnly || !saved?.secretReference || Object.keys(draft.value).length > 0)
+      return false
+    isValid.value = saved.status === 'configured'
+    validationMessage.value = saved.status === 'invalid' ? t('settings.dialogs.onboarding.validationFailed') : ''
+    return true
   }
 
   const debouncedValidateConfiguration = useDebounceFn(async () => {
-    if (!await shouldValidateConfiguration()) {
+    if (restoreSavedValidationState())
+      return
+    const required = await shouldValidateConfiguration()
+    if (required === undefined)
+      return
+    if (!required) {
       isValid.value = false
       providerStore.setProviderStatus(providerId, 'unconfigured')
       validationMessage.value = ''
@@ -224,6 +283,8 @@ export function useProviderValidation(providerId: string) {
 
   onMounted(async () => {
     await providersStore.initializeProvider(providerId)
+    if (restoreSavedValidationState())
+      return
     if (await shouldValidateConfiguration()) {
       await validateConfiguration()
     }
@@ -244,7 +305,15 @@ export function useProviderValidation(providerId: string) {
 
   function handleResetSettings() {
     const defaultOptions = providerMetadata.value?.defaultConfig ?? {}
-    providers.value[providerId] = { ...defaultOptions }
+    if (localOnly) {
+      draft.value = { ...defaultOptions, apiKey: '' }
+      void persistDraft().catch(() => {
+        validationMessage.value = 'Could not reset provider configuration'
+      })
+    }
+    else {
+      providers.value[providerId] = { ...defaultOptions }
+    }
     isValid.value = false
     validationMessage.value = ''
     isValidating.value = 0

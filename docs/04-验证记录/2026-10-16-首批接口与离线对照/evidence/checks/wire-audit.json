@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "sameUserWireContentAcrossArms": true,
+  "memoryClockAndTimezoneMatched": true,
+  "checks": [
+    {
+      "caseId": "USER-V2-01",
+      "arm": "airi",
+      "chatRequests": 2,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-01",
+      "arm": "aimy",
+      "chatRequests": 2,
+      "memoryRequests": 2,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-02",
+      "arm": "airi",
+      "chatRequests": 2,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-02",
+      "arm": "aimy",
+      "chatRequests": 2,
+      "memoryRequests": 2,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-03",
+      "arm": "airi",
+      "chatRequests": 3,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-03",
+      "arm": "aimy",
+      "chatRequests": 3,
+      "memoryRequests": 3,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-04",
+      "arm": "airi",
+      "chatRequests": 3,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-04",
+      "arm": "aimy",
+      "chatRequests": 3,
+      "memoryRequests": 3,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-05",
+      "arm": "airi",
+      "chatRequests": 2,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-05",
+      "arm": "aimy",
+      "chatRequests": 2,
+      "memoryRequests": 2,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-06",
+      "arm": "airi",
+      "chatRequests": 2,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-06",
+      "arm": "aimy",
+      "chatRequests": 2,
+      "memoryRequests": 2,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-07",
+      "arm": "airi",
+      "chatRequests": 2,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-07",
+      "arm": "aimy",
+      "chatRequests": 2,
+      "memoryRequests": 2,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-08",
+      "arm": "airi",
+      "chatRequests": 2,
+      "memoryRequests": 0,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    },
+    {
+      "caseId": "USER-V2-08",
+      "arm": "aimy",
+      "chatRequests": 2,
+      "memoryRequests": 2,
+      "originalUtteranceIncluded": true,
+      "gradingMetadataExcluded": true
+    }
+  ]
+}

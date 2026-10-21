@@ -2,12 +2,12 @@
 import type { ProviderMetadata } from '../../../../libs/providers/metadata'
 import type { OnboardingStepNextHandler, OnboardingStepPrevHandler } from './types'
 
-import { errorMessageFrom } from '@moeru/std'
 import { Button, Callout, FieldCheckbox, FieldInput, ScrollableArea } from '@proj-airi/ui'
 import { computedAsync } from '@vueuse/core'
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import { getAcceptanceBudget } from '../../../../stores/memory/budget'
 import { useProviderConfigStore } from '../../../../stores/providers/config'
 import { useProviderStore } from '../../../../stores/providers/provider'
 import { Alert } from '../../../misc'
@@ -28,12 +28,15 @@ const providerConfigStore = useProviderConfigStore()
 const apiKey = ref('')
 const baseUrl = ref('')
 const accountId = ref('')
-const enableChatCheck = ref(true)
+const acceptanceMode = !!getAcceptanceBudget()
+const enableChatCheck = ref(!acceptanceMode)
 const customFieldValues = ref<Record<string, string>>({})
 
 const validation = ref<'unchecked' | 'pending' | 'succeed' | 'failed'>('unchecked')
-const validationError = ref<any>()
+const validationError = ref<string>()
+const submitting = ref(false)
 
+const hasSavedSecret = computed(() => Boolean(providerConfigStore.getProvider(props.selectedProviderId)?.secretReference))
 const hasOnboardingFields = computed(() => (props.selectedProvider?.onboardingFields?.length ?? 0) > 0)
 
 // Initialize form with default values when provider changes, rehydrating from
@@ -66,7 +69,7 @@ function initializeForm() {
   // Reset validation and chat check
   validation.value = 'unchecked'
   validationError.value = undefined
-  enableChatCheck.value = true
+  enableChatCheck.value = !acceptanceMode
 }
 
 // Watch for provider changes
@@ -99,7 +102,7 @@ const needsBaseUrl = computed(() => {
 })
 
 const showChatCheckOption = computedAsync(
-  async () => props.selectedProvider
+  async () => !acceptanceMode && props.selectedProvider
     ? await providersStore.hasManualProviderValidators(props.selectedProvider.id)
     : false,
   false,
@@ -112,15 +115,15 @@ const canProceed = computed(() => {
   if (hasOnboardingFields.value) {
     const fields = props.selectedProvider?.onboardingFields ?? []
     for (const field of fields) {
-      if (field.required && !customFieldValues.value[field.key]?.trim())
+      if (field.required && !customFieldValues.value[field.key]?.trim() && (field.type !== 'password' || !hasSavedSecret.value))
         return false
     }
   }
-  else if (needsApiKey.value && !apiKey.value.trim()) {
+  else if (needsApiKey.value && !apiKey.value.trim() && !hasSavedSecret.value) {
     return false
   }
 
-  return validation.value !== 'pending'
+  return !submitting.value && validation.value !== 'pending'
 })
 
 const primaryActionLabel = computed(() => {
@@ -147,7 +150,7 @@ async function validateConfiguration() {
       }
     }
     else {
-      if (needsApiKey.value)
+      if (needsApiKey.value && apiKey.value.trim())
         config.apiKey = apiKey.value.trim()
       if (needsBaseUrl.value)
         config.baseUrl = baseUrl.value.trim()
@@ -161,19 +164,28 @@ async function validateConfiguration() {
     })
     validation.value = validationResult.valid ? 'succeed' : 'failed'
     if (validation.value === 'failed') {
-      validationError.value = validationResult.reason
+      validationError.value = t('settings.dialogs.onboarding.saveFailed')
     }
   }
-  catch (error) {
+  catch {
     validation.value = 'failed'
-    validationError.value = t('settings.dialogs.onboarding.validationError', {
-      error: errorMessageFrom(error) ?? 'Unknown error',
-    })
+    validationError.value = t('settings.dialogs.onboarding.saveFailed')
   }
 }
-async function handleNext() {
-  await validateConfiguration()
-  if (validation.value === 'succeed') {
+async function submitConfiguration(validate: boolean) {
+  if (submitting.value || !props.selectedProvider)
+    return
+  const providerId = props.selectedProviderId
+  submitting.value = true
+  validationError.value = undefined
+  try {
+    if (validate) {
+      await validateConfiguration()
+      if (validation.value !== 'succeed')
+        return
+    }
+    if (props.selectedProviderId !== providerId)
+      return
     await props.onNext({
       apiKey: apiKey.value,
       baseUrl: baseUrl.value,
@@ -181,20 +193,13 @@ async function handleNext() {
       customFields: hasOnboardingFields.value ? { ...customFieldValues.value } : undefined,
     })
   }
-}
-
-async function handleContinueAnyway() {
-  if (!props.selectedProvider)
-    return
-
-  // onNext saves the configuration and marks the provider configured, so a
-  // failed validation does not need a separate force-configured call here.
-  await props.onNext({
-    apiKey: apiKey.value,
-    baseUrl: baseUrl.value,
-    accountId: accountId.value,
-    customFields: hasOnboardingFields.value ? { ...customFieldValues.value } : undefined,
-  })
+  catch {
+    validation.value = 'failed'
+    validationError.value = t('settings.dialogs.onboarding.saveFailed')
+  }
+  finally {
+    submitting.value = false
+  }
 }
 
 // Placeholder helpers
@@ -232,15 +237,15 @@ initializeForm()
 </script>
 
 <template>
-  <div h-full flex flex-col gap-4>
-    <div sticky top-0 z-100 flex flex-shrink-0 items-center gap-2>
-      <button outline-none @click="props.onPrevious">
-        <div i-solar:alt-arrow-left-line-duotone h-5 w-5 />
-      </button>
-      <h2 class="flex-1 text-center text-xl text-neutral-800 font-semibold md:text-left md:text-2xl dark:text-neutral-100">
+  <fieldset :disabled="submitting" :aria-busy="submitting" :class="['h-full min-w-0 flex flex-col gap-4']">
+    <div :class="['sticky top-0 z-100 flex flex-shrink-0 items-center gap-2']">
+      <Button size="sm" :disabled="submitting" :aria-label="t('settings.pages.memory.actions.previous')" @click="props.onPrevious">
+        <div :class="['i-solar:alt-arrow-left-line-duotone h-5 w-5']" />
+      </Button>
+      <h2 :class="['flex-1 text-center text-xl font-semibold md:text-left md:text-2xl', 'text-neutral-800 dark:text-neutral-100']">
         {{ t('settings.dialogs.onboarding.configureProvider', { provider: props.selectedProvider?.localizedName }) }}
       </h2>
-      <div h-5 w-5 />
+      <div :class="['h-5 w-5']" />
     </div>
     <ScrollableArea v-if="props.selectedProvider" :class="['min-h-0 flex-1']">
       <div :class="['space-y-4']">
@@ -252,15 +257,15 @@ initializeForm()
             <div>
               <i18n-t keypath="settings.dialogs.onboarding.credentialsSafeOpenSource" tag="span">
                 <template #github>
-                  <span inline-flex translate-y-1 items-center gap-1>
-                    <span i-simple-icons:github inline-block /><a decoration-underline decoration-dashed href="https://github.com/moeru-ai/airi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <span :class="['inline-flex translate-y-1 items-center gap-1']">
+                    <span :class="['i-simple-icons:github inline-block']" /><a :class="['underline decoration-dashed']" href="https://github.com/moeru-ai/airi" target="_blank" rel="noopener noreferrer">GitHub</a>
                   </span>
                 </template>
               </i18n-t>
             </div>
           </div>
         </Callout>
-        <div class="space-y-4">
+        <div :class="['space-y-4']">
           <!-- Custom onboarding fields (provider-specific, e.g. Amazon Bedrock SigV4) -->
           <template v-if="hasOnboardingFields">
             <FieldInput
@@ -281,10 +286,10 @@ initializeForm()
             <div v-if="needsApiKey">
               <FieldInput
                 v-model="apiKey"
-                :placeholder="getApiKeyPlaceholder(props.selectedProvider.id)"
+                :placeholder="hasSavedSecret ? t('settings.dialogs.onboarding.storedCredential') : getApiKeyPlaceholder(props.selectedProvider.id)"
                 type="password"
                 label="API Key"
-                description="Enter your API key for the selected provider."
+                :description="t(hasSavedSecret ? 'settings.dialogs.onboarding.storedCredentialHint' : 'settings.dialogs.onboarding.apiKeyDescription')"
                 required
               />
             </div>
@@ -296,7 +301,7 @@ initializeForm()
                 :placeholder="getBaseUrlPlaceholder(props.selectedProvider.id)"
                 type="text"
                 label="Base URL"
-                description="Enter the base URL for the provider's API."
+                :description="t('settings.dialogs.onboarding.baseUrlDescription')"
               />
             </div>
 
@@ -308,6 +313,9 @@ initializeForm()
         </div>
 
         <!-- Chat Ping Check Option -->
+        <p v-if="acceptanceMode" :class="['text-sm text-neutral-600 dark:text-neutral-400']">
+          {{ t('settings.dialogs.onboarding.acceptanceTextOnly') }}
+        </p>
         <FieldCheckbox
           v-if="showChatCheckOption"
           v-model="enableChatCheck"
@@ -318,19 +326,19 @@ initializeForm()
         <!-- Validation Status -->
         <Alert v-if="validation === 'failed'" type="error">
           <template #title>
-            <div class="w-full flex items-center justify-between">
+            <div :class="['w-full flex items-center justify-between']">
               <span>{{ t('settings.dialogs.onboarding.validationFailed') }}</span>
               <button
                 type="button"
-                class="ml-2 rounded bg-red-100 px-2 py-0.5 text-xs text-red-600 font-medium transition-colors dark:bg-red-800/30 hover:bg-red-200 dark:text-red-300 dark:hover:bg-red-700/40"
-                @click="handleContinueAnyway"
+                :class="['ml-2 rounded px-2 py-0.5 text-xs font-medium transition-colors', 'bg-red-100 text-red-600 dark:bg-red-800/30 hover:bg-red-200 dark:text-red-300 dark:hover:bg-red-700/40']"
+                @click="submitConfiguration(false)"
               >
                 {{ t('settings.pages.providers.common.continueAnyway') }}
               </button>
             </div>
           </template>
           <template v-if="validationError" #content>
-            <pre class="whitespace-pre-wrap break-all">{{ String(validationError) }}</pre>
+            <pre :class="['whitespace-pre-wrap break-all']">{{ String(validationError) }}</pre>
           </template>
         </Alert>
       </div>
@@ -339,9 +347,9 @@ initializeForm()
     <!-- Action Buttons -->
     <Button
       :label="primaryActionLabel"
-      :loading="validation === 'pending'"
+      :loading="submitting"
       :disabled="!canProceed"
-      @click="handleNext"
+      @click="submitConfiguration(true)"
     />
-  </div>
+  </fieldset>
 </template>

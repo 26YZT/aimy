@@ -1,0 +1,15 @@
+{
+  "activeVideos": 0,
+  "microphoneEnabled": false,
+  "screenEnabled": false,
+  "tracks": [
+    {
+      "kind": "video",
+      "state": "ended"
+    },
+    {
+      "kind": "video",
+      "state": "ended"
+    }
+  ]
+}

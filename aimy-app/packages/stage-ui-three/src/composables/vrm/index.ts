@@ -1,6 +1,7 @@
 export * from './animation'
 export * from './core'
 export * from './expression'
+export * from './gestures'
 export * from './lip-sync'
 export * from './loader'
 export * from './utils'

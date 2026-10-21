@@ -3,6 +3,7 @@ import type { Live2DLipSync, Live2DLipSyncOptions } from '@proj-airi/model-drive
 import type { Profile } from '@proj-airi/model-driver-lipsync/shared/wlipsync'
 import type { CaptionChannelEvent, PresenceBubbleState } from '@proj-airi/stage-shared'
 import type { VrmInteractionTarget } from '@proj-airi/stage-ui-three'
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
 
 import type { EmotionPayload } from '../../constants/emotions'
 
@@ -622,6 +623,7 @@ onUnmounted(() => {
 })
 
 defineExpose({
+  playVrmGesture: (gesture: VrmGesture) => stageModelRenderer.value === 'vrm' && (vrmViewerRef.value?.playGesture(gesture) ?? false),
   canvasElement,
   /**
    * The frame already carries the scene: every renderer paints it into the canvas it

@@ -1,0 +1,71 @@
+{
+  "observations": 50,
+  "source_files": 23,
+  "source_hashes_unchanged": true,
+  "raw_results_preserved_after_adjudication": true,
+  "Q07_raw_and_adjudicated_separate": true,
+  "airi_native_query_unsupported_not_zero_ranking": true,
+  "no_product_code_or_real_models_network_devices": true,
+  "files": [
+    {
+      "file": "ryza-airi-recall.cjs",
+      "bytes": 15617,
+      "sha256": "4e509076d31d0efee5032670260aea762e1f665399b8fb7c7bb01284cb82b423"
+    },
+    {
+      "file": "source-manifest.json",
+      "bytes": 17198,
+      "sha256": "1192915e218f870748f3ce9b368eb536f65b9ada3d247fcd47673f7eebab055c"
+    },
+    {
+      "file": "comparison.md",
+      "bytes": 2676,
+      "sha256": "d0faace96915011a79ce94ab8351c132dc04eb0520aa32ccba1ae8b14c4b55aa"
+    },
+    {
+      "file": "adjudicate-and-package.py",
+      "bytes": 10883,
+      "sha256": "3626e2465964e8c667b6f4d32da0b497e3738f162e0e3af285e7f9dbdaa354f8"
+    },
+    {
+      "file": "results.json",
+      "bytes": 442827,
+      "sha256": "91cd70f7e4c3631af3870a9138e580b088f72a26bce3ded5f64a66975282cad1"
+    },
+    {
+      "file": "aions-results.json",
+      "bytes": 97595,
+      "sha256": "a6de2f9ad009aa7ea6a1b3c8910040cab5623b17c3bfa96264fc26024890cdd4"
+    },
+    {
+      "file": "airi-results.json",
+      "bytes": 133769,
+      "sha256": "29082dfa5b2ba58cd7c8e7e00096628d1a025d5a370cb16534df5799d9ee9606"
+    },
+    {
+      "file": "README.md",
+      "bytes": 9578,
+      "sha256": "fe26884f34036a1077cb828f90a20e9cd080973fc8f0221533449852a6fd3ef8"
+    },
+    {
+      "file": "aions-synthetic-recall.sqlite",
+      "bytes": 49152,
+      "sha256": "3823389a1e5f728531b13ea3a0aa6e7f6b2d3a562c2989b6686559ace5451893"
+    },
+    {
+      "file": "js-executed-source.json",
+      "bytes": 8490,
+      "sha256": "e02663ea625edd2665e5a231ce31fd8153bf39cd51d56c9493c65b3463507610"
+    },
+    {
+      "file": "ryza-results.json",
+      "bytes": 107157,
+      "sha256": "a674b29c91825827750f4a835a6af1aa15b8b8263d75b0a4dfc2fc3ef36f53ab"
+    },
+    {
+      "file": "aions-recall.py",
+      "bytes": 11018,
+      "sha256": "b2f5df9215daa2be49b9183599bf389831358bbc8505ac3a135487bb7852c423"
+    }
+  ]
+}

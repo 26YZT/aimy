@@ -1,0 +1,91 @@
+{
+  "arm": "airi",
+  "sessionId": "HkwbUIZBebJ0KAQUGhobI",
+  "characterId": "default",
+  "diskMessages": [
+    {
+      "role": "system",
+      "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+      "id": "LHY4yrV4DorLe5fEn9D19",
+      "createdAt": 1792122451993
+    },
+    {
+      "role": "user",
+      "content": "今天路过一家宠物店。橱窗里有一只胖乎乎的小橘猫，一直在追自己的尾巴。我站在那里看了好久。它真的好像以前的那个小家伙啊。明明只是路过，结果回家的时候心里突然空落落的。\n",
+      "createdAt": 1792152000000,
+      "id": "9cda7c7c-8afe-4815-8acf-5367100c4e20"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792152000000,
+      "id": "rwbSYBIhrG46egjz3AV3k",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "9cda7c7c-8afe-4815-8acf-5367100c4e20",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "9cda7c7c-8afe-4815-8acf-5367100c4e20/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1029,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-airi-USER-V2-07\",\"http://127.0.0.1:52708/v1/\",\"deepseek-flash\",\"HkwbUIZBebJ0KAQUGhobI\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792152000000
+    }
+  ],
+  "liveMessageCount": 3,
+  "memory": {
+    "implemented": false,
+    "source": "original-airi"
+  },
+  "plaintextSyntheticCredentialInLocalStorage": false,
+  "accounting": {
+    "budget": {
+      "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 0,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 10000000,
+      "paused": false,
+      "attempts": 44
+    },
+    "requests": 2
+  }
+}

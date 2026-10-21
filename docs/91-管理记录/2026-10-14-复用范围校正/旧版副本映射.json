@@ -1,0 +1,17 @@
+[
+  {
+    "source": "/tmp/aimy-20261014-delta-plan-before/01-能力选择与分期.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/范围校正前-01-能力选择与分期.md",
+    "sha256": "02cdffd33f4861e814acd39c606db3d24085ac49d79494e286a1e5f598f616a3"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-plan-before/能力选择.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/范围校正前-能力选择.json",
+    "sha256": "a48d12f42b83ccf66db245bc77437b17e09a72a875f7102e368ff4c01513e833"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-plan-before/追溯矩阵.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/范围校正前-追溯矩阵.json",
+    "sha256": "96cecef958eac8c59b9522d421feb64decf334d0534a72f0bcee593129fe3a0b"
+  }
+]

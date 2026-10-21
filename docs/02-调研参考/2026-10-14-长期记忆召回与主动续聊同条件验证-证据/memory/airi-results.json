@@ -1,0 +1,1312 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "initial_clock": "2026-10-14T10:00:00+08:00",
+  "runtime": "v24.20.0",
+  "real_compiler_version": "6.0.3",
+  "cases": [
+    {
+      "case_id": "LM01",
+      "arm": "AIRI.task-memory",
+      "contract": "固定用户事实写入后新进程仍可读取",
+      "contract_outcome": "unsupported",
+      "unsupported_reason": "This native manager has no persistence/restore constructor or methods. Fresh Node process only constructs original manager; no harness storage added. Empty result does not describe desktop IndexedDB chat history.",
+      "observed": {
+        "before_restart": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "fresh_os_process": {
+          "pid": 37313,
+          "seeded_imported_or_written_in_child": false,
+          "manager_constructed_in_new_OS_process": true,
+          "state": {
+            "raw_task_memory": null,
+            "native_context": "(no active task memory)",
+            "is_visible": false,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户喜欢美式咖啡"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U1",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [
+        "original manager.update keeps fixture fact in memory",
+        "new Node OS process loads exact same original modules and constructs manager; no parent fact payload, disk state or init seeded"
+      ],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM02",
+      "arm": "AIRI.task-memory",
+      "contract": "重复同条写入不产生重复当前事实",
+      "contract_outcome": "pass",
+      "unsupported_reason": null,
+      "observed": {
+        "first": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "second": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户喜欢美式咖啡"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U1",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [
+        "same completed-turn id/index and exact content twice; native string list dedupe only"
+      ],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM03",
+      "arm": "AIRI.task-memory",
+      "contract": "较新同主题更正后旧当前偏好不并存",
+      "contract_outcome": "unsupported",
+      "unsupported_reason": "No native topic/current-fact replacement field. confirmedFacts merges strings; candidate topic cannot be preserved without adding implementation. Raw observations retain both old and new content.",
+      "observed": {
+        "states_in_input_order": [
+          {
+            "original_update_input": {
+              "extraction": {
+                "confirmedFacts": [
+                  "用户喜欢美式咖啡"
+                ]
+              },
+              "source": {
+                "sourceTurnId": "U1",
+                "sourceTurnIndex": 1
+              }
+            },
+            "original_update_result": {
+              "status": "updated",
+              "taskMemory": {
+                "status": "active",
+                "goal": null,
+                "currentStep": null,
+                "confirmedFacts": [
+                  "用户喜欢美式咖啡"
+                ],
+                "artifacts": [],
+                "blockers": [],
+                "nextStep": null,
+                "updatedAt": 1791943200000,
+                "sourceTurnId": "U1",
+                "recentFailureReason": null
+              }
+            },
+            "state": {
+              "raw_task_memory": {
+                "status": "active",
+                "goal": null,
+                "currentStep": null,
+                "confirmedFacts": [
+                  "用户喜欢美式咖啡"
+                ],
+                "artifacts": [],
+                "blockers": [],
+                "nextStep": null,
+                "updatedAt": 1791943200000,
+                "sourceTurnId": "U1",
+                "recentFailureReason": null
+              },
+              "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+              "is_visible": true,
+              "clock_epoch_ms": 1791943200000
+            }
+          },
+          {
+            "original_update_input": {
+              "extraction": {
+                "confirmedFacts": [
+                  "用户现在喜欢乌龙茶，已经不喝美式咖啡"
+                ]
+              },
+              "source": {
+                "sourceTurnId": "U2",
+                "sourceTurnIndex": 2
+              }
+            },
+            "original_update_result": {
+              "status": "updated",
+              "taskMemory": {
+                "status": "active",
+                "goal": null,
+                "currentStep": null,
+                "confirmedFacts": [
+                  "用户喜欢美式咖啡",
+                  "用户现在喜欢乌龙茶，已经不喝美式咖啡"
+                ],
+                "artifacts": [],
+                "blockers": [],
+                "nextStep": null,
+                "updatedAt": 1791943200000,
+                "sourceTurnId": "U2",
+                "recentFailureReason": null
+              }
+            },
+            "state": {
+              "raw_task_memory": {
+                "status": "active",
+                "goal": null,
+                "currentStep": null,
+                "confirmedFacts": [
+                  "用户喜欢美式咖啡",
+                  "用户现在喜欢乌龙茶，已经不喝美式咖啡"
+                ],
+                "artifacts": [],
+                "blockers": [],
+                "nextStep": null,
+                "updatedAt": 1791943200000,
+                "sourceTurnId": "U2",
+                "recentFailureReason": null
+              },
+              "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡\n  - 用户现在喜欢乌龙茶，已经不喝美式咖啡",
+              "is_visible": true,
+              "clock_epoch_ms": 1791943200000
+            }
+          }
+        ],
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户喜欢美式咖啡",
+              "用户现在喜欢乌龙茶，已经不喝美式咖啡"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U2",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡\n  - 用户现在喜欢乌龙茶，已经不喝美式咖啡",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM04",
+      "arm": "AIRI.task-memory",
+      "contract": "新结果落地后较旧轮次迟到不能覆盖",
+      "contract_outcome": "pass",
+      "unsupported_reason": null,
+      "observed": {
+        "states_new_then_old": [
+          {
+            "original_update_input": {
+              "extraction": {
+                "confirmedFacts": [
+                  "用户现在喜欢乌龙茶"
+                ]
+              },
+              "source": {
+                "sourceTurnId": "U2",
+                "sourceTurnIndex": 2
+              }
+            },
+            "original_update_result": {
+              "status": "updated",
+              "taskMemory": {
+                "status": "active",
+                "goal": null,
+                "currentStep": null,
+                "confirmedFacts": [
+                  "用户现在喜欢乌龙茶"
+                ],
+                "artifacts": [],
+                "blockers": [],
+                "nextStep": null,
+                "updatedAt": 1791943200000,
+                "sourceTurnId": "U2",
+                "recentFailureReason": null
+              }
+            },
+            "state": {
+              "raw_task_memory": {
+                "status": "active",
+                "goal": null,
+                "currentStep": null,
+                "confirmedFacts": [
+                  "用户现在喜欢乌龙茶"
+                ],
+                "artifacts": [],
+                "blockers": [],
+                "nextStep": null,
+                "updatedAt": 1791943200000,
+                "sourceTurnId": "U2",
+                "recentFailureReason": null
+              },
+              "native_context": "Status: active\nConfirmed facts:\n  - 用户现在喜欢乌龙茶",
+              "is_visible": true,
+              "clock_epoch_ms": 1791943200000
+            }
+          },
+          {
+            "original_update_input": {
+              "extraction": {
+                "confirmedFacts": [
+                  "用户喜欢美式咖啡"
+                ]
+              },
+              "source": {
+                "sourceTurnId": "U1",
+                "sourceTurnIndex": 1
+              }
+            },
+            "original_update_result": {
+              "status": "ignored-stale",
+              "latestSourceTurnId": "U2",
+              "latestSourceTurnIndex": 2
+            },
+            "state": {
+              "raw_task_memory": {
+                "status": "active",
+                "goal": null,
+                "currentStep": null,
+                "confirmedFacts": [
+                  "用户现在喜欢乌龙茶"
+                ],
+                "artifacts": [],
+                "blockers": [],
+                "nextStep": null,
+                "updatedAt": 1791943200000,
+                "sourceTurnId": "U2",
+                "recentFailureReason": null
+              },
+              "native_context": "Status: active\nConfirmed facts:\n  - 用户现在喜欢乌龙茶",
+              "is_visible": true,
+              "clock_epoch_ms": 1791943200000
+            }
+          }
+        ],
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户现在喜欢乌龙茶"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U2",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户现在喜欢乌龙茶",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [
+        "new completed sourceTurnIndex=2 then old index=1; native global turn watermark, not topic-scoped preference correction"
+      ],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM05",
+      "arm": "AIRI.task-memory",
+      "contract": "引用不存在的来源不得写入",
+      "contract_outcome": "unsupported",
+      "unsupported_reason": "sourceTurnId is caller-provided provenance label/watermark, not per-fact source registry or message whitelist. Native API has no lookup for fixture U999. Accepted raw input recorded, no validation filled in by harness.",
+      "observed": {
+        "nonexistent_source_update": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U999",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U999",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U999",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户喜欢美式咖啡"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U999",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM06",
+      "arm": "AIRI.task-memory",
+      "contract": "等待抽取时原消息修改后拒绝旧候选",
+      "contract_outcome": "unsupported",
+      "unsupported_reason": "No source text store/version or extraction-await consumer in this manager. External fixture edit is not a fake native edit API; supplied old extraction is accepted by native update and exact source body is unavailable to it.",
+      "observed": {
+        "waiting_candidate": {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        },
+        "external_fixture_message_before": {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        },
+        "external_fixture_message_after": {
+          "id": "U1",
+          "text": "我喜欢美式咖啡（已编辑）",
+          "turn": 1
+        },
+        "after_external_edit_update": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户喜欢美式咖啡"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U1",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM07",
+      "arm": "AIRI.task-memory",
+      "contract": "删除后旧待处理抽取不能复活同ref事实",
+      "contract_outcome": "unsupported",
+      "unsupported_reason": "No per-fact delete/ref/tombstone or native pending extraction job. Nearest real clear() resets entire task and watermark; native late same-turn update rebuilds fact. This is a manager clear+update boundary probe, not desktop chat deletion or whole application forget behavior.",
+      "observed": {
+        "before_native_clear": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "after_native_clear": {
+          "raw_task_memory": null,
+          "native_context": "(no active task memory)",
+          "is_visible": false,
+          "clock_epoch_ms": 1791943200000
+        },
+        "late_update_after_clear": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943231000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943231000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943231000
+          }
+        },
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户喜欢美式咖啡"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943231000,
+            "sourceTurnId": "U1",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943231000
+        }
+      },
+      "native_sequence": [
+        "one fixture fact written via original update",
+        "original clear resets whole task, not an invented per-fact delete",
+        "original update with same turn and old content accepted after clear; LM08 topic has no native field"
+      ],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM08",
+      "arm": "AIRI.task-memory",
+      "contract": "删事实后换主题同义抽取也不能复活",
+      "contract_outcome": "unsupported",
+      "unsupported_reason": "No per-fact delete/ref/tombstone or native pending extraction job. Nearest real clear() resets entire task and watermark; native late same-turn update rebuilds fact. This is a manager clear+update boundary probe, not desktop chat deletion or whole application forget behavior.",
+      "observed": {
+        "before_native_clear": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "after_native_clear": {
+          "raw_task_memory": null,
+          "native_context": "(no active task memory)",
+          "is_visible": false,
+          "clock_epoch_ms": 1791943200000
+        },
+        "late_update_after_clear": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户喜欢美式咖啡"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户喜欢美式咖啡"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U1",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户喜欢美式咖啡",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [
+        "one fixture fact written via original update",
+        "original clear resets whole task, not an invented per-fact delete",
+        "original update with same turn and old content accepted after clear; LM08 topic has no native field"
+      ],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM09",
+      "arm": "AIRI.task-memory",
+      "contract": "合法来源中的小说人物不能误存为用户姓名",
+      "contract_outcome": "fail",
+      "unsupported_reason": null,
+      "observed": {
+        "fixed_wrong_semantic_candidate": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "用户本人叫张三"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户本人叫张三"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "用户本人叫张三"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 用户本人叫张三",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "用户本人叫张三"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U1",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 用户本人叫张三",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [
+        "deliberately wrong fixed candidate with valid sourceTurnId enters existing string-write interface",
+        "tests deterministic semantic defense absence; not real extraction/model precision"
+      ],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    },
+    {
+      "case_id": "LM10",
+      "arm": "AIRI.task-memory",
+      "contract": "单条长事实不能突破1200字符目标",
+      "contract_outcome": "fail",
+      "unsupported_reason": null,
+      "observed": {
+        "fixed_long_candidate": {
+          "original_update_input": {
+            "extraction": {
+              "confirmedFacts": [
+                "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲"
+              ]
+            },
+            "source": {
+              "sourceTurnId": "U1",
+              "sourceTurnIndex": 1
+            }
+          },
+          "original_update_result": {
+            "status": "updated",
+            "taskMemory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            }
+          },
+          "state": {
+            "raw_task_memory": {
+              "status": "active",
+              "goal": null,
+              "currentStep": null,
+              "confirmedFacts": [
+                "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲"
+              ],
+              "artifacts": [],
+              "blockers": [],
+              "nextStep": null,
+              "updatedAt": 1791943200000,
+              "sourceTurnId": "U1",
+              "recentFailureReason": null
+            },
+            "native_context": "Status: active\nConfirmed facts:\n  - 合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+            "is_visible": true,
+            "clock_epoch_ms": 1791943200000
+          }
+        },
+        "fixed_candidate_characters": 1504,
+        "native_context_characters": 1540,
+        "target_characters": 1200,
+        "final": {
+          "raw_task_memory": {
+            "status": "active",
+            "goal": null,
+            "currentStep": null,
+            "confirmedFacts": [
+              "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲"
+            ],
+            "artifacts": [],
+            "blockers": [],
+            "nextStep": null,
+            "updatedAt": 1791943200000,
+            "sourceTurnId": "U1",
+            "recentFailureReason": null
+          },
+          "native_context": "Status: active\nConfirmed facts:\n  - 合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+          "is_visible": true,
+          "clock_epoch_ms": 1791943200000
+        }
+      },
+      "native_sequence": [
+        "full original 1504-character fixture string enters confirmedFacts",
+        "native toContextString emitted unchanged; no harness truncation, no altered limits"
+      ],
+      "true_code": [
+        "whole original task-memory/types.ts, merge.ts, manager.ts; native validation/dedupe/limits/watermark/clear/context"
+      ],
+      "fake_boundaries": [
+        "clock Date.now fixed to common fixture base; LM07 +31s logical replay time",
+        "fixed supplied candidate, no model/extraction service used"
+      ],
+      "field_mapping": {
+        "candidate_content": "confirmedFacts[0] unchanged, no truncation",
+        "candidate_sources": "first source label -> sourceTurnId; this is not native source whitelist validation",
+        "turn": "matching fixture source message turn -> sourceTurnIndex; invalid U999 falls back to triggering message turn=1",
+        "topic_category_ref": "unsupported: no corresponding native fields; kept in fixture/raw mapping, not implemented in AIRI",
+        "delete": "only actual whole-task clear nearest probe; no per-fact delete falsely added",
+        "source_edit": "external fixture metadata only, manager has no source-text API"
+      },
+      "limitations": [
+        "this is independent computer-use task-memory; not default desktop chat IndexedDB repo/history/compaction/notebook",
+        "native turn ordering protects updates, not per-topic current preference or source-body lineage",
+        "unsupported contracts do not get zero scores or enter total winner ranking",
+        "fixed wrong semantic string tests deterministic acceptance boundary, not actual LLM quality",
+        "fresh Node process empty only proves manager has no persistence hook"
+      ]
+    }
+  ]
+}

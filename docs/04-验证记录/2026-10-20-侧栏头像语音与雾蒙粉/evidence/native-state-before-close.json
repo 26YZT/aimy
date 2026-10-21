@@ -1,0 +1,29 @@
+{
+  "pid": 25244,
+  "userData": "/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/native-package/appdata/Aimy-Preview",
+  "secretReads": 0,
+  "screenPermission": "granted",
+  "windows": [
+    {
+      "id": 3,
+      "title": "Aimy",
+      "url": "file:///Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/index.html?synced-leader=false#/onboarding",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "title": "Aimy",
+      "url": "file:///Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/index.html?synced-leader=true#/",
+      "visible": true
+    },
+    {
+      "id": 1,
+      "title": "Aimy Beat Sync",
+      "url": "file:///Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/beat-sync.html",
+      "visible": false
+    }
+  ],
+  "blockedOrigins": [
+    "https://cloud.airi.build"
+  ]
+}

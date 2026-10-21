@@ -1,0 +1,12 @@
+[
+  {
+    "fast": "automatic",
+    "text": "请检查麦克风和语音识别服务是否正常。",
+    "events": 20
+  },
+  {
+    "fast": "dictation",
+    "text": "请检查麦克风和语音识别服务是否正常",
+    "events": 19
+  }
+]

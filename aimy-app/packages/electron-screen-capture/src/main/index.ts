@@ -3,7 +3,7 @@
 
 import type { Format, LogLevelString } from '@guiiai/logg'
 import type { MutexInterface } from 'async-mutex'
-import type { BrowserWindow, DesktopCapturerSource, SourcesOptions } from 'electron'
+import type { BrowserWindow, DesktopCapturerSource, SourcesOptions, WebFrameMain } from 'electron'
 
 import { useLogg } from '@guiiai/logg'
 import { defineInvokeHandler } from '@moeru/eventa'
@@ -69,6 +69,8 @@ export function buildFeatureFlags({
 let initMainCalled = false
 
 export interface InitMainOptions {
+  /** The host authorizes a registered main frame and returns a generation check for awaited work. */
+  authorizeCapture?: (window: BrowserWindow, frame: WebFrameMain | null) => () => boolean
   forceCoreAudioTap?: boolean
   mutexAcquireTimeout?: number
   loggerOptions?: {
@@ -93,7 +95,9 @@ export interface GetLoopbackAudioMediaStreamOptions {
 
 let setSourceMutex: MutexInterface
 let screenCaptureSourceMutexHandle: string | undefined
+let screenCaptureSourceOwnerId: number | undefined
 let setSourceMutexTimeoutHandle: NodeJS.Timeout | undefined
+let authorizeCapture: InitMainOptions['authorizeCapture']
 
 export function initScreenCaptureForMain(options: InitMainOptions = {}): void {
   const {
@@ -118,6 +122,7 @@ export function initScreenCaptureForMain(options: InitMainOptions = {}): void {
     return
   }
   initMainCalled = true
+  authorizeCapture = options.authorizeCapture
   setSourceMutex = withTimeout(new Mutex(), mutexAcquireTimeout)
 
   // Get other enabled features from the command line.
@@ -142,6 +147,7 @@ function resetScreenCaptureSource() {
   clearTimeout(setSourceMutexTimeoutHandle)
   setSourceMutexTimeoutHandle = undefined
   screenCaptureSourceMutexHandle = undefined
+  screenCaptureSourceOwnerId = undefined
 }
 
 /**
@@ -156,8 +162,9 @@ function resetScreenCaptureSource() {
  * Returns:
  * - Whether `setDisplayMediaRequestHandler` is currently bound to a source picked by a renderer
  */
-export function hasSelectedScreenCaptureSource(): boolean {
+export function hasSelectedScreenCaptureSource(webContentsId?: number): boolean {
   return screenCaptureSourceMutexHandle !== undefined
+    && (webContentsId === undefined || screenCaptureSourceOwnerId === webContentsId)
 }
 
 const initializedWindows = new WeakSet<BrowserWindow>()
@@ -204,15 +211,24 @@ export function initScreenCaptureForWindow(window: BrowserWindow, options?: Init
   const session = sessionModule.defaultSession
 
   defineInvokeHandler(context, screenCapture.checkMacOSPermission, async () => checkMacOSScreenCapturePermission())
-  defineInvokeHandler(context, screenCapture.requestMacOSPermission, async () => requestMacOSScreenCapturePermission())
+  defineInvokeHandler(context, screenCapture.requestMacOSPermission, async (_, event) => {
+    const valid = authorizeCapture?.(window, event?.raw.ipcMainEvent.senderFrame ?? null)
+    const result = await requestMacOSScreenCapturePermission()
+    if (valid && !valid())
+      throw new Error('Screen capture authorization expired')
+    return result
+  })
 
-  defineInvokeHandler(context, screenCapture.getSources, async (sourcesOptions) => {
+  defineInvokeHandler(context, screenCapture.getSources, async (sourcesOptions, event) => {
+    const valid = authorizeCapture?.(window, event?.raw.ipcMainEvent.senderFrame ?? null)
     // NOTICE(@nekomeowww): In probability of 9/10, the window thumbnail is purely empty or black, sources printed and
     // nothing is returned from the desktopCapturer API.
     // NOTICE(@sumimakito): Not only thumbnail is empty, the appIcon could be empty as well with nothing returned.
     // REVIEW(@sumimakito): This has nothing to do with out side, probably related to Electron Bug, you can
     // read more here https://github.com/electron/electron/issues/44504
     const sources = await desktopCapturer.getSources(sourcesOptions)
+    if (valid && !valid())
+      throw new Error('Screen capture authorization expired')
     return sources.map(source => toSerializableDesktopCapturerSource(source))
   })
 
@@ -220,6 +236,8 @@ export function initScreenCaptureForWindow(window: BrowserWindow, options?: Init
     // FIXME: Would be better if `onlySameWindow` in `createContext` also filters out invocations here.
     if (window.webContents.id !== eventaOptions?.raw.ipcMainEvent.sender.id)
       return
+    const frame = eventaOptions?.raw.ipcMainEvent.senderFrame ?? null
+    const valid = authorizeCapture?.(window, frame)
 
     const { timeout } = request
     if (typeof timeout === 'number' && (timeout <= 0 || !Number.isFinite(timeout) || Number.isNaN(timeout))) {
@@ -227,19 +245,33 @@ export function initScreenCaptureForWindow(window: BrowserWindow, options?: Init
     }
 
     await setSourceMutex.acquire()
+    if (valid && !valid()) {
+      setSourceMutex.release()
+      throw new Error('Screen capture authorization expired')
+    }
     log.withFields({ windowId, windowTitle: tryWindowTitle(window, windowTitle) }).debug('setSourceMutex acquired')
 
     clearTimeout(setSourceMutexTimeoutHandle)
     const handle = nanoid()
     setSourceMutexTimeoutHandle = undefined
     screenCaptureSourceMutexHandle = handle
+    screenCaptureSourceOwnerId = window.webContents.id
 
     try {
-      session.setDisplayMediaRequestHandler(async (_request, callback) => {
+      session.setDisplayMediaRequestHandler(async (displayRequest, callback) => {
+        if ((valid && !valid()) || displayRequest.frame !== frame) {
+          callback({})
+          return
+        }
         const sources = await desktopCapturer.getSources(request.options)
+        if (valid && !valid()) {
+          callback({})
+          return
+        }
         const source = sources.find(source => source.id === request.sourceId)
         if (!source) {
-          throw new Error(`Source with id ${request.sourceId} not found.`)
+          callback({})
+          return
         }
 
         callback({
@@ -277,7 +309,11 @@ export function initScreenCaptureForWindow(window: BrowserWindow, options?: Init
     }
   })
 
-  defineInvokeHandler(context, screenCapture.resetSource, async (mutexHandle) => {
+  defineInvokeHandler(context, screenCapture.resetSource, async (mutexHandle, event) => {
+    if (window.webContents.id !== event?.raw.ipcMainEvent.sender.id
+      || event.raw.ipcMainEvent.senderFrame !== window.webContents.mainFrame) {
+      return
+    }
     if (screenCaptureSourceMutexHandle !== mutexHandle)
       return
 

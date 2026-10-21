@@ -1,0 +1,23 @@
+{
+  "full_name": "Open-LLM-VTuber/Open-LLM-VTuber",
+  "html_url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+  "default_branch": "main",
+  "archived": false,
+  "stargazers_count": 14057,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "pushed_at": "2026-05-15T07:18:04Z",
+  "sha": "992309c0aa19845960228f880013d4685fde93b5",
+  "head_commit_date": "2026-05-15T07:18:03Z",
+  "observed_at_utc": "2026-10-12T07:20:49.188969+00:00",
+  "latest_release": {
+    "tag": "v1.2.1",
+    "published_at": "2025-08-26T08:47:08Z",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/releases/tag/v1.2.1"
+  }
+}

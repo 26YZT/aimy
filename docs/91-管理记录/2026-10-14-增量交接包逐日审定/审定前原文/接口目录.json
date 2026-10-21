@@ -1,0 +1,458 @@
+{
+  "date": "2026-10-14",
+  "status": "契约提案；未实现/冻结",
+  "operations": [
+    {
+      "operation": "memory.list",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "read",
+      "owner": "UI→MemoryService→Repo",
+      "required_and_optional_fields": [
+        "scope",
+        "query?",
+        "cursor?",
+        "limit?"
+      ],
+      "result_fields": [
+        "items",
+        "revision",
+        "nextCursor"
+      ],
+      "error_codes": [
+        "INVALID_ARGUMENT",
+        "SCOPE_MISMATCH",
+        "CURSOR_EXPIRED"
+      ],
+      "requirement": "REQ-MEM-02",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "memory.source",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "read",
+      "owner": "UI→MemoryService→ChatRepository",
+      "required_and_optional_fields": [
+        "scope",
+        "factId"
+      ],
+      "result_fields": [
+        "fact",
+        "sources",
+        "unavailableSources"
+      ],
+      "error_codes": [
+        "NOT_FOUND",
+        "SCOPE_MISMATCH"
+      ],
+      "requirement": "REQ-MEM-02",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "memory.correct",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "write",
+      "owner": "UI/user correction→MemoryService",
+      "required_and_optional_fields": [
+        "scope",
+        "mutationId",
+        "expectedRevision",
+        "factId",
+        "text"
+      ],
+      "result_fields": [
+        "fact",
+        "revision",
+        "mutationId"
+      ],
+      "error_codes": [
+        "CONFLICT",
+        "NOT_FOUND",
+        "STORAGE_FAILED",
+        "IDEMPOTENCY_MISMATCH"
+      ],
+      "requirement": "REQ-MEM-03",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "memory.forget",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "write",
+      "owner": "UI→MemoryService→ChatRepository",
+      "required_and_optional_fields": [
+        "scope",
+        "mutationId",
+        "expectedRevision",
+        "factId",
+        "mode"
+      ],
+      "result_fields": [
+        "barrierReceipt",
+        "barrierRevision",
+        "memoryEpoch",
+        "sourcesDeleted",
+        "pendingCleanup",
+        "cleanupState"
+      ],
+      "error_codes": [
+        "CONFLICT",
+        "PARTIAL_DELETE",
+        "STORAGE_FAILED",
+        "IDEMPOTENCY_MISMATCH"
+      ],
+      "requirement": "REQ-MEM-03",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "memory.policy",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "write",
+      "owner": "UI→MemoryService",
+      "required_and_optional_fields": [
+        "scope",
+        "mutationId",
+        "expectedRevision",
+        "autoSave"
+      ],
+      "result_fields": [
+        "autoSave",
+        "revision",
+        "memoryEpoch"
+      ],
+      "error_codes": [
+        "CONFLICT",
+        "STORAGE_FAILED"
+      ],
+      "requirement": "REQ-MEM-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "memory.enqueueSource",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "internal",
+      "owner": "durable user hook→MemoryService",
+      "required_and_optional_fields": [
+        "scope",
+        "sourceRefs",
+        "origin",
+        "sourceRevision",
+        "retryOf?"
+      ],
+      "result_fields": [
+        "jobId",
+        "deduplicated"
+      ],
+      "error_codes": [
+        "SOURCE_CHANGED",
+        "SOURCE_SUPPRESSED",
+        "SCOPE_MISMATCH"
+      ],
+      "requirement": "REQ-MEM-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "memory.resolveRequest",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "internal",
+      "owner": "Core request port→Stage adapter",
+      "required_and_optional_fields": [
+        "scope",
+        "turnRef",
+        "sessionGeneration",
+        "operationId",
+        "query",
+        "signal"
+      ],
+      "result_fields": [
+        "projection",
+        "memoryRevision",
+        "memoryEpoch",
+        "validUntil",
+        "guardToken",
+        "factIds",
+        "sourceIds"
+      ],
+      "error_codes": [
+        "STALE",
+        "CANCELLED",
+        "SOURCE_CHANGED"
+      ],
+      "requirement": "REQ-MEM-02",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "memory.commitCandidates",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "internal",
+      "owner": "job worker→Repo CAS",
+      "required_and_optional_fields": [
+        "scope",
+        "jobId",
+        "leaseToken",
+        "capturedEpoch",
+        "expectedRevision",
+        "candidates"
+      ],
+      "result_fields": [
+        "revision",
+        "accepted",
+        "rejected"
+      ],
+      "error_codes": [
+        "STALE",
+        "CONFLICT",
+        "INVALID_OUTPUT",
+        "STORAGE_FAILED"
+      ],
+      "requirement": "REQ-MEM-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "perception.start",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "control",
+      "owner": "UI→main policy→AIRI renderer",
+      "required_and_optional_fields": [
+        "resource",
+        "expectedAppEpoch",
+        "operationId",
+        "sourceSelection?"
+      ],
+      "result_fields": [
+        "permission",
+        "resourceEpoch",
+        "captureState",
+        "operationId"
+      ],
+      "error_codes": [
+        "PERMISSION_DENIED",
+        "APP_PAUSED",
+        "SOURCE_LOST",
+        "STALE",
+        "DEVICE_FAILED"
+      ],
+      "requirement": "REQ-LIFE-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "perception.stop",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "control",
+      "owner": "UI/main→AIRI renderer",
+      "required_and_optional_fields": [
+        "resource",
+        "expectedResourceEpoch",
+        "operationId"
+      ],
+      "result_fields": [
+        "deniedEpoch",
+        "localStopReceipt"
+      ],
+      "error_codes": [
+        "STALE",
+        "LOCAL_CLEANUP_FAILED"
+      ],
+      "requirement": "REQ-LIFE-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "perception.stopAll",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "control",
+      "owner": "UI/main→all resource owners",
+      "required_and_optional_fields": [
+        "expectedAppEpoch",
+        "operationId",
+        "reason"
+      ],
+      "result_fields": [
+        "appEpoch",
+        "receipts",
+        "pendingLocalCleanup"
+      ],
+      "error_codes": [
+        "LOCAL_CLEANUP_FAILED"
+      ],
+      "requirement": "REQ-LIFE-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "vision.configure",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "write",
+      "owner": "UI→single product Vision owner",
+      "required_and_optional_fields": [
+        "scope",
+        "mutationId",
+        "expectedRevision",
+        "intervalMs",
+        "maxCallsPerHour",
+        "sourceSelection?"
+      ],
+      "result_fields": [
+        "configuration",
+        "configurationRevision"
+      ],
+      "error_codes": [
+        "INVALID_ARGUMENT",
+        "SOURCE_LOST",
+        "CONFLICT",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED"
+      ],
+      "requirement": "REQ-VIS-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "proactive.configure",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "write",
+      "owner": "UI→policy+durable event owner",
+      "required_and_optional_fields": [
+        "scope",
+        "mutationId",
+        "expectedRevision",
+        "enabled",
+        "quiet",
+        "cooldownMs",
+        "maxCallsPerDay"
+      ],
+      "result_fields": [
+        "configuration",
+        "policyRevision"
+      ],
+      "error_codes": [
+        "INVALID_ARGUMENT",
+        "STORAGE_FAILED",
+        "CONFLICT",
+        "IDEMPOTENCY_MISMATCH"
+      ],
+      "requirement": "REQ-PRO-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "proactive.consider",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "internal",
+      "owner": "typed system event→existing Spark",
+      "required_and_optional_fields": [
+        "scope",
+        "eventId",
+        "eventVersion",
+        "sessionGeneration",
+        "memoryRevision",
+        "trigger",
+        "signal"
+      ],
+      "result_fields": [
+        "decision",
+        "eventStatus"
+      ],
+      "error_codes": [
+        "STALE",
+        "BUDGET_EXCEEDED",
+        "INVALID_OUTPUT",
+        "CANCELLED"
+      ],
+      "requirement": "REQ-MEM-04",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "presentation.cancel",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "control",
+      "owner": "UI/lifecycle→existing Turn/Voice owner",
+      "required_and_optional_fields": [
+        "turnRef",
+        "operationId",
+        "reason"
+      ],
+      "result_fields": [
+        "status",
+        "silenceReceipt",
+        "remoteCancellation"
+      ],
+      "error_codes": [
+        "NOT_FOUND",
+        "LOCAL_CLEANUP_FAILED"
+      ],
+      "requirement": "REQ-VOICE-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "diagnostics.summary",
+      "version": 1,
+      "status": "拟定接口；非当前已存在HTTP端点",
+      "kind": "read",
+      "owner": "UI→existing tracing adapters",
+      "required_and_optional_fields": [
+        "scope?",
+        "timeRange"
+      ],
+      "result_fields": [
+        "counters",
+        "versions",
+        "errorsRedacted"
+      ],
+      "error_codes": [
+        "INVALID_ARGUMENT"
+      ],
+      "requirement": "REQ-OBS-01",
+      "transport": "内部函数或既有Eventa/synced action；signal仅进程内",
+      "model_callable": false
+    },
+    {
+      "operation": "operation.get",
+      "version": 1,
+      "status": "拟定只读回执接口；未实现",
+      "kind": "read",
+      "owner": "UI→相应本地owner",
+      "required_and_optional_fields": [
+        "scope",
+        "operationId|mutationId（exactly one）"
+      ],
+      "result_fields": [
+        "commitReceipt",
+        "cleanupState",
+        "pendingCleanup",
+        "status"
+      ],
+      "error_codes": [
+        "SCOPE_MISMATCH",
+        "NOT_FOUND"
+      ],
+      "requirement": "REQ-MEM-03",
+      "transport": "既有Eventa/synced action",
+      "model_callable": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "source_sha256_before": "37fa26c0f5ea08e4fb6b3c6b9691640c805231af31562f9cf0b036cb7c9e6bdc",
+  "source_sha256_after": "37fa26c0f5ea08e4fb6b3c6b9691640c805231af31562f9cf0b036cb7c9e6bdc",
+  "source_unchanged": true,
+  "source_spans_verified": 58,
+  "verbatim_text_blocks_verified": 42,
+  "case_count": 8,
+  "user_input_count": 18,
+  "new_session_cases": [
+    7,
+    8
+  ],
+  "new_process_case": 5,
+  "real_model_calls_in_preparation": 0,
+  "outputs_or_scores_generated": false,
+  "cases_sha256": "6df77f21da49b90f71a68e8dc171f95005968b54560fdab50892436aeb247818",
+  "runbook_sha256": "156c2405aca97eb90bd14c0c93930d7258b208bdcc865f294fc2b13a892406e4"
+}

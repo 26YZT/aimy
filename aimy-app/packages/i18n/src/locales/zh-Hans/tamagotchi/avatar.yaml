@@ -1,0 +1,23 @@
+{
+  "edit": "修改{name}的头像",
+  "title": "{name}的头像",
+  "description": "图片只保存在这台电脑，不影响角色模型或音色。",
+  "preview": "头像预览",
+  "choose": "选择本地图片",
+  "limits": "PNG、JPEG或WebP，最多2 MiB、4096像素。会在本地自动缩为256像素头像。",
+  "preparing": "正在处理图片…",
+  "remove": "移除头像",
+  "cancel": "取消",
+  "save": "保存",
+  "saving": "正在保存…",
+  "errors": {
+    "format": "请选择PNG、JPEG或WebP图片。",
+    "size": "图片超过2 MiB，请选择更小的图片。",
+    "image": "这张图片无法读取，请换一张。",
+    "dimensions": "图片边长超过4096像素，请先缩小。",
+    "encoded-size": "处理后的图片仍然过大，请换一张较小的图片。",
+    "missing": "这个角色已不存在，请重新选择。",
+    "changed": "角色或头像已变化，请重新打开后保存。",
+    "storage": "头像保存失败，旧头像已保留。请检查本地存储空间。"
+  }
+}

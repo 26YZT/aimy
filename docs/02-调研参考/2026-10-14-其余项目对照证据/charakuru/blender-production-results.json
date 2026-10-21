@@ -1,0 +1,38 @@
+{
+  "blender": "5.2.1 LTS",
+  "factory_startup": true,
+  "current_user_scene_touched": false,
+  "executed_original_functions": [
+    "bounds",
+    "join",
+    "piece",
+    "restore_uv"
+  ],
+  "source_sha256": "eb82dd85dd941e4a75311dc1950ade581564ad89b019d1ed7fdf09df6d6244ff",
+  "component_topology_UV_preserved": true,
+  "partial_face_boundary_rejected": true,
+  "joined_mesh_faces": 2,
+  "restoreUV": {
+    "maxError": 0,
+    "tolerance": 1.4142135623730953e-05,
+    "faces": 1,
+    "scale": [
+      0.5,
+      0.5,
+      1.0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ]
+  },
+  "original_vertices_preserved": true,
+  "changed_topology_rejected": true,
+  "vrm_addon_enabled_in_factory": false,
+  "limits": [
+    "no Tripo/generated candidate/donor/user project",
+    "no full assembly/rig/weights/MToon export",
+    "blank in-memory texture, not generated artwork; no render/save user scene"
+  ]
+}

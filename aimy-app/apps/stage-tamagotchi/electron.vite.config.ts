@@ -27,6 +27,9 @@ export default defineConfig({
   main: {
     build: {
       externalizeDeps: {
+        // The shared secret port is source-only. Bundle this leaf into main so packaged
+        // Electron never tries to execute workspace TypeScript outside the application.
+        exclude: ['@proj-airi/stage-ui'],
         include: [
           // Native modules that have `__dirname` usages. Externalize to avoid bundling
           // them into ESM and causing issues in runtime.

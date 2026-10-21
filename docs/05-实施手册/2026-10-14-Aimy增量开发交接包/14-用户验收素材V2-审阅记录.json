@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "source": {
+    "path": "13-用户验收素材V2-原文.md",
+    "author": "用户",
+    "capture": "按本轮用户可见文本保存，未改写；本指纹为落盘文件，不宣称客户端原始字节",
+    "sha256": "37fa26c0f5ea08e4fb6b3c6b9691640c805231af31562f9cf0b036cb7c9e6bdc"
+  },
+  "kind": "source_material_review_not_frozen_cases",
+  "material_count": 8,
+  "topic_counts": {
+    "称呼": 2,
+    "偏好变化": 2,
+    "近期安排": 2,
+    "跨会话回忆": 2
+  },
+  "materials": [
+    {
+      "material_id": "USER-V2-01",
+      "user_case_number": 1,
+      "title": "案例 1：只有亲近的人才会叫的小名",
+      "topic": "称呼",
+      "source_start_line": 9,
+      "source_end_line": 35,
+      "review_focus": "授权昵称及情绪语境",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    },
+    {
+      "material_id": "USER-V2-02",
+      "user_case_number": 2,
+      "title": "案例 2：一个不希望再被提起的名字",
+      "topic": "称呼",
+      "source_start_line": 36,
+      "source_end_line": 57,
+      "review_focus": "当前称呼与禁用旧称呼",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    },
+    {
+      "material_id": "USER-V2-03",
+      "user_case_number": 3,
+      "title": "案例 3：曾经喜欢的东西，后来不再喜欢",
+      "topic": "偏好变化",
+      "source_start_line": 58,
+      "source_end_line": 79,
+      "review_focus": "有时效的偏好更新",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    },
+    {
+      "material_id": "USER-V2-04",
+      "user_case_number": 4,
+      "title": "案例 4：因为一段关系而改变的饮食偏好",
+      "topic": "偏好变化",
+      "source_start_line": 80,
+      "source_end_line": 103,
+      "review_focus": "偏好例外与本次约束",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    },
+    {
+      "material_id": "USER-V2-05",
+      "user_case_number": 5,
+      "title": "案例 5：一场准备了很久的重要面试",
+      "topic": "近期安排",
+      "source_start_line": 104,
+      "source_end_line": 139,
+      "review_focus": "原定事件时间/未知结果",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    },
+    {
+      "material_id": "USER-V2-06",
+      "user_case_number": 6,
+      "title": "案例 6：一个很重要、却差点被忘记的日子",
+      "topic": "近期安排",
+      "source_start_line": 140,
+      "source_end_line": 173,
+      "review_focus": "生日时间与尚未确认的计划",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    },
+    {
+      "material_id": "USER-V2-07",
+      "user_case_number": 7,
+      "title": "案例 7：一只陪伴了很多年的猫",
+      "topic": "跨会话回忆",
+      "source_start_line": 174,
+      "source_end_line": 200,
+      "review_focus": "已去世宠物的跨会话含蓄指代",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    },
+    {
+      "material_id": "USER-V2-08",
+      "user_case_number": 8,
+      "title": "案例 8：一个还没有实现的梦想",
+      "topic": "跨会话回忆",
+      "source_start_line": 201,
+      "source_end_line": 227,
+      "review_focus": "未实现梦想的跨会话联系",
+      "source_is_fictional": true,
+      "review_status": "主体建议保留，执行条件待收敛",
+      "reference_response_status": "作者给出的含义参考，不是实际模型响应",
+      "score": null,
+      "run_id": null
+    }
+  ],
+  "date_checks": {
+    "case5_day_after_tomorrow": "2026-10-17",
+    "case6_birthday_is_tuesday": true,
+    "case6_followup_next_day": "2026-10-20"
+  },
+  "execution_spec_pending": [
+    "模型输入/评审参考隔离",
+    "每例用户/数据隔离与例内连续性",
+    "未写日期的虚拟时钟",
+    "重新打开的进程语义",
+    "关键事实/状态/自然度分开观察"
+  ],
+  "raw_dialogue_rewritten": false,
+  "automatically_imported_as_personal_memory": false,
+  "real_model_calls": 0,
+  "model_outputs_generated": 0,
+  "formal_cases_frozen": false,
+  "product_code_writes": 0,
+  "review": "14-用户验收素材V2-审阅.md"
+}

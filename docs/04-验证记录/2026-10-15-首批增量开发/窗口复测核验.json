@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-15",
+  "phase": "native_ui_followup",
+  "native_actions": "send, read source, correct, remove, pause, resume, window close, app quit",
+  "settings_window_open": "existing button handler fallback; not signed off as pure native path",
+  "evidence_files": 33,
+  "hash_mismatches": [],
+  "broken_links": [],
+  "git_index_unchanged": true,
+  "real_model_calls": 0,
+  "real_model_cost_cny": 0,
+  "synthetic_requests": 5,
+  "all_synthetic_attempts_settled": true,
+  "changes": 7,
+  "total_changed_product_paths": 154,
+  "tests": {
+    "node_boundary": 3,
+    "interactive_area_browser": 39,
+    "focused_browser_rerun": 1,
+    "focused_rerun_is_additional_unique_test": false,
+    "desktop_typecheck": "passed",
+    "desktop_build": "passed",
+    "changed_source_lint_files": 148,
+    "changed_source_lint": "passed"
+  },
+  "runtime_restart": "PASS; 32838 and 32889 exit0, no forced shutdown"
+}

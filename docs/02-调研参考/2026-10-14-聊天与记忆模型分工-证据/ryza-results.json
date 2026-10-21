@@ -1,0 +1,146 @@
+{
+  "kind": "isolated_original_js_with_fake_xhr",
+  "real_model_calls": 0,
+  "real_credentials_read": false,
+  "checks": [
+    {
+      "name": "ryza_chat_and_complete_share_model_and_endpoint",
+      "passed": true
+    },
+    {
+      "name": "ryza_shared_model_still_uses_separate_requests_and_prompts",
+      "passed": true
+    },
+    {
+      "name": "ryza_memory_completion_uses_its_own_temperature",
+      "passed": true
+    },
+    {
+      "name": "ryza_complete_opts_does_not_override_shared_model",
+      "passed": true
+    },
+    {
+      "name": "ryza_longterm_host_hook_uses_shared_model",
+      "passed": true
+    },
+    {
+      "name": "ryza_background_completion_does_not_allocate_chat_epoch",
+      "passed": true
+    },
+    {
+      "name": "ryza_switching_chat_configuration_also_switches_memory_model",
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "url": "https://synthetic.invalid/v1/chat/completions",
+      "body": {
+        "model": "fake-shared-A",
+        "messages": [
+          {
+            "role": "system",
+            "content": "あなたは『ライザ』（ライザリン・シュタウト）です。\n\n## キャラクター\n- 一人称は「あたし」。相手は「君」と呼ぶ。\n- 明るく前向きで、少しおっちょこちょいな錬金術士。\n- 好奇心旺盛で調合と冒険が好き。困っている人を放っておけない。\n- 参考になる実際の言い回し：\n  - あたしとお喋りでもしてリフレッシュしよっ\n  - 今日は眠くなるまであなたとお喋りしたいなー\n  - あたしにも何が起こるか分からない\n  - どんな困難も乗り越えられるはずだから\n\n## 出力言語（厳守）\nセリフ本文は必ず「zh」で書くこと（ライザらしい元気な口調をzhでも維持）。\n地名や人名はzh表記を基本に、必要なら日本語を併記してよい。\n先頭のタグ行と <state> は英キーのまま。\n\n## 今回の会話モード\n自由な雑談。相手の話を聞いて、自然に会話を続ける。\n音声で読み上げる。短く、話し言葉だけで書く。\n\n## 出力形式（厳守）\n毎ターン1行目から書く。変わる欄だけ直す。\nemotion: \nattitude: \nundress: on=脱いだ / off=着た。断るなら値を変えない。セリフで脱いだ/着たなら必ず合わせる。\nstage: 移動なら一覧のidか地名。寝るなら sleep。\n\n次の行をコピーし、このターン変わった欄だけ直す：\n\n[emotion:happy|attitude:agree|undress:off|stage:stage_01_001_04]\n\nセリフ"
+          },
+          {
+            "role": "user",
+            "content": "synthetic chat\n\n次の行をコピーし、このターン変わった欄だけ直す：\n[emotion:happy|attitude:agree|undress:off|stage:stage_01_001_04]\nセリフ"
+          }
+        ],
+        "temperature": 0.9,
+        "max_tokens": 400
+      }
+    },
+    {
+      "url": "https://synthetic.invalid/v1/chat/completions",
+      "body": {
+        "model": "fake-shared-A",
+        "messages": [
+          {
+            "role": "system",
+            "content": "synthetic system"
+          },
+          {
+            "role": "user",
+            "content": "synthetic memory"
+          }
+        ],
+        "temperature": 0.2,
+        "max_tokens": 280
+      }
+    },
+    {
+      "url": "https://synthetic.invalid/v1/chat/completions",
+      "body": {
+        "model": "fake-shared-A",
+        "messages": [
+          {
+            "role": "system",
+            "content": "synthetic system"
+          },
+          {
+            "role": "user",
+            "content": "synthetic memory"
+          }
+        ],
+        "temperature": 0.2,
+        "max_tokens": 280
+      }
+    },
+    {
+      "url": "https://synthetic.invalid/v1/chat/completions",
+      "body": {
+        "model": "fake-shared-A",
+        "messages": [
+          {
+            "role": "system",
+            "content": "你负责维护有限、可靠的长期记忆。只输出 JSON，不要 Markdown 或解释。\n格式：{\"digest\":\"按时间顺序的概略散文\",\"entries\":[{\"date\":\"YYYY-MM-DD\",\n\"category\":\"类别\",\"importance\":1,\"summary\":\"简洁事实\",\"status\":\"active\",\n\"keywords\":[\"关键词\"]}]}。\n合并旧记忆与近期对话并去重；同一事件更新原条目，不重复新增。\n只保留稳定偏好、重要经历、关系变化、未完成约定与未来确有价值的信息；\n普通寒暄、一次性客套、重复信息应删除。entries 最多 40 条。\n不适合单独成条但丢掉可惜的内容并进 digest（按时间顺序，≤ 1600 字）。\nimportance 1-5。誓言/承诺用 promise，告白用 confession，深刻伤害用 deep_hurt，\n关系转折用 relationship_turning_point，重大人生事件用 major_life_event；\n这些类别必须设为 5，除非近期对话明确撤回或解决，否则不删。不要编造日期与细节。"
+          },
+          {
+            "role": "user",
+            "content": "{\"now\":\"2026-10-14T19:49:35\",\"previous\":{\"digest\":\"\",\"entries\":[]},\"dialogue\":[{\"role\":\"user\",\"text\":\"synthetic-only preference\",\"at\":\"2026-10-14T19:49:35\"}]}"
+          }
+        ],
+        "temperature": 0.2,
+        "max_tokens": 1200
+      }
+    },
+    {
+      "url": "https://synthetic.invalid/v1/chat/completions",
+      "body": {
+        "model": "fake-shared-B",
+        "messages": [
+          {
+            "role": "system",
+            "content": "あなたは『ライザ』（ライザリン・シュタウト）です。\n\n## キャラクター\n- 一人称は「あたし」。相手は「君」と呼ぶ。\n- 明るく前向きで、少しおっちょこちょいな錬金術士。\n- 好奇心旺盛で調合と冒険が好き。困っている人を放っておけない。\n- 参考になる実際の言い回し：\n  - あたしとお喋りでもしてリフレッシュしよっ\n  - 今日は眠くなるまであなたとお喋りしたいなー\n  - あたしにも何が起こるか分からない\n  - どんな困難も乗り越えられるはずだから\n\n## 出力言語（厳守）\nセリフ本文は必ず「zh」で書くこと（ライザらしい元気な口調をzhでも維持）。\n地名や人名はzh表記を基本に、必要なら日本語を併記してよい。\n先頭のタグ行と <state> は英キーのまま。\n\n## 今回の会話モード\n自由な雑談。相手の話を聞いて、自然に会話を続ける。\n音声で読み上げる。短く、話し言葉だけで書く。\n\n## 出力形式（厳守）\n毎ターン1行目から書く。変わる欄だけ直す。\nemotion: \nattitude: \nundress: on=脱いだ / off=着た。断るなら値を変えない。セリフで脱いだ/着たなら必ず合わせる。\nstage: 移動なら一覧のidか地名。寝るなら sleep。\n\n## 長期記憶（概略）\nsynthetic summary\n\n次の行をコピーし、このターン変わった欄だけ直す：\n\n[emotion:happy|attitude:agree|undress:off|stage:stage_01_001_04]\n\nセリフ"
+          },
+          {
+            "role": "user",
+            "content": "synthetic chat\n\n次の行をコピーし、このターン変わった欄だけ直す：\n[emotion:happy|attitude:agree|undress:off|stage:stage_01_001_04]\nセリフ"
+          }
+        ],
+        "temperature": 0.9,
+        "max_tokens": 400
+      }
+    },
+    {
+      "url": "https://synthetic.invalid/v1/chat/completions",
+      "body": {
+        "model": "fake-shared-B",
+        "messages": [
+          {
+            "role": "system",
+            "content": "synthetic system"
+          },
+          {
+            "role": "user",
+            "content": "synthetic memory"
+          }
+        ],
+        "temperature": 0.2,
+        "max_tokens": 280
+      }
+    }
+  ],
+  "scope": "Original api.js and longterm.js in an empty VM. Synthetic config and XHR only; app wiring reproduced exactly. Not real memory accuracy or app acceptance."
+}

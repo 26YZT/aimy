@@ -1,0 +1,113 @@
+{
+  "narrative_same_inputs": [
+    {
+      "id": "plain",
+      "input": "你好，世界。",
+      "olv": "你好，世界。",
+      "airi": "你好，世界。",
+      "airi_default": "你好，世界。"
+    },
+    {
+      "id": "asterisk",
+      "input": "*轻轻挥手*你好",
+      "olv": "你好",
+      "airi": "你好",
+      "airi_default": "*轻轻挥手*你好"
+    },
+    {
+      "id": "nested",
+      "input": "你好[轻声(深呼吸)]世界。",
+      "olv": "你好世界。",
+      "airi": "你好世界。",
+      "airi_default": "你好[轻声(深呼吸)]世界。"
+    },
+    {
+      "id": "fullwidth",
+      "input": "你好（轻轻挥手）世界。",
+      "olv": "你好（轻轻挥手）世界。",
+      "airi": "你好世界。",
+      "airi_default": "你好（轻轻挥手）世界。"
+    },
+    {
+      "id": "code",
+      "input": "变量a<b>c。",
+      "olv": "变量ac。",
+      "airi": "变量a<b>c。",
+      "airi_default": "变量a<b>c。"
+    },
+    {
+      "id": "math",
+      "input": "需要 (2+3) 个",
+      "olv": "需要 个",
+      "airi": "需要  个",
+      "airi_default": "需要 (2+3) 个"
+    },
+    {
+      "id": "unclosed",
+      "input": "你好[未闭合文字",
+      "olv": "你好",
+      "airi": "你好[未闭合文字",
+      "airi_default": "你好[未闭合文字"
+    }
+  ],
+  "tap_same_hits": [
+    {
+      "hit": "head",
+      "olv": [
+        {
+          "group": "head_wave",
+          "priority": 3
+        }
+      ],
+      "airi": []
+    },
+    {
+      "hit": "body",
+      "olv": [
+        {
+          "group": "tap_body",
+          "priority": 3
+        }
+      ],
+      "airi": [
+        "tap_body"
+      ]
+    },
+    {
+      "hit": "unknown",
+      "olv": [
+        {
+          "group": "head_wave",
+          "priority": 3
+        }
+      ],
+      "airi": []
+    },
+    {
+      "hit": "head weight .9",
+      "olv": [
+        "head_pat"
+      ],
+      "allZeroRejected": true
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio/src/processors/tts-chunker.ts",
+      "sha256": "db1907ca4e411ba9067c7e7508dc1556662f801a1cc065960328c98585e9050f"
+    },
+    {
+      "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappmodel.ts",
+      "sha256": "0546db05e93a2b310e46b2f5c40c26431a25837f5d3c0f0028bb071904b95863"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-live2d/src/components/scenes/live2d/Model.vue",
+      "sha256": "5877531db5600d77d14d61c8be6ba35c93a332d9f4701b5042fc2c1036f7b6f4"
+    }
+  ],
+  "limits": [
+    "pure narrative functions with stripNarrative=true, not actual streaming/audio",
+    "exact OLV method and AIRI on-hit callback; fake models/fixed RNG, no renderer/device/assets"
+  ],
+  "modelsDevicesNetworkUsed": false
+}

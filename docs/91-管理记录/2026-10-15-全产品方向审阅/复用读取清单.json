@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-15",
+  "scope": "read-only review; no product changes, network, real model, device, DB reads, installation or tests",
+  "documents": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/AGENTS.md",
+      "sha256": "6fce025f00e2eec1598a87506287139edf0224f28e89048b59fc84a0fe7953db",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/README.md",
+      "sha256": "1df1f8592e65f55d72edd388b317544b4a4bce8ab927619f4bf86a0144a90de4",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/00-当前方向/开发方向与边界.md",
+      "sha256": "e373cb3a6c52de0c0a28dd97ff9edb3f14c767dbc365fa3101b779f24f46cb4c",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/PROJECT_STATE.md",
+      "sha256": "4f3b25d43bbf53c0a0727913879018840cd3c6ee2274cd676bd4b37778934dcd",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/任务编排.md",
+      "sha256": "6f4d3d0e7167d02fd441a84461c2ed9e143e25009bbb7c3725cd415e184b75f2",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-五项目功能增量与验证裁决.md",
+      "sha256": "fdc739a3033f6435675800b5910cf05e528a0a2b8b2d4c5a084d760a5fe7f21c",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目差异与对照补核.md",
+      "sha256": "6ecb4011dc955ee60e1cf7b1fc69edfc9f15bfa774ea1fe852d6c1811741d8ee",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+      "sha256": "d95346030b317521fbf332ee54669dd28539002f87c657cc742186f624654ed1",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-AIRI现状能力清单.md",
+      "sha256": "be7a58a46c841e5ac839b4be8360972ab5cc801e169f38e3e97f65c14b5f3003",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-AionsHome拆解复用评估.md",
+      "sha256": "5150ffb13132c91829cf030dfc98dccad5634de6170b8b516c53791eb945aa7c",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-Ryza拆解复用评估.md",
+      "sha256": "369bee8f6344baab6183a0f2c6d722ce76a985d0ea1f30ccecc3ed723c95910a",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-Open-LLM-VTuber后端拆解复用评估.md",
+      "sha256": "acfba4c1381dec1f7858fc221fdce2c631425323b83ef2c72a1999a9387bd757",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-Open-LLM-VTuber前端拆解复用评估.md",
+      "sha256": "f6e0366929f9cd05977a80275e824b8dcb152ca64698c35d5ba054d8230f4030",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-kirara-ai拆解复用评估.md",
+      "sha256": "6311ec9fe2849387fbae78945594c77c734c3005f750565726558292177a73be",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-Charakuru拆解复用评估.md",
+      "sha256": "3ca936e5712540aad5201daa89cfe833e43144b7550c56b219a341665ae85d7c",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+      "sha256": "c4a9ea358551464e62ca0a9defea9b5a6e9dcc17d71f4fb7fcd9930ad2a5aacb",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/能力选择.json",
+      "sha256": "2cf962c0f50b29b4e71e20536b3a771536d32fffc71a8a025f200745620ad34e",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/README.md",
+      "sha256": "4a47772c463cd4f7814a059683b49c5660aacf17fe786e1e2e9a62d29a0e0785",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/01-复用代码清单.md",
+      "sha256": "f32cba405a7e982bfdbce19f07e315df55576144552c57eb75cb23a0dc1b8be1",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/复用映射.json",
+      "sha256": "4d84b7b68b015acd4017d791c18992c98ede124e7636523871236b8881b61bbf",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/03-技术与数据契约.md",
+      "sha256": "cbbefe11119901cc5f77552b3a98dab7bfae823fdbdcff1216ea2b1fa3b5eaf6",
+      "reading": "full or targeted sections; see report scope"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/06-验收与评测目标.md",
+      "sha256": "bd5ece2d68c16d7714bfe157005bb564b3106d30e07a7e566a1acbd5b6024970",
+      "reading": "full or targeted sections; see report scope"
+    }
+  ],
+  "source_hash_checks": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "handoff_sha_match": true,
+      "semantic_read": "post_sentinel.py selected lineage/update/commit sections; longterm.js selected score/select; other files hash-only this turn"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "handoff_sha_match": true,
+      "semantic_read": "post_sentinel.py selected lineage/update/commit sections; longterm.js selected score/select; other files hash-only this turn"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "handoff_sha_match": true,
+      "semantic_read": "post_sentinel.py selected lineage/update/commit sections; longterm.js selected score/select; other files hash-only this turn"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "handoff_sha_match": true,
+      "semantic_read": "post_sentinel.py selected lineage/update/commit sections; longterm.js selected score/select; other files hash-only this turn"
+    }
+  ]
+}

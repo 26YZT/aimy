@@ -1,0 +1,34 @@
+{
+  "pid": 13136,
+  "ready": true,
+  "userData": "/tmp/aimy-preview-package-20261018/smoke/appdata/Aimy-Preview",
+  "windows": [
+    {
+      "id": 3,
+      "title": "Aimy",
+      "url": "file:///private/tmp/aimy-preview-package-20261018/output/mac-arm64/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/index.html?synced-leader=false#/onboarding",
+      "visible": true,
+      "destroyed": false
+    },
+    {
+      "id": 2,
+      "title": "Aimy",
+      "url": "file:///private/tmp/aimy-preview-package-20261018/output/mac-arm64/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/index.html?synced-leader=true#/settings/companion",
+      "visible": true,
+      "destroyed": false
+    },
+    {
+      "id": 1,
+      "title": "Aimy Beat Sync",
+      "url": "file:///private/tmp/aimy-preview-package-20261018/output/mac-arm64/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/beat-sync.html",
+      "visible": false,
+      "destroyed": false
+    }
+  ],
+  "blockedOrigins": [
+    [
+      "https://cloud.airi.build",
+      2
+    ]
+  ]
+}

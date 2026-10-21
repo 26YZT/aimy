@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useElectronEventaInvoke } from '@proj-airi/electron-vueuse'
-import { OnboardingScreen, OnboardingStepAnalyticsNotice } from '@proj-airi/stage-ui/components'
+import { OnboardingScreen, OnboardingStepAnalyticsNotice, OnboardingStepUserProfile } from '@proj-airi/stage-ui/components'
 import { isAnalyticsAvailableInBuild } from '@proj-airi/stage-ui/libs/product-signals'
 import { useAuthStore } from '@proj-airi/stage-ui/stores/auth'
 import { useOnboardingStore } from '@proj-airi/stage-ui/stores/onboarding'
@@ -38,6 +38,8 @@ const extraSteps = computed(() => {
     : []
 })
 
+const afterModelSteps = [{ id: 'user-profile', component: OnboardingStepUserProfile }]
+
 async function handleSkipped() {
   onboardingStore.markSetupSkipped()
   await closeOnboardingWindow()
@@ -52,12 +54,11 @@ async function handleConfigured() {
 <template>
   <!-- Same flex/min-h-0 chain as OnboardingDialog so model step grid scrolls inside the viewport (not the whole page). -->
   <div
-    class="onboarding-root h-full min-h-0 w-full flex flex-col overflow-hidden overscroll-none"
-    :class="bgClass"
+    :class="['onboarding-root', 'h-full min-h-0 w-full flex flex-col', 'overflow-hidden overscroll-none', bgClass]"
   >
-    <div class="min-h-8 w-full flex-shrink-0 select-none drag-region" :class="bgClass" />
-    <div class="mx-8 mb-8 mt-2 min-h-0 flex flex-1 flex-col">
-      <OnboardingScreen :extra-steps="extraSteps" @skipped="handleSkipped" @configured="handleConfigured" />
+    <div :class="['min-h-8 w-full flex-shrink-0 select-none drag-region', bgClass]" />
+    <div :class="['mx-8 mb-8 mt-2', 'min-h-0 flex flex-1 flex-col']">
+      <OnboardingScreen local-only :extra-steps="extraSteps" :after-model-steps="afterModelSteps" @skipped="handleSkipped" @configured="handleConfigured" />
     </div>
   </div>
 </template>

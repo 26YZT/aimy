@@ -1,0 +1,23 @@
+{
+  "candidateIdsValidated": 13,
+  "retainedIds": [
+    "RY03",
+    "RY04",
+    "RY08"
+  ],
+  "eligibilityCounts": {
+    "已有": 3,
+    "新增": 3,
+    "待AB": 2,
+    "不适用": 4,
+    "工程参考": 1,
+    "窄更强": 0
+  },
+  "positiveRyza": 8,
+  "negativeRyza": 9,
+  "airiComparisons": 3,
+  "caseCount": 20,
+  "sourceFilesMatched": 27,
+  "errors": [],
+  "notProductAcceptance": true
+}

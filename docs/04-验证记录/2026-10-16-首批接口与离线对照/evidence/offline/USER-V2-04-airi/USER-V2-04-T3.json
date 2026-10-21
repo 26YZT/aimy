@@ -1,0 +1,211 @@
+{
+  "arm": "airi",
+  "sessionId": "V_fIrHte9oJqARf1w9ckj",
+  "characterId": "default",
+  "diskMessages": [
+    {
+      "role": "system",
+      "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+      "id": "13oYwu2BkHonGnD-1---Z",
+      "createdAt": 1792122421781
+    },
+    {
+      "role": "user",
+      "content": "我特别喜欢吃辣。以前跟朋友出去吃饭，基本上都是我负责选火锅店。我最喜欢那种红油锅底，越辣越过瘾。不过我不太喜欢甜的东西，尤其是奶油蛋糕，总觉得吃几口就腻了。\n",
+      "createdAt": 1792065600000,
+      "id": "563c3a53-2014-420a-8cad-1b2717b35bf8"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792065600000,
+      "id": "-5IWLku8z25zKIFZdzbjc",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "563c3a53-2014-420a-8cad-1b2717b35bf8",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "563c3a53-2014-420a-8cad-1b2717b35bf8/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1026,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-airi-USER-V2-04\",\"http://127.0.0.1:52579/v1/\",\"deepseek-flash\",\"V_fIrHte9oJqARf1w9ckj\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792065600000
+    },
+    {
+      "role": "user",
+      "content": "今天跟一个很重要的朋友去吃饭了。她特别喜欢甜品，吃完饭非要拉着我去一家蛋糕店。本来我是不想吃的，但她给我点了一块栗子蛋糕。结果居然意外地好吃！没有想象中那么甜，栗子的味道很香。我突然觉得，可能不是所有甜品我都不喜欢，只是以前没遇到合口味的。以后有机会还想试试类似的。\n",
+      "createdAt": 1792152000000,
+      "id": "6120bd32-5a42-4ae5-b639-4bfc1030e143"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792152000000,
+      "id": "bu3rtKxJSVvm9_8XKdjgT",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "6120bd32-5a42-4ae5-b639-4bfc1030e143",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "6120bd32-5a42-4ae5-b639-4bfc1030e143/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1177,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-airi-USER-V2-04\",\"http://127.0.0.1:52579/v1/\",\"deepseek-flash\",\"V_fIrHte9oJqARf1w9ckj\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792152000000
+    },
+    {
+      "role": "user",
+      "content": "今天心情不太好，想出去买点好吃的犒劳一下自己。但是又不想吃太刺激的东西。你觉得我买点什么比较好？\n",
+      "createdAt": 1792238400000,
+      "id": "ba50b92c-683b-4ba6-bdbb-fb6500733dd4"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792238400000,
+      "id": "V5CIcukVw1KTXo7Z-7T0I",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "ba50b92c-683b-4ba6-bdbb-fb6500733dd4",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "ba50b92c-683b-4ba6-bdbb-fb6500733dd4/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1264,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-airi-USER-V2-04\",\"http://127.0.0.1:52579/v1/\",\"deepseek-flash\",\"V_fIrHte9oJqARf1w9ckj\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792238400000
+    }
+  ],
+  "liveMessageCount": 7,
+  "memory": {
+    "implemented": false,
+    "source": "original-airi"
+  },
+  "plaintextSyntheticCredentialInLocalStorage": false,
+  "accounting": {
+    "budget": {
+      "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 0,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 10000000,
+      "paused": false,
+      "attempts": 24
+    },
+    "requests": 3
+  }
+}

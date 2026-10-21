@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "state": "superseded historical draft before explicit user correction to question 6",
+  "files": [
+    {
+      "source": "02-首批PRD与交互规格.md",
+      "snapshot": "evidence/第6项更正前/02-首批PRD与交互规格.md.snapshot",
+      "sha256": "06b651f17f1506e0cd8c43733f78e555a9828660da15e4c180c3129f1b4f17a4"
+    },
+    {
+      "source": "03-技术与数据契约.md",
+      "snapshot": "evidence/第6项更正前/03-技术与数据契约.md.snapshot",
+      "sha256": "cb688fcbd940f6e7fea6b3cf0200e3d5ce085bd9a39f93b6e342bd1b98570718"
+    },
+    {
+      "source": "04-本地API与事件契约.md",
+      "snapshot": "evidence/第6项更正前/04-本地API与事件契约.md.snapshot",
+      "sha256": "410fa01582021f9a33efb0d3bfc36be500d06e86597a7911ee190f52f927e784"
+    },
+    {
+      "source": "接口目录.json",
+      "snapshot": "evidence/第6项更正前/接口目录.json.snapshot",
+      "sha256": "fbc4c7ea7f9c7ec159e54c9bbd28d9558add49986981c4289fbe031f37a16699"
+    },
+    {
+      "source": "审定清单.json",
+      "snapshot": "evidence/第6项更正前/审定清单.json.snapshot",
+      "sha256": "4106565ad85eb5db308d546f627907963a48257a0c62402e555e91d7b120a386"
+    }
+  ],
+  "not_current_contract": true
+}

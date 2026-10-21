@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-14",
+  "status": "原存储模块真实浏览器隔离origin补证",
+  "ego_task_space": 53,
+  "task_finished": true,
+  "local_server_stopped": true,
+  "fixed_clock": "2026-10-14T10:00:00+08:00",
+  "real_browser_storage": true,
+  "fresh_js_page_realm": true,
+  "fresh_browser_os_process": false,
+  "full_electron_tested": false,
+  "ai_models_called": 0,
+  "user_data_accessed": false,
+  "product_source_changed": false,
+  "sources_hashes_unchanged": true,
+  "results": [
+    "write-immediate-read.json",
+    "fresh-page-read.json",
+    "delete-fresh-page-read.json",
+    "ryza-fact-counterexamples.json"
+  ],
+  "observations": [
+    "AIRI native IndexedDB chat save/load after page rebuild",
+    "Ryza native localStorage fixed fact save/load after page rebuild",
+    "native helpers remove record and deletion survives page rebuild",
+    "Ryza LM03 fixed-candidate consolidation leaves two active preferences",
+    "Ryza LM07 old consolidation reintroduces deleted entry and native storage restores it"
+  ]
+}

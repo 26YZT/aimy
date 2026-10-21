@@ -1,0 +1,748 @@
+{
+  "version": 3,
+  "date": "2026-10-15",
+  "status": "proposal_pending_user_review",
+  "replaces": "parent 17-operation draft for first increment only; parent bytes unchanged",
+  "operation_count": 18,
+  "operations": [
+    {
+      "operation": "profile.read",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "scope"
+      ],
+      "output": [
+        "initialProfile",
+        "completionState",
+        "snapshotRevision"
+      ],
+      "task_ids": [
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-X02",
+        "ENG-X06"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT"
+      ],
+      "mutation": false,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready"
+      ]
+    },
+    {
+      "operation": "profile.submit",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "submissionId",
+        "answers|skip",
+        "mutationId",
+        "expectedRevision"
+      ],
+      "output": [
+        "receipt",
+        "typedSources",
+        "savedFields",
+        "pendingExtraction"
+      ],
+      "task_ids": [
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-X02",
+        "ENG-07"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "REVISION_CONFLICT",
+        "STALE_OWNER",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED",
+        "STORAGE_UNKNOWN"
+      ],
+      "mutation": true,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready",
+        "mutationId + digest + expectedRevision"
+      ]
+    },
+    {
+      "operation": "memory.list",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "stateFilter",
+        "cursor?"
+      ],
+      "output": [
+        "facts",
+        "snapshotRevision",
+        "nextCursor?"
+      ],
+      "task_ids": [
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-X06",
+        "ENG-X08"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "CURSOR_EXPIRED"
+      ],
+      "mutation": false,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready"
+      ]
+    },
+    {
+      "operation": "memory.source",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "factId|sourceId"
+      ],
+      "output": [
+        "exactSourceOrMissing",
+        "lineage",
+        "snapshotRevision"
+      ],
+      "task_ids": [
+        "SRC-01",
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-06",
+        "ENG-X08"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "SOURCE_MISSING"
+      ],
+      "mutation": false,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready"
+      ]
+    },
+    {
+      "operation": "memory.correct",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "factId",
+        "correction",
+        "mutationId",
+        "expectedRevision"
+      ],
+      "output": [
+        "receipt",
+        "newFactRevision",
+        "memoryEpoch"
+      ],
+      "task_ids": [
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-09",
+        "ENG-X05"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "REVISION_CONFLICT",
+        "STALE_OWNER",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED",
+        "STORAGE_UNKNOWN"
+      ],
+      "mutation": true,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready",
+        "mutationId + digest + expectedRevision"
+      ]
+    },
+    {
+      "operation": "memory.remove",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "factId",
+        "mutationId",
+        "expectedRevision"
+      ],
+      "output": [
+        "receipt",
+        "barrierRevision",
+        "cleanupStatus"
+      ],
+      "task_ids": [
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-10",
+        "ENG-11",
+        "ENG-X05",
+        "ENG-X09"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "REVISION_CONFLICT",
+        "STALE_OWNER",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED",
+        "STORAGE_UNKNOWN"
+      ],
+      "mutation": true,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready",
+        "mutationId + digest + expectedRevision",
+        "host computes known fact-unit versions/aliases and actual derived dependency closure atomically; caller never selects dependent IDs",
+        "same source does not authorize deleting independent direct facts; extraction/replay blocks separate from actual source lifecycle"
+      ],
+      "customer_dependency_judgment_required": false
+    },
+    {
+      "operation": "memory.setPolicy",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "enabled",
+        "mutationId",
+        "expectedRevision"
+      ],
+      "output": [
+        "receipt",
+        "activationId",
+        "memoryEpoch"
+      ],
+      "task_ids": [
+        "MEM-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-X01",
+        "ENG-09"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "REVISION_CONFLICT",
+        "STALE_OWNER",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED",
+        "STORAGE_UNKNOWN"
+      ],
+      "mutation": true,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready",
+        "mutationId + digest + expectedRevision"
+      ]
+    },
+    {
+      "operation": "memory.setModelPolicy",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "follow-chat|override(providerId,modelId,reasoningMode?,sampling?)",
+        "mutationId",
+        "expectedRevision"
+      ],
+      "output": [
+        "receipt",
+        "routePolicyRevision"
+      ],
+      "task_ids": [
+        "MEM-02"
+      ],
+      "engineering_scenarios": [
+        "ENG-X03"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "REVISION_CONFLICT",
+        "STALE_OWNER",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED",
+        "STORAGE_UNKNOWN",
+        "MODEL_UNAVAILABLE"
+      ],
+      "mutation": true,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready",
+        "mutationId + digest + expectedRevision"
+      ]
+    },
+    {
+      "operation": "memory.resolveContext",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "ChatRequestScope",
+      "owner": "MemoryService",
+      "input": [
+        "TurnRef",
+        "query",
+        "clock",
+        "signal(process-only)"
+      ],
+      "output": [
+        "effectiveEvidence",
+        "includedIds",
+        "exclusionReasons",
+        "guard(process-only)"
+      ],
+      "task_ids": [
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-X04",
+        "ENG-X05",
+        "ENG-X06"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "SOURCE_MISSING",
+        "SOURCE_CHANGED",
+        "SOURCE_SUPPRESSED",
+        "STALE_RESULT"
+      ],
+      "mutation": false,
+      "internal_only": true,
+      "model_callable": false,
+      "transport": "owner-process in-process function only; follower sends serialized chat command",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready"
+      ],
+      "owner_process_only": true
+    },
+    {
+      "operation": "memory.enqueueSource",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope + source session when chat",
+      "owner": "MemoryService",
+      "input": [
+        "durableSourceRef",
+        "durableReceipt",
+        "activation",
+        "lease"
+      ],
+      "output": [
+        "sourceReceipt",
+        "jobId?"
+      ],
+      "task_ids": [
+        "SRC-01",
+        "MEM-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-X01",
+        "ENG-06"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "SOURCE_MISSING",
+        "SOURCE_CHANGED",
+        "SOURCE_SUPPRESSED",
+        "STALE_RESULT",
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "REVISION_CONFLICT",
+        "STALE_OWNER",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED",
+        "STORAGE_UNKNOWN"
+      ],
+      "mutation": true,
+      "internal_only": true,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready",
+        "job/source versions + active lease + atomic actual revision"
+      ]
+    },
+    {
+      "operation": "memory.commitCandidates",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope + job snapshot",
+      "owner": "MemoryService",
+      "input": [
+        "jobId",
+        "sourceVersions",
+        "capturedPolicyAndRoute",
+        "lease",
+        "validatedCandidates"
+      ],
+      "output": [
+        "receipt",
+        "factRevisions"
+      ],
+      "task_ids": [
+        "MEM-02"
+      ],
+      "engineering_scenarios": [
+        "ENG-09",
+        "ENG-10",
+        "ENG-X03"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "SOURCE_MISSING",
+        "SOURCE_CHANGED",
+        "SOURCE_SUPPRESSED",
+        "STALE_RESULT",
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "REVISION_CONFLICT",
+        "STALE_OWNER",
+        "IDEMPOTENCY_MISMATCH",
+        "STORAGE_FAILED",
+        "STORAGE_UNKNOWN"
+      ],
+      "mutation": true,
+      "internal_only": true,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready",
+        "job/source versions + active lease + atomic actual revision"
+      ]
+    },
+    {
+      "operation": "operation.get",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "MemoryScope",
+      "owner": "MemoryService",
+      "input": [
+        "operationId"
+      ],
+      "output": [
+        "persistedOperationStatus",
+        "revision"
+      ],
+      "task_ids": [
+        "MEM-01",
+        "MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-11",
+        "ENG-X02"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT"
+      ],
+      "mutation": false,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "existing synced action / in-process service",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "canonical Memory owner ready"
+      ]
+    },
+    {
+      "operation": "perception.start",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "ResourceScope",
+      "owner": "ElectronResourcePolicy",
+      "input": [
+        "kind",
+        "userGrant",
+        "window",
+        "epoch"
+      ],
+      "output": [
+        "leaseOrDenied"
+      ],
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-03",
+        "ENG-04"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT",
+        "PERMISSION_DENIED"
+      ],
+      "mutation": true,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "narrow existing Eventa desktop bridge",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "resource/request authority; stopping never waits for memory revision"
+      ]
+    },
+    {
+      "operation": "perception.stop",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "ResourceScope",
+      "owner": "ElectronResourcePolicy",
+      "input": [
+        "lease",
+        "reason"
+      ],
+      "output": [
+        "revokedEpoch",
+        "stopReceipt"
+      ],
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-03",
+        "ENG-04"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT"
+      ],
+      "mutation": true,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "narrow existing Eventa desktop bridge",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "resource/request authority; stopping never waits for memory revision"
+      ]
+    },
+    {
+      "operation": "perception.stopAll",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "AppScope",
+      "owner": "ElectronResourcePolicy",
+      "input": [
+        "reason",
+        "appEpoch"
+      ],
+      "output": [
+        "revokedEpoch",
+        "stoppedAndPending"
+      ],
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-04"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT"
+      ],
+      "mutation": true,
+      "internal_only": true,
+      "model_callable": false,
+      "transport": "narrow existing Eventa desktop bridge",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "resource/request authority; stopping never waits for memory revision"
+      ]
+    },
+    {
+      "operation": "presentation.cancel",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "ChatRequestScope or ResourceScope",
+      "owner": "ExistingPresentationOwner",
+      "input": [
+        "requestId|turnRef",
+        "epoch",
+        "reason"
+      ],
+      "output": [
+        "cancelReceipt",
+        "invalidatedGeneration"
+      ],
+      "task_ids": [
+        "LIFE-01",
+        "SRC-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-05",
+        "ENG-09",
+        "ENG-X05"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT"
+      ],
+      "mutation": true,
+      "internal_only": true,
+      "model_callable": false,
+      "transport": "narrow existing Eventa desktop bridge",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "resource/request authority; stopping never waits for memory revision"
+      ]
+    },
+    {
+      "operation": "shutdown.prepare",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "AppScope",
+      "owner": "ExistingElectronLifecycle",
+      "input": [
+        "shutdownId",
+        "deadline"
+      ],
+      "output": [
+        "stopped",
+        "persisted",
+        "pending",
+        "timedOut"
+      ],
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-04",
+        "ENG-08"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT"
+      ],
+      "mutation": true,
+      "internal_only": true,
+      "model_callable": false,
+      "transport": "narrow existing Eventa desktop bridge",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "resource/request authority; stopping never waits for memory revision"
+      ]
+    },
+    {
+      "operation": "diagnostics.summary",
+      "version": 3,
+      "status": "proposed_not_implemented",
+      "scope": "Authorized MemoryScope or AppScope",
+      "owner": "ExistingHostDiagnostics",
+      "input": [
+        "requestedScope"
+      ],
+      "output": [
+        "nonSecretStatus",
+        "operationIds",
+        "costSummary"
+      ],
+      "task_ids": [
+        "INT-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-17",
+        "ENG-X07"
+      ],
+      "errors": [
+        "NOT_READY",
+        "SCOPE_MISMATCH",
+        "INVALID_INPUT"
+      ],
+      "mutation": false,
+      "internal_only": false,
+      "model_callable": false,
+      "transport": "narrow existing Eventa desktop bridge",
+      "preconditions": [
+        "host-authorized scope/sender",
+        "resource/request authority; stopping never waits for memory revision"
+      ]
+    }
+  ],
+  "private_ports_not_public_operations": [
+    "BudgetGate reserve/started/settle in acceptance campaign only",
+    "guard closure / AbortSignal",
+    "provider secret platform port"
+  ],
+  "all_model_callable": false,
+  "runtime_implemented_this_turn": 0,
+  "revision_reason": "User explicitly rejected question 6: no customer dependency judgment; remove affects selected fact unit and host-known derived dependencies only",
+  "superseded_proposal": "v2 bytes preserved in evidence/第6项更正前/接口目录.json.snapshot; never implemented"
+}

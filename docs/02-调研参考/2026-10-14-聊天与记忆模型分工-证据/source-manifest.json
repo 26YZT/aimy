@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "scope": "Selected source bytes used for this routing comparison; not a full tree audit. No runtime configuration, real credentials or user databases.",
+  "olv_commit": "992309c0aa19845960228f880013d4685fde93b5",
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "bytes": 38177,
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/config.py",
+      "bytes": 21237,
+      "sha256": "0c14a86aa6524f79b9455fe09b23a948d15d461b18288d28dd69621ba9218e58"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+      "bytes": 72339,
+      "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+      "bytes": 54289,
+      "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression_scheduler.py",
+      "bytes": 6428,
+      "sha256": "49ce02aa79493d6ed13e0ab810257e601c9e258d7ef56730b5f500e607c30d55"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/ai_providers.py",
+      "bytes": 78643,
+      "sha256": "b4ccaa0ba5f9728217e30c130f121c6507a41e6555dda67833fb0c1651e22c6b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/chat.py",
+      "bytes": 180116,
+      "sha256": "9c1bcd0972c00c739b022018cb3edb07d075a42109c0dfa421a8dc88c6660b0f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+      "bytes": 12080,
+      "sha256": "11fbb6fae5def1214cf939d275d001460fe6da02dcfd08165c56c286932c5611"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "bytes": 17026,
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+      "bytes": 74987,
+      "sha256": "c7b9be46c521faf92c20930fbfdf3d2d1f061f498a3e450807b85cc77b41c250"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/app.js",
+      "bytes": 130273,
+      "sha256": "a71173cf55248600d7519b95247988a63506a6a70bfbca426e7f202a4d8b8df3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/llm/chat.py",
+      "bytes": 11616,
+      "sha256": "2dd3a66e59301246ea48879d241d5020a4f783530765688e0021310916d8a83c"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/memory/chat_memory.py",
+      "bytes": 6598,
+      "sha256": "b5aba2b8f3ce91d43204952a96ab7c9091970567056799cabd4172f8d963c52d"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/composes/builtin_composes.py",
+      "bytes": 3296,
+      "sha256": "80f043d77b4f567b697cb011d3aaaaabca2a02f029664832b80abae38e32d5e0"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agent_factory.py",
+      "bytes": 5393,
+      "sha256": "a965695d277c2c7b89a96d5e55f5a52b60db3ac28e7e719fcfe1f59be92e6eeb"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+      "bytes": 28012,
+      "sha256": "d0124df26b4ca24fd5e135959927b355f9e388350f4d9bbbae575dc714d2e1b7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/letta_agent.py",
+      "bytes": 4431,
+      "sha256": "ee482486575d35713133cefba3d999f5ffc53f838481cc9cd74ee68024a4ca01"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/mem0_llm.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "bytes": 44220,
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "bytes": 300,
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+    }
+  ]
+}

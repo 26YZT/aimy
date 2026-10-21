@@ -52,6 +52,7 @@ export class VoiceMessage {
   private readonly transcription = new AbortController()
   private transcript: Promise<Transcript> | undefined
   private settledTranscript: { value: Transcript } | undefined
+  private captureRevoked = false
 
   constructor(
     readonly id: string,
@@ -109,6 +110,15 @@ export class VoiceMessage {
     return this.recording.finish()
   }
 
+  /** Revokes capture and transcription without undoing a message whose persistence already started. */
+  stopCapture(reason: string): void {
+    this.captureRevoked = true
+    this.recording.cancel(reason)
+    this.transcription.abort(reason)
+    if (!this.sending && !this.receipt)
+      this.cancel()
+  }
+
   /** Persistence owns an in-flight send. Discard cannot erase the only recoverable draft during that operation. */
   cancel(): 'cancelled' | 'closed' {
     if (this.sending || this.receipt)
@@ -162,6 +172,10 @@ export class VoiceMessage {
     const timer = setTimeout(() => this.transcription.abort('Voice message transcription took too long'), TRANSCRIPT_LIMIT_MS)
     const value = await transcript
     clearTimeout(timer)
+    if (this.captureRevoked) {
+      this.change({ id: this.id, sessionId: this.sessionId, phase: 'sent' })
+      return
+    }
     // A failed delivery leaves the chat without the transcript. The chat then transcribes the stored file.
     await deliver({ messageId: this.id, sessionId: this.sessionId, ...(value === undefined ? {} : { transcript: value }) }).catch(() => {})
     if (value === '')

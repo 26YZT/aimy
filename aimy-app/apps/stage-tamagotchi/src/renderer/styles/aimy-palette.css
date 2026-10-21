@@ -1,0 +1,40 @@
+/* Desktop palette follows the existing theme hue. Approved rose samples are used only for its default. */
+:root {
+  --aimy-canvas: oklch(99% 0.004 var(--chromatic-hue, 0.21));
+  --aimy-panel: #fff;
+  --aimy-ink: oklch(33% 0.025 var(--chromatic-hue, 0.21));
+  --aimy-muted: oklch(48% 0.025 var(--chromatic-hue, 0.21));
+  --aimy-line: oklch(90% 0.018 var(--chromatic-hue, 0.21));
+  --aimy-accent: oklch(49% 0.095 var(--chromatic-hue, 0.21));
+  --aimy-soft: oklch(95% 0.016 var(--chromatic-hue, 0.21));
+  --aimy-hover: oklch(97% 0.012 var(--chromatic-hue, 0.21));
+  --aimy-outgoing: oklch(91% 0.035 var(--chromatic-hue, 0.21));
+  --aimy-outgoing-end: oklch(88% 0.045 var(--chromatic-hue, 0.21));
+  --aimy-outgoing-ink: oklch(32% 0.04 var(--chromatic-hue, 0.21));
+}
+html.aimy-misty-pink {
+  --aimy-canvas: #fffbfd;
+  --aimy-panel: #fffdfd;
+  --aimy-soft: #f6edf1;
+  --aimy-outgoing: #f0e3e8;
+  --aimy-outgoing-end: #eacdd8;
+  --aimy-outgoing-ink: #543a45;
+  --aimy-accent: #98546c;
+  --aimy-ink: #4e3c45;
+  --aimy-muted: #76616c;
+  --aimy-line: #eadce2;
+  --aimy-hover: #faf1f5;
+}
+html.dark {
+  --aimy-canvas: oklch(19% 0.012 var(--chromatic-hue, 0.21));
+  --aimy-panel: oklch(22% 0.014 var(--chromatic-hue, 0.21));
+  --aimy-ink: oklch(91% 0.012 var(--chromatic-hue, 0.21));
+  --aimy-muted: oklch(77% 0.025 var(--chromatic-hue, 0.21));
+  --aimy-line: oklch(34% 0.018 var(--chromatic-hue, 0.21));
+  --aimy-accent: oklch(78% 0.085 var(--chromatic-hue, 0.21));
+  --aimy-soft: oklch(28% 0.018 var(--chromatic-hue, 0.21));
+  --aimy-hover: oklch(31% 0.025 var(--chromatic-hue, 0.21));
+  --aimy-outgoing: oklch(38% 0.035 var(--chromatic-hue, 0.21));
+  --aimy-outgoing-end: oklch(34% 0.04 var(--chromatic-hue, 0.21));
+  --aimy-outgoing-ink: #f8e8ef;
+}

@@ -1,0 +1,230 @@
+{
+  "runtime": "3.12.10 (v3.12.10:0cc81280367, Apr  8 2025, 08:46:59) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "fake_boundaries": [
+    "Pydantic DTO/config constructors (no validation)",
+    "logger",
+    "dependency container/scoped objects",
+    "event DTO/sink",
+    "dispatcher workflow execution sink",
+    "memory persistence map"
+  ],
+  "real": [
+    "original extracted classes/functions listed separately",
+    "asyncio.timeout",
+    "ThreadPoolExecutor",
+    "typing/inspect/re",
+    "in-memory dictionaries only"
+  ],
+  "observations": [
+    {
+      "id": "KI-P01",
+      "kind": "positive",
+      "observed": "你好世界",
+      "expected": "你好世界",
+      "assertion_passed": true,
+      "original_unit": "WorkflowExecutor.run/_execute_normal_block + original TextBlock/TextConcatBlock"
+    },
+    {
+      "id": "KI-P02",
+      "kind": "positive",
+      "observed": [
+        "Begin",
+        "End"
+      ],
+      "expected": [
+        "Begin",
+        "End"
+      ],
+      "assertion_passed": true,
+      "original_unit": "WorkflowExecutor.run fake event sink"
+    },
+    {
+      "id": "KI-N01",
+      "kind": "rejection",
+      "observed": "TypeError",
+      "expected": "TypeError",
+      "assertion_passed": true,
+      "original_unit": "_build_execution_graph / TypeSystem.is_compatible"
+    },
+    {
+      "id": "KI-C01",
+      "kind": "counterexample",
+      "observed": "concat-failed-after-bad-producer",
+      "expected": "concat-failed-after-bad-producer",
+      "assertion_passed": true,
+      "original_unit": "_execute_normal_block: output DTO validate not called"
+    },
+    {
+      "id": "KI-C02",
+      "kind": "counterexample",
+      "observed": 17,
+      "expected": 17,
+      "assertion_passed": true,
+      "original_unit": "bad runtime value stored despite declared str"
+    },
+    {
+      "id": "KI-C03",
+      "kind": "counterexample",
+      "observed": true,
+      "expected": true,
+      "assertion_passed": true,
+      "original_unit": "_execute_conditional_branch original asyncio.run_in_executor kwargs"
+    },
+    {
+      "id": "KI-P03",
+      "kind": "positive",
+      "observed": [
+        "str",
+        "文本",
+        "要输出的文本",
+        true
+      ],
+      "expected": [
+        "str",
+        "文本",
+        "要输出的文本",
+        true
+      ],
+      "assertion_passed": true,
+      "original_unit": "extract_block_info/extract_block_param + TextBlock Annotated ParamMeta"
+    },
+    {
+      "id": "KI-P04",
+      "kind": "positive",
+      "observed": [
+        "bool",
+        false,
+        "联网搜索"
+      ],
+      "expected": [
+        "bool",
+        false,
+        "联网搜索"
+      ],
+      "assertion_passed": true,
+      "original_unit": "original metadata extraction same field probe as AIRI webSearch"
+    },
+    {
+      "id": "KI-C04",
+      "kind": "counterexample",
+      "observed": true,
+      "expected": true,
+      "assertion_passed": true,
+      "original_unit": "TypeSystem.extract_type_info marks defaulted bool required; metadata not value validation"
+    },
+    {
+      "id": "KI-P05",
+      "kind": "positive",
+      "observed": true,
+      "expected": true,
+      "assertion_passed": true,
+      "original_unit": "CombinedDispatchRule.match AND + original prefix/chat type"
+    },
+    {
+      "id": "KI-N02",
+      "kind": "rejection",
+      "observed": false,
+      "expected": false,
+      "assertion_passed": true,
+      "original_unit": "same rules non-prefix"
+    },
+    {
+      "id": "KI-N03",
+      "kind": "rejection",
+      "observed": false,
+      "expected": false,
+      "assertion_passed": true,
+      "original_unit": "same rules wrong chat type"
+    },
+    {
+      "id": "KI-N04",
+      "kind": "rejection",
+      "observed": false,
+      "expected": false,
+      "assertion_passed": true,
+      "original_unit": "CombinedDispatchRule.enabled"
+    },
+    {
+      "id": "KI-C05",
+      "kind": "counterexample",
+      "observed": true,
+      "expected": true,
+      "assertion_passed": true,
+      "original_unit": "CombinedDispatchRule empty group returns early; later AND ignored"
+    },
+    {
+      "id": "KI-P06",
+      "kind": "positive",
+      "observed": {
+        "selected": "specific"
+      },
+      "expected": {
+        "selected": "specific"
+      },
+      "assertion_passed": true,
+      "original_unit": "original dispatcher/scoped registry/first match; fake executor records selection"
+    },
+    {
+      "id": "KI-P07",
+      "kind": "positive",
+      "observed": [
+        "specific"
+      ],
+      "expected": [
+        "specific"
+      ],
+      "assertion_passed": true,
+      "original_unit": "first matching workflow only"
+    },
+    {
+      "id": "KI-N05",
+      "kind": "rejection",
+      "observed": null,
+      "expected": null,
+      "assertion_passed": true,
+      "original_unit": "original no-match path"
+    },
+    {
+      "id": "KI-P08",
+      "kind": "positive",
+      "observed": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "assertion_passed": true,
+      "original_unit": "MemberScope/GroupScope actual predicate"
+    },
+    {
+      "id": "KI-N06",
+      "kind": "rejection",
+      "observed": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "assertion_passed": true,
+      "original_unit": "member and group isolation same IDs"
+    },
+    {
+      "id": "KI-C06",
+      "kind": "counterexample",
+      "observed": [
+        "A",
+        "B"
+      ],
+      "expected": [
+        "A",
+        "B"
+      ],
+      "assertion_passed": true,
+      "original_unit": "MemoryManager.query ignores extra_identifier after preload; cross namespace leak"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "product": "Aimy",
+    "system": "Quiet Rose / 静玫",
+    "date": "2026-10-12",
+    "version": "2.0.0-proposal",
+    "status": "design_reference_only",
+    "runtime_integration": "not_performed",
+    "human_approval": "pending"
+  },
+  "global": {
+    "font": "system SF Pro / PingFang SC",
+    "base_spacing_px": 4,
+    "normal_text_min_contrast": 4.5,
+    "meaningful_control_min_contrast": 3,
+    "focus": { "width_px": 3, "offset_px": 3, "token": "focus" },
+    "touch_hit_min_px": 44,
+    "reduced_motion": "disable animations, transforms and smooth scroll",
+    "data_in_preview": "ephemeral examples only; no network or device calls"
+  },
+  "components": [
+    {
+      "id": "button",
+      "css": ".a-button",
+      "variants": ["primary", "secondary", "ghost", "accent", "danger"],
+      "states": ["default", "hover", "pressed", "focus-visible", "disabled", "loading"],
+      "size_px": { "height": 36, "small": 30, "large": 42, "padding_inline": 14, "radius": 8 },
+      "tokens": ["action", "onAction", "actionHover", "actionPressed", "controlBorder", "danger", "onDanger", "focus"],
+      "keyboard": ["Tab to focus", "Enter or Space activates"],
+      "rules": ["one primary action per region", "loading has a label", "disabled does not activate", "danger confirms the named object"]
+    },
+    {
+      "id": "icon-button",
+      "css": ".a-icon-button",
+      "states": ["default", "hover", "selected", "focus-visible", "disabled"],
+      "size_px": { "hit": 36, "glyph": 18, "radius": 8 },
+      "tokens": ["textSecondary", "surfaceSubtle", "accent", "accentSoft", "focus"],
+      "rules": ["accessible name required", "decorative SVG hidden from screen reader", "coarse pointer hit area at least 44px"]
+    },
+    {
+      "id": "field",
+      "css": ".a-field",
+      "states": ["empty", "filled", "hover", "focus-visible", "invalid", "disabled", "read-only"],
+      "size_px": { "height": 40, "radius": 8, "padding_inline": 12, "font": 14 },
+      "tokens": ["surface", "text", "textTertiary", "controlBorder", "focus", "danger"],
+      "rules": ["label remains visible", "placeholder is not a label", "error associated by aria-describedby", "do not reveal secrets in preview or errors"]
+    },
+    {
+      "id": "switch",
+      "css": ".a-switch",
+      "states": ["off", "on", "focus-visible", "disabled"],
+      "size_px": { "width": 34, "height": 21, "thumb": 15 },
+      "tokens": ["surfaceSubtle", "controlBorder", "accent", "onAccent"],
+      "aria": { "role": "switch", "aria-checked": "boolean", "accessible_name": "required" },
+      "keyboard": ["Space toggles", "Enter toggles", "Tab to focus"],
+      "rules": ["microphone and screen are independent", "off by default", "explain scope before enabling", "off immediately ends related activity", "state maintained by deterministic code"]
+    },
+    {
+      "id": "segmented-control",
+      "css": ".a-segmented",
+      "states": ["unselected", "selected", "hover", "focus-visible"],
+      "tokens": ["surfaceSubtle", "surface", "text", "textSecondary"],
+      "rules": ["selected state has aria-pressed", "one active choice", "shared theme controls stay synchronized"]
+    },
+    {
+      "id": "tabs",
+      "css": ".settings-nav",
+      "states": ["selected", "unselected", "focus-visible"],
+      "aria": { "roles": ["tablist", "tab", "tabpanel"], "relationships": ["aria-selected", "aria-controls", "aria-labelledby"] },
+      "keyboard": ["Arrow keys move between tabs", "Home selects first", "End selects last", "roving tabindex"],
+      "rules": ["library navigation is not proposed product navigation"]
+    },
+    {
+      "id": "chip-and-alert",
+      "css": ".a-chip / .a-alert",
+      "variants": ["neutral", "accent", "success", "warning", "danger"],
+      "tokens": ["textSecondary", "accent", "success", "warning", "danger", "corresponding soft backgrounds"],
+      "rules": ["status includes explicit text", "do not rely on color alone", "persistent errors remain at source", "important errors are not toast-only"]
+    },
+    {
+      "id": "message",
+      "css": ".msg / .msg-bubble",
+      "states": ["user", "assistant", "streaming", "cancelled", "failed"],
+      "size_px": { "font": 15, "line_height": 1.8, "max_width_percent": 86, "user_radius": 14 },
+      "tokens": ["text", "surface", "surfaceSubtle", "textSecondary"],
+      "rules": ["assistant message uses light structure instead of a large colored card", "content remains selectable", "renderer validates model output", "stale generations ignored after cancellation"]
+    },
+    {
+      "id": "composer",
+      "css": ".chat-composer",
+      "states": ["empty", "has-text", "sending", "failed", "image-attached"],
+      "size_px": { "radius": 12, "padding": 12, "font": 13 },
+      "tokens": ["surface", "controlBorder", "text", "action"],
+      "keyboard": ["Enter sends", "Shift+Enter inserts newline", "IME composition does not send"],
+      "rules": ["empty message cannot send", "failure preserves draft", "image permission separate from screen sensing", "sample reply is labeled"]
+    },
+    {
+      "id": "dialog",
+      "css": "dialog",
+      "states": ["closed", "open", "confirm", "cancel"],
+      "size_px": { "max_width": 420, "padding": 28, "radius": 16 },
+      "tokens": ["surfaceRaised", "text", "textSecondary", "focus"],
+      "keyboard": ["focus stays in modal", "Escape cancels", "focus returns to trigger"],
+      "rules": ["cancellation does not enable permissions", "destructive dialog names affected data", "safe initial focus"]
+    },
+    {
+      "id": "empty-state",
+      "css": ".a-empty",
+      "states": ["no-history", "no-model", "no-permission", "no-character"],
+      "rules": ["brief explanation and at most one primary action", "do not fabricate history or capabilities", "character placeholder explicitly identified"]
+    },
+    {
+      "id": "voice-status",
+      "states": ["idle", "listening", "thinking", "speaking", "interrupted", "error"],
+      "rules": ["listening requires actual permission", "waveform only reflects actual audio in product", "preview waveform explicitly simulated", "stop remains visible", "cancel stops audio and rejects stale output", "reduced motion disables waveform animation"]
+    },
+    {
+      "id": "native-window",
+      "css": ".native-window",
+      "size_px": { "radius": 16, "chat_preferred_width": 520, "chat_min_width": 360, "settings_preferred_width": 920, "settings_sidebar": 196 },
+      "rules": ["character/chat/settings remain separate", "gallery sidebar not copied into product", "collapse/minimize semantics remain undecided", "preserve AIRI window lifecycle pending a separate implementation task"]
+    }
+  ]
+}

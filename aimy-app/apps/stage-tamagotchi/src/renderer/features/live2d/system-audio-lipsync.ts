@@ -12,6 +12,7 @@ import { setupElectronScreenCapture } from '@proj-airi/electron-screen-capture/r
 import { getElectronEventaContext } from '@proj-airi/electron-vueuse'
 import { createLive2DLipSync } from '@proj-airi/model-driver-lipsync'
 import { wlipsyncProfile } from '@proj-airi/model-driver-lipsync/shared/wlipsync'
+import { captureResourceStream, onResourceRevoked, requestResourceAccess } from '@proj-airi/stage-ui/services/resource-policy'
 import { clamp } from 'es-toolkit'
 
 const inputAnalyserFFTSize = 1024
@@ -24,6 +25,12 @@ export class Live2DSystemAudioLipSyncDriver implements SystemAudioLipSyncDriver 
   private pendingStart: Promise<void> | undefined
   private processor: Live2DLipSyncProcessor | undefined
   private callbacks: SystemAudioLipSyncCallbacks | undefined
+  private readonly offRevoked = onResourceRevoked((_, kind) => {
+    if (!kind || kind === 'screen') {
+      this.callbacks?.onEnded()
+      this.stop()
+    }
+  })
 
   async start(options: SystemAudioLipSyncOptions, callbacks: SystemAudioLipSyncCallbacks): Promise<void> {
     if (this.stream) {
@@ -38,12 +45,13 @@ export class Live2DSystemAudioLipSyncDriver implements SystemAudioLipSyncDriver 
       return
     }
 
+    await requestResourceAccess('screen')
     this.callbacks = callbacks
     const generation = ++this.generation
     const processor = new Live2DLipSyncProcessor(output => this.callbacks?.onOutput(output))
     this.processor = processor
     processor.updateOptions(options)
-    this.pendingStart = this.screenCapture.selectWithSource(
+    this.pendingStart = captureResourceStream('screen', () => this.screenCapture.selectWithSource(
       (sources: SerializableDesktopCapturerSource[]) => {
         if (sources.length === 0)
           throw new Error('No screen source available')
@@ -51,7 +59,7 @@ export class Live2DSystemAudioLipSyncDriver implements SystemAudioLipSyncDriver 
       },
       () => navigator.mediaDevices.getDisplayMedia({ video: true, audio: true }),
       { sourcesOptions: { types: ['screen'] } },
-    )
+    ))
       .then(async (stream) => {
         stream.getVideoTracks().forEach((track) => {
           track.stop()
@@ -124,6 +132,7 @@ export class Live2DSystemAudioLipSyncDriver implements SystemAudioLipSyncDriver 
   }
 
   dispose(): void {
+    this.offRevoked()
     this.stop()
   }
 

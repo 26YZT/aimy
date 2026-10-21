@@ -1,0 +1,4 @@
+{"check": "post_sentinel_old_confirmation_rejected", "real_source_executed": ["_apply_analysis", "_entry", "_profile_refs"], "changed": false, "retained_content": "new fact"}
+{"check": "post_sentinel_deleted_entry_rejected", "changed": false, "deleted": true}
+{"check": "overdue_task_not_completed", "real_source_executed": "user_profile_policy.lifecycle", "status": "unknown"}
+{"check": "post_sentinel_epoch_changes_during_model", "real_source_executed": ["_read", "run_pending_once"], "epoch": 1, "job_status": "skipped", "payload": {"entries": {}}, "limits": "Model, source collection and fact application stubbed; real final SQLite transaction executed."}

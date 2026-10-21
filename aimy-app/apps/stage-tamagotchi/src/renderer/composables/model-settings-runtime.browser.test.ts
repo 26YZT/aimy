@@ -10,7 +10,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, render } from 'vitest-browser-vue'
 import { computed, defineComponent, shallowRef } from 'vue'
 
-import { applyLive2DExpressionSettingsCommand, modelSettingsRuntimeChannelName } from '../../shared/model-settings-runtime'
+import { applyLive2DExpressionSettingsCommand, applyVrmGesture, modelSettingsRuntimeChannelName } from '../../shared/model-settings-runtime'
 import { useModelSettingsRuntimeOwner } from './model-settings-runtime-owner'
 import { useModelSettingsRuntimeSnapshot } from './model-settings-runtime-snapshot'
 
@@ -38,6 +38,55 @@ describe('model settings runtime channel', () => {
       channelContext.dispose()
     channelContexts.length = 0
     localStorage.clear()
+  })
+
+  it('routes VRM gestures to the loaded owner and rejects stale or locked models', async () => {
+    const owner = createBroadcastChannelContext(new BroadcastChannel(modelSettingsRuntimeChannelName), { closeOnDispose: true })
+    const settings = createBroadcastChannelContext(new BroadcastChannel(modelSettingsRuntimeChannelName), { closeOnDispose: true })
+    channelContexts.push(owner, settings)
+    const snapshot = shallowRef(createEmptyModelSettingsRuntimeSnapshot({
+      ownerInstanceId: 'vrm-owner',
+      modelId: 'model-a',
+      renderer: 'vrm',
+      phase: 'mounted',
+      controlsLocked: false,
+    }))
+    const play = vi.fn(() => true)
+    let runtime: ReturnType<typeof useModelSettingsRuntimeSnapshot> | undefined
+    await render(defineComponent({
+      setup() {
+        useModelSettingsRuntimeOwner({
+          ownerInstanceId: 'vrm-owner',
+          renderer: () => snapshot.value.renderer,
+          runtimeSnapshot: snapshot,
+          applyLive2DExpressionCommand: () => {},
+          applyVrmGesture: play,
+          context: owner.context,
+        })
+        runtime = useModelSettingsRuntimeSnapshot({ context: settings.context })
+        return () => null
+      },
+    }))
+    if (!runtime)
+      throw new Error('The settings runtime did not mount.')
+    const mounted = runtime
+    await vi.waitFor(() => expect(mounted.runtimeSnapshot.value.modelId).toBe('model-a'))
+    expect(await mounted.sendVrmGesture('wave')).toBe(true)
+    expect(play).toHaveBeenCalledExactlyOnceWith('wave')
+
+    const invoke = defineInvoke(settings.context, applyVrmGesture)
+    const stale = await invoke({ ownerInstanceId: 'vrm-owner', modelId: 'model-old', gesture: 'nod' }, { signal: AbortSignal.timeout(1000) })
+    expect(stale.applied).toBe(false)
+    expect(stale.rejectionReason).toBe('model-changed')
+    const staleOwner = await invoke({ ownerInstanceId: 'owner-old', modelId: 'model-a', gesture: 'nod' }, { signal: AbortSignal.timeout(1000) })
+    expect(staleOwner.rejectionReason).toBe('owner-changed')
+    snapshot.value = { ...snapshot.value, controlsLocked: true }
+    const locked = await invoke({ ownerInstanceId: 'vrm-owner', modelId: 'model-a', gesture: 'nod' }, { signal: AbortSignal.timeout(1000) })
+    expect(locked.applied).toBe(false)
+    snapshot.value = { ...snapshot.value, controlsLocked: false, renderer: 'live2d' }
+    const wrongRenderer = await invoke({ ownerInstanceId: 'vrm-owner', modelId: 'model-a', gesture: 'nod' }, { signal: AbortSignal.timeout(1000) })
+    expect(wrongRenderer.applied).toBe(false)
+    expect(play).toHaveBeenCalledTimes(1)
   })
 
   // https://github.com/moeru-ai/airi/issues/2450

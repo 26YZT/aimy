@@ -1,0 +1,91 @@
+{
+  "arm": "airi",
+  "sessionId": "mS756tkuaK2rh0zNQTdtK",
+  "characterId": "default",
+  "diskMessages": [
+    {
+      "role": "system",
+      "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+      "id": "rAm7XBNc8g9w9mGgHtcrR",
+      "createdAt": 1792122413698
+    },
+    {
+      "role": "user",
+      "content": "我以前特别喜欢下雨天。尤其是周末不用出门的时候，坐在窗边听雨声，旁边放一杯热咖啡，感觉整个世界都慢下来了。我还专门收藏了很多雨声白噪音，有时候睡不着就会放着听。你以后要是给我推荐放松的方法，可以考虑这个。我真的很喜欢那种安安静静的感觉。\n",
+      "createdAt": 1792065600000,
+      "id": "b54f0ec6-6f9a-4ac6-884a-731d36cfe7ed"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792065600000,
+      "id": "XP55maitOszjvUJReL29C",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "b54f0ec6-6f9a-4ac6-884a-731d36cfe7ed",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "b54f0ec6-6f9a-4ac6-884a-731d36cfe7ed/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1056,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-airi-USER-V2-03\",\"http://127.0.0.1:52545/v1/\",\"deepseek-flash\",\"mS756tkuaK2rh0zNQTdtK\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792065600000
+    }
+  ],
+  "liveMessageCount": 3,
+  "memory": {
+    "implemented": false,
+    "source": "original-airi"
+  },
+  "plaintextSyntheticCredentialInLocalStorage": false,
+  "accounting": {
+    "budget": {
+      "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 0,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 10000000,
+      "paused": false,
+      "attempts": 13
+    },
+    "requests": 1
+  }
+}

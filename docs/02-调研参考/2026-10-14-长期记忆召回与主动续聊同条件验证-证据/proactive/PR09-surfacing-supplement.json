@@ -1,0 +1,546 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "supplement_only": true,
+  "original_PR09_outcome_unchanged": "inconclusive",
+  "clock_epoch": 1791943200.0,
+  "clock_timezone": "Asia/Shanghai",
+  "shared_corpus_rows": 32,
+  "embedding": "original callers get None; no network/embedding or artificial vector",
+  "native_budget": 8,
+  "mapping": {
+    "id/content/created_at/keywords/importance/source_start_ts/source_end_ts/archive_state": "retained exact shared corpus values",
+    "source_message_ids": "JSON in source_msg_id; no source fact changed",
+    "type": "important as common synthetic long-term row type; corpus has no type field",
+    "source_conv": "conv-synthetic default; no actual conversation/user data",
+    "embedding": "NULL",
+    "unresolved": "0 default because shared corpus has no unresolved field; not infer unresolved=true from promises",
+    "evidence_summary": "empty default"
+  },
+  "cases": [
+    {
+      "label": "empty_topic_recent_default",
+      "topic": "",
+      "keywords": [],
+      "original_producer": {
+        "returned_ids": [
+          "R03",
+          "R05",
+          "R08",
+          "R10",
+          "R01",
+          "R06",
+          "R11",
+          "R16"
+        ],
+        "surfaced_ids": [
+          "R01",
+          "R03",
+          "R05",
+          "R06",
+          "R08",
+          "R10",
+          "R11",
+          "R16"
+        ],
+        "returned_rows": [
+          {
+            "id": "R03",
+            "content": "今天下午要复盘产品经理面试",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R05",
+            "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R08",
+            "content": "正在开发Aimy桌面陪伴产品，当前在调研记忆",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R10",
+            "content": "用户给小说人物起名为张三，用户本人不叫张三",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R01",
+            "content": "昨天参加了产品经理面试，面试官问了长期记忆方案",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R06",
+            "content": "约好2026-10-15晚上一起玩星露谷物语",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R11",
+            "content": "昨天给植物浇水",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R16",
+            "content": "第16条无关日常：整理书桌和收纳盒编号16",
+            "created_at": 1791856800.0,
+            "source_start_ts": 1791856800.0,
+            "source_end_ts": 1791856800.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791856800.0,
+            "memory_time_end": 1791856800.0,
+            "memory_time_label": "发生：2026-10-13 10:00"
+          }
+        ],
+        "sql": [
+          "SELECT id, content, type, created_at, keywords, importance, unresolved, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE unresolved = 1 AND COALESCE(archive_state,'active')='active' ORDER BY created_at DESC LIMIT 2",
+          "SELECT id, content, type, created_at, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE COALESCE(archive_state,'active')='active' AND COALESCE(source_end_ts, source_start_ts, created_at) > 1791684000.0 ORDER BY COALESCE(source_end_ts, source_start_ts, created_at) DESC LIMIT 8"
+        ],
+        "embedding_calls": [],
+        "native_max_total": 8
+      },
+      "original_context_assembler": {
+        "returned_blocks": {
+          "time_block": "系统当前的准确时间是 2026年10月14日  10:00:00\n\n[背景记忆]\n以下是你记得的近期事件和需要关注的事项，在对话中如果有关联可以自然提起：\n- 记忆（发生：2026-10-14 12:00）：今天下午要复盘产品经理面试\n- 记忆（发生：2026-10-14 12:00）：用户现在喜欢乌龙茶，已经不喝美式咖啡\n- 记忆（发生：2026-10-14 12:00）：正在开发Aimy桌面陪伴产品，当前在调研记忆\n- 记忆（发生：2026-10-14 12:00）：用户给小说人物起名为张三，用户本人不叫张三\n- 记忆（发生：2026-10-13 12:00）：昨天参加了产品经理面试，面试官问了长期记忆方案\n- 记忆（发生：2026-10-13 12:00）：约好2026-10-15晚上一起玩星露谷物语\n- 记忆（发生：2026-10-13 12:00）：昨天给植物浇水\n- 记忆（发生：2026-10-13 10:00）：第16条无关日常：整理书桌和收纳盒编号16",
+          "memory_block": "",
+          "digest_result": {
+            "topic": "",
+            "keywords": [],
+            "is_search_needed": false,
+            "require_detail": false,
+            "recall_query": "",
+            "recalled_memories": [],
+            "debug_top6": []
+          }
+        },
+        "sql": [
+          "SELECT id, content, type, created_at, keywords, importance, unresolved, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE unresolved = 1 AND COALESCE(archive_state,'active')='active' ORDER BY created_at DESC LIMIT 2",
+          "SELECT id, content, type, created_at, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE COALESCE(archive_state,'active')='active' AND COALESCE(source_end_ts, source_start_ts, created_at) > 1791684000.0 ORDER BY COALESCE(source_end_ts, source_start_ts, created_at) DESC LIMIT 8"
+        ],
+        "embedding_calls": []
+      },
+      "stage_outcome": "background_evidence_produced_and_assembled",
+      "proactive_contract_outcome": "inconclusive",
+      "sends": "not invoked by this request-context producer; no autonomous scheduling or final sender executed"
+    },
+    {
+      "label": "Q08_literal_context",
+      "topic": "Aimy的记忆项目",
+      "keywords": [
+        "Aimy",
+        "记忆"
+      ],
+      "original_producer": {
+        "returned_ids": [
+          "R03",
+          "R05",
+          "R08",
+          "R10",
+          "R01",
+          "R06",
+          "R11",
+          "R16"
+        ],
+        "surfaced_ids": [
+          "R01",
+          "R03",
+          "R05",
+          "R06",
+          "R08",
+          "R10",
+          "R11",
+          "R16"
+        ],
+        "returned_rows": [
+          {
+            "id": "R03",
+            "content": "今天下午要复盘产品经理面试",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R05",
+            "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R08",
+            "content": "正在开发Aimy桌面陪伴产品，当前在调研记忆",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R10",
+            "content": "用户给小说人物起名为张三，用户本人不叫张三",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R01",
+            "content": "昨天参加了产品经理面试，面试官问了长期记忆方案",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R06",
+            "content": "约好2026-10-15晚上一起玩星露谷物语",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R11",
+            "content": "昨天给植物浇水",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R16",
+            "content": "第16条无关日常：整理书桌和收纳盒编号16",
+            "created_at": 1791856800.0,
+            "source_start_ts": 1791856800.0,
+            "source_end_ts": 1791856800.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791856800.0,
+            "memory_time_end": 1791856800.0,
+            "memory_time_label": "发生：2026-10-13 10:00"
+          }
+        ],
+        "sql": [
+          "SELECT id, content, type, created_at, keywords, importance, unresolved, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE unresolved = 1 AND COALESCE(archive_state,'active')='active' ORDER BY created_at DESC LIMIT 2",
+          "SELECT id, content, type, created_at, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE COALESCE(archive_state,'active')='active' AND COALESCE(source_end_ts, source_start_ts, created_at) > 1791684000.0 ORDER BY COALESCE(source_end_ts, source_start_ts, created_at) DESC LIMIT 8"
+        ],
+        "embedding_calls": [
+          "Aimy的记忆项目"
+        ],
+        "native_max_total": 8
+      },
+      "original_context_assembler": {
+        "returned_blocks": {
+          "time_block": "系统当前的准确时间是 2026年10月14日  10:00:00\n\n[背景记忆]\n以下是你记得的近期事件和需要关注的事项，在对话中如果有关联可以自然提起：\n- 记忆（发生：2026-10-14 12:00）：今天下午要复盘产品经理面试\n- 记忆（发生：2026-10-14 12:00）：用户现在喜欢乌龙茶，已经不喝美式咖啡\n- 记忆（发生：2026-10-14 12:00）：正在开发Aimy桌面陪伴产品，当前在调研记忆\n- 记忆（发生：2026-10-14 12:00）：用户给小说人物起名为张三，用户本人不叫张三\n- 记忆（发生：2026-10-13 12:00）：昨天参加了产品经理面试，面试官问了长期记忆方案\n- 记忆（发生：2026-10-13 12:00）：约好2026-10-15晚上一起玩星露谷物语\n- 记忆（发生：2026-10-13 12:00）：昨天给植物浇水\n- 记忆（发生：2026-10-13 10:00）：第16条无关日常：整理书桌和收纳盒编号16",
+          "memory_block": "",
+          "digest_result": {
+            "topic": "Aimy的记忆项目",
+            "keywords": [
+              "Aimy",
+              "记忆"
+            ],
+            "is_search_needed": false,
+            "require_detail": false,
+            "recall_query": "Aimy的记忆项目 Aimy 记忆",
+            "recalled_memories": [],
+            "debug_top6": []
+          }
+        },
+        "sql": [
+          "SELECT id, content, type, created_at, keywords, importance, unresolved, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE unresolved = 1 AND COALESCE(archive_state,'active')='active' ORDER BY created_at DESC LIMIT 2",
+          "SELECT id, content, type, created_at, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE COALESCE(archive_state,'active')='active' AND COALESCE(source_end_ts, source_start_ts, created_at) > 1791684000.0 ORDER BY COALESCE(source_end_ts, source_start_ts, created_at) DESC LIMIT 8"
+        ],
+        "embedding_calls": [
+          "Aimy的记忆项目",
+          "Aimy的记忆项目 Aimy 记忆"
+        ]
+      },
+      "stage_outcome": "background_evidence_produced_and_assembled",
+      "proactive_contract_outcome": "inconclusive",
+      "sends": "not invoked by this request-context producer; no autonomous scheduling or final sender executed"
+    },
+    {
+      "label": "Q07_cancelled_history_query",
+      "topic": "灯塔散步约定还有效吗",
+      "keywords": [
+        "灯塔"
+      ],
+      "original_producer": {
+        "returned_ids": [
+          "R03",
+          "R05",
+          "R08",
+          "R10",
+          "R01",
+          "R06",
+          "R11",
+          "R16"
+        ],
+        "surfaced_ids": [
+          "R01",
+          "R03",
+          "R05",
+          "R06",
+          "R08",
+          "R10",
+          "R11",
+          "R16"
+        ],
+        "returned_rows": [
+          {
+            "id": "R03",
+            "content": "今天下午要复盘产品经理面试",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R05",
+            "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R08",
+            "content": "正在开发Aimy桌面陪伴产品，当前在调研记忆",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R10",
+            "content": "用户给小说人物起名为张三，用户本人不叫张三",
+            "created_at": 1791950400.0,
+            "source_start_ts": 1791950400.0,
+            "source_end_ts": 1791950400.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791950400.0,
+            "memory_time_end": 1791950400.0,
+            "memory_time_label": "发生：2026-10-14 12:00"
+          },
+          {
+            "id": "R01",
+            "content": "昨天参加了产品经理面试，面试官问了长期记忆方案",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R06",
+            "content": "约好2026-10-15晚上一起玩星露谷物语",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R11",
+            "content": "昨天给植物浇水",
+            "created_at": 1791864000.0,
+            "source_start_ts": 1791864000.0,
+            "source_end_ts": 1791864000.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791864000.0,
+            "memory_time_end": 1791864000.0,
+            "memory_time_label": "发生：2026-10-13 12:00"
+          },
+          {
+            "id": "R16",
+            "content": "第16条无关日常：整理书桌和收纳盒编号16",
+            "created_at": 1791856800.0,
+            "source_start_ts": 1791856800.0,
+            "source_end_ts": 1791856800.0,
+            "evidence_summary": "",
+            "unresolved": false,
+            "memory_time": 1791856800.0,
+            "memory_time_end": 1791856800.0,
+            "memory_time_label": "发生：2026-10-13 10:00"
+          }
+        ],
+        "sql": [
+          "SELECT id, content, type, created_at, keywords, importance, unresolved, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE unresolved = 1 AND COALESCE(archive_state,'active')='active' ORDER BY created_at DESC LIMIT 2",
+          "SELECT id, content, type, created_at, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE COALESCE(archive_state,'active')='active' AND COALESCE(source_end_ts, source_start_ts, created_at) > 1791684000.0 ORDER BY COALESCE(source_end_ts, source_start_ts, created_at) DESC LIMIT 8"
+        ],
+        "embedding_calls": [
+          "灯塔散步约定还有效吗"
+        ],
+        "native_max_total": 8
+      },
+      "original_context_assembler": {
+        "returned_blocks": {
+          "time_block": "系统当前的准确时间是 2026年10月14日  10:00:00\n\n[背景记忆]\n以下是你记得的近期事件和需要关注的事项，在对话中如果有关联可以自然提起：\n- 记忆（发生：2026-10-14 12:00）：今天下午要复盘产品经理面试\n- 记忆（发生：2026-10-14 12:00）：用户现在喜欢乌龙茶，已经不喝美式咖啡\n- 记忆（发生：2026-10-14 12:00）：正在开发Aimy桌面陪伴产品，当前在调研记忆\n- 记忆（发生：2026-10-14 12:00）：用户给小说人物起名为张三，用户本人不叫张三\n- 记忆（发生：2026-10-13 12:00）：昨天参加了产品经理面试，面试官问了长期记忆方案\n- 记忆（发生：2026-10-13 12:00）：约好2026-10-15晚上一起玩星露谷物语\n- 记忆（发生：2026-10-13 12:00）：昨天给植物浇水\n- 记忆（发生：2026-10-13 10:00）：第16条无关日常：整理书桌和收纳盒编号16",
+          "memory_block": "",
+          "digest_result": {
+            "topic": "灯塔散步约定还有效吗",
+            "keywords": [
+              "灯塔"
+            ],
+            "is_search_needed": false,
+            "require_detail": false,
+            "recall_query": "灯塔散步约定还有效吗",
+            "recalled_memories": [],
+            "debug_top6": []
+          }
+        },
+        "sql": [
+          "SELECT id, content, type, created_at, keywords, importance, unresolved, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE unresolved = 1 AND COALESCE(archive_state,'active')='active' ORDER BY created_at DESC LIMIT 2",
+          "SELECT id, content, type, created_at, source_start_ts, source_end_ts, evidence_summary FROM memories WHERE COALESCE(archive_state,'active')='active' AND COALESCE(source_end_ts, source_start_ts, created_at) > 1791684000.0 ORDER BY COALESCE(source_end_ts, source_start_ts, created_at) DESC LIMIT 8"
+        ],
+        "embedding_calls": [
+          "灯塔散步约定还有效吗",
+          "灯塔散步约定还有效吗"
+        ]
+      },
+      "stage_outcome": "background_evidence_produced_and_assembled",
+      "proactive_contract_outcome": "inconclusive",
+      "sends": "not invoked by this request-context producer; no autonomous scheduling or final sender executed"
+    }
+  ],
+  "negative_skip_digest": {
+    "returned_blocks": {
+      "time_block": "系统当前的准确时间是 2026年10月14日  10:00:00",
+      "memory_block": "",
+      "digest_result": {}
+    },
+    "sql": [],
+    "embedding_calls": [],
+    "stage_outcome": "producer_not_invoked"
+  },
+  "AIRI_correspondence": {
+    "native_automatic_memory_surfacing_producer": "unsupported in scoped default companion chain; not invented",
+    "prior_focus_and_empty_task_observation": "retained unchanged, not semantically equivalent memory producer"
+  },
+  "limits": [
+    "No natural-time proactive emission/real UI/TTS/human experience proven",
+    "Context assembler executed original full body with fixed external digest_result (supported original parameter); instant_digest/model routing not exercised; health boundary returns empty",
+    "Noembedding disables native vector-relevant surfacing and recall; shared corpus recent fill is not relevance ranking",
+    "Cold retired R04/R09 excluded from background producer here; this does not mean historical cancelled source evidence is forbidden in all queries",
+    "All shared rows unresolved0 and unique IDs, so unresolved-priority/cross-tier duplicate positive branch not forced; native loop checks and returned uniqueness executed",
+    "Source timestamps in shared corpus include future-today values; original recent query has lower bound only, no custom temporal filter added",
+    "No autonomous timer/scheduler/model-generation/submit invoked by this supplement; 0send is not automatic proactive experience pass"
+  ],
+  "frozen_input_and_original_raw_before": {
+    "/tmp/aimy-20261014-memory-ab/fixtures.json": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+    "/tmp/aimy-20261014-memory-ab-proactive/aions-results.json": "2f0cbad47dc9e8ef04e8ae90be743bd96c907913cb43f705bcd91ea52abed611",
+    "/tmp/aimy-20261014-memory-ab-proactive/airi-results.json": "49e696343ec562a8139b3baf0014083b781de403ab7a324faf47c0497e45ac36",
+    "/tmp/aimy-20261014-memory-ab-proactive/results.json": "b84cc2d5ef196c88274c16a0f24c25b2f93613b523299e5bcc65197bebb7a024",
+    "/tmp/aimy-20261014-memory-ab-proactive/source-manifest.json": "8ef8f6ece89af84a9785a07bbc067dce9b9b2e9bcb35e3da85d7e4139accee24"
+  },
+  "frozen_input_and_original_raw_after": {
+    "/tmp/aimy-20261014-memory-ab/fixtures.json": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+    "/tmp/aimy-20261014-memory-ab-proactive/aions-results.json": "2f0cbad47dc9e8ef04e8ae90be743bd96c907913cb43f705bcd91ea52abed611",
+    "/tmp/aimy-20261014-memory-ab-proactive/airi-results.json": "49e696343ec562a8139b3baf0014083b781de403ab7a324faf47c0497e45ac36",
+    "/tmp/aimy-20261014-memory-ab-proactive/results.json": "b84cc2d5ef196c88274c16a0f24c25b2f93613b523299e5bcc65197bebb7a024",
+    "/tmp/aimy-20261014-memory-ab-proactive/source-manifest.json": "8ef8f6ece89af84a9785a07bbc067dce9b9b2e9bcb35e3da85d7e4139accee24"
+  },
+  "source_connection_notes": {
+    "context_builder": "original build_memory_blocks body actually executed; producer results assembled into time_block background",
+    "private_routes": "routes/chat.py:1407–1440 and2063–2101 directly call producer and insert background into history; source checked only, full private route not executed",
+    "group_context": "chatroom.py:1138–1150 calls build_memory_blocks and appends time_block; source checked only, not private caller",
+    "automatic_speech": "none of these background assembly facts alone proves timer→generate→final send"
+  }
+}

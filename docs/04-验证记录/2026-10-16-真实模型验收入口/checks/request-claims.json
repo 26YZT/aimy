@@ -1,0 +1,61 @@
+{
+  "task": "LIVE-PROOF",
+  "status": "complete",
+  "scope": [
+    "packages/stage-ui/src/stores/memory/budget.ts",
+    "packages/stage-ui/src/services/acceptance-generation.ts",
+    "packages/stage-ui/src/services/acceptance-generation.test.ts",
+    "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.ts",
+    "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts",
+    "apps/stage-tamagotchi/scripts/acceptance/live-request-claims.ts",
+    "apps/stage-tamagotchi/scripts/acceptance/live-request-claims.test.ts"
+  ],
+  "interface": "new LiveRequestClaims({ledgerPath,campaignId,runId,caseId,arm:aimy,ownerPid}).claim(body) -> {attemptId}",
+  "ownership": "Keep exactly one class instance for the owned host lifetime. Class reads the existing ledger and consumes in-memory claims. It never creates, writes, repairs or resets the ledger.",
+  "checks": {
+    "generationTests": 8,
+    "ledgerTests": 12,
+    "claimsTests": 9,
+    "generationRed": "missing final-body SHA256",
+    "ledgerRed": "digest field rejected before schema change",
+    "scriptsTypecheck": "exit 0",
+    "desktopVueTypecheck": "exit 0",
+    "stageUiVueTypecheck": "exit 0, printed unresolved @vue-macros/volar define-models and define-slots plugin diagnostics",
+    "targetedLint": "exit 0",
+    "diffCheck": "exit 0"
+  },
+  "limitations": [
+    "No real model requests or real key access. Claim transport tests use actual disk ledger and mocked outgoing network boundary.",
+    "No root checks or product rebuild in bounded task. Root must perform shared-change integration checks."
+  ],
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/budget.ts",
+      "sha256": "916ec18c381a3c1a3b41c1b0e7a36ceab3eb46a800f14e7341e162b7aa56b93e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/acceptance-generation.ts",
+      "sha256": "ca6fa39d99b34219495b8fd3367735e5b11911ded47e88d022a5af4ae3082787"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/acceptance-generation.test.ts",
+      "sha256": "4ca37c5ad639d1d22246b5d2742e747f93a30e6bcabc66aa6df58f293a5bc3a2"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.ts",
+      "sha256": "df1cfd9350b35baee32880287a5b27707ebf624fb68c86a12114ecad8185f835"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts",
+      "sha256": "dc581de14384f6b8f538c26cbf6f8125f9c79e4b2c83ce6d4cb22da95b8ddc8d"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-request-claims.ts",
+      "sha256": "421ef63cfba42694e9c37169f4d35da5621c3296f911dcd2c383eee180f5c619"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-request-claims.test.ts",
+      "sha256": "8a0134a6033f3ac28be06029eb88027777082fc00721f8e68bacbd67ee89b96b"
+    }
+  ]
+}

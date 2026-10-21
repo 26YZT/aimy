@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-14 Asia/Shanghai",
+  "sourceRoot": "/Users/mima1234/Documents/aimy/aimy-app/",
+  "checks": 6,
+  "networkCalls": 0,
+  "realModels": 0,
+  "realDevices": 0,
+  "productWrites": 0,
+  "results": [
+    {
+      "id": "AP-01",
+      "kind": "defect-reproduced",
+      "actualFunctions": [
+        "startStream",
+        "stopStream",
+        "clearActiveStream",
+        "isActiveStream",
+        "attachStreamLifecycle"
+      ],
+      "evidence": {
+        "lateStreamInstalled": true,
+        "stoppedTracksBeforeCleanup": 0
+      },
+      "scope": "Actual extracted source functions, mocked selection and stream; no OS screen capture."
+    },
+    {
+      "id": "AP-02",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "selected": "screen:B",
+        "installed": "screen:A",
+        "stoppedTracks": []
+      },
+      "scope": "Both source selections are pending before a stream exists, so the existing source-id watcher has no old stream to clear. Vue watchers are modeled only through this exact precondition."
+    },
+    {
+      "id": "AP-03",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "running": false,
+        "capturesRecordedAfterStop": [
+          123
+        ]
+      },
+      "scope": "Actual ticker functions with deferred handler, no timer or network."
+    },
+    {
+      "id": "AP-04",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "signalForwarded": false,
+        "publishedAfterCallerAborted": 1,
+        "lastResult": "late screen description"
+      },
+      "scope": "Actual processCapture body; caller signal is an extra proposed field that current payload ignores. Fake inference resolves; no image/model call."
+    },
+    {
+      "id": "AP-05",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "pending": 1,
+        "scheduled": 2
+      },
+      "scope": "Actual enqueue body; timing helper mocked, no model."
+    },
+    {
+      "id": "AP-06",
+      "kind": "race-reproduced",
+      "evidence": {
+        "providerStartsBeforeProcessingLock": 2,
+        "modelHandlerCalls": [
+          "first",
+          "second"
+        ]
+      },
+      "scope": "Actual orchestration functions; injected provider/agent are inert promises. Production provider lookup is asynchronous too; no production model called."
+    }
+  ]
+}

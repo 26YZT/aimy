@@ -29,10 +29,14 @@ import JournalToolCallBlock from './chat-tool-renderers/journal-tool-call-block.
 import ChatViewportLayout from './chat-viewport-layout.vue'
 
 import { electronOpenSettings } from '../../shared/eventa'
+import { COMPUTER_AUTOMATION_ENABLED } from '../../shared/product-capabilities'
 import { useHearingInputChannel } from '../composables/use-hearing-input-channel'
 import { artistryToolReferences, computerUseToolReferences, widgetToolReferences } from '../stores/tools'
 
 const props = withDefaults(defineProps<{
+  appearance?: 'stage' | 'messenger'
+  assistantAvatar?: string
+  userAvatar?: string
   /**
    * `true` in the transparent floating chat window, which draws nothing
    * behind the chat. Bubbles, the composer and the welcome card then paint
@@ -80,7 +84,7 @@ const voicePending = shallowRef(false)
 const voiceActive = shallowRef(false)
 const lastEnterTime = ref(0)
 // Each request captures this composer selection, including retries and tool reruns.
-const computerUseEnabled = ref(true)
+const computerUseEnabled = ref(false)
 
 const chatStore = useChatStore()
 const chatSession = useChatSessionStore()
@@ -323,12 +327,16 @@ async function snapshotDraft(): Promise<ChatDraftHandover | undefined> {
  * draft came from. A window that selects nothing in time does not restore, and
  * the mode switch keeps the window that still holds the content.
  */
-async function restoreDraft(draft: ChatDraftHandover): Promise<boolean> {
+async function restoreDraft(draft: ChatDraftHandover, options: { navigate?: boolean } = {}): Promise<boolean> {
   await until(activeSessionId).toMatch(Boolean, { timeout: 5000 })
   if (!activeSessionId.value)
     return false
-  if (activeSessionId.value !== draft.sessionId)
+  if (activeSessionId.value !== draft.sessionId) {
+    // Automatic restores cannot undo a newer window selection while waiting for readiness.
+    if (options.navigate === false)
+      return false
     await chatSession.setActiveSession(draft.sessionId)
+  }
   if (activeSessionId.value !== draft.sessionId)
     return false
   if (!draft.text && draft.attachments.length === 0 && !draft.replyTarget)
@@ -360,6 +368,7 @@ defineExpose({
 <template>
   <ChatViewportLayout
     ref="viewport-layout"
+    :class="{ 'messenger-interaction': props.appearance === 'messenger' }"
     :composer-at-edge="props.composerFoldable"
   >
     <template #history="{ tailInset }">
@@ -376,7 +385,7 @@ defineExpose({
         <div
           :class="[
             'flex flex-col items-center gap-3 text-center',
-            props.floating ? 'rounded-2xl bg-white px-6 py-6 shadow-md dark:bg-neutral-900' : '',
+            props.appearance !== 'messenger' && props.floating ? 'rounded-2xl bg-white px-6 py-6 shadow-md dark:bg-neutral-900' : '',
           ]"
         >
           <div :class="['chat-empty-state-icon size-14 flex items-center justify-center rounded-2xl bg-primary-100/60 text-primary-500 dark:bg-primary-900/30']">
@@ -389,6 +398,9 @@ defineExpose({
         </div>
       </div>
       <ChatHistory
+        :appearance="props.appearance"
+        :assistant-avatar="props.assistantAvatar"
+        :user-avatar="props.userAvatar"
         :messages="historyMessages"
         :assistant-label="assistantLabel"
         :sending="isActiveSessionSending"
@@ -443,6 +455,7 @@ defineExpose({
       </Callout>
       <div
         ref="message-composer"
+        :data-appearance="props.appearance"
         :class="[
           'min-h-0 max-h-full flex flex-col gap-1 overflow-hidden rounded-2xl',
           // A foldable composer leaves the bottom edge to its folded tab.
@@ -515,7 +528,7 @@ defineExpose({
         <p v-if="pendingImages" role="status" :class="['px-2 text-sm text-neutral-500']">
           {{ t('stage.chat.images.reading') }}
         </p>
-        <div :class="['w-full shrink-0 overflow-hidden bg-transparent']">
+        <div :class="['chat-compose-text w-full shrink-0 overflow-hidden bg-transparent']">
           <ChatReplyPreview
             :target="replyTarget"
             @cancel="handleCancelReply"
@@ -541,7 +554,7 @@ defineExpose({
         <div data-testid="chat-composer-actions" :class="['flex shrink-0 items-center gap-1 pt-1']">
           <GhostButton
             size="unset"
-            :class="['size-9 transition-colors duration-200 motion-reduce:transition-none']"
+            :class="['chat-compose-attach size-9 transition-colors duration-200 motion-reduce:transition-none']"
             :title="t('stage.chat.images.attach')"
             :aria-label="t('stage.chat.images.attach')"
             @click="handleManualAttach"
@@ -549,6 +562,7 @@ defineExpose({
             <span :class="['i-solar:paperclip-bold-duotone h-5 w-5']" />
           </GhostButton>
           <GhostButton
+            v-if="COMPUTER_AUTOMATION_ENABLED"
             data-testid="computer-use-toggle"
             size="unset"
             :class="['size-9']"
@@ -563,11 +577,12 @@ defineExpose({
           </GhostButton>
 
           <!-- The voice control shows its recording status here, so the composer keeps its height. -->
-          <div ref="voice-status" :class="['min-w-0 flex flex-1 items-center px-1']" />
-          <div :class="['flex shrink-0 items-center gap-1']">
+          <div ref="voice-status" :class="['chat-compose-status min-w-0 flex flex-1 items-center px-1']" />
+          <div :class="['chat-compose-tools flex shrink-0 items-center gap-1']">
             <VoiceInputButton
               ref="voice-button"
               v-model="messageInput"
+              shared-input
               :status-element="voiceStatus"
               :attachment-element="voiceAttachment"
               :session-id="activeSessionId"
@@ -597,7 +612,7 @@ defineExpose({
               v-model:send-mode="sendMode"
               :disabled="voiceActive || !!pendingImages || (!messageInput.trim() && !attachments.length && !voicePending) || isComposing"
               :button-class="[
-                'size-9 rounded-full bg-primary-500 text-white',
+                props.appearance === 'messenger' ? 'messenger-send size-9 rounded-full' : 'size-9 rounded-full bg-primary-500 text-white',
                 'hover:bg-primary-600 disabled:pointer-events-none disabled:bg-neutral-200 disabled:text-neutral-400 dark:disabled:bg-neutral-700 dark:disabled:text-neutral-500 motion-reduce:transition-none',
               ]"
               @send="handleSend"
@@ -667,4 +682,35 @@ defineExpose({
     display: none;
   }
 }
+</style>
+
+<style scoped>
+[data-appearance="messenger"] {
+  display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; align-items: end; gap: 0;
+  padding: 6px; border: 1px solid var(--messenger-line, #eadce2); border-radius: 24px;
+  background: var(--messenger-panel, #fff); box-shadow: none; backdrop-filter: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+[data-appearance="messenger"]:focus-within { border-color: var(--messenger-accent, #98546c); background: var(--messenger-panel, #fff); }
+[data-appearance="messenger"] [data-testid="chat-composer-previews"],
+[data-appearance="messenger"] > p { grid-column: 1 / -1; order: 0; }
+[data-appearance="messenger"] [data-testid="chat-composer-previews"]:has(> div:only-child:empty) { display: none; }
+[data-appearance="messenger"] .chat-compose-text { grid-column: 2; order: 2; min-width: 0; }
+[data-appearance="messenger"] :deep(textarea) {
+  min-height: 36px; max-height: 8lh; padding: 6px 4px; font-family: inherit; font-weight: 400;
+  font-size: 15px; line-height: 24px; color: var(--messenger-ink, #4e3c45); scrollbar-gutter: auto;
+}
+[data-appearance="messenger"] :deep(textarea)::placeholder { color: var(--messenger-muted, #76616c); opacity: .8; }
+[data-appearance="messenger"] [data-testid="chat-composer-actions"] { display: contents; }
+[data-appearance="messenger"] .chat-compose-attach { grid-column: 1; order: 1; width: 32px; color: var(--messenger-accent, #98546c); }
+[data-appearance="messenger"] .chat-compose-status { grid-column: 1 / -1; order: 0; }
+[data-appearance="messenger"] .chat-compose-status:empty { display: none; }
+[data-appearance="messenger"] .chat-compose-tools { grid-column: 3; order: 3; gap: 0; }
+[data-appearance="messenger"] :deep([data-testid="voice-input-button"][aria-pressed="false"]),
+[data-appearance="messenger"] :deep(.messenger-send) { background: transparent; color: var(--messenger-accent, #98546c); }
+[data-appearance="messenger"] :deep(.messenger-send:disabled) { color: var(--messenger-muted, #76616c); opacity: .45; }
+.messenger-interaction :deep(.chat-composer-layer) { margin: 0 12px 12px; }
+.messenger-interaction .chat-empty-state { color: var(--messenger-muted); }
+.messenger-interaction .chat-empty-state-icon { border-radius: 50%; background: var(--messenger-soft); color: var(--messenger-accent); }
+.messenger-interaction .chat-empty-state :deep(.font-cute) { font-family: inherit; font-weight: 400; }
 </style>

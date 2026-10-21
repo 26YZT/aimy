@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-14",
+  "status": "passed",
+  "agents_total": 20,
+  "completed_agents": 12,
+  "failed_agents": 8,
+  "complete_report_texts_extracted": 10,
+  "existing_reports_exactly_replayed": 4,
+  "partial_records_exported": 7,
+  "rejected_spawns_indexed": 19,
+  "sources_unchanged": true,
+  "existing_reports_unchanged": true,
+  "git_index_unchanged": true,
+  "product_diff_unchanged": true,
+  "source_file_count": 53,
+  "source_total_bytes": 24096348,
+  "verbatim_extract_checks": [
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/01-AionsHome记忆系统.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/02-AionsHome主动行为.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/04-AionsHome生活功能.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/09-AIRI插件与服务端能力.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/05-AionsHome基础设施与前端.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/07-AionsHome自主循环启动与配置.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/06-AionsHome访客客厅.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/03-AionsHome感知系统.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/08-AIRI桌面窗口能力.md",
+      "matches_original_final_text": true
+    },
+    {
+      "file": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/完成分支/10-AIRI表情与角色行为.md",
+      "matches_original_final_text": true
+    }
+  ],
+  "credential_pattern_redactions": [],
+  "product_tests_run_during_recovery": false,
+  "only_new_recovery_directory_written": true
+}

@@ -1,6 +1,7 @@
 import type { VoiceInterruptionEvent } from '@proj-airi/core-agent'
 
 import type { ChatHistoryItem } from './chat'
+import type { MemorySourceRef } from './memory'
 
 /** Storage and cross-window transport contain text diagnostics instead of live Error objects. */
 export interface StoredVoiceInterruption extends Omit<VoiceInterruptionEvent, 'playback'> {
@@ -14,6 +15,8 @@ export interface ChatSessionMeta {
   title?: string
   createdAt: number
   updatedAt: number
+  /** Recovery visits only sessions with post-activation input markers. */
+  hasMemoryJournal?: boolean
   /** Control events inform later agent requests without adding user messages. */
   controlEvents?: StoredVoiceInterruption[]
   /**
@@ -32,9 +35,19 @@ export interface ChatSessionMeta {
   cloudMaxSeq?: number
 }
 
+/** A new input captures consent even when its final voice transcript arrives later. */
+export interface ChatMemoryEligibility {
+  messageId: string
+  activationId: string
+  authoredAt: number
+}
+
 export interface ChatSessionRecord {
   meta: ChatSessionMeta
   messages: ChatHistoryItem[]
+  /** Only newly committed, eligible user inputs have entries. Fork/import never enroll history. */
+  memoryJournal?: Array<{ source: MemorySourceRef, acknowledged: boolean }>
+  memoryEligibility?: ChatMemoryEligibility[]
 }
 
 export interface ChatCharacterSessionsIndex {

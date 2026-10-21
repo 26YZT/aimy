@@ -46,6 +46,15 @@ async function createAppleSpeechConfigSchema(context: ProviderConfigContext<Appl
   const { t } = context
   const localeOptions = await listAppleSpeechLocaleOptions(context)
   return appleSpeechConfigSchema.extend({
+    transcriber: appleSpeechConfigSchema.shape.transcriber.meta({
+      type: 'select',
+      labelLocalized: t('settings.pages.providers.provider.apple-speech-transcription.fields.transcriber.label'),
+      descriptionLocalized: t('settings.pages.providers.provider.apple-speech-transcription.fields.transcriber.description'),
+      options: ['automatic', 'dictation', 'speech'].map(value => ({
+        value,
+        label: t(`settings.pages.providers.provider.apple-speech-transcription.fields.transcriber.${value}`),
+      })),
+    }),
     locale: appleSpeechConfigSchema.shape.locale.meta({
       type: 'select',
       labelLocalized: t('settings.pages.providers.provider.apple-speech-transcription.fields.locale.label'),
@@ -67,8 +76,12 @@ function createRendererAppleSpeechProvider(config: AppleSpeechConfig): AIRIApple
   return {
     transcription(_model, requestOptions = {}) {
       const locale = requestOptions.locale?.trim() || configuredLocale
+      const transcriber = config.transcriber ?? 'automatic'
+      const request = transcriber === 'dictation'
+        ? provider.transcription({ locale, transcriber, options: { contentHints: { shortForm: true } } })
+        : provider.transcription({ locale, transcriber, options: { reporting: { preferFastResults: false } } })
       return {
-        ...provider.transcription({ locale, transcriber: 'automatic' }),
+        ...request,
         ...requestOptions,
         inputSampleRate: requestOptions.inputSampleRate ?? 16000,
       }

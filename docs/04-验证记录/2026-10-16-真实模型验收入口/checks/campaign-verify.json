@@ -1,0 +1,42 @@
+{
+  "task": "LIVE-CAMPAIGN-VERIFY",
+  "status": "complete",
+  "exportsChanged": false,
+  "behavior": [
+    "Prepare snapshots original V2 source to user-v2-source.md and checks source spans before creating a campaign.",
+    "Open verifies cases/source digests and approved case IDs, budget configuration, existing ledger campaign, and setup-profile ownership marker.",
+    "A missing ledger is refused. Open never calls ledger.status and cannot recreate a missing ledger.",
+    "Repeated prepare retains campaign ID, config, and ledger bytes.",
+    "No symlink root, user alias parent, symlink file, or non-regular file is accepted. macOS system /tmp and /var aliases are canonicalized.",
+    "Price dates after the current instant and dates older than 24 hours are rejected. Price renewal changes no campaign price or ledger bytes.",
+    "Exclusive operation lock prevents setup/run overlap. Changed lock tokens are never removed."
+  ],
+  "checks": {
+    "red": "6 failed, 1 passed before fixes",
+    "green": "9 passed",
+    "strictTypecheck": "exit 0",
+    "targetedLint": "exit 0",
+    "diffCheck": "exit 0"
+  },
+  "scope": [
+    "apps/stage-tamagotchi/scripts/acceptance/live-campaign.ts",
+    "apps/stage-tamagotchi/scripts/acceptance/live-campaign.test.ts"
+  ],
+  "evidenceDirectory": "/tmp/aimy-live-entry-20261016/campaign-verify",
+  "realModelCalls": 0,
+  "realCredentialsRead": false,
+  "notes": [
+    "Only temporary qualification campaigns were created by tests and removed by afterEach. Real approved dataset/source were read-only.",
+    "Ledger semantic validation and accounting remain owned by AcceptanceBudgetLedger. Opening validates presence/shape/campaign and never writes that ledger."
+  ],
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-campaign.ts",
+      "sha256": "449f9744829c337a8936cd1969e4b693ce4fb1ca4932c1487cfe918840efb4f4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-campaign.test.ts",
+      "sha256": "99244172b76623096f79ae2fd99892deec74dbdf2d8b029331be8d3b2053ed42"
+    }
+  ]
+}

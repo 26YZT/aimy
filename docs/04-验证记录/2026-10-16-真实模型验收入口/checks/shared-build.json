@@ -1,0 +1,46 @@
+{
+  "task": "SHARED-VERIFIED-LIVE-BUILD",
+  "status": "complete",
+  "scope": [
+    "apps/stage-tamagotchi/scripts/acceptance/live-build.ts",
+    "apps/stage-tamagotchi/scripts/acceptance/live-build.test.ts"
+  ],
+  "newApi": "bindVerifiedLiveBuild(targetCampaign, sourceCampaign): Promise<LiveBuildBinding>",
+  "newRequiredField": "buildOwnerCampaignId",
+  "behavior": [
+    "Preparation binds campaignId and buildOwnerCampaignId to the preparing campaign.",
+    "Verification binds campaignId to the target campaign and buildOwnerCampaignId to the unchanged artifact owner marker.",
+    "Explicit sharing validates all source artifacts, existing source/target identity and identical 8-case snapshots, then verifies and persists target binding.",
+    "Shared bindings preserve original owner through subsequent explicit sharing.",
+    "Only target build-binding is replaced. Previous binding raw bytes are archived. No ledger, credential file, profile, source binding or cache marker is copied or modified."
+  ],
+  "checks": {
+    "tests": 12,
+    "strictTypecheck": "exit 0",
+    "targetedLint": "exit 0",
+    "diffCheck": "exit 0"
+  },
+  "testsInclude": [
+    "qualification to official sharing with independent ledger and synthetic encrypted-file bytes unchanged",
+    "exact raw archive of old target binding",
+    "read-only source binding/cache owner marker",
+    "original owner preserved across a second sharing",
+    "same campaign rejected",
+    "tampered artifact and buildOwner rejected without target replacement"
+  ],
+  "limitations": [
+    "Tests use real small artifact trees. No full clone/build or actual campaign binding in this bounded task.",
+    "Old experimental bindings without buildOwnerCampaignId are intentionally invalid. No migration or fallback added."
+  ],
+  "realModelCalls": 0,
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-build.ts",
+      "sha256": "1409f42fd181369328529e3c8bb46d16892a00eddaecd86ab86767a242bf589c"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-build.test.ts",
+      "sha256": "84b0350f6c5335717de713aa1c09d41090c1ebe76be2143bbbd76940ef30ef4e"
+    }
+  ]
+}

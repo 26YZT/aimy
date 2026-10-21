@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/10-逐日审定与确认.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-逐项确认方式校正/撤回前-10-逐日审定与确认.md",
+    "sha256": "2ffd17c556e81a9ff5a117e352e79e6dca367da753c853641b4cd5287bc85f8a"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/审定账本.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-逐项确认方式校正/撤回前-审定账本.json",
+    "sha256": "668fa7264f11db839df2ee06d0f47ea068a6f30bf63aa7ffc1651fdc76920280"
+  }
+]

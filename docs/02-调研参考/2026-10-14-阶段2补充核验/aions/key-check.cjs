@@ -1,0 +1,10 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path'),{createRequire}=require('node:module');
+const r=createRequire('/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/package.json');const {createStorage}=r('unstorage');
+const file=r.resolve('unstorage/drivers/indexedb');let physical;
+const idb={set(k,v){physical=k;return Promise.resolve();}};
+const box={exports:{},module:{exports:{}},require(n){if(n==='idb-keyval')return idb;return require(path.resolve(path.dirname(file),n));}};
+vm.runInNewContext(fs.readFileSync(file,'utf8'),box,{filename:file});
+const storage=createStorage();storage.mount('local',box.module.exports({base:'airi-local'}));
+(async()=>{const principal='user:1/?',character='main/女';const enc=v=>encodeURIComponent(v);const logical=`local:aimy/memory/v1/${enc(principal)}/${enc(character)}`;await storage.setItemRaw(logical,{revision:1,epoch:1});
+const expected=`airi-local:aimy:memory:v1:${enc(principal)}:${enc(character)}`;assert.equal(physical,expected);
+const result={scope:'Actual installed unstorage normalizer/mount and actual indexedb-driver prefix executed; idb-keyval.set is a capture stub; no real IDB opened.',logicalKey:logical,physicalKey:physical,defaultDatabase:'keyval-store',defaultObjectStore:'keyval',passed:true};fs.writeFileSync('/tmp/aimy-20261014-aions-planning/key-result.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));})().catch(e=>{console.error(e);process.exitCode=1});

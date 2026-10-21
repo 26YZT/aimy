@@ -1,0 +1,773 @@
+{
+  "date": "2026-10-14",
+  "status": "产品负责人选择建议；未冻结/未集成",
+  "source": "docs/02-调研参考/2026-10-14-六项目复用裁决汇总.json",
+  "counts": {
+    "沿用既有": 4,
+    "本期适配": 21,
+    "条件实验": 7,
+    "后置": 11,
+    "不纳入": 14
+  },
+  "decisions": [
+    {
+      "candidate_id": "RY01",
+      "project": "Ryza",
+      "capability": "桌面窗口与显示集成",
+      "selection": "沿用既有",
+      "phase": "P0",
+      "reason": "AIRI更贴合macOS桌面角色；Ryza透明/穿透缺失",
+      "integration_boundary": "不换主进程、协议或窗口生命周期",
+      "acceptance": "按聊天收起/舞台隐藏/退出分别验角色与采集",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-BASE-01"
+      ]
+    },
+    {
+      "candidate_id": "RY02",
+      "project": "Ryza",
+      "capability": "Provider、流式音频和取消",
+      "selection": "沿用既有",
+      "phase": "P0",
+      "reason": "AIRI源码契约更完整，Ryza标准主链整句返回",
+      "integration_boundary": "保留AIRI voice/audio/session owner",
+      "acceptance": "真实中文延迟、扬声器/AEC与取消后静音另验",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-VOICE-01"
+      ]
+    },
+    {
+      "candidate_id": "KI02",
+      "project": "kirara-ai",
+      "capability": "注册表与可选能力接口",
+      "selection": "沿用既有",
+      "phase": "P0",
+      "reason": "AIRI已有对应契约；不是新缺口",
+      "integration_boundary": "用现有provider/kit，kirara仅作接口组织旁证",
+      "acceptance": "能力声明与实际授权一致，不把空方法算支持",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-BASE-01"
+      ]
+    },
+    {
+      "candidate_id": "CH01",
+      "project": "chromatic",
+      "capability": "调色库、UnoCSS预设与现有主题UI",
+      "selection": "沿用既有",
+      "phase": "P0",
+      "reason": "AIRI已依赖1.1.4并有正式色相设置；无需新引入",
+      "integration_boundary": "维护既有依赖，品牌内容按已定范围改；本轮不改",
+      "acceptance": "依赖与真实消费者一致，后续改色不损坏明暗主题",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-BASE-01"
+      ]
+    },
+    {
+      "candidate_id": "AH-R01",
+      "project": "AionsHome",
+      "capability": "后置共享画像的来源/版本/撤权规则",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "有明确事实来源与版本保护增量",
+      "integration_boundary": "消费AIRI已持久化消息；Repository/ModelGateway/EventSink均需AIRI适配；不用原config/ws/FastAPI",
+      "acceptance": "原文改删、关闭再开、手动revision变更时旧模型结果不能写；新进程恢复队列；输出只据本人证据",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-MEM-03"
+      ]
+    },
+    {
+      "candidate_id": "AH-R02",
+      "project": "AionsHome",
+      "capability": "原子记忆+源消息管理",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "有明确自动事实保存与来源管理增量",
+      "integration_boundary": "AIRI现有聊天session/message ID作来源；原子写入、主进程持久化、管理UI共三层",
+      "acceptance": "自动写→重启召回；纠正只留新事实；删后原文/向量/派生的预期范围明示并验证",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-MEM-02"
+      ]
+    },
+    {
+      "candidate_id": "AH-R03",
+      "project": "AionsHome",
+      "capability": "主动搜索/时间解析/证据预算",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "有可解释召回/原文证据预算增量",
+      "integration_boundary": "提取纯parse/rank/format规则到TS，输入Repository与EmbeddingGateway；保留AIRI工具循环",
+      "acceptance": "日期/否定/同事件重复/embedding失败文本后备；回执有source ID；注入攻击当历史证据",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-02"
+      ]
+    },
+    {
+      "candidate_id": "AH-R04",
+      "project": "AionsHome",
+      "capability": "彻底忘记的派生清理契约",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "新增价值在失败用例与删除契约，原实现不完整",
+      "integration_boundary": "先明确删除一条记录与忘记事实范围，再设计统一写入口；源记录、画像、压缩、缓存需同epoch语义",
+      "acceptance": "正在总结/压缩时删除；旧API兼容；同义重抽取；派生摘要不得复活已忘记事实",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-03"
+      ]
+    },
+    {
+      "candidate_id": "AH-R06",
+      "project": "AionsHome",
+      "capability": "自然续聊NEXT_CHAT语义",
+      "selection": "本期适配",
+      "phase": "P2",
+      "reason": "具体续聊策略有增量；AIRI已有调度基础",
+      "integration_boundary": "AIRI已有spark notify/内存task；只增持久调度/开关/静默与预算策略，生成仍走AIRI聊天",
+      "acceptance": "关开关、新用户消息、切会话、隐藏/退出后pending及in-flight均不得错发；重启过期策略",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-PRO-01",
+        "REQ-MEM-04"
+      ]
+    },
+    {
+      "candidate_id": "AH-R11",
+      "project": "AionsHome",
+      "capability": "图像来源/新鲜度/失败上下文规则",
+      "selection": "本期适配",
+      "phase": "P3",
+      "reason": "新鲜度/来源规则有参考，采集链AIRI已具备",
+      "integration_boundary": "沿用AIRI屏幕采集与Vision推理/ReplaceSelf上下文，不拷camera/activity链",
+      "acceptance": "只在独立看屏授权有效时采；陈旧/失败不得编造；撤权拒晚结果；原图不长期留存",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-VIS-01"
+      ]
+    },
+    {
+      "candidate_id": "AH-R12",
+      "project": "AionsHome",
+      "capability": "反馈复盘before/after/diff",
+      "selection": "本期适配",
+      "phase": "P5",
+      "reason": "复盘与可回退差异可参考；安全规则不能由模型改",
+      "integration_boundary": "AIRI已有角色卡/会话；只记录建议和可回退差异；关键安全边界仍代码固定",
+      "acceptance": "反馈可追溯；重复反馈不重复改；身份/权限/未成年人/危机规则不能被模型改",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-OBS-01"
+      ]
+    },
+    {
+      "candidate_id": "RY03",
+      "project": "Ryza",
+      "capability": "会话卡、事实条目与重要事件保护",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "分层策略可补记忆占位，但异步更新/删除会复活",
+      "integration_boundary": "只取分层/保护思想，补来源版本与原子提交，不搬全store",
+      "acceptance": "模型期间新输入不丢；删除后在飞归纳不能复活",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-MEM-02"
+      ]
+    },
+    {
+      "candidate_id": "RY04",
+      "project": "Ryza",
+      "capability": "关键词日期排序与完整条目预算",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "可作低成本可解释召回基线；非向量RAG",
+      "integration_boundary": "完整条目预算、当前有效版本过滤，接AIRI上下文",
+      "acceptance": "中文日期/纠正/同义事件；不截断JSON；失败可解释",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-02"
+      ]
+    },
+    {
+      "candidate_id": "RY05",
+      "project": "Ryza",
+      "capability": "表现节奏、去重与动作让位",
+      "selection": "本期适配",
+      "phase": "P4",
+      "reason": "动作意图冲突策略可比较；AIRI已可驱动动作",
+      "integration_boundary": "用AIRI motions/emotions/lipsync，保留模型自己的参数表",
+      "acceptance": "说话/idle/语义动作互不打架，同音频时钟实测",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAR-01"
+      ]
+    },
+    {
+      "candidate_id": "RY07",
+      "project": "Ryza",
+      "capability": "人设语气与TTS风格分开",
+      "selection": "本期适配",
+      "phase": "P1/P4",
+      "reason": "规则可参考，不等于需要增加ASMR产品模式",
+      "integration_boundary": "在现有角色卡与speech provider试验，音色另定",
+      "acceptance": "不改台词事实与安全规则；相同内容风格稳定",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-REL-01",
+        "REQ-CHAR-01"
+      ]
+    },
+    {
+      "candidate_id": "RY08",
+      "project": "Ryza",
+      "capability": "可编辑记忆与存储压力反馈",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "可见失败有价值；原删除/存档不能保证一致性",
+      "integration_boundary": "统一持久写入口、用户纠正删除反馈，不搬明文镜像",
+      "acceptance": "写失败可见；新进程同数据恢复；所有存储范围明确",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-03"
+      ]
+    },
+    {
+      "candidate_id": "OL01",
+      "project": "Open-LLM-VTuber",
+      "capability": "主动Prompt与允许沉默",
+      "selection": "本期适配",
+      "phase": "P2",
+      "reason": "借主动Prompt组织思路；候选未实现say/silence，Aimy基于既有Spark另补可沉默决策",
+      "integration_boundary": "在AIRI通知链内用授权上下文与记忆，允许不说",
+      "acceptance": "关闭/静默/预算/同内容去重，人设与真实依据稳定",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-PRO-01"
+      ]
+    },
+    {
+      "candidate_id": "OL02",
+      "project": "Open-LLM-VTuber",
+      "capability": "系统触发不冒充用户发言",
+      "selection": "本期适配",
+      "phase": "P2",
+      "reason": "合成触发与真实用户输入区分有明确语义价值",
+      "integration_boundary": "只标来源；保留实际assistant发言，沿现有chat历史",
+      "acceptance": "主动前后历史与重启一致；不把触发指令抽成用户事实",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-PRO-01"
+      ]
+    },
+    {
+      "candidate_id": "OL03",
+      "project": "Open-LLM-VTuber",
+      "capability": "显示、朗读、动作三路职责",
+      "selection": "本期适配",
+      "phase": "P4",
+      "reason": "契约命名清晰；AIRI已有分流和marker基础",
+      "integration_boundary": "不新增WS服务器，不替换AIRI结构化marker",
+      "acceptance": "旁白/工具不读出、动作随句、取消同时停音频与表现",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAR-01",
+        "REQ-VOICE-01"
+      ]
+    },
+    {
+      "candidate_id": "OL05",
+      "project": "Open-LLM-VTuber",
+      "capability": "通用模块Prompt骨架",
+      "selection": "本期适配",
+      "phase": "P1/P2",
+      "reason": "无语言运行时依赖，可读取复用；不能照搬人格和安全倾向",
+      "integration_boundary": "保留MIT来源；用Aimy人设与明确安全边界",
+      "acceptance": "中文读数、简短风格、主动沉默、危机场景离线评测",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-PRO-01"
+      ]
+    },
+    {
+      "candidate_id": "OL06",
+      "project": "Open-LLM-VTuber",
+      "capability": "配置schema、默认与帮助文案",
+      "selection": "本期适配",
+      "phase": "P0",
+      "reason": "有组织方式参考，AIRI已具配置框架",
+      "integration_boundary": "不增加YAML凭据权威或另一provider核心",
+      "acceptance": "校验失败拒写、设置迁移与重启一致、凭证不入日志",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-LOCAL-01",
+        "REQ-OBS-01"
+      ]
+    },
+    {
+      "candidate_id": "KI01",
+      "project": "kirara-ai",
+      "capability": "记忆scope、composer与decomposer",
+      "selection": "本期适配",
+      "phase": "P1",
+      "reason": "抽象可参考，但缓存查询/extra_identifier隔离不完整",
+      "integration_boundary": "不搬manager/持久化；保留AIRI消息来源和有效事实规则",
+      "acceptance": "会话切换、来源归属、纠正/删除/重启一致",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-MEM-02"
+      ]
+    },
+    {
+      "candidate_id": "KI03",
+      "project": "kirara-ai",
+      "capability": "配置版本迁移",
+      "selection": "本期适配",
+      "phase": "各批",
+      "reason": "迁移规则可借；不需另起Pydantic服务",
+      "integration_boundary": "沿TS配置owner定义版本、校验和旧值迁移",
+      "acceptance": "旧配置损坏/迁移失败可恢复，用户不需删全配置",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAT-01",
+        "REQ-MEM-03"
+      ]
+    },
+    {
+      "candidate_id": "KI05",
+      "project": "kirara-ai",
+      "capability": "追踪统计与内容脱敏",
+      "selection": "本期适配",
+      "phase": "各批",
+      "reason": "产品反馈可借，AIRI已有IO tracing",
+      "integration_boundary": "默认不记录真实凭据/原图/原录音；沿既有trace",
+      "acceptance": "错误可定位，输出不含秘密，删除与留存有界",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-OBS-01"
+      ]
+    },
+    {
+      "candidate_id": "CK03",
+      "project": "Charakuru",
+      "capability": "AGENTS指针、工序Skill与交接",
+      "selection": "本期适配",
+      "phase": "各批",
+      "reason": "内容生产方法可参考，不是新的角色运行能力",
+      "integration_boundary": "借组织结构和可复核交接，不直接复制受限Skills正文",
+      "acceptance": "来源/产物/确认点明确；机器结果不替代视觉选择",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-OBS-01"
+      ]
+    },
+    {
+      "candidate_id": "AH-R08",
+      "project": "AionsHome",
+      "capability": "受控语音导演/台词一致校验",
+      "selection": "条件实验",
+      "phase": "P4条件实验",
+      "reason": "有台词一致性与导演白名单规则；音色效果未测",
+      "integration_boundary": "解析与validate规则小；AIRI现有speech output/取消/voice provider；需确定音色所支持tag",
+      "acceptance": "导演不能改词义/加字；取消拒晚结果；错误不重复扣费；口型/表现与语音一体实测",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAR-01",
+        "REQ-VOICE-01"
+      ]
+    },
+    {
+      "candidate_id": "AH-R10",
+      "project": "AionsHome",
+      "capability": "VoiceCallPolicy纯JS阈值/打断guard",
+      "selection": "条件实验",
+      "phase": "P4条件实验",
+      "reason": "纯JS可提取；阈值未证实优于AIRI",
+      "integration_boundary": "17行无依赖UMD；AIRI已有silence/VAD参数，优先行为对照，非新pipeline",
+      "acceptance": "短长停顿语料A/B；打断仅指向当前turn；不会因背景噪音打断",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-VOICE-01"
+      ]
+    },
+    {
+      "candidate_id": "RY06",
+      "project": "Ryza",
+      "capability": "文本回声过滤",
+      "selection": "条件实验",
+      "phase": "P4条件实验",
+      "reason": "可能补AEC末级，当前没有真机效果优势证据",
+      "integration_boundary": "仅过滤已开始播放的文本；不取代现有录音与取消",
+      "acceptance": "短句/中文/噪声误伤与漏拦对比；关闭不保留迟到转写",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-VOICE-01"
+      ]
+    },
+    {
+      "candidate_id": "OL04",
+      "project": "Open-LLM-VTuber",
+      "capability": "括号与Unicode过滤",
+      "selection": "条件实验",
+      "phase": "P4条件实验",
+      "reason": "纯函数可比较；未闭合括号会吞后文",
+      "integration_boundary": "先与AIRI narrative过滤比较，有确切中文缺口才适配",
+      "acceptance": "嵌套/未闭合/代码/数学不丢正文，chunk边界安全",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAR-01"
+      ]
+    },
+    {
+      "candidate_id": "CK01",
+      "project": "Charakuru",
+      "capability": "本机角色制作工具链",
+      "selection": "条件实验",
+      "phase": "正式角色选定后",
+      "reason": "提供一条图像到VRM生产流程，非AIRI运行时缺件",
+      "integration_boundary": "只有选择该路线后再试本机工具；不搬Kit到产品",
+      "acceptance": "成品有目标表情/口型/眨眼绑定，风格与功耗实测",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAR-01"
+      ]
+    },
+    {
+      "candidate_id": "CK02",
+      "project": "Charakuru",
+      "capability": "授权Outputs导入AIRI",
+      "selection": "条件实验",
+      "phase": "正式角色选定后",
+      "reason": "AIRI已能导入VRM，具体资产的表现能力另核",
+      "integration_boundary": "Kit对Outputs的条款不保证源画/第三方/AI内容清权",
+      "acceptance": "可导入不等于会笑会说；逐模型验证授权和绑定",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAR-01"
+      ]
+    },
+    {
+      "candidate_id": "CK04",
+      "project": "Charakuru",
+      "capability": "确定性脚本与物理对比验收",
+      "selection": "条件实验",
+      "phase": "正式角色选定后",
+      "reason": "成品质量验证方法有价值，AIRI运行器无需替换",
+      "integration_boundary": "用技术检查+人工审美；不直接继承旧价格和单一格式决定",
+      "acceptance": "目标部位物理ON/OFF有差异、错误退出；视觉另验",
+      "implementation_status": "未实施",
+      "requirements": [
+        "REQ-CHAR-01"
+      ]
+    },
+    {
+      "candidate_id": "AH-R05",
+      "project": "AionsHome",
+      "capability": "日历压缩与lineage",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "分层压缩/溯源有增量，当前并发缺陷未解决",
+      "integration_boundary": "CalendarPlanner/LineageValidator可叶子化；模型/事务/索引适配量高，需源revision检查",
+      "acceptance": "候选在model await期间删改即拒写；冷档来源可追溯；无膨胀；失败输入保持active",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "AH-R07",
+      "project": "AionsHome",
+      "capability": "闲时回忆/休息/轻主动",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "有回忆→轻主动行为样本，质量与打扰未测",
+      "integration_boundary": "仅本地rest/memory_browse/private_chat思想，依赖记忆和R06；不接购物/外发/摄像头",
+      "acceptance": "idle中用户回来即使结果失效；DND/每日期望预算；不凭AI感想更新用户事实",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "RY09",
+      "project": "Ryza",
+      "capability": "回听与收藏",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "当前需求未选，原audio旁路造成不同owner",
+      "integration_boundary": "若将来立项，只用统一音频owner与删除策略",
+      "acceptance": "回放可取消、日志不泄密、删除覆盖Blob与索引",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "RY10",
+      "project": "Ryza",
+      "capability": "RPG世界、经济、NPC、签到",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "独有玩法但偏离当前现实桌面陪伴",
+      "integration_boundary": "只保留确定性状态原则，不引入世界实体与资源",
+      "acceptance": "未来有独立需求再立项",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "RY11",
+      "project": "Ryza",
+      "capability": "Android与跨端壳/闹钟",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "macOS一期无直接收益，删除native闹钟契约有缺陷",
+      "integration_boundary": "不扩大平台；共用代码不写成跨设备同步",
+      "acceptance": "以后单列权限、后台、重启及全部存储删除",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL07",
+      "project": "Open-LLM-VTuber",
+      "capability": "特定ASR/TTS提供方",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "数量不证明中文效果更强，需要同条件实测",
+      "integration_boundary": "如确有体验收益，优先官方SDK窄接口",
+      "acceptance": "同设备语料的错误/延迟/音色/取消/成本/体积",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL12",
+      "project": "Open-LLM-VTuber",
+      "capability": "Letta独立服务",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "该适配丢图、history/interrupt为空；独立服务另有成本",
+      "integration_boundary": "不默认增加sidecar，跨语言方式仍待比较后选择",
+      "acceptance": "图像/中断/删除/恢复/不可达/macOS打包单列",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL14",
+      "project": "Open-LLM-VTuber",
+      "capability": "群聊、直播与代理服务",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "不属于主要单角色桌面的当前缺口",
+      "integration_boundary": "作为来源能力记录，不扩成平台产品",
+      "acceptance": "若有独立需求，再验作用域/用户身份/重连/预算",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "KI04",
+      "project": "kirara-ai",
+      "capability": "schema生成设置表单",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "可减少重复表单，但AIRI设置框架已完整",
+      "integration_boundary": "不整体换UI或引入工作流管理台",
+      "acceptance": "保留原路由/默认/禁用/错误状态",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "KI06",
+      "project": "kirara-ai",
+      "capability": "统一IM适配和市场",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "优势在统一组织与覆盖；AIRI独立integration已存在",
+      "integration_boundary": "不因源码有QQ/微信接口扩大一期范围",
+      "acceptance": "未来每平台身份、收发作用域与退出单列",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "KI07",
+      "project": "kirara-ai",
+      "capability": "可视化积木工作流",
+      "selection": "后置",
+      "phase": "后续独立需求",
+      "reason": "属于范式差异，当前桌面陪伴无已确认需要",
+      "integration_boundary": "不替换AIRI聊天/通知编排",
+      "acceptance": "未来真需求再核类型/循环/失败/恢复",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "AH-R09",
+      "project": "AionsHome",
+      "capability": "TTS队列/缓存/半双工唤醒",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "同类AIRI已有；候选半双工/第二队列未证实更强",
+      "integration_boundary": "AIRI已VAD/ASR/provider/speech bus/interrupt，复制带第二音频生命周期",
+      "acceptance": "只对比具体首包/背压缺口后再定；真实中文延迟、顺序、抢话验证",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "AH-R13",
+      "project": "AionsHome",
+      "capability": "多角色群聊/Visitor Lounge",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "多角色/访客超当前主要单角色范围",
+      "integration_boundary": "一期主要单角色；双角色表和Codex/访客OAuth/多端增加运行时与身份面",
+      "acceptance": "若以后立项须单列角色/访客scope、独立身份和模型预算，不能悄悄扩一期",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "AH-R14",
+      "project": "AionsHome",
+      "capability": "生活功能/设备/外部社交/成人模块",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "生活/硬件/外部社交是范围差异，不自动算缺口",
+      "integration_boundary": "基金、定位、家居、购物、微信/小红书、Android、成人外设均超当前边界；无来源选择",
+      "acceptance": "未来真实需求另立项；不得把调研功能表变成需求表",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "AH-R15",
+      "project": "AionsHome",
+      "capability": "整套FastAPI/原生JS/Windows采集/配置",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "完整运行时与AIRI重复、Windows耦合和状态成本高",
+      "integration_boundary": "不是Python法律禁用：技术上可sidecar，但部署、进程、DB、音频、权限和版本成本高，当前未定",
+      "acceptance": "未来若考虑sidecar先固定IPC/schema/生命周期/凭证边界与macOS包验收；当前仍AIRI唯一owner",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "RY12",
+      "project": "Ryza",
+      "capability": "自写ZIP、明文镜像与eraser",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "没有可靠性优势，存在不完整清除与展开预算风险",
+      "integration_boundary": "保留AIRI loader与存储边界",
+      "acceptance": "并发停止、删除、预算与损坏文件用例作为回归",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "RY13",
+      "project": "Ryza",
+      "capability": "计划中的vision/proactive/语义端点",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "候选文件未创建；不能作为现成增强模块",
+      "integration_boundary": "只登记方案；不沿用来源旧工期",
+      "acceptance": "未来独立实验需要具体模型、预处理与AIRI对照",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL08",
+      "project": "Open-LLM-VTuber",
+      "capability": "整套首句分句器",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "AIRI已有，候选存在混合逗号与缩写丢字边界",
+      "integration_boundary": "保留失败样例，调整已有分句前先评测",
+      "acceptance": "中英文标点/缩写/数字/emoji/无标点/分块输入",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL09",
+      "project": "Open-LLM-VTuber",
+      "capability": "TTSTaskManager与播放回执",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "clear不取消在途、回执碰撞，未证实更强",
+      "integration_boundary": "保留AIRI回执/取消/intent/owner机制",
+      "acceptance": "取消后无晚包/错序/重复播放；回执有turn身份",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL10",
+      "project": "Open-LLM-VTuber",
+      "capability": "BasicMemory与JSON历史",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "仅文字history，持久化与删除并不满足事实闭环",
+      "integration_boundary": "使用AIRI聊天数据，长期事实另做增量",
+      "acceptance": "自动写入/跨重启/纠正/删除分别证明",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL11",
+      "project": "Open-LLM-VTuber",
+      "capability": "Mem0适配",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "本版本tracked文件为空且导入类不存在",
+      "integration_boundary": "不把配置名列为可用后端；不评价Mem0独立项目能力",
+      "acceptance": "未来若研究另固定独立版本，不沿空适配入口",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "OL13",
+      "project": "Open-LLM-VTuber",
+      "capability": "MCP、ServiceContext、WS后端",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "AIRI已有；候选共享默认agent与漏关闭等增加负担",
+      "integration_boundary": "保留AIRI工具命名空间与连接owner，仅借状态反馈",
+      "acceptance": "同名工具不覆盖、循环预算、断连清理、session隔离",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "KI08",
+      "project": "kirara-ai",
+      "capability": "运行时pip装插件、exec与双Web栈",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "无当前增量，扩大执行和依赖生命周期",
+      "integration_boundary": "不导入Python核心或不受限代码执行；许可不是唯一否决理由",
+      "acceptance": "使用现有权限、清单和受控扩展owner",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "CK05",
+      "project": "Charakuru",
+      "capability": "Kit/Skill/donor整体嵌入或在线建模",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "与一期运行时无关且再分发/素材条款需单独处理",
+      "integration_boundary": "区分合条件私有操作与对外再分发，不称所有复制都禁止",
+      "acceptance": "当前不实施；未来若范围变化再核具体许可与资产",
+      "implementation_status": "未实施",
+      "requirements": []
+    },
+    {
+      "candidate_id": "CH02",
+      "project": "chromatic",
+      "capability": "复制第二调色实现/把playground变产品",
+      "selection": "不纳入",
+      "phase": "本期",
+      "reason": "没有新增能力，制造重复实现或超范围界面",
+      "integration_boundary": "保留开发参考，不为用满API新增季节/情绪换色需求",
+      "acceptance": "有真实产品需求再用已装库，无需迁移源码",
+      "implementation_status": "未实施",
+      "requirements": []
+    }
+  ]
+}

@@ -61,7 +61,7 @@ const godotStageStatus = ref<ElectronGodotStageStatus>({
 const switchingGodotStage = ref(false)
 const godotViewError = ref<StageViewErrorPayload>()
 const godotViewSnapshot = ref<StageViewSnapshotPayload | null>(null)
-const { runtimeSnapshot, sendLive2DExpressionCommand } = useModelSettingsRuntimeSnapshot()
+const { runtimeSnapshot, sendLive2DExpressionCommand, sendVrmGesture } = useModelSettingsRuntimeSnapshot()
 
 let sceneSyncGeneration = 0
 let godotSessionEpoch = 0
@@ -372,6 +372,7 @@ onUnmounted(() => {
 
     <div :class="['relative', 'h-full', 'flex justify-center', 'w-full']">
       <ModelSettingsPanel
+        :play-vrm-gesture="sendVrmGesture"
         :allow-extract-colors="false"
         :godot-view-error="godotViewError"
         :godot-view-controls-locked="godotViewControlsLocked"

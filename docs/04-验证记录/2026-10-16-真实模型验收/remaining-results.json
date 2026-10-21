@@ -1,0 +1,26 @@
+[
+  {
+    "id": "USER-V2-05",
+    "status": "failed",
+    "codes": [
+      "ACCEPTANCE_MEMORY_JOB_FAILED"
+    ]
+  },
+  {
+    "id": "USER-V2-06",
+    "status": "pilot-passed",
+    "runId": "92d2fac3-0e6a-4b16-9619-ba3c32855700"
+  },
+  {
+    "id": "USER-V2-07",
+    "status": "failed",
+    "codes": [
+      "ACCEPTANCE_MEMORY_JOB_FAILED"
+    ]
+  },
+  {
+    "id": "USER-V2-08",
+    "status": "pilot-passed",
+    "runId": "2ad97bf1-d7f0-4cf8-b01c-e4e110ab71d9"
+  }
+]

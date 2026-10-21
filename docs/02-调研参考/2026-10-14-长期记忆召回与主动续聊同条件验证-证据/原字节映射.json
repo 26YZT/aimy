@@ -1,0 +1,332 @@
+[
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/airi-default-context-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/airi-default-context-results.json",
+    "sha256": "58802d59ab74aa5189e59adbdb9c257a1def481d3226f7eabdbf70995f98e248"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/airi-default-context.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/airi-default-context.mjs",
+    "sha256": "b44f728e62dfa1d3ab80117c26776ff879edd903d781fe892ef198c35e921349"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/airi-default-context.ts",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/airi-default-context.ts",
+    "sha256": "df7ac9d2c56ebc7ad2f7506f0cc4d085547282e4e7b9af879118a2165d0e590b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/build-airi-context.cjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/build-airi-context.cjs",
+    "sha256": "7b9a97126563f3356b90a803c8ccca47328440fbcc50c897a05ae18cd66f305d"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/fixture-sha256.txt",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/fixture-sha256.txt",
+    "sha256": "e9ca058810101e9f919095757f6883a2ea3d8267f016bbc406280b5868978a31"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/fixture-spec.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/fixture-spec.md",
+    "sha256": "af43a3e463dda594ebc858df1d9f1e21fcd9ea1e4ad5ac7172929f4fe2d33091"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/fixtures.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/fixtures.json",
+    "sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab/gold-adjudication.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/gold-adjudication.json",
+    "sha256": "47c98f5dfefbfaf2a7043d7ecd4afff3bf10d429b6c15c8c1333f9106c87c4b8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/README.md",
+    "sha256": "547630727179faffe8b0ce5c35b371df15171ce269eb96d794fbdfcb7f9c0bfe"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/aions-arm.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/aions-arm.py",
+    "sha256": "6d397414d6c50afeb31f7638aabe565c42b887464280ea4e701938f4c6d9c056"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/aions-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/aions-manifest.json",
+    "sha256": "1fe5d3479ad308e103baceab332baf55de69deace8f691b980cf4932540dd889"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/aions-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/aions-results.json",
+    "sha256": "5845fa2359872615a985ac89e4c0a7cc084d605b486731c082eef53b9bf636e8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/airi-arm.cjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/airi-arm.cjs",
+    "sha256": "796b8eeadace336aeb7318696cc0070d11ce5ffe273cd3721551ad33bbc289cd"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/airi-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/airi-manifest.json",
+    "sha256": "77970aafaeabd06e08561ecfe559f3f9d11423ad43a1e3536a766a20be8c9286"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/airi-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/airi-results.json",
+    "sha256": "0fe231d7788f2be23f08914600fa9e8db69f542a2923b5539ac84e55fe10b5da"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/cross-review-root.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/cross-review-root.md",
+    "sha256": "b3b08e9fdf54459bfca10d0283dccff4810fca057fb368a97c4f0fcbef5051ea"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/results.json",
+    "sha256": "5ec92b2f244d73baa68f83499445ba743842017599d0469f906266108afda1f4"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/review-recall-draft.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/review-recall-draft.md",
+    "sha256": "bc337b1274fd363a80bbffc7e874d8294ceaa967c11fa4d1ae35c6c0c594b999"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/run.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/run.py",
+    "sha256": "0dfa19f96c2d2886b951f7e8420cc2975655aed6ed2f1315e115171171af2060"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-lm/source-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+    "sha256": "19229dd0a372caf111107e2d14a222427ad49839caa969921aad2d3fa072a3c0"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/README.md",
+    "sha256": "fe26884f34036a1077cb828f90a20e9cd080973fc8f0221533449852a6fd3ef8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/adjudicate-and-package.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/adjudicate-and-package.py",
+    "sha256": "3626e2465964e8c667b6f4d32da0b497e3738f162e0e3af285e7f9dbdaa354f8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/aions-recall.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/aions-recall.py",
+    "sha256": "b2f5df9215daa2be49b9183599bf389831358bbc8505ac3a135487bb7852c423"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/aions-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/aions-results.json",
+    "sha256": "a6de2f9ad009aa7ea6a1b3c8910040cab5623b17c3bfa96264fc26024890cdd4"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/airi-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/airi-results.json",
+    "sha256": "29082dfa5b2ba58cd7c8e7e00096628d1a025d5a370cb16534df5799d9ee9606"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/comparison.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/comparison.md",
+    "sha256": "d0faace96915011a79ce94ab8351c132dc04eb0520aa32ccba1ae8b14c4b55aa"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/js-executed-source.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/js-executed-source.json",
+    "sha256": "e02663ea625edd2665e5a231ce31fd8153bf39cd51d56c9493c65b3463507610"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/results.json",
+    "sha256": "91cd70f7e4c3631af3870a9138e580b088f72a26bce3ded5f64a66975282cad1"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/review-lm-root.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/review-lm-root.md",
+    "sha256": "75035d480cbfd76763901965210336d460d565ff753afc785d4bb1cc446c9192"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/ryza-airi-recall.cjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/ryza-airi-recall.cjs",
+    "sha256": "4e509076d31d0efee5032670260aea762e1f665399b8fb7c7bb01284cb82b423"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/ryza-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/ryza-results.json",
+    "sha256": "a674b29c91825827750f4a835a6af1aa15b8b8263d75b0a4dfc2fc3ef36f53ab"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/source-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+    "sha256": "1192915e218f870748f3ce9b368eb536f65b9ada3d247fcd47673f7eebab055c"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/verification.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/verification.json",
+    "sha256": "33ac5b357471d042e5c036b60f19b997fce72d6cb366f8f639de42508821db0b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/README.md",
+    "sha256": "43f07985ecda076e2effaf5d50f7df00968e660b5a7bb81cc5eaa4b67a1419b0"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/browser-delete.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/browser-delete.mjs",
+    "sha256": "eb95e56046df088d00112f42d815f68429f604103ace2fa4066a41a4cb7b802e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/browser-reload.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/browser-reload.mjs",
+    "sha256": "5e2381e64d1a927a73d09401497ee557bf655c126a95c95f79d2709a3ef0a25d"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/browser-ryza-facts.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/browser-ryza-facts.mjs",
+    "sha256": "a5714b8b2b5b5ad92c13ed9f76e64599e3c09bf353c0eca471f069693ce6bf46"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/browser-write.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/browser-write.mjs",
+    "sha256": "c412acf86accde5ed68dba5a6480990fdbcc42ef01ce09e63379f15ba1333e12"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/build.cjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/build.cjs",
+    "sha256": "6c29935889204b7b77932ab29ae426eabe7cf5794cdd90079f10aded0b92c5b8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/delete-fresh-page-read.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/delete-fresh-page-read.json",
+    "sha256": "1ae553210656365f84aab4b7978d28989e360c7ce255b6dfb64b3fe0ed6d1fdd"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/entry.ts",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/entry.ts",
+    "sha256": "5e48f300323005aa25b528dce7fbdd28c4e07f0bf35fea6016faf9f6e080fe7c"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/fixtures.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/fixtures.json",
+    "sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/fresh-page-read.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/fresh-page-read.json",
+    "sha256": "989e5b1836b9c960c2dad3666e302ab4f0822ad65c68a146c874af29c0ba0163"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/index.html",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/index.html",
+    "sha256": "749315f945aab8a839527c84000737df98e6bc35be3a0358ba35629dac33a5e7"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/ryza-fact-counterexamples.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/ryza-fact-counterexamples.json",
+    "sha256": "add64cff7e10ef9ee724e8dbcbe1ecc062c1c5f1887ffe4278843349b5d1d3e7"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/serve.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/serve.py",
+    "sha256": "e0b1b50e81bf953ae720e07fbff12105362251cf2801740b327b1c74f4f9d42f"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/source-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/source-manifest.json",
+    "sha256": "5619fd6164eaddb5cfaa8de16e69a969f38f3ff51a6ee05b08a2870fc3fa989a"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/verification.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/verification.json",
+    "sha256": "da6a0d4f63b6c2c12da02b950ef83e642e57d984b9c75065ace9a29b0654cd9a"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-browser/write-immediate-read.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/write-immediate-read.json",
+    "sha256": "3096771a4ae1aec102fe48d6fccc36f89a3a672293fb0f0595887e577c0a7303"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/PR09-source-supplement-hashes.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/PR09-source-supplement-hashes.json",
+    "sha256": "6adfdf6c041d12cbcaf1c8bb58b30484a2643b5bc99ed1b4ebc9d09032987ba9"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/PR09-surfacing-supplement.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/PR09-surfacing-supplement.json",
+    "sha256": "cc593a7e708deff533977b22c8c65ccd2eb8d2b21b8806e4ec614688a587efa0"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/PR09-surfacing-supplement.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/PR09-surfacing-supplement.py",
+    "sha256": "b6430d88f5659751aa7f43899f5208c0ebca2887a2840fd1d59cb190f24a42cd"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/README.md",
+    "sha256": "cc8eedc7aa4e50add03b565b5c858a6f9c269d81ef42f9e2d82d3ca7ddea09c0"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/aions-proactive.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/aions-proactive.py",
+    "sha256": "dbae1511a44a69e0d97516b1ebcb39b3bfa2708c23f85d32e401864c6f40f610"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/aions-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/aions-results.json",
+    "sha256": "2f0cbad47dc9e8ef04e8ae90be743bd96c907913cb43f705bcd91ea52abed611"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/aions-source-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/aions-source-manifest.json",
+    "sha256": "afbf36587fa8c7bb4908fd11f58ab86b6178b2f805f0a9cdbbad39f78baa6069"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/airi-proactive.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/airi-proactive.mjs",
+    "sha256": "5dd7a1e0717d4c170fd9f44215d963d392af91c8492609fcf0b3ade56a5c1178"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/airi-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/airi-results.json",
+    "sha256": "49e696343ec562a8139b3baf0014083b781de403ab7a324faf47c0497e45ac36"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/airi-source-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/airi-source-manifest.json",
+    "sha256": "cff43c3655de3a5100427822d05754f3278d74eaa51021d0d31ce28e4fe089b6"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/build-report.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/build-report.py",
+    "sha256": "3cbedb4701760ccd8f83a25a26d36f2288be6c66048c217e19982dbfdc1797cf"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/results.json",
+    "sha256": "b84cc2d5ef196c88274c16a0f24c25b2f93613b523299e5bcc65197bebb7a024"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/source-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/source-manifest.json",
+    "sha256": "8ef8f6ece89af84a9785a07bbc067dce9b9b2e9bcb35e3da85d7e4139accee24"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/PR09-surfacing-synthetic.sqlite",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/PR09-surfacing-synthetic.sqlite",
+    "sha256": "8625220527d4d0f20cadc1c6abeeaeb10fc2c52dd749f0789fedc87df140944b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-recall/review-formal.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/review-formal.md",
+    "sha256": "15e85e64fbbd7cf080fb1eeeb004500a5ef0775c082b0b9a5016745fb6f5961f"
+  },
+  {
+    "source": "/tmp/aimy-20261014-memory-ab-proactive/review-formal.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/review-formal.md",
+    "sha256": "a7ee27dac9c6569d425e71a6cecdbc22fc739b1125ed18fb6e1bc0d1a2ce2540"
+  },
+  {
+    "source": "/tmp/aimy-memory-ab-qa.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/delivery-qa.py",
+    "sha256": "d16de993c64c0209cfa68c7ce747c66c0f040e3e013f7cfe6bc9377fb2f27414"
+  }
+]

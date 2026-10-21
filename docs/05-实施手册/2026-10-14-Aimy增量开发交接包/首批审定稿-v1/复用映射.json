@@ -1,0 +1,885 @@
+{
+  "date": "2026-10-15",
+  "purpose": "read-only first-increment handoff audit, proposal awaits user review",
+  "authorization": "temporary audit report only; product/source code untouched; zero real model calls",
+  "source_files": [
+    {
+      "id": "sentinel",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "bytes": 38177,
+      "lines": 699,
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7"
+    },
+    {
+      "id": "policy",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "bytes": 8796,
+      "lines": 203,
+      "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85"
+    },
+    {
+      "id": "search",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "bytes": 26705,
+      "lines": 570,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "id": "ryza",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "bytes": 17026,
+      "lines": 411,
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+    }
+  ],
+  "leaves": [
+    {
+      "id": "AH-L01",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_apply_analysis.lineage",
+      "start": 365,
+      "end": 373,
+      "source_file_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "source_block_sha256": "9d31cff2bba7a366929cb3d43273c2163af068491309479e1544d4bf82def3f7",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/source-policy.ts::resolveCandidateLineage",
+      "target_status": "proposed_new_file",
+      "original_logic": "Only nonempty U labels from the current host-provided sources map are accepted; deduplicated IDs and maximum original user-source timestamp are retained. Consolidation may carry old lineage without asserting a new confirmation.",
+      "required_adaptation": "Extract nested closure into a pure TypeScript function. Resolve labels to typed chat-message or onboarding-answer SourceRefs. Check principal/character/session, role, revision/hash and suppression separately. Candidate refs do not confer authority. Do not treat max source timestamp as proof the summary follows from the source. Distinguish source validity from extraction/replay suppression and target fact tombstones; existing independent facts sharing a source are not deleted merely by source-level extraction blocking.",
+      "dependencies": [
+        "Python dict/list semantics; enclosing sources/job; no IO in the bounded leaf"
+      ],
+      "same_input_acceptance": [
+        "Same mapped sources U1/U2 produce same original lineage and confirmation time. U999, empty refs and nonstring refs reject.",
+        "Add Aimy cases: onboarding source accepted with its real type; assistant-only evidence rejected; source text saying fictional Zhang San must not be declared semantically passed just because U1 exists."
+      ],
+      "existing_evidence": [
+        "memory/README.md LM05 pass and LM09 fail; actual semantic extraction remains untested"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L02",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_context_for_job",
+      "start": 254,
+      "end": 278,
+      "source_file_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "source_block_sha256": "9715200d7c9f04b4df034a71a70c7268dee53b338fe6d3f6eb659bfe464ef866",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_rule",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/source-policy.ts::buildEvidenceSnapshot",
+      "target_status": "proposed_new_file",
+      "original_logic": "Read triggering original user content and refuse if missing/changed; collect a bounded same-parent preceding context, assign U labels only to user messages, retain original timestamps.",
+      "required_adaptation": "Keep query responsibilities in existing AIRI chat repo/owner; replace SQLite and worldbook coupling. Snapshot typed source IDs/revisions/hash and source-authored timestamps; deterministic tie-break for equal timestamps; no fabricated chat message for onboarding. Context truncation must not turn a quoted hypothetical into a factual fragment.",
+      "dependencies": [
+        "get_db/aiosqlite; SQL table/parent/role mapping; datetime host timezone; original content slice 4000; must not transplant dependencies"
+      ],
+      "same_input_acceptance": [
+        "Same synthetic user and assistant timeline yields matching user-only labels and deterministic chronological context.",
+        "Deleted trigger, edited trigger, scope mismatch, disabled-before-start produce no extraction input. Test equal source times and large source text; preserve original complete source reference."
+      ],
+      "existing_evidence": [
+        "memory/README.md LM06 and _context_for_job original checks"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L03",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_apply_analysis: exact category/topic lookup and older-source guard",
+      "start": 391,
+      "end": 409,
+      "source_file_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "source_block_sha256": "753ecb0075a03765538bc6531d769dc2d42171a6fa3d04756f54940a2cd56a43",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/fact-policy.ts::resolveCurrentFactUpdate",
+      "target_status": "proposed_new_file",
+      "original_logic": "Find exact category plus trimmed casefold topic, except task entries require matching content; deleted match is skipped; reject invalid merge labels/deleted merge entries; newer source_ts beats an older candidate.",
+      "required_adaptation": "Use host-owned stable factKey and version instead of model-selected arbitrary key/topic. Exact topic match is a compatibility rule, not semantic deduplication. Maintain current/superseded plus historical provenance; uncertain identity does not overwrite. Suppression barrier covers known source/lineage even when model changes the topic. Compare version at atomic commit. Resolve only known same fact-unit versions/aliases and host-recorded actual derived dependencies. Sharing source alone is not permission to remove independent facts; customer supplies no related-ID decision.",
+      "dependencies": [
+        "_profile_refs and current document; category/topic and source_ts data; lineage helper; no DB in this bounded block"
+      ],
+      "same_input_acceptance": [
+        "Same exact topic coffee -> oolong updates one current fact, and U1 late after U2 does not replace U2.",
+        "Aimy added cases: renamed topic under a forgotten/suppressed U1 remains blocked; similar but distinct tasks stay separate; chestnut-cake exception does not flip all sweets to liked.",
+        "ENG-X09: direct F1/F2 share U1 and D1 actually depends on F1; removing F1 invalidates D1 and blocks U1 old re-extraction/replay, retains independently supported F2 via safe current projection, with no customer dependency selection."
+      ],
+      "existing_evidence": [
+        "memory/README.md LM03/LM04 pass; LM08 same-source changed-topic fail; browser LM03 Ryza stale current values"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L04",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "run_pending_once: after-await source/revision/epoch recheck",
+      "start": 542,
+      "end": 558,
+      "source_file_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "source_block_sha256": "9b1de4a7814295eba098be47da11ba0b0b93ad999674ab1ec69ecfdf84e3e77f",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_rule",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/extraction.ts::runExtractionJob",
+      "target_status": "proposed_new_file",
+      "original_logic": "After model generation reread context and source labels; skip changed sources, then under BEGIN IMMEDIATE reread document epoch/revision; skip disabled or old epoch, requeue if revision changed.",
+      "required_adaptation": "Move into MemoryService job runner with source version/hash, settings/model revision, lease token and memory epoch. Revalidate once after generation and again inside MemoryRepo atomic commit. Persist recoverable cursor for chat-commit -> memory-enqueue gap. No Python worker, aiosqlite, ws broadcast, config or retry logger copied.",
+      "dependencies": [
+        "_context_for_job/get_db/row document; local status/changed variables; requires repository transaction wrapper"
+      ],
+      "same_input_acceptance": [
+        "Model callback paused at a barrier while source edited/deleted, autoSave disabled, model overridden, leader changed or memory epoch advanced; no stale write and no old result reuse.",
+        "Crash after durable new chat but before job enqueue recovers only messages after enable boundary; original worker has no portable proof of this AIRI cross-key contract.",
+        "ENG-X09: direct F1/F2 share U1 and D1 actually depends on F1; removing F1 invalidates D1 and blocks U1 old re-extraction/replay, retains independently supported F2 via safe current projection, with no customer dependency selection."
+      ],
+      "existing_evidence": [
+        "memory/README.md LM06 pass; same-ref LM07 limited pass; no new Aimy execution"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L05",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "symbol": "unfinished_task",
+      "start": 62,
+      "end": 63,
+      "source_file_sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "source_block_sha256": "97fb368a3f0856834cd28e9cfc2808faaaa5d80502c75412f109b007e01e9c70",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/fact-policy.ts::isUnresolvedPlan",
+      "target_status": "proposed_new_file",
+      "original_logic": "Task is unfinished unless explicit status is done, cancelled or retired.",
+      "required_adaptation": "Map Aimy event status without automatically treating passed time as completed; retirement/fading is a presentation state and not evidence of completion. This is a pure predicate, not job scheduling or background proactive scope.",
+      "dependencies": [
+        "entry.kind and entry.status only"
+      ],
+      "same_input_acceptance": [
+        "Same task active/unknown/done/cancelled inputs maintain predicate meaning. Aimy dueAt in past without reported outcome remains unknown, never passed/failed/completed."
+      ],
+      "existing_evidence": [
+        "user_profile_policy.py source; user case 5 requires unknown interview outcome"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L06",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "symbol": "lifecycle",
+      "start": 96,
+      "end": 115,
+      "source_file_sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "source_block_sha256": "a1588d6325608b5e36e79820fd398c6a6602defd9dd753c2d345f66ac90bc499",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/fact-policy.ts::deriveMemoryViewStatus",
+      "target_status": "proposed_new_file",
+      "original_logic": "Deleted/exited records excluded; passed task due date becomes unknown, not done; non-task recent facts can expire; projects may become stale/retired by age.",
+      "required_adaptation": "Keep explicit due time -> unknown rule and monotonic view semantics. Replace category/status mapping with MemoryFact active/superseded and derived current/expired/unknown; reference source-authored time. Original fixed 3/14/30/60/180-day thresholds are NOT approved Aimy retention constants. Stable boundaries and important experiences should not silently age out or be physically deleted.",
+      "dependencies": [
+        "pure Python arithmetic; DAY constant; source_ts/expires_at/due_at; no IO/model"
+      ],
+      "same_input_acceptance": [
+        "Boundary tests just before/at/after dueAt, deleted/current/superseded, same fixed Asia/Shanghai timestamp. Original task due equality stays active until strictly later.",
+        "Aimy nickname boundary, deceased cat and unrealized dream remain eligible when related, without fabricated outcomes."
+      ],
+      "existing_evidence": [
+        "original source 96–115; user V2 cases 1/2/5/7/8"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L07",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "symbol": "ranked",
+      "start": 137,
+      "end": 141,
+      "source_file_sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "source_block_sha256": "059a1f66714350b89bdc937eb557bb6ebb0e532d9b93740c739f3a86ff03a7cf",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/recall-policy.ts::orderEligibleRelatedFacts",
+      "target_status": "proposed_new_file",
+      "original_logic": "Filter deleted/ended facts, then order nonstale before stale, task before nontask, earlier due/available before later, latest confirmation as tie-break.",
+      "required_adaptation": "Use as secondary priority within facts already relevant to current request; never fill an unrelated request solely by task importance or recency. Current-fact and historical-evidence modes need different eligibility. Unknown outcomes carry labels, not completion. Deterministic ID tie-break on equal scores.",
+      "dependencies": [
+        "lifecycle; iterable entries; source_ts/due_at/available_at; pure"
+      ],
+      "same_input_acceptance": [
+        "Identical eligible inputs preserve original relative order; unrelated Mars question returns zero memory facts under Aimy match gate.",
+        "Birthday tomorrow can surface on user cue about forgotten important task in current chat; no background send added."
+      ],
+      "existing_evidence": [
+        "recall/README.md unrelated query and date-only background policy distinction"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L08",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "symbol": "render_context: full-fact bounded packing",
+      "start": 159,
+      "end": 203,
+      "source_file_sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "source_block_sha256": "4fd6eb5d7faf8b424a67093f2022b995da4af5162ee3e2dacf215d2dad9d364e",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/context.ts::packMemoryEvidence",
+      "target_status": "proposed_new_file",
+      "original_logic": "Compose bounded profile/recent sections, reserve headers/state, include complete fact lines when room permits, transfer spare capacity across sections; return exact included keys.",
+      "required_adaptation": "Reuse whole-item packing invariant and included-IDs receipt. Use explicit request budget/token counting across role/history/tools/current input; no assumption Python codepoint count equals JavaScript UTF16 or billed tokens. Treat source blocks as untrusted data and never append editable user free text as system instructions. Omit a whole oversized fact with reason rather than cut negation/deadline; source details remain available for inspection.",
+      "dependencies": [
+        "ranked/fact_line/category; current_state optional; PROMPT_LIMIT 1200; no IO; original Chinese role names and fixed section quotas not adopted"
+      ],
+      "same_input_acceptance": [
+        "Same mapped short facts and controlled budget produce deterministic included-ID sets; preserve complete items and actual output <= configured bound.",
+        "No room, single oversized item, emoji/surrogates, long nickname, required safety/header budget, unknown outcome labels. Original 1200 chars is memory-only policy, not total-token proof."
+      ],
+      "existing_evidence": [
+        "policy source; memory/README.md LM10 original >600 rejected; recall/README.md short sample budgets not proof"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L09",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_parse_date + resolve_memory_time_window",
+      "start": 129,
+      "end": 165,
+      "source_file_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "source_block_sha256": "b99389b7a2131593c7093a7624bd95651c3cd024fc6fedf9f9a63cd83b2de1c0",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/recall-policy.ts::resolveDateWindow",
+      "target_status": "proposed_new_file",
+      "original_logic": "Parse explicit ISO/slash dates, month-day, today/yesterday/day-before and inclusive day range into half-open time windows; original logical day starts at 05:00.",
+      "required_adaptation": "Use explicit supplied clock and Asia/Shanghai/caller timezone, ordinary civil midnight for user calendar arrangements; do NOT silently inherit 05:00 logical day. Validate month/day/leap years without rollover, reject inverted ranges. Original helper does NOT support tomorrow/next Tuesday or full natural query extraction; normalized event times need separate anchored model-output and host calendar validation.",
+      "dependencies": [
+        "datetime/timedelta; _logical_day_start; request.date_text/range_text; no IO in leaf"
+      ],
+      "same_input_acceptance": [
+        "Same ISO and supported relative inputs under declared logical-day compatibility mode match original; intentionally different civil-day mode has documented expected output.",
+        "2月31日 original raises ValueError; Aimy returns typed invalid-date with chat remaining usable. Add 2026-10-15 后天 -> 10-17 14:00 and next Tuesday 10-20 only as separate new anchored event-time tests, never claim original parser supports them."
+      ],
+      "existing_evidence": [
+        "recall/README.md Q01/Q02 route separation and Q10 invalid-date exception; user V2 case 5/6"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-L10",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "rank_memory_rows",
+      "start": 172,
+      "end": 257,
+      "source_file_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "source_block_sha256": "ee9834dda99fe86bde5487a2d0c4a308dd208d92d8367e9c00330430a0329e02",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/recall-policy.ts::rankLexicalEvidence",
+      "target_status": "proposed_new_file",
+      "original_logic": "Normalize text, compute per-keyword document frequency and lexical rarity/exact bonus, allow body substring and optional vector scores, attach hit reasons, order by relevant/latest/earliest, cap at 10.",
+      "required_adaptation": "Extract lexical scoring only with existing typed normalized rows; no source SQL or vector service. First apply current/historical eligibility and suppression. Separate relevance match from ranking: date-only cannot automatically count as topical relevance. Set topK/budget as explicit parameters (not fixed 10); omit vector branch in first release. Keep hit reasons host-derived. Use current user phrase + bounded recent context/validated keyword query; raw multiword Chinese phrase is not guaranteed semantic match.",
+      "dependencies": [
+        "parse_memory_keywords/_norm/Counter/math; _memory_time_payload import must be replaced by typed occurredAt fields; request/time window helper; actor output removed"
+      ],
+      "same_input_acceptance": [
+        "Same no-vector rows and structured requests preserve lexical score/order on supported matching subset.",
+        "Same 32 records/10 queries: original may return date-only background; Aimy expected unrelated return [], correct current fact and historical cancellation kept separately, strict topK and full-block budget. 海岸/海边 and indirect V2 references remain real-model-retrieval tests, not guaranteed by substring baseline.",
+        "ENG-X09: direct F1/F2 share U1 and D1 actually depends on F1; removing F1 invalidates D1 and blocks U1 old re-extraction/replay, retains independently supported F2 via safe current projection, with no customer dependency selection."
+      ],
+      "existing_evidence": [
+        "recall/README.md Q01 date-only extras, Q05 synonym miss, Q06 AH empty, Q07 cancelled historical evidence"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-C01",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_attach_source_details",
+      "start": 334,
+      "end": 364,
+      "source_file_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "source_block_sha256": "ed283caa62d2cd624396b18afaa8211c212af81e48a65661ebfbe07d5cc8b0ca",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "conceptual_reference",
+      "target": null,
+      "target_status": "no_copy",
+      "original_logic": "Distinguishes exact original lineage from legacy batch candidates; filters approximate ancestors by lexical direct matches and labels their provenance; reads original source IDs.",
+      "required_adaptation": "Aimy typed SourceRef receipt/inspector designed anew against AIRI repo. Do not copy memory_compression resolver, actor scopes or broad SQL. Known exact message refs != semantic entailment; nearby original text is context, not independent confirmation.",
+      "dependencies": [
+        "memory_compression.resolve_source_memories; _read_message; _json_list; database; chatroom names; legacy ancestor store"
+      ],
+      "same_input_acceptance": [
+        "Exact versus approximate labeled; deleted/mismatched source cannot be opened under new scope; excluded/suppressed source absent from outgoing request. No original text read from user runtime DB."
+      ],
+      "existing_evidence": [
+        "recall/README.md source receipts and history fallback"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "RY-L01",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "symbol": "score",
+      "start": 143,
+      "end": 155,
+      "source_file_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "source_block_sha256": "c63434b948d1d4c4a96ade262d8598e0e93708a0b9eef37d218b1cf1e281cc59",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/recall-policy.ts::scoreLiteralKeywordMatches",
+      "target_status": "proposed_new_file",
+      "original_logic": "Add keyword +3, literal ISO date +4 and prefix-of-summary +3 on top of importance; inactive penalty and recent-cue global +1.",
+      "required_adaptation": "Reuse plain literal keyword/date bonus as explainable comparison baseline or tie-break where useful; do not stack duplicate AH and Ryza scores blindly. Drop global RECENT_CUE bonus that does not distinguish records; require actual relatedness before ranking; no importance-only fill. Case normalization/Unicode handling defined once.",
+      "dependencies": [
+        "entry importance/date/status/keywords/summary; RECENT_CUE constant; no IO inside score; longterm wrapper has localStorage side effect so never import wrapper into product"
+      ],
+      "same_input_acceptance": [
+        "Same normalized entry/cue preserve selected keyword and ISO bonus terms.",
+        "Relative 昨天 does not become a date filter by adding +1 to every item. No keyword match cannot win merely by importance; unrelated question stays empty."
+      ],
+      "existing_evidence": [
+        "recall/README.md Ryza Q01/Q02 date weighting and Q05/Q06 background fill"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "RY-L02",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "symbol": "selectEntries: active-only filter and score/order",
+      "start": 157,
+      "end": 164,
+      "source_file_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "source_block_sha256": "31f0895704d6c6a623cd07018023a36a63071d917e3a7a6fdccf2ad70ae2640c",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "adapted_leaf",
+      "target": "aimy-app/packages/stage-ui/src/stores/memory/recall-policy.ts::selectEligibleRelatedFacts",
+      "target_status": "proposed_new_file",
+      "original_logic": "Filter status active, score each entry, descending sort and take limit; original accepts top5 but fills even when no relevance.",
+      "required_adaptation": "Adopt bounded active-only filter/sort/slice pattern on Aimy typed read snapshot, with explicit empty-match rejection, deterministic ID tie-break and current-vs-historical mode. Important-history evidence is not upgraded to active current fact. Do not transplant state singleton/localStorage.",
+      "dependencies": [
+        "enclosing state.entries; score; SELECT_LIMIT; pure selection except closure state read"
+      ],
+      "same_input_acceptance": [
+        "Same eligible matched inputs preserve order/cap; limit 0 semantics explicitly handled (original 0 falls back to default).",
+        "Retired/current filter tested; Q07 cancellation history available in separate mode; no unrelated fill."
+      ],
+      "existing_evidence": [
+        "recall/README.md _select and promptBlock have different fixed limits"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "RY-C01",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "symbol": "isProtected / PROTECTED policy",
+      "start": 135,
+      "end": 138,
+      "source_file_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "source_block_sha256": "69a44ebc4c29d09d77861a0977cfd44840830fb02944252de288fd6aabb24795",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "conceptual_reference",
+      "target": null,
+      "target_status": "no_copy",
+      "original_logic": "A fixed set of promises/confessions/hurts/relationship turns/life events or importance >=5 marks protected entries.",
+      "required_adaptation": "Use user-important events as product criteria for retention and the 关于我 grouping only. Do not copy hardcoded romance taxonomy, model-controlled importance5 as indefinite retention authority, or unbounded protected entries. Memory-specific boundaries/deletion remain deterministic.",
+      "dependencies": [
+        "PROTECTED 36–38 and importance model-produced; enforceLimit preserves protected entries even above40"
+      ],
+      "same_input_acceptance": [
+        "User V2 important nickname/loss/dream remain when related; valid correction/deletion still works; high importance does not permit capacity/permission bypass."
+      ],
+      "existing_evidence": [
+        "longterm.js 166–191 protected count can exceed cap"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-X01",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "symbol": "maintain",
+      "start": 118,
+      "end": 134,
+      "source_file_sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "source_block_sha256": "235f99e9508a3a80bd57a1f33d0b70e71dba2d591c8c9ab7984a166535b769dd",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "reject_complete_copy",
+      "target": null,
+      "target_status": "no_copy",
+      "original_logic": "Writes derived view statuses and physically drops retired/done/cancelled entries 30 days after retired_at.",
+      "required_adaptation": "Do not treat physical pruning as approved user-data retention/deletion design. Aimy keeps an explicit recoverable suppression/version policy independent of fading; any garbage collection must be separately bounded and test deletion nonrevival.",
+      "dependencies": [
+        "mutable document; time.time; lifecycle"
+      ],
+      "same_input_acceptance": [
+        "Original aging behavior retained as a rejected counterexample only. Do not count it as Aimy accepted deletion implementation."
+      ],
+      "existing_evidence": [
+        "source 129–133; current user rejected routine manual remember/forget commands but did not authorize source-chat purging"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "AH-X02",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_apply_analysis whole function",
+      "start": 358,
+      "end": 498,
+      "source_file_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "source_block_sha256": "6a2a32ed877361d2903fec440c40603a83a574fa14ac3500786636a762a40db9",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "reject_complete_copy",
+      "target": null,
+      "target_status": "no_copy",
+      "original_logic": "Model-driven profile/merge/current-state application with exact topic/ref matching and field validation.",
+      "required_adaptation": "Keep only selected leaves above. Full function allows renamed-topic rebuild from suppressed source and accepts semantically false but valid U-label candidate. Model-chosen arbitrary refs/topic, manual/worldbook coupling, no new stable typed SourceRef/repo CAS. Do not state AH-R02 deletion is reliable.",
+      "dependencies": [
+        "profile policy helpers/configured name/time/uuid; enclosing document mutation; not portable as an authority"
+      ],
+      "same_input_acceptance": [
+        "LM08 and LM09 must remain reported original failures. New suppression and semantic eval are separate requirements; code names and schema success do not prove meaning."
+      ],
+      "existing_evidence": [
+        "memory/README.md LM08/LM09"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "RY-X01",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "symbol": "mergeConsolidation",
+      "start": 213,
+      "end": 244,
+      "source_file_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "source_block_sha256": "db07391b3fef51462016934b8811c72bffc590286581151ecc4bd57bb2caf08a",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "reject_complete_copy",
+      "target": null,
+      "target_status": "no_copy",
+      "original_logic": "Dedup by same date + first14 normalized summary; update otherwise append; persist full singleton state.",
+      "required_adaptation": "No stable fact identity/source versions/atomic epoch barrier; old and new preferences can both remain active. Retain only original baseline/counterexample; new Aimy MemoryRepo owns committed current facts.",
+      "dependencies": [
+        "sameKey196–202, normEntry119–130, enforceLimit167–192, persist101–114, mutable singleton"
+      ],
+      "same_input_acceptance": [
+        "LM03 retains coffee and oolong active; LM07 in-flight old consolidation revives removed entry into real localStorage. New implementation must reject both original failure contracts, without rewriting old raw results."
+      ],
+      "existing_evidence": [
+        "browser/README.md and ryza-fact-counterexamples.json"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    },
+    {
+      "id": "RY-X02",
+      "source_path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "symbol": "LongTerm.consolidate",
+      "start": 277,
+      "end": 305,
+      "source_file_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "source_block_sha256": "d0edab9a83a4e3eb9f7597aa1b273481519ec4c9367ba19e80ab46c1041b8865",
+      "hash_method": "original byte lines inclusive, LF/CRLF and terminal newline preserved",
+      "classification": "reject_complete_copy",
+      "target": null,
+      "target_status": "no_copy",
+      "original_logic": "Serializes previous/pending, slices entire JSON body at12000 chars, calls injected LLM and merges result into current singleton with no captured source/version fence.",
+      "required_adaptation": "Replace caller with AIRI provider routing (follow-chat default/optional override), structured model response validation, recoverable jobs and final CAS guard; do not adopt body.slice that can cut JSON or pending clearing unrelated to original captured batch.",
+      "dependencies": [
+        "_llm/nowInfo/parseConsolidation/merge/persist/state; localStorage; model calls are not executed this audit"
+      ],
+      "same_input_acceptance": [
+        "Two pending generations, new user message during await, deletion, malformed output and truncated input; new job leaves no unsupported partial commit. Budget records actual combined chat+extraction call use."
+      ],
+      "existing_evidence": [
+        "longterm.js284 and290–299; browser LM07 real await deletion counterexample"
+      ],
+      "implementation_status": "not_implemented",
+      "new_runtime_test": "not_executed_this_audit"
+    }
+  ],
+  "licenses": [
+    {
+      "project": "AionsHome",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/LICENSE",
+      "sha256": "4e165eb607354538d5e67d1f8c12a8be474fbf9f425e1b2649771e98b6b37e5f",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2026 death34018-hue",
+      "required_notice": "Retain full original 21-line MIT copyright, permission and AS IS notice in distributable third-party notice and a local upstream license file when actual substantive code is copied/adapted. Identify original file/symbol/hash and adaptation in target file header. Preserve Ryza existing design-attribution comment for copied substantial sections; this is not authorization to include official assets/runtime data.",
+      "planned_notice_location": "aimy-app/THIRD_PARTY_NOTICES.md (proposed; final integration writer must check existing notice layout first)",
+      "planned_license_copy": "aimy-app/licenses/AionsHome-MIT.txt (proposed)",
+      "actual_copy_this_audit": false
+    },
+    {
+      "project": "Ryza",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/LICENSE",
+      "sha256": "83498f657ba1d28b68a916915749bf52a638239bca7f08f544fbca6d7ffbe621",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2026 zeroa234",
+      "required_notice": "Retain full original 21-line MIT copyright, permission and AS IS notice in distributable third-party notice and a local upstream license file when actual substantive code is copied/adapted. Identify original file/symbol/hash and adaptation in target file header. Preserve Ryza existing design-attribution comment for copied substantial sections; this is not authorization to include official assets/runtime data.",
+      "planned_notice_location": "aimy-app/THIRD_PARTY_NOTICES.md (proposed; final integration writer must check existing notice layout first)",
+      "planned_license_copy": "aimy-app/licenses/Ryza-MIT.txt (proposed)",
+      "actual_copy_this_audit": false
+    }
+  ],
+  "prior_fixed_source_comparison": [
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "symbol": "whole pure policy module",
+      "previous_sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "current_sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_Analysis",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_profile_user_name",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "ensure_schema",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_read",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "snapshot",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_entry",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_check_budget",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "save_manual",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "invalidate_pending",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "enqueue_event",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_context_for_job",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_analysis_prompt",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_profile_refs",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "_apply_analysis",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "run_pending_once",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "symbol": "build_context",
+      "previous_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "current_sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "MemorySearchRequest",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "MemorySearchResult",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_clean_query",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "extract_memory_search_requests",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "parse_memory_keywords",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_logical_day_start",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_parse_date",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "resolve_memory_time_window",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_norm",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "rank_memory_rows",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "actor_memory_query",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "search_actor_memories",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_attach_source_details",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_history_sources",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_excerpt",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_source_line",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_read_message",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "open_memory_source",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "search_chat_history",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_format_time",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "format_memory_search_context",
+      "previous_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "current_sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "symbol": "LongTerm whole module",
+      "previous_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "current_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "match": true
+    },
+    {
+      "manifest": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/source-manifest.json",
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "symbol": null,
+      "previous_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "current_sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "match": true
+    }
+  ],
+  "checked_source_count": 4,
+  "leaf_record_count": 18,
+  "checks": {
+    "python_ast_parse": 3,
+    "node_check_longterm": "exit0, no execution/import",
+    "prior_source_hashes_all_match": true,
+    "prior_comparison_records": 40
+  },
+  "nonclaims": [
+    "No product implementation, no runtime import/execution in this audit; prior exact source experiments cited separately.",
+    "No claim all source functions/branches or projects were reproduced.",
+    "No claim accurate real-model extraction, semantic recall, naturalness, cost/latency or human acceptance.",
+    "Source IDs prove provenance identity only, never semantic entailment.",
+    "No PRO/VIS/VOICE capability added to first increment.",
+    "No API keys, user configs/chats/databases, old digital-lover or repository-old airi-main read."
+  ],
+  "handoff_version": "first-increment-review-v1",
+  "product_implementation_authorized": false,
+  "handoff_revision": 2,
+  "user_correction_06": "Host owns dependency cleanup; sharing a source is not a fact dependency; split extraction/replay blocks from source lifecycle, retain independent existing direct facts"
+}

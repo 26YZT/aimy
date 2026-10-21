@@ -2,7 +2,8 @@ import { useLocalStorageManualReset } from '@proj-airi/stage-shared/composables'
 import { converter } from 'culori'
 import { defineStore } from 'pinia'
 
-export const DEFAULT_THEME_COLORS_HUE = 220.44
+/** Default dusty-rose accent sampled from the approved Aimy reference. */
+export const DEFAULT_THEME_COLORS_HUE = 0.21
 
 const convert = converter('oklch')
 const getHueFrom = (color?: string) => color ? convert(color)?.h : DEFAULT_THEME_COLORS_HUE
@@ -10,6 +11,14 @@ const getHueFrom = (color?: string) => color ? convert(color)?.h : DEFAULT_THEME
 export const useSettingsTheme = defineStore('settings-theme', () => {
   const themeColorsHue = useLocalStorageManualReset<number>('settings/theme/colors/hue', DEFAULT_THEME_COLORS_HUE)
   const themeColorsHueDynamic = useLocalStorageManualReset<boolean>('settings/theme/colors/hue-dynamic', false)
+  const mistyPinkDefaultApplied = useLocalStorageManualReset('settings/theme/misty-pink-default/v1', false)
+
+  // Replace only the old factory hue once; later manual choices and dynamic themes remain deliberate.
+  if (!mistyPinkDefaultApplied.value) {
+    if (themeColorsHue.value === 220.44 && !themeColorsHueDynamic.value)
+      themeColorsHue.value = DEFAULT_THEME_COLORS_HUE
+    mistyPinkDefaultApplied.value = true
+  }
 
   function setThemeColorsHue(hue = DEFAULT_THEME_COLORS_HUE) {
     themeColorsHue.value = hue

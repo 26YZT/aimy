@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-14",
+  "commands": [
+    {
+      "command": "python3 -B /tmp/aimy-20261014-remaining-kirara/checks.py",
+      "cwd": "/Users/mima1234/Documents/aimy",
+      "exit_code": 0,
+      "observations": 20
+    },
+    {
+      "command": "node /tmp/aimy-20261014-remaining-kirara/airi-checks.cjs",
+      "cwd": "/Users/mima1234/Documents/aimy",
+      "exit_code": 0,
+      "observations": 14
+    }
+  ],
+  "counts": {
+    "kirara": {
+      "positive": 8,
+      "rejection": 6,
+      "counterexample": 6,
+      "total": 20
+    },
+    "airi_adjacent": {
+      "positive": 6,
+      "rejection": 6,
+      "bounded_counterexample": 2,
+      "total": 14
+    }
+  },
+  "all_final_assertions_passed": true,
+  "meaning": "断言符合预期，包括有缺陷反例；不是34/34产品通过率或功能胜率",
+  "runtime_python": "3.12.10 (v3.12.10:0cc81280367, Apr  8 2025, 08:46:59) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "runtime_node": "v24.20.0",
+  "real_libraries": {
+    "typescript": "6.0.3",
+    "zod": "4.4.3"
+  },
+  "fingerprint": "f1e56e98786bbe968155b0027a135f66014cc43adaf72ae3807c7ead46af4f39",
+  "executed_source_hashes_unchanged_after_checks": true,
+  "semantic_full_files": 30,
+  "semantic_partial_files": 12,
+  "limitations": [
+    "纯离线叶子/引擎，所有动作和发送是假IO；未连接平台/模型/设备",
+    "Kirara注入假DTO，不冒充Pydantic验证/应用原生启动",
+    "AIRI真Zod和真状态/策略/工作流模块执行，无真实action executor/服务启动",
+    "元数据+规则差异没有真人效果A/B",
+    "已执行文件/函数哈希与语义全文阅读分别记录"
+  ],
+  "harness_failures_before_final_success": [
+    "Python注解T与EventBus注入遗漏已补，属于测试装配错误",
+    "AIRI @moeru/std最初从service目录解析缺失，改用已有stage-ui依赖，不安装",
+    "Discord arrow lexical this最初不正确，改用wrapper绑定；原回调体未修改"
+  ]
+}

@@ -77,10 +77,11 @@ export async function setupMainWindow(params: {
 
   setupConfig()
 
+  // Stored titles identify window settings independently of the visible product name.
   const mainWindowConfig = getConfig().windows?.find(w => w.title === 'AIRI' && w.tag === 'main')
 
   const window = new BrowserWindow({
-    title: 'AIRI',
+    title: 'Aimy',
     width: mainWindowConfig?.width ?? 450.0,
     height: mainWindowConfig?.height ?? 600.0,
     x: mainWindowConfig?.x,

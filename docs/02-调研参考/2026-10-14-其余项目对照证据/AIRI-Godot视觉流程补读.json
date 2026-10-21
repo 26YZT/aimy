@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-14",
+  "scope": "主写者定向全文阅读；不新增运行/制作验收",
+  "source": "/Users/mima1234/Documents/aimy/aimy-app/engines/stage-tamagotchi-godot/docs/technical-art-workflow.md",
+  "sha256": "2d2af8be5f1a8128200085528a2c82da9404dfcb59cce6b52dce9047c0506e3a",
+  "read": "全文",
+  "already_present": "Godot renderer/Technical Art视觉验收流程：参考图、同场景前后和中间渲染证据",
+  "inference_limit": "这份SOP不证明已有Kit组件切分/合并/UV恢复函数；也不能据本次DCC切片泛称AIRI没有制作知识或视觉验收流程",
+  "product_source_modified": false
+}

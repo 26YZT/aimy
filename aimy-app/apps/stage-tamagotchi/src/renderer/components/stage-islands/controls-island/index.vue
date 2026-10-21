@@ -2,13 +2,16 @@
 import { defineInvoke } from '@moeru/eventa'
 import { useElectronEventaContext, useElectronEventaInvoke, useElectronMouseInElement } from '@proj-airi/electron-vueuse'
 import { IS_DEV } from '@proj-airi/stage-shared'
-import { useSettings, useSettingsAudioDevice } from '@proj-airi/stage-ui/stores/settings'
+import { useSettings } from '@proj-airi/stage-ui/stores/settings'
+import { useVoiceControlsStore } from '@proj-airi/stage-ui/stores/voice-controls'
 import { ScrollableArea, useTheme } from '@proj-airi/ui'
 import { refDebounced, useFocusWithin, useIntervalFn, useMouseInElement, useMousePressed } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
 import { computed, reactive, ref, useId, useTemplateRef, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { toast } from 'vue-sonner'
 
+import ScreenShareControl from '../../screen-share-control.vue'
 import StatusIsland from '../status-island/index.vue'
 import ControlButtonTooltip from './control-button-tooltip.vue'
 import ControlButton from './control-button.vue'
@@ -51,12 +54,12 @@ const emit = defineEmits<Emits>()
 const { isDark, toggleDark } = useTheme()
 const { t } = useI18n()
 const placement = useControlsIslandPlacement()
-const { dock, isLeft, isTop, motionPhase } = placement
+const { isLeft, isTop, motionPhase } = placement
 
-const settingsAudioDeviceStore = useSettingsAudioDevice()
+const voiceControls = useVoiceControlsStore()
 const settingsStore = useSettings()
 const context = useElectronEventaContext()
-const { enabled } = storeToRefs(settingsAudioDeviceStore)
+const { microphoneEnabled, microphoneActive, microphonePending } = storeToRefs(voiceControls)
 const { alwaysOnTop, controlsIslandIconSize } = storeToRefs(settingsStore)
 const openSettings = useElectronEventaInvoke(electronOpenSettings)
 const isLinux = useElectronEventaInvoke(electron.app.isLinux)
@@ -72,24 +75,11 @@ const islandElement = useTemplateRef<HTMLElement>('island')
 const profileCreationActive = ref(false)
 const islandScrollArea = useTemplateRef<InstanceType<typeof ScrollableArea>>('islandScrollArea')
 const islandViewport = computed(() => islandScrollArea.value?.viewport)
-const islandContent = useTemplateRef<HTMLElement>('islandContent')
 const mainControlsElement = useTemplateRef<HTMLElement>('mainControls')
 const menuContent = useTemplateRef<HTMLElement>('menuContent')
-const menuScrollArea = useTemplateRef<InstanceType<typeof ScrollableArea>>('menuScrollArea')
-const menuViewport = computed(() => menuScrollArea.value?.viewport)
-const availableSpaceElement = useTemplateRef<HTMLElement>('availableSpace')
-const gapElement = useTemplateRef<HTMLElement>('gap')
 const menuId = useId()
 const profileOpen = ref(false)
-const { direction, scrollWholeIsland, panelStyle, layoutClasses: islandLayoutClasses, arrowRotation, motionOffset } = useControlsIslandLayout({
-  main: mainControlsElement,
-  menu: menuContent,
-  available: availableSpaceElement,
-  gap: gapElement,
-  viewport: islandViewport,
-  menuViewport,
-  content: islandContent,
-}, expanded, placement)
+const { direction, scrollWholeIsland, panelStyle, layoutClasses: islandLayoutClasses, arrowRotation, motionOffset } = useControlsIslandLayout(islandViewport, expanded)
 
 // Tracks open overlays/dialogs that should prevent auto-collapse (e.g. 'hearing', 'profile-picker')
 const blockingOverlays = reactive(new Set<string>())
@@ -174,6 +164,19 @@ function toggleAlwaysOnTop() {
   alwaysOnTop.value = !alwaysOnTop.value
 }
 
+const microphoneOn = computed(() => microphoneEnabled.value || microphonePending.value)
+const microphoneLabel = computed(() => t(microphoneOn.value ? 'stage.chat.voice-composer.microphone-disable' : 'stage.chat.voice-composer.microphone-enable'))
+
+async function toggleMicrophone() {
+  try {
+    await voiceControls.setMicrophoneEnabled(!microphoneOn.value)
+  }
+  catch (cause) {
+    if (!(cause instanceof Error) || cause.name !== 'AbortError')
+      toast.error(t('stage.chat.voice-composer.failed'))
+  }
+}
+
 function toggleControls() {
   expanded.value = !expanded.value
 }
@@ -201,7 +204,7 @@ const adjustStyleClasses = computed(() => {
   const icon = isLarge ? 'size-5' : 'size-3'
   const border = isLarge ? 'border-2' : 'border-0'
   const padding = isLarge ? 'p-2' : 'p-0.5'
-  return { icon, border, padding, button: `${border} ${padding}` }
+  return { icon, border, padding, button: `${border} ${padding} size-10! min-w-10! min-h-10! shrink-0!` }
 })
 
 const islandPositionClasses = computed(() => [
@@ -226,18 +229,9 @@ const islandMotionClasses = computed(() => {
 })
 const mainControlsLayoutClasses = computed(() => [
   'flex gap-1',
-  isTop.value ? 'flex-col-reverse' : 'flex-col',
+  'flex-col',
 ])
-const panelPositionClasses = computed(() => {
-  if (dock.value === 'top-left')
-    return ['origin-top-left']
-  if (dock.value === 'top-right')
-    return ['origin-top-right']
-  if (dock.value === 'bottom-left')
-    return ['origin-bottom-left']
-
-  return ['origin-bottom-right']
-})
+const panelPositionClasses = computed(() => ['origin-top-right'])
 
 /**
  * This is a know issue (or expected behavior maybe) to Electron.
@@ -271,32 +265,24 @@ function resetMainWindowPosition() {
       islandMotionClasses,
     ]"
   >
-    <!-- Probes track viewport/rem sizes without adding scrollable overflow. -->
-    <div aria-hidden="true" :class="['pointer-events-none invisible fixed size-0 overflow-hidden [contain:strict]']">
-      <div ref="availableSpace" :class="['h-[calc(100dvh-1rem)] w-[calc(100dvw-1rem)]']" />
-      <div ref="gap" :class="['size-3']" />
-    </div>
     <ScrollableArea
       ref="islandScrollArea"
-      orientation="both"
+      orientation="vertical"
       :class="['max-h-[inherit] max-w-[inherit]']"
       viewport-class="overscroll-contain"
     >
-      <div ref="islandContent" :class="['relative w-max flex', panelPresent ? 'gap-3' : '', islandLayoutClasses]">
+      <div :class="['relative w-max flex', panelPresent ? 'gap-3' : '', islandLayoutClasses]">
         <!-- iOS Style Drawer Panel -->
         <div
           :inert="!expanded"
           :aria-hidden="!expanded"
           :class="panelPresent ? 'contents' : 'pointer-events-none invisible absolute size-0 overflow-hidden [contain:strict]'"
         >
-          <ScrollableArea
+          <div
             :id="menuId"
-            ref="menuScrollArea"
             data-testid="controls-menu"
-            orientation="both"
             :style="panelStyle"
-            :class="['w-max shrink-0 rounded-2xl', panelPositionClasses]"
-            viewport-class="overscroll-contain"
+            :class="['w-max shrink-0', panelPositionClasses]"
           >
             <div
               ref="menuContent"
@@ -306,17 +292,18 @@ function resetMainWindowPosition() {
             >
               <div
                 :class="[
-                  'w-max flex flex-col gap-1 rounded-2xl border border-neutral-200 p-2 dark:border-neutral-800',
-                  'bg-neutral-100/80 shadow-2xl shadow-black/20 backdrop-blur-xl dark:bg-neutral-900/80',
+                  'w-max flex flex-col gap-1',
+
                 ]"
               >
                 <ControlsIslandAuthButton
                   :active="expanded"
+                  compact
                   :button-style="adjustStyleClasses.button"
                   :icon-class="adjustStyleClasses.icon"
                 />
 
-                <div grid grid-cols-3 gap-2>
+                <div :class="['flex flex-col gap-1']">
                   <ControlButtonTooltip disable-hoverable-content>
                     <ControlButton
                       v-track-button="{ name: 'controls_island_action', action: 'toggle_settings' }"
@@ -440,7 +427,7 @@ function resetMainWindowPosition() {
                 </div>
               </div>
             </div>
-          </ScrollableArea>
+          </div>
         </div>
 
         <!-- Main Controls -->
@@ -476,20 +463,32 @@ function resetMainWindowPosition() {
           />
 
           <ControlsIslandChatButton :button-style="adjustStyleClasses.button" :icon-class="adjustStyleClasses.icon" />
+          <ScreenShareControl compact use-stage-session :button-style="adjustStyleClasses.button" :icon-class="adjustStyleClasses.icon" @interaction-change="setOverlay('screen-sharing', $event)" />
 
           <ControlButtonTooltip side="inward">
             <ControlsIslandHearingConfig :show="blockingOverlays.has('hearing')" @update:show="setOverlay('hearing', $event)">
               <div class="relative">
-                <ControlButton :button-style="adjustStyleClasses.button">
+                <ControlButton
+                  data-testid="stage-microphone-button"
+                  :button-style="adjustStyleClasses.button"
+                  :aria-label="microphoneLabel" :aria-pressed="microphoneOn" :aria-busy="microphonePending"
+                  :title="`${microphoneLabel} · ${t('stage.chat.voice-composer.options-hint')}`"
+                  aria-haspopup="dialog" :aria-expanded="blockingOverlays.has('hearing')"
+                  @click.stop="toggleMicrophone()"
+                  @contextmenu.stop.prevent="setOverlay('hearing', true)"
+                  @keydown.down.stop.prevent="setOverlay('hearing', true)"
+                >
                   <Transition name="fade" mode="out-in">
-                    <IndicatorMicVolume v-if="enabled" :class="adjustStyleClasses.icon" />
+                    <IndicatorMicVolume v-if="microphoneActive" :class="adjustStyleClasses.icon" />
+                    <div v-else-if="microphonePending" i-svg-spinners:ring-resize :class="adjustStyleClasses.icon" />
+                    <div v-else-if="microphoneEnabled" i-ph:microphone :class="adjustStyleClasses.icon" />
                     <div v-else i-ph:microphone-slash :class="adjustStyleClasses.icon" text="neutral-800 dark:neutral-300" />
                   </Transition>
                 </ControlButton>
               </div>
             </ControlsIslandHearingConfig>
             <template #tooltip>
-              {{ t('tamagotchi.stage.controls-island.open-hearing-controls') }}
+              {{ microphoneLabel }} · {{ t('stage.chat.voice-composer.options-hint') }}
             </template>
           </ControlButtonTooltip>
 

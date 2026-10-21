@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-14",
+  "status": "环境/目录/隔离范围与文档核验通过；未重新构建或启动产品",
+  "manifest_count": 76,
+  "direct_symlink_count": 775,
+  "old_project_refs": [],
+  "node_declaration_mismatch_recorded": true,
+  "runtime_profile_proposal_not_applied": true,
+  "protected_product_files": 5336,
+  "protected_old_sample_files": 703,
+  "changed_code_or_added_removed_files": [],
+  "git_index_unchanged": true,
+  "navigation": {
+    "files": 7,
+    "links": 91,
+    "broken": []
+  },
+  "user_data_or_credentials_read": false,
+  "dependencies_installed_or_upgraded": false,
+  "desktop_started": false,
+  "product_build_or_runtime_revalidated": false
+}

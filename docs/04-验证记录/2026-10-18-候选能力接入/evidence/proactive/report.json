@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-18",
+  "status": "released-for-integration",
+  "productFiles": [
+    "packages/stage-ui/src/services/companion/followup.ts",
+    "packages/stage-ui/src/services/companion/review.ts",
+    "packages/stage-ui/src/stores/character/orchestrator/store.ts",
+    "packages/stage-ui/src/stores/character/index.ts"
+  ],
+  "tests": {
+    "chromiumRealIndexedDB": 15,
+    "nodeIncludingAiriOrchestratorRegression": 9,
+    "total": 24
+  },
+  "checks": {
+    "scopedEslint": "passed",
+    "followupReviewStandaloneTsc": "passed",
+    "desktopVueTsc": "blocked by concurrent App.vue missing companion/motion and stores/companion.ts ./speaking; no owned-file diagnostics"
+  },
+  "realModelCalls": 0,
+  "notes": [
+    "Daily cap counts admitted proactive rounds, not exact HTTP attempts in inherited content-array retry.",
+    "Root must cancel on provider route signature changes after generation as well as lifecycle/source changes.",
+    "Review is deterministic whole-entry grouping, not a model summary or compression quality claim.",
+    "Source identity uses root-supplied source content hash token and current predicate.",
+    "Speech map persists until finish; root cancelFollowups cancels only new internal notifications."
+  ]
+}

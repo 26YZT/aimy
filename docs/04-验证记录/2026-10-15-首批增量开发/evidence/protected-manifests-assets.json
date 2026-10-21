@@ -1,0 +1,397 @@
+{
+  "summary": {
+    "checked": 97,
+    "unchanged": true,
+    "changed": []
+  },
+  "files": [
+    {
+      "path": "aimy-app/apps/component-calling/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-pocket/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-pocket/src/assets/icons/modules/games/factorio.png",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi-kirie/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/build/icons/icon.png",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/electron-builder.config.ts",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-web/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/stage-web/src/assets/icons/modules/games/factorio.png",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/apps/ui-server-auth/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/docs/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/engines/stage-tamagotchi-godot/addons/vrm/node_constraint/icons/bone_node_constraint.svg",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/engines/stage-tamagotchi-godot/addons/vrm/node_constraint/icons/bone_node_constraint.svg.import",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/engines/stage-tamagotchi-godot/addons/vrm/node_constraint/icons/bone_node_constraint_applier.svg",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/engines/stage-tamagotchi-godot/addons/vrm/node_constraint/icons/bone_node_constraint_applier.svg.import",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/engines/stage-tamagotchi-godot/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/integrations/discord-bot/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/integrations/minecraft/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/integrations/satori-bot/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/integrations/telegram-bot/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/integrations/twitter-services/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/integrations/vscode/airi-plugin-vscode/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/integrations/vscode/vscode-airi/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/audio/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/better-ws/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/cap-vite/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/ccc/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/core-agent/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/core-character/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/electron-eventa/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/electron-screen-capture/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/electron-vueuse/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/font-chillroundm/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/font-cjkfonts-allseto/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/font-departure-mono/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/font-xiaolai/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/i18n/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/input-gamepad-vueuse/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/input-gamepad/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/input-playstation-dualsense-5/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/memory-pgvector/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/model-driver-lipsync/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/model-driver-magic-live2d/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/model-driver-mediapipe/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/motion-driver-magic/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/pipelines-audio/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/plugin-protocol/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/plugin-sdk-tamagotchi/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/plugin-sdk/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/provider-inference/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/applications/Apps.vue",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/applications/Finder.vue",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/applications/TrashFull.vue",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/applications/assets/apps.png",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/applications/assets/finder.png",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/applications/assets/trash-full.png",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/applications/index.ts",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/sf-symbol-like/Apple.vue",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/sf-symbol-like/Switch2.0.vue",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/sf-symbol-like/Wifi.vue",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/sf-symbol-like/index.ts",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/system/Folder.vue",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/system/assets/folder-common.png",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-browser/src/components/platforms/macos-26/icons/system/index.ts",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/scenarios-stage-tamagotchi-electron/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/server-runtime/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/server-sdk/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/server-shared/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-layouts/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-pages/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-shared/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-ui-live2d/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-ui-mmd/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-ui-spine/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-ui-tachie/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-ui-three/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/stream-kit/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/testing-audio/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/ui-loading-screens/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/ui-transitions/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/ui/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/unocss-preset-fonts/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/vite-plugin-sherpaw/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/packages/vitest-plugin-fakemic/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/plugins/airi-plugin-bilibili-laplace/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/plugins/airi-plugin-claude-code/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/plugins/airi-plugin-game-chess/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/plugins/airi-plugin-web-extension/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/pnpm-lock.yaml",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/server/apps/api/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/server/apps/auth/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/server/packages/auth-shared/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/server/packages/server-sdk-shared/package.json",
+      "unchanged": true
+    },
+    {
+      "path": "aimy-app/services/computer-use-mcp/package.json",
+      "unchanged": true
+    }
+  ]
+}

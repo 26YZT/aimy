@@ -1,0 +1,14 @@
+{
+  "version": "0.12.0-beta.5+aimy.20261020.1",
+  "checkedBuildFiles": 1382,
+  "inheritedFiles": 41188,
+  "mainChange": {
+    "source": "2edd1d51f01f1725b7c3f76ebe17b982c75f13cd99595833370f8c89d16f5763",
+    "packaged": "d2867301b4e17795ff09ea201d0c7829adeb796e2d2a50a30a8a3cee87311980",
+    "reason": "Disable upstream updater only in preview compiled copy"
+  },
+  "forbidden": [],
+  "asarSha256": "366649695a82f78653858a36b4cca42eb2fdb64769c6956c921791b18882462b",
+  "baselineSha256": "ea9d7b5a6e4c36076902b3eb21d30b0f0e9d63350a802813f7dd2ab8e8993b26",
+  "previewIdentityPreserved": true
+}

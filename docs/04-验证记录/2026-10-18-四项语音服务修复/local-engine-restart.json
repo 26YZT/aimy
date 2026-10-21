@@ -1,0 +1,16 @@
+[
+  {
+    "id": "voicevox",
+    "oldPid": 81779,
+    "newPid": 83079,
+    "restarted": true,
+    "version": "0.25.2"
+  },
+  {
+    "id": "aivis",
+    "oldPid": 81795,
+    "newPid": 83097,
+    "restarted": true,
+    "version": "1.2.0"
+  }
+]

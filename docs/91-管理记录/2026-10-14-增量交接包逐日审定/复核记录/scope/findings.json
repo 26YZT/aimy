@@ -1,0 +1,533 @@
+{
+  "date": "2026-10-14",
+  "review_status": "read-only independent scope/decision review; root final document check pending",
+  "product_root": "/Users/mima1234/Documents/aimy/aimy-app",
+  "writes_only": "/tmp/aimy-20261014-handoff-scope-review",
+  "source_policy": "只读aimy-app与根当前docs；外部复用归属仅据最新根报告，不重新拆解外部项目；不读旧产品/旧AIRI/真实数据/配置凭据，不联网安装启动模型产品，不spawn",
+  "day1": {
+    "selection": "A",
+    "human_answer_confirmed": true,
+    "meaning": "只确认首批功能范围，未授权写产品代码",
+    "shared_preconditions": [
+      "品牌收尾",
+      "本地/凭据/同步边界",
+      "退出/取消/采集保护"
+    ],
+    "first_batch": [
+      "自动记忆",
+      "查看更正删除",
+      "跨会话/重启相关召回",
+      "普通聊天中相关引用"
+    ],
+    "deferred": [
+      "独立开关后台主动续聊"
+    ],
+    "schema_ui_models_and_parameters": "尚未批准/冻结"
+  },
+  "already_answered": [
+    "AIRI为唯一产品基线",
+    "自动记忆无需逐条确认",
+    "相关时候主动想起，不能退化为只等手动搜索",
+    "间隔看一眼而非连续录制/变化汇总",
+    "收起聊天时角色仍在桌面可见",
+    "快速分批做、分批修",
+    "暂不跟上游，保留更新通道"
+  ],
+  "requirements": [
+    {
+      "requirement_id": "REQ-BASE-01",
+      "classification": "baseline_remediation",
+      "user_result": "保留现有桌面/角色/聊天；品牌收尾",
+      "implementation_mapping": "BASE-01/INT-01"
+    },
+    {
+      "requirement_id": "REQ-LOCAL-01",
+      "classification": "baseline_remediation",
+      "user_result": "默认不把配置/聊天同步；电脑操作/外发不开",
+      "implementation_mapping": "LOCAL-01/INT-01"
+    },
+    {
+      "requirement_id": "REQ-CHAT-01",
+      "classification": "existing_capability_with_regression",
+      "user_result": "文字/图片/历史与上次会话恢复",
+      "implementation_mapping": "BASE-01/SRC-01/INT-01"
+    },
+    {
+      "requirement_id": "REQ-LIFE-01",
+      "classification": "baseline_remediation",
+      "user_result": "独立授权、停止采集、拒迟到、退出",
+      "implementation_mapping": "LIFE-01/VIS-01/INT-01"
+    },
+    {
+      "requirement_id": "REQ-VOICE-01",
+      "classification": "existing_capability_quality_validation",
+      "user_result": "已有连续语音/插话先测，按真实缺口修",
+      "implementation_mapping": "VOICE-01/VOICE-02条件/INT-01"
+    },
+    {
+      "requirement_id": "REQ-MEM-01",
+      "classification": "product_increment",
+      "user_result": "从本人明确表达自动形成有源当前事实",
+      "implementation_mapping": "SRC-01/MEM-01/MEM-02"
+    },
+    {
+      "requirement_id": "REQ-MEM-02",
+      "classification": "product_increment",
+      "user_result": "跨会话/重启相关召回与来源",
+      "implementation_mapping": "SRC-01/MEM-01/MEM-03"
+    },
+    {
+      "requirement_id": "REQ-MEM-03",
+      "classification": "product_increment_with_mandatory_safety",
+      "user_result": "查看/更正/删除与已知源拒复活",
+      "implementation_mapping": "SRC-01/MEM-01/MEM-03"
+    },
+    {
+      "requirement_id": "REQ-MEM-04",
+      "classification": "product_increment_user_result",
+      "user_result": "普通聊天中自然引用相关记忆；不是后台定时器",
+      "implementation_mapping": "需首批映射MEM-03；原仅PRO-01需修"
+    },
+    {
+      "requirement_id": "REQ-PRO-01",
+      "classification": "product_increment_next_batch",
+      "user_result": "另开开关的持久后台续聊",
+      "implementation_mapping": "PRO-01；Day1 A后置"
+    },
+    {
+      "requirement_id": "REQ-VIS-01",
+      "classification": "existing_capability_productization",
+      "user_result": "已有Vision链补产品选源/启停/长间隔/预算",
+      "implementation_mapping": "VIS-01/VIS-02，非外部新增看屏"
+    },
+    {
+      "requirement_id": "REQ-CHAR-01",
+      "classification": "existing_capability_quality_validation",
+      "user_result": "已有角色/marker/语音表现协调与人格",
+      "implementation_mapping": "VOICE-01/CHAR-01；按证据改"
+    },
+    {
+      "requirement_id": "REQ-REL-01",
+      "classification": "experience_policy_no_new_economy",
+      "user_result": "称呼/边界/共同经历体现连续性；不新建好感经济",
+      "implementation_mapping": "MEM-02/MEM-03/CHAR-01；背景部分后置PRO-01"
+    },
+    {
+      "requirement_id": "REQ-OBS-01",
+      "classification": "engineering_acceptance_support",
+      "user_result": "脱敏诊断/调用耗时预算",
+      "implementation_mapping": "LIFE/LOCAL/VIS/INT；不算新增功能"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "BASE-01",
+      "classification": "baseline_remediation",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "LIFE-01",
+      "classification": "baseline_remediation",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "LOCAL-01",
+      "classification": "baseline_remediation",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "SRC-01",
+      "classification": "increment_supporting_engineering",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "MEM-01",
+      "classification": "increment_supporting_engineering",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "MEM-02",
+      "classification": "product_increment",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "MEM-03",
+      "classification": "product_increment",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "PRO-01",
+      "classification": "product_increment_next_batch",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "VIS-01",
+      "classification": "baseline_remediation_existing_vision",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "VIS-02",
+      "classification": "existing_capability_productization",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "VOICE-01",
+      "classification": "validation_only",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "VOICE-02",
+      "classification": "conditional_experiment_only",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "CHAR-01",
+      "classification": "existing_capability_quality_adaptation",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "INT-01",
+      "classification": "per_batch_integration_acceptance",
+      "status": "未实施；本轮无产品代码授权"
+    },
+    {
+      "task_id": "EXP-01",
+      "classification": "per_batch_user_experience_validation",
+      "status": "未实施；本轮无产品代码授权"
+    }
+  ],
+  "features": [
+    {
+      "feature_id": "F-MEM-SAVE",
+      "user_result": "她会自动记住少量明确事实，不用逐条批准",
+      "source_projects": [
+        "AIRI已有chat/Provider/去重/turn guard",
+        "AionsHome AH-R01/R02",
+        "Ryza RY03/RY08仅组织/管理参考"
+      ],
+      "reuse_unit": "来源白名单/原文版本复查/精确当前事实更新；候选库/manager/worker不整搬",
+      "frontend": "现有聊天保存反馈与settings/memory列表",
+      "local_backend": "durable user commit后排任务；新增MemoryRepo/Service沿既有IndexedDB、leader与Provider；source/version/lease/revision校验",
+      "acceptance": "固定候选工程写入/新进程恢复；真实模型另验本人/引用/否定/漏记，不靠全不写刷高",
+      "first_batch_scope": "A已确认；具体记忆内容/schema/model/参数仍待审定或技术设计",
+      "source_basis": "仅根当前docs最新同条件报告，不重读外部来源"
+    },
+    {
+      "feature_id": "F-MEM-MANAGE",
+      "user_result": "能看她记了什么、查来源、改错、删掉；已知旧来源不能后台重建",
+      "source_projects": [
+        "Aimy自管确定性删除/更正",
+        "AionsHome同ref/revision小规则",
+        "Ryza管理条目交互参考"
+      ],
+      "reuse_unit": "只借规则/交互；Aions改topic和Ryza在飞consolidate反例不得整搬",
+      "frontend": "填memory WIP；就地编辑/来源详情/删除范围/冲突/部分失败",
+      "local_backend": "稳定factKey/来源抑制屏障/历史与native continuation投影失效/原子envelope更新/分步来源清理",
+      "acceptance": "同mutation重试、更正、同ref和改topic/旧source/重启负例；真实provider payload无已知被删事实；不承诺全世界绝对擦除",
+      "first_batch_scope": "记忆查看更正删除已确认；是否同时物理删除来源聊天及影响范围仍需产品审定"
+    },
+    {
+      "feature_id": "F-MEM-RECALL",
+      "user_result": "她在你正常聊天时自己选相关资料并顺口想起，不用先打开后台主动",
+      "source_projects": [
+        "AIRI正常chat/context/Provider",
+        "AionsHome AH-R03",
+        "Ryza RY04"
+      ],
+      "reuse_unit": "日期/词法/来源回执/active状态规则；无关拒回与整条预算由Aimy自管，不宣称语义更强",
+      "frontend": "正常聊天自然引用；需要时展开来源，无手动检索前提",
+      "local_backend": "按本请求principal/character/session构造有效事实及历史证据；送实际Conversation前复查epoch；不塞全局context",
+      "acceptance": "跨会话、新进程、相关命中/无关空、明确日期/非法日期、取消历史证据与当前事实分层、删除后两协议请求负例",
+      "first_batch_scope": "A已确认；REQ-MEM-04应映射首批MEM-03及普通对话验收，不依赖后台Spark任务"
+    },
+    {
+      "feature_id": "F-BACKGROUND",
+      "user_result": "以后另开轻主动，闲下来能继续未完话题，用户回来或关闭就让位",
+      "source_projects": [
+        "AIRI Spark/character/voice呈现",
+        "AionsHome AH-R06"
+      ],
+      "reuse_unit": "持久计划与单次领取；原最终提交取消、会话绑定缺口需Aimy补",
+      "frontend": "独立开关默认关、安静/频次/预算/暂停原因",
+      "local_backend": "持久event状态、session/epoch/源版本、完整say/silence缓冲验证、提交前再验、unknown不补播",
+      "acceptance": "领取前/生成中/提交前用户回归或关闭、切会话、重复、新进程、silent/malformed；设备交付另验",
+      "first_batch_scope": "A明确下批；不能因AIRI已有Spark或PRO任务存在而自动开放"
+    },
+    {
+      "feature_id": "F-VISION",
+      "user_result": "授权后隔一会看指定窗口，知道何时看了、随时停止",
+      "source_projects": [
+        "AIRI自身；无外部新增归属"
+      ],
+      "reuse_unit": "沿已有Vision、skip-busy、推理队列、设置间隔/统计；补源选择/产品启停/撤权和陈旧保护",
+      "frontend": "现有vision页与控制岛补source/start/stop/长间隔/预算状态",
+      "local_backend": "现有Electron采集IPC+renderer/store，单owner、signal/epoch/source/session与滚动预算",
+      "acceptance": "系统授权迟到、stop/换源/隐藏/锁屏、旧结果不发布；采集/理解/开口分频；实际帧时间与费用明确",
+      "first_batch_scope": "用户目标已答，分批顺序/费用preset未定；Day1 A不自动纳首批"
+    },
+    {
+      "feature_id": "F-VOICE-CHAR",
+      "user_result": "原连续语音/角色继续可用；确认具体Bad Case后改善",
+      "source_projects": [
+        "AIRI自身",
+        "OLV/EOT/语音导演仅条件参考，不当必选"
+      ],
+      "reuse_unit": "既有voice/marker/renderer/角色卡；Smart Turn仅EOT，不能当等说完才打断",
+      "frontend": "保留hearing/speech/角色设置与同turn表现",
+      "local_backend": "先诊断既有链；撤权/取消前置；按真缺口改onset或EOT叶子，不引入第二音频runtime",
+      "acceptance": "耳机/外放、有效插话/嗯/噪声、开口到静音与说完到首声分开；正式资产/音色分别人验",
+      "first_batch_scope": "既有能力保留；实验/正式角色音色未定，不让它阻断首批文字记忆"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "SCOPE-P1-01",
+      "priority": "P1",
+      "status": "root已接受修复方案，待正式文档终核",
+      "title": "首批A的相关引用和分批体验被原PRO/INT/EXP闭包绑到后台主动及其他后批",
+      "evidence": [
+        {
+          "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/08-开发任务与交接.md",
+          "lines": [
+            125,
+            137,
+            213,
+            226,
+            251
+          ]
+        },
+        {
+          "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/追溯矩阵.json",
+          "selectors": [
+            "requirements[REQ-MEM-04].task_ids",
+            "tasks[INT-01].dependencies",
+            "tasks[EXP-01].dependencies"
+          ]
+        }
+      ],
+      "impact": "若按原图首批A无法独立验收普通对话相关回忆/本人使用，容易把后批能力暗中当首批前提",
+      "correction": "REQ-MEM-04普通聊天引用移到首批MEM-03；PRO-01仅后台续聊。保留15ID，INT/EXP按已选批次执行，首批INT只依MEM-03及其依赖，后批加入PRO/VIS/CHAR时再做条件回归；不宣称首批完成整个产品。"
+    },
+    {
+      "finding_id": "SCOPE-P2-02",
+      "priority": "P2",
+      "status": "root将收窄，待正式文档终核",
+      "title": "06的程序校验否定措辞超过当前可证确定性防线",
+      "evidence": [
+        {
+          "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/06-Prompt与角色体验.md",
+          "lines": [
+            27
+          ]
+        },
+        {
+          "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/03-技术设计.md",
+          "lines": [
+            156
+          ]
+        }
+      ],
+      "impact": "易把来源ID/regex/schema通过误报本人/否定语义正确，违背同条件LM09反例",
+      "correction": "程序负责结构/来源存在与版本/删除/预算；可判定的文本规则只作拦截；本人/引用/否定含义仍需模型与真实评测，歧义不写或正常澄清。不能改成逐条人工确认。"
+    },
+    {
+      "finding_id": "SCOPE-P2-03",
+      "priority": "P2",
+      "status": "保留旧正文；在最新审定页明确失效边界，待终核",
+      "title": "已答行为记录仍夹带过期源码判断，不能作为这轮实施现状",
+      "evidence": [
+        {
+          "path": "docs/01-决策记录/2026-10-13-三项产品行为与立项方法.md",
+          "lines": [
+            47,
+            57
+          ]
+        },
+        {
+          "path": "aimy-app/packages/stage-pages/src/pages/settings/modules/vision.vue",
+          "lines": [
+            380,
+            435
+          ]
+        },
+        {
+          "path": "aimy-app/services/computer-use-mcp/src/task-memory/manager.ts",
+          "lines": [
+            42,
+            85,
+            120
+          ]
+        }
+      ],
+      "impact": "从旧链接会把AIRI现有schema/记忆基础或Vision普通页间隔/统计误判全缺，重复开发",
+      "correction": "按root最新指令不再读取/改旧决定正文；新审定页保留用户目标有效，标旧源码判断已被当前aimy-app/最新报告替代。"
+    },
+    {
+      "finding_id": "SCOPE-P2-04",
+      "priority": "P2",
+      "status": "产品审定注意项，不阻断首批事实删除屏障",
+      "title": "同时删来源聊天的范围不是Day1 A已自动批准的行为",
+      "evidence": [
+        {
+          "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/05-界面与交互.md",
+          "lines": [
+            13,
+            27
+          ]
+        },
+        {
+          "path": "aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "lines": [
+            50,
+            53
+          ]
+        }
+      ],
+      "impact": "‘来源聊天’可能被理解为相关消息或整段会话；原helper只删session，不能静默扩大删除范围",
+      "correction": "首批事实forget/known-source屏障为核心；物理删来源的默认与消息/会话影响范围需单列给本人选择，界面具体列范围；不把helper删session等同逐事实遗忘。"
+    }
+  ],
+  "decision_rounds": [
+    {
+      "round": "Day1/第1轮",
+      "theme": "首批范围",
+      "status": "用户已确认A，仅范围批准",
+      "selected": "A 首批自动记忆+查看更正删除+相关召回；后台主动续聊下批",
+      "implementation_authorized": false,
+      "options": null
+    },
+    {
+      "round": "Day2/第2轮",
+      "theme": "自动记哪些内容",
+      "status": "尚未向用户提问；后续建议",
+      "options": [
+        {
+          "label": "偏好＋重要近况（建议）",
+          "tradeoff": "称呼/偏好/边界及明确重要经历自动记，琐碎闲聊少记；适合相关回忆"
+        },
+        {
+          "label": "偏好为主",
+          "tradeoff": "更少保存和误记，近期经历想起较少"
+        },
+        {
+          "label": "经历多一些",
+          "tradeoff": "共同经历覆盖更广，整理/纠错和调用成本更高；不等于永久存全部聊天"
+        }
+      ]
+    },
+    {
+      "round": "Day3/第3轮",
+      "theme": "删除范围",
+      "status": "尚未向用户提问；后续建议",
+      "options": [
+        {
+          "label": "首批只删记忆（建议）",
+          "tradeoff": "来源聊天保留但不得重新抽取该事实；更大范围源消息/会话删除另走独立动作，前期实现更小"
+        },
+        {
+          "label": "首批也提供删源选项",
+          "tradeoff": "删除对话框允许明确选择已知来源消息/会话的物理清理；操作更方便，影响范围/部分失败与清理成本更大"
+        }
+      ]
+    },
+    {
+      "round": "Day4/第4轮",
+      "theme": "首批怎样验收",
+      "status": "尚未向用户提问；后续建议",
+      "options": [
+        {
+          "label": "先合成案例后本人小样（建议）",
+          "tradeoff": "工程负例先过，再由本人提供几条非敏感例子看自然提起"
+        },
+        {
+          "label": "先只用合成案例",
+          "tradeoff": "可验规则和恢复，暂不宣称本人体验合格"
+        }
+      ]
+    },
+    {
+      "round": "Day5/第5轮",
+      "theme": "真实模型和费用",
+      "status": "尚未向用户提问；没有付费/联网授权",
+      "options": [
+        {
+          "label": "先一个指定BYOK模型（建议）",
+          "tradeoff": "用户给精确版本和费用上限，先形成可归因基线"
+        },
+        {
+          "label": "同预算对比两个模型",
+          "tradeoff": "选型证据更多，消耗和评审工作增加；仍先确认精确版本/预算"
+        }
+      ]
+    },
+    {
+      "round": "后续第6轮",
+      "theme": "后台主动的打扰方式；仅进入下一批时",
+      "status": "Day1已定下批，本轮不重问是否纳首批",
+      "options": [
+        {
+          "label": "低频文字续聊（建议）",
+          "tradeoff": "用户另开开关后只少量本地文字提醒，先看是否打扰"
+        },
+        {
+          "label": "允许语音开口",
+          "tradeoff": "陪伴感更直接，需额外真实声音/时机与提交取消验收"
+        },
+        {
+          "label": "继续只在对话中想起",
+          "tradeoff": "暂不开放后台发起，但不取消已答自动记忆和相关引用"
+        }
+      ]
+    },
+    {
+      "round": "后续第7轮",
+      "theme": "间隔看屏费用取舍；进入Vision批次时",
+      "status": "间隔看一眼的目标已答，不重问录制模式",
+      "options": [
+        {
+          "label": "省费用档（建议）",
+          "tradeoff": "更疏采样/理解，沿已有180秒建议档讨论，可能错过短画面"
+        },
+        {
+          "label": "更跟得上",
+          "tradeoff": "沿60秒建议档讨论；必须说明采样/理解/开口不同，达到调用额度暂停"
+        }
+      ]
+    },
+    {
+      "round": "后续独立轮次",
+      "theme": "角色/音色与人格体验",
+      "status": "等具体可比较资产/声音样本再问，不拿图标当批准",
+      "options": [
+        {
+          "label": "沿现有示例先验功能（建议）",
+          "tradeoff": "不阻塞文字记忆，正式角色体验仍未验"
+        },
+        {
+          "label": "先选正式资产和音色",
+          "tradeoff": "更早评真实协调，需要准备具体样本与许可/能力核验；不默认锁VRM"
+        }
+      ]
+    }
+  ],
+  "technical_owner_can_decide": [
+    "沿既有IndexedDB/repos/leader/Core请求端口，不新增Python/云后端",
+    "schema/key命名/单keyCAS与lease/revision/epoch等实现细节；在审定方案范围内自行解决",
+    "来源血缘、retry/import、per-request投影、native continuation失效与错误重试",
+    "具体文件边界/测试命令/依赖必要性/条件实验启停",
+    "source/删除/权限/预算确定性底线不可用用户体验批准替代",
+    "参数初值可以作为可调实验提案，但调用费用上限、实际Provider/正式音色、真实数据授权由本人定"
+  ],
+  "must_user_decide_before_dependent_action": [
+    "记忆内容及敏感边界的产品偏好",
+    "是否/何种范围物理删来源聊天；每次具体更大删除仍明确范围",
+    "真实模型/ASR/TTS精确版本与调用预算；当前仍仅离线授权",
+    "正式角色/人设/称呼/音色与可接受自然度",
+    "后台主动开口方式、打扰取舍；下批单独批准开放",
+    "看屏费用/响应取舍和真实系统授权；不重问已定间隔观察模式",
+    "本人真实日志参与评测必须明确授权/脱敏；非自动读库"
+  ],
+  "round_policy": "Day/轮次是审定主题推进，不是开发工期、日历日期、自动提醒或每轮同时提多问；只有当前一轮向本人展示，后续未作答保持未定",
+  "implementation_authorized": false,
+  "finality": "本报告只建议修正文档范围，不修改仓库；待root正式页终核"
+}

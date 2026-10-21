@@ -1,0 +1,7 @@
+[
+  {
+    "from": "aimy-app/apps/stage-tamagotchi/src/renderer/components/__screenshots__/InteractiveArea.browser.test.ts/interactive-area-synchronized-state-keeps-computer-automation-out-of-the-first-Aimy-increment-1.png",
+    "to": "/tmp/aimy-first-implementation-20261015/ui-unlocked/failure-screenshots/interactive-area-synchronized-state-keeps-computer-automation-out-of-the-first-Aimy-increment-1.png",
+    "sha256": "a2ff08e426678e05b5db1a124ce094d90cd5ce6d02820f94532952a510109289"
+  }
+]

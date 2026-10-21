@@ -1,0 +1,626 @@
+{
+  "date": "2026-10-14",
+  "status": "补核交付；真实效果与整项目全量复现未完成",
+  "baseline": "Aimy当前AIRI v0.12.0-beta.5主线及明确相邻service/integration；不混用旧airi-main或旧样机",
+  "comparison_rule": "同一标准不等于同一深度；源码差异、局部正确性、同输入、整应用和真实效果分别报告。缺失范围限定已核消费链。",
+  "project_coverage": [
+    {
+      "project": "AionsHome",
+      "source_and_caller_checked": "有界源码/任务/SQL/来源与生命周期",
+      "airi_counterpart_checked": "历史/compaction/notebook与独立task-memory已有；默认桌面陪伴持久事实闭环仍缺",
+      "offline_evidence": "既有24观察：10正例/9拦截负例/5反例；本轮不无谓重跑",
+      "same_input_comparison": "无同历史真实模型AB；属于机制与相邻基线比较",
+      "real_process": "合成SQLite新Python进程读取；不是完整FastAPI或AIRI恢复",
+      "new_delta_scope": "持久当前事实、逐条来源/管理/有效态召回、持久续聊机制；不是首次拥有merge/来源字段/陈旧guard",
+      "limitations": "错误语义仍可接受、同义topic绕屏障、派生正文保留、非法日期、禁用timer反例；真实效果未验",
+      "all_project_functions_tested": false,
+      "real_model_device_or_human_ab_completed": false,
+      "experience_stronger_proven": false
+    },
+    {
+      "project": "Ryza",
+      "source_and_caller_checked": "会话卡/分层保留/ISO关键词active选择/已存卡管理",
+      "airi_counterpart_checked": "AIRI已有task-memory merge/限额/轮次guard，已有MiMo style/text分离",
+      "offline_evidence": "既有17 Ryza观察+3 AIRI邻接；本轮不重跑",
+      "same_input_comparison": "字段/邻接函数级；无同用户历史真实LLM效果AB",
+      "real_process": "假storage新VM读回，不是新OS进程或完整应用",
+      "new_delta_scope": "卡/摘要层、重要类别策略、明确日期关键词选择、管理UI模式；可靠事实纠正/遗忘非已完成",
+      "limitations": "120字符/12000 JSON截断、昨天检索不准、冲突共存、假成功和删除复活；节奏/回声仍待AB",
+      "all_project_functions_tested": false,
+      "real_model_device_or_human_ab_completed": false,
+      "experience_stronger_proven": false
+    },
+    {
+      "project": "Open-LLM-VTuber",
+      "source_and_caller_checked": "固定后端+build对应前端；具体四类链路",
+      "airi_counterpart_checked": "实际speech主链、processNarrative、on-hit、Spark；不以未命中符号作全仓无能力",
+      "offline_evidence": "既有四类比较；本轮不重跑",
+      "same_input_comparison": "过滤/点击同输入；译播是真函数+假translator/TTS；不等于真实翻译质量AB",
+      "real_process": "真实函数/库局部执行，不是React/Electron/真实声音",
+      "new_delta_scope": "独立译播、区域/权重点击动作仅为条件候选",
+      "limitations": "翻译失败与开关清理反例；过滤算法不更强；模型/设备/自然度未验",
+      "all_project_functions_tested": false,
+      "real_model_device_or_human_ab_completed": false,
+      "experience_stronger_proven": false
+    },
+    {
+      "project": "kirara-ai",
+      "source_and_caller_checked": "新增4切片；typed图后端、字段元数据、组合路由、历史scope",
+      "airi_counterpart_checked": "真实computer-use workflow/state/strategy、provider schema+Zod、Discord gate/session路径",
+      "offline_evidence": "本轮Kirara20：8正/6拒/6反例；AIRI14：6正/6拒/2范围反证",
+      "same_input_comparison": "字符串顺序/字段/群聊文字有相同输入；图传值与假action拼接不等价，门控政策不同不判胜",
+      "real_process": "真实asyncio/线程池、Zod/引擎；DTO/容器/IO等是假，未启动服务/UI/平台",
+      "new_delta_scope": "用户定义Block+Wire后端、可配置组合规则→workflow两个有界后置差异",
+      "limitations": "条件kwargs、错运行时返回值、空AND组、extra_identifier反例；字段能力已有，不证整体更强",
+      "all_project_functions_tested": false,
+      "real_model_device_or_human_ab_completed": false,
+      "experience_stronger_proven": false
+    },
+    {
+      "project": "Charakuru",
+      "source_and_caller_checked": "production/导出源码及工序、PreviewAvatar/原90帧检查、AIRI实际loader",
+      "airi_counterpart_checked": "AIRI真实VRM loader/表达目标/物理消费；不把制作工具等于更强renderer；已有Godot视觉验收SOP，非本次DCC工序实现",
+      "offline_evidence": "本轮真Blender factory生产4函数及坏输入；两同合成GLB真loader/morph；共同90帧物理与Kit原检查",
+      "same_input_comparison": "同一合成资产两边实际加载、happy/aa/blink驱动及同采样90帧CPU物理",
+      "real_process": "独立Blender5.2.1 factory；真实Three/three-vrm CPU，未触当前用户场景",
+      "new_delta_scope": "生产侧组件/UV工序和成品检查有局部实现；不新增Aimy运行时功能",
+      "limitations": "无Tripo/真实角色/完整rig-weights-MToon-VRM导出/VRM addon/GPU/音素时序或美术验收；LookAt本轮仅识别，未验实际眼球转向",
+      "all_project_functions_tested": false,
+      "real_model_device_or_human_ab_completed": false,
+      "experience_stronger_proven": false
+    }
+  ],
+  "airi_adjacent_memory": {
+    "module": "services/computer-use-mcp/src/task-memory",
+    "already_has": [
+      "结构化更新输入接口",
+      "类型/非空校验",
+      "scalar/list merge",
+      "字符串去重/条数限制",
+      "sourceTurnId/sourceTurnIndex陈旧水位",
+      "done/newTask状态语义",
+      "MCP get/update/clear和上下文格式化"
+    ],
+    "still_missing_for_companion": [
+      "默认桌面已持久用户消息自动事实闭环",
+      "每事实原消息/版本来源",
+      "持久revision/CAS/删除屏障/恢复",
+      "逐事实纠正删除与有效态检索",
+      "字符/token预算"
+    ],
+    "actual_observations": 8,
+    "observation_counts": {
+      "positive": 2,
+      "negative_blocked": 1,
+      "scope_counterexample": 5
+    },
+    "limits": "原模块执行与新对象反证，不冒称服务重启或真实用户数据故障；优先审用现有纯叶子，不启电脑操作服务"
+  },
+  "new_kirara_differences": [
+    {
+      "slice_id": "KI-DIFF-F01",
+      "candidate_ids": [
+        "KI07"
+      ],
+      "capability": "用户定义 typed 积木连线的后端执行与块元数据",
+      "qualification": "有界源码/隔离功能差异；后置独立需求；本期未选入",
+      "actual_delta": "Kirara 注册 Block 输入输出类型，构造 Wire 并在执行器建图时检查声明类型，普通文本块确能沿图传值执行。AIRI 当前已核 computer-use 为步骤序列 WorkflowDefinition 和内置模板入口，并非没有 workflow；本次所核链未提供相同可编辑 Block+Wire 合同。",
+      "not_proven": "Vue 图编辑器不在来源树，未验证可视化编辑体验、YAML往返、并行、循环、恢复或总体可靠性；不声称全 AIRI monorepo 没有图编辑器，也不声称 Kirara workflow 比 AIRI 更强。",
+      "source": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+          "start": 74,
+          "end": 102
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/executor.py",
+          "start": 41,
+          "end": 97
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/executor.py",
+          "start": 162,
+          "end": 241
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/workflow/routes.py",
+          "start": 93,
+          "end": 144
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/builder.py",
+          "start": 437,
+          "end": 484
+        }
+      ],
+      "airi_adjacent": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/types.ts",
+          "start": 97,
+          "end": 178
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/engine.ts",
+          "start": 192,
+          "end": 243
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/engine.ts",
+          "start": 771,
+          "end": 907
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/server/register-tools.ts",
+          "start": 1189,
+          "end": 1269
+        }
+      ],
+      "positive_test_ids": [
+        "KI-P01",
+        "KI-P02"
+      ],
+      "rejection_test_ids": [
+        "KI-N01"
+      ],
+      "counterexample_test_ids": [
+        "KI-C01",
+        "KI-C02",
+        "KI-C03"
+      ],
+      "airi_test_ids": [
+        "KI-A01",
+        "KI-A02",
+        "KI-A03",
+        "KI-A04",
+        "KI-A05"
+      ],
+      "same_input_limits": "KI-P01/A01 同输入你好+世界：Kirara 原块真正拼接字符串；AIRI 原引擎只顺序派发，拼接来自假 action 记录器 calls.join。不能据此称同数据流任务对等、效果胜出或执行效率优越。A05仅测 step resolver，不覆盖下游 action 校验。",
+      "reuse_unit": "Block port metadata / declaration compatibility as bounded engineering design; require future actual user-defined behavior requirement before selecting a product feature.",
+      "estimated_cost": "L：需自行定义TS图协议/端口注册/编辑器/调试/循环与并发语义/撤权取消/迁移；不能靠复制执行器完成。",
+      "minimum_future_acceptance": [
+        "真实编辑器创建/保存/重启恢复同一图",
+        "类型错线、缺口、环、坏运行时返回值有确定结果",
+        "条件/循环正反例通过，失败与取消拒绝陈旧副作用",
+        "桌面对话/通知owner仍唯一，不启动第二陪伴runtime"
+      ],
+      "evidence_level": "current-source static caller tracing + actual leaf/runtime functions + explicit fake IO; no real model/device/UX AB",
+      "experience_stronger_proven": false,
+      "product_shortlist_selected": false,
+      "implementation_status": "研究未实施"
+    },
+    {
+      "slice_id": "KI-DIFF-F02",
+      "candidate_ids": [
+        "KI04",
+        "KI02"
+      ],
+      "capability": "字段标签、帮助、默认值、候选项与schema验证",
+      "qualification": "已有相邻产品能力；图块构造器反射属工程差异，不计新增功能",
+      "actual_delta": "Kirara 从 Annotated ParamMeta + 构造器反射生成输入/输出/配置元数据，GET /block/types输出给外部WebUI。AIRI当前provider schema已自带.meta标签/说明/选项/默认与实际Zod验证，普通设置读取元数据；不是AIRI缺字段帮助或schema。",
+      "not_proven": "Kirara未运行Pydantic/Quart/Vue，元数据API源码不等于自动表单UI已运行；AIRI已有字段能力也不等于所有设置自动生成。",
+      "source": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+          "start": 12,
+          "end": 63
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+          "start": 134,
+          "end": 187
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/type_system.py",
+          "start": 32,
+          "end": 74
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/routes.py",
+          "start": 18,
+          "end": 85
+        }
+      ],
+      "airi_adjacent": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/cloud/openai/index.ts",
+          "start": 14,
+          "end": 62
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenarios/providers/provider-generation-settings.vue",
+          "start": 18,
+          "end": 59
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/providers/chat/[providerId].vue",
+          "start": 84,
+          "end": 96
+        }
+      ],
+      "positive_test_ids": [
+        "KI-P03",
+        "KI-P04"
+      ],
+      "rejection_test_ids": [],
+      "counterexample_test_ids": [
+        "KI-C04"
+      ],
+      "airi_test_ids": [
+        "KI-A06",
+        "KI-A07",
+        "KI-A08",
+        "KI-A09"
+      ],
+      "same_input_limits": "合成布尔webSearch=false/default=false与帮助元数据；Kirara验证对象是原反射函数、包装DTO为假，不测试Pydantic类型校验；AIRI执行真实Zod4.4.3 schema，错误字符串false拒绝。测试范围不同，不能以此宣布一个库总体更强。",
+      "reuse_unit": "无需替换AIRI设置链；如未来选图编辑器，只借鉴块端口/参数元数据结构。",
+      "estimated_cost": "S作工程参考；完整通用图表单仍包含F01的L成本。",
+      "minimum_future_acceptance": [
+        "沿现有schema保留默认、禁用、错误与路由",
+        "不把元数据required=True等同实际校验规则",
+        "若选未来图表单需拿到对应前端版本实际编辑验证"
+      ],
+      "evidence_level": "current-source static caller tracing + actual leaf/runtime functions + explicit fake IO; no real model/device/UX AB",
+      "experience_stronger_proven": false,
+      "product_shortlist_selected": false,
+      "implementation_status": "研究未实施"
+    },
+    {
+      "slice_id": "KI-DIFF-F03",
+      "candidate_ids": [
+        "KI06",
+        "KI07"
+      ],
+      "capability": "可配置组合IM规则→优先级→第一个workflow路由",
+      "qualification": "有界声明式路由差异；现有IM收发/门控不是新增；本期后置且不能判更强",
+      "actual_delta": "Kirara组合prefix/chat_type等规则，按优先级选首个workflow，真实匹配/优先级逻辑已运行。AIRI Discord已有bot过滤、被提及或DM门控、规范化、sessionId分段和ServerChannel事件桥；差异是可配置多规则workflow选择，而非有没有IM或路由。",
+      "not_proven": "没有真实IM平台账号/收发、跨平台统一身份、市场安装或全部adapter协议测试；仅对当前Discord相邻链，不否认其他AIRI integration另有路由。",
+      "source": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+          "start": 23,
+          "end": 86
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/registry.py",
+          "start": 27,
+          "end": 45
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/dispatcher.py",
+          "start": 32,
+          "end": 62
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+          "start": 41,
+          "end": 58
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/sender_rules.py",
+          "start": 108,
+          "end": 127
+        }
+      ],
+      "airi_adjacent": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/adapters/airi-adapter.ts",
+          "start": 210,
+          "end": 287
+        }
+      ],
+      "positive_test_ids": [
+        "KI-P05",
+        "KI-P06",
+        "KI-P07"
+      ],
+      "rejection_test_ids": [
+        "KI-N02",
+        "KI-N03",
+        "KI-N04",
+        "KI-N05"
+      ],
+      "counterexample_test_ids": [
+        "KI-C05"
+      ],
+      "airi_test_ids": [
+        "KI-A10",
+        "KI-A11",
+        "KI-A12",
+        "KI-A13"
+      ],
+      "same_input_limits": "同一!你好群聊：Kirara按已配置prefix+group条件选择；AIRI按bot mention条件发送。两边各自政策不同，不以“回/不回”判效果更强；比较的是已执行的门控与可配置规则机制。",
+      "reuse_unit": "组合规则及first-match结构作为未来IM需求参考，不能直接采纳有缺陷匹配器；不把IM市场/统一运行时一起引入。",
+      "estimated_cost": "M路由规则，L若新增真实多平台账号/收发/身份/生命周期与权限；一期无IM目标。",
+      "minimum_future_acceptance": [
+        "空group不绕过其他AND条件",
+        "禁用/未知规则/无命中/并列优先级结果明确",
+        "每平台身份/会话/回复目标/取消退出独立验证",
+        "真实平台只在另获授权后验收"
+      ],
+      "evidence_level": "current-source static caller tracing + actual leaf/runtime functions + explicit fake IO; no real model/device/UX AB",
+      "experience_stronger_proven": false,
+      "product_shortlist_selected": false,
+      "implementation_status": "研究未实施"
+    },
+    {
+      "slice_id": "KI-DIFF-F04",
+      "candidate_ids": [
+        "KI01"
+      ],
+      "capability": "member/group/global聊天历史共享粒度",
+      "qualification": "工程参考；既有历史分段不当新事实记忆；更好召回未证",
+      "actual_delta": "Kirara的scope谓词可选择同群按成员隔离、群内共享或全局共享；ChatMemoryQuery/Store沿该scope读写历史。AIRI当前Discord已按guild/DM user导出sessionId，桌面会话历史不是缺失。",
+      "not_proven": "不等于自动事实提炼、语义召回、可靠来源删除、画像或跨源隔离；没有真人/模型记忆效果对照；global共享是选项，不是隔离优势。",
+      "source": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/builtin_scopes.py",
+          "start": 7,
+          "end": 55
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/memory_manager.py",
+          "start": 76,
+          "end": 119
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/memory/chat_memory.py",
+          "start": 63,
+          "end": 81
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/memory/chat_memory.py",
+          "start": 121,
+          "end": 161
+        }
+      ],
+      "airi_adjacent": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/adapters/airi-adapter.ts",
+          "start": 249,
+          "end": 271
+        }
+      ],
+      "positive_test_ids": [
+        "KI-P08"
+      ],
+      "rejection_test_ids": [
+        "KI-N06"
+      ],
+      "counterexample_test_ids": [
+        "KI-C06"
+      ],
+      "airi_test_ids": [
+        "KI-A12",
+        "KI-A14"
+      ],
+      "same_input_limits": "Kirara用g1/u1、g1/u2、g2/u1测scope关系；AIRI用g1/u1的两频道和DM测原sessionId行为。粒度合同不同，无同语义检索/召回质量评分，不宣称Kirara隔离更强。",
+      "reuse_unit": "仅scope维度/组合思路；原manager全缓存扫描会跨extra_identifier泄漏，不能作记忆复用叶子。",
+      "estimated_cost": "S纯维度参考；若未来多人共享/跨平台身份进入产品则M/L，不属当前主要单角色目标。",
+      "minimum_future_acceptance": [
+        "明确principal/character/session/source隔离维度",
+        "同用户不同extra_identifier互不可见，冷/热/重启均验证",
+        "来源删除及派生事实删除另走确定屏障",
+        "不以聊天留存验收事实记忆"
+      ],
+      "evidence_level": "current-source static caller tracing + actual leaf/runtime functions + explicit fake IO; no real model/device/UX AB",
+      "experience_stronger_proven": false,
+      "product_shortlist_selected": false,
+      "implementation_status": "研究未实施"
+    }
+  ],
+  "charakuru_loader_and_physics": {
+    "rows": [
+      {
+        "id": "minimal-no-face",
+        "bytes": 2436,
+        "airi": {
+          "humanoid": true,
+          "expressions": [],
+          "lookAt": false,
+          "springJoints": 0,
+          "mtoon": true,
+          "mouthBefore": [
+            null
+          ],
+          "mouthAfter": [
+            null
+          ]
+        },
+        "kit": {
+          "humanoid": true,
+          "expressions": [],
+          "lookAt": false,
+          "springJoints": 0,
+          "mtoon": true,
+          "mouthBefore": [
+            null
+          ],
+          "mouthAfter": [
+            null
+          ]
+        }
+      },
+      {
+        "id": "authored-capabilities",
+        "bytes": 4160,
+        "airi": {
+          "humanoid": true,
+          "expressions": [
+            "happy",
+            "aa",
+            "blink"
+          ],
+          "lookAt": true,
+          "springJoints": 1,
+          "mtoon": true,
+          "mouthBefore": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "mouthAfter": [
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "expressionResponses": {
+            "happy": [
+              1,
+              0,
+              0
+            ],
+            "aa": [
+              0,
+              1,
+              0
+            ],
+            "blink": [
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        "kit": {
+          "humanoid": true,
+          "expressions": [
+            "happy",
+            "aa",
+            "blink"
+          ],
+          "lookAt": true,
+          "springJoints": 1,
+          "mtoon": true,
+          "mouthBefore": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "mouthAfter": [
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "expressionResponses": {
+            "happy": [
+              1,
+              0,
+              0
+            ],
+            "aa": [
+              0,
+              1,
+              0
+            ],
+            "blink": [
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        "kit90FramePhysics": {
+          "version": 1,
+          "chains": 1,
+          "joints": 1,
+          "colliders": 0,
+          "chainResponses": [
+            {
+              "chain": "hair",
+              "maxPhysicsAngle": 1.2360521570692746
+            }
+          ],
+          "targets": [
+            {
+              "mesh": "HairMesh",
+              "maxPhysicsDisplacement": 0.23177100243859095
+            }
+          ],
+          "fixed": [],
+          "frames": 90,
+          "threshold": 9.46003957578991e-07
+        },
+        "commonPhysics": {
+          "airi": {
+            "frames": 90,
+            "maxVertexDisplacement": 0.11588149171171398,
+            "maxBoneAngle": 1.2360521570692757
+          },
+          "kit": {
+            "frames": 90,
+            "maxVertexDisplacement": 0.11588149171171394,
+            "maxBoneAngle": 1.2360521570692746
+          }
+        }
+      }
+    ],
+    "versions": {
+      "airiThree": "185",
+      "kitThree": "170",
+      "airiVRM": "3.5.5"
+    },
+    "negative": {
+      "externalURIRejected": true,
+      "requiredSpringMissingRejected": true
+    },
+    "networkDisabled": true,
+    "renderersGPUDevicesUsed": false,
+    "actualProductionAsset": false,
+    "limits": [
+      "same authored synthetic GLB, not output from Tripo/Blender Kit workflow",
+      "real AIRI loader+Kit PreviewAvatar with installed/vendored libraries; no browser/Electron GPU",
+      "expression manager influence proves morph driver only, not facial appearance",
+      "Kit 90 frame physics result/error recorded separately"
+    ]
+  },
+  "charakuru_blender_production": {
+    "blender": "5.2.1 LTS",
+    "factory_startup": true,
+    "current_user_scene_touched": false,
+    "executed_original_functions": [
+      "bounds",
+      "join",
+      "piece",
+      "restore_uv"
+    ],
+    "source_sha256": "eb82dd85dd941e4a75311dc1950ade581564ad89b019d1ed7fdf09df6d6244ff",
+    "component_topology_UV_preserved": true,
+    "partial_face_boundary_rejected": true,
+    "joined_mesh_faces": 2,
+    "restoreUV": {
+      "maxError": 0,
+      "tolerance": 1.4142135623730953e-05,
+      "faces": 1,
+      "scale": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "original_vertices_preserved": true,
+    "changed_topology_rejected": true,
+    "vrm_addon_enabled_in_factory": false,
+    "limits": [
+      "no Tripo/generated candidate/donor/user project",
+      "no full assembly/rig/weights/MToon export",
+      "blank in-memory texture, not generated artwork; no render/save user scene"
+    ]
+  },
+  "current_release_scope": "本期仍5个合并功能验证切片；Kirara两个差异后置单列；Charakuru生产侧，不自动扩PRD/任务/角色格式",
+  "product_code_changed": false,
+  "full_original_deconstruction_reproduction_completed": false,
+  "adjacent_source_review_notes": "2026-10-14-其余项目对照证据/AIRI-Godot视觉流程补读.json"
+}

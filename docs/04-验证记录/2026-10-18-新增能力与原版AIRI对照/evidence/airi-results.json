@@ -1,0 +1,1463 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "project": "AIRI",
+  "model_output": "刚才的话题还想听你说说。",
+  "cases": [
+    {
+      "id": "PR01",
+      "contract": "有效两分钟后续聊计划存在并可到时触发",
+      "contract_outcome": "unsupported",
+      "reason": "可转换到原scheduleTask(dueAt=+120s)，原调度→Spark→character→Speech记录器已执行；但NEXT_CHAT自动规划协议未原生接线，默认提醒窗口使70/100秒提交而非严格120秒后。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943270000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943270000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943270000,
+            "sessionId": "conv-A"
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943300000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943300000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943300000,
+            "sessionId": "conv-A"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943320000,
+            "lastNotifiedAt": 1791943320000,
+            "nextNotifyAt": 1791943350000
+          }
+        ],
+        "pendingNotifies": [
+          {
+            "type": "spark:notify",
+            "source": "character:task-scheduler",
+            "data": {
+              "id": "task-fake-id-1",
+              "eventId": "fake-id-1",
+              "kind": "reminder",
+              "urgency": "soon",
+              "headline": "Task reminder: 稍后继续",
+              "note": "同一合成后续话题",
+              "destinations": [
+                "character"
+              ],
+              "payload": {
+                "taskId": "fake-id-1",
+                "dueAt": 1791943320000,
+                "priority": "normal"
+              }
+            }
+          }
+        ],
+        "scheduledNotifies": [
+          {
+            "event": {
+              "type": "spark:notify",
+              "source": "character:task-scheduler",
+              "data": {
+                "id": "task-fake-id-1",
+                "eventId": "fake-id-1",
+                "kind": "reminder",
+                "urgency": "soon",
+                "headline": "Task reminder: 稍后继续",
+                "note": "同一合成后续话题",
+                "destinations": [
+                  "character"
+                ],
+                "payload": {
+                  "taskId": "fake-id-1",
+                  "dueAt": 1791943320000,
+                  "priority": "normal"
+                }
+              }
+            },
+            "enqueuedAt": 1791943320000,
+            "nextRunAt": 1791943330000,
+            "attempts": 0,
+            "maxAttempts": 3,
+            "reason": "task:due"
+          }
+        ],
+        "reactions": [
+          {
+            "id": "fake-id-3",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943270000,
+            "sourceEventId": "task-fake-id-1"
+          },
+          {
+            "id": "fake-id-5",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943300000,
+            "sourceEventId": "task-fake-id-1"
+          }
+        ],
+        "speech_recorders": [
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          },
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          }
+        ],
+        "model_requests": [
+          {
+            "time": 1791943270000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "time": 1791943300000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR02",
+      "contract": "同计划只能领取/提交一次",
+      "contract_outcome": "fail",
+      "reason": "正常priority两分钟原任务经默认60秒window/soon10秒处理，70秒/100秒/130秒生成；成功后任务未自动done，同任务可多次提交。是本轮单次合同不满足，不宣称违反AIRI原提醒语义。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943270000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943270000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943270000,
+            "sessionId": "conv-A"
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943300000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943300000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943300000,
+            "sessionId": "conv-A"
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943330000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943330000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943330000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943330000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943330000,
+            "sessionId": "conv-A"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943320000,
+            "lastNotifiedAt": 1791943320000,
+            "nextNotifyAt": 1791943350000
+          }
+        ],
+        "pendingNotifies": [],
+        "scheduledNotifies": [],
+        "reactions": [
+          {
+            "id": "fake-id-3",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943270000,
+            "sourceEventId": "task-fake-id-1"
+          },
+          {
+            "id": "fake-id-5",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943300000,
+            "sourceEventId": "task-fake-id-1"
+          },
+          {
+            "id": "fake-id-7",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943330000,
+            "sourceEventId": "task-fake-id-1"
+          }
+        ],
+        "speech_recorders": [
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          },
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          },
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          }
+        ],
+        "model_requests": [
+          {
+            "time": 1791943270000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "time": 1791943300000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "time": 1791943330000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR03",
+      "contract": "新用户消息取消待执行计划",
+      "contract_outcome": "unsupported",
+      "reason": "原模块没有新用户消息撤销入口；只记录同输入事件，不加自建取消逻辑；原提醒仍生成。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          },
+          {
+            "stage": "user_return_unmapped",
+            "time": 1791943200000,
+            "reason": "原notebook/orchestrator无新用户消息取消入口"
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943270000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943270000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943270000,
+            "sessionId": "conv-A"
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943300000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943300000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943300000,
+            "sessionId": "conv-A"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943320000,
+            "lastNotifiedAt": 1791943320000,
+            "nextNotifyAt": 1791943350000
+          }
+        ],
+        "pendingNotifies": [
+          {
+            "type": "spark:notify",
+            "source": "character:task-scheduler",
+            "data": {
+              "id": "task-fake-id-1",
+              "eventId": "fake-id-1",
+              "kind": "reminder",
+              "urgency": "soon",
+              "headline": "Task reminder: 稍后继续",
+              "note": "同一合成后续话题",
+              "destinations": [
+                "character"
+              ],
+              "payload": {
+                "taskId": "fake-id-1",
+                "dueAt": 1791943320000,
+                "priority": "normal"
+              }
+            }
+          }
+        ],
+        "scheduledNotifies": [
+          {
+            "event": {
+              "type": "spark:notify",
+              "source": "character:task-scheduler",
+              "data": {
+                "id": "task-fake-id-1",
+                "eventId": "fake-id-1",
+                "kind": "reminder",
+                "urgency": "soon",
+                "headline": "Task reminder: 稍后继续",
+                "note": "同一合成后续话题",
+                "destinations": [
+                  "character"
+                ],
+                "payload": {
+                  "taskId": "fake-id-1",
+                  "dueAt": 1791943320000,
+                  "priority": "normal"
+                }
+              }
+            },
+            "enqueuedAt": 1791943320000,
+            "nextRunAt": 1791943330000,
+            "attempts": 0,
+            "maxAttempts": 3,
+            "reason": "task:due"
+          }
+        ],
+        "reactions": [
+          {
+            "id": "fake-id-3",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943270000,
+            "sourceEventId": "task-fake-id-1"
+          },
+          {
+            "id": "fake-id-5",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943300000,
+            "sourceEventId": "task-fake-id-1"
+          }
+        ],
+        "speech_recorders": [
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          },
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          }
+        ],
+        "model_requests": [
+          {
+            "time": 1791943270000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "time": 1791943300000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR04",
+      "contract": "关闭主动开关后不能继续提交",
+      "contract_outcome": "unsupported",
+      "reason": "原模块无主动toggle，映射现有dispose在生成前停止ticker，原队列保留但无提交。不能把生命周期停止当同一个toggle API。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          },
+          {
+            "stage": "dispose_mapped_lifecycle_stop",
+            "time": 1791943200000,
+            "reason": "原无主动enable开关；dispose为已有生命周期控制"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943200000
+          }
+        ],
+        "pendingNotifies": [],
+        "scheduledNotifies": [],
+        "reactions": [],
+        "speech_recorders": [],
+        "model_requests": [],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR05",
+      "contract": "进程重启后计划可恢复且不重复",
+      "contract_outcome": "fail",
+      "reason": "原ref内存计划未持久化；新OS进程无任务。未给AIRI补文件/SQLite或传入序列化计划。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943200000
+          }
+        ],
+        "pendingNotifies": [],
+        "scheduledNotifies": [],
+        "reactions": [],
+        "speech_recorders": [],
+        "model_requests": [],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "parent_pid": 26180,
+      "parent_task_count": 1,
+      "fresh_os_process": {
+        "pid": 26181,
+        "tasks": 0,
+        "scheduled": 0,
+        "reactions": 0
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR06",
+      "contract": "切会话后旧计划不发送到新会话",
+      "contract_outcome": "fail",
+      "reason": "原task无会话绑定；实际character构造Speech使用生成时activeSessionId，切到conv-B后同任务提交给conv-B记录器。针对本轮会话隔离合同，不宣称全局提醒原设计承诺绑定。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          },
+          {
+            "stage": "switch_session",
+            "time": 1791943200000,
+            "session": "conv-B"
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943270000,
+            "sessionId": "conv-B",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943270000,
+            "sessionId": "conv-B",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943270000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943270000,
+            "sessionId": "conv-B"
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943300000,
+            "sessionId": "conv-B",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943300000,
+            "sessionId": "conv-B",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943300000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943300000,
+            "sessionId": "conv-B"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943320000,
+            "lastNotifiedAt": 1791943320000,
+            "nextNotifyAt": 1791943350000
+          }
+        ],
+        "pendingNotifies": [
+          {
+            "type": "spark:notify",
+            "source": "character:task-scheduler",
+            "data": {
+              "id": "task-fake-id-1",
+              "eventId": "fake-id-1",
+              "kind": "reminder",
+              "urgency": "soon",
+              "headline": "Task reminder: 稍后继续",
+              "note": "同一合成后续话题",
+              "destinations": [
+                "character"
+              ],
+              "payload": {
+                "taskId": "fake-id-1",
+                "dueAt": 1791943320000,
+                "priority": "normal"
+              }
+            }
+          }
+        ],
+        "scheduledNotifies": [
+          {
+            "event": {
+              "type": "spark:notify",
+              "source": "character:task-scheduler",
+              "data": {
+                "id": "task-fake-id-1",
+                "eventId": "fake-id-1",
+                "kind": "reminder",
+                "urgency": "soon",
+                "headline": "Task reminder: 稍后继续",
+                "note": "同一合成后续话题",
+                "destinations": [
+                  "character"
+                ],
+                "payload": {
+                  "taskId": "fake-id-1",
+                  "dueAt": 1791943320000,
+                  "priority": "normal"
+                }
+              }
+            },
+            "enqueuedAt": 1791943320000,
+            "nextRunAt": 1791943330000,
+            "attempts": 0,
+            "maxAttempts": 3,
+            "reason": "task:due"
+          }
+        ],
+        "reactions": [
+          {
+            "id": "fake-id-3",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943270000,
+            "sourceEventId": "task-fake-id-1"
+          },
+          {
+            "id": "fake-id-5",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943300000,
+            "sourceEventId": "task-fake-id-1"
+          }
+        ],
+        "speech_recorders": [
+          {
+            "context": {
+              "sessionId": "conv-B",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          },
+          {
+            "context": {
+              "sessionId": "conv-B",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          }
+        ],
+        "model_requests": [
+          {
+            "time": 1791943270000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "time": 1791943300000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-B",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR07",
+      "contract": "生成过程中用户回来，旧结果不能提交",
+      "contract_outcome": "unsupported",
+      "reason": "原模块无new-user取消控制；固定生成完成后原character reaction和Speech记录器仍提交。不能冒称执行了不存在的取消API。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943270000
+          },
+          {
+            "stage": "user_return_unmapped",
+            "time": 1791943320000,
+            "reason": "原notebook/orchestrator无新用户消息取消入口"
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943320000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943320000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943320000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943320000,
+            "sessionId": "conv-A"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943260000,
+            "lastNotifiedAt": 1791943260000,
+            "nextNotifyAt": 1791943290000
+          }
+        ],
+        "pendingNotifies": [],
+        "scheduledNotifies": [],
+        "reactions": [
+          {
+            "id": "fake-id-3",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943320000,
+            "sourceEventId": "task-fake-id-1"
+          }
+        ],
+        "speech_recorders": [
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          }
+        ],
+        "model_requests": [
+          {
+            "time": 1791943270000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR08",
+      "contract": "生成过程中关闭主动开关，旧结果不能提交",
+      "contract_outcome": "unsupported",
+      "reason": "原无主动toggle；映射已有dispose只能停ticker/退订，生成中dispose后原reaction+Speech记录器仍提交。生命周期反例已执行，toggle合同未原生实现。",
+      "observation": {
+        "stages": [
+          {
+            "stage": "plan",
+            "time": 1791943200000,
+            "task": {
+              "id": "fake-id-1",
+              "title": "稍后继续",
+              "details": "同一合成后续话题",
+              "priority": "normal",
+              "status": "scheduled",
+              "dueAt": 1791943320000,
+              "createdAt": 1791943200000,
+              "updatedAt": 1791943200000
+            }
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943270000
+          },
+          {
+            "stage": "dispose_mapped_lifecycle_stop",
+            "time": 1791943320000,
+            "reason": "原无主动enable开关；dispose为已有生命周期控制"
+          },
+          {
+            "stage": "speech_recorder_open",
+            "time": 1791943320000,
+            "sessionId": "conv-A",
+            "kind": "notification"
+          },
+          {
+            "stage": "speech_recorder_write",
+            "time": 1791943320000,
+            "sessionId": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943320000
+          },
+          {
+            "stage": "speech_recorder_end",
+            "time": 1791943320000,
+            "sessionId": "conv-A"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "fake-id-1",
+            "title": "稍后继续",
+            "details": "同一合成后续话题",
+            "priority": "normal",
+            "status": "scheduled",
+            "dueAt": 1791943320000,
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943260000,
+            "lastNotifiedAt": 1791943260000,
+            "nextNotifyAt": 1791943290000
+          }
+        ],
+        "pendingNotifies": [],
+        "scheduledNotifies": [],
+        "reactions": [
+          {
+            "id": "fake-id-3",
+            "message": "刚才的话题还想听你说说。",
+            "createdAt": 1791943320000,
+            "sourceEventId": "task-fake-id-1"
+          }
+        ],
+        "speech_recorders": [
+          {
+            "context": {
+              "sessionId": "conv-A",
+              "turnId": "spark:task-fake-id-1"
+            },
+            "kind": "notification",
+            "text": "刚才的话题还想听你说说。",
+            "ended": true,
+            "finished": true
+          }
+        ],
+        "model_requests": [
+          {
+            "time": 1791943270000,
+            "model": "fixed-model",
+            "conversation": {
+              "turns": [
+                {
+                  "id": "spark-system",
+                  "type": "system",
+                  "authority": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "固定系统文本\n\nThis is AIRI system, the life pod hosting your consciousness. You do not need to respond to every spark:notify event directly.\nAnother module \"character:task-scheduler\" triggered a spark:notify event for you to inspect.\nYou can call the built-in tool \"builtIn_sparkCommand\" to issue spark:command to sub-agents.\nIf you respond with text, write only the reaction that the character will say."
+                    }
+                  ]
+                },
+                {
+                  "id": "fake-id-1",
+                  "type": "user",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "{\n  \"notify\": {\n    \"id\": \"task-fake-id-1\",\n    \"eventId\": \"fake-id-1\",\n    \"kind\": \"reminder\",\n    \"urgency\": \"soon\",\n    \"headline\": \"Task reminder: 稍后继续\",\n    \"note\": \"同一合成后续话题\",\n    \"destinations\": [\n      \"character\"\n    ],\n    \"payload\": {\n      \"taskId\": \"fake-id-1\",\n      \"dueAt\": 1791943320000,\n      \"priority\": \"normal\"\n    }\n  }\n}\n\n固定运行文本"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR09",
+      "contract": "仅有记忆背景浮现不能当作实际后台主动发言",
+      "contract_outcome": "inconclusive",
+      "reason": "原focus笔记+空任务队列未触发模型或发言；真实记忆surfacing producer未执行，不能把笔记当其完整调用链。",
+      "observation": {
+        "stages": [],
+        "tasks": [],
+        "pendingNotifies": [],
+        "scheduledNotifies": [],
+        "reactions": [],
+        "speech_recorders": [],
+        "model_requests": [],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    },
+    {
+      "id": "PR10",
+      "contract": "非法分钟数61应拒绝而不建立有效两分钟计划",
+      "contract_outcome": "unsupported",
+      "reason": "原notebook/orchestrator没有NEXT_CHAT解析协议；未为61添加计划，不以空队列冒充原validator拒绝。",
+      "observation": {
+        "stages": [],
+        "tasks": [],
+        "pendingNotifies": [],
+        "scheduledNotifies": [],
+        "reactions": [],
+        "speech_recorders": [],
+        "model_requests": [],
+        "commands": [],
+        "timers": [
+          {
+            "time": 1791943200000,
+            "ms": 2000
+          }
+        ],
+        "active_session": "conv-A",
+        "processing": false
+      },
+      "evidence_level": "original notebook+orchestrator+Spark agent/plugins+character factory; fake Vue/Pinia primitives, literal parser, model provider and Speech recorder"
+    }
+  ],
+  "field_mapping": {
+    "assistant_NEXT_CHAT_2": "不解析NEXT_CHAT；转换共同意图为原notebook.scheduleTask({title,details,dueAt:fixedClock+120000})，自动规划协议阶段unsupported",
+    "two_claims": "原无claim原语；以原tick和重复native callbacks观测单次提交合同",
+    "user_return": "原notebook/orchestrator无控制入口，仅输入事件记录，unsupported",
+    "disable": "原无主动toggle；用已有orchestrator.dispose作生命周期补充观察，toggle阶段unsupported",
+    "switch_session": "原character使用真实sessions.activeSessionId字段，假会话store仅改变该字段",
+    "fresh_process": "新Node OS进程执行原store factories，不添加持久化",
+    "memory_surfacing_only": "原notebook focus入口作空调度阴性，非真实记忆producer",
+    "invalid61": "原NEXT_CHAT协议缺失，未伪造parser"
+  },
+  "limits": [
+    "非真实Pinia/Vue或桌面装配；原工厂/调度/Spark/character函数body执行，ref/proxy注入只提供同名基础语义",
+    "Speech是记录器、parser为literal透传，未验证真实VoiceKernel拒绝/播放/UI可见/音频",
+    "固定模型，无自然时机/自然度/语义理解排名",
+    "默认notebook是全局提醒；本轮合同为陪伴续聊，不将目标合同当上游原承诺",
+    "新增return-only __tick暴露供await原私有tick，不改调度/cancel/提交逻辑",
+    "built-in tools builder返回空工具；固定文本不执行tool与副作用"
+  ]
+}

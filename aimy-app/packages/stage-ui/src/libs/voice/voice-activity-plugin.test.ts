@@ -12,6 +12,7 @@ it('uses ordered VAD signals to capture, stream transcription, and submit to the
   const audio = new AudioInput({ live: true, open: () => source.stream }, { historyMs: 360 })
   const received: number[] = []
   const submit = vi.fn(async () => ({ status: 'committed' as const, messageId: 'accepted' }))
+  const silenceTimeout = vi.fn((duration: number) => duration < 2000 ? 64 : 128)
   let sessionId = 'alice'
   let attempt: SpeechInputAttempt | undefined
   const controller = new VoiceController({ audio, submit, transcriber: () => ({
@@ -31,7 +32,7 @@ it('uses ordered VAD signals to capture, stream transcription, and submit to the
     target: () => ({ sessionId, interruptTurns: [] }),
     onInput: () => { attempt = controller.activeInput },
     minSpeechMs: 32,
-    silenceMs: 64,
+    silenceTimeoutMs: silenceTimeout,
   }), { grants: ['input-control', 'cancel-input'] })
   await Promise.resolve()
   source.write({ range: { sourceId: 'mic', startFrame: 0, endFrame: 32 }, sampleRate: 1000, channels: [new Float32Array(32).fill(1)] })
@@ -40,6 +41,7 @@ it('uses ordered VAD signals to capture, stream transcription, and submit to the
   source.write({ range: { sourceId: 'mic', startFrame: 32, endFrame: 96 }, sampleRate: 1000, channels: [new Float32Array(64)] })
   expect(await attempt!.done).toEqual({ status: 'committed', messageId: 'accepted' })
   expect(received).toHaveLength(96)
+  expect(silenceTimeout).toHaveBeenCalledWith(32)
   expect(submit).toHaveBeenCalledWith(expect.objectContaining({ sessionId: 'alice', text: 'Hello' }), expect.any(AbortSignal))
   await controller.close()
 })

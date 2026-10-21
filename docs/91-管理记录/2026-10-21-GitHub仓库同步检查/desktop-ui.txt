@@ -1,0 +1,27 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./uno.config" without a file extension (apps/stage-tamagotchi/vitest.config.ts:12:23). Add the file extension
+  - import "../../uno.config" without a file extension (apps/stage-tamagotchi/uno.config.ts:4:54). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./uno.config" without a file extension (vitest.config.ts:12:23). Add the file extension
+  - import "../../uno.config" without a file extension (uno.config.ts:4:54). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./uno.config" without a file extension (vitest.config.ts:12:23). Add the file extension
+  - import "../../uno.config" without a file extension (uno.config.ts:4:54). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./uno.config" without a file extension (vitest.config.ts:12:23). Add the file extension
+  - import "../../uno.config" without a file extension (uno.config.ts:4:54). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[unocss] unmatched utility "scrollbar-color-[var(--scrollbar-thumb)_var(--scrollbar-track)]" in shortcut "scrollbar"
+[unocss] unmatched utility "scrollbar-width-auto" in shortcut "scrollbar"
+
+ Test Files  3 passed (3)
+      Tests  16 passed (16)
+   Start at  10:55:21
+   Duration  11.03s (transform 0ms, setup 41ms, import 8.60s, tests 7.60s, environment 0ms)
+

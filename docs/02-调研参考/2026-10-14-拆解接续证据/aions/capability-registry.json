@@ -1,0 +1,282 @@
+[
+  {
+    "key": "post_sentinel",
+    "name": "后置哨兵：画像与当前状态",
+    "category": "context",
+    "description": "后台维护两个 AI 共享的用户画像和活动状态。关闭后停止整理，并停止向聊天与巡逻注入这些资料；已保存内容仍可查看编辑。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 56
+  },
+  {
+    "key": "expressive_voice",
+    "name": "主动语音",
+    "category": "media",
+    "description": "",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 61
+  },
+  {
+    "key": "music",
+    "name": "点歌",
+    "category": "media",
+    "description": "注入 [MUSIC:歌曲名 歌手名]，让模型可以点歌或推荐音乐。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 62
+  },
+  {
+    "key": "cam_check",
+    "name": "查看监控/状态",
+    "category": "core",
+    "description": "注入 [CAM_CHECK]，让模型可以主动请求查看当前画面。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 63
+  },
+  {
+    "key": "schedule",
+    "name": "闹铃/日程/监督",
+    "category": "core",
+    "description": "注入闹铃、日程、定时监督和删除日程指令；关闭后也不注入当前日程列表。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 64
+  },
+  {
+    "key": "app_supervision",
+    "name": "应用监管",
+    "category": "core",
+    "description": "注入应用使用缓存、唤回聊天、整机专注和应用锁定/解锁指令；关闭后手机计时、上报和检查点唤醒全部静默。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 65
+  },
+  {
+    "key": "home",
+    "name": "智能家居",
+    "category": "life",
+    "description": "注入 [HOME:...]，让模型可以控制或查询 Home Assistant 设备。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 66
+  },
+  {
+    "key": "band_vibration",
+    "name": "手环呼唤",
+    "category": "life",
+    "description": "注入轻震/呼唤小纸条指令，让模型可以通过小米手环震动并显示一句话。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 67
+  },
+  {
+    "key": "hug_pillow",
+    "name": "拍拍抱枕控制",
+    "category": "life",
+    "description": "注入拍拍抱枕的拍打开关、调慢和调快指令。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 68
+  },
+  {
+    "key": "activity_check",
+    "name": "查看活动动态",
+    "category": "context",
+    "description": "注入 [查看动态:n]，让模型可以查看近期设备活动摘要。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 75
+  },
+  {
+    "key": "location_context",
+    "name": "位置上下文",
+    "category": "context",
+    "description": "注入当前位置/天气等上下文信息。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 76
+  },
+  {
+    "key": "poi_search",
+    "name": "周边 POI 搜索",
+    "category": "life",
+    "description": "注入 [POI_SEARCH:类型名]，仅在位置追踪开启且当前在户外时可用。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 77
+  },
+  {
+    "key": "video_call",
+    "name": "发起视频通话",
+    "category": "core",
+    "description": "注入 [视频电话]，让模型可以主动发起视频通话。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 78
+  },
+  {
+    "key": "wechat_message",
+    "name": "微信消息",
+    "category": "life",
+    "description": "注入 [微信消息：内容]，让模型可以在长时间联系不到用户时推送简短微信提醒。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 79
+  },
+  {
+    "key": "image_gen",
+    "name": "生成图片/自拍",
+    "category": "media",
+    "description": "注入 [SELFIE:...] / [DRAW:...]，让模型可以生成图片。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 80
+  },
+  {
+    "key": "song_gen",
+    "name": "生成歌曲",
+    "category": "media",
+    "description": "注入 [SONG]...[/SONG]，让模型可以写歌并触发歌曲生成。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 81
+  },
+  {
+    "key": "pet_action",
+    "name": "桌宠动作",
+    "category": "life",
+    "description": "注入 [PET:动作名]，让模型可以切换桌面宠物动作。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 82
+  },
+  {
+    "key": "widget_control_prompt",
+    "name": "自动提示桌面小组件能力",
+    "category": "life",
+    "description": "注入当前人物可用状态和小组件/横幅指令；关闭后只停止提示，不阻止指令执行。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 83
+  },
+  {
+    "key": "moment",
+    "name": "发布朋友圈",
+    "category": "social",
+    "description": "注入 [MOMENT:内容|true/false]，让模型可以在合适时发布朋友圈。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 89
+  },
+  {
+    "key": "pat",
+    "name": "AI 拍拍",
+    "category": "social",
+    "description": "让 AI 自己决定怎么拍：私聊里拍你或自己，群聊里也能拍另一位 AI。关闭只停用 AI 拍拍，你仍可手动拍拍，已有拍拍继续进入聊天上下文。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 90
+  },
+  {
+    "key": "memory_write",
+    "name": "写入记忆",
+    "category": "social",
+    "description": "注入 [MEMORY:内容]，让模型可以记录重要记忆。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 91
+  },
+  {
+    "key": "memory_search",
+    "name": "主动搜索记忆",
+    "category": "social",
+    "description": "注入 [MEMORY_SEARCH:查询|选项]（选项可省略），让当前角色在回答过去事实前搜索自己的记忆库。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 92
+  },
+  {
+    "key": "inner_monologue",
+    "name": "内心旁白",
+    "category": "social",
+    "description": "注入可见的 [心里嘀咕：xxx] 角色化内心旁白标记。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 99
+  },
+  {
+    "key": "wish",
+    "name": "许愿",
+    "category": "social",
+    "description": "注入 [许愿：内容]，让模型可以把自己的愿望投进许愿池。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 100
+  },
+  {
+    "key": "friend_visit",
+    "name": "拜访 AI 好友",
+    "category": "social",
+    "description": "注入 [LOUNGE_VISIT:好友 ID|话题]，让模型可在用户明确要求时拜访已配置好友。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 101
+  },
+  {
+    "key": "transfer",
+    "name": "钱包转账",
+    "category": "life",
+    "description": "注入 [转账：n元]，让模型可以在余额足够时转账。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 102
+  },
+  {
+    "key": "private_whisper",
+    "name": "群聊悄悄话",
+    "category": "special",
+    "description": "注入 [悄悄话：内容]，让群聊角色可以向私聊窗口发送悄悄话。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 103
+  },
+  {
+    "key": "toy",
+    "name": "SOSEXY · 密语玩具",
+    "category": "special",
+    "description": "注入 [TOY:1]~[TOY:9] / [TOY:STOP]，让密语模式下可以控制玩具。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 104
+  },
+  {
+    "key": "ankni",
+    "name": "ANKNI MX · AI 编排",
+    "category": "life",
+    "description": "按每段持续时间编排十种内置模式和停止，只有选中 ANKNI 时生效。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 105
+  },
+  {
+    "key": "svakom",
+    "name": "SVAKOM SL278H · AI 循环编排",
+    "category": "life",
+    "description": "独立控制 SL278H 的主体模式、主体震动力度和小部件拍打；关闭会停止 AI 编排，不影响手动控制。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 106
+  },
+  {
+    "key": "luckin",
+    "name": "瑞幸下单",
+    "category": "life",
+    "description": "注入 [LUCKIN:...]，让模型可以在明确要求时创建瑞幸订单。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 107
+  },
+  {
+    "key": "health_context",
+    "name": "健康数据",
+    "category": "context",
+    "description": "注入近期健康摘要。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 108
+  },
+  {
+    "key": "web_search",
+    "name": "联网搜索/网页读取",
+    "category": "context",
+    "description": "注入 [WEB_SEARCH:查询] / [WEB_EXTRACT:URL]，让模型可主动联网搜索或读取用户分享的网页。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 109
+  },
+  {
+    "key": "english_corner_reminder",
+    "name": "学习角学习提醒",
+    "category": "context",
+    "description": "在有正在学习的学习角卡片时注入一条克制、可关闭的自然提醒。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 110
+  },
+  {
+    "key": "cli_file_storage",
+    "name": "CLI 文件保存提示",
+    "category": "context",
+    "description": "对 Gemini CLI / Antigravity CLI / Codex CLI 模型注入文件保存目录提示。",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+    "line": 117
+  }
+]

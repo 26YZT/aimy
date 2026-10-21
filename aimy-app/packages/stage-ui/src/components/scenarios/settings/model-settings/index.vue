@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
+
 import type { ModelSettingsRuntimeSnapshot } from './runtime'
 
 import { ref } from 'vue'
@@ -25,7 +27,7 @@ defineEmits<{
   (e: 'extractColorsFromModel'): void
 }>()
 
-const previewStageRef = ref<{ capturePreviewFrame: () => Promise<Blob | undefined> }>()
+const previewStageRef = ref<InstanceType<typeof ModelSettingsPreviewStage>>()
 const runtimeSnapshot = ref<ModelSettingsRuntimeSnapshot>(createEmptyModelSettingsRuntimeSnapshot())
 
 async function capturePreviewFrame() {
@@ -36,6 +38,10 @@ function handleRuntimeSnapshotChanged(nextSnapshot: ModelSettingsRuntimeSnapshot
   runtimeSnapshot.value = nextSnapshot
 }
 
+function playVrmGesture(gesture: VrmGesture) {
+  return previewStageRef.value?.playVrmGesture(gesture) ?? false
+}
+
 defineExpose({
   capturePreviewFrame,
 })
@@ -43,6 +49,7 @@ defineExpose({
 
 <template>
   <ModelSettingsPanel
+    :play-vrm-gesture="playVrmGesture"
     :allow-extract-colors="allowExtractColors"
     :palette="palette"
     :runtime-snapshot="runtimeSnapshot"

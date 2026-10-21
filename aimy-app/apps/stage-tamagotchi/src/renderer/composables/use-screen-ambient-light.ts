@@ -7,8 +7,8 @@ import type {
 } from '../../shared/screen-ambient-light-diagnostics'
 
 import { errorMessageFrom } from '@moeru/std'
-import { useElectronScreenCapture } from '@proj-airi/electron-screen-capture/vue'
-import { useElectronAllDisplays, useElectronWindowBounds } from '@proj-airi/electron-vueuse'
+import { setupElectronScreenCapture } from '@proj-airi/electron-screen-capture/renderer'
+import { getElectronEventaContext, useElectronAllDisplays, useElectronWindowBounds } from '@proj-airi/electron-vueuse'
 import {
   ambientLightSampleFromHex,
   sampleScreenAmbientLight,
@@ -17,6 +17,7 @@ import {
   wholeWindowRectangle,
 } from '@proj-airi/stage-shared/screen-ambient-light'
 import { useScreenAmbientLightEnvironment, useSettingsScreenAmbientLight } from '@proj-airi/stage-shared/stores/screen-ambient-light'
+import { captureResourceStream, getResourcePolicy, onResourceRevoked, requestResourceAccess } from '@proj-airi/stage-ui/services/resource-policy'
 import { until, useBroadcastChannel, watchDebounced } from '@vueuse/core'
 import { clamp } from 'es-toolkit'
 import { storeToRefs } from 'pinia'
@@ -140,7 +141,7 @@ export function useScreenAmbientLight(sources: {
     selectWithSource,
     checkMacOSPermission,
     requestMacOSPermission,
-  } = useElectronScreenCapture(window.electron.ipcRenderer, sourcesOptions)
+  } = setupElectronScreenCapture(getElectronEventaContext())
 
   // The display the window mostly covers. It decides which screen the capture
   // opens, and `undefined` means the answer is not known yet: the display list
@@ -149,6 +150,16 @@ export function useScreenAmbientLight(sources: {
     if (!hasWindowBounds.value || displays.value.length === 0)
       return undefined
     return findDominantDisplayArea(currentWindowBounds(), displays.value)
+  })
+
+  if (getResourcePolicy())
+    screenAmbientLightEnabled.value = false
+  const offRevoked = onResourceRevoked((_, kind) => {
+    if (!kind || kind === 'screen') {
+      startVersion++
+      screenAmbientLightEnabled.value = false
+      stop()
+    }
   })
 
   watch([screenAmbientLightEnabled, screenAmbientLightSource], () => void restart(), { immediate: true })
@@ -228,11 +239,15 @@ export function useScreenAmbientLight(sources: {
   })
 
   onScopeDispose(() => {
+    offRevoked()
     startVersion += 1
     stop()
   })
 
   async function start(version: number) {
+    await requestResourceAccess('screen')
+    if (version !== startVersion)
+      return
     if (!context)
       throw new Error('Failed to create the screen sampling canvas')
 
@@ -257,7 +272,7 @@ export function useScreenAmbientLight(sources: {
     if (!display)
       throw new Error('No display is available for screen ambient light')
 
-    const stream = await selectWithSource(
+    const stream = await captureResourceStream('screen', () => selectWithSource(
       (sources) => {
         const screens = sources.filter(candidate => candidate.id.startsWith('screen:'))
         // Passing an empty id on would fail later inside the main process with
@@ -290,7 +305,8 @@ export function useScreenAmbientLight(sources: {
         video: captureConstraints(display.bounds, captureFrameRate.value),
         audio: false,
       }),
-    )
+      { sourcesOptions },
+    ))
 
     if (version !== startVersion) {
       stream.getTracks().forEach(track => track.stop())

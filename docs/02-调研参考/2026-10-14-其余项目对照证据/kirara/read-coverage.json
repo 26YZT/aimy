@@ -1,0 +1,496 @@
+{
+  "scope": "new targeted semantic reading for REMAIN-KI only; source hashing/AST selection/transpilation does not imply full semantic read",
+  "semantic_full": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/executor.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          291
+        ]
+      ],
+      "sha256": "52053038a02758903cbb4b7a7b98c7fe368e6cfefc5d3a80e8e429f3382abb4d"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/exceptions.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          5
+        ]
+      ],
+      "sha256": "e6b10f72fd1b9b26fd31e627c99f5d6fd81a09f34c22573d0a856acd12c5fcde"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/base.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          107
+        ]
+      ],
+      "sha256": "8a27be8411e9b03fa486bd43598e9bee5813acf734a5bd865e6ef1c30c40d454"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          200
+        ]
+      ],
+      "sha256": "400b31811d7e082990faf06c3d32628a06e1e51c46a1b8fbd6f17a0674c07c67"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/schema.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          39
+        ]
+      ],
+      "sha256": "48a159d4328fb27c539d56bc8a80e81b257052466ff07bb1643ff98753232f66"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/type_system.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          124
+        ]
+      ],
+      "sha256": "7eab70bef5a7015d9cd65a0c1921abc0eeee0f42ba87817c8d89444b7c1cfe6b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/input_output.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          35
+        ]
+      ],
+      "sha256": "4c1dc7e9f07a3169158b00cdbe5e7aca501aafc54c70fe2a5f7b5a597668c9d2"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/param.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          19
+        ]
+      ],
+      "sha256": "4c23232c5f2ad248b877981f299d5d0cc670964209a9059f413f595b9296893b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/base.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          34
+        ]
+      ],
+      "sha256": "5b3e126f3a12fc34a453e876cde43093f312b8bdc0b9f0eda68d9054822e31c4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/dispatcher.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          62
+        ]
+      ],
+      "sha256": "3e7f68e6dca0dc9aa43aa4324967951a54dee8bdc2a3c4c8511376e864a3a41e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/base.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          70
+        ]
+      ],
+      "sha256": "841df1ff969513116bf13391c185db559ac42baf6719646e4c84149ba01922bc"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          108
+        ]
+      ],
+      "sha256": "c47f97949360d438a4bbcd7d224709451b871619e78daf967889f02535f530ba"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/sender_rules.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          127
+        ]
+      ],
+      "sha256": "39d2987985840729b3a7dd745dcf4336ff9be921165b34b5e2fbce97b3176b48"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          86
+        ]
+      ],
+      "sha256": "2fa5d92788c9cf0de09a9518ab410a0271e09f3994abd0d3c266bd9efbaf7294"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/registry.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          185
+        ]
+      ],
+      "sha256": "c87f1a63f009c610c848eaa7e25b71596807beb34051706be1abefc8aa537231"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system/basic.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          139
+        ]
+      ],
+      "sha256": "7450357ac6cebb20926a0e55f6a5dd5dd5e335e64d77c5a4281937453f2d450e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/memory/chat_memory.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          161
+        ]
+      ],
+      "sha256": "b5aba2b8f3ce91d43204952a96ab7c9091970567056799cabd4172f8d963c52d"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/builtin_scopes.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          55
+        ]
+      ],
+      "sha256": "f81c3cc618f496b8a15c9d86bc4f809718f8540105d2219030bdc9082a652dd9"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/base.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "sha256": "ac034d5e8a8f6df6e49e1218afa9d63e0bdbb1b8b99dd4216c1546f000fc5fe0"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/memory_manager.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          169
+        ]
+      ],
+      "sha256": "ef9f6a21d0e7ad573639adcd0a7645777105483c66d74a4904f02e532a271016"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/adapter.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          94
+        ]
+      ],
+      "sha256": "53a87c74daa39a8cef4cde0abc3bb917a749b737d3665f1b41cf010b95a6671e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/routes.py",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          147
+        ]
+      ],
+      "sha256": "d1a1f5cd2319349002a77404d71483bbc94ea0dc45d794c6b16edc2c71e85cf1"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/types.ts",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          178
+        ]
+      ],
+      "sha256": "f5f292082e8e77afe4d16eca7fecd7080c29ee9806d579fb0cf54e38ee895505"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/index.ts",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          13
+        ]
+      ],
+      "sha256": "35dabfaebff1422a39e89fde4477139f8f3118a9cb139f74537576a5896ce344"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/utils/error-message.ts",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          18
+        ]
+      ],
+      "sha256": "7aca92ceeb21c63c47518104c1930cc2eb836a6b4045a27bc540cd65a228d844"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/cloud/openai/index.ts",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          114
+        ]
+      ],
+      "sha256": "a1a1a0c3bb0256042750495c36f9b9ef713e03299898d92c39303895ea1f0803"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/generation.ts",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          43
+        ]
+      ],
+      "sha256": "180da46fced45a22ee4322be4e7cf701ce95e031d4f8ef115d56a5e322f4b2d2"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenarios/providers/provider-generation-settings.vue",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          97
+        ]
+      ],
+      "sha256": "137e7988c76ccd475465435ce4cf5c5de5737fc12e34f4b4c50afe4b92a75e0a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/adapters/airi-adapter.ts",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          337
+        ]
+      ],
+      "sha256": "f3985458e440008e85dd6e140a2193739806e092b40952297f349aa7d4570271"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/index.ts",
+      "mode": "semantic_full_read",
+      "ranges": [
+        [
+          1,
+          38
+        ]
+      ],
+      "sha256": "149bcae7875a913a4c7a958e26dc7d56de93ab7db625bc7704e5f40385cc95fd"
+    }
+  ],
+  "semantic_partial": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/builder.py",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          205
+        ],
+        [
+          420,
+          495
+        ]
+      ],
+      "sha256": "06ffc44864da43b2e7c530ffc8969c92b45ed35128900e457563a97906a08032"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/workflow/routes.py",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          92,
+          215
+        ]
+      ],
+      "sha256": "43eeee459ac07660f4d406cb1c92f3611bac3bf7ff9bb85af8726b9f40ef2793"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/pyproject.toml",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "sha256": "7404a667c122ed7911e26a4e50f8a78679219469209993587c5efb9f083dd8b6"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/LICENSE",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          28
+        ]
+      ],
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/engine.ts",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          185,
+          355
+        ],
+        [
+          815,
+          1045
+        ]
+      ],
+      "sha256": "b84faf1eaca1a952569f0de552c9e321ddb15bf433a622c3118fb9d612ff2854"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/server/workflow-prep-tools.ts",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          135
+        ]
+      ],
+      "sha256": "06c1f936a8ce3e781ede88a902088895cbb768f96b7b357c0d28051ba67bfda2"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/server/register-tools.ts",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1178,
+          1270
+        ]
+      ],
+      "sha256": "b670761ade1b1ad2e160c0cad931a5e5e53fe5070148e84f92dcada35e92cd89"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/state.ts",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          65
+        ]
+      ],
+      "sha256": "066f70ea4305e61e5cb5ac4861094ab834f2d3f46fbbb5f9f8f0f5737b59a1fe"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/strategy.ts",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          75
+        ]
+      ],
+      "sha256": "28550a19f0eeb7199d568b15d1872fd75a5aa27556b08fea1c9cc06946bb9d4f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/terminal/interactive-patterns.ts",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          35
+        ]
+      ],
+      "sha256": "57c46f8134d4783a6a04903de391d74a4ddca47fcf7ccdf5a2ef04be8aa5124a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/engine.test.ts",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          1,
+          85
+        ]
+      ],
+      "sha256": "cb0b2f8ac354d04bc758d1a54c04f4f0638d7508eaad4c0e8d13b0c863d0d20e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/providers/chat/[providerId].vue",
+      "mode": "semantic_partial_read",
+      "ranges": [
+        [
+          55,
+          125
+        ]
+      ],
+      "sha256": "037cdac6aeaf4ff43273330052e08516a408cfce3666266a62d4cbc76e423c25"
+    }
+  ],
+  "scan_or_executed_only": [
+    "services/computer-use-mcp/src/app-aliases.ts",
+    "services/computer-use-mcp/src/transparency.ts",
+    "services/computer-use-mcp/src/workflows/surface-resolver.ts"
+  ],
+  "old_material": [
+    "2026-10-13-kirara-ai拆解复用评估.md全文（1–215为此前阶段，216–439本轮）",
+    "kirara-directed-checks.py全文为此前阶段；未本轮执行旧脚本"
+  ],
+  "not_read_or_not_exercised": [
+    "Kirara独立前端源码不在本树",
+    "Pydantic/Quart/ruamel完整库未安装及运行",
+    "Kirara WebAPI/YAML往返/真实IOC/各IM平台/模型/设备/安装/市场",
+    "AIRI整个monorepo全量语义阅读和所有integration路由",
+    "Kirara迁移/trace/插件exec本轮没有追加运行"
+  ],
+  "failed_paths_corrected": [
+    "尝试aimy-app/.../chat/ingest.ts与.../repos/chats.repo.ts不存在；本报告未据此作有无结论，AIRI历史比较只用实际Discord源码和已存在相邻链"
+  ]
+}

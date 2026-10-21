@@ -1,0 +1,29 @@
+- generic
+  - region "Notifications alt+T" [ref=e51]
+    - list
+  - main
+    - generic
+      - button "拖动以调整聊天大小" [ref=e52]
+      - button "ReLU" [ref=e53]
+        - StaticText "ReLU"
+      - button "静音语音" [ref=e54]
+      - button "聊天窗口样式" [expanded=false, ref=e55]
+      - button "收起聊天" [ref=e56]
+      - generic [ref=e60] focusable [tabindex]
+        - generic
+          - button "22:49" [ref=e63]
+            - time
+              - StaticText "22:49"
+          - generic
+            - button "Message actions" [expanded=false, ref=e64]
+            - paragraph
+              - StaticText "这是离线测试。请记住，我喜欢喝乌龙茶。"
+          - generic
+            - button "Message actions" [expanded=false, ref=e65]
+            - paragraph
+              - StaticText "这是离线测试模型的回应，用于验证界面和数据流。"
+      - textbox "说点什么..." [ref=e57]
+      - button "添加图片" [ref=e58]
+      - button "使用电脑" [ref=e59]
+      - button "语音消息" [ref=e61]
+      - button "发送消息" [disabled, ref=e62]

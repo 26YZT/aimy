@@ -192,6 +192,15 @@ describe('interactive area synchronized state', () => {
     await page.viewport(1280, 720)
   })
 
+  it('keeps computer automation out of the first Aimy increment', async () => {
+    const { screen, chat } = await renderArea()
+    const send = vi.spyOn(chat, 'send').mockImplementation(async payload => ({ messages: [], sessionId: payload.sessionId }))
+    await submitDraft(screen, 'synthetic desktop chat')
+    await vi.waitFor(() => expect(send).toHaveBeenCalledTimes(1))
+    expect(screen.container.querySelector('[data-testid="computer-use-toggle"]')).toBeNull()
+    expect(send.mock.calls[0]?.[0].tools?.some(tool => tool.name.startsWith('computer_use'))).toBe(false)
+  })
+
   it('centers the mobile textarea when no reply preview is visible', async () => {
     // ROOT CAUSE:
     //

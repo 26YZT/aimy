@@ -1,0 +1,23 @@
+Executable=/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/package/Aimy体验版.app/Contents/MacOS/airi
+Identifier=ai.aimy.preview
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=296 flags=0x2(adhoc) hashes=3+3 location=embedded
+VersionPlatform=1
+VersionMin=786432
+VersionSDK=1705216
+Hash type=sha256 size=32
+CandidateCDHash sha256=2359a6575505fb6e571abb733d3985fdbc943555
+CandidateCDHashFull sha256=2359a6575505fb6e571abb733d3985fdbc9435551131b6099a1d8e6c9a985b38
+Hash choices=sha256
+CMSDigest=2359a6575505fb6e571abb733d3985fdbc9435551131b6099a1d8e6c9a985b38
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=16384
+Executable Segment flags=0x1
+Page size=16384
+CDHash=2359a6575505fb6e571abb733d3985fdbc943555
+Signature=adhoc
+Info.plist entries=34
+TeamIdentifier=not set
+Sealed Resources version=2 rules=13 files=312
+Internal requirements count=0 size=12

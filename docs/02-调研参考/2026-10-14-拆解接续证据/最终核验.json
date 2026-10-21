@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-14",
+  "status": "passed",
+  "formal_reports": 5,
+  "airi_checkpoints": 84,
+  "airi_dimensions": 9,
+  "decision_units": 57,
+  "verdict_counts": {
+    "借鉴设计": 31,
+    "弃用": 18,
+    "直接复用": 8
+  },
+  "airi_original_tests": {
+    "files": 12,
+    "passed": 130
+  },
+  "ryza_original_memory_regression_passed": 41,
+  "candidate_isolated_observations": {
+    "aions": 10,
+    "ryza": 13,
+    "olv": 14,
+    "total": 37,
+    "meaning": "包括预期缺陷复现与正向保护，非真实产品验收"
+  },
+  "product_files_verified_unchanged": 5336,
+  "product_files_changed": [],
+  "original_archives_and_reports_unchanged": 28,
+  "original_archives_changed": [],
+  "git_index_bytes_unchanged": true,
+  "original_byte_copies": 51,
+  "copy_hash_errors": [],
+  "airi_anchor_checks": 84,
+  "markdown_local_links_checked": 613,
+  "link_errors": [],
+  "table_column_errors": [],
+  "credential_prefix_scan_hits": [],
+  "limitations": [
+    "真实设备/模型/体验/打包未运行",
+    "没有全仓逐行语义审计声明",
+    "未选择架构/数据库/角色格式/音色",
+    "原始来源和检查语义按各证据文件限定"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-15",
+  "scope": "document-only handoff review; no implementation approval",
+  "findings": [
+    {
+      "id": "R-A1",
+      "issue": "actual airi-card module path",
+      "status": "closed",
+      "resolution": "01 table uses stores/modules/airi-card.ts"
+    },
+    {
+      "id": "R-A2",
+      "issue": "actual user message callback name",
+      "status": "closed",
+      "resolution": "03 uses onUserMessageAppended"
+    },
+    {
+      "id": "R-C1",
+      "issue": "Memory/InternalJob/App envelopes and owner-only resolver",
+      "status": "closed",
+      "resolution": "04 and API catalog separate validators; stop independent from memory CAS"
+    },
+    {
+      "id": "R-C2",
+      "issue": "journal must be durably discoverable via session index",
+      "status": "closed",
+      "resolution": "03 specifies same-store atomic session+journal+index adapter, no Memory global transaction"
+    },
+    {
+      "id": "R-C3",
+      "issue": "real request finite output, HTTP attempt reservation, post-budget guard, baseline adapter paths",
+      "status": "closed",
+      "resolution": "03/05/06 and file/trace catalogs updated"
+    },
+    {
+      "id": "R-U1",
+      "issue": "host impact preview for maintenance",
+      "status": "closed",
+      "resolution": "memory.source maintenancePreview + exact transaction recompute in memory.remove"
+    },
+    {
+      "id": "R-U2",
+      "issue": "automatic extraction switch entry",
+      "status": "closed",
+      "resolution": "About Me global switch, existing memory still recallable when off"
+    },
+    {
+      "id": "R-U3",
+      "issue": "full onboarding flow compatibility coverage",
+      "status": "closed",
+      "resolution": "existing onboarding browser test added to allowlist, X08 asserts order/skip/default"
+    },
+    {
+      "id": "R-U4",
+      "issue": "Electron smoke unintentionally collected by normal Vitest",
+      "status": "closed",
+      "resolution": "rename .electron-smoke.ts, required isolated args, not .test.ts"
+    }
+  ],
+  "remaining_implementation_or_model_results": "not run; user review pending",
+  "reports": [
+    {
+      "path": "evidence/UI与验收独立复核.md",
+      "sha256": "f83dcd8dd71f7d28ad63507faf59091a9a14bbd80c7bea507f99e57adc01c8ac"
+    },
+    {
+      "path": "evidence/复用独立复核.md",
+      "sha256": "dcf637b5c498cde8185354c1ab4bedf581683321e60e8851d553bdf6307d53bb"
+    },
+    {
+      "path": "evidence/契约修订闭合.md",
+      "sha256": "368cdead433c92d0ecd1eebce05910a8e2b2bac99c48ced2f69a61b33c682b9f"
+    }
+  ],
+  "subsequent_user_corrections": [
+    {
+      "question_number": 6,
+      "original_finding": "R-U1 host impact preview for maintenance",
+      "disposition": "superseded_by_human_requirement",
+      "current_rule": "no customer dependency selection; host automatic selective cleanup",
+      "original_reviews_scope": "initial draft only; not approval or runtime evidence for revised contract v3"
+    }
+  ]
+}

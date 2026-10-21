@@ -344,7 +344,7 @@ describe('createChatOrchestratorRuntime', () => {
     await expect(harness.runtime.ingest('show partial output', {
       model: 'gpt-test',
       chatProvider: provider,
-    })).rejects.toThrow('stream interrupted')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
 
     expect(harness.sessionMessages['session-1']?.at(-1)).toMatchObject({
       role: 'assistant',
@@ -367,7 +367,7 @@ describe('createChatOrchestratorRuntime', () => {
     await expect(harness.runtime.ingest('search for this', {
       model: 'gpt-test',
       chatProvider: provider,
-    })).rejects.toThrow('search interrupted')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
 
     expect(harness.sessionMessages['session-1']?.filter(message => message.role === 'assistant')).toHaveLength(0)
     expect(harness.foregroundResets).toHaveLength(1)
@@ -930,7 +930,7 @@ describe('createChatOrchestratorRuntime', () => {
     await expect(harness.runtime.ingest('first turn fails', {
       model: 'gpt-test',
       chatProvider: provider,
-    })).rejects.toThrow('stream interrupted')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
     await harness.runtime.ingest('second turn succeeds', {
       model: 'gpt-test',
       chatProvider: provider,
@@ -948,7 +948,7 @@ describe('createChatOrchestratorRuntime', () => {
     await expect(harness.runtime.ingest('hello', {
       model: 'gpt-test',
       chatProvider: provider,
-    })).rejects.toThrow('provider rejected')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
     expect(harness.settled).toEqual([{ sessionId: 'session-1', turnId: 'user-id', status: 'failed' }])
 
     expect(harness.telemetry.chatActivationStarted).toEqual([{
@@ -994,7 +994,7 @@ describe('createChatOrchestratorRuntime', () => {
     await expect(harness.runtime.ingest('second turn fails', {
       model: 'gpt-test',
       chatProvider: provider,
-    })).rejects.toThrow('later turn rejected')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
 
     expect(harness.telemetry.chatActivationFailed).toEqual([])
     expect(harness.telemetry.messageRoundFailed).toEqual([

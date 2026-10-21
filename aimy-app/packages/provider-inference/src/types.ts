@@ -150,6 +150,8 @@ export interface ProviderModelCatalog {
 }
 
 export interface ProviderExtraMethods<TConfig> {
+  /** Explicitly public catalogs run without resolving stored credentials. Other catalogs retain secure access. */
+  publicCatalogs?: { models?: true, voices?: true }
   listModelCatalog?: (config: TConfig, provider: ProviderInstance, contextOptions?: ProviderContext) => Promise<ProviderModelCatalog>
   listModels?: (config: TConfig, provider: ProviderInstance, contextOptions?: ProviderContext) => Promise<ModelInfo[]>
   /**

@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-15",
+  "status": "implemented_and_targeted_tests_passed_returned_to_root",
+  "files": [
+    {
+      "path": "packages/stage-ui/src/services/speech/speech-client.ts",
+      "sha256": "a71849d7d48e6552497273b0a3fba8950f7c37b76a8503ce01bc6588be0fbbe7"
+    },
+    {
+      "path": "packages/stage-ui/src/services/speech/speech-client-acceptance.test.ts",
+      "sha256": "4f3113d47ba5cd57be8eebd9523ac0172e432a954ae46fc200359885310346bb"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/speech.ts",
+      "sha256": "749c1f1fbffc25b9256805a6522287bde250c843e19a64ab058306460a8151ad"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/speech-acceptance.browser.test.ts",
+      "sha256": "abc0469ae60212b3b8f165bc7588aa12fbf0deb1e96048007c8845b3fbdb9000"
+    },
+    {
+      "path": "packages/stage-ui/src/libs/speech/streaming-pipeline.ts",
+      "sha256": "40bb9dc154afa77fb92ef03ba81ead2cfb195e4f183ae8e6e6467bd8635ea91a"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/modules/speech.vue",
+      "sha256": "232849e8179dabdbd7915b71235c82a4fd2f867b2a93b6a5dea98764499c9183"
+    }
+  ],
+  "scope": "First acceptance campaign only: installed getAcceptanceBudget() disables speech charges. Ordinary product without a campaign retains its speech path.",
+  "changes": [
+    "SpeechClient automatic dispatch returns closed without throwing into text chat. This also covers the existing character chain and queued admission.",
+    "Speech store returns null synthesis before provider setup and after awaited provider setup. Manual synthesis is rejected before provider.speech/generateSpeech.",
+    "Streaming speech consumes ordinary text until EOF and returns no audio. Raw streaming pipeline checks before WebSocket creation and each send/open.",
+    "The global speech settings preview bypassed speechStore.speech, so the existing page now checks before setup and before its direct generateSpeech call. Other 16 provider preview callsites already go through speechStore.speech."
+  ],
+  "checks": [
+    {
+      "command": "pnpm exec vitest run --config /tmp/aimy-first-implementation-20261015/tts/vitest.config.mts",
+      "exit_code": 0,
+      "files": 3,
+      "tests": 9,
+      "log": "node-tests.log",
+      "log_sha256": "2b667a66e72fe40e64b334b46ac3880204ecbd30370aca98bf8cd2ea3f049181"
+    },
+    {
+      "command": "pnpm exec vitest run --config /tmp/aimy-first-implementation-20261015/tts/vitest.browser.config.mts",
+      "exit_code": 0,
+      "files": 1,
+      "tests": 1,
+      "log": "browser-tests.log",
+      "log_sha256": "3fb7e5fdb8d10ab013a5a905de38acc5d5ba305c5ac2512617d6b2f4afe70891"
+    },
+    {
+      "command": "pnpm exec eslint [six scoped files]",
+      "exit_code": 0,
+      "warnings": 2,
+      "note": "Existing speech.ts comment-length warnings",
+      "log": "lint.log",
+      "log_sha256": "6b1d8ee7317c6aaaffb09fb4ab96aca7972b7968918653880a77277b51ad297a"
+    },
+    {
+      "command": "git diff --check -- [runtime paths]",
+      "exit_code": 0
+    }
+  ],
+  "evidence": [
+    "Ordinary non-campaign SpeechClient sends all four original commands. Ordinary manual speech reaches the synthetic provider and SDK once.",
+    "Campaign host dispatch, provider.speech, SDK generateSpeech, playback and speech budget reservations are all zero.",
+    "A provider opened before campaign installation is awaited, then suppressed before synthesis.",
+    "An actual VoiceController text response completes normally with null synthesis and no audio playback.",
+    "A campaign streaming sink waits for text EOF instead of ending early and breaking the response."
+  ],
+  "remaining": "Root final integrated typecheck/build covers these six files. No separate full-workspace typecheck was duplicated in this small follow-up.",
+  "real_model_or_audio_provider_calls": 0,
+  "product_scope_unchanged": true,
+  "git_index_or_commit_changes": false
+}

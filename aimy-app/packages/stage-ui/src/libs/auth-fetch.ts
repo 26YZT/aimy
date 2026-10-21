@@ -1,3 +1,4 @@
+import { assertCloudReplicaAllowed } from '../services/local-data-policy'
 import { useAuthStore } from '../stores/auth'
 import { getAnalyticsIdentitySnapshot } from './product-signals'
 import { SERVER_URL } from './server'
@@ -22,9 +23,17 @@ export async function authedFetch(
   input: RequestInfo | URL,
   init?: RequestInit,
 ): Promise<Response> {
+  const requestUrl = new URL(typeof input === 'string' ? input : input instanceof URL ? input.href : input.url, SERVER_URL)
+  const serverUrl = new URL(SERVER_URL)
+  const replicaRequest = requestUrl.origin === serverUrl.origin
+    && /^\/api\/v1\/(?:providers|chats)(?:\/|$)/.test(requestUrl.pathname.slice(serverUrl.pathname.replace(/\/$/, '').length))
+  if (replicaRequest)
+    assertCloudReplicaAllowed()
   const authStore = useAuthStore()
   const version = authStore.sessionVersion
   const doFetch = (token: string | null): Promise<Response> => {
+    if (replicaRequest)
+      assertCloudReplicaAllowed()
     const headers = new Headers(init?.headers)
     if (token)
       headers.set('Authorization', `Bearer ${token}`)

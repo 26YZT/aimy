@@ -1,0 +1,18 @@
+{
+  "phase": "delete_and_fresh_realm_read",
+  "first": {
+    "ryzaRemoved": true,
+    "ryzaWriteOk": true,
+    "chat": null,
+    "ryza": []
+  },
+  "restored": {
+    "chat": null,
+    "ryza": []
+  },
+  "limitations": [
+    "AIRI whole dialogue session deletion differs from per-fact forgetting",
+    "no concurrent model response or semantic delete barrier in this browser case",
+    "session index metadata intentionally not mutated by direct deleteSession helper"
+  ]
+}

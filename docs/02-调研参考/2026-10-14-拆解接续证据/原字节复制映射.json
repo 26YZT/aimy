@@ -1,0 +1,308 @@
+[
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/evidence-package.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/evidence-package.md",
+    "bytes": 57039,
+    "sha256": "812f7bb70fbbb1c156b4facf5a2b006cb896ad835fe0f271132015a15d3a7341"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/features.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/features.json",
+    "bytes": 47356,
+    "sha256": "7c9ee2b85aee06f3a9847cb2855e30fc812af9a122d21d3ec3d47c1400ae2c0a"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/reuse-candidates.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/reuse-candidates.json",
+    "bytes": 7142,
+    "sha256": "89d1a7411c608eff1d129b15bd9e2b31ff9b8d851cb4df0d5a42c06b3fb1a803"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/read-coverage.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/read-coverage.json",
+    "bytes": 29439,
+    "sha256": "673570837e617491505d150036b1e76307bb0d27740ec48e9e31a77db3b439a9"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/read-log.jsonl",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/read-log.jsonl",
+    "bytes": 28515,
+    "sha256": "16f86b7f732376507a98c5dda83b36028402c23e6a9681554a88ea5074f1fe0f"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/snapshot-manifest.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/snapshot-manifest.json",
+    "bytes": 317941,
+    "sha256": "c49f03c3db5186270560f167c7e4c368b6941cf96d30b915f89cebd57d2d69a5"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/snapshot-summary.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/snapshot-summary.json",
+    "bytes": 865,
+    "sha256": "609bc5c4d761a793bd35ab60a3e6546370ddb9f24835171a4ab80668bc127547"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/parsed-python-paths.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/parsed-python-paths.json",
+    "bytes": 19322,
+    "sha256": "039d3d8ced450e6c9c86ebc7b658c0be5424f7b29b5f7d7a6e721afdd7e0e770"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/api-page-routes.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/api-page-routes.json",
+    "bytes": 260428,
+    "sha256": "6113cbaf2dcca7de5571c4c68e4181bf0a36df9e0c9082e87dc2709603d64895"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/production-module-symbols.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/production-module-symbols.json",
+    "bytes": 124600,
+    "sha256": "e1aa2a360e13afa1d1255f06927fd862733adb6100b74f031bbe14b81667c789"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/capability-registry.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/capability-registry.json",
+    "bytes": 11179,
+    "sha256": "d2a5f56c1c4bea5f5568f8aa8b9f326b1aa598fd4d0341a1a10f8a48c2939d23"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/isolated-results.jsonl",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/isolated-results.jsonl",
+    "bytes": 614,
+    "sha256": "a5bc669415a73682658c95eb3af1af0114414c1e4198e46c9307f379df0a9d2a"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/isolated-more-results.jsonl",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/isolated-more-results.jsonl",
+    "bytes": 517,
+    "sha256": "cceb8d299d6028ff858151f3b1e9c0991b0d1fbfb09578d6ef2b3103bbcab1aa"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/isolated-policy-results.jsonl",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/isolated-policy-results.jsonl",
+    "bytes": 660,
+    "sha256": "28298981f1f1d33fcd604113f9e78110e227e8be34ce754f25e29528a92e841d"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/isolate_current.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/isolate_current.py",
+    "bytes": 8894,
+    "sha256": "62b9ce9cd582be8571b828b9275a5bd9693de345c86ddf9481140e002158aaf4"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/isolate_more.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/isolate_more.py",
+    "bytes": 3028,
+    "sha256": "891b83ce984c4ac68abb8d4ebccfce668cf301861d43282c20eccf3f0fdae3fa"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/isolate_policy.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/isolate_policy.py",
+    "bytes": 4820,
+    "sha256": "f85764cfcf543da84ec9e2a96656d81c57c620c760a47109a4e54c1054f6fc89"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/verification.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/verification.json",
+    "bytes": 4614,
+    "sha256": "2f01598a2d0437aef1b1a35a8ced38b9e359bfe33d2ef48c7752807325246701"
+  },
+  {
+    "source": "/tmp/aimy-20261014-aions-audit/review-airi.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/aions/review-airi.md",
+    "bytes": 7726,
+    "sha256": "8e92a3db93dcf7fc1685e97e9836278c329d33e7e6244d2cd421eb0d3ee8a3a2"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/README.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/README.md",
+    "bytes": 1247,
+    "sha256": "3b9399e6e51041a39b301690829ca83dc20b87ab833598075fa51fcc04d551c6"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/ryza-source-evidence.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/ryza-source-evidence.md",
+    "bytes": 41873,
+    "sha256": "0d4e6f3f976e24254e937e666b0313330448db2fd662f4c47c676fd9871800fa"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/source-manifest.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/source-manifest.json",
+    "bytes": 343843,
+    "sha256": "d4ccf49e100fbd796b60ea1d2f126c35a7d41b27d24fca453d9161e3ceadf364"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/inspected-files.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/inspected-files.json",
+    "bytes": 532707,
+    "sha256": "374feede9c64cafc579e43b0d091147e6f8fcf6547dab4394afe646a06b449af"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/inspected-files.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/inspected-files.md",
+    "bytes": 8698,
+    "sha256": "ae09b2acc69ea3bbaa2878496bb7c29629d314ccf16b63f22789a28a5bbf892d"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/features.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/features.json",
+    "bytes": 15294,
+    "sha256": "fdc49309224eda0e9fb4269355d25b1920f67dee105eaaff7bcbf0bd565c0c71"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/airi-compared-files.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/airi-compared-files.json",
+    "bytes": 6650,
+    "sha256": "e86d1bdb2a9e47ef96a0106c9e9414bef8dc3f86039375a960649f4c5470a1c7"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/isolated-checks.cjs",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/isolated-checks.cjs",
+    "bytes": 11204,
+    "sha256": "3bacdd9342ceeaaa9576f7eb8f8f8de1fa6782eec9633801c58e75bdd38cae19"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/isolated-results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/isolated-results.json",
+    "bytes": 5176,
+    "sha256": "5aeb7c5aec363e7b328767d5a16a358683885f6357bd875844e6eb56c294bf8e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/static-checks.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/static-checks.json",
+    "bytes": 183885,
+    "sha256": "756fdaf3683a85538af93b656943e3edf98304ca35d4557cdd4b6b9158c42ba9"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/layering_check.js.log",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/layering_check.js.log",
+    "bytes": 1817,
+    "sha256": "46ad4b1c570ee8c5a08b38c2413f06b7a4b560f0328e073b2e767cbf68986200"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/longterm_regression.js.log",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/longterm_regression.js.log",
+    "bytes": 2275,
+    "sha256": "2ad28a68019a75ce422cc11eed7f9c50d95bac441c24cfaffb6971772c6409d8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-ryza-audit/verification.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/ryza/verification.json",
+    "bytes": 239,
+    "sha256": "7798cfb74ecf9af1af61ed9332d494f0bb3e425e1d7af893b7d3a4d43e450866"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/backend-findings.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/backend-findings.md",
+    "bytes": 28235,
+    "sha256": "a0c20a359ae4f449b5f1554241a04cfb117483a8b05e561395ddab30d29c4b06"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/backend-capabilities.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/backend-capabilities.md",
+    "bytes": 19686,
+    "sha256": "994cf637e0d7224096d006bd125fd3371492ad2d552db165108d0faef646f638"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/backend-capabilities.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/backend-capabilities.json",
+    "bytes": 31636,
+    "sha256": "41b22af5d61cdb429811a87d9cf287a40cd5db238d00430e1a377c145183c3dc"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/backend-symbol-index.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/backend-symbol-index.md",
+    "bytes": 32665,
+    "sha256": "6cd86c68c59ace98ca1cd156b4092c5cd4683cfff625c3022a7eefb42cc222cd"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/source-manifest.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/source-manifest.json",
+    "bytes": 176848,
+    "sha256": "68978fe6eaf04fef310d6a5a34720fc0835c2cec9846e0a9748459186353880d"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/inventory-summary.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/inventory-summary.json",
+    "bytes": 1075,
+    "sha256": "73b4dbd3c824e64d69de674adcd6e43c8d8c1e2e236d473af196ba19e663c655"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/reading-scope.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/reading-scope.json",
+    "bytes": 9754,
+    "sha256": "0310a3f0c73f2cc658d81aa528d8f09b53c30b5f1ed4134f496eef4e65bb3c0e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/offline_checks.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/offline_checks.py",
+    "bytes": 12413,
+    "sha256": "d13e28c42d1239f8779256f5bdf7e2f5c867a91a21a55268ee5b4eab0126dece"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/offline-checks.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/offline-checks.json",
+    "bytes": 4758,
+    "sha256": "ba6f4570ae346675d7e9246794cffd2bbf49c61573f2da43255bdae668de7227"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/airi-anchor-manifest.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/airi-anchor-manifest.json",
+    "bytes": 4105,
+    "sha256": "8ccf2ab9faf80836c677ab16c674768774b9a610c1f17dafa27e77e819486db6"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/audit-qa.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/audit-qa.json",
+    "bytes": 261,
+    "sha256": "43f1defdbcd5fee654bf02cfab8a7c05057c6f148e82dd3644bd477228029b36"
+  },
+  {
+    "source": "/tmp/aimy-20261014-olv-audit/review-legacy.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/open-llm-vtuber/review-legacy.md",
+    "bytes": 13317,
+    "sha256": "df772dea8e098a0958b3b0f1c1852134eae221b51a25ef8e7fd41bc941e79a4b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-primary-checks/core-agent.log",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/airi/core-agent.log",
+    "bytes": 246,
+    "sha256": "38db9627ed83a8af101202c082ed64614d13351c4ec25baf4fb2f25cae1839d8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-primary-checks/core-agent.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/airi/core-agent.json",
+    "bytes": 480,
+    "sha256": "46f2de5eeae52cba015888ac798378c1699cab784bff956a2a96fb06f7d16fdf"
+  },
+  {
+    "source": "/tmp/aimy-20261014-primary-checks/pipelines-audio.log",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/airi/pipelines-audio.log",
+    "bytes": 249,
+    "sha256": "e4dcab263d2a1b25b7b1f77b3301f16717b4d07e325fbc8a6785e5674ec8cde0"
+  },
+  {
+    "source": "/tmp/aimy-20261014-primary-checks/pipelines-audio.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/airi/pipelines-audio.json",
+    "bytes": 353,
+    "sha256": "2624eda38711294ccdefa67de644b00ee9bc197d37f62e1452011a2c6ed10221"
+  },
+  {
+    "source": "/tmp/aimy-20261014-primary-checks/stage-ui.log",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/airi/stage-ui.log",
+    "bytes": 1245,
+    "sha256": "c9770e079ef4a6a49c0ecbdc6e54dee55cc2f9e39e587ec09f49c39f96d2a46f"
+  },
+  {
+    "source": "/tmp/aimy-20261014-primary-checks/stage-ui.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/airi/stage-ui.json",
+    "bytes": 408,
+    "sha256": "5cf660db151cdf2af234d282bc81bf67909e42425ae3f02c0b680cd495b78071"
+  },
+  {
+    "source": "/tmp/aimy-20261014-integrity-before.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-拆解接续证据/airi/source-integrity-before.json",
+    "bytes": 1251666,
+    "sha256": "48e541668e659b0d5a897f369e42fcf94ff17f1eab7d07afff84aea8e81b0301"
+  }
+]

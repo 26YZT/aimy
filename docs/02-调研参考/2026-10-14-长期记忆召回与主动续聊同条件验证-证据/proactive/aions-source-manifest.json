@@ -1,0 +1,4876 @@
+{
+  "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py": {
+    "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+    "loaded_exact_bodies": [
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      },
+      {
+        "name": "PROACTIVE_TYPE",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "name": "NO_DECISION",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "name": "_NEXT_CHAT_RE",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "name": "_SETTING_KEYS",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "name": "_actor_id",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "name": "is_proactive_enabled",
+        "start": 32,
+        "end": 33
+      },
+      {
+        "name": "set_proactive_enabled",
+        "start": 36,
+        "end": 38
+      },
+      {
+        "name": "proactive_ability_text",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "name": "inject_proactive_ability",
+        "start": 52,
+        "end": 60
+      },
+      {
+        "name": "extract_next_chat_decision",
+        "start": 63,
+        "end": 75
+      },
+      {
+        "name": "_message_actor",
+        "start": 78,
+        "end": 90
+      },
+      {
+        "name": "process_visible_message_event",
+        "start": 93,
+        "end": 145
+      },
+      {
+        "name": "claim_proactive_timer",
+        "start": 148,
+        "end": 155
+      }
+    ]
+  },
+  "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_state.py": {
+    "sha256": "53a2d53c420d0ee02ff958f2439383d258fc0d41dbcdc8485439bf35337b1b5f",
+    "loaded_exact_bodies": [
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      },
+      {
+        "name": "ACTOR_IDS",
+        "start": 19,
+        "end": 19
+      },
+      {
+        "name": "MIN_INTERVAL_MINUTES",
+        "start": 20,
+        "end": 20
+      },
+      {
+        "name": "MAX_INTERVAL_MINUTES",
+        "start": 21,
+        "end": 21
+      },
+      {
+        "name": "MAX_STATE_CHARS",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "name": "ACTION_IDS",
+        "start": 23,
+        "end": 39
+      },
+      {
+        "name": "DEFAULT_OFF_ACTIONS",
+        "start": 40,
+        "end": 40
+      },
+      {
+        "name": "_STATE_BLOCK_RE",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "name": "_STATE_OPEN_RE",
+        "start": 61,
+        "end": 61
+      },
+      {
+        "name": "_STATE_MARKER_RE",
+        "start": 62,
+        "end": 62
+      },
+      {
+        "name": "normalize_actor",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "name": "_clamp_minutes",
+        "start": 72,
+        "end": 77
+      },
+      {
+        "name": "_default_actions",
+        "start": 80,
+        "end": 81
+      },
+      {
+        "name": "ensure_autonomy_tables",
+        "start": 84,
+        "end": 143
+      },
+      {
+        "name": "_decode_actions",
+        "start": 146,
+        "end": 151
+      },
+      {
+        "name": "_config_from_row",
+        "start": 154,
+        "end": 165
+      },
+      {
+        "name": "get_actor_config",
+        "start": 168,
+        "end": 182
+      },
+      {
+        "name": "update_actor_config",
+        "start": 185,
+        "end": 247
+      },
+      {
+        "name": "schedule_actor_wake",
+        "start": 250,
+        "end": 286
+      },
+      {
+        "name": "refresh_actor_wake_for_user",
+        "start": 289,
+        "end": 318
+      },
+      {
+        "name": "claim_due_wake",
+        "start": 321,
+        "end": 349
+      },
+      {
+        "name": "consume_state_block",
+        "start": 352,
+        "end": 382
+      },
+      {
+        "name": "autonomy_prompt_text",
+        "start": 632,
+        "end": 634
+      },
+      {
+        "name": "strip_autonomy_state",
+        "start": 637,
+        "end": 639
+      },
+      {
+        "name": "_event_actor",
+        "start": 653,
+        "end": 660
+      },
+      {
+        "name": "process_persona_message_event",
+        "start": 677,
+        "end": 684
+      }
+    ]
+  },
+  "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/generation_control.py": {
+    "sha256": "8f29c8d3fc529945c738f0ab995d1ac1d0b0d1cef363edbd18e543cabc4fca0d",
+    "loaded_exact_bodies": [
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      },
+      {
+        "name": "current_generation",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "name": "generation_event",
+        "start": 150,
+        "end": 157
+      }
+    ]
+  },
+  "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/ws.py": {
+    "sha256": "50baea470e8712eae5d77f5e43a9dfa1f5a4d30e7a77e0a31d1003f8a6bafb57",
+    "loaded_exact_bodies": [
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      },
+      {
+        "name": "_with_private_notification_sender",
+        "start": 43,
+        "end": 54
+      },
+      {
+        "name": "ConnectionManager.broadcast",
+        "start": 236,
+        "end": 301
+      }
+    ]
+  },
+  "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/stream_safety.py": {
+    "sha256": "989c361924b3bd90e37e915b335c0f8e8ebdbe1a01e2368d1e3caa9723fba228",
+    "loaded_exact_bodies": "complete stdlib-only module loaded; consume_safe_stream/guard executed"
+  },
+  "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/schedule.py": {
+    "sha256": "3f4fa4270ab51992a93311942bab365288c5f13c2c055559da1922438d0c91c7",
+    "loaded_exact_bodies": [
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      },
+      {
+        "name": "proactive_monitor_card_title",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "name": "_consume_background_stream",
+        "start": 54,
+        "end": 71
+      },
+      {
+        "name": "_new_background_meta",
+        "start": 117,
+        "end": 118
+      },
+      {
+        "name": "_broadcast_trigger_debug",
+        "start": 129,
+        "end": 151
+      },
+      {
+        "name": "_tts_voice_for_target",
+        "start": 154,
+        "end": 167
+      },
+      {
+        "name": "_SCHEDULE_OPEN",
+        "start": 170,
+        "end": 170
+      },
+      {
+        "name": "_SCHEDULE_CLOSE",
+        "start": 171,
+        "end": 171
+      },
+      {
+        "name": "_SCHEDULE_COLON",
+        "start": 172,
+        "end": 172
+      },
+      {
+        "name": "_SCHEDULE_PIPE",
+        "start": 173,
+        "end": 173
+      },
+      {
+        "name": "_SCHEDULE_FLAGS",
+        "start": 174,
+        "end": 174
+      },
+      {
+        "name": "ALARM_CMD",
+        "start": 176,
+        "end": 179
+      },
+      {
+        "name": "REMINDER_CMD",
+        "start": 180,
+        "end": 183
+      },
+      {
+        "name": "MONITOR_CMD",
+        "start": 184,
+        "end": 187
+      },
+      {
+        "name": "SCHEDULE_DEL_CMD",
+        "start": 188,
+        "end": 191
+      },
+      {
+        "name": "SCHEDULE_LIST_CMD",
+        "start": 192,
+        "end": 195
+      },
+      {
+        "name": "get_schedule_origin_name",
+        "start": 198,
+        "end": 211
+      },
+      {
+        "name": "ScheduleManager.__init__",
+        "start": 266,
+        "end": 269
+      },
+      {
+        "name": "ScheduleManager._tick",
+        "start": 303,
+        "end": 327
+      },
+      {
+        "name": "ScheduleManager._resolve_target",
+        "start": 329,
+        "end": 354
+      },
+      {
+        "name": "ScheduleManager._save_to_private",
+        "start": 396,
+        "end": 459
+      },
+      {
+        "name": "ScheduleManager._fire_monitor",
+        "start": 865,
+        "end": 1226
+      },
+      {
+        "name": "process_schedule_commands",
+        "start": 1230,
+        "end": 1313
+      },
+      {
+        "name": "get_active_schedules",
+        "start": 1510,
+        "end": 1518
+      },
+      {
+        "name": "build_schedule_prompt",
+        "start": 1521,
+        "end": 1531
+      }
+    ]
+  },
+  "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy.py": {
+    "sha256": "5075f86d2ffeb1bd18ec5f029687ad69037c98e4ea041ee64e8ac62047441d04",
+    "loaded_exact_bodies": [
+      {
+        "name": "ACTION_DEFS",
+        "start": 37,
+        "end": 53
+      },
+      {
+        "name": "_latest_conversation",
+        "start": 357,
+        "end": 364
+      },
+      {
+        "name": "_idle_duration_text",
+        "start": 585,
+        "end": 592
+      },
+      {
+        "name": "_select_action",
+        "start": 595,
+        "end": 699
+      },
+      {
+        "name": "_run_private_chat",
+        "start": 702,
+        "end": 715
+      },
+      {
+        "name": "_save_aion_private_message",
+        "start": 718,
+        "end": 763
+      },
+      {
+        "name": "_save_private_message",
+        "start": 892,
+        "end": 931
+      },
+      {
+        "name": "_latest_user_message_ts",
+        "start": 2150,
+        "end": 2162
+      },
+      {
+        "name": "_run_actor_once",
+        "start": 2173,
+        "end": 2303
+      },
+      {
+        "name": "IdleAutonomyManager.__init__",
+        "start": 2307,
+        "end": 2309
+      },
+      {
+        "name": "IdleAutonomyManager.run_actor_once",
+        "start": 2329,
+        "end": 2388
+      },
+      {
+        "name": "ACTION_DEFS",
+        "start": 37,
+        "end": 53
+      },
+      {
+        "name": "_latest_conversation",
+        "start": 357,
+        "end": 364
+      },
+      {
+        "name": "_idle_duration_text",
+        "start": 585,
+        "end": 592
+      },
+      {
+        "name": "_select_action",
+        "start": 595,
+        "end": 699
+      },
+      {
+        "name": "_run_private_chat",
+        "start": 702,
+        "end": 715
+      },
+      {
+        "name": "_save_aion_private_message",
+        "start": 718,
+        "end": 763
+      },
+      {
+        "name": "_save_private_message",
+        "start": 892,
+        "end": 931
+      },
+      {
+        "name": "_latest_user_message_ts",
+        "start": 2150,
+        "end": 2162
+      },
+      {
+        "name": "_run_actor_once",
+        "start": 2173,
+        "end": 2303
+      },
+      {
+        "name": "IdleAutonomyManager.__init__",
+        "start": 2307,
+        "end": 2309
+      },
+      {
+        "name": "IdleAutonomyManager.run_actor_once",
+        "start": 2329,
+        "end": 2388
+      },
+      {
+        "name": "ACTION_DEFS",
+        "start": 37,
+        "end": 53
+      },
+      {
+        "name": "_latest_conversation",
+        "start": 357,
+        "end": 364
+      },
+      {
+        "name": "_idle_duration_text",
+        "start": 585,
+        "end": 592
+      },
+      {
+        "name": "_select_action",
+        "start": 595,
+        "end": 699
+      },
+      {
+        "name": "_run_private_chat",
+        "start": 702,
+        "end": 715
+      },
+      {
+        "name": "_save_aion_private_message",
+        "start": 718,
+        "end": 763
+      },
+      {
+        "name": "_save_private_message",
+        "start": 892,
+        "end": 931
+      },
+      {
+        "name": "_latest_user_message_ts",
+        "start": 2150,
+        "end": 2162
+      },
+      {
+        "name": "_run_actor_once",
+        "start": 2173,
+        "end": 2303
+      },
+      {
+        "name": "IdleAutonomyManager.__init__",
+        "start": 2307,
+        "end": 2309
+      },
+      {
+        "name": "IdleAutonomyManager.run_actor_once",
+        "start": 2329,
+        "end": 2388
+      },
+      {
+        "name": "ACTION_DEFS",
+        "start": 37,
+        "end": 53
+      },
+      {
+        "name": "_latest_conversation",
+        "start": 357,
+        "end": 364
+      },
+      {
+        "name": "_idle_duration_text",
+        "start": 585,
+        "end": 592
+      },
+      {
+        "name": "_select_action",
+        "start": 595,
+        "end": 699
+      },
+      {
+        "name": "_run_private_chat",
+        "start": 702,
+        "end": 715
+      },
+      {
+        "name": "_save_aion_private_message",
+        "start": 718,
+        "end": 763
+      },
+      {
+        "name": "_save_private_message",
+        "start": 892,
+        "end": 931
+      },
+      {
+        "name": "_latest_user_message_ts",
+        "start": 2150,
+        "end": 2162
+      },
+      {
+        "name": "_run_actor_once",
+        "start": 2173,
+        "end": 2303
+      },
+      {
+        "name": "IdleAutonomyManager.__init__",
+        "start": 2307,
+        "end": 2309
+      },
+      {
+        "name": "IdleAutonomyManager.run_actor_once",
+        "start": 2329,
+        "end": 2388
+      }
+    ]
+  }
+}

@@ -1,0 +1,3999 @@
+{
+  "fixture": "/tmp/aimy-20261014-memory-ab/fixtures.json",
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "clock": "2026-10-14T10:00:00+08:00",
+  "environment": {
+    "real_models": 0,
+    "real_network": 0,
+    "real_devices": 0,
+    "localStorage": "fake Map; persistence/restart not this test",
+    "product_writes": 0
+  },
+  "transformations": {
+    "summary": "same original fixture summary/content, normalized by original normEntry; all fixture summaries <=120",
+    "importance": "original fixture1..5 unchanged",
+    "dates": "original date string unchanged; relative date cue kept relative",
+    "keywords": "same list; original normEntry limits applied",
+    "status": "same active/retired; no harness prefilter",
+    "source_ids": "native Ryza shape has no source message refs; out-of-band gold mapping only",
+    "topK_budget": "_select(5) native parameter; promptBlock(12) retained without slicing/filtering/truncation"
+  },
+  "native_state": [
+    {
+      "id": "R01",
+      "date": "2026-10-13",
+      "category": "general",
+      "importance": 2,
+      "summary": "昨天参加了产品经理面试，面试官问了长期记忆方案",
+      "status": "active",
+      "keywords": [
+        "面试",
+        "产品经理"
+      ]
+    },
+    {
+      "id": "R02",
+      "date": "2026-10-12",
+      "category": "general",
+      "importance": 3,
+      "summary": "前天参加了算法面试，面试官问了排序算法",
+      "status": "active",
+      "keywords": [
+        "面试",
+        "算法"
+      ]
+    },
+    {
+      "id": "R03",
+      "date": "2026-10-14",
+      "category": "general",
+      "importance": 1,
+      "summary": "今天下午要复盘产品经理面试",
+      "status": "active",
+      "keywords": [
+        "面试",
+        "复盘"
+      ]
+    },
+    {
+      "id": "R04",
+      "date": "2026-10-01",
+      "category": "general",
+      "importance": 5,
+      "summary": "用户以前喜欢美式咖啡",
+      "status": "retired",
+      "keywords": [
+        "咖啡",
+        "饮料"
+      ]
+    },
+    {
+      "id": "R05",
+      "date": "2026-10-14",
+      "category": "general",
+      "importance": 3,
+      "summary": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+      "status": "active",
+      "keywords": [
+        "乌龙茶",
+        "饮料",
+        "咖啡"
+      ]
+    },
+    {
+      "id": "R06",
+      "date": "2026-10-13",
+      "category": "general",
+      "importance": 4,
+      "summary": "约好2026-10-15晚上一起玩星露谷物语",
+      "status": "active",
+      "keywords": [
+        "星露谷",
+        "约定",
+        "游戏"
+      ]
+    },
+    {
+      "id": "R07",
+      "date": "2026-10-12",
+      "category": "general",
+      "importance": 1,
+      "summary": "去海边散步时捡到了一个贝壳",
+      "status": "active",
+      "keywords": [
+        "海边",
+        "散步",
+        "贝壳"
+      ]
+    },
+    {
+      "id": "R08",
+      "date": "2026-10-14",
+      "category": "general",
+      "importance": 4,
+      "summary": "正在开发Aimy桌面陪伴产品，当前在调研记忆",
+      "status": "active",
+      "keywords": [
+        "Aimy",
+        "记忆",
+        "项目"
+      ]
+    },
+    {
+      "id": "R09",
+      "date": "2026-10-10",
+      "category": "general",
+      "importance": 4,
+      "summary": "灯塔散步计划已经取消，不应当作当前约定",
+      "status": "retired",
+      "keywords": [
+        "灯塔",
+        "散步"
+      ]
+    },
+    {
+      "id": "R10",
+      "date": "2026-10-14",
+      "category": "general",
+      "importance": 3,
+      "summary": "用户给小说人物起名为张三，用户本人不叫张三",
+      "status": "active",
+      "keywords": [
+        "小说",
+        "张三"
+      ]
+    },
+    {
+      "id": "R11",
+      "date": "2026-10-13",
+      "category": "general",
+      "importance": 1,
+      "summary": "昨天给植物浇水",
+      "status": "active",
+      "keywords": [
+        "植物"
+      ]
+    },
+    {
+      "id": "R12",
+      "date": "2026-10-11",
+      "category": "general",
+      "importance": 1,
+      "summary": "周日修好了键盘",
+      "status": "active",
+      "keywords": [
+        "键盘"
+      ]
+    },
+    {
+      "id": "R13",
+      "date": "2026-10-08",
+      "category": "general",
+      "importance": 1,
+      "summary": "第13条无关日常：整理书桌和收纳盒编号13",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R14",
+      "date": "2026-10-07",
+      "category": "general",
+      "importance": 1,
+      "summary": "第14条无关日常：整理书桌和收纳盒编号14",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R15",
+      "date": "2026-10-06",
+      "category": "general",
+      "importance": 1,
+      "summary": "第15条无关日常：整理书桌和收纳盒编号15",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R16",
+      "date": "2026-10-13",
+      "category": "general",
+      "importance": 1,
+      "summary": "第16条无关日常：整理书桌和收纳盒编号16",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R17",
+      "date": "2026-10-12",
+      "category": "general",
+      "importance": 1,
+      "summary": "第17条无关日常：整理书桌和收纳盒编号17",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R18",
+      "date": "2026-10-11",
+      "category": "general",
+      "importance": 1,
+      "summary": "第18条无关日常：整理书桌和收纳盒编号18",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R19",
+      "date": "2026-10-10",
+      "category": "general",
+      "importance": 1,
+      "summary": "第19条无关日常：整理书桌和收纳盒编号19",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R20",
+      "date": "2026-10-09",
+      "category": "general",
+      "importance": 1,
+      "summary": "第20条无关日常：整理书桌和收纳盒编号20",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R21",
+      "date": "2026-10-08",
+      "category": "general",
+      "importance": 1,
+      "summary": "第21条无关日常：整理书桌和收纳盒编号21",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R22",
+      "date": "2026-10-07",
+      "category": "general",
+      "importance": 1,
+      "summary": "第22条无关日常：整理书桌和收纳盒编号22",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R23",
+      "date": "2026-10-06",
+      "category": "general",
+      "importance": 1,
+      "summary": "第23条无关日常：整理书桌和收纳盒编号23",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R24",
+      "date": "2026-10-13",
+      "category": "general",
+      "importance": 1,
+      "summary": "第24条无关日常：整理书桌和收纳盒编号24",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R25",
+      "date": "2026-10-12",
+      "category": "general",
+      "importance": 1,
+      "summary": "第25条无关日常：整理书桌和收纳盒编号25",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R26",
+      "date": "2026-10-11",
+      "category": "general",
+      "importance": 1,
+      "summary": "第26条无关日常：整理书桌和收纳盒编号26",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R27",
+      "date": "2026-10-10",
+      "category": "general",
+      "importance": 1,
+      "summary": "第27条无关日常：整理书桌和收纳盒编号27",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R28",
+      "date": "2026-10-09",
+      "category": "general",
+      "importance": 1,
+      "summary": "第28条无关日常：整理书桌和收纳盒编号28",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R29",
+      "date": "2026-10-08",
+      "category": "general",
+      "importance": 1,
+      "summary": "第29条无关日常：整理书桌和收纳盒编号29",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R30",
+      "date": "2026-10-07",
+      "category": "general",
+      "importance": 1,
+      "summary": "第30条无关日常：整理书桌和收纳盒编号30",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R31",
+      "date": "2026-10-06",
+      "category": "general",
+      "importance": 1,
+      "summary": "第31条无关日常：整理书桌和收纳盒编号31",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    },
+    {
+      "id": "R32",
+      "date": "2026-10-13",
+      "category": "general",
+      "importance": 1,
+      "summary": "第32条无关日常：整理书桌和收纳盒编号32",
+      "status": "active",
+      "keywords": [
+        "收纳",
+        "日常"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "query_id": "Q01",
+      "lane": "raw_question_cue",
+      "raw_question": "昨天的面试问了什么",
+      "input_cue": "昨天的面试问了什么",
+      "selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "original_order": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "selected_scores": [
+        {
+          "id": "R02",
+          "score": 7
+        },
+        {
+          "id": "R01",
+          "score": 6
+        },
+        {
+          "id": "R03",
+          "score": 5
+        },
+        {
+          "id": "R06",
+          "score": 5
+        },
+        {
+          "id": "R08",
+          "score": 5
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08",
+        "R05",
+        "R10",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R02",
+          "score": 7
+        },
+        {
+          "id": "R01",
+          "score": 6
+        },
+        {
+          "id": "R03",
+          "score": 5
+        },
+        {
+          "id": "R06",
+          "score": 5
+        },
+        {
+          "id": "R08",
+          "score": 5
+        },
+        {
+          "id": "R05",
+          "score": 4
+        },
+        {
+          "id": "R10",
+          "score": 4
+        },
+        {
+          "id": "R07",
+          "score": 2
+        },
+        {
+          "id": "R11",
+          "score": 2
+        },
+        {
+          "id": "R12",
+          "score": 2
+        },
+        {
+          "id": "R13",
+          "score": 2
+        },
+        {
+          "id": "R14",
+          "score": 2
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R01"
+      ],
+      "forbidden": [
+        "R02",
+        "R03"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R01"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R02",
+          "R03"
+        ],
+        "unrelated_selected": [
+          "R02",
+          "R03",
+          "R06",
+          "R08"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R01"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R02",
+          "R03"
+        ],
+        "unrelated_selected": [
+          "R02",
+          "R03",
+          "R06",
+          "R08",
+          "R05",
+          "R10",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q02",
+      "lane": "raw_question_cue",
+      "raw_question": "2026-10-12 面试",
+      "input_cue": "2026-10-12 面试",
+      "selected_original_ids": [
+        "R02",
+        "R01",
+        "R07",
+        "R17",
+        "R25"
+      ],
+      "original_order": [
+        "R02",
+        "R01",
+        "R07",
+        "R17",
+        "R25"
+      ],
+      "selected_scores": [
+        {
+          "id": "R02",
+          "score": 10
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R07",
+          "score": 5
+        },
+        {
+          "id": "R17",
+          "score": 5
+        },
+        {
+          "id": "R25",
+          "score": 5
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R02",
+        "R01",
+        "R07",
+        "R17",
+        "R25",
+        "R03",
+        "R06",
+        "R08",
+        "R05",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R02",
+          "score": 10
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R07",
+          "score": 5
+        },
+        {
+          "id": "R17",
+          "score": 5
+        },
+        {
+          "id": "R25",
+          "score": 5
+        },
+        {
+          "id": "R03",
+          "score": 4
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-12] 第17条无关日常：整理书桌和收纳盒编号17\n- [2026-10-12] 第25条无关日常：整理书桌和收纳盒编号25\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R02"
+      ],
+      "forbidden": [
+        "R01",
+        "R03"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R02"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R01"
+        ],
+        "unrelated_selected": [
+          "R01",
+          "R07",
+          "R17",
+          "R25"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R02"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R01",
+          "R03"
+        ],
+        "unrelated_selected": [
+          "R01",
+          "R07",
+          "R17",
+          "R25",
+          "R03",
+          "R06",
+          "R08",
+          "R05",
+          "R10",
+          "R11",
+          "R12"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q03",
+      "lane": "raw_question_cue",
+      "raw_question": "现在喜欢喝什么饮料",
+      "input_cue": "现在喜欢喝什么饮料",
+      "selected_original_ids": [
+        "R05",
+        "R06",
+        "R08",
+        "R02",
+        "R10"
+      ],
+      "original_order": [
+        "R05",
+        "R06",
+        "R08",
+        "R02",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R05",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R05",
+        "R06",
+        "R08",
+        "R02",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R05",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R05"
+      ],
+      "forbidden": [
+        "R04"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R05"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R05"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q04",
+      "lane": "raw_question_cue",
+      "raw_question": "星露谷 游戏约定",
+      "input_cue": "星露谷 游戏约定",
+      "selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 13
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 13
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R06"
+      ],
+      "forbidden": [
+        "R09"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R06"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R06"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q05",
+      "lane": "raw_question_cue",
+      "raw_question": "去海岸走走时找到的东西",
+      "input_cue": "去海岸走走时找到的东西",
+      "selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R07"
+      ],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [
+          "R07"
+        ],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": false,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R07"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q06",
+      "lane": "raw_question_cue",
+      "raw_question": "火星采矿基地地址",
+      "input_cue": "火星采矿基地地址",
+      "selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [],
+      "forbidden": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R30",
+        "R31",
+        "R32"
+      ],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q07",
+      "lane": "raw_question_cue",
+      "raw_question": "灯塔散步约定还有效吗",
+      "input_cue": "灯塔散步约定还有效吗",
+      "selected_original_ids": [
+        "R06",
+        "R07",
+        "R08",
+        "R02",
+        "R05"
+      ],
+      "original_order": [
+        "R06",
+        "R07",
+        "R08",
+        "R02",
+        "R05"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 7
+        },
+        {
+          "id": "R07",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R07",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 7
+        },
+        {
+          "id": "R07",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [],
+      "forbidden": [
+        "R09"
+      ],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R07",
+          "R08",
+          "R02",
+          "R05"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R07",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q08",
+      "lane": "raw_question_cue",
+      "raw_question": "Aimy的记忆项目",
+      "input_cue": "Aimy的记忆项目",
+      "selected_original_ids": [
+        "R08",
+        "R06",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R08",
+        "R06",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R08",
+          "score": 13
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R08",
+        "R06",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R08",
+          "score": 13
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R08"
+      ],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [
+          "R08"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R08"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q09",
+      "lane": "raw_question_cue",
+      "raw_question": "我本人叫张三吗",
+      "input_cue": "我本人叫张三吗",
+      "selected_original_ids": [
+        "R10",
+        "R06",
+        "R08",
+        "R02",
+        "R05"
+      ],
+      "original_order": [
+        "R10",
+        "R06",
+        "R08",
+        "R02",
+        "R05"
+      ],
+      "selected_scores": [
+        {
+          "id": "R10",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R10",
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R10",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R10"
+      ],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [
+          "R10"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R10"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q10",
+      "lane": "raw_question_cue",
+      "raw_question": "2月31日 面试",
+      "input_cue": "2月31日 面试",
+      "selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "original_order": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "selected_scores": [
+        {
+          "id": "R02",
+          "score": 6
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R03",
+          "score": 4
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08",
+        "R05",
+        "R10",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R02",
+          "score": 6
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R03",
+          "score": 4
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R02",
+          "R01",
+          "R03",
+          "R06",
+          "R08"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R02",
+          "R01",
+          "R03",
+          "R06",
+          "R08",
+          "R05",
+          "R10",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q01",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "昨天的面试问了什么",
+      "input_cue": "面试 昨天",
+      "selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "original_order": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "selected_scores": [
+        {
+          "id": "R02",
+          "score": 7
+        },
+        {
+          "id": "R01",
+          "score": 6
+        },
+        {
+          "id": "R03",
+          "score": 5
+        },
+        {
+          "id": "R06",
+          "score": 5
+        },
+        {
+          "id": "R08",
+          "score": 5
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08",
+        "R05",
+        "R10",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R02",
+          "score": 7
+        },
+        {
+          "id": "R01",
+          "score": 6
+        },
+        {
+          "id": "R03",
+          "score": 5
+        },
+        {
+          "id": "R06",
+          "score": 5
+        },
+        {
+          "id": "R08",
+          "score": 5
+        },
+        {
+          "id": "R05",
+          "score": 4
+        },
+        {
+          "id": "R10",
+          "score": 4
+        },
+        {
+          "id": "R07",
+          "score": 2
+        },
+        {
+          "id": "R11",
+          "score": 2
+        },
+        {
+          "id": "R12",
+          "score": 2
+        },
+        {
+          "id": "R13",
+          "score": 2
+        },
+        {
+          "id": "R14",
+          "score": 2
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R01"
+      ],
+      "forbidden": [
+        "R02",
+        "R03"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R01"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R02",
+          "R03"
+        ],
+        "unrelated_selected": [
+          "R02",
+          "R03",
+          "R06",
+          "R08"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R01"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R02",
+          "R03"
+        ],
+        "unrelated_selected": [
+          "R02",
+          "R03",
+          "R06",
+          "R08",
+          "R05",
+          "R10",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q02",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "2026-10-12 面试",
+      "input_cue": "面试 2026-10-12",
+      "selected_original_ids": [
+        "R02",
+        "R01",
+        "R07",
+        "R17",
+        "R25"
+      ],
+      "original_order": [
+        "R02",
+        "R01",
+        "R07",
+        "R17",
+        "R25"
+      ],
+      "selected_scores": [
+        {
+          "id": "R02",
+          "score": 10
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R07",
+          "score": 5
+        },
+        {
+          "id": "R17",
+          "score": 5
+        },
+        {
+          "id": "R25",
+          "score": 5
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R02",
+        "R01",
+        "R07",
+        "R17",
+        "R25",
+        "R03",
+        "R06",
+        "R08",
+        "R05",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R02",
+          "score": 10
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R07",
+          "score": 5
+        },
+        {
+          "id": "R17",
+          "score": 5
+        },
+        {
+          "id": "R25",
+          "score": 5
+        },
+        {
+          "id": "R03",
+          "score": 4
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-12] 第17条无关日常：整理书桌和收纳盒编号17\n- [2026-10-12] 第25条无关日常：整理书桌和收纳盒编号25\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R02"
+      ],
+      "forbidden": [
+        "R01",
+        "R03"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R02"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R01"
+        ],
+        "unrelated_selected": [
+          "R01",
+          "R07",
+          "R17",
+          "R25"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R02"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R01",
+          "R03"
+        ],
+        "unrelated_selected": [
+          "R01",
+          "R07",
+          "R17",
+          "R25",
+          "R03",
+          "R06",
+          "R08",
+          "R05",
+          "R10",
+          "R11",
+          "R12"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q03",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "现在喜欢喝什么饮料",
+      "input_cue": "饮料",
+      "selected_original_ids": [
+        "R05",
+        "R06",
+        "R08",
+        "R02",
+        "R10"
+      ],
+      "original_order": [
+        "R05",
+        "R06",
+        "R08",
+        "R02",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R05",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R05",
+        "R06",
+        "R08",
+        "R02",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R05",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R05"
+      ],
+      "forbidden": [
+        "R04"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R05"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R05"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q04",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "星露谷 游戏约定",
+      "input_cue": "星露谷",
+      "selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 7
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 7
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R06"
+      ],
+      "forbidden": [
+        "R09"
+      ],
+      "gold_observation": {
+        "expected_hits": [
+          "R06"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R06"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q05",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "去海岸走走时找到的东西",
+      "input_cue": "海岸",
+      "selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R07"
+      ],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [
+          "R07"
+        ],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": false,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R07"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q06",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "火星采矿基地地址",
+      "input_cue": "火星采矿",
+      "selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [],
+      "forbidden": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R30",
+        "R31",
+        "R32"
+      ],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": false,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q07",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "灯塔散步约定还有效吗",
+      "input_cue": "灯塔",
+      "selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [],
+      "forbidden": [
+        "R09"
+      ],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q08",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "Aimy的记忆项目",
+      "input_cue": "Aimy 记忆",
+      "selected_original_ids": [
+        "R08",
+        "R06",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "original_order": [
+        "R08",
+        "R06",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "selected_scores": [
+        {
+          "id": "R08",
+          "score": 10
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R08",
+        "R06",
+        "R02",
+        "R05",
+        "R10",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R08",
+          "score": 10
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R08"
+      ],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [
+          "R08"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R02",
+          "R05",
+          "R10"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R08"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R02",
+          "R05",
+          "R10",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q09",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "我本人叫张三吗",
+      "input_cue": "张三",
+      "selected_original_ids": [
+        "R10",
+        "R06",
+        "R08",
+        "R02",
+        "R05"
+      ],
+      "original_order": [
+        "R10",
+        "R06",
+        "R08",
+        "R02",
+        "R05"
+      ],
+      "selected_scores": [
+        {
+          "id": "R10",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R10",
+        "R06",
+        "R08",
+        "R02",
+        "R05",
+        "R01",
+        "R03",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R10",
+          "score": 6
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R02",
+          "score": 3
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R01",
+          "score": 2
+        },
+        {
+          "id": "R03",
+          "score": 1
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [
+        "R10"
+      ],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [
+          "R10"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [
+          "R10"
+        ],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R06",
+          "R08",
+          "R02",
+          "R05",
+          "R01",
+          "R03",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    },
+    {
+      "query_id": "Q10",
+      "lane": "fixture_controlled_cue",
+      "raw_question": "2月31日 面试",
+      "input_cue": "面试 2月31日",
+      "selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "original_order": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "selected_scores": [
+        {
+          "id": "R02",
+          "score": 6
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R03",
+          "score": 4
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        }
+      ],
+      "native_prompt_selected_original_ids": [
+        "R02",
+        "R01",
+        "R03",
+        "R06",
+        "R08",
+        "R05",
+        "R10",
+        "R07",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "native_prompt_scores": [
+        {
+          "id": "R02",
+          "score": 6
+        },
+        {
+          "id": "R01",
+          "score": 5
+        },
+        {
+          "id": "R03",
+          "score": 4
+        },
+        {
+          "id": "R06",
+          "score": 4
+        },
+        {
+          "id": "R08",
+          "score": 4
+        },
+        {
+          "id": "R05",
+          "score": 3
+        },
+        {
+          "id": "R10",
+          "score": 3
+        },
+        {
+          "id": "R07",
+          "score": 1
+        },
+        {
+          "id": "R11",
+          "score": 1
+        },
+        {
+          "id": "R12",
+          "score": 1
+        },
+        {
+          "id": "R13",
+          "score": 1
+        },
+        {
+          "id": "R14",
+          "score": 1
+        }
+      ],
+      "native_context": "## 長期記憶（出来事）\n- [2026-10-12] 前天参加了算法面试，面试官问了排序算法\n- [2026-10-13] 昨天参加了产品经理面试，面试官问了长期记忆方案\n- [2026-10-14] 今天下午要复盘产品经理面试\n- [2026-10-13] 约好2026-10-15晚上一起玩星露谷物语\n- [2026-10-14] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n- [2026-10-14] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n- [2026-10-14] 用户给小说人物起名为张三，用户本人不叫张三\n- [2026-10-12] 去海边散步时捡到了一个贝壳\n- [2026-10-13] 昨天给植物浇水\n- [2026-10-11] 周日修好了键盘\n- [2026-10-08] 第13条无关日常：整理书桌和收纳盒编号13\n- [2026-10-07] 第14条无关日常：整理书桌和收纳盒编号14",
+      "context_chars_unicode_codepoints": 411,
+      "context_utf16_units": 411,
+      "expected_relevant": [],
+      "forbidden": [],
+      "gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R02",
+          "R01",
+          "R03",
+          "R06",
+          "R08"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": true,
+        "observed_context_max1200": true
+      },
+      "native_prompt_gold_observation": {
+        "expected_hits": [],
+        "missing_expected": [],
+        "forbidden_selected": [],
+        "unrelated_selected": [
+          "R02",
+          "R01",
+          "R03",
+          "R06",
+          "R08",
+          "R05",
+          "R10",
+          "R07",
+          "R11",
+          "R12",
+          "R13",
+          "R14"
+        ],
+        "retired_selected": [],
+        "duplicates": [],
+        "all_expected_present": true,
+        "forbidden_absent": true,
+        "no_unrelated_evidence": false,
+        "observed_max5": false,
+        "observed_context_max1200": true
+      },
+      "contract_outcome": "fail",
+      "outcomes": {
+        "selector_top5_configuration": "pass; original _select(cue,5) supports this",
+        "prompt_top5_configuration": "unsupported; promptBlock internally always SELECT_LIMIT=12",
+        "context1200_configuration": "unsupported; no character-budget parameter",
+        "context1200_observed": "pass",
+        "answer_semantics": "inconclusive; no LLM answer"
+      },
+      "source_traceability": {
+        "entry_ids_retained": true,
+        "source_message_ids": "unsupported; normEntry discards fixture source refs; retained out-of-band for judging only"
+      },
+      "routing_limit": "Cue uses raw question or fixture-controlled keyword/date literal. Relative date is not resolved to ISO by harness. No inferred semantics or query function added."
+    }
+  ]
+}

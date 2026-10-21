@@ -1,0 +1,5 @@
+{"at": 1792075761.804438, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": true, "has_memory_evidence": true, "has_oolong": false, "max_tokens": 2048, "request_bytes": 8605}
+{"at": 1792075761.858083, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "memory", "stream": true, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 2048, "request_bytes": 5238}
+{"at": 1792076778.6834939, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": true, "has_memory_evidence": true, "has_oolong": false, "max_tokens": 2048, "request_bytes": 8569}
+{"at": 1792076778.731529, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "memory", "stream": true, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 2048, "request_bytes": 5202}
+{"at": 1792076876.474182, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": true, "has_memory_evidence": true, "has_oolong": false, "max_tokens": 2048, "request_bytes": 8917}

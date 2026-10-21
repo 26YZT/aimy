@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "productRoot": "/Users/mima1234/Documents/aimy/aimy-app",
+  "managementDocsRoot": "/Users/mima1234/Documents/aimy/docs",
+  "authorization": {
+    "planning_and_docs": true,
+    "product_code_changes": false,
+    "dependency_install_or_upgrade": false,
+    "user_data_migration_or_deletion": false,
+    "real_model_or_device_tests": false,
+    "git_stage_commit_push": false,
+    "publishing": false
+  },
+  "existing_confirmed_goals": [
+    {
+      "id": "KNOWN-01",
+      "goal": "AIRI完整桌面成为唯一产品主工程",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-02",
+      "goal": "记忆自动保存，无需逐条确认，相关时主动想起",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-03",
+      "goal": "低费用观察为间隔看一眼",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-04",
+      "goal": "收起聊天后主要角色仍可见",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-05",
+      "goal": "macOS、本地优先、一个主要角色、无摄像头、BYOK、自用/少量邀请",
+      "status": "沿用当前产品底线"
+    }
+  ],
+  "first_release_review": {
+    "functional_slices": [
+      "MEM-F01",
+      "MEM-F02"
+    ],
+    "normal_chat_recall_task": "MEM-03",
+    "background_proactive_task": "PRO-01（后批）",
+    "task_ids": [
+      "BASE-01",
+      "LIFE-01",
+      "LOCAL-01",
+      "SRC-01",
+      "MEM-01",
+      "MEM-02",
+      "MEM-03",
+      "INT-01",
+      "EXP-01"
+    ],
+    "conditional_integrations": [
+      "PRO-01",
+      "VIS-02",
+      "CHAR-01"
+    ],
+    "field_policy": "这些是首批候选工单与建议依赖，不是执行完成或全部方案已确认"
+  },
+  "status": "逐项审定中；第1/2/3项已答A，第4题按用户澄清撤回，第5项待答",
+  "review_mode": "item_by_item",
+  "calendar_plan_withdrawn": true,
+  "correction_source": "用户明确更正：不是一天一天，而是一条一条提供选项确认；按天规划可不考虑",
+  "decisions": [
+    {
+      "id": "ITEM-01",
+      "date": "2026-10-14",
+      "topic": "首批增量范围",
+      "status": "confirmed_scope_only",
+      "options": [
+        {
+          "id": "A",
+          "label": "先做自动记忆、查看/更正/删除、相关召回；后台主动续聊放下一批",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "首批同时纳入记忆、相关召回和后台主动续聊，按依赖顺序分步开发",
+          "recommended": false
+        }
+      ],
+      "selected": "A",
+      "answer_text": "A．先做自动记忆、查看/更正/删除、相关召回；后台主动续聊放下一批（推荐）",
+      "confirmation_source": "本轮用户对选择工具的明确答复",
+      "confirmed_features": [
+        "共同前置：品牌收尾、本地数据和退出/取消保护",
+        "自动记忆",
+        "查看/更正/删除",
+        "相关召回与正常对话中引用"
+      ],
+      "deferred_from_first_release": [
+        "后台主动续聊"
+      ],
+      "not_confirmed_by_this_answer": [
+        "具体记忆类型",
+        "启用前历史补记",
+        "同时删除来源消息",
+        "UI设计稿/正式角色/音色",
+        "模型/预算/质量线",
+        "全部数据schema/API参数",
+        "代码实施/升级/迁移/真实测试/发布"
+      ],
+      "item": 1,
+      "original_question": "第1天先确认首批增量范围。品牌收尾、本地数据和退出/取消保护是共同前置；本轮仍只审方案、不改代码。你希望首批做到哪一步？",
+      "question": "首批增量范围做到哪一步？",
+      "review_mode": "item_by_item",
+      "date_is_confirmation_date_not_schedule": true
+    },
+    {
+      "id": "ITEM-02",
+      "item": 2,
+      "date": "2026-10-14",
+      "topic": "自动记忆内容",
+      "status": "confirmed_scope_only",
+      "question": "第2项：首批让 Aimy 自动记住哪些内容？这里说的是以后聊天能用上的信息，不是把每句话都记成长期记忆。",
+      "options": [
+        {
+          "id": "A",
+          "label": "称呼、偏好、边界，加重要近期事项和共同经历，例如面试、计划和聊过的重要事情",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "先只记称呼、偏好和边界；近期事项、共同经历以后再加",
+          "recommended": false
+        }
+      ],
+      "selected": "A",
+      "answer_text": "A．称呼、偏好、边界，加重要近期事项和共同经历，例如面试、计划和聊过的重要事情（推荐）",
+      "confirmation_source": "本轮用户对选择工具的明确答复",
+      "limits": "重要且有依据，不把每句话、角色猜测或引用别人的话当用户事实；具体时效/语义质量不因本项全部冻结"
+    },
+    {
+      "id": "ITEM-03",
+      "item": 3,
+      "date": "2026-10-14",
+      "topic": "记忆起点",
+      "status": "confirmed_scope_only",
+      "question": "第3项：记忆功能启用后，从哪些聊天开始整理长期记忆？",
+      "options": [
+        {
+          "id": "A",
+          "label": "只处理启用后的新聊天；已有聊天保留，但不自动批量补记",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "增加手动补记入口，由我挑选已有AIRI聊天整理；旧Aimy数据不参与",
+          "recommended": false
+        }
+      ],
+      "selected": "A",
+      "answer_text": "A．只处理启用后的新聊天；已有聊天保留，但不自动批量补记（推荐）",
+      "confirmation_source": "本轮用户对选择工具的明确答复",
+      "limits": "恢复启用期间已持久但漏入队的新消息仍属可靠自动记忆，不等于回放启用前历史；暂停再开不补暂停期间内容的细则仍待后续必要时确认"
+    },
+    {
+      "id": "ITEM-04",
+      "item": 4,
+      "date": "2026-10-14",
+      "topic": "手动忘记/删来源交互",
+      "status": "withdrawn_after_user_clarification",
+      "selected": null,
+      "original_question": "第4项：点“忘记这条”时，要不要同时提供删除相关聊天原文的选项？两种方案都要阻止已删内容被后台重新记回来。",
+      "response_text": "什么叫做点“忘记这条”时？不提供这类用户输入，取决于产品本身的记忆设计",
+      "confirmation_source": "本轮用户自由文本澄清",
+      "resolution": "撤回A/B题；日常记忆不依赖专门记住/忘记输入或手动管理按钮，由产品自动记忆设计管理；不解释为已选择任何扩大聊天删除模式"
+    },
+    {
+      "id": "ITEM-05",
+      "item": 5,
+      "date": null,
+      "asked_on": "2026-10-14",
+      "topic": "正常聊天的相处风格",
+      "status": "asked_awaiting_answer",
+      "selected": null,
+      "question": "第5项：正常聊天时，你希望 Aimy 更接近哪种相处风格？这会影响她的语气和回应方式。",
+      "options": [
+        {
+          "id": "A",
+          "label": "温柔自然、有主见，能安慰，也能开玩笑和适度拌嘴",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "理性平等，重分析和讨论，少用情绪化安慰",
+          "recommended": false
+        },
+        {
+          "id": "C",
+          "label": "活泼直接，爱接梗和开玩笑，聊天更有热闹感",
+          "recommended": false
+        }
+      ]
+    }
+  ],
+  "confirmed_memory_content": [
+    "称呼",
+    "偏好",
+    "边界",
+    "重要近期事项",
+    "共同经历"
+  ],
+  "history_start": "启用后的新聊天；保留已有聊天但不自动批量补记",
+  "pending_topics": [
+    {
+      "topic": "正常聊天引用方式",
+      "status": "not_asked",
+      "selected": null
+    },
+    {
+      "topic": "记忆页入口",
+      "status": "not_asked",
+      "selected": null
+    },
+    {
+      "topic": "运行数据profile",
+      "status": "not_asked",
+      "selected": null
+    },
+    {
+      "topic": "模型和预算",
+      "status": "not_asked",
+      "selected": null
+    },
+    {
+      "topic": "验收标准与工单",
+      "status": "not_asked",
+      "selected": null
+    },
+    {
+      "topic": "正式角色/音色",
+      "status": "not_asked",
+      "selected": null
+    }
+  ],
+  "progress": {
+    "last_answered_item": 4,
+    "confirmed_option_items": [
+      1,
+      2,
+      3
+    ],
+    "withdrawn_question_items": [
+      4
+    ],
+    "current_question_item": 5,
+    "current_topic": "正常聊天的相处风格",
+    "calendar_schedule": null,
+    "automation_created": false
+  },
+  "rules": [
+    "一次只问一条，讲清取舍并提供2–3个选项",
+    "实际答复后记录并继续下一条，不等待下一天",
+    "建议不等于选择，未答保持null",
+    "已确认范围不重复询问",
+    "按天规划撤回，无日历安排或工期承诺",
+    "工程细节由技术审查决定，不转嫁await/CAS等问题",
+    "本轮只改文档，产品代码/运行数据/依赖/Git暂存保持不动",
+    "只向用户确认真实体验、偏好、数据或费用取舍；记忆筛选/更新/淡化由产品设计，不让用户扮演算法操作员"
+  ],
+  "memory_interaction_clarification": {
+    "daily_manual_memory_commands_required": false,
+    "per_fact_confirmation_required": false,
+    "manual_forget_button_assumed": false,
+    "automatic_memory_design_owner": "产品/工程设计负责筛选、更新、时效与淡化；模型只给候选，程序维护状态/持久化",
+    "physical_chat_deletion_authorized": false,
+    "previous_view_correct_delete_scope": "保留可检查与数据维护能力目标；不默认把它实现成日常手动输入/按钮流程"
+  }
+}

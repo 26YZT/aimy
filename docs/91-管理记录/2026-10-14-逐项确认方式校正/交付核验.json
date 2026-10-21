@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-14",
+  "status": "逐项方式和实际答复校验通过；非产品实施",
+  "calendar_plan_withdrawn": true,
+  "confirmed_items": [
+    1,
+    2,
+    3
+  ],
+  "selected_options": [
+    "A",
+    "A",
+    "A"
+  ],
+  "item4": "撤回，无代选",
+  "item5": "已问待答",
+  "daily_manual_memory_input_required": false,
+  "product_code_changed": false,
+  "protected_product_files": 5336,
+  "changed_product": [],
+  "git_index_unchanged": true,
+  "counts": {
+    "requirements": 14,
+    "tasks": 15,
+    "api_proposals": 17,
+    "prompt_hashes_unchanged": 5
+  },
+  "old_calendar_documents_archived": 2,
+  "navigation": {
+    "files": 16,
+    "links": 140,
+    "broken": []
+  },
+  "real_model_or_device_calls": 0,
+  "user_data_deleted_or_migrated": false
+}

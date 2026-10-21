@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-15",
+  "purpose": "新模型全产品方向上下文恢复与第一性原理审阅",
+  "root_sources": [
+    {
+      "path": "AGENTS.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "6fce025f00e2eec1598a87506287139edf0224f28e89048b59fc84a0fe7953db"
+    },
+    {
+      "path": "docs/README.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "61ee303fe0ec17fcd52dfe713b94450ddc54a073424f6a41407c034d78aa0c1f",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/README.md",
+      "original_sha256": "1df1f8592e65f55d72edd388b317544b4a4bce8ab927619f4bf86a0144a90de4"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "440f565a8095102023f602d075a01126b2ecd1471afd09a42bc2ea35b9bc7191",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/PROJECT_STATE.md",
+      "original_sha256": "4f3b25d43bbf53c0a0727913879018840cd3c6ee2274cd676bd4b37778934dcd"
+    },
+    {
+      "path": "docs/任务编排.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "d07b765372b0152635b45a990a7952ffdc7d1ff6765c8b8bf10e9325052ed300",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/任务编排.md",
+      "original_sha256": "6f4d3d0e7167d02fd441a84461c2ed9e143e25009bbb7c3725cd415e184b75f2"
+    },
+    {
+      "path": "docs/00-当前方向/开发方向与边界.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "25dbe6ae70259ea0ec29da5187245f5f18b37e53469a7f5aebc5bb326c636a86",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/00-当前方向/开发方向与边界.md",
+      "original_sha256": "e373cb3a6c52de0c0a28dd97ff9edb3f14c767dbc365fa3101b779f24f46cb4c"
+    },
+    {
+      "path": "docs/00-当前方向/PRD-2.0-对齐草案.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "a720f6eea7815ce36d892792fb16ec6f3e5ddfc4de913337cecd50e84dcc7c77",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/00-当前方向/PRD-2.0-对齐草案.md",
+      "original_sha256": "738a88a097349869bff36c631cd7aef2f30f921fe516113c8407fa4f51572172"
+    },
+    {
+      "path": "docs/01-决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "f824c7e6897e02823d311c8f6360277b7a662e39731c50ec51a0f0a55514eba4"
+    },
+    {
+      "path": "docs/01-决策记录/2026-10-13-三项产品行为与立项方法.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "6495debe9408d76518e451d7d2b5f05a53269f4d4a23f2b3c04e063cb93adde4"
+    },
+    {
+      "path": "docs/05-实施手册/README.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "f11bbff46be6f7ef3a9aa106ef500f5bdc09f63d136f7549e3e04484aac4c561",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/README.md",
+      "original_sha256": "99230fc6cc4157866171c999c5ab5cf1c6b17f96b9756e91aaa728caecc4d018"
+    },
+    {
+      "path": "docs/05-实施手册/R1-主工程切换手册.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "32b112bbb222ff92a948028215f18d6549c766704b033fcb8d20e939eb713758",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/R1-主工程切换手册.md",
+      "original_sha256": "085b046ffe999a2ef2178f705e5257812f6a3b4fc4eec062ad5b7bb1223b17c3"
+    },
+    {
+      "path": "docs/05-实施手册/R2-品牌定制手册.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "33e3891f22dcdc79f138f8824664ec1e19d147e1fdf62ff15e862a0ccbe57443",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/R2-品牌定制手册.md",
+      "original_sha256": "b90ada946c420140397b4f6e92c6ce3be656dff801dd5067854f4fa65ec335b1"
+    },
+    {
+      "path": "docs/05-实施手册/R2.5-人设与关系体验手册.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "ec5672b80970055c6a4ffcbde9bb7d3f634cd89b0d23a0149f439a4300f7c0a1"
+    },
+    {
+      "path": "docs/05-实施手册/R3-体验验收清单.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "c5d4e67de930ed1779395d53a5d28bb4fe647a64f4af9d55f0f534f44cb1ed35",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/R3-体验验收清单.md",
+      "original_sha256": "d4b19e31aae7f6ed506664cb02f8301fb53cabcfc4e5c0f0913dab66cefcab1e"
+    },
+    {
+      "path": "docs/04-验证记录/2026-10-12-R1主工程切换/机器验收记录.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "36e467c73ca8277ff0ecfde24aede1ed92350baddf053778d5f4d6df7f9b7466"
+    },
+    {
+      "path": "docs/02-调研参考/2026-10-14-AIRI现状能力清单.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "be7a58a46c841e5ac839b4be8360972ab5cc801e169f38e3e97f65c14b5f3003"
+    },
+    {
+      "path": "docs/02-调研参考/2026-10-14-五项目功能增量与验证裁决.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "fdc739a3033f6435675800b5910cf05e528a0a2b8b2d4c5a084d760a5fe7f21c"
+    },
+    {
+      "path": "docs/02-调研参考/2026-10-14-其余项目差异与对照补核.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "6ecb4011dc955ee60e1cf7b1fc69edfc9f15bfa774ea1fe852d6c1811741d8ee"
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/stores/tools/built-in.ts",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "02083f9157d8bcebd811785e4905252dae1b7c82f0880a80870f04ad70acad0f"
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/stores/tools/built-in.test.ts",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "0ac7a8809fcfce6052507a6cd0b26a38014bb6b9d957c8afd1aad21b841be17e"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "743545d7f76d74aa439bb33b4d407379af5a029fef8402205957d47a421b4b1a",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+      "original_sha256": "c4a9ea358551464e62ca0a9defea9b5a6e9dcc17d71f4fb7fcd9930ad2a5aacb"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/02-产品PRD.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "841ffa9434c5cef4e64b49755e12995fc58c50ee0cf698832356f52ea241c043",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/02-产品PRD.md",
+      "original_sha256": "d18c7440ad68074e78d69eaa876391913df70e0a1689db36b2967e303b647f36"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/审定账本.json",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "4325d26c859c0c6ad36ae150c64b8e1dd221da98a422e92c1073afcb175c5eb4",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/审定账本.json",
+      "original_sha256": "ab3cc06fed198a581d1f1eac5c9dbba6d8a46c497c2fb01e836a0fb744247cfa"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/README.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "0729f55dd309f409be6e6367320eac980088bf2cac0b54262d1bd4cc899ed985",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/README.md",
+      "original_sha256": "4a47772c463cd4f7814a059683b49c5660aacf17fe786e1e2e9a62d29a0e0785"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/05-任务文件边界与实施顺序.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "08ef5f0ce75513f50b3da1e2013ec2fa8029b5c791b1eb11f3b37210c7d6f5e9",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/05-任务文件边界与实施顺序.md",
+      "original_sha256": "1b99a2ba701ba51cbf1ecbe8611916bea7b41a7ea1f1ebb91332d5aec01bb3da"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/06-验收与评测目标.md",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "8e1575923815d41193d75ff69ee926cbea699ca2a8213be22c77099879946ad6",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/06-验收与评测目标.md",
+      "original_sha256": "bd5ece2d68c16d7714bfe157005bb564b3106d30e07a7e566a1acbd5b6024970"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/审定清单.json",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "4a24c1438995d66f1e6436a62ee786a6305d0c51bae95963db3fcedc31e91cac",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/审定清单.json",
+      "original_sha256": "a396a279e227b57b2122370fb8b480d76cc8586598fd580d834cbe428ffbf878"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/文件边界.json",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "7bd6c9decb4569a701a37faa2ac1c8eba9707b9114050a4b230b0a405bcc806d"
+    },
+    {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/追溯矩阵.json",
+      "read_scope": "全文或任务相关段落，源代码为定向复核；不声称全仓逐行",
+      "current_sha256": "a77b3d26b38ba2af1dabd6b1215266b9b249584db2eb4d10afbf76b1e3b708e8",
+      "original_read_snapshot": "docs/90-历史归档/入口快照/2026-10-15-全产品方向审阅前/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/追溯矩阵.json",
+      "original_sha256": "9cb7e7d5166333cb6430dddde14b0e523f5afb15c793d3de414f170632a44de5"
+    }
+  ],
+  "independent_sources": [
+    "产品读取清单.json",
+    "复用读取清单.json",
+    "工程独立复核.md"
+  ],
+  "not_claimed": [
+    "all source files semantically read",
+    "all prior tests rerun",
+    "real model/device/human acceptance",
+    "market/retention/willingness-to-pay validation"
+  ],
+  "runtime_actions": {
+    "product_builds": 0,
+    "product_tests": 0,
+    "app_or_browser_launches": 0,
+    "paid_model_calls": 0,
+    "user_credentials_or_database_read": false,
+    "product_writes": 0
+  }
+}

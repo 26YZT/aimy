@@ -1,0 +1,111 @@
+# 当前开发环境、工程位置与增量开发入口
+
+> 2026-10-15首批方案更新见[审定稿](../05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/README.md)：建议先验证现有Node24.20.0/pnpm11.24.0，验证后对齐声明，未安装升级。模型与预算已选；首次资料/18API/文件/验收合同已形成供审。独立profile仍未启动、未确认空，运行数据不迁移/清空。本页旧快照保留其时间/范围，不代表新构建通过。
+
+更新：2026-10-14（Asia/Shanghai）。状态：现场只读核对并整理管理文档；本轮没有安装/升级依赖、重新构建/启动应用或改产品代码。来源：当前目录、Git、包清单/工具声明、已安装依赖元数据、构建别名、源码与R1验收记录。用途：后续开发固定位置，避免旧样机/参考源码/运行数据混用。机器证据见[环境快照与隔离核对](../91-管理记录/2026-10-14-开发环境与隔离核对/README.md)。
+
+## 1. 唯一工作区与产品主工程
+
+| 位置 | 用途与开发边界 |
+|---|---|
+| `/Users/mima1234/Documents/aimy` | Git仓库/任务工作区；保留根AGENTS和正式docs。当前分支main，HEAD为b851ef3334320d13dd86cb8cafb449a70d154c9b |
+| `/Users/mima1234/Documents/aimy/aimy-app` | **唯一产品主工程、依赖安装和产品命令执行目录**；AIRI v0.12.0-beta.5继承副本 |
+| `/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi` | **本期桌面应用入口**，Electron + Vue；不是另建桌面壳 |
+| `/Users/mima1234/Documents/aimy/docs` | **第一方PRD、技术/API/UI/Prompt、任务与验收文档唯一正式管理入口** |
+| `/Users/mima1234/Documents/airi-main` | 本轮确定的原AIRI来源，只读对照；不是直接开发/启动目录 |
+| `/Users/mima1234/Documents/资料/拆解项目` | 五项目候选源码/资源，只读研究；不作为产品工作区 |
+
+根工作区没有package.json。产品命令进入aimy-app执行。`aimy-app/docs`是上游monorepo自身文档，不替代根docs中的Aimy需求/管理文档。
+
+## 2. 旧内容隔离
+
+| 位置 | 当前地位 |
+|---|---|
+| `digital-lover/`，尤其`digital-lover/apps/aimy-desktop/` | 旧独立Aimy样机，历史/缺陷场景参考；不作当前默认入口、依赖或实现底座 |
+| 根`airi-main/` | 另一份旧AIRI参考，不与外部新来源或当前aimy-app混用 |
+| `agent-blueprint-aimy-main/` | 方法/模板参考，不是产品源码 |
+| 根`.baseline/`、`digital-lover/.baseline/` | 历史评估/恢复快照，不作开发入口 |
+| 根“我要开发一个类似……”游戏原型目录 | 独立后置探索，不进入本期桌面依赖或需求 |
+| `docs/90-历史归档/`、旧P/A–E/M计划 | 定向追溯资料，不自动接续任务 |
+
+本轮核了76份产品package清单和36处已安装直接node_modules目录的775条符号链接：在所检依赖/脚本字段及直接链接中，**未发现指向旧样机、旧参考AIRI或blueprint源码的引用/链接**。electron.vite.config.ts和desktop tsconfig中的共享包别名指向aimy-app内部packages。另查产品TS/Vue/JS/JSON中的digital-lover、@digital-lover和apps/aimy-desktop文本，无匹配。它是有界依赖/别名/文本核对，不等于全量动态导入或运行数据隔离验收。
+
+内部包名`@proj-airi/*`继续保留，表示继承AIRI的包和接口约定，不代表旧Aimy混入。旧样机修复只有在新基线复现缺口、形成技术手册后才可有界适配；不整体复制旧UI/桥接/音频/窗口/存储/锁文件。
+
+## 3. 当前工具与安装状态
+
+| 项 | 实际核对结果 |
+|---|---|
+| 系统 | macOS 26.5.2，Apple Silicon arm64；Command Line Tools已配置 |
+| Node.js | **24.20.0**，`/usr/local/bin/node`；在aimy-app直接执行与pnpm exec均为该版本 |
+| pnpm | **11.24.0**，`/Users/mima1234/.local/bin/pnpm`；匹配packageManager与.tool-versions声明 |
+| Electron / electron-vite / builder | 已安装元数据43.4.1 / 5.0.0 / 26.16.1；Electron二进制文件存在，本轮未启动 |
+| Vue / Pinia / TypeScript / Vite | 已安装元数据3.5.41 / 4.0.3 / 6.0.3 / 8.2.2 |
+| Vitest | 已安装4.1.11；本轮未重新运行产品回归 |
+| 本地存储依赖 | stage-ui消费unstorage 1.17.5、idb-keyval 6.3.0；原聊天已有IndexedDB挂载 |
+| Git / Python | Git 2.50.1，Python 3.12.10；Python用于本批隔离研究，不是新增产品后端 |
+
+**实现前需统一Node基线**：上游`aimy-app/.tool-versions`写nodejs26.7.0，当前PATH和pnpm exec实际为24.20.0。这个文件是工具版本声明，不能擅自解释为package.engines最低版本；当前根package.json没有相应engines约束。本轮登记差异，没有升级Node或改声明/锁文件。过去局部测试通过不能替代统一版本后的构建与回归。
+
+上游.tool-versions同时声明dotnet10，是整个monorepo工具清单；本轮没有核验dotnet或据此要求桌面增量自动启用Godot/.NET构建。
+
+## 4. 前后端实际在哪里
+
+下表均相对aimy-app：
+
+| 责任 | 当前位置 |
+|---|---|
+| Electron主进程、系统能力、窗口与本地服务 | `apps/stage-tamagotchi/src/main/` |
+| preload与进程桥接 | `apps/stage-tamagotchi/src/preload/`、`src/shared/`及既有Electron包 |
+| 桌面Vue入口/页面 | `apps/stage-tamagotchi/src/renderer/` |
+| 共用设置页 | `packages/stage-pages/src/` |
+| 聊天、状态、Provider与本地存储 | `packages/stage-ui/src/`，含`stores/chat/`、`database/` |
+| 通用对话/消息/语音运行规则 | `packages/core-agent/src/`、`packages/pipelines-audio/src/` |
+| AIRI既有本地channel服务 | `packages/server-runtime/src/`与main内channel-server服务；构建别名指向本工程 |
+| 角色表现 | `packages/stage-ui-live2d/`、`stage-ui-three/`等既有渲染包，正式角色格式未选定 |
+
+“前后端增量整合”主要是在这一套现有Electron、Vue、共享包和本地数据链内增加能力。候选AionsHome的Python/FastAPI、Ryza独立store或OLV整套服务没有因研究而接入。monorepo的其他app/服务存在，不等于本期默认开发目标被切换。
+
+## 5. 启动与运行数据分开管理
+
+源码已核的桌面命令：
+
+```sh
+cd /Users/mima1234/Documents/aimy/aimy-app
+pnpm dev:tamagotchi
+```
+
+根脚本`pnpm dev`默认指向stage-web，不能把它当桌面入口。桌面构建脚本为`pnpm build:tamagotchi`；产品回归/类型检查采用对应任务手册的消费闭包与定向命令，不顺手全仓升级、安装或构建。
+
+代码目录与用户运行数据是两回事。原main/index.ts:81–83明确支持`APP_USER_DATA_PATH`→`app.setPath('userData', ...)`。为今后新主线的开发数据隔离，建议显式独立命名：
+
+```sh
+cd /Users/mima1234/Documents/aimy/aimy-app
+APP_USER_DATA_PATH="/Users/mima1234/Library/Application Support/Aimy-AIRI-Dev" pnpm dev:tamagotchi
+```
+
+上面是根据现有源码登记的后续启动方式，本轮没有执行、创建该profile、迁移或删除数据，也未确认该路径为空。首次采用时先核目录状态并实际验启动路径，不把命名不同当验收。默认开发/打包身份会影响userData选择；旧样机曾用Aimy同名，**不能默认打包后的Aimy目录一定是干净新目录**。旧R2文档的“清空待定”不构成删除授权。
+
+本轮未读真实配置/凭据/聊天库，未核运行中的应用/监听端口、模型连通性或当前实际userData；这些保持未知。不能因源码/依赖隔离就同时盖章运行数据也已隔离。
+
+## 6. 当前完成到哪一步
+
+| 开发流程 | 当前状态 |
+|---|---|
+| 1 AIRI原版成为主工程 | **已完成**：导入bf41903，R1验收A1–A9与b851ef3有记录；本轮核当前文件/入口，不重新宣称做了一次整机验收 |
+| 2 候选拆解、功能清单、增量/可复用性评估 | **已形成可进入开发确认的研究与规划提案**：五项目/55审核记录；关键记忆/召回/续聊原代码离线对照已补。全量文件语义阅读、所有功能复现与真实效果优胜仍未全部证明 |
+| 增量内容确认与工程方案评审 | **现在的位置**：现有PRD/技术/API/UI/Prompt/评测和15任务交接包已经有草案，接下来审定每批范围、未决参数和验收 |
+| 3 分阶段开发整合 | **未进入本轮新功能实施**；R2品牌仍有收尾，建议从BASE/LIFE/LOCAL逐批到记忆/召回/续聊 |
+| 4 按真实体验迭代 | 后续实施后，用真实模型/设备/人测Bad Case推进；离线固定候选不替代它 |
+
+R1事实依据：[机器验收记录](../04-验证记录/2026-10-12-R1主工程切换/机器验收记录.md)。旧R1手册的“待批准”标题和较早AGENTS“未切换”描述不推翻较晚执行记录。
+
+下一步审定[增量开发交接包](../05-实施手册/2026-10-14-Aimy增量开发交接包/README.md)，对象已经具体：
+
+1. 本批增量范围/优先级；自动记忆、相关时主动想起、间隔看屏、收起仍见角色这些已确认目标保留。
+2. 持久事实/来源、更正删除、召回与最终取消的数据和接口合同；AIRI单一owner及现有IndexedDB优先的方案目前仍为建议。
+3. 界面交互、角色/音色/模型与必要Prompt；未定的正式角色格式、音色和模型保持未定。
+4. 验收案例、真实模型评测目标/预算和体验通过线；用户本轮已选择离线，未执行付费模型评测。
+5. 逐批文件边界、依赖顺序、验证与回滚；统一Node/运行数据基线后再进入对应实施批次。
+
+本页是当前环境与阶段边界，不是新的产品实施、数据迁移、依赖升级、提交或发布授权。

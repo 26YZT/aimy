@@ -1,0 +1,17 @@
+{
+  "path": "/Users/mima1234/Applications/Aimy体验版.app",
+  "backup": "/Users/mima1234/Library/Application Support/Aimy-Package-Backups/20261020/Aimy体验版-更新前.app",
+  "version": "0.12.0-beta.5+aimy.20261020.1",
+  "asarSha256": "366649695a82f78653858a36b4cca42eb2fdb64769c6956c921791b18882462b",
+  "bundleId": "ai.aimy.preview",
+  "userData": "~/Library/Application Support/Aimy-Preview",
+  "userDataReadByInstaller": false,
+  "userDataMigrated": false,
+  "codeSigning": "ad-hoc, options 0; strict deep verification passed",
+  "normalLaunchVerified": true,
+  "launchEvidence": {
+    "pid": 63161,
+    "process": "63161 01:22 S",
+    "scope": "LaunchServices launched the signed installed executable and it remained running. Private profile content was not inspected; this is not full private-profile acceptance."
+  }
+}

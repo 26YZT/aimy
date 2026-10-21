@@ -54,6 +54,10 @@ vi.mock('../../database/repos/chat-sessions.repo', () => ({
     saveIndex: (idx: ChatSessionsIndex) => saveIndexMock(idx),
     getSession: (id: string) => getSessionMock(id),
     saveSession: (id: string, rec: ChatSessionRecord) => saveSessionMock(id, rec),
+    commitSessionSnapshotAndIndex: async (id: string, record: ChatSessionRecord, index: ChatSessionsIndex) => {
+      await saveSessionMock(id, record)
+      await saveIndexMock(index)
+    },
     deleteSession: (id: string) => deleteSessionRepoMock(id),
     getOutbox: (uid: string) => getOutboxMock(uid),
     enqueueOutbox: vi.fn().mockResolvedValue(undefined),

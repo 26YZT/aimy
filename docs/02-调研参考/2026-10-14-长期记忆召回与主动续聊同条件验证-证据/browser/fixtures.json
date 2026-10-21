@@ -1,0 +1,1106 @@
+{
+  "date": "2026-10-14",
+  "version": "controlled-offline-v1",
+  "frozen_before_execution": true,
+  "clock_iso": "2026-10-14T10:00:00+08:00",
+  "clock_epoch": 1791943200.0,
+  "timezone": "Asia/Shanghai",
+  "model": "fixed supplied outputs; no real model",
+  "embedding": "none",
+  "recall_limit": 5,
+  "context_char_budget": 1200,
+  "memory_cases": [
+    {
+      "id": "LM01",
+      "contract": "固定用户事实写入后新进程仍可读取",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        }
+      ],
+      "action": "fresh_process_restore"
+    },
+    {
+      "id": "LM02",
+      "contract": "重复同条写入不产生重复当前事实",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        }
+      ],
+      "action": "duplicate"
+    },
+    {
+      "id": "LM03",
+      "contract": "较新同主题更正后旧当前偏好不并存",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        },
+        {
+          "id": "U2",
+          "text": "现在不喝咖啡了，更喜欢乌龙茶",
+          "turn": 2
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        },
+        {
+          "topic": "饮料偏好",
+          "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+          "sources": [
+            "U2"
+          ]
+        }
+      ],
+      "action": "correction"
+    },
+    {
+      "id": "LM04",
+      "contract": "新结果落地后较旧轮次迟到不能覆盖",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        },
+        {
+          "id": "U2",
+          "text": "现在喜欢乌龙茶",
+          "turn": 2
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        },
+        {
+          "topic": "饮料偏好",
+          "content": "用户现在喜欢乌龙茶",
+          "sources": [
+            "U2"
+          ]
+        }
+      ],
+      "action": "late_older"
+    },
+    {
+      "id": "LM05",
+      "contract": "引用不存在的来源不得写入",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U999"
+          ]
+        }
+      ],
+      "action": "invalid_source"
+    },
+    {
+      "id": "LM06",
+      "contract": "等待抽取时原消息修改后拒绝旧候选",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        }
+      ],
+      "action": "source_edit_during_await"
+    },
+    {
+      "id": "LM07",
+      "contract": "删除后旧待处理抽取不能复活同ref事实",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        }
+      ],
+      "action": "delete_same_ref_late"
+    },
+    {
+      "id": "LM08",
+      "contract": "删事实后换主题同义抽取也不能复活",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "我喜欢美式咖啡",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "饮料偏好",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        },
+        {
+          "topic": "日常饮品",
+          "content": "用户喜欢美式咖啡",
+          "sources": [
+            "U1"
+          ]
+        }
+      ],
+      "action": "delete_renamed_topic"
+    },
+    {
+      "id": "LM09",
+      "contract": "合法来源中的小说人物不能误存为用户姓名",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "小说人物叫张三，我本人不叫张三",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "称呼",
+          "content": "用户本人叫张三",
+          "sources": [
+            "U1"
+          ]
+        }
+      ],
+      "action": "wrong_semantic_candidate"
+    },
+    {
+      "id": "LM10",
+      "contract": "单条长事实不能突破1200字符目标",
+      "messages": [
+        {
+          "id": "U1",
+          "text": "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+          "turn": 1
+        }
+      ],
+      "fixed_candidates": [
+        {
+          "topic": "长事实",
+          "content": "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+          "sources": [
+            "U1"
+          ]
+        }
+      ],
+      "action": "context_budget"
+    }
+  ],
+  "recall_corpus": [
+    {
+      "id": "R01",
+      "date": "2026-10-13",
+      "content": "昨天参加了产品经理面试，面试官问了长期记忆方案",
+      "summary": "昨天参加了产品经理面试，面试官问了长期记忆方案",
+      "keywords": [
+        "面试",
+        "产品经理"
+      ],
+      "importance": 2,
+      "source_message_ids": [
+        "U-R01"
+      ],
+      "source_start_ts": 1791864000.0,
+      "source_end_ts": 1791864000.0,
+      "created_at": 1791864000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R02",
+      "date": "2026-10-12",
+      "content": "前天参加了算法面试，面试官问了排序算法",
+      "summary": "前天参加了算法面试，面试官问了排序算法",
+      "keywords": [
+        "面试",
+        "算法"
+      ],
+      "importance": 3,
+      "source_message_ids": [
+        "U-R02"
+      ],
+      "source_start_ts": 1791777600.0,
+      "source_end_ts": 1791777600.0,
+      "created_at": 1791777600.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R03",
+      "date": "2026-10-14",
+      "content": "今天下午要复盘产品经理面试",
+      "summary": "今天下午要复盘产品经理面试",
+      "keywords": [
+        "面试",
+        "复盘"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R03"
+      ],
+      "source_start_ts": 1791950400.0,
+      "source_end_ts": 1791950400.0,
+      "created_at": 1791950400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R04",
+      "date": "2026-10-01",
+      "content": "用户以前喜欢美式咖啡",
+      "summary": "用户以前喜欢美式咖啡",
+      "keywords": [
+        "咖啡",
+        "饮料"
+      ],
+      "importance": 5,
+      "source_message_ids": [
+        "U-R04"
+      ],
+      "source_start_ts": 1790827200.0,
+      "source_end_ts": 1790827200.0,
+      "created_at": 1790827200.0,
+      "status": "retired",
+      "archive_state": "cold"
+    },
+    {
+      "id": "R05",
+      "date": "2026-10-14",
+      "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+      "summary": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+      "keywords": [
+        "乌龙茶",
+        "饮料",
+        "咖啡"
+      ],
+      "importance": 3,
+      "source_message_ids": [
+        "U-R05"
+      ],
+      "source_start_ts": 1791950400.0,
+      "source_end_ts": 1791950400.0,
+      "created_at": 1791950400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R06",
+      "date": "2026-10-13",
+      "content": "约好2026-10-15晚上一起玩星露谷物语",
+      "summary": "约好2026-10-15晚上一起玩星露谷物语",
+      "keywords": [
+        "星露谷",
+        "约定",
+        "游戏"
+      ],
+      "importance": 4,
+      "source_message_ids": [
+        "U-R06"
+      ],
+      "source_start_ts": 1791864000.0,
+      "source_end_ts": 1791864000.0,
+      "created_at": 1791864000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R07",
+      "date": "2026-10-12",
+      "content": "去海边散步时捡到了一个贝壳",
+      "summary": "去海边散步时捡到了一个贝壳",
+      "keywords": [
+        "海边",
+        "散步",
+        "贝壳"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R07"
+      ],
+      "source_start_ts": 1791777600.0,
+      "source_end_ts": 1791777600.0,
+      "created_at": 1791777600.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R08",
+      "date": "2026-10-14",
+      "content": "正在开发Aimy桌面陪伴产品，当前在调研记忆",
+      "summary": "正在开发Aimy桌面陪伴产品，当前在调研记忆",
+      "keywords": [
+        "Aimy",
+        "记忆",
+        "项目"
+      ],
+      "importance": 4,
+      "source_message_ids": [
+        "U-R08"
+      ],
+      "source_start_ts": 1791950400.0,
+      "source_end_ts": 1791950400.0,
+      "created_at": 1791950400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R09",
+      "date": "2026-10-10",
+      "content": "灯塔散步计划已经取消，不应当作当前约定",
+      "summary": "灯塔散步计划已经取消，不应当作当前约定",
+      "keywords": [
+        "灯塔",
+        "散步"
+      ],
+      "importance": 4,
+      "source_message_ids": [
+        "U-R09"
+      ],
+      "source_start_ts": 1791604800.0,
+      "source_end_ts": 1791604800.0,
+      "created_at": 1791604800.0,
+      "status": "retired",
+      "archive_state": "cold"
+    },
+    {
+      "id": "R10",
+      "date": "2026-10-14",
+      "content": "用户给小说人物起名为张三，用户本人不叫张三",
+      "summary": "用户给小说人物起名为张三，用户本人不叫张三",
+      "keywords": [
+        "小说",
+        "张三"
+      ],
+      "importance": 3,
+      "source_message_ids": [
+        "U-R10"
+      ],
+      "source_start_ts": 1791950400.0,
+      "source_end_ts": 1791950400.0,
+      "created_at": 1791950400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R11",
+      "date": "2026-10-13",
+      "content": "昨天给植物浇水",
+      "summary": "昨天给植物浇水",
+      "keywords": [
+        "植物"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R11"
+      ],
+      "source_start_ts": 1791864000.0,
+      "source_end_ts": 1791864000.0,
+      "created_at": 1791864000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R12",
+      "date": "2026-10-11",
+      "content": "周日修好了键盘",
+      "summary": "周日修好了键盘",
+      "keywords": [
+        "键盘"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R12"
+      ],
+      "source_start_ts": 1791691200.0,
+      "source_end_ts": 1791691200.0,
+      "created_at": 1791691200.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R13",
+      "date": "2026-10-08",
+      "content": "第13条无关日常：整理书桌和收纳盒编号13",
+      "summary": "第13条无关日常：整理书桌和收纳盒编号13",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R13"
+      ],
+      "source_start_ts": 1791424800.0,
+      "source_end_ts": 1791424800.0,
+      "created_at": 1791424800.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R14",
+      "date": "2026-10-07",
+      "content": "第14条无关日常：整理书桌和收纳盒编号14",
+      "summary": "第14条无关日常：整理书桌和收纳盒编号14",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R14"
+      ],
+      "source_start_ts": 1791338400.0,
+      "source_end_ts": 1791338400.0,
+      "created_at": 1791338400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R15",
+      "date": "2026-10-06",
+      "content": "第15条无关日常：整理书桌和收纳盒编号15",
+      "summary": "第15条无关日常：整理书桌和收纳盒编号15",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R15"
+      ],
+      "source_start_ts": 1791252000.0,
+      "source_end_ts": 1791252000.0,
+      "created_at": 1791252000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R16",
+      "date": "2026-10-13",
+      "content": "第16条无关日常：整理书桌和收纳盒编号16",
+      "summary": "第16条无关日常：整理书桌和收纳盒编号16",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R16"
+      ],
+      "source_start_ts": 1791856800.0,
+      "source_end_ts": 1791856800.0,
+      "created_at": 1791856800.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R17",
+      "date": "2026-10-12",
+      "content": "第17条无关日常：整理书桌和收纳盒编号17",
+      "summary": "第17条无关日常：整理书桌和收纳盒编号17",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R17"
+      ],
+      "source_start_ts": 1791770400.0,
+      "source_end_ts": 1791770400.0,
+      "created_at": 1791770400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R18",
+      "date": "2026-10-11",
+      "content": "第18条无关日常：整理书桌和收纳盒编号18",
+      "summary": "第18条无关日常：整理书桌和收纳盒编号18",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R18"
+      ],
+      "source_start_ts": 1791684000.0,
+      "source_end_ts": 1791684000.0,
+      "created_at": 1791684000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R19",
+      "date": "2026-10-10",
+      "content": "第19条无关日常：整理书桌和收纳盒编号19",
+      "summary": "第19条无关日常：整理书桌和收纳盒编号19",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R19"
+      ],
+      "source_start_ts": 1791597600.0,
+      "source_end_ts": 1791597600.0,
+      "created_at": 1791597600.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R20",
+      "date": "2026-10-09",
+      "content": "第20条无关日常：整理书桌和收纳盒编号20",
+      "summary": "第20条无关日常：整理书桌和收纳盒编号20",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R20"
+      ],
+      "source_start_ts": 1791511200.0,
+      "source_end_ts": 1791511200.0,
+      "created_at": 1791511200.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R21",
+      "date": "2026-10-08",
+      "content": "第21条无关日常：整理书桌和收纳盒编号21",
+      "summary": "第21条无关日常：整理书桌和收纳盒编号21",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R21"
+      ],
+      "source_start_ts": 1791424800.0,
+      "source_end_ts": 1791424800.0,
+      "created_at": 1791424800.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R22",
+      "date": "2026-10-07",
+      "content": "第22条无关日常：整理书桌和收纳盒编号22",
+      "summary": "第22条无关日常：整理书桌和收纳盒编号22",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R22"
+      ],
+      "source_start_ts": 1791338400.0,
+      "source_end_ts": 1791338400.0,
+      "created_at": 1791338400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R23",
+      "date": "2026-10-06",
+      "content": "第23条无关日常：整理书桌和收纳盒编号23",
+      "summary": "第23条无关日常：整理书桌和收纳盒编号23",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R23"
+      ],
+      "source_start_ts": 1791252000.0,
+      "source_end_ts": 1791252000.0,
+      "created_at": 1791252000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R24",
+      "date": "2026-10-13",
+      "content": "第24条无关日常：整理书桌和收纳盒编号24",
+      "summary": "第24条无关日常：整理书桌和收纳盒编号24",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R24"
+      ],
+      "source_start_ts": 1791856800.0,
+      "source_end_ts": 1791856800.0,
+      "created_at": 1791856800.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R25",
+      "date": "2026-10-12",
+      "content": "第25条无关日常：整理书桌和收纳盒编号25",
+      "summary": "第25条无关日常：整理书桌和收纳盒编号25",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R25"
+      ],
+      "source_start_ts": 1791770400.0,
+      "source_end_ts": 1791770400.0,
+      "created_at": 1791770400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R26",
+      "date": "2026-10-11",
+      "content": "第26条无关日常：整理书桌和收纳盒编号26",
+      "summary": "第26条无关日常：整理书桌和收纳盒编号26",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R26"
+      ],
+      "source_start_ts": 1791684000.0,
+      "source_end_ts": 1791684000.0,
+      "created_at": 1791684000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R27",
+      "date": "2026-10-10",
+      "content": "第27条无关日常：整理书桌和收纳盒编号27",
+      "summary": "第27条无关日常：整理书桌和收纳盒编号27",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R27"
+      ],
+      "source_start_ts": 1791597600.0,
+      "source_end_ts": 1791597600.0,
+      "created_at": 1791597600.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R28",
+      "date": "2026-10-09",
+      "content": "第28条无关日常：整理书桌和收纳盒编号28",
+      "summary": "第28条无关日常：整理书桌和收纳盒编号28",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R28"
+      ],
+      "source_start_ts": 1791511200.0,
+      "source_end_ts": 1791511200.0,
+      "created_at": 1791511200.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R29",
+      "date": "2026-10-08",
+      "content": "第29条无关日常：整理书桌和收纳盒编号29",
+      "summary": "第29条无关日常：整理书桌和收纳盒编号29",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R29"
+      ],
+      "source_start_ts": 1791424800.0,
+      "source_end_ts": 1791424800.0,
+      "created_at": 1791424800.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R30",
+      "date": "2026-10-07",
+      "content": "第30条无关日常：整理书桌和收纳盒编号30",
+      "summary": "第30条无关日常：整理书桌和收纳盒编号30",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R30"
+      ],
+      "source_start_ts": 1791338400.0,
+      "source_end_ts": 1791338400.0,
+      "created_at": 1791338400.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R31",
+      "date": "2026-10-06",
+      "content": "第31条无关日常：整理书桌和收纳盒编号31",
+      "summary": "第31条无关日常：整理书桌和收纳盒编号31",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R31"
+      ],
+      "source_start_ts": 1791252000.0,
+      "source_end_ts": 1791252000.0,
+      "created_at": 1791252000.0,
+      "status": "active",
+      "archive_state": "active"
+    },
+    {
+      "id": "R32",
+      "date": "2026-10-13",
+      "content": "第32条无关日常：整理书桌和收纳盒编号32",
+      "summary": "第32条无关日常：整理书桌和收纳盒编号32",
+      "keywords": [
+        "收纳",
+        "日常"
+      ],
+      "importance": 1,
+      "source_message_ids": [
+        "U-R32"
+      ],
+      "source_start_ts": 1791856800.0,
+      "source_end_ts": 1791856800.0,
+      "created_at": 1791856800.0,
+      "status": "active",
+      "archive_state": "active"
+    }
+  ],
+  "recall_queries": [
+    {
+      "id": "Q01",
+      "text": "昨天的面试问了什么",
+      "keywords": "面试",
+      "date_text": "昨天",
+      "expected_relevant": [
+        "R01"
+      ],
+      "forbidden": [
+        "R02",
+        "R03"
+      ],
+      "class": "relative_date"
+    },
+    {
+      "id": "Q02",
+      "text": "2026-10-12 面试",
+      "keywords": "面试",
+      "date_text": "2026-10-12",
+      "expected_relevant": [
+        "R02"
+      ],
+      "forbidden": [
+        "R01",
+        "R03"
+      ],
+      "class": "absolute_date"
+    },
+    {
+      "id": "Q03",
+      "text": "现在喜欢喝什么饮料",
+      "keywords": "饮料",
+      "expected_relevant": [
+        "R05"
+      ],
+      "forbidden": [
+        "R04"
+      ],
+      "class": "current_fact"
+    },
+    {
+      "id": "Q04",
+      "text": "星露谷 游戏约定",
+      "keywords": "星露谷",
+      "expected_relevant": [
+        "R06"
+      ],
+      "forbidden": [
+        "R09"
+      ],
+      "class": "literal"
+    },
+    {
+      "id": "Q05",
+      "text": "去海岸走走时找到的东西",
+      "keywords": "海岸",
+      "expected_relevant": [
+        "R07"
+      ],
+      "forbidden": [],
+      "class": "synonym_boundary"
+    },
+    {
+      "id": "Q06",
+      "text": "火星采矿基地地址",
+      "keywords": "火星采矿",
+      "expected_relevant": [],
+      "forbidden": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R30",
+        "R31",
+        "R32"
+      ],
+      "class": "no_hit"
+    },
+    {
+      "id": "Q07",
+      "text": "灯塔散步约定还有效吗",
+      "keywords": "灯塔",
+      "expected_relevant": [],
+      "forbidden": [
+        "R09"
+      ],
+      "class": "retired_exclusion"
+    },
+    {
+      "id": "Q08",
+      "text": "Aimy的记忆项目",
+      "keywords": "Aimy 记忆",
+      "expected_relevant": [
+        "R08"
+      ],
+      "forbidden": [],
+      "class": "literal"
+    },
+    {
+      "id": "Q09",
+      "text": "我本人叫张三吗",
+      "keywords": "张三",
+      "expected_relevant": [
+        "R10"
+      ],
+      "forbidden": [],
+      "class": "evidence_not_understanding"
+    },
+    {
+      "id": "Q10",
+      "text": "2月31日 面试",
+      "keywords": "面试",
+      "date_text": "2月31日",
+      "expected_relevant": [],
+      "forbidden": [],
+      "class": "invalid_date"
+    }
+  ],
+  "proactive_cases": [
+    {
+      "id": "PR01",
+      "contract": "有效两分钟后续聊计划存在并可到时触发",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "advance_120_seconds"
+      ]
+    },
+    {
+      "id": "PR02",
+      "contract": "同计划只能领取/提交一次",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "advance_120_seconds",
+        "two_claims"
+      ]
+    },
+    {
+      "id": "PR03",
+      "contract": "新用户消息取消待执行计划",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "user_return",
+        "advance_120_seconds"
+      ]
+    },
+    {
+      "id": "PR04",
+      "contract": "关闭主动开关后不能继续提交",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "disable",
+        "advance_120_seconds"
+      ]
+    },
+    {
+      "id": "PR05",
+      "contract": "进程重启后计划可恢复且不重复",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "fresh_process",
+        "advance_120_seconds",
+        "two_claims"
+      ]
+    },
+    {
+      "id": "PR06",
+      "contract": "切会话后旧计划不发送到新会话",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "switch_session",
+        "advance_120_seconds"
+      ]
+    },
+    {
+      "id": "PR07",
+      "contract": "生成过程中用户回来，旧结果不能提交",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "advance_120_seconds",
+        "start_generation",
+        "user_return",
+        "complete_generation"
+      ]
+    },
+    {
+      "id": "PR08",
+      "contract": "生成过程中关闭主动开关，旧结果不能提交",
+      "events": [
+        "assistant_NEXT_CHAT_2",
+        "advance_120_seconds",
+        "start_generation",
+        "disable",
+        "complete_generation"
+      ]
+    },
+    {
+      "id": "PR09",
+      "contract": "仅有记忆背景浮现不能当作实际后台主动发言",
+      "events": [
+        "memory_surfacing_only",
+        "advance_120_seconds"
+      ]
+    },
+    {
+      "id": "PR10",
+      "contract": "非法分钟数61应拒绝而不建立有效两分钟计划",
+      "events": [
+        "assistant_NEXT_CHAT_61",
+        "advance_120_seconds"
+      ]
+    }
+  ],
+  "semantic_test_limit": "合法source不证明候选含义正确；检索只评证据选取，不评LLM回答"
+}

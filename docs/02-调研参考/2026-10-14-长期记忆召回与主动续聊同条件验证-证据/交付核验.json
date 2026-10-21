@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-14",
+  "status": "文档/机器字段/字节/入口与范围保护核验通过；非真实产品或模型效果验收",
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "controlled_cases": {
+    "memory": 10,
+    "recall_records": 32,
+    "recall_queries": 10,
+    "proactive": 10
+  },
+  "raw_recall_observations_not_function_count": 50,
+  "same_inputs_not_equivalent_interfaces": true,
+  "no_quality_ranking": true,
+  "original_PR09_still_inconclusive": true,
+  "supplement_background_only": true,
+  "gold_adjudication_preserves_raw": true,
+  "durable_original_byte_copies": 66,
+  "source_and_harness_paths_hash_verified": 35,
+  "prior_evidence_originals_unchanged": 105,
+  "prior_derived_archive_copies_unchanged": 11,
+  "active_selection": {
+    "records": 55,
+    "eligible_records": 8,
+    "merged_slices": 5,
+    "requirements": 14,
+    "tasks": 15,
+    "apis": 17,
+    "prompts": 5,
+    "prior_tasks_and_requirements_unchanged": true,
+    "prompt_hashes_match": true
+  },
+  "navigation": {
+    "files": 19,
+    "local_links": 197,
+    "broken": []
+  },
+  "json_files_parsed": 33,
+  "protected_product_files": 5336,
+  "changed_product": [],
+  "git_index_unchanged": true,
+  "real_model_calls": 0,
+  "external_messages_sent": 0,
+  "device_capture_calls": 0,
+  "browser_space_53_and_local_server_stopped": true,
+  "review_findings_closed": {
+    "LM08_summary": "manual task vs automatic same-source leaf explicitly separated; raw unchanged",
+    "delivery_README": "present and all linked current files exist",
+    "Q05": "top5 miss vs native12 background distinction explicit"
+  }
+}

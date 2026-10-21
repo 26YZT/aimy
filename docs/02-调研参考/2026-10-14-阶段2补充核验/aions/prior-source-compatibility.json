@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+    "same_sha256_as_prior_read": true,
+    "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+    "semantic_read": "previous audit full for post_sentinel, user_profile_policy, proactive_companionship; memory_compression partial"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+    "same_sha256_as_prior_read": true,
+    "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+    "semantic_read": "previous audit full for post_sentinel, user_profile_policy, proactive_companionship; memory_compression partial"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+    "same_sha256_as_prior_read": true,
+    "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+    "semantic_read": "previous audit full for post_sentinel, user_profile_policy, proactive_companionship; memory_compression partial"
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+    "same_sha256_as_prior_read": true,
+    "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a",
+    "semantic_read": "previous audit full for post_sentinel, user_profile_policy, proactive_companionship; memory_compression partial"
+  }
+]

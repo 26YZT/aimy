@@ -1,0 +1,18 @@
+{
+  "meta": {"version":"3.0.0-proposal","date":"2026-10-13","status":"design_reference_only","product_integration":"not_performed","human_approval":"pending"},
+  "global": {"devices":"not_called","models":"not_called","storage":"ephemeral browser memory only","source":"AIRI source + local Impeccable guidance + user brief"},
+  "contracts": [
+    {"id":"session-drawer","states":["closed","open","selected","empty"],"rules":["explicit history entry and title shortcut","per-session draft, attachments and clip","stop recording before switching and retain clip","cancel stale reply when switching"],"keyboard":["Tab","Escape closes"]},
+    {"id":"image-attachment","states":["reading","ready","failed","removed"],"rules":["local preview only","async result stays with owning session","failure preserves text draft","remove prevents late decode update","reading disables send"],"preview_only_limit_bytes":10485760},
+    {"id":"composer","states":["empty","text","attachments","recording","send-failed"],"keyboard":["Enter sends","Shift+Enter newline","IME composition does not submit"],"rules":["stable send position","empty cannot send","failure keeps draft and attachments","inline retry"]},
+    {"id":"microphone","authorization":["unknown","granted","denied"],"capture":["idle","listening","recording"],"rules":["continuous and single-clip tasks both require grant","capture state separate from grant","starting clip pauses continuous listening","starting continuous listening finishes and retains current clip","stop-all stops both capture modes","granted state may remain after stopping"]},
+    {"id":"single-voice-message","states":["idle","recording","ready","discarded","sent"],"rules":["draft text retained","cannot bypass denied microphone state","finish before sending","stop-all finishes timer and retains recorded draft","no audio recorded in prototype"]},
+    {"id":"screen-share","authorization":["unknown","granted","denied"],"capture":["idle","sharing"],"rules":["separate from microphone","show selected source while active","source cannot silently change while sharing","visible stop","passive viewing design is not computer-use toggle","frequency remains undecided"]},
+    {"id":"reply","states":["idle","thinking","speaking","interrupted","error"],"rules":["separate cancel/interrupt from send","new generation invalidates old callback","session switch invalidates old callback","real TTS/model cancellation requires future runtime evidence"]},
+    {"id":"model-configuration","states":["unconfigured","checking","failed","connected","model-selected"],"rules":["connection and model readiness separate","provider change clears result","checks bound to provider and generation","failure preserves configuration","read-only fake credential in preview","no external request"]},
+    {"id":"progressive-panel","states":["closed","open"],"rules":["native popover escapes ancestor clipping","clamp to viewport","explicit close and Escape","trigger has aria-expanded","return focus to opener","no system permission request in prototype"]},
+    {"id":"global-sensing-stop","rules":["stop listening, recording and screen sharing together","retain finished voice draft","do not claim system grant revoked","page visibility change stops simulated activity","native app hide/exit needs separate verification"]}
+  ],
+  "unresolved_product_choices":["collapse versus hide/minimize semantics","memory save policy","screen observation frequency","formal character and voice"],
+  "acceptance_scope":"Browser checks validate this simulated reference only, not AIRI integration or physical devices."
+}

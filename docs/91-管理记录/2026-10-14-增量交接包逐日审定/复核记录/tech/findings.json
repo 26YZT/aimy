@@ -1,0 +1,1378 @@
+{
+  "date": "2026-10-14",
+  "status": "read-only engineering audit; root documents being revised; no implementation",
+  "baseline": "/Users/mima1234/Documents/aimy/aimy-app",
+  "scope_exclusions": [
+    "no old digital-lover/old AIRI source",
+    "no external candidate source reads",
+    "no model/network/install/app/tests run",
+    "no repository writes or subagents"
+  ],
+  "day1_choice": {
+    "answer": "A",
+    "source": "parent relayed direct user selection during review",
+    "meaning": "first memory management+relevant ordinary-chat recall; background proactive next batch; common foundation retained",
+    "implementation_authorized": false,
+    "API_or_schema_globally_frozen": false,
+    "other_day_choices": null
+  },
+  "counts": {
+    "API_proposals": 17,
+    "tasks": 15,
+    "requirements": 14,
+    "new_tasks_added": 0,
+    "new_product_entities_added": 0
+  },
+  "findings": [
+    {
+      "id": "HT01",
+      "severity": "P2",
+      "title": "来源删除/编辑的durable回执不能直接等同await deleteMessage",
+      "scope": "selected A",
+      "status": "root plans precise correction, needs final docs check",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 385,
+          "evidence": "deleteMessage delegates setSessionMessages"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 321,
+          "evidence": "replaceSessionMessages uses void persistSession; deleteMessage awaits no durable write"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 317,
+          "evidence": "existing persistSessionMessages returns durable persistSession Promise, exported1711"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 341,
+          "evidence": "commitUserMessage waits persistence and checks generation"
+        }
+      ],
+      "recommendation": "Within existing SRC/MEM owner add/use an awaitable scoped source-revision edit/delete commit receipt; only mark cleanup complete after native persistence succeeds. Source barrier commits first; failure stays PARTIAL/unknown. Preserve original session API behaviors unless affected.",
+      "decision_owner": "engineering",
+      "needs_user_choice": false,
+      "affected_tasks": [
+        "SRC-01",
+        "MEM-03",
+        "INT-01"
+      ]
+    },
+    {
+      "id": "HT02",
+      "severity": "P2",
+      "title": "最终发送门及native失效必须覆盖实际协议/传输边界并重算payload",
+      "scope": "selected A",
+      "status": "root plans precise correction, needs final docs check",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+          "line": 82,
+          "evidence": "resolveStep/string projection/tools have async work after high level guard"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-context.ts",
+          "line": 47,
+          "evidence": "current scope includes provider/base/model/conversation, no memory epoch"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "line": 568,
+          "evidence": "generationTranscript and providerTranscript take precedence over plain content"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+          "line": 179,
+          "evidence": "matching scope replays native payload"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-completions.ts",
+          "line": 28,
+          "evidence": "messages projected before SDK send/prepareStep"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+          "line": 84,
+          "evidence": "matching Responses native input replay"
+        }
+      ],
+      "recommendation": "Invalidate known dependent native/provider/generation transcripts and portable derived rounds, abort/drop old projected request; fresh filtered history+memory resolve→buildContext→new scope→reprojection. Verify guard after all async prepare and at actual transport boundary/per-step; no existing safe hook claim. Add exact existing types/llm.ts, runtime/llm-service.ts, runtime/chat-completions.ts to same SRC/MEM allowed boundary; preserve abort/Voice semantics.",
+      "decision_owner": "engineering",
+      "needs_user_choice": false,
+      "affected_tasks": [
+        "SRC-01",
+        "MEM-03",
+        "INT-01"
+      ]
+    },
+    {
+      "id": "HT03",
+      "severity": "P2",
+      "title": "明确renderer业务/IDB与Electron main资源/secret职责",
+      "scope": "common foundation",
+      "status": "requires owner wording clarification",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+          "line": 7,
+          "evidence": "renderer storage; local/outbox IndexedDB mounts"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/pinia/setup-synced.ts",
+          "line": 24,
+          "evidence": "cross-window synced Pinia runtime, not Electron-main business service"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "line": 81,
+          "evidence": "APP_USER_DATA_PATH override source exists; applied state unknown/not enabled in env audit"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "line": 29,
+          "evidence": "enabled preference holds independent microphone subscription"
+        }
+      ],
+      "recommendation": "MemoryService/Repo and Provider adapters run in elected renderer/shared packages; Electron-src/shared is serialized bridge DTOs, not storage service. main validates IPC sender/window and system permission/secret requests, renderer owner validates principal/character/session. Existing media handlers are not product leases. safeStorage bridge proposed, no current vault found. No new HTTP server or second runtime.",
+      "decision_owner": "engineering",
+      "needs_user_choice": false,
+      "affected_tasks": [
+        "LIFE-01",
+        "LOCAL-01",
+        "SRC-01",
+        "MEM-01"
+      ]
+    },
+    {
+      "id": "HT04",
+      "severity": "P2",
+      "title": "逐批完成依赖必须服从已选A，后台与其他体验节点不阻断首批",
+      "scope": "selected A and future batches",
+      "status": "Day1 A confirmed; root plans rewrite in same15 IDs",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/08-开发任务与交接.md",
+          "line": 213,
+          "evidence": "read snapshot INT depends PRO/VIS/CHAR globally; user chose first batch A"
+        }
+      ],
+      "recommendation": "Keep15 IDs. REQ-MEM04 ordinary-chat related reference under MEM03; PRO01 only deferred background. INT01/EXP01 use selected batch dependency/test slice; PRO/VIS/CHAR conditional in later batches, VOICE02 conditional experiment. A selection is scope-only, not coding authorization or freezing all17 API details.",
+      "decision_owner": "user_scope_already_answered_A; engineering_dependency_mapping",
+      "needs_user_choice": false,
+      "affected_tasks": [
+        "MEM-03",
+        "PRO-01",
+        "INT-01",
+        "EXP-01"
+      ]
+    },
+    {
+      "id": "HT05",
+      "severity": "P2",
+      "title": "source commit→durable job的崩溃间隙尚需落成恢复合同",
+      "scope": "selected A",
+      "status": "engineering detail to specify before implementation",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "line": 750,
+          "evidence": "post durable user append callback invoked without await, declared void379"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 341,
+          "evidence": "commitUserMessage waits persistence and checks generation"
+        }
+      ],
+      "recommendation": "Do not assume void onUserMessageAppended awaits durable enqueue. Define bounded source cursor/replay or awaited typed post-commit handling using existing sourceStates/jobs, so crash after chat commit and before enqueue does not lose auto-memory work; no default full-history replay. Cover under ENG06/08, no new task/entity/API.",
+      "decision_owner": "engineering",
+      "needs_user_choice": false,
+      "affected_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "INT-01"
+      ]
+    },
+    {
+      "id": "HT06",
+      "severity": "P2",
+      "title": "首批数据合同需补factKey、持久autoSave/receipt映射；后台字段不提前冻结",
+      "scope": "selected A data details; background deferred",
+      "status": "schema detail incomplete in read snapshot",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/03-技术设计.md",
+          "line": 53,
+          "evidence": "Envelope lists facts/sourceStates/jobs/barriers/events/receipts but not policy; factKey exists without derivation contract"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/04-API与事件契约.md",
+          "line": 40,
+          "evidence": "memory.policy promises persisted policy/revision/epoch"
+        }
+      ],
+      "recommendation": "Specify host-assigned stable factKey and ambiguous replacement behavior; user correction factId is already explicit, do not pretend exact-string/kind equality solves semantic identity. State which existing/new envelope field owns autoSave and durable mutation/cleanup receipts. Future proactive/config budgets/uncertain state remain deferred contract sections unless selected, not a new architecture vote.",
+      "decision_owner": "engineering; semantic quality remains future eval",
+      "needs_user_choice": false,
+      "affected_tasks": [
+        "MEM-01",
+        "MEM-02",
+        "MEM-03"
+      ]
+    },
+    {
+      "id": "HT07",
+      "severity": "P2",
+      "title": "Node和独立profile是实施前工程基线，不能误报已统一/启用",
+      "scope": "common foundation",
+      "status": "environment doc accurate; task receipt needs explicit evidence",
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "line": 81,
+          "evidence": "APP_USER_DATA_PATH override source exists; applied state unknown/not enabled in env audit"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/.tool-versions",
+          "line": 1,
+          "evidence": "declaresNode26.7.0; current env snapshot reports24.20.0, no root engines constraint"
+        }
+      ],
+      "recommendation": "Engineer choose/document one exact supported dev/test Node baseline and verify affected checks; no user choice between technical versions needed. Existing APP_USER_DATA_PATH override is only proposed startup use, not enabled profile evidence. Before future run use isolated test profile and verify effective app.getPath without reading/migrating/deleting current user data. Put within BASE/LIFE handoff evidence, do not add implementation task.",
+      "decision_owner": "engineering",
+      "needs_user_choice": false,
+      "affected_tasks": [
+        "BASE-01",
+        "LIFE-01",
+        "INT-01"
+      ]
+    }
+  ],
+  "api_matrix": [
+    {
+      "operation": "memory.list",
+      "current_exact_API_exists": false,
+      "classification": "new_service_contract",
+      "execution_owner": "renderer UI→elected renderer MemoryService→new MemoryRepo",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/memory.repo.ts",
+          "exists": false
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 40,
+          "evidence": "get/save/remove session ordinary unstorage calls, no MemoryRepo CAS"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/pinia/setup-synced.ts",
+          "line": 24,
+          "evidence": "cross-window synced Pinia runtime, not Electron-main business service"
+        }
+      ],
+      "review_note": "No current fact query/list repository; existing history/notebook not equivalent",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "memory.source",
+      "current_exact_API_exists": false,
+      "classification": "new_service_contract",
+      "execution_owner": "renderer MemoryService→existing session store/repository",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 40,
+          "evidence": "get/save/remove session ordinary unstorage calls, no MemoryRepo CAS"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 341,
+          "evidence": "commitUserMessage waits persistence and checks generation"
+        }
+      ],
+      "review_note": "Perfact source/version resolution new; reuse session/message IDs/loading",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "memory.correct",
+      "current_exact_API_exists": false,
+      "classification": "new_service_contract",
+      "execution_owner": "renderer MemoryService→new singlekey CAS",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/memory.repo.ts",
+          "exists": false
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 40,
+          "evidence": "get/save/remove session ordinary unstorage calls, no MemoryRepo CAS"
+        }
+      ],
+      "review_note": "New fact revision/supersession and invalidation, not setter renamed",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "memory.forget",
+      "current_exact_API_exists": false,
+      "classification": "new_service_contract",
+      "execution_owner": "renderer MemoryService barrier→awaitable chat cleanup owner",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/memory.repo.ts",
+          "exists": false
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 385,
+          "evidence": "deleteMessage delegates setSessionMessages"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 321,
+          "evidence": "replaceSessionMessages uses void persistSession; deleteMessage awaits no durable write"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 317,
+          "evidence": "existing persistSessionMessages returns durable persistSession Promise, exported1711"
+        }
+      ],
+      "review_note": "Barrier+cleanup receipt new; source deletion must await actual durable owner",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "memory.policy",
+      "current_exact_API_exists": false,
+      "classification": "new_persisted_policy_contract",
+      "execution_owner": "renderer MemoryService",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/service.ts",
+          "exists": false
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 40,
+          "evidence": "get/save/remove session ordinary unstorage calls, no MemoryRepo CAS"
+        }
+      ],
+      "review_note": "autoSave/epoch/revision durable storage must be specified; no current native setting",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "memory.enqueueSource",
+      "current_exact_API_exists": false,
+      "classification": "new_internal_contract_on_existing_commit",
+      "execution_owner": "renderer durable source adapter→new memory worker",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/source-adapter.ts",
+          "exists": false
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "line": 341,
+          "evidence": "commitUserMessage waits persistence and checks generation"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "line": 750,
+          "evidence": "post durable user append callback invoked without await, declared void379"
+        }
+      ],
+      "review_note": "Use durable user commit/final transcript; callback is currently void, crash gap needs bounded recovery",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "memory.resolveRequest",
+      "current_exact_API_exists": false,
+      "classification": "new_core_port_and_renderer_adapter",
+      "execution_owner": "pure core request port→renderer memory resolver",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "line": 290,
+          "evidence": "runtimeContextProviders no session; new request memory port required"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "line": 568,
+          "evidence": "generationTranscript and providerTranscript take precedence over plain content"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+          "line": 82,
+          "evidence": "resolveStep/string projection/tools have async work after high level guard"
+        }
+      ],
+      "review_note": "Request-bound resolver/guard token new; not global registry/activeSession lookup",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "memory.commitCandidates",
+      "current_exact_API_exists": false,
+      "classification": "new_repository_contract",
+      "execution_owner": "trusted renderer worker→singlekey MemoryRepo CAS",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/memory.repo.ts",
+          "exists": false
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 40,
+          "evidence": "get/save/remove session ordinary unstorage calls, no MemoryRepo CAS"
+        }
+      ],
+      "review_note": "No current candidate fact commit/CAS/lease operation",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "perception.start",
+      "current_exact_API_exists": false,
+      "classification": "new_product_policy_wrapper_existing_media",
+      "execution_owner": "renderer asks Electron main permission policy then existing capture owner",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "line": 81,
+          "evidence": "APP_USER_DATA_PATH override source exists; applied state unknown/not enabled in env audit"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "line": 29,
+          "evidence": "enabled preference holds independent microphone subscription"
+        }
+      ],
+      "review_note": "OS/Electron capture helpers exist; product lease/epoch and all consumers gate new",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "perception.stop",
+      "current_exact_API_exists": false,
+      "classification": "new_product_policy_wrapper_existing_stop",
+      "execution_owner": "main/renderer policy→all affected renderer resource subscriptions",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "line": 29,
+          "evidence": "enabled preference holds independent microphone subscription"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 249,
+          "evidence": "existing interrupt + voice response cancellation; not new audio runtime"
+        }
+      ],
+      "review_note": "stopListening alone does not release independent hold or screen consumers",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "perception.stopAll",
+      "current_exact_API_exists": false,
+      "classification": "new_product_lifecycle_contract",
+      "execution_owner": "main lifecycle→renderer resource owners",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/App.vue",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+          "line": 155,
+          "evidence": "main close becomes hide"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+          "line": 20,
+          "evidence": "stage pause only minimized; capture policy is additional"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "line": 29,
+          "evidence": "enabled preference holds independent microphone subscription"
+        }
+      ],
+      "review_note": "Bounded teardown receipt/epoch invalidation new",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "vision.configure",
+      "current_exact_API_exists": false,
+      "classification": "new_versioned_wrapper_existing_settings",
+      "execution_owner": "renderer UI→single Vision owner",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/processing-store.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/vision.vue",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+          "line": 7,
+          "evidence": "renderer storage; local/outbox IndexedDB mounts"
+        }
+      ],
+      "review_note": "Existing interval/metrics helpers; CAS configuration/budget/30-180s contract new; deferred Day1 A",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "proactive.configure",
+      "current_exact_API_exists": false,
+      "classification": "new_durable_policy",
+      "execution_owner": "renderer UI→durable policy/event owner",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 39,
+          "evidence": "existing attention timers/config; no proposed enable/quiet durable policy"
+        }
+      ],
+      "review_note": "enabled/quiet/cooldown/durablebudget wrapper new; deferred Day1 A",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "proactive.consider",
+      "current_exact_API_exists": false,
+      "classification": "new_gate_on_existing_spark",
+      "execution_owner": "typed system event→existing Spark→validated presentation",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 39,
+          "evidence": "existing attention timers/config; no proposed enable/quiet durable policy"
+        }
+      ],
+      "review_note": "Gate/full decision/epoch/session/token final check new; Day1 A background deferred",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "presentation.cancel",
+      "current_exact_API_exists": false,
+      "classification": "new_operation_envelope_existing_turn_cancel",
+      "execution_owner": "renderer control→existing voice/chat owners; main only triggers lifecycle control",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 249,
+          "evidence": "existing interrupt + voice response cancellation; not new audio runtime"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+          "line": 342,
+          "evidence": "interrupt returns silence/playback receipt, aborts producers"
+        }
+      ],
+      "review_note": "Reuse TurnRef/interrupt/receipt, add operation identity and fact dependency invalidation",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "diagnostics.summary",
+      "current_exact_API_exists": false,
+      "classification": "new_aggregate_read_existing_tracing",
+      "execution_owner": "renderer read adapters",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/devtools/context-observability.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/devtools/io-tracer.ts",
+          "exists": true
+        }
+      ],
+      "source_evidence": [],
+      "review_note": "Existing local tracing, proposed unified low-sensitive aggregate API not ready",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    },
+    {
+      "operation": "operation.get",
+      "current_exact_API_exists": false,
+      "classification": "new_receipt_read",
+      "execution_owner": "renderer UI→owner persisted mutation/cleanup receipt",
+      "file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/service.ts",
+          "exists": false
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 40,
+          "evidence": "get/save/remove session ordinary unstorage calls, no MemoryRepo CAS"
+        }
+      ],
+      "review_note": "No current unified memory mutation receipt query; do not confuse playback receipt",
+      "current_product_implementation": false,
+      "freeze_status": "proposal; Day1 scope confirmation does not freeze this contract"
+    }
+  ],
+  "task_matrix": [
+    {
+      "task_id": "BASE-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [],
+      "phase_for_confirmed_A": "common foundation",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/about.vue",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [],
+      "affected_verification": [
+        "original desktop/typecheck & selected branding browser checks"
+      ],
+      "preserve_and_scope_note": "Only actually hitB5/B6/B8 visible strings; tools/profile metadata proof, no all-repo rename"
+    },
+    {
+      "task_id": "LIFE-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "BASE-01"
+      ],
+      "phase_for_confirmed_A": "common foundation",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/shared/eventa/index.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/App.vue",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/audio/audio-device.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice-messages.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/shared/eventa/perception-policy.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "media-permissions.test.ts",
+        "stage-window-lifecycle.test.ts",
+        "voice/input/output original tests",
+        "new late-grant/all-consumer teardown test required"
+      ],
+      "preserve_and_scope_note": "Main policy+renderer lease fanout; preserve chat collapse/focus semantics; precise capture consumers only"
+    },
+    {
+      "task_id": "LOCAL-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "BASE-01",
+        "LIFE-01"
+      ],
+      "phase_for_confirmed_A": "common foundation",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/config.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/inference-service-providers.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/shared/eventa/index.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/aimy-secret-store.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/shared/eventa/secret-store.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "synthetic-secret no-sync/WS/outbox/config gates",
+        "future secure-store failure/no-plaintext fallback checks"
+      ],
+      "preserve_and_scope_note": "Do not replace Provider/runtime; new bridge names proposal, no existing vault claim"
+    },
+    {
+      "task_id": "SRC-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "LOCAL-01"
+      ],
+      "phase_for_confirmed_A": "first A",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/types/llm.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-context.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-completions.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/source-adapter.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "chat-orchestrator-runtime.test.ts",
+        "runtime/chat-completions.test.ts",
+        "runtime/responses.test.ts",
+        "session-store.browser.test.ts",
+        "new source-revision/crash-gap/guard payload cases"
+      ],
+      "preserve_and_scope_note": "Do not edit composedMessage preview as inference source; preserve existing native replay when valid"
+    },
+    {
+      "task_id": "MEM-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "SRC-01"
+      ],
+      "phase_for_confirmed_A": "first A",
+      "minimal_existing_file_candidates": [],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/memory.repo.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/memory.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/service.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/index.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "new actualIDB CAS/quota/conflict/new-realm then process recovery tests"
+      ],
+      "preserve_and_scope_note": "Same underlying local IDB/store/encoded key; synchronous transaction callback, no network in CAS"
+    },
+    {
+      "task_id": "MEM-02",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "MEM-01"
+      ],
+      "phase_for_confirmed_A": "first A",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/ai/chat-llm/llm.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/service.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/source-adapter.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "new fixed candidate/source guard/budget tests",
+        "affected existing chat tests"
+      ],
+      "preserve_and_scope_note": "Only real durable user/final transcript; no assistant/system/tool fact writes; Prompt load remains within existing file owner"
+    },
+    {
+      "task_id": "MEM-03",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "MEM-01",
+        "MEM-02"
+      ],
+      "phase_for_confirmed_A": "first A",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-context.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-completions.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/service.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "new correction/forget/PARTIAL/receipt and query current-history cases",
+        "two-protocol actual payload interception",
+        "UI WIP replacement browser validation"
+      ],
+      "preserve_and_scope_note": "A includes ordinary conversation relevant recall/REQMEM04; actual output cancel reuses Voice owner"
+    },
+    {
+      "task_id": "PRO-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "MEM-03",
+        "LIFE-01"
+      ],
+      "phase_for_confirmed_A": "deferred/conditional",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/agent.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/types.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/plugins/reaction.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/mods/api/spark-notify-reaction.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/memory/service.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "new event/session/epoch/idempotency and say-silence cases",
+        "existing Spark/character reaction tests"
+      ],
+      "preserve_and_scope_note": "Deferred background; not A dependency; existing Spark retained, no second scheduler runtime"
+    },
+    {
+      "task_id": "VIS-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "LIFE-01",
+        "LOCAL-01"
+      ],
+      "phase_for_confirmed_A": "deferred/conditional",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/processing-store.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/vision-read-queue.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [],
+      "affected_verification": [
+        "orchestrator.test.ts",
+        "use-vision-inference.test.ts",
+        "new switchsource/lateframe/started budget cases"
+      ],
+      "preserve_and_scope_note": "Deferred optimization; foundation only gates existing consumers"
+    },
+    {
+      "task_id": "VIS-02",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "VIS-01"
+      ],
+      "phase_for_confirmed_A": "deferred/conditional",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/vision.vue",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/index.vue",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [],
+      "affected_verification": [
+        "affected settings/control browser cases"
+      ],
+      "preserve_and_scope_note": "Deferred product controls, no selected new screen feature today"
+    },
+    {
+      "task_id": "VOICE-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "LIFE-01",
+        "LOCAL-01"
+      ],
+      "phase_for_confirmed_A": "deferred/conditional",
+      "minimal_existing_file_candidates": [],
+      "minimal_proposed_file_candidates": [],
+      "affected_verification": [
+        "existing core/pipeline baseline then explicit authorized devices/model fixture"
+      ],
+      "preserve_and_scope_note": "Deferred sampling; default read-only product code; output rootdocs evidence only"
+    },
+    {
+      "task_id": "VOICE-02",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "VOICE-01"
+      ],
+      "phase_for_confirmed_A": "deferred/conditional",
+      "minimal_existing_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/audio/audio-device.ts",
+          "exists": true
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt.ts",
+          "exists": true
+        }
+      ],
+      "minimal_proposed_file_candidates": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/voice/eot-adapter.ts",
+          "exists": false,
+          "status": "proposed file boundary; no write authorization"
+        }
+      ],
+      "affected_verification": [
+        "actual PCM coordinates/pre-roll and EOT revision tests"
+      ],
+      "preserve_and_scope_note": "Conditional evidence-led experiment; no model download/implementation now"
+    },
+    {
+      "task_id": "CHAR-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "VOICE-01",
+        "MEM-03"
+      ],
+      "phase_for_confirmed_A": "deferred/conditional",
+      "minimal_existing_file_candidates": [],
+      "minimal_proposed_file_candidates": [],
+      "affected_verification": [
+        "actual affected marker/render source tests after asset/voice scope chosen"
+      ],
+      "preserve_and_scope_note": "Deferred; exact asset/renderer files not yet selected, preserve current renderer"
+    },
+    {
+      "task_id": "INT-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "MEM-03"
+      ],
+      "phase_for_confirmed_A": "first A",
+      "minimal_existing_file_candidates": [],
+      "minimal_proposed_file_candidates": [],
+      "affected_verification": [
+        "selected A ENG01-11/17-18 slices as affected; protocol/IDB/lifecycle originals",
+        "later PRO/VIS/CHAR conditional affected slices"
+      ],
+      "preserve_and_scope_note": "Same task ID, selected batch completion; not forced global later dependencies"
+    },
+    {
+      "task_id": "EXP-01",
+      "current_implementation": "not implemented as Aimy incremental task",
+      "original_dependencies_read_snapshot": [
+        "INT-01"
+      ],
+      "phase_for_confirmed_A": "first A",
+      "minimal_existing_file_candidates": [],
+      "minimal_proposed_file_candidates": [],
+      "affected_verification": [
+        "selected batch human experience only when actual authorized model/device exists"
+      ],
+      "preserve_and_scope_note": "Same task ID bybatch; engineering done vs experience pending separated"
+    }
+  ],
+  "layer_responsibilities": {
+    "frontend": "stage-tamagotchi renderer and stage-pages existingVue UI",
+    "local_business_data": "elected renderer stage-ui stores/services/IDB; pure core-agent ports/Conversation shared library",
+    "electron_shared": "serialized Eventa DTO/descriptor definitions only, no business/database execution owner",
+    "electron_main": "window/system permission/lifecycle/host secret bridge proposed; sender validation for IPC, no invented MemoryHTTP server",
+    "secret": "Electron safeStorage API candidate, current app vault absent; existing Provider consumers must be narrowed, never read real secrets"
+  },
+  "environment": {
+    "observed_Node": "24.20.0 from current root env audit",
+    "declared_Node": "26.7.0 .tool-versions, not package engines minimum",
+    "declared_pnpm": "11.24.0",
+    "profile_override_source_exists": true,
+    "APP_USER_DATA_PATH_applied_in_review": false,
+    "real_user_data_read": false
+  },
+  "source_and_doc_fingerprints": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+      "sha256": "f7474bfc16bafb4166124aa30e85e0cfe1a12bf98abd1f7c89c673f394fadd60"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+      "sha256": "706747b89b705108eded64c8736b4194f5bfac52f41714a2355f6b4b12238d8f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-completions.ts",
+      "sha256": "f62fa818c080ddf97c5f005b09bcf7fe8a5d2ed400c2f67df2d252ebe592796f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-context.ts",
+      "sha256": "76bd7db411283193ede935af5ec6d41c8d7a1c0fda541a0668233259895e6ad4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+      "sha256": "212363665b735b45085cb1c0a730e59f4a0e742cae3f8ffe1ad78651a097f88f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+      "sha256": "fc54da57c438fd82abe010c2170752ab0748feef716a73b095812bf5e9199ce4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/pinia/setup-synced.ts",
+      "sha256": "6ddf8c7f842c04bdba6a56c6b6d567578dde97083dcd058a23406f382ea02b3d"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+      "sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+      "sha256": "b1cf1061efc6f3e9570859e55b18c48200316434b6aba1b9a2e6a799f819dd12"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/controls-island-chat-button.vue",
+      "sha256": "eea7a02f637596b14f453ff581e94773de234ff800dcc6037fd9a5172910ae03"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+      "sha256": "046e4452947ca992d1950cfda4bd2bf661b5288be6a45d32d8204404774b4cca"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/audio/audio-device.ts",
+      "sha256": "1c1fdeac112b09c3557bcc8f6926ae1e0e29867471f730baab57cbc09a66908e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+      "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+      "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+      "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/03-技术设计.md",
+      "sha256": "350af14ebdfa91153f9ffa71558789674724211b69bb0dd39dc44a7b675827f9"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/04-API与事件契约.md",
+      "sha256": "3bee0dee057cefac460573dbd16d05a022b775eff66fae97d039a893b4d9de40"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/07-验证与AI评测计划.md",
+      "sha256": "f422972a8908ab67dc339fee6ffb5c3db65d7f81fb915b0c376740005a636a66"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/08-开发任务与交接.md",
+      "sha256": "36c521d9cfc931879417589a3f8b482070c870bddeeee54169292bcd3166f0c6"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/接口目录.json",
+      "sha256": "f29d20668174f4b52128dc00671f464bf147a194ccd52c959dcc7246370cdf4a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/追溯矩阵.json",
+      "sha256": "d4039b568a9388cf2140e8e1584625aabf0645b1b4200994ef2ea95a78238b64"
+    }
+  ],
+  "verification": "static source/contract/file existence only; previous tests not rerun",
+  "await_root_document_final_review": true
+}

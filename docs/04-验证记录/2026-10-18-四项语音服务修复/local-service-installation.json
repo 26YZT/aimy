@@ -1,0 +1,42 @@
+[
+  {
+    "name": "voicevox",
+    "label": "ai.aimy.localvoice.voicevox",
+    "plist": "/Users/mima1234/Library/LaunchAgents/ai.aimy.localvoice.voicevox.plist",
+    "args": [
+      "/Users/mima1234/Library/Application Support/Aimy-Voice-Engines/voicevox-0.25.2/macos-arm64/run",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "50021",
+      "--cors_policy_mode",
+      "localapps",
+      "--allow_origin",
+      "null",
+      "--cpu_num_threads",
+      "2"
+    ],
+    "loopbackOnly": true,
+    "loginStart": true
+  },
+  {
+    "name": "aivis",
+    "label": "ai.aimy.localvoice.aivis",
+    "plist": "/Users/mima1234/Library/LaunchAgents/ai.aimy.localvoice.aivis.plist",
+    "args": [
+      "/Users/mima1234/Library/Application Support/Aimy-Voice-Engines/aivis-1.2.0/macOS-arm64/run",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "10101",
+      "--cors_policy_mode",
+      "localapps",
+      "--allow_origin",
+      "null",
+      "--no-use_gpu",
+      "--disable_sentry"
+    ],
+    "loopbackOnly": true,
+    "loginStart": true
+  }
+]

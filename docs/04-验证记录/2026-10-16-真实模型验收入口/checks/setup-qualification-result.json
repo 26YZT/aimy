@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "pid": 4490,
+  "output": "/private/tmp/aimy-live-entry-20261016/qualification/setup-runs/setup-3ae06be9-0dd8-4821-af5a-fe4cde7d2568",
+  "saved": true,
+  "requests": 0,
+  "attempts": 0,
+  "keyInPublicEvidence": false,
+  "exit": {
+    "code": 0,
+    "signal": null
+  }
+}

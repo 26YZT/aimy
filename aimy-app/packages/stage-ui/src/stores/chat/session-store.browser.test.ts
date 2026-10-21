@@ -26,6 +26,10 @@ vi.mock('../../database/repos/chat-sessions.repo', () => ({
     removeTombstones: vi.fn().mockResolvedValue(undefined),
     saveIndex: vi.fn().mockResolvedValue(undefined),
     saveSession: vi.fn().mockResolvedValue(undefined),
+    commitSessionSnapshotAndIndex: async (id: string, record: import('../../types/chat-session').ChatSessionRecord, index: import('../../types/chat-session').ChatSessionsIndex) => {
+      await chatSessionsRepo.saveSession(id, record)
+      await chatSessionsRepo.saveIndex(index)
+    },
     updateOutboxEntries: vi.fn().mockResolvedValue(undefined),
   },
 }))

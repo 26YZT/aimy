@@ -1,0 +1,41 @@
+{
+  "restart": {
+    "status": "PASS",
+    "pids": [
+      32838,
+      32889
+    ],
+    "fact_counts": [
+      1,
+      1
+    ],
+    "same_fact_hash": true,
+    "exits": [
+      {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      },
+      {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      }
+    ],
+    "model_requests": 0,
+    "ledger_records_unchanged": true
+  },
+  "synthetic_budget": {
+    "paused": false,
+    "attempts": 5,
+    "states": [
+      "settled",
+      "settled",
+      "settled",
+      "settled",
+      "settled"
+    ],
+    "total_accounted_micro_yuan": 0
+  },
+  "real_model_calls": 0
+}

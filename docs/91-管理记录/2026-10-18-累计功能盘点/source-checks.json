@@ -1,0 +1,2032 @@
+[
+  {
+    "entry": "A01",
+    "path": "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "074eb9ec8bb3821f30b786e567e21717d8ad14bfd9f4015eb8697e2a9302b39d"
+  },
+  {
+    "entry": "A01",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "9947b73be7d6c82091fae1bf4fb61281027be3e44716d1bfdbe2d3fe7420c8ad"
+  },
+  {
+    "entry": "A01",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "b1cf1061efc6f3e9570859e55b18c48200316434b6aba1b9a2e6a799f819dd12"
+  },
+  {
+    "entry": "A01",
+    "path": "apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "327a2aec9b56483dda51683492372d9921f45303734e6e02282d7f9d938b0830"
+  },
+  {
+    "entry": "A02",
+    "path": "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "074eb9ec8bb3821f30b786e567e21717d8ad14bfd9f4015eb8697e2a9302b39d"
+  },
+  {
+    "entry": "A02",
+    "path": "apps/stage-tamagotchi/src/main/tray/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "5cbe9749e7de30636301886aa2d3904c33d78d41a742e8be2ed9cbd3a7156446"
+  },
+  {
+    "entry": "A03",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "9947b73be7d6c82091fae1bf4fb61281027be3e44716d1bfdbe2d3fe7420c8ad"
+  },
+  {
+    "entry": "A03",
+    "path": "apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/controls-island-fade-on-hover.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4f33007f4e14cd7371df58566b28635e9870a5ca7c2b1f665cd70a8b7eecda1e"
+  },
+  {
+    "entry": "A03",
+    "path": "apps/stage-tamagotchi/src/renderer/utils/fade-on-hover.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "a831bd99e1115cf7b258d84b4d74fc00c063eeb27e062c6bee6eec2bec283809"
+  },
+  {
+    "entry": "A04",
+    "path": "apps/stage-tamagotchi/src/main/windows/chat/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "7687c84510dfdc3d70de17f787cb6cf2d905c39704b1a0812dbe35769fe9352b"
+  },
+  {
+    "entry": "A04",
+    "path": "apps/stage-tamagotchi/src/main/windows/chat/floating.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d43ed299a9f79c258fdbd48475c77823ff8f33f53f4e3ab7f3d91c908e133ab0"
+  },
+  {
+    "entry": "A04",
+    "path": "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8"
+  },
+  {
+    "entry": "A04",
+    "path": "apps/stage-tamagotchi/src/main/windows/chat/mode-switch.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "adf32ab0295158ec1d89db7e662b5baf0f74abf1e8696bb379f95bae1a7b6c51"
+  },
+  {
+    "entry": "A05",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/system/window-shortcuts.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "abd81d3978396962ef242d819f410209fd825109053a60276248eb8f10a048c3"
+  },
+  {
+    "entry": "A05",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/spotlight.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4ed1d722f86efda577eb4ca2c21c6709511d7fb25544911d3174d7a566d84285"
+  },
+  {
+    "entry": "A05",
+    "path": "apps/stage-tamagotchi/src/main/services/electron/global-shortcut.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "84516cc76c4c4dfa84c480d2b16d198f98144a365151e97cc4cc9f98cf0572cc"
+  },
+  {
+    "entry": "A06",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/inlay/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "a1a358a4461b61894d3499c1c75de91fde4ae4a2aee7770842929427d8b74d2d"
+  },
+  {
+    "entry": "A06",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "9947b73be7d6c82091fae1bf4fb61281027be3e44716d1bfdbe2d3fe7420c8ad"
+  },
+  {
+    "entry": "A06",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/caption.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "48adf56634fc7669c8379e55a7f5b429be2f48cc042438718c105c6dea241973"
+  },
+  {
+    "entry": "A06",
+    "path": "apps/stage-tamagotchi/src/main/windows/caption/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "1e4b8c76df2f0d78855fb6a331bb43286b22c2fce556353c591534a2b6df90d7"
+  },
+  {
+    "entry": "A07",
+    "path": "apps/stage-tamagotchi/src/main/tray/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "5cbe9749e7de30636301886aa2d3904c33d78d41a742e8be2ed9cbd3a7156446"
+  },
+  {
+    "entry": "A08",
+    "path": "apps/stage-tamagotchi/src/renderer/components/stage-islands/resource-status-island/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "d4af66cd7455d4247e6c196fc382ed608a3ede7e9ad3e334c73d349b63357ffa"
+  },
+  {
+    "entry": "A08",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/resources.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "1b5ef74642d748d8116dfd7f26282f54472a38ef3f529c40c942956f5fa0d1ea"
+  },
+  {
+    "entry": "A08",
+    "path": "packages/stage-ui/src/stores/startup-resources.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "4a444310d51133dbf0d6e8f2b520988d3ca0ee818b68e2350b083f84062975f6"
+  },
+  {
+    "entry": "A09",
+    "path": "packages/stage-ui/src/stores/chat.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "701e1d42e3ac7062f18b3960d9f4f7dd5600f68a9a952352ed895760234ff62a"
+  },
+  {
+    "entry": "A09",
+    "path": "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8"
+  },
+  {
+    "entry": "A10",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/sessions-drawer.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "38556ed138d2eeb3f777807026568e6ce32a43d8d4e45a18392490f01d99a3aa"
+  },
+  {
+    "entry": "A10",
+    "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "3f122c3e194a330893c745127a35ec857659995ce7880b7c5f7aac32b6920ba9"
+  },
+  {
+    "entry": "A10",
+    "path": "packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "ac91bac863e776919e66c1e5ef6515fa266d68f61b195831657344b82ed7d250"
+  },
+  {
+    "entry": "A11",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/sessions-list.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "72c43e13006a81b3198b3ce8fe13eba79277f95de6458486d390f50bb77bd129"
+  },
+  {
+    "entry": "A11",
+    "path": "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8"
+  },
+  {
+    "entry": "A11",
+    "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "3f122c3e194a330893c745127a35ec857659995ce7880b7c5f7aac32b6920ba9"
+  },
+  {
+    "entry": "A11",
+    "path": "packages/stage-pages/src/pages/settings/data/components/chats-section.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7675f1acb6eb3556ec647a027591104e8b6511d3efad55d89f9ab86c37306ec7"
+  },
+  {
+    "entry": "A12",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/action-menu/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "183ce6a40edbde9452c8477a7a694d5adff50da7d568a20c2ca211a628df63fc"
+  },
+  {
+    "entry": "A12",
+    "path": "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8"
+  },
+  {
+    "entry": "A12",
+    "path": "packages/stage-ui/src/stores/chat.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "701e1d42e3ac7062f18b3960d9f4f7dd5600f68a9a952352ed895760234ff62a"
+  },
+  {
+    "entry": "A12",
+    "path": "packages/stage-layouts/src/composables/use-chat-interruption.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "a618143be6a89f2c55a47a709515290c40bad7f3716a543cd33c6c1291fba409"
+  },
+  {
+    "entry": "A12",
+    "path": "packages/stage-ui/src/stores/speech-output-control.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "0ddac07b5a9c2bcba5077aae46b2bd15af0ee3908901b9ef63b94c3737afc536"
+  },
+  {
+    "entry": "A13",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/assistant-item.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "10f7ec5b1929014ea4d68ca80340a7d3a431707d12b622a888b5b7cb2cb0496b"
+  },
+  {
+    "entry": "A13",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/response-citations.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4daef1ef8553b59101250e39d633c6afe7bdb23fefcdbeb08b493b1c32bde7ff"
+  },
+  {
+    "entry": "A14",
+    "path": "packages/stage-ui/src/components/scenarios/chat/composables/use-chat-images.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "3bc40ad8a82f3e7cbc234fdad064d1b4c00225c83e9d5e4d0afc71b8d9568faf"
+  },
+  {
+    "entry": "A14",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/image-attachment-preview.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "449c0f07c10928cf4db468f21e1cb75b042a34908ebaf31532a2993c9f9b2e1c"
+  },
+  {
+    "entry": "A14",
+    "path": "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8"
+  },
+  {
+    "entry": "A14",
+    "path": "packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "80655ee24c5dc2991dce686a17b78bd0994ab86c9fa40b55911369ec8ce717f6"
+  },
+  {
+    "entry": "A14",
+    "path": "packages/stage-pages/src/pages/settings/modules/vision.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "fa37d690cf1633d421d142a99647fa5d74df9ead8424e1735d3abca926e7763c"
+  },
+  {
+    "entry": "A15",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/voice-input-button.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7c1a117834a46787811d360f2a1f0f535938127eb59c7281be865838436592f0"
+  },
+  {
+    "entry": "A15",
+    "path": "packages/stage-ui/src/stores/voice-messages.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "e9f9e1866775125b5758e7c03de2fdacff589299c9edbeee5f46fe5f143e6a80"
+  },
+  {
+    "entry": "A15",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/voice-message-player.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "a2fa1558ed5b0213474e887af77bd39e71c16474917638330983945a28f0fe61"
+  },
+  {
+    "entry": "A16",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/tool-call-block.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "728ed5c771b5bbd59adad25b7f6bef0f20f2f80975ee7c8504dbfbbab9ba221d"
+  },
+  {
+    "entry": "A16",
+    "path": "apps/stage-tamagotchi/src/renderer/components/chat-tool-renderers/journal-tool-call-block.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "1e7d4deee07590c57f4792073f427826a500080d31bd75d86581be715cb74e91"
+  },
+  {
+    "entry": "A16",
+    "path": "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8"
+  },
+  {
+    "entry": "A16",
+    "path": "packages/stage-ui/src/stores/tool-call-rerun.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "af6d6e95a129a43d02bd0a255c5789baddef1ad8f16420031b157f818c673fb1"
+  },
+  {
+    "entry": "A16",
+    "path": "packages/stage-ui/src/stores/chat.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "701e1d42e3ac7062f18b3960d9f4f7dd5600f68a9a952352ed895760234ff62a"
+  },
+  {
+    "entry": "A17",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/components/CardEditor.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7d056ab7cdceee596640a56f64d34bc9671ecef10549994bf0bc01dd70aef761"
+  },
+  {
+    "entry": "A17",
+    "path": "packages/stage-ui/src/services/airi-card-editor.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "51b6c077d3d39c4a2b35c1799bbef23515095c30afcc0f83afe0049cf681c9dc"
+  },
+  {
+    "entry": "A17",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7c06ada4e4e549cfb3a45563ae5a01e065964ac5eaa4a2ff9297dd728bfb77b1"
+  },
+  {
+    "entry": "A17",
+    "path": "packages/stage-ui/src/stores/modules/airi-card.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376"
+  },
+  {
+    "entry": "A18",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7c06ada4e4e549cfb3a45563ae5a01e065964ac5eaa4a2ff9297dd728bfb77b1"
+  },
+  {
+    "entry": "A18",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/components/CardDetailDialog.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "2bbc2afde8bb13488d264fb66f08ad65173a6145fc79752d498962c2ad681dca"
+  },
+  {
+    "entry": "A18",
+    "path": "packages/stage-ui/src/services/airi-card-import-export.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "571ae25516fa01182a5df00c0393bc697eb655f63f100f7594a967302e679b97"
+  },
+  {
+    "entry": "A19",
+    "path": "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "671f81389cbe44085937c94d169cf17c4035f90f950434f17aa21f47feef82aa"
+  },
+  {
+    "entry": "A19",
+    "path": "packages/stage-ui-live2d/src/components/scenes/live2d/Model.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "2b33d4bc902418cced0119f236729401e801d384627e5134de58de677619a1cd"
+  },
+  {
+    "entry": "A19",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/live2d.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "39ee72e040ab26fa1a087e37c32b729c7f25141fdec71b93808f529f094c7c16"
+  },
+  {
+    "entry": "A19",
+    "path": "packages/stage-ui/src/features/motions/live2d/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "737f0c7b816a58c3ba7343396c40b56a5d622ff7769b6b5e045f4159339dd706"
+  },
+  {
+    "entry": "A20",
+    "path": "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "671f81389cbe44085937c94d169cf17c4035f90f950434f17aa21f47feef82aa"
+  },
+  {
+    "entry": "A20",
+    "path": "packages/stage-ui-three/src/components/ThreeScene.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "10a917c47966465a0314dff3966cdfc599b50b6d4effe93eea1d025ddfcb25b2"
+  },
+  {
+    "entry": "A20",
+    "path": "packages/stage-ui-three/src/components/Model/VRMModel.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "a97349890ba713ef56f95627adc636fbe283f88bba7856dc0bef14452d224f44"
+  },
+  {
+    "entry": "A21",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/spine.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4b19d5b509e9edab3796ad9b69ce2253ce4699634ac0c38d08ff6a69ca7091c9"
+  },
+  {
+    "entry": "A21",
+    "path": "packages/stage-ui/src/components/scenes/Stage.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7"
+  },
+  {
+    "entry": "A21",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/tachie.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "34b88b03b54e9aa1704fb7d6c777dc7028998419d15442bb3d0a8882f050a957"
+  },
+  {
+    "entry": "A21",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/mmd.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4eb9d8a4dc82d12ccdedb9f5e3d3fd0d090f4bf1cac4e08077acf7a73f987c08"
+  },
+  {
+    "entry": "A22",
+    "path": "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "671f81389cbe44085937c94d169cf17c4035f90f950434f17aa21f47feef82aa"
+  },
+  {
+    "entry": "A22",
+    "path": "packages/stage-ui/src/stores/display-models.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "06de0d2c6cb717fe8124a82ead640d3c94269925a5bc384afe20c8531ae8adec"
+  },
+  {
+    "entry": "A22",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/live2d.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "39ee72e040ab26fa1a087e37c32b729c7f25141fdec71b93808f529f094c7c16"
+  },
+  {
+    "entry": "A22",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/vrm.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "c84bb9a528edcbbb1f41561f11f4c4c17a6abf51b65e58f7b6f91c756c5ba661"
+  },
+  {
+    "entry": "A22",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/mmd.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4eb9d8a4dc82d12ccdedb9f5e3d3fd0d090f4bf1cac4e08077acf7a73f987c08"
+  },
+  {
+    "entry": "A23",
+    "path": "packages/stage-ui/src/components/scenes/Stage.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7"
+  },
+  {
+    "entry": "A23",
+    "path": "packages/stage-ui/src/constants/emotions.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "a2227f7ded764dd6929f69d1d4509a4cea0dec51783a0df8cdc4aed7c152c1e6"
+  },
+  {
+    "entry": "A23",
+    "path": "packages/model-driver-lipsync/package.json",
+    "exists": true,
+    "file": true,
+    "sha256": "2a451ce86ebd613b5b8b63ed248844222074442f2f1820b2f540da2407d82f71"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-pages/src/pages/settings/scene/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "977e2d535dda529c49556af4a34c166e690b497ee13d71a6f86a4891c0eba5b7"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-ui/src/stores/background.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "11b118e1681905ea583c400f04cee2f1a909ed075b7331c48ff809031e7943bc"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/components/CardDetailDialog.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "2bbc2afde8bb13488d264fb66f08ad65173a6145fc79752d498962c2ad681dca"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/live2d.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "39ee72e040ab26fa1a087e37c32b729c7f25141fdec71b93808f529f094c7c16"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/spine.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4b19d5b509e9edab3796ad9b69ce2253ce4699634ac0c38d08ff6a69ca7091c9"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-pages/src/pages/settings/system/color-scheme.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "1721a0f367f9eadc13237c60f4a557e1f9ec593c00d99497d0e61c2881fcc851"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-ui/src/components/modules/stickers.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "f4c616a4f1bdd3935440f86487e084911a7d7c7d579c6aff04065e5f474b2138"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-ui/src/stores/modules/stickers.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "368cad6a76637ac3b594e65663cb3eb20cfac029f28de1a3b8cd25bbba6a23d6"
+  },
+  {
+    "entry": "A24",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/sticker.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "2ff42ab86962159405b01e13a22d0fb0b8bc9b64a84408ce9883f392e8bf3f30"
+  },
+  {
+    "entry": "A25",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "9947b73be7d6c82091fae1bf4fb61281027be3e44716d1bfdbe2d3fe7420c8ad"
+  },
+  {
+    "entry": "A25",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/voice-input-button.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7c1a117834a46787811d360f2a1f0f535938127eb59c7281be865838436592f0"
+  },
+  {
+    "entry": "A25",
+    "path": "packages/stage-ui/src/stores/settings/audio-device.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "0a41c55392f78b21695265a66c1f7910dfd45b4a3ef82bd2b2c1bbb845782e4a"
+  },
+  {
+    "entry": "A26",
+    "path": "packages/stage-ui/src/stores/voice.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "1861b613a6f91682d10a1d6c0c5e30ae858293a562125addaeed7af179f7c9f0"
+  },
+  {
+    "entry": "A26",
+    "path": "packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "2e500b7f991537b9eb49a5d32202ce346d244a0155ca7606a133563bf730d791"
+  },
+  {
+    "entry": "A26",
+    "path": "packages/core-agent/src/voice/input/attempt.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "12718b37961e2749bd3b4e8f7bea6d0ae9137aef6c2462bc46ab2dd2d61ce782"
+  },
+  {
+    "entry": "A26",
+    "path": "packages/core-agent/src/voice/controller.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "9b4e8c35b5319c0c50b62832630c232cdae80f5785a191a368cb6c9aa48bdab2"
+  },
+  {
+    "entry": "A27",
+    "path": "packages/stage-pages/src/pages/settings/modules/hearing.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "024a29089cc2326e8f4bf83ecbabfa759c78d9d230fc5d170646ebbc87a6c13e"
+  },
+  {
+    "entry": "A27",
+    "path": "packages/stage-ui/src/stores/modules/hearing.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "02feb5e416fa1d8e0dac3d165d630d919f42af1bb0432d16964b27d15284b02c"
+  },
+  {
+    "entry": "A27",
+    "path": "packages/stage-ui/src/composables/voice-drafts.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "e1ebb6e0a66f5193a25f8bf60ff94efec60b39c20828648643fcda61c4f3cdd2"
+  },
+  {
+    "entry": "A27",
+    "path": "packages/stage-ui/src/components/scenarios/chat/components/voice-drafts.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4cd0227b67f3025e56a698814caed4f175822cbd88cdd08b6e708405ab7f1468"
+  },
+  {
+    "entry": "A27",
+    "path": "packages/stage-ui/src/libs/voice/voice-rephrase-plugin.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "799cad00c3975a92da51176b84bf92175f3f8e24d3c298916375c0a220eb0e34"
+  },
+  {
+    "entry": "A27",
+    "path": "packages/stage-ui/src/composables/voice-rephrase.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "fde158063d7c1268d8fb96d9de56b743d3c0b275b32694325e18a8ac0811ba3f"
+  },
+  {
+    "entry": "A28",
+    "path": "packages/stage-pages/src/pages/settings/modules/speech.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "232849e8179dabdbd7915b71235c82a4fd2f867b2a93b6a5dea98764499c9183"
+  },
+  {
+    "entry": "A28",
+    "path": "packages/stage-pages/src/pages/settings/providers/speech/openai-compatible-audio-speech.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "031b64ac2e183dd490830f16de0a2ee8c5660800554295976bb1a49310d65214"
+  },
+  {
+    "entry": "A28",
+    "path": "packages/stage-ui/src/stores/modules/speech.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "660d1ea37b869c5c57d2efd0252f744c02219de46693c4567af632f32e58b20f"
+  },
+  {
+    "entry": "A28",
+    "path": "apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/controls-island-speech-mute.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "18dedf0006c4a50cd69c1b24580595e538b971e58cbf31a3125982e177434ff0"
+  },
+  {
+    "entry": "A29",
+    "path": "packages/stage-pages/src/pages/settings/modules/hearing.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "024a29089cc2326e8f4bf83ecbabfa759c78d9d230fc5d170646ebbc87a6c13e"
+  },
+  {
+    "entry": "A29",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/live2d-motion.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "32f1a5fe63be492f2655d0f52acf22f942f79eecfcac3676759b0add374ef00e"
+  },
+  {
+    "entry": "A29",
+    "path": "packages/stage-ui/src/features/devtools/motion/live2d/components/joystick.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "9526699d102761490a8dba25ff44474f386b7db858357b8a874210b9b56c032a"
+  },
+  {
+    "entry": "A29",
+    "path": "packages/stage-ui/src/features/devtools/motion/live2d/components/keyframe-editor.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "ac0a4d3ac4de42f8472c6978f9028541b61443f03f567191165bc94d8c6229b8"
+  },
+  {
+    "entry": "A29",
+    "path": "packages/input-gamepad-vueuse/src/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "0250f3390659549550b2a06f26cc6a5baf1843934ef520e2fe8f4ddabb3ee3e3"
+  },
+  {
+    "entry": "A29",
+    "path": "apps/stage-tamagotchi/src/renderer/features/live2d/system-audio-lipsync.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "daf576bb1b700d1125a9196b88471d2249258b8020098086ea83249be18adbf3"
+  },
+  {
+    "entry": "A29",
+    "path": "packages/stage-ui/src/stores/system-audio-lipsync.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "a0f85585ca5efdf0bd18e79b2e951d5fd5bbcf6a635b4ca273fc6305be50f2a0"
+  },
+  {
+    "entry": "A29",
+    "path": "packages/stage-pages/src/pages/settings/modules/beat-sync.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "84b2d9e8b2e6c45539dc91ef055bee9c5884ca7f6b480083601c59362a887d27"
+  },
+  {
+    "entry": "A29",
+    "path": "apps/stage-tamagotchi/src/renderer/beat-sync.main.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "cf520f8bb7746cb3801debe13196521bf1593e9b371ecb6c0f30707c077e6d07"
+  },
+  {
+    "entry": "A29",
+    "path": "apps/stage-tamagotchi/src/main/windows/beat-sync/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "862dea8dd0b70981de77796aff8686c96e0d23fde1994bd59a2e6202201bff52"
+  },
+  {
+    "entry": "A30",
+    "path": "packages/stage-ui/src/stores/chat.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "701e1d42e3ac7062f18b3960d9f4f7dd5600f68a9a952352ed895760234ff62a"
+  },
+  {
+    "entry": "A30",
+    "path": "packages/stage-ui/src/stores/chat/context-prompt.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "c78e109187306f55f2ed93587989eacc387470103dae0164b57ea9e6f52f4a29"
+  },
+  {
+    "entry": "A30",
+    "path": "packages/stage-ui/src/stores/character/notebook.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+  },
+  {
+    "entry": "A30",
+    "path": "packages/stage-ui/src/stores/character/orchestrator/store.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "f91ff2b3abb680b87f2a7d8b255f71f3210e7c93e196788c94114f05282415c3"
+  },
+  {
+    "entry": "A30",
+    "path": "packages/stage-ui/src/stores/mods/api/context-bridge.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "805cbcf21e360c6d755e589b4b75dd6170483e4bf3304a2b3a9d344e0414b458"
+  },
+  {
+    "entry": "A30",
+    "path": "packages/stage-ui/src/stores/character/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "095b7a9eef1b43c863e9e5eee910baccd02077db6162105efc8107a8ce57f194"
+  },
+  {
+    "entry": "A31",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/screen-capture.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7a09da794886c8b49383ac663498ce93fbfb538d55f203cb4d5d49ec0de339f2"
+  },
+  {
+    "entry": "A31",
+    "path": "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "2611942d1489ae94242895f38fc3cca2b2be3caeb1537fcaa5c29e35d5d6c809"
+  },
+  {
+    "entry": "A31",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/vision.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "a129e46b231391f4718064fb413fbfaf40fe83505f2319c94456326b4d7f10ed"
+  },
+  {
+    "entry": "A31",
+    "path": "packages/stage-ui/src/stores/modules/vision/processing-store.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "3bf998c611caea71357ead67d6eed2bee77f4d41dd94d9d6b2d0a11705531f77"
+  },
+  {
+    "entry": "A31",
+    "path": "packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "22c050ea30101cb2c3ba1b9061fb68b391ceb9e0aba5727325fc5e13f9cb9b41"
+  },
+  {
+    "entry": "A32",
+    "path": "apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "7c5bfda29a8e0c3254a857384bc7a06451b0c3b8d47aa1f2b16a9186696e8100"
+  },
+  {
+    "entry": "A32",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/live2d-ambient-light.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "ad91ac9ceda41017589742154057199bbd98ed41300f39c57508e316a8dd3f63"
+  },
+  {
+    "entry": "A32",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "9947b73be7d6c82091fae1bf4fb61281027be3e44716d1bfdbe2d3fe7420c8ad"
+  },
+  {
+    "entry": "A33",
+    "path": "packages/stage-pages/src/pages/settings/providers/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "2fe5ea6ad00912dbc01d4c8b56d189015123ac5527bd35a12cee53102f998c4f"
+  },
+  {
+    "entry": "A33",
+    "path": "packages/stage-ui/src/stores/providers/provider.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "68b37e03da94b78e1732b30e716e800e210450716014a867ee3a022ff38bb621"
+  },
+  {
+    "entry": "A33",
+    "path": "packages/stage-ui/src/stores/providers/config.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "257f67fe33e687499e2d9800fa868d3ecb76932269fe2a7e8617fa56aa3edbdf"
+  },
+  {
+    "entry": "A34",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/modules/mcp.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "fdeb1de662e408bb0eb026f1c0b6d88891be51dcef590ba6f5d7afa233c5b233"
+  },
+  {
+    "entry": "A34",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/mcp-servers/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "c5a11812b4c3d9a5e7e2e9468289dfb60eafd7f7c4650f92a9e250bc13d894ae"
+  },
+  {
+    "entry": "A34",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/mcp.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "2bc2db1a22181031d992c1041204a56aa5d08db60175ca6847843cf0fb6eec88"
+  },
+  {
+    "entry": "A34",
+    "path": "apps/stage-tamagotchi/src/renderer/App.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "8cbed5cd92244038fadc7660a5a7a5614c3a5a673797e2a5899a11fad5539d1a"
+  },
+  {
+    "entry": "A34",
+    "path": "packages/stage-ui/src/stores/mcp-tool-bridge.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "7865d960e40797941ab677a8c8b8b542f3aa3f2a44664e7cb05889aff4a7f10b"
+  },
+  {
+    "entry": "A34",
+    "path": "packages/stage-pages/src/pages/devtools/plugin-host.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "2f702afe8df35d51f1f190de58bfacb471f553a10fc5ebee28d823ce469aba52"
+  },
+  {
+    "entry": "A34",
+    "path": "packages/stage-ui/src/stores/devtools/plugin-host-debug.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "4f46d6517c7b455ea0494b228b31c5ef208abac2c2804baf6fd9aed6bf6ef83d"
+  },
+  {
+    "entry": "A34",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/plugins/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "5cf3f84d6db2cdf2ce1f8d70e79c09e192799510e41ce84559b6ef5f961c70c2"
+  },
+  {
+    "entry": "A34",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/plugins.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d0022a90d890581aea3a6447902100aa842441722b27e28189f82e3a3f8a72df"
+  },
+  {
+    "entry": "A34",
+    "path": "packages/stage-ui/src/stores/plugin-host-capabilities.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "cf54a103d4e0b5bb0144c41c90d57f4faac3c4d6740212ee6667a73b58ccdd37"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-pages/src/pages/settings/modules/web-search.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "778e5312f0246d00eff32974d3c906e090b5f4f24c9a6f7854ff1fcf75ac7de2"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-ui/src/stores/modules/web-search.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "946d73e7abdde42b4f950a6b429cd7db6332f0f52c6a65b8b8c6c340e0ff03b5"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-ui/src/tools/web-search.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "64bc793b373d02bc3398f28c8f5518887d8b1beccd43861b9d275ebf4683e3b1"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/weather.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "357a61f5bce27e11e6df4aa7c5665e7eb0c34cc06f447bfd9e208c9768812374"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/weather-api.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "083f6ea3ce7836ecaa104cb3d9986bb1bf483323a54eb16fb3ef04a595c01747"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/widgets.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "772114978c2d7c20ecaaec0bb93961421260eea389b3a8773402f6e24181134c"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/main/windows/widgets/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "a88a854a61c02324f291aa618e7c64c402ae467e6f0dbede6e6ef99444339d80"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/widgets.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "f08e59ea771f0fc8dadea71474b2083a50f3657c04fdbf88eb906cc42c1c2c38"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/renderer/widgets/map/components/Map.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "c5b97d3116f0215ce46971443557e1b86f576abd65bf98a089ba8e65088c0c27"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/renderer/widgets/artistry/components/Comfy.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "fbe11523609764f489d0032005eb44e5ede5839c9e7f5aed6794a8977c5042d7"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-pages/src/pages/settings/modules/artistry.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "cb6ff4161a11b63935491d87e099da7f35e4980b047a89e4f994dcc4d4722b02"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-ui/src/stores/modules/artistry.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "17036e700b1e1778e2ed7aa6704d6276ff8b4de8fe22f1a528cd8a9d1383b321"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/components/tabs/CardCreationTabArtistry.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "d6dd04819fa9aa2fdaad0d3cb3fee4427501783e8caedabb7d4b432d2bd76e3c"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/image-journal.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "07d684abfa626af06d568458d5cc4af76cd8e20a6cd322fae9f4dc18c6c9937c"
+  },
+  {
+    "entry": "A35",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/widgets/artistry-bridge.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "06c53b3f29c026d5002e9f7ad1adac875f13ad2e32df8de0631981b12c23173c"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-ui/src/stores/modules/artistry-autonomous.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "7a13924bbfa3fb95f2172553bc7a48f4b5e1c3ddccc9649531846accbe9d109c"
+  },
+  {
+    "entry": "A35",
+    "path": "packages/stage-ui/src/stores/chat.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "701e1d42e3ac7062f18b3960d9f4f7dd5600f68a9a952352ed895760234ff62a"
+  },
+  {
+    "entry": "A36",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/account/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "1c630790f43172074c54fa175ad7776d0f61d0fe1024614e3c6003e42131c8de"
+  },
+  {
+    "entry": "A36",
+    "path": "packages/stage-ui/src/stores/auth.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "62b90e30879a44407377fba2fb79d6e8e11b8c0ee9e2d96fb86031e141820821"
+  },
+  {
+    "entry": "A36",
+    "path": "apps/stage-tamagotchi/src/renderer/bridges/electron-auth-callback.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "18600f8499be3f0488980b0614b3c6575db51967bb000bc19708cbc87e40dcd7"
+  },
+  {
+    "entry": "A36",
+    "path": "packages/stage-pages/src/pages/settings/account/account-settings-page.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "00b2f72eccdfaee8d489b0de2f9a446c7d3a1fe76ade9c1d3c769155d3f555e4"
+  },
+  {
+    "entry": "A36",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/connection/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "b3ca77a5ed27e7b7107927b97221917e22f6de8f3cc69b19b578f6e6c74f97b0"
+  },
+  {
+    "entry": "A36",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/connection/server-channel-qr-card.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "b2320114f53edb31375e0685fe0a2ea7d8318f0bf54f977932ed9fb0568e963b"
+  },
+  {
+    "entry": "A36",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/channel-server/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "ee81cd7a167aa3b49362d25a852cbfb259c0939ce59a4c2ad37ea6c944d96b22"
+  },
+  {
+    "entry": "A37",
+    "path": "packages/stage-pages/src/pages/settings/data/components/chats-section.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7675f1acb6eb3556ec647a027591104e8b6511d3efad55d89f9ab86c37306ec7"
+  },
+  {
+    "entry": "A37",
+    "path": "packages/stage-ui/src/composables/use-data-maintenance.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "4de98bd841987fdef666e06a2acde31d7f4e02ce7441ccca2814261e266f0f4d"
+  },
+  {
+    "entry": "A37",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/data/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "b4084d4fa02275a667066fd76f07eee94a74877814b6b8488c7e1c5bed8a3d75"
+  },
+  {
+    "entry": "A37",
+    "path": "packages/stage-pages/src/pages/settings/data/components/models-modules-section.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "068d9d6de6297ca862e581989e58b3915cf1ce77ea00129e626e7ee392302b15"
+  },
+  {
+    "entry": "A37",
+    "path": "packages/stage-pages/src/pages/settings/data/components/danger-section.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "aea558944fd21941b904468b61f61ca06401a0c456edd635a9c996b2ef5e8bb7"
+  },
+  {
+    "entry": "A37",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/data/components/desktop-folder-section.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "3d714aafaa22c08f5c536fb5ad27043f89657a3769e58404eb7f57102aa010df"
+  },
+  {
+    "entry": "A37",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/data/components/desktop-reset-section.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "ca50fae42ec630e046433493a7a0f3b228e1bff15b2f6d41f50025478c3f0909"
+  },
+  {
+    "entry": "A38",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "848bfef05b383033d2498f134f8ecc682a26d754677527a4cd684e315bb4f1d9"
+  },
+  {
+    "entry": "A38",
+    "path": "apps/stage-tamagotchi/src/renderer/layouts/settings.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "72525cd9db7af542538c540e1ac135f362929a39e8688c61048a71e0a1f2830b"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/pages/settings/account/account-settings-page.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "00b2f72eccdfaee8d489b0de2f9a446c7d3a1fe76ade9c1d3c769155d3f555e4"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/components/settings-general-fields.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "d66ad1d6f795be8c881f798285440149aac0d7fa1603ee05073cc0d2c35c9839"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/pages/settings/system/color-scheme.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "1721a0f367f9eadc13237c60f4a557e1f9ec593c00d99497d0e61c2881fcc851"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-ui/src/stores/settings/analytics.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "378edb1ca0a9aabdc37a396201d431c5f000b3f43d123f3262780d8ad8195d79"
+  },
+  {
+    "entry": "A38",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/system/general.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "8f604129c46e4870c8aa41280b20d470d49e06dfc7118d25883c8b2e94585acf"
+  },
+  {
+    "entry": "A38",
+    "path": "apps/stage-tamagotchi/src/main/windows/shared/app-icon.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "c3fbaeed2a72ed5e12768333bbfdaeee32bce8d6201624787c182c888ac308ff"
+  },
+  {
+    "entry": "A38",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/system/developer.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "652f264550b4045871f4dd32aaac86cf0c18185f88a8fbaa36fb8521398bd691"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/pages/devtools/io-tracer/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "c18a586ddc067c74bab9cbfe446474575e5d2c097114f5baf341b3eb6a6ffd6b"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/pages/devtools/context-flow/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "cb0b7c85b68190e1a75dcb63d8b724552f1e4cc34b18e9e055d87b8b6e5cda27"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/pages/devtools/websocket-inspector.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "efe3d7e824f49cc3802f47e63cba6ca6d67eb6b2e7200de133a44f58e9288c20"
+  },
+  {
+    "entry": "A38",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/performance-visualizer.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "683f5b805297cbe65c353d963354ee99d5046aab56357f5dddfe83149c037a76"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/components/settings-experimental-features.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "ade4f6e9d6769c279970013938c895c73b9f92992d16c0efeedd88c48227c81b"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-ui/src/stores/feature-flags.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "7615d2a55ee56d70e07092f542e0e68f4e436b3b49d98762854c5c4f0b793273"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/pages/v2/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7a1f4bbdb8ab496dcdf818240f8675ba9b32678bdf1dc6bbdb5836fd9dd95b6f"
+  },
+  {
+    "entry": "A38",
+    "path": "packages/stage-pages/src/pages/devtools/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "c5f07615ecb37e914010d91b00a7f9e05e71a304f22bb068a9b7f34db3244982"
+  },
+  {
+    "entry": "A39",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "3ec3f667fea35b07b50a1ee6e275ac179f218912199f966378c2a68ae2e720d9"
+  },
+  {
+    "entry": "A39",
+    "path": "packages/stage-ui/src/components/scenarios/dialogs/bug-report/bug-report-dialog.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "5e429f7c873e2b662ddd27c36a89bb08f971a36e99ce665677cd2906ae9562f3"
+  },
+  {
+    "entry": "B01",
+    "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "164158ad41c98cbeb7ef00c30228f80923deff9c3224062e65a833bb475a72f6"
+  },
+  {
+    "entry": "B02",
+    "path": "packages/stage-ui/src/stores/memory.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "662ec826b0c046497185a18e1f810b3cbd699e736d641b9dab9987c910871e8b"
+  },
+  {
+    "entry": "B02",
+    "path": "packages/stage-ui/src/stores/memory/policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d033b83310dedc01bfe59a841077b01eb82e6583a4aace37542ff3f72f44c992"
+  },
+  {
+    "entry": "B03",
+    "path": "packages/stage-ui/src/database/repos/memory.repo.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "faba661b97d0e773fffebca7765864c0cd4bd9bf15fdb4de758e60e6db67b132"
+  },
+  {
+    "entry": "B04",
+    "path": "packages/stage-ui/src/stores/memory/policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d033b83310dedc01bfe59a841077b01eb82e6583a4aace37542ff3f72f44c992"
+  },
+  {
+    "entry": "B05",
+    "path": "packages/stage-ui/src/components/scenarios/settings/about-me.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "398c0e3274cc328d3bc8cacfad4882568ff231b357409913d2783d3a9bafc408"
+  },
+  {
+    "entry": "B05",
+    "path": "packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "420be6351b6ec205dd8a5387d3363af078fb70e84274df40d36906546bc83d22"
+  },
+  {
+    "entry": "B05",
+    "path": "packages/stage-pages/src/pages/settings/memory/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "3e30faf200ad4a4be619f2deb671d9c8458e0e33e78b2f131b99ba945dfb752d"
+  },
+  {
+    "entry": "B06",
+    "path": "packages/stage-ui/src/stores/memory/policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d033b83310dedc01bfe59a841077b01eb82e6583a4aace37542ff3f72f44c992"
+  },
+  {
+    "entry": "B07",
+    "path": "packages/stage-ui/src/stores/memory/policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d033b83310dedc01bfe59a841077b01eb82e6583a4aace37542ff3f72f44c992"
+  },
+  {
+    "entry": "B08",
+    "path": "packages/stage-ui/src/components/scenarios/settings/about-me.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "398c0e3274cc328d3bc8cacfad4882568ff231b357409913d2783d3a9bafc408"
+  },
+  {
+    "entry": "B09",
+    "path": "packages/stage-ui/src/stores/memory.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "662ec826b0c046497185a18e1f810b3cbd699e736d641b9dab9987c910871e8b"
+  },
+  {
+    "entry": "B10",
+    "path": "packages/stage-ui/src/services/companion/followup.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "097e904b38ef1381a5710c8b07cfbfa4046fc210cff48ca02d39a553c6c62517"
+  },
+  {
+    "entry": "B10",
+    "path": "packages/stage-ui/src/stores/companion.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "fd2142f19e60836c3128188ce9954ea7b81b193d87d6e8fd0ad2e59d3fe6d313"
+  },
+  {
+    "entry": "B11",
+    "path": "packages/stage-ui/src/services/companion/review.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "ba1c2d120754764875e0521ae798dbaf419b0c03b374dcb77ce8c35bff2b971b"
+  },
+  {
+    "entry": "B12",
+    "path": "packages/stage-ui/src/services/companion/speech-transform.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "188098f30249ddcde8f619313f7370179b3606a4feae2f05a2477f7bbd7be7b6"
+  },
+  {
+    "entry": "B12",
+    "path": "packages/stage-ui/src/stores/modules/speech.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "660d1ea37b869c5c57d2efd0252f744c02219de46693c4567af632f32e58b20f"
+  },
+  {
+    "entry": "B13",
+    "path": "packages/stage-ui-live2d/src/composables/live2d/companion-motion.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "9c3ce2abd862b9d8d5d9c4198fb2e6d846b7a8b87b7cabb2d35c63b1843f6547"
+  },
+  {
+    "entry": "B14",
+    "path": "packages/stage-ui/src/services/companion/workflow.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "0036702294185a9b5db0f780fa76e4008ae6fbc649068f73df7cfcb13b7a8b40"
+  },
+  {
+    "entry": "B15",
+    "path": "packages/stage-ui/src/models/vrm-inspection.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "6a0c17aeb47e889b3fac6313166035a2949eaca27823a610e62fd2dc8f01ea0a"
+  },
+  {
+    "entry": "B15",
+    "path": "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "671f81389cbe44085937c94d169cf17c4035f90f950434f17aa21f47feef82aa"
+  },
+  {
+    "entry": "C01",
+    "path": "apps/stage-tamagotchi/src/main/tray/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "5cbe9749e7de30636301886aa2d3904c33d78d41a742e8be2ed9cbd3a7156446"
+  },
+  {
+    "entry": "C01",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "3ec3f667fea35b07b50a1ee6e275ac179f218912199f966378c2a68ae2e720d9"
+  },
+  {
+    "entry": "C02",
+    "path": "packages/stage-ui/src/stores/memory/prompts.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "f5ffac463a2b08dfb05d2b0abc74a24b6191a8f91f7fd2f60e9c219720238bc1"
+  },
+  {
+    "entry": "C02",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "d003a2e870db84cccdc4ef74dbec9491f1782fdde6f575ce81937901720a8947"
+  },
+  {
+    "entry": "C02",
+    "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "3dcf99943ec3d315907e12feadcb0735096276562eaa1db0e2a596037b6c0917"
+  },
+  {
+    "entry": "C02",
+    "path": "packages/stage-ui/src/stores/onboarding.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "b835f9f1c2c38832090cd151e233c6d4779a2de2d4cd71706383f87577dde3e8"
+  },
+  {
+    "entry": "C03",
+    "path": "packages/stage-ui/src/database/repos/memory.repo.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "faba661b97d0e773fffebca7765864c0cd4bd9bf15fdb4de758e60e6db67b132"
+  },
+  {
+    "entry": "C03",
+    "path": "packages/stage-ui/src/stores/memory.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "662ec826b0c046497185a18e1f810b3cbd699e736d641b9dab9987c910871e8b"
+  },
+  {
+    "entry": "C04",
+    "path": "packages/stage-ui/src/services/memory-session.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "e0189816c76e5048d719734470c542a50d05d3043f3717f0f9f69dac50149a27"
+  },
+  {
+    "entry": "C04",
+    "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "3f122c3e194a330893c745127a35ec857659995ce7880b7c5f7aac32b6920ba9"
+  },
+  {
+    "entry": "C05",
+    "path": "apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "bfa0025b4d1de3ce33ffbbf686f094e8a10c0b6b7183620a1fe5b27802f8a69b"
+  },
+  {
+    "entry": "C05",
+    "path": "packages/stage-ui/src/services/resource-policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "108674609773060c1c516f2c3d4c533312d368ae6eafbe08f39280f261ee1489"
+  },
+  {
+    "entry": "C06",
+    "path": "apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "6ff981f5fb8a8c99eff5e37a998377b875b634e8f3f96c723d9b4fd5058f1841"
+  },
+  {
+    "entry": "C06",
+    "path": "packages/core-agent/src/runtime/request-guard.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "24ce2b651932770d83edf367a0f35b85697856029e090ab18cdbf6204234678f"
+  },
+  {
+    "entry": "C07",
+    "path": "packages/stage-ui/src/services/local-data-policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "ee8195266525b95f40fee8b3d66341403d63fc6476aa6544cb1f8880ce24d10d"
+  },
+  {
+    "entry": "C07",
+    "path": "packages/stage-ui/src/libs/auth-fetch.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "718667c3e0d7f038f8bbc984d6dd4a956b1302e2512ac93fa09990c4571bc7a3"
+  },
+  {
+    "entry": "C07",
+    "path": "packages/stage-ui/src/libs/chat-sync/ws-client.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "b8c862f027b3b863e62442af325b411ae0e72c1b2ad0087af8113c9ca8affa84"
+  },
+  {
+    "entry": "C07",
+    "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "3f122c3e194a330893c745127a35ec857659995ce7880b7c5f7aac32b6920ba9"
+  },
+  {
+    "entry": "C07",
+    "path": "packages/stage-ui/src/stores/modules/airi-card.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376"
+  },
+  {
+    "entry": "C07",
+    "path": "packages/stage-ui/src/stores/providers/config.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "257f67fe33e687499e2d9800fa868d3ecb76932269fe2a7e8617fa56aa3edbdf"
+  },
+  {
+    "entry": "C08",
+    "path": "apps/stage-tamagotchi/src/main/services/aimy/provider-secrets.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "813568728a3c51042b83ab70d99b1455f9ff5703f970a091df58ae9218cab12e"
+  },
+  {
+    "entry": "C08",
+    "path": "packages/stage-ui/src/services/provider-secret-storage.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "9c30a1d0b5f404c65a62a42277fbaafa48d1c5b4dba88d9d64bf770cfdb0e360"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/shared/product-capabilities.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "68128181d23dbf7519efb91043aa22c33289e57c30bc2629fd317fa08f772245"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/computer-use/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "2f072dcdadc47c29abf202614ccab27aeea9df98a942ef512b976341d26215ec"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8"
+  },
+  {
+    "entry": "C09",
+    "path": "packages/stage-ui/src/stores/ai/chat-llm/tool-resolver.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "41065659df964f4d0ba63f59e062340254527c0df46e93245f1a9522abf3666b"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/built-in.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "02083f9157d8bcebd811785e4905252dae1b7c82f0880a80870f04ad70acad0f"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/computer-use.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "71db2b11b6dd345ad92ee4c00722c5ce1ede3b41ca9f466851604e02f797c616"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/computer-use/runtime.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "511205293ff05e320c150f5593588a9fbf12c63217fdf4b95a312ca89b371a31"
+  },
+  {
+    "entry": "C09",
+    "path": "services/computer-use-mcp/src/server/browser-agent.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "0ba421e425c45687b8ab56b300415576c0c7bb4d624e7b66b143265b7bf8ddcf"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/desktop-overlay.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "efa96ba6f2ae2f3c67cd26fecb7eb307e1cb870bd14f8120b2e9eec72d531952"
+  },
+  {
+    "entry": "C09",
+    "path": "apps/stage-tamagotchi/src/main/windows/desktop-overlay/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "ca46a6eadd73ecc7cd63cff98e95beddcbaef3d5201d916ef97c738652165733"
+  },
+  {
+    "entry": "C10",
+    "path": "packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "2e500b7f991537b9eb49a5d32202ce346d244a0155ca7606a133563bf730d791"
+  },
+  {
+    "entry": "C10",
+    "path": "packages/stage-ui/src/services/companion/voice-policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "097cb26959938a793460ab20674141eaa6504d3f4b395108328144695ef7bf6e"
+  },
+  {
+    "entry": "C11",
+    "path": "packages/stage-ui/src/services/companion/voice-policy.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "097cb26959938a793460ab20674141eaa6504d3f4b395108328144695ef7bf6e"
+  },
+  {
+    "entry": "C11",
+    "path": "packages/stage-ui/src/composables/voice-drafts.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "e1ebb6e0a66f5193a25f8bf60ff94efec60b39c20828648643fcda61c4f3cdd2"
+  },
+  {
+    "entry": "C12",
+    "path": "packages/stage-ui/src/services/companion/speech-transform.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "188098f30249ddcde8f619313f7370179b3606a4feae2f05a2477f7bbd7be7b6"
+  },
+  {
+    "entry": "C12",
+    "path": "packages/stage-ui/src/stores/modules/speech.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "660d1ea37b869c5c57d2efd0252f744c02219de46693c4567af632f32e58b20f"
+  },
+  {
+    "entry": "C13",
+    "path": "packages/stage-ui-live2d/src/composables/live2d/companion-motion.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "9c3ce2abd862b9d8d5d9c4198fb2e6d846b7a8b87b7cabb2d35c63b1843f6547"
+  },
+  {
+    "entry": "C14",
+    "path": "packages/stage-ui/src/stores/display-models.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "06de0d2c6cb717fe8124a82ead640d3c94269925a5bc384afe20c8531ae8adec"
+  },
+  {
+    "entry": "C15",
+    "path": "packages/stage-ui/src/stores/providers/provider.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "68b37e03da94b78e1732b30e716e800e210450716014a867ee3a022ff38bb621"
+  },
+  {
+    "entry": "C15",
+    "path": "packages/stage-ui/src/stores/modules/speech.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "660d1ea37b869c5c57d2efd0252f744c02219de46693c4567af632f32e58b20f"
+  },
+  {
+    "entry": "C16",
+    "path": "apps/stage-tamagotchi/electron-builder.config.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "7711eb5bd6e90d004c4693420da66e6719af792fd1dd97230849e7f671d36f50"
+  },
+  {
+    "entry": "C16",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "3ec3f667fea35b07b50a1ee6e275ac179f218912199f966378c2a68ae2e720d9"
+  },
+  {
+    "entry": "C16",
+    "path": "apps/stage-tamagotchi/src/main/services/electron/auto-updater.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "6e375a676acc025f0245462bbf7cfbfddf064bd6db3a15c8bc0d3079790072e6"
+  },
+  {
+    "entry": "C17",
+    "path": "apps/stage-tamagotchi/scripts/acceptance",
+    "exists": true,
+    "file": false,
+    "sha256": null
+  },
+  {
+    "entry": "C17",
+    "path": "packages/stage-ui/src/services/memory-acceptance-diagnostics.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "45d525b32993afdb65cb136fee73a6067e0d1f1965b4abe421d4b31643e278b4"
+  },
+  {
+    "entry": "D01",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/models/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "e0ffababd3103d5722e5d7671b24ff723cfd5d9acc3d115f1c30f8ab9454c34c"
+  },
+  {
+    "entry": "D01",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/godot-stage/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "0c71ed56e93b27a4a18fdc0fd0282b2e0a95454fda9f036903685b8cdc8c018c"
+  },
+  {
+    "entry": "D01",
+    "path": "packages/stage-ui/src/components/scenarios/settings/model-settings/godot.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "c8a9acf30285ee49d717fb8cc36eaf7fc1558261221a4b49d5726c3624028b15"
+  },
+  {
+    "entry": "D03",
+    "path": "packages/stage-ui/src/stores/modules/airi-card.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376"
+  },
+  {
+    "entry": "D03",
+    "path": "packages/stage-ui/src/libs/feature-flags.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "912ae2f921be14a914d2cccfbc903c989a5b77223438996c33be621e3c688b1a"
+  },
+  {
+    "entry": "D03",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/components/CardDetailDialog.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "2bbc2afde8bb13488d264fb66f08ad65173a6145fc79752d498962c2ad681dca"
+  },
+  {
+    "entry": "D03",
+    "path": "packages/stage-pages/src/pages/settings/airi-card/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "7c06ada4e4e549cfb3a45563ae5a01e065964ac5eaa4a2ff9297dd728bfb77b1"
+  },
+  {
+    "entry": "D04",
+    "path": "packages/stage-ui/src/stores/voice-packs.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "f2a5fca6c1011b59fb400c0f14a745b6735fb06eb391ca6a3a5742dc0153d440"
+  },
+  {
+    "entry": "D04",
+    "path": "packages/stage-pages/src/pages/settings/modules/speech.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "232849e8179dabdbd7915b71235c82a4fd2f867b2a93b6a5dea98764499c9183"
+  },
+  {
+    "entry": "D04",
+    "path": "packages/stage-pages/src/pages/settings/flux.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "d764c0c443df0e22c4a8f026083dada27c79ae0eeda29b1e74a9d7f1ccb59e2e"
+  },
+  {
+    "entry": "D05",
+    "path": "packages/stage-ui/src/stores/wake-words.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d90caae29e7648c2cdb2027b8678be4790a9fe0776ce63960e4113b843b3a964"
+  },
+  {
+    "entry": "D05",
+    "path": "packages/stage-ui/src/stores/voice.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "1861b613a6f91682d10a1d6c0c5e30ae858293a562125addaeed7af179f7c9f0"
+  },
+  {
+    "entry": "D05",
+    "path": "packages/stage-ui/src/libs/voice/wake-words.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "1359809a832b08d53a5a0e5879274974fe25b8f4c39704d94ef6111a55d3de93"
+  },
+  {
+    "entry": "D06",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/settings/modules/home-assistant.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "76e9ac93b604ff7a290f37bb228ff6b4cc0bb05c97d91e3cb211285d3bc1ad4d"
+  },
+  {
+    "entry": "D06",
+    "path": "apps/stage-tamagotchi/src/renderer/stores/tools/home-assistant.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "998954b91269b086b3265379304eb678ac42617302cd3334dfd0ceb0397d8eb0"
+  },
+  {
+    "entry": "D06",
+    "path": "apps/stage-tamagotchi/src/main/services/airi/home-assistant/index.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "6ec7718d5f995715d89c76d1baae68c461105fdf9630d670c4f0202c7ac0dbc1"
+  },
+  {
+    "entry": "D07",
+    "path": "packages/stage-ui/src/components/modules/MessagingDiscord.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "66d3111b2fb388d21110dddbe75a747ac7bfade2bcd89eaad511bde61d29bb51"
+  },
+  {
+    "entry": "D07",
+    "path": "packages/stage-ui/src/stores/modules/discord.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "e0daf2159df09ac08603a85b3dc3d5b1d0035a87463f2c616d2b739a641046fc"
+  },
+  {
+    "entry": "D07",
+    "path": "packages/stage-ui/src/stores/configurator.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "d1154710da47ae565b9e0053c0f80c96eb31472e0bbd1a4c67bfc202680129c4"
+  },
+  {
+    "entry": "D07",
+    "path": "packages/stage-ui/src/components/modules/X.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "8e283ed8d2196e1e480b4fd10bcbceefef2f0fbbad8f0ae91c755cc4349f81ca"
+  },
+  {
+    "entry": "D07",
+    "path": "packages/stage-ui/src/stores/modules/twitter.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "8de093eda6011883ceac8746e2e8fd3f43dd454c05dfa5bf59f5f547242b0a96"
+  },
+  {
+    "entry": "D08",
+    "path": "packages/stage-ui/src/components/modules/GamingMinecraft.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "ff7a780f9cc45013db0e8e4b0731940148c08db549bf61fe9395bc8e76a97332"
+  },
+  {
+    "entry": "D08",
+    "path": "packages/stage-ui/src/stores/modules/gaming-minecraft.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "7ba5b72e07bb29d60dfc8c912f7173e2914981b53fe1d57d5dccc6294047ef83"
+  },
+  {
+    "entry": "D08",
+    "path": "packages/stage-ui/src/stores/chat/context-providers/minecraft.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "8ecf3113107c7da3e110b2ea6576131457528cf59a5915ed8a1f68eb72690553"
+  },
+  {
+    "entry": "D08",
+    "path": "packages/stage-ui/src/components/modules/GamingFactorio.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "4264fc83f14d9480d865e6d29f97e669a32e3c7769a833795270bae687db36e9"
+  },
+  {
+    "entry": "D08",
+    "path": "packages/stage-ui/src/components/modules/GamingModuleSettings.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "875990ddf9c368961d5afc053279a31fd5a069f6e583b15422405474d1643d68"
+  },
+  {
+    "entry": "D08",
+    "path": "packages/stage-ui/src/stores/modules/gaming-module-factory.ts",
+    "exists": true,
+    "file": true,
+    "sha256": "b97dd13c402776795a42fe5cc8048e1386cc62e5f684b66be555209c873f8a87"
+  },
+  {
+    "entry": "D18",
+    "path": "packages/stage-pages/src/pages/settings/modules/memory-short-term.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "5f0110ca0d084a169f29fc40bc4fcfb7a73804416c73b5e99381a234eaaf4bda"
+  },
+  {
+    "entry": "D18",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/editor/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "fbe20ca7d3a1fb86940eb65e6a9ecbf0a73ed79752fc97fefdbc60eb8c4d8db6"
+  },
+  {
+    "entry": "D18",
+    "path": "apps/stage-tamagotchi/src/renderer/pages/dashboard/index.vue",
+    "exists": true,
+    "file": true,
+    "sha256": "11e162f0c5988e222ec31bab13ff6e236b454896b6306f75518d1f3195efc016"
+  }
+]

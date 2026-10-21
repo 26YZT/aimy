@@ -1,0 +1,21 @@
+{
+  "caseId": "USER-V2-05",
+  "arm": "aimy",
+  "buildManifestSha256": "52bea1cc43adedd5cd29b3ddfdbb32123483c3cabc31c45012d4aa73a6bba8b0",
+  "processes": [
+    {
+      "pid": 21062,
+      "processNumber": 1,
+      "runId": "53f34c66-0f53-471c-b917-d53624884bae-aimy-USER-V2-05-p1",
+      "cdpPort": 57609,
+      "channelPort": 57607,
+      "modelPort": 57608,
+      "profile": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1/runs/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-05-aimy/profile",
+      "entrySha256": "478122750d057e465719e6c168573a493ae9a0a38ca1c1bd00f4743876f44a84",
+      "debugPortOwnerVerified": true,
+      "targetId": "879E50EF280D1F5AD9124EDE78252875"
+    }
+  ],
+  "steps": [],
+  "code": "COMPARISON_CASE_FAILED"
+}

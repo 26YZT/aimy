@@ -1,0 +1,12 @@
+{
+  "version": "0.12.0-beta.5+aimy.20261020.2",
+  "app": "/Users/mima1234/Applications/Aimy体验版.app",
+  "backup": "/Users/mima1234/Library/Application Support/Aimy-Package-Backups/20261020-MasterGo/Aimy体验版-紫色界面更新前.app",
+  "asarSha256": "4f8610c5534aa56bf47e222557930f88feed0df28e7cd4a535fd03a319c0cb00",
+  "profile": "~/Library/Application Support/Aimy-Preview",
+  "privateDataReadByInstaller": false,
+  "profileMigrated": false,
+  "signature": "ad-hoc options 0; verified deep strict",
+  "launch": "4150 01:34 S",
+  "launchScope": "Installed signed executable is running. Private window contents were not inspected."
+}

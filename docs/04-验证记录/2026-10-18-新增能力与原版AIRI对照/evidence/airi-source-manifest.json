@@ -1,0 +1,37 @@
+{
+  "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/event-source.ts": {
+    "sha256": "f53fcb4bd118466890bac4e3e6bb4c57882b6b41b6c7b236cc2d117839ac0c87",
+    "executed": "complete module factory/functions; type/import/export surface removed, injected dependency boundaries",
+    "transformation": "no function body changed"
+  },
+  "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/plugins/builtin-tools.ts": {
+    "sha256": "1d4266fb8df6e40e5b45fd2c0f0a2e7aed852795e9f00b8a77858ef4b97292f1",
+    "executed": "complete module factory/functions; type/import/export surface removed, injected dependency boundaries",
+    "transformation": "no function body changed"
+  },
+  "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/plugins/reaction.ts": {
+    "sha256": "f634bf07dc5ad7bbe08a1df57abfdff3ebdfdf355ce8e39fcd8da8dda7800243",
+    "executed": "complete module factory/functions; type/import/export surface removed, injected dependency boundaries",
+    "transformation": "no function body changed"
+  },
+  "/Users/mima1234/Documents/airi-main/packages/core-agent/src/agents/spark-notify/agent.ts": {
+    "sha256": "27fb1addc12e2ea8193a7b15e6636a6072d7a15622c5691b95e669e2ebd18d8a",
+    "executed": "complete module factory/functions; type/import/export surface removed, injected dependency boundaries",
+    "transformation": "no function body changed"
+  },
+  "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/character/index.ts": {
+    "sha256": "8d1113ad823a746ef2ce01045e10c9921e84b8b50ac92f7876084488e32f6118",
+    "executed": "complete module factory/functions; type/import/export surface removed, injected dependency boundaries",
+    "transformation": "no function body changed"
+  },
+  "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/character/notebook.ts": {
+    "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7",
+    "executed": "complete module factory/functions; type/import/export surface removed, injected dependency boundaries",
+    "transformation": "no function body changed"
+  },
+  "/Users/mima1234/Documents/airi-main/packages/stage-ui/src/stores/character/orchestrator/store.ts": {
+    "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e",
+    "executed": "complete module factory/functions; type/import/export surface removed, injected dependency boundaries",
+    "transformation": "added return-only __tick exposure; original private tick body unchanged"
+  }
+}

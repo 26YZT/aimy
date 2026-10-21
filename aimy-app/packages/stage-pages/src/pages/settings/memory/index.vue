@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { WIP } from '@proj-airi/stage-ui/components'
+import { AboutMe } from '@proj-airi/stage-ui/components'
 </script>
 
 <template>
-  <WIP />
+  <AboutMe />
 </template>
 
 <route lang="yaml">

@@ -34,6 +34,8 @@ export {
   isContentArrayRelatedError,
   isToolRelatedError,
   modelKey,
+  projectGenerationFailure,
+  publicGenerationError,
   streamFrom,
 } from './runtime/llm-service'
 export {

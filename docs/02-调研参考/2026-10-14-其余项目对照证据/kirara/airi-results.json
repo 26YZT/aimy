@@ -1,0 +1,176 @@
+{
+  "runtime": "v24.20.0",
+  "real_libraries": {
+    "typescript": "6.0.3",
+    "zod": "4.4.3"
+  },
+  "fake_boundaries": [
+    "executeAction terminal command sink: commands never executed",
+    "approval reply fixture",
+    "t translation callback",
+    "Discord input message/client send sink",
+    "ContextUpdateStrategy tag only"
+  ],
+  "observations": [
+    {
+      "id": "KI-A01",
+      "kind": "adjacent-positive",
+      "observed": [
+        "completed",
+        "你好世界"
+      ],
+      "expected": [
+        "completed",
+        "你好世界"
+      ],
+      "assertion_passed": true,
+      "original_unit": "AIRI original executeWorkflow+RunStateManager+strategy, fake action sink, same strings KI-P01"
+    },
+    {
+      "id": "KI-A02",
+      "kind": "adjacent-rejection",
+      "observed": [
+        "failed",
+        [
+          "你好"
+        ]
+      ],
+      "expected": [
+        "failed",
+        [
+          "你好"
+        ]
+      ],
+      "assertion_passed": true,
+      "original_unit": "AIRI critical tool error stops ordered workflow; original engine and real state"
+    },
+    {
+      "id": "KI-A03",
+      "kind": "adjacent-positive",
+      "observed": "paused",
+      "expected": "paused",
+      "assertion_passed": true,
+      "original_unit": "AIRI original approval suspension"
+    },
+    {
+      "id": "KI-A04",
+      "kind": "adjacent-rejection",
+      "observed": "failed",
+      "expected": "failed",
+      "assertion_passed": true,
+      "original_unit": "AIRI original resumeWorkflow rejects denied approval"
+    },
+    {
+      "id": "KI-A05",
+      "kind": "bounded-counterexample",
+      "observed": 17,
+      "expected": 17,
+      "assertion_passed": true,
+      "original_unit": "step resolver casts TS types; downstream policy/executor not checked in this case; no generic block port checker claimed"
+    },
+    {
+      "id": "KI-A06",
+      "kind": "adjacent-positive",
+      "observed": [
+        true,
+        false,
+        "responses",
+        "https://api.openai.com/v1"
+      ],
+      "expected": [
+        true,
+        false,
+        "responses",
+        "https://api.openai.com/v1"
+      ],
+      "assertion_passed": true,
+      "original_unit": "AIRI original provider schema same default bool as KI-P04, actual Zod4.4.3, fake t only"
+    },
+    {
+      "id": "KI-A07",
+      "kind": "adjacent-positive",
+      "observed": [
+        "boolean",
+        "string",
+        "password"
+      ],
+      "expected": [
+        "boolean",
+        "string",
+        "password"
+      ],
+      "assertion_passed": true,
+      "original_unit": "original metadata callback helps settings, existing AIRI capability"
+    },
+    {
+      "id": "KI-A08",
+      "kind": "adjacent-rejection",
+      "observed": false,
+      "expected": false,
+      "assertion_passed": true,
+      "original_unit": "actual schema rejects wrong bool; no connectivity validators/model invoked"
+    },
+    {
+      "id": "KI-A09",
+      "kind": "adjacent-rejection",
+      "observed": false,
+      "expected": false,
+      "assertion_passed": true,
+      "original_unit": "actual schema requires synthetic API field"
+    },
+    {
+      "id": "KI-A10",
+      "kind": "adjacent-positive",
+      "observed": [
+        1,
+        "!你好",
+        "discord-guild-g1"
+      ],
+      "expected": [
+        1,
+        "!你好",
+        "discord-guild-g1"
+      ],
+      "assertion_passed": true,
+      "original_unit": "original AIRI Discord message gating/normalization/sessionId, fake message+send sink; same text KI-P05"
+    },
+    {
+      "id": "KI-A11",
+      "kind": "adjacent-rejection",
+      "observed": 1,
+      "expected": 1,
+      "assertion_passed": true,
+      "original_unit": "AIRI group unmentioned ignored; Kirara independently configurable predicates"
+    },
+    {
+      "id": "KI-A12",
+      "kind": "adjacent-positive",
+      "observed": [
+        2,
+        "discord-dm-u1"
+      ],
+      "expected": [
+        2,
+        "discord-dm-u1"
+      ],
+      "assertion_passed": true,
+      "original_unit": "AIRI DM session segmentation already present"
+    },
+    {
+      "id": "KI-A13",
+      "kind": "adjacent-rejection",
+      "observed": 2,
+      "expected": 2,
+      "assertion_passed": true,
+      "original_unit": "AIRI ignores bot authors before reply"
+    },
+    {
+      "id": "KI-A14",
+      "kind": "bounded-counterexample",
+      "observed": "discord-guild-g1",
+      "expected": "discord-guild-g1",
+      "assertion_passed": true,
+      "original_unit": "AIRI current Discord same guild different channels share guild session; source behavior, not a general chat-isolation claim"
+    }
+  ]
+}

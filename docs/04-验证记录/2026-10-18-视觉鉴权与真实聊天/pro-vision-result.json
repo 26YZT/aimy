@@ -1,0 +1,11 @@
+{
+  "contextUpdates": 1,
+  "finishedAt": 1792328141819,
+  "httpStatuses": [
+    200
+  ],
+  "requestCount": 1,
+  "startedAt": 1792328137047,
+  "status": "complete",
+  "text": "I can’t analyze the screen because the image is unsupported or didn’t load.\n\nPlease re-upload the image or describe what’s shown, and I’ll explain:\n- what the screen is for\n- the primary actions available\n- any warnings or notable state changes\n- what the user can do next"
+}

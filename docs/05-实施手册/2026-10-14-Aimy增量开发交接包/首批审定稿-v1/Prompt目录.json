@@ -1,0 +1,25 @@
+{
+  "version": "first-increment-review-v1",
+  "date": "2026-10-15",
+  "status": "draft_not_installed",
+  "prompts": [
+    {
+      "path": "prompts/companion.txt",
+      "sha256": "346375cadc964ecd7b269aa65334b0e111a62a6085db1f3a1a1290619a5d275a",
+      "version": "v1-proposal"
+    },
+    {
+      "path": "prompts/extract-memory.txt",
+      "sha256": "2d0b3cd2c7946453f654a59bb64fc1a285ed75025071ba9236971b8d14412875",
+      "version": "v1-proposal"
+    },
+    {
+      "path": "prompts/memory-evidence.txt",
+      "sha256": "dd898641557a8901c3e66c32a3fe065793be922ac03ab37082e740e6ab79cde9",
+      "version": "v1-proposal"
+    }
+  ],
+  "source_schema": "03/07 typed SourceRef candidates; host owns IDs/revisions/permissions",
+  "old_five_prompts_modified": false,
+  "evaluation_expected_in_prompt": false
+}

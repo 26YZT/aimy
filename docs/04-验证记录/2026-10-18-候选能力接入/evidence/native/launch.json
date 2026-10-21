@@ -1,0 +1,9 @@
+{
+  "pid": 65794,
+  "debugPort": 62665,
+  "profile": "/tmp/aimy-round2-native-profile",
+  "entry": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/out/main/index.js",
+  "entrySha256": "d05d1d9d5a0fb6e2781a66e91e45bdbe039726e9cc9d12e313d1fa79c8ef9c68",
+  "network": "OS sandbox denies external sockets; Chromium requests and main fetch additionally filtered",
+  "modelCalls": 0
+}

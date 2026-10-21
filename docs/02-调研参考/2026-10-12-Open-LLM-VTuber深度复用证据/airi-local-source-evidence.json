@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-12",
+  "source_root": "/Users/mima1234/Documents/airi-main",
+  "git_checkout": false,
+  "runtime_validated": false,
+  "version_note": "Source archive; only these inspected-file hashes establish comparison snapshot.",
+  "inspected_files": [
+    {
+      "path": "packages/pipelines-audio/src/processors/tts-chunker.ts",
+      "sha256": "db1907ca4e411ba9067c7e7508dc1556662f801a1cc065960328c98585e9050f",
+      "lines": 525
+    },
+    {
+      "path": "packages/pipelines-audio/src/speech-pipeline.ts",
+      "sha256": "485b4bde5fbb8a94ce897ae0144a7868a37d11935cb98e423c988a1965c9d83a",
+      "lines": 479
+    },
+    {
+      "path": "packages/pipelines-audio/src/managers/playback-manager.ts",
+      "sha256": "a666975b1fb75d4e98be55245d2b83f2ae8c50a831b7c08cf020a32668fd1b1c",
+      "lines": 426
+    },
+    {
+      "path": "packages/stage-layouts/src/composables/use-chat-interruption.ts",
+      "sha256": "a618143be6a89f2c55a47a709515290c40bad7f3716a543cd33c6c1291fba409",
+      "lines": 90
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+      "sha256": "5435f5534daf2f346f3c6dca67b5e245ea07a36b9ad47ed4729d5492dde4f759",
+      "lines": 190
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenes/Stage.vue",
+      "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7",
+      "lines": 760
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de",
+      "lines": 16
+    },
+    {
+      "path": "packages/memory-pgvector/src/index.ts",
+      "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9",
+      "lines": 24
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "version": "first-increment-review-v1",
+  "date": "2026-10-15",
+  "requirement_count": 10,
+  "first_release_task_count": 9,
+  "operations_count": 18,
+  "capability_slices": [
+    "MEM-F01",
+    "MEM-F02"
+  ],
+  "requirements": [
+    {
+      "requirement_id": "REQ-BASE-01",
+      "task_ids": [
+        "BASE-01",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-CHAT-01",
+      "task_ids": [
+        "BASE-01",
+        "SRC-01",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-LIFE-01",
+      "task_ids": [
+        "LIFE-01",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-LOCAL-01",
+      "task_ids": [
+        "LOCAL-01",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-MEM-01",
+      "task_ids": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-MEM-02",
+      "task_ids": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-MEM-03",
+      "task_ids": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-MEM-04",
+      "task_ids": [
+        "MEM-03",
+        "INT-01",
+        "EXP-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-REL-01",
+      "task_ids": [
+        "MEM-02",
+        "MEM-03",
+        "INT-01",
+        "EXP-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    },
+    {
+      "requirement_id": "REQ-OBS-01",
+      "task_ids": [
+        "LIFE-01",
+        "LOCAL-01",
+        "INT-01"
+      ],
+      "source": "existing user direction; first-batch detailed clauses in 02/03/06",
+      "status": "scope_confirmed_details_proposed"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "BASE-01",
+      "objective": "收尾B5/B6/B8并固定可运行基线",
+      "dependencies": [],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        ".tool-versions",
+        "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+        "apps/stage-tamagotchi/src/main/tray/index.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-welcome.vue",
+        "apps/stage-tamagotchi/src/main/windows/editor/index.ts",
+        "apps/stage-tamagotchi/src/main/windows/about/index.ts",
+        "apps/stage-tamagotchi/src/main/windows/onboarding/index.ts",
+        "apps/stage-tamagotchi/src/main/windows/spotlight/index.ts",
+        "apps/stage-tamagotchi/src/main/windows/dashboard/index.ts",
+        "apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.ts",
+        "packages/i18n/src/locales/zh-Hans/tamagotchi/electron/tray.yaml",
+        "packages/i18n/src/locales/en/tamagotchi/electron/tray.yaml"
+      ],
+      "api_operations": [],
+      "reuse_leaf_ids": [],
+      "status": "not_started"
+    },
+    {
+      "task_id": "LIFE-01",
+      "objective": "统一资源lease、窗口语义和有限退出握手",
+      "dependencies": [
+        "BASE-01"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "apps/stage-tamagotchi/src/main/index.ts",
+        "apps/stage-tamagotchi/src/main/services/electron/window.ts",
+        "apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+        "apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.ts",
+        "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+        "apps/stage-tamagotchi/src/shared/eventa/index.ts",
+        "apps/stage-tamagotchi/src/renderer/App.vue",
+        "apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+        "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+        "apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+        "apps/stage-tamagotchi/src/renderer/features/live2d/system-audio-lipsync.ts",
+        "packages/stage-ui/src/stores/settings/audio-device.ts",
+        "packages/stage-ui/src/stores/voice.ts",
+        "packages/stage-ui/src/composables/audio/voice-controller.ts",
+        "packages/stage-ui/src/services/resource-policy.ts",
+        "apps/stage-tamagotchi/src/main/services/aimy/resource-policy.ts",
+        "apps/stage-tamagotchi/src/shared/eventa/aimy-lifecycle.ts",
+        "apps/stage-tamagotchi/src/renderer/bridges/resource-policy.ts",
+        "packages/stage-ui/src/composables/audio/audio-device.ts",
+        "packages/stage-pages/src/pages/settings/providers/transcription/aliyun-nls-transcription.vue",
+        "packages/stage-pages/src/pages/devtools/providers-transcription-realtime-aliyun-nls.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/devtools/screen-capture.vue",
+        "packages/stage-ui/src/stores/settings/audio-device.browser.test.ts",
+        "apps/stage-tamagotchi/src/main/services/electron/media-permissions.test.ts",
+        "apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.test.ts"
+      ],
+      "api_operations": [
+        "perception.start",
+        "perception.stop",
+        "perception.stopAll",
+        "presentation.cancel",
+        "shutdown.prepare"
+      ],
+      "reuse_leaf_ids": [],
+      "status": "not_started"
+    },
+    {
+      "task_id": "LOCAL-01",
+      "objective": "同步发送闸门与本地凭据策略",
+      "dependencies": [
+        "LIFE-01"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "packages/stage-ui/src/stores/chat/session-store.ts",
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/stage-ui/src/stores/providers/config.ts",
+        "packages/stage-ui/src/stores/providers/provider.ts",
+        "packages/stage-ui/src/services/inference-service-providers.ts",
+        "apps/stage-tamagotchi/src/main/index.ts",
+        "apps/stage-tamagotchi/src/shared/eventa/index.ts",
+        "apps/stage-tamagotchi/src/renderer/main.ts",
+        "packages/stage-ui/src/services/local-data-policy.ts",
+        "packages/stage-ui/src/services/provider-secret-storage.ts",
+        "apps/stage-tamagotchi/src/main/services/aimy/provider-secrets.ts",
+        "apps/stage-tamagotchi/src/shared/eventa/aimy-provider-secrets.ts",
+        "apps/stage-tamagotchi/src/renderer/bridges/provider-secrets.ts",
+        "packages/stage-ui/src/stores/providers/config.test.ts"
+      ],
+      "api_operations": [],
+      "reuse_leaf_ids": [],
+      "status": "not_started"
+    },
+    {
+      "task_id": "SRC-01",
+      "objective": "统一来源版本/重试血缘和请求上下文端口",
+      "dependencies": [
+        "LOCAL-01"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "packages/stage-ui/src/database/storage.ts",
+        "packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+        "packages/stage-ui/src/types/chat-session.ts",
+        "packages/stage-ui/src/stores/chat/session-store.ts",
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+        "packages/core-agent/src/runtime/request-context.ts",
+        "packages/core-agent/src/runtime/llm-service.ts",
+        "packages/core-agent/src/runtime/chat-completions.ts",
+        "packages/core-agent/src/runtime/responses.ts",
+        "packages/core-agent/src/messages/chat-completions.ts",
+        "packages/core-agent/src/types/llm.ts",
+        "packages/stage-ui/src/types/memory.ts",
+        "packages/stage-ui/src/stores/memory/sources.ts",
+        "packages/stage-ui/src/stores/memory/source-journal.ts",
+        "packages/stage-ui/src/stores/memory/source-policy.ts",
+        "packages/stage-ui/src/stores/memory/source-policy.test.ts",
+        "packages/stage-ui/src/stores/memory/source-journal.browser.test.ts",
+        "packages/core-agent/src/runtime/llm-service.test.ts",
+        "packages/core-agent/src/runtime/chat-completions.test.ts",
+        "packages/core-agent/src/runtime/responses.test.ts",
+        "packages/stage-ui/src/database/repos/chat-sessions.repo.test.ts",
+        "packages/stage-ui/src/stores/chat/session-store-lifecycle.browser.test.ts"
+      ],
+      "api_operations": [
+        "memory.source",
+        "memory.enqueueSource",
+        "presentation.cancel"
+      ],
+      "reuse_leaf_ids": [
+        "AH-L01",
+        "AH-L02"
+      ],
+      "status": "not_started"
+    },
+    {
+      "task_id": "MEM-01",
+      "objective": "MemoryRepo单key CAS/schema/屏障/恢复",
+      "dependencies": [
+        "SRC-01"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "packages/stage-ui/src/database/storage.ts",
+        "apps/stage-tamagotchi/src/renderer/App.vue",
+        "packages/stage-ui/src/types/memory.ts",
+        "packages/stage-ui/src/database/repos/memory.repo.ts",
+        "packages/stage-ui/src/stores/memory/store.ts",
+        "packages/stage-ui/src/stores/memory/service.ts",
+        "packages/stage-ui/src/stores/memory/fact-policy.ts",
+        "packages/stage-ui/src/database/repos/memory.repo.browser.test.ts",
+        "packages/stage-ui/src/stores/memory/fact-policy.test.ts",
+        "packages/stage-ui/src/stores/memory/source-journal.browser.test.ts"
+      ],
+      "api_operations": [
+        "memory.setPolicy",
+        "memory.enqueueSource",
+        "operation.get"
+      ],
+      "reuse_leaf_ids": [
+        "AH-L03",
+        "AH-L05",
+        "AH-L06"
+      ],
+      "status": "not_started"
+    },
+    {
+      "task_id": "MEM-02",
+      "objective": "自动提取任务、严格候选校验及费用门",
+      "dependencies": [
+        "MEM-01"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/stage-ui/src/stores/providers/provider.ts",
+        "packages/stage-ui/src/stores/modules/consciousness.ts",
+        "apps/stage-tamagotchi/src/main/index.ts",
+        "apps/stage-tamagotchi/src/shared/eventa/index.ts",
+        "apps/stage-tamagotchi/src/renderer/main.ts",
+        "packages/stage-ui/src/stores/memory/sources.ts",
+        "packages/stage-ui/src/stores/memory/model-policy.ts",
+        "packages/stage-ui/src/stores/memory/extraction.ts",
+        "packages/stage-ui/src/stores/memory/validators.ts",
+        "packages/stage-ui/src/stores/memory/budget.ts",
+        "packages/stage-ui/src/stores/memory/prompts.ts",
+        "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.ts",
+        "apps/stage-tamagotchi/src/shared/eventa/aimy-acceptance.ts",
+        "apps/stage-tamagotchi/src/renderer/bridges/acceptance-budget.ts",
+        "packages/stage-ui/src/stores/memory/extraction.test.ts",
+        "packages/stage-ui/src/stores/memory/budget.test.ts",
+        "packages/stage-ui/src/stores/memory/model-policy.test.ts",
+        "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts"
+      ],
+      "api_operations": [
+        "memory.setModelPolicy",
+        "memory.commitCandidates"
+      ],
+      "reuse_leaf_ids": [
+        "AH-L04"
+      ],
+      "status": "not_started"
+    },
+    {
+      "task_id": "MEM-03",
+      "objective": "相关召回、正常对话引用、来源UI、纠正/删除与历史投影失效",
+      "dependencies": [
+        "MEM-02"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/core-agent/src/runtime/request-context.ts",
+        "packages/core-agent/src/runtime/llm-service.ts",
+        "packages/core-agent/src/runtime/chat-completions.ts",
+        "packages/core-agent/src/runtime/responses.ts",
+        "packages/core-agent/src/messages/chat-completions.ts",
+        "packages/core-agent/src/types/llm.ts",
+        "apps/stage-tamagotchi/src/renderer/App.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/types.ts",
+        "packages/stage-pages/src/pages/settings/memory/index.vue",
+        "packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+        "packages/stage-ui/src/stores/memory/retrieval.ts",
+        "packages/stage-ui/src/stores/memory/projection.ts",
+        "packages/stage-ui/src/stores/memory/mutations.ts",
+        "packages/stage-ui/src/stores/memory/profile.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/index.ts",
+        "packages/i18n/src/locales/zh-Hans/settings.yaml",
+        "packages/i18n/src/locales/en/settings.yaml",
+        "packages/stage-ui/src/stores/memory/recall-policy.ts",
+        "packages/stage-ui/src/stores/memory/context.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.vue",
+        "packages/stage-ui/src/components/scenarios/settings/about-me.vue",
+        "packages/stage-ui/src/stores/memory/recall-policy.test.ts",
+        "packages/stage-ui/src/stores/memory/projection.test.ts",
+        "packages/stage-ui/src/stores/memory/mutations.browser.test.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.browser.test.ts",
+        "packages/stage-ui/src/components/scenarios/settings/about-me.browser.test.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.browser.test.ts"
+      ],
+      "api_operations": [
+        "profile.read",
+        "profile.submit",
+        "memory.list",
+        "memory.source",
+        "memory.correct",
+        "memory.remove",
+        "memory.resolveContext",
+        "operation.get"
+      ],
+      "reuse_leaf_ids": [
+        "AH-L07",
+        "AH-L08",
+        "AH-L09",
+        "AH-L10",
+        "RY-L01",
+        "RY-L02"
+      ],
+      "status": "not_started"
+    },
+    {
+      "task_id": "INT-01",
+      "objective": "按当批已选范围整合：首批记忆，后批合并时扩回归",
+      "dependencies": [
+        "MEM-03"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/AionsHome-MIT.txt",
+        "licenses/Ryza-MIT.txt",
+        "packages/stage-ui/src/database/repos/memory.repo.browser.test.ts",
+        "packages/stage-ui/src/stores/memory/source-policy.test.ts",
+        "packages/stage-ui/src/stores/memory/fact-policy.test.ts",
+        "packages/stage-ui/src/stores/memory/recall-policy.test.ts",
+        "packages/stage-ui/src/stores/memory/extraction.test.ts",
+        "packages/stage-ui/src/stores/memory/budget.test.ts",
+        "packages/stage-ui/src/stores/memory/source-journal.browser.test.ts",
+        "packages/stage-ui/src/stores/memory/projection.test.ts",
+        "packages/stage-ui/src/stores/memory/model-policy.test.ts",
+        "packages/stage-ui/src/stores/memory/mutations.browser.test.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.browser.test.ts",
+        "packages/stage-ui/src/components/scenarios/settings/about-me.browser.test.ts",
+        "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts",
+        "apps/stage-tamagotchi/scripts/acceptance/memory-restart.electron-smoke.ts",
+        "packages/core-agent/src/runtime/llm-service.test.ts",
+        "packages/core-agent/src/runtime/chat-completions.test.ts",
+        "packages/core-agent/src/runtime/responses.test.ts",
+        "packages/stage-ui/src/database/repos/chat-sessions.repo.test.ts",
+        "packages/stage-ui/src/stores/providers/config.test.ts",
+        "packages/stage-ui/src/stores/chat/session-store-lifecycle.browser.test.ts",
+        "packages/stage-ui/src/stores/settings/audio-device.browser.test.ts",
+        "apps/stage-tamagotchi/src/main/services/electron/media-permissions.test.ts",
+        "apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.test.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.browser.test.ts",
+        "apps/stage-tamagotchi/scripts/acceptance/run-memory-acceptance.ts",
+        "apps/stage-tamagotchi/scripts/acceptance/airi-baseline-adapter.ts",
+        "apps/stage-tamagotchi/scripts/acceptance/acceptance-budget-adapter.test.ts"
+      ],
+      "api_operations": [
+        "diagnostics.summary"
+      ],
+      "reuse_leaf_ids": [],
+      "status": "not_started"
+    },
+    {
+      "task_id": "EXP-01",
+      "objective": "本人对当批已交付功能使用与Bad Case迭代",
+      "dependencies": [
+        "INT-01"
+      ],
+      "writer": "one integrated writer per shared area; actual assignee not authorized yet",
+      "file_paths": [
+        "apps/stage-tamagotchi/scripts/acceptance/run-memory-acceptance.ts",
+        "apps/stage-tamagotchi/scripts/acceptance/airi-baseline-adapter.ts",
+        "apps/stage-tamagotchi/scripts/acceptance/acceptance-budget-adapter.test.ts"
+      ],
+      "api_operations": [],
+      "reuse_leaf_ids": [],
+      "status": "not_started"
+    }
+  ],
+  "later_task_ids": [
+    "PRO-01",
+    "VIS-01",
+    "VIS-02",
+    "VOICE-01",
+    "VOICE-02",
+    "CHAR-01"
+  ],
+  "old_global_counts_not_first_release": {
+    "requirements": 14,
+    "candidate_audit_records": 55,
+    "operations": 17,
+    "prompts": 5,
+    "tasks": 15
+  },
+  "product_implementation_authorized": false,
+  "handoff_revision": 2,
+  "api_contract_version": 3,
+  "user_correction_06": "automatic selective dependency cleanup; no customer impact-set approval"
+}

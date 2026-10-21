@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-14",
+  "esbuild": "esbuild@0.18.20",
+  "sources": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+      "sha256": "fc54da57c438fd82abe010c2170752ab0748feef716a73b095812bf5e9199ce4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+    }
+  ],
+  "metafile": {
+    "inputs": {
+      "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/utils/index.mjs": {
+        "bytes": 837,
+        "imports": [],
+        "format": "esm"
+      },
+      "aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.js": {
+        "bytes": 6943,
+        "imports": [],
+        "format": "esm"
+      },
+      "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/indexedb.mjs": {
+        "bytes": 1231,
+        "imports": [
+          {
+            "path": "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/utils/index.mjs",
+            "kind": "import-statement",
+            "original": "./utils/index.mjs"
+          },
+          {
+            "path": "aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.js",
+            "kind": "import-statement",
+            "original": "idb-keyval"
+          }
+        ],
+        "format": "esm"
+      },
+      "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/memory.mjs": {
+        "bytes": 726,
+        "imports": [
+          {
+            "path": "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/utils/index.mjs",
+            "kind": "import-statement",
+            "original": "./utils/index.mjs"
+          }
+        ],
+        "format": "esm"
+      },
+      "aimy-app/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs": {
+        "bytes": 2145,
+        "imports": [],
+        "format": "esm"
+      },
+      "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/shared/unstorage.zVDD2mZo.mjs": {
+        "bytes": 4036,
+        "imports": [],
+        "format": "esm"
+      },
+      "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/index.mjs": {
+        "bytes": 16440,
+        "imports": [
+          {
+            "path": "aimy-app/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs",
+            "kind": "import-statement",
+            "original": "destr"
+          },
+          {
+            "path": "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/shared/unstorage.zVDD2mZo.mjs",
+            "kind": "import-statement",
+            "original": "./shared/unstorage.zVDD2mZo.mjs"
+          },
+          {
+            "path": "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/shared/unstorage.zVDD2mZo.mjs",
+            "kind": "import-statement",
+            "original": "./shared/unstorage.zVDD2mZo.mjs"
+          }
+        ],
+        "format": "esm"
+      },
+      "aimy-app/packages/stage-ui/src/database/storage.ts": {
+        "bytes": 356,
+        "imports": [
+          {
+            "path": "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/indexedb.mjs",
+            "kind": "import-statement",
+            "original": "unstorage/drivers/indexedb"
+          },
+          {
+            "path": "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/memory.mjs",
+            "kind": "import-statement",
+            "original": "unstorage/drivers/memory"
+          },
+          {
+            "path": "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/index.mjs",
+            "kind": "import-statement",
+            "original": "unstorage"
+          }
+        ],
+        "format": "esm"
+      },
+      "aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts": {
+        "bytes": 5833,
+        "imports": [
+          {
+            "path": "aimy-app/packages/stage-ui/src/database/storage.ts",
+            "kind": "import-statement",
+            "original": "../storage"
+          }
+        ],
+        "format": "esm"
+      },
+      "../../../../private/tmp/aimy-20261014-memory-ab-browser/entry.ts": {
+        "bytes": 242,
+        "imports": [
+          {
+            "path": "aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+            "kind": "import-statement",
+            "original": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts"
+          },
+          {
+            "path": "aimy-app/packages/stage-ui/src/database/storage.ts",
+            "kind": "import-statement",
+            "original": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts"
+          }
+        ],
+        "format": "esm"
+      }
+    },
+    "outputs": {
+      "../../../../private/tmp/aimy-20261014-memory-ab-browser/airi-repo.js": {
+        "imports": [],
+        "exports": [],
+        "entryPoint": "../../../../private/tmp/aimy-20261014-memory-ab-browser/entry.ts",
+        "inputs": {
+          "../../../../private/tmp/aimy-20261014-memory-ab-browser/entry.ts": {
+            "bytesInOutput": 133
+          },
+          "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/utils/index.mjs": {
+            "bytesInOutput": 59
+          },
+          "aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.js": {
+            "bytesInOutput": 2274
+          },
+          "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/indexedb.mjs": {
+            "bytesInOutput": 1185
+          },
+          "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/memory.mjs": {
+            "bytesInOutput": 752
+          },
+          "aimy-app/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs": {
+            "bytesInOutput": 2128
+          },
+          "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/shared/unstorage.zVDD2mZo.mjs": {
+            "bytesInOutput": 2579
+          },
+          "aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/index.mjs": {
+            "bytesInOutput": 13644
+          },
+          "aimy-app/packages/stage-ui/src/database/storage.ts": {
+            "bytesInOutput": 209
+          },
+          "aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts": {
+            "bytesInOutput": 4723
+          }
+        },
+        "bytes": 29699
+      }
+    }
+  },
+  "noSourceModification": true
+}

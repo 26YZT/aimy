@@ -1,0 +1,227 @@
+{
+  "arm": "aimy",
+  "sessionId": "KfR1nchcRWrWfwf-uRqyA",
+  "characterId": "default",
+  "diskMessages": [
+    {
+      "role": "system",
+      "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+      "id": "ISfAxbRfaJxnrGhyHDUul",
+      "createdAt": 1792122435428
+    },
+    {
+      "role": "user",
+      "content": "我跟你说件事。我后天下午两点有一场特别重要的面试。其实我为了这次机会已经准备很久了，从修改简历到整理项目经历，前前后后花了差不多一个月。这家公司我真的挺想去的，所以压力特别大。我最怕的就是明明准备了很多，结果到现场一紧张，脑子突然一片空白。今天晚上我还在反复练自我介绍，练到自己都快听烦了。唉，希望这次能顺利一点吧。\n",
+      "createdAt": 1792065600000,
+      "id": "2db35268-600a-4cdd-a506-e1d5923dbb24"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792065600000,
+      "id": "bIWhPZqbecQPqITsWkhgZ",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "2db35268-600a-4cdd-a506-e1d5923dbb24",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "2db35268-600a-4cdd-a506-e1d5923dbb24/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1281,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-aimy-USER-V2-05\",\"http://127.0.0.1:52642/v1/\",\"deepseek-flash\",\"KfR1nchcRWrWfwf-uRqyA\",\"local:default:1\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792065600000
+    }
+  ],
+  "liveMessageCount": 3,
+  "memory": {
+    "implemented": true,
+    "metadata": {
+      "consistency": "independent-snapshots",
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "startedAt": 1792122435961,
+      "completedAt": 1792122435972,
+      "memory": {
+        "status": "available",
+        "observedAt": 1792122435962,
+        "snapshot": {
+          "scope": {
+            "principalId": "local",
+            "characterId": "default"
+          },
+          "snapshotRevision": 2,
+          "memoryEpoch": 2,
+          "state": "ready",
+          "busy": false,
+          "enabled": true,
+          "recoveryUntil": null,
+          "errorCode": null,
+          "counts": {
+            "facts": {
+              "current": 1,
+              "history": 0
+            },
+            "sources": {
+              "current": 1,
+              "changed": 0,
+              "deleted": 0
+            },
+            "jobs": {
+              "pending": 0,
+              "running": 0,
+              "succeeded": 1,
+              "cancelled": 0,
+              "failed": 0
+            },
+            "pendingSourceChanges": 0,
+            "extractionBlocks": 0,
+            "replayBlocks": 0,
+            "persistenceFailures": 0
+          },
+          "operations": [
+            {
+              "operationId": "enroll:406c2ae0ac319f79cb40cb59854b22bf6b58da42c3a4852c8123200b88043c0d",
+              "status": "succeeded",
+              "revision": 1,
+              "persistedAt": 1792122435667
+            },
+            {
+              "operationId": "extract:job:406c2ae0ac319f79cb40cb59854b22bf6b58da42c3a4852c8123200b88043c0d:1",
+              "status": "succeeded",
+              "revision": 2,
+              "persistedAt": 1792122435903
+            }
+          ],
+          "sources": [
+            {
+              "sourceId": "chat:KfR1nchcRWrWfwf-uRqyA:2db35268-600a-4cdd-a506-e1d5923dbb24",
+              "sourceRevision": 1,
+              "kind": "chat-message",
+              "lifecycle": "current"
+            }
+          ],
+          "truncated": {
+            "operations": false,
+            "sources": false
+          }
+        }
+      },
+      "budget": {
+        "status": "available",
+        "observedAt": 1792122435971,
+        "snapshot": {
+          "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+          "maxCostMicroYuan": 10000000,
+          "accountedMicroYuan": 0,
+          "reservedMicroYuan": 0,
+          "remainingMicroYuan": 10000000,
+          "paused": false,
+          "attempts": 34
+        }
+      },
+      "resources": {
+        "status": "available",
+        "observedAt": 1792122435961,
+        "snapshot": {
+          "revision": 2,
+          "appEpoch": 1,
+          "active": true,
+          "microphone": {
+            "enabled": false,
+            "epoch": 1
+          },
+          "screen": {
+            "enabled": false,
+            "epoch": 1
+          }
+        }
+      }
+    },
+    "facts": {
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "facts": [
+        {
+          "category": "experience",
+          "subject": "user",
+          "label": "离线管线测试原话片段",
+          "text": "我跟你说件事。我后天下午两点有一场特别重要的面试。其实我为了这次机会已经准备很久了，从修改简历到整理项目经历，前前后后花了差不多一个月。这家公司我真的挺想去的，所以压力特别大。我最怕的就是明明准备了很多，结果到现场一紧张，脑子突然一片空白。今天晚上我还在反复练自我介绍，练到自己都快听烦了。唉，希望这次能顺利一点吧。",
+          "keywords": [
+            "我跟你说件事。我"
+          ],
+          "factId": "extract:job:406c2ae0ac319f79cb40cb59854b22bf6b58da42c3a4852c8123200b88043c0d:1:0",
+          "factKey": "fact:extract:job:406c2ae0ac319f79cb40cb59854b22bf6b58da42c3a4852c8123200b88043c0d:1:0",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:KfR1nchcRWrWfwf-uRqyA:2db35268-600a-4cdd-a506-e1d5923dbb24",
+              "sourceRevision": 1,
+              "contentHash": "6c4e2d1bc02f726fc8706d663dc17a291ec9b96090aa78b3a7fd6882d34a249b"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792065600000,
+          "committedAt": 1792122435903
+        }
+      ],
+      "snapshotRevision": 2
+    }
+  },
+  "plaintextSyntheticCredentialInLocalStorage": false,
+  "accounting": {
+    "budget": {
+      "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 0,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 10000000,
+      "paused": false,
+      "attempts": 34
+    },
+    "requests": 2
+  }
+}

@@ -5,6 +5,7 @@ import type { VoiceSpeechCommand } from './bus'
 import { defineInvoke } from '@moeru/eventa'
 import { nanoid } from 'nanoid/non-secure'
 
+import { getAcceptanceBudget } from '../../stores/memory/budget'
 import { getSpeechBusContext, voiceSnapshotChanged, voiceSpeechCommand } from './bus'
 
 /** Orders producer commands across renderers. Cancellation bypasses pending completion waits. */
@@ -20,6 +21,12 @@ export class SpeechClient {
   constructor(turn: TurnRef, purpose: string) {
     // Each client opens one producer. The host matches all later commands with these same fields.
     this.identity = { turn: { ...turn }, originId: nanoid(), producerId: nanoid() }
+    if (getAcceptanceBudget()) {
+      this.sealed = true
+      this.stopHostListener = () => {}
+      this.pending = Promise.resolve({ status: 'closed' as const })
+      return
+    }
     this.stopHostListener = getSpeechBusContext().on(voiceSnapshotChanged, ({ body }) => {
       if (body && !body.connected)
         this.close('Speech host disconnected')
@@ -48,6 +55,10 @@ export class SpeechClient {
 
   /** Completes this response after all its producers and owned playback drain. */
   finish() {
+    if (getAcceptanceBudget()) {
+      this.close('Text-only acceptance')
+      return Promise.resolve({ status: 'closed' as const })
+    }
     this.sealed = true
     return this.pending.then(result => result.status === 'accepted'
       ? this.invoke({ ...this.identity, type: 'finish' }, { signal: this.lifetime.signal })
@@ -57,16 +68,28 @@ export class SpeechClient {
   cancel(reason: string) {
     this.sealed = true
     this.cancelled = true
+    if (getAcceptanceBudget()) {
+      this.close(reason)
+      return Promise.resolve({ status: 'closed' as const })
+    }
     return this.invoke({ ...this.identity, type: 'cancel', reason }, { signal: this.lifetime.signal }).finally(() => this.close(reason))
   }
 
   private send(command: VoiceSpeechCommand) {
+    if (getAcceptanceBudget()) {
+      this.close('Text-only acceptance')
+      return Promise.resolve({ status: 'closed' as const })
+    }
     if (this.sealed)
       return Promise.resolve({ status: 'closed' as const })
     this.pending = this.pending.then((result) => {
-      if (this.cancelled || result.status !== 'accepted')
+      if (getAcceptanceBudget() || this.cancelled || result.status !== 'accepted')
         return { status: 'closed' as const }
       return this.invoke(command, { signal: this.lifetime.signal })
+    }, (error) => {
+      if (getAcceptanceBudget())
+        return { status: 'closed' as const }
+      throw error
     })
     this.observeCompletion(this.pending)
     return this.pending

@@ -1,0 +1,303 @@
+{
+  "date": "2026-10-14",
+  "sources": [
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/scripts/production.py",
+      "sha256": "eb82dd85dd941e4a75311dc1950ade581564ad89b019d1ed7fdf09df6d6244ff",
+      "lines": 271,
+      "read_level": "full",
+      "symbols": [
+        {
+          "name": "module",
+          "line": 18,
+          "end_line": 20
+        },
+        {
+          "name": "bounds",
+          "line": 23,
+          "end_line": 26
+        },
+        {
+          "name": "imported",
+          "line": 29,
+          "end_line": 40
+        },
+        {
+          "name": "export",
+          "line": 43,
+          "end_line": 50
+        },
+        {
+          "name": "piece",
+          "line": 53,
+          "end_line": 67
+        },
+        {
+          "name": "analyze",
+          "line": 70,
+          "end_line": 87
+        },
+        {
+          "name": "inventory",
+          "line": 90,
+          "end_line": 94
+        },
+        {
+          "name": "guides",
+          "line": 97,
+          "end_line": 122
+        },
+        {
+          "name": "prepare",
+          "line": 125,
+          "end_line": 135
+        },
+        {
+          "name": "export_texture_group",
+          "line": 138,
+          "end_line": 150
+        },
+        {
+          "name": "restore_uv",
+          "line": 153,
+          "end_line": 214
+        },
+        {
+          "name": "join",
+          "line": 217,
+          "end_line": 223
+        },
+        {
+          "name": "assemble",
+          "line": 226,
+          "end_line": 252
+        },
+        {
+          "name": "run",
+          "line": 255,
+          "end_line": 268
+        }
+      ]
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/scripts/mtoon-export.py",
+      "sha256": "502eafbfdb83a1fe7c536d0ab26efdaba03f41a27f734f1177266cf889647991",
+      "lines": 305,
+      "read_level": "full",
+      "symbols": [
+        {
+          "name": "enable_vrm",
+          "line": 25,
+          "end_line": 34
+        },
+        {
+          "name": "texture_state",
+          "line": 37,
+          "end_line": 47
+        },
+        {
+          "name": "same_image_content",
+          "line": 50,
+          "end_line": 67
+        },
+        {
+          "name": "compatible_alpha",
+          "line": 70,
+          "end_line": 77
+        },
+        {
+          "name": "restore_texture",
+          "line": 80,
+          "end_line": 91
+        },
+        {
+          "name": "apply_mtoon",
+          "line": 94,
+          "end_line": 157
+        },
+        {
+          "name": "embedded_data",
+          "line": 160,
+          "end_line": 172
+        },
+        {
+          "name": "texture_infos",
+          "line": 175,
+          "end_line": 184
+        },
+        {
+          "name": "inspect_texture",
+          "line": 187,
+          "end_line": 215
+        },
+        {
+          "name": "inspect_vrm",
+          "line": 218,
+          "end_line": 256
+        },
+        {
+          "name": "save_outputs",
+          "line": 259,
+          "end_line": 293
+        },
+        {
+          "name": "content",
+          "line": 59,
+          "end_line": 62
+        },
+        {
+          "name": "fail",
+          "line": 188,
+          "end_line": 189
+        },
+        {
+          "name": "entry",
+          "line": 190,
+          "end_line": 194
+        }
+      ]
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/preview-avatar.mjs",
+      "sha256": "27f7738c8097a33eee8f6752114091ffe8e8a9fa18c26002f55d44d88092a26b",
+      "lines": 93,
+      "read_level": "full"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/preview-gltf.mjs",
+      "sha256": "1647509e47222d9294636ef0c83e62001d659438f1a4859cc4fa8c45ec945404",
+      "lines": 44,
+      "read_level": "full"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/spring-physics.mjs",
+      "sha256": "291c0d8cbfdc1dc08f3941d910dbd6334a7ad4272ad570dd8dae885a407ed0e8",
+      "lines": 130,
+      "read_level": "full"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/server-production.mjs",
+      "sha256": "a8d1ae0a8db203a1aef8dd684310d7926afeb072dd71d2cfa14806aefbfb0f62",
+      "lines": 30,
+      "read_level": "full"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/skills/tripo-agent-workflow/SKILL.md",
+      "sha256": "2f873d3347e980583fe9967344b0985e1a78a2bfd413f1c5e17635d173662c7a",
+      "lines": 47,
+      "read_level": "full"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/skills/tripo-character-setup/SKILL.md",
+      "sha256": "8f24c7491a48b0ff72cb33e681eb3a2cb97d78e7ccac3f93606ed9bcd6b0ccdb",
+      "lines": 16,
+      "read_level": "full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/src/composables/vrm/loader.ts",
+      "sha256": "84e1cf24155dcab5f1553dd9177c8d8c95ae8e80d4279dcee18452bb28ac5d47",
+      "lines": 126,
+      "read_level": "full"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/server-jobs.mjs",
+      "sha256": "f7fcb4070efe1dd0f253ab1e22c23cd948d20a92d5cb8a907c288600326fc432",
+      "lines": 101,
+      "read_level": "targeted_call_chain"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/server-spring-verification.mjs",
+      "sha256": "1ad11c7ee1521a76bd699fe77f13f57ef5cac7d37cf2b08e5b8da8eb939b0579",
+      "lines": 41,
+      "read_level": "targeted_call_chain"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/scripts/tripo-project.mjs",
+      "sha256": "c730b948e4168efbd57ba9ad182a07748082e5dbdddbccc6a65e8af62fd15b6a",
+      "lines": 54,
+      "read_level": "targeted_call_chain"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/scripts/run-local-job.mjs",
+      "sha256": "ee3fa4b9f6bbcb095cdbef9fbdb55787c0c8a75208bc54dbecb0d9906fff89a1",
+      "lines": 25,
+      "read_level": "targeted_call_chain"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/src/components/Model/VRMModel.vue",
+      "sha256": "a97349890ba713ef56f95627adc636fbe283f88bba7856dc0bef14452d224f44",
+      "lines": 1125,
+      "read_level": "targeted_call_chain"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/src/composables/vrm/animation.ts",
+      "sha256": "85d901a1cf685b1cd5be85a683aa823668dc9ce337eec49f5225c387090e5351",
+      "lines": 264,
+      "read_level": "targeted_call_chain"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/src/composables/vrm/expression.ts",
+      "sha256": "089160f9578354d9387ca374730c51ea081f6f34901605db0b07aad1ec89cdcd",
+      "lines": 382,
+      "read_level": "targeted_call_chain"
+    }
+  ],
+  "actual_dependency_versions": {
+    "airiThree": "185",
+    "kitThree": "170",
+    "airiVRM": "3.5.5"
+  },
+  "executed_sources": [
+    "production.py original AST bounds/piece/join/restore_uv",
+    "AIRI useVRMLoader original source body",
+    "Kit PreviewAvatar/loadGLTF/inspectPreviewGLTF/verifySpringMotion",
+    "actual installed/vendored Three/VRM loaders, expression/spring managers"
+  ],
+  "full_pipeline_executed": false,
+  "user_scene_or_projects_touched": false,
+  "real_generation_models_or_devices_used": false,
+  "dependency_fingerprints": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/node_modules/three/build/three.module.js",
+      "bytes": 650153,
+      "sha256": "bbf5ed13fe4373f5bd38b14ea8e62e9f157327da5638edc6d3863e08b167c9c7",
+      "reading_level": "used existing reviewed API/loader dependency; not complete library audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/node_modules/@pixiv/three-vrm/lib/three-vrm.module.js",
+      "bytes": 988239,
+      "sha256": "bfc0f3bd49ee5b706b3055d366759e881f20dee32be344c4c8f586600f223434",
+      "reading_level": "used existing reviewed API/loader dependency; not complete library audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/node_modules/@pixiv/three-vrm-animation/lib/three-vrm-animation.module.js",
+      "bytes": 362996,
+      "sha256": "8b3985e9420efb549a1dc8f72bc88fd3b257979f769e0b23ff9f723b61ca3ecf",
+      "reading_level": "used existing reviewed API/loader dependency; not complete library audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 114959,
+      "sha256": "97642d720f16cc9a0c9844934198e4d0c023bea8e89576d0f7545d03b2d103d2",
+      "reading_level": "used existing reviewed API/loader dependency; not complete library audit"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/vendor/three.module.js",
+      "bytes": 1369252,
+      "sha256": "da7f8aecb0b1e4a55e820cce5dc5a5a8eb13dc379758f215e8fb07937be7a6a3",
+      "reading_level": "used existing reviewed API/loader dependency; not complete library audit"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/vendor/three-vrm.module.js",
+      "bytes": 155682,
+      "sha256": "1a7170a8adbc2cb54a8912d017afc33282f16c62c680ab333c2263e845537234",
+      "reading_level": "used existing reviewed API/loader dependency; not complete library audit"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/vendor/GLTFLoader.js",
+      "bytes": 114993,
+      "sha256": "956746f80fe2af1650a6c0b156ac619f2c66ab9fc697e1d81d3bce1e4654a5d0",
+      "reading_level": "used existing reviewed API/loader dependency; not complete library audit"
+    }
+  ]
+}

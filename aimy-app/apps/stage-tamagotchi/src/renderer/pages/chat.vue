@@ -6,7 +6,7 @@ import { shallowRef, useTemplateRef } from 'vue'
 
 import ChatSpeechMuteButton from '../components/chat-window/chat-speech-mute-button.vue'
 import ChatWindowStyleMenu from '../components/chat-window/chat-window-style-menu.vue'
-import InteractiveArea from '../components/InteractiveArea.vue'
+import MessengerWindow from '../components/messenger/messenger-window.vue'
 import WindowTitleBar from '../components/Window/TitleBar.vue'
 import ChatPageShell from './chat-page-shell.vue'
 
@@ -14,7 +14,7 @@ import { useChatDraftHandover } from '../composables/use-chat-draft-handover'
 
 const { activeCard } = storeToRefs(useAiriCardStore())
 const sessionsDrawerOpen = shallowRef(false)
-const interactiveArea = useTemplateRef<InstanceType<typeof InteractiveArea>>('interactive-area')
+const interactiveArea = useTemplateRef<InstanceType<typeof MessengerWindow>>('interactive-area')
 
 useChatDraftHandover(interactiveArea)
 </script>
@@ -31,7 +31,7 @@ useChatDraftHandover(interactiveArea)
         <ChatWindowStyleMenu />
       </template>
     </WindowTitleBar>
-    <InteractiveArea
+    <MessengerWindow
       ref="interactive-area"
       class="interaction-area block"
       h-full w-full transition="opacity duration-250"

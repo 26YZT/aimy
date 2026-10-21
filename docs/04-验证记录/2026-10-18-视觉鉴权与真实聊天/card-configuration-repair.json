@@ -1,0 +1,7 @@
+{
+  "cardVisionModel": "deepseek-flash",
+  "cardVisionProvider": "vision-deepseek",
+  "chatModel": "deepseek-flash",
+  "runtimeVisionModel": "deepseek-flash",
+  "updated": true
+}

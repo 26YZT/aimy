@@ -1,0 +1,72 @@
+{
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "54b314e1ab2489611948edc04f0c90026d0733aadcc21ecab5b27ec97f2ee5ef",
+      "bytes": 1354
+    },
+    {
+      "file": "airi-marker.mjs",
+      "sha256": "3a7a642d8867a0123da289b75ada5d4655ead7cf63834f0ddcde860155148a2f",
+      "bytes": 5695
+    },
+    {
+      "file": "airi-response-isolated.mjs",
+      "sha256": "da7c55f53360a5e78e58cc396d1342b459f3540b56e518935b1acf59d5e4649e",
+      "bytes": 11649
+    },
+    {
+      "file": "charakuru-preview-gltf.mjs",
+      "sha256": "1647509e47222d9294636ef0c83e62001d659438f1a4859cc4fa8c45ec945404",
+      "bytes": 3943
+    },
+    {
+      "file": "charakuru-spring-structural.mjs",
+      "sha256": "1326cd37e4195af1b41183c97d37672fa251e38d67bbfe9ff1c500044cc594a3",
+      "bytes": 13085
+    },
+    {
+      "file": "experiments.json",
+      "sha256": "261dac82ac171f19a166ed0399a2e4e0bb7c662880f39927f2e5fd851f1898ef",
+      "bytes": 2392
+    },
+    {
+      "file": "planning-contracts.md",
+      "sha256": "16bb8dfbda61c5610c5ad7902405a7f23307178a52d8056d20c771a539dcae38",
+      "bytes": 18537
+    },
+    {
+      "file": "reading-manifest.json",
+      "sha256": "109fb5691d862c48dfc00a002eb3df632d72b998063afa4df55344dd7e82c657",
+      "bytes": 6082
+    },
+    {
+      "file": "run-experiments.mjs",
+      "sha256": "553cd4b4a1e6fde9bab32c9558249c6c2821548e8a9ebc392f2bb30ab8a550a2",
+      "bytes": 6429
+    },
+    {
+      "file": "spark-agent-isolated.mjs",
+      "sha256": "840465ef44b2475c63cd0dbe07b19fa48c416baec67d973d78c5c43ea261ca13",
+      "bytes": 10066
+    },
+    {
+      "file": "spark-noresponse-experiment.json",
+      "sha256": "eef2cf80689465383d767d83fb196caf20b03b6762f691eb0b8f8fbe3d2944ed",
+      "bytes": 460
+    },
+    {
+      "file": "spark-noresponse-experiment.mjs",
+      "sha256": "35d011b01fa70cc7cd78993297078d21ca597d97c99820ae6cc6bdcbb3429cea",
+      "bytes": 2498
+    },
+    {
+      "file": "spark-reaction.mjs",
+      "sha256": "8166931a10ca01dd87070c4c0d4e9c26dc89dccee5efd459ebf2798ab2328fc4",
+      "bytes": 1179
+    }
+  ],
+  "source_hashes_unchanged": 16,
+  "experiment_groups_passed": 5,
+  "product_code_changed": false
+}

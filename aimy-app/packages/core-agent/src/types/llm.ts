@@ -27,6 +27,25 @@ export type StreamEvent
 
 /** Options shared by generation adapters. SDK payloads stay inside each adapter. */
 export interface StreamOptions {
+  /** Optional acceptance-campaign transport boundary. Ordinary product requests have no campaign cap. */
+  attemptGate?: {
+    maxOutputTokens: number
+    begin: (request: { protocol: 'chat-completions' | 'responses', url: URL, body: string }) => Promise<{
+      releaseNotSent: () => Promise<void>
+      observeResponse: (response: Response) => void
+      transportFailed: () => Promise<void>
+    }>
+  }
+  /** Synchronous host authority check, repeated after async work and at every actual HTTP send. */
+  assertCurrent?: () => void
+  /** Invalidates native continuation after memory or other host-owned evidence changes. */
+  contextRevision?: string
+  /** A finite server output limit, applied to the final protocol body. */
+  maxOutputTokens?: number
+  /** Provider-selected Chat output parameter. Responses always uses max_output_tokens. */
+  outputTokenLimitField?: 'max_tokens' | 'max_completion_tokens'
+  /** Conservative total input bound measured from the final serialized protocol body. */
+  maxInputTokens?: number
   /** Reads the pinned character's current settings before each model request. */
   resolveStep?: () => Promise<{
     model: string

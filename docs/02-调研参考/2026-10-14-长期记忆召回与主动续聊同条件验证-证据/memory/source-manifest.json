@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-14",
+  "fixture_path": "/tmp/aimy-20261014-memory-ab/fixtures.json",
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "loaded_source_units": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+      "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+      "symbol": "whole pure policy module",
+      "start": 1,
+      "end": 203,
+      "scope": "original pure module, time boundary replaced after loading"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_Analysis",
+      "start": 29,
+      "end": 31,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_profile_user_name",
+      "start": 40,
+      "end": 41,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "ensure_schema",
+      "start": 44,
+      "end": 86,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_read",
+      "start": 89,
+      "end": 92,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "snapshot",
+      "start": 95,
+      "end": 121,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_entry",
+      "start": 124,
+      "end": 133,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_check_budget",
+      "start": 136,
+      "end": 139,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "save_manual",
+      "start": 142,
+      "end": 201,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "invalidate_pending",
+      "start": 204,
+      "end": 209,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "enqueue_event",
+      "start": 212,
+      "end": 235,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_context_for_job",
+      "start": 254,
+      "end": 278,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_analysis_prompt",
+      "start": 281,
+      "end": 330,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_profile_refs",
+      "start": 354,
+      "end": 355,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "_apply_analysis",
+      "start": 358,
+      "end": 498,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "run_pending_once",
+      "start": 501,
+      "end": 570,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+      "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+      "symbol": "build_context",
+      "start": 573,
+      "end": 581,
+      "scope": "original AST class/function body, unchanged"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/manager.ts",
+      "sha256": "99ac0d163d6e154ea7b72b51abcea4ddd1cdc3d2921a2085bdc7b74778e39bf5",
+      "start": 1,
+      "end": 151,
+      "symbol": "whole original TypeScript module transpiled",
+      "scope": "original types/merge/manager; only Date.now clock boundary"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/merge.ts",
+      "sha256": "0f7632c172c9340c3d76b6a11a35ebb02151f10ab4a4eb6518a64839d289ef68",
+      "start": 1,
+      "end": 247,
+      "symbol": "whole original TypeScript module transpiled",
+      "scope": "original types/merge/manager; only Date.now clock boundary"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/types.ts",
+      "sha256": "497b40b242dc7716753aa8c33277ca8aa25bce96b4af46761652f5bc6ba439a7",
+      "start": 1,
+      "end": 75,
+      "symbol": "whole original TypeScript module transpiled",
+      "scope": "original types/merge/manager; only Date.now clock boundary"
+    }
+  ],
+  "loaded_unit_meaning": "原代码装配清单；不声称所有加载函数/分支均执行。关键已执行路径由每case native_sequence/结果和README锚点指明。",
+  "static_caller_evidence": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/user_profile.py",
+      "sha256": "f7086c4e3a80e3b2b15e41434833f88d6eb27266797b74956b12d9dfd9e71849",
+      "ranges": [
+        [
+          1,
+          60
+        ]
+      ],
+      "runtime_executed": false
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/server/register-task-memory.ts",
+      "sha256": "d5302217b7215c47d7f52b73e4f7b7130972f6609391b7de50537439bbfdc248",
+      "ranges": [
+        [
+          1,
+          122
+        ]
+      ],
+      "runtime_executed": false
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/server/runtime.ts",
+      "sha256": "fc0a92a486d04932dd4eb5b678bb9235c139eadb2a16dc89bd03722b9c452c4b",
+      "ranges": [
+        [
+          65,
+          80
+        ]
+      ],
+      "runtime_executed": false
+    }
+  ],
+  "all_loaded_source_hashes_unchanged_after_execution": true,
+  "runtime_versions": {
+    "python": "3.12.10 (v3.12.10:0cc81280367, Apr  8 2025, 08:46:59) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "node": "v24.20.0",
+    "typescript": "6.0.3"
+  },
+  "native_storage": "sqlite3 actual file/transactions behind async protocol shim; not installed aiosqlite",
+  "source_import_exclusions": [
+    "Aions config/database/router/model call not imported",
+    "AIRI desktop app/service entry point not started",
+    "no Ryza arm in this LM batch; native corresponding long-term modules not falsely added to AIRI"
+  ],
+  "output_scripts": [
+    {
+      "path": "/tmp/aimy-20261014-memory-ab-lm/aions-arm.py",
+      "sha256": "6d397414d6c50afeb31f7638aabe565c42b887464280ea4e701938f4c6d9c056"
+    },
+    {
+      "path": "/tmp/aimy-20261014-memory-ab-lm/airi-arm.cjs",
+      "sha256": "796b8eeadace336aeb7318696cc0070d11ce5ffe273cd3721551ad33bbc289cd"
+    },
+    {
+      "path": "/tmp/aimy-20261014-memory-ab-lm/run.py",
+      "sha256": "0dfa19f96c2d2886b951f7e8420cc2975655aed6ed2f1315e115171171af2060"
+    }
+  ],
+  "derived_script_review_note": "review文字收窄LM08主任务manual提交与自动同源纯函数副探针未SQL commit；无重跑/raw未变；仅同步run.py派生脚本hash，来源/raw结果指纹不变。"
+}

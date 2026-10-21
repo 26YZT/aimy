@@ -1,0 +1,21 @@
+{
+  "source_root": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main",
+  "snapshot_has_git": false,
+  "all_regular_files": 1555,
+  "all_bytes": 465036303,
+  "fingerprint_policy": "sha256 of newline-joined relative path NUL sha256 for selected first-party source/doc text. Runtime/config secrets/assets/vendor excluded, so this is a reviewed-source fingerprint, not full binary tree identity.",
+  "reviewed_source_tree_sha256": "d7dd126c08884b5ea5d41027069da4c4b7de7b212d2bd75f46c667f6155a04af",
+  "selected_text_files": 1109,
+  "selected_text_lines": 291622,
+  "python_parse_count": 458,
+  "python_parse_errors": [],
+  "python_lines_by_topdir": {
+    "AionsHome-Visitor-Lounge": 22293,
+    "aion-chat": 119343
+  },
+  "test_path_files_by_topdir": {
+    "AionsHome-Visitor-Lounge": 22,
+    "aion-chat": 288
+  },
+  "excluded_runtime_or_secret_files": 124
+}

@@ -1,0 +1,13 @@
+{
+  "pid": 13250,
+  "argv": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/tmp/aimy-preview-package-20261018/smoke/network.sb",
+    "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron",
+    "--no-sandbox",
+    "/tmp/aimy-preview-package-20261018/smoke/host.mjs"
+  ],
+  "profile": "/tmp/aimy-preview-package-20261018/smoke/appdata/Aimy-Preview",
+  "type": "installed Electron executes exact staged app.asar entry with isolated appData; shipping package unchanged"
+}

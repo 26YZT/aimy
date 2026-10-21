@@ -1,0 +1,11 @@
+{
+  "profile": "/tmp/aimy-first-implementation-20261015/aimy-verified-synthetic-yzinvuz2",
+  "campaignConfig": "/tmp/aimy-first-implementation-20261015/synthetic-campaign.json",
+  "cdpPort": 54803,
+  "channelPort": 54804,
+  "entry": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/out/main/index.js",
+  "profile_empty_before_creation": true,
+  "synthetic_only": true,
+  "pid": 25713,
+  "entrySha256": "2079cc9304e616007d96fe3d4cb0702cc2f0da97b060dd520ed178dc7c1ec835"
+}

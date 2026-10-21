@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-14",
+  "status": "审定文档/依赖闭包/字节保护核验通过；非实现或产品测试通过",
+  "day1": {
+    "selection": "A",
+    "scope_only": true,
+    "code_authorized": false
+  },
+  "future_days_not_asked_or_selected": 6,
+  "automation_created": false,
+  "first_release_task_closure": [
+    "BASE-01",
+    "EXP-01",
+    "INT-01",
+    "LIFE-01",
+    "LOCAL-01",
+    "MEM-01",
+    "MEM-02",
+    "MEM-03",
+    "SRC-01"
+  ],
+  "counts": {
+    "requirements": 14,
+    "tasks": 15,
+    "api_proposals": 17,
+    "prompt_files_unchanged": 5,
+    "candidate_audit_records": 55,
+    "eligible_shortlist_records_not_first_release_count": 8
+  },
+  "normal_chat_recall_task": "MEM-03",
+  "background_proactive_task": "PRO-01（后批）",
+  "post_commit_recovery_is_required": true,
+  "durable_source_delete_receipt_is_required": true,
+  "final_transport_and_payload_rebuild_contract": "待实现、源码边界已明确",
+  "prior_handoff_files_preserved": 14,
+  "review_original_byte_copies": 7,
+  "navigation": {
+    "files": 16,
+    "links": 147,
+    "broken": []
+  },
+  "protected_product_files": 5336,
+  "changed_product": [],
+  "git_index_unchanged": true,
+  "product_tests_rerun": false,
+  "real_model_or_device_calls": 0,
+  "user_data_migration_or_deletion": false
+}

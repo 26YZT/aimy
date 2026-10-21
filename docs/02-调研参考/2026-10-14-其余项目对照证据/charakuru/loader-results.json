@@ -1,0 +1,173 @@
+{
+  "rows": [
+    {
+      "id": "minimal-no-face",
+      "bytes": 2436,
+      "airi": {
+        "humanoid": true,
+        "expressions": [],
+        "lookAt": false,
+        "springJoints": 0,
+        "mtoon": true,
+        "mouthBefore": [
+          null
+        ],
+        "mouthAfter": [
+          null
+        ]
+      },
+      "kit": {
+        "humanoid": true,
+        "expressions": [],
+        "lookAt": false,
+        "springJoints": 0,
+        "mtoon": true,
+        "mouthBefore": [
+          null
+        ],
+        "mouthAfter": [
+          null
+        ]
+      }
+    },
+    {
+      "id": "authored-capabilities",
+      "bytes": 4160,
+      "airi": {
+        "humanoid": true,
+        "expressions": [
+          "happy",
+          "aa",
+          "blink"
+        ],
+        "lookAt": true,
+        "springJoints": 1,
+        "mtoon": true,
+        "mouthBefore": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "mouthAfter": [
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "expressionResponses": {
+          "happy": [
+            1,
+            0,
+            0
+          ],
+          "aa": [
+            0,
+            1,
+            0
+          ],
+          "blink": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "kit": {
+        "humanoid": true,
+        "expressions": [
+          "happy",
+          "aa",
+          "blink"
+        ],
+        "lookAt": true,
+        "springJoints": 1,
+        "mtoon": true,
+        "mouthBefore": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "mouthAfter": [
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "expressionResponses": {
+          "happy": [
+            1,
+            0,
+            0
+          ],
+          "aa": [
+            0,
+            1,
+            0
+          ],
+          "blink": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "kit90FramePhysics": {
+        "version": 1,
+        "chains": 1,
+        "joints": 1,
+        "colliders": 0,
+        "chainResponses": [
+          {
+            "chain": "hair",
+            "maxPhysicsAngle": 1.2360521570692746
+          }
+        ],
+        "targets": [
+          {
+            "mesh": "HairMesh",
+            "maxPhysicsDisplacement": 0.23177100243859095
+          }
+        ],
+        "fixed": [],
+        "frames": 90,
+        "threshold": 9.46003957578991e-7
+      },
+      "commonPhysics": {
+        "airi": {
+          "frames": 90,
+          "maxVertexDisplacement": 0.11588149171171398,
+          "maxBoneAngle": 1.2360521570692757
+        },
+        "kit": {
+          "frames": 90,
+          "maxVertexDisplacement": 0.11588149171171394,
+          "maxBoneAngle": 1.2360521570692746
+        }
+      }
+    }
+  ],
+  "versions": {
+    "airiThree": "185",
+    "kitThree": "170",
+    "airiVRM": "3.5.5"
+  },
+  "negative": {
+    "externalURIRejected": true,
+    "requiredSpringMissingRejected": true
+  },
+  "networkDisabled": true,
+  "renderersGPUDevicesUsed": false,
+  "actualProductionAsset": false,
+  "limits": [
+    "same authored synthetic GLB, not output from Tripo/Blender Kit workflow",
+    "real AIRI loader+Kit PreviewAvatar with installed/vendored libraries; no browser/Electron GPU",
+    "expression manager influence proves morph driver only, not facial appearance",
+    "Kit 90 frame physics result/error recorded separately"
+  ]
+}

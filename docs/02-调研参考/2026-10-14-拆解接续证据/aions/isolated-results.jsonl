@@ -1,0 +1,4 @@
+{"check": "disabled_proactive_timer", "enabled_after_disable": false, "pending_after_disable": 1, "claim_succeeds_after_disable": true}
+{"check": "legacy_main_memory_source_scope", "private_connor_source_returned": true, "source_id": "chatroom:secret-connor"}
+{"check": "legacy_memory_delete_lineage", "deleted_parent_still_referenced": "[\"atom\"]", "orphan_batch_input_count": 1}
+{"check": "delete_during_compression_model_call", "compression_result_ok": true, "persisted_memories_after_deletion": [{"content": "deleted secret fact", "archive_state": "active", "source_memory_ids": "[\"delete-during-call\"]"}]}

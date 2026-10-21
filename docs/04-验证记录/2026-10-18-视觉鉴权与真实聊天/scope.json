@@ -1,0 +1,7 @@
+{
+  "goal": "Verify screen interpretation and correct chat answer",
+  "liveCallLimit": 4,
+  "testData": "Synthetic local window only",
+  "readRealKeysInTools": false,
+  "authorizedBy": "Current user request for real screen and chat verification"
+}

@@ -63,6 +63,8 @@ describe('vision orchestrator', () => {
     })
 
     expect(sendContextUpdate).toHaveBeenCalledTimes(2)
+    expect(sendContextUpdate.mock.calls[0]?.[0].content).toEqual([{ type: 'text', text: 'Frame summary' }])
+    expect(JSON.stringify(sendContextUpdate.mock.calls)).not.toContain('data:image/')
     expect(sendContextUpdate.mock.calls[0]?.[0]).toMatchObject({
       contextId: 'vision:screen:interpret:screen:0:0',
     })
@@ -104,5 +106,37 @@ describe('vision orchestrator', () => {
     })).rejects.toThrow('Vision inference failed')
 
     expect(store.lastError).toBe('Vision inference failed')
+  })
+
+  it('drops a late model result after its screen stream stops without publishing context', async () => {
+    const store = useVisionOrchestratorStore()
+    const response = Promise.withResolvers<string>()
+    runVisionInference.mockReturnValueOnce(response.promise)
+    const capture = new AbortController()
+    const result = store.processCapture({
+      imageDataUrl: 'data:image/jpeg;base64,synthetic',
+      workloadId: 'screen:interpret',
+      publishContext: true,
+      abortSignal: capture.signal,
+    })
+    const rejected = expect(result).rejects.toMatchObject({ name: 'AbortError' })
+    capture.abort(new DOMException('Source stopped', 'AbortError'))
+    response.resolve('Late frame summary')
+    await rejected
+    expect(sendContextUpdate).not.toHaveBeenCalled()
+    expect(store.lastResultText).toBe('')
+    expect(store.lastError).toBeNull()
+  })
+
+  it('does not start inference for a source that was already stopped', async () => {
+    const store = useVisionOrchestratorStore()
+    const capture = new AbortController()
+    capture.abort(new DOMException('Source stopped', 'AbortError'))
+    await expect(store.processCapture({
+      imageDataUrl: 'data:image/jpeg;base64,synthetic',
+      workloadId: 'screen:interpret',
+      abortSignal: capture.signal,
+    })).rejects.toMatchObject({ name: 'AbortError' })
+    expect(runVisionInference).not.toHaveBeenCalled()
   })
 })

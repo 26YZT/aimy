@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "beforePid": 12983,
+  "afterPid": 13561,
+  "configured": true,
+  "budgetUnchanged": true,
+  "requests": 0,
+  "debugPortEnabled": false,
+  "output": "/private/tmp/aimy-live-entry-20261016/qualification/setup-runs/setup-4c93ade4-6db3-45ea-bfad-3141d2a702c8",
+  "exit": {
+    "code": 0,
+    "signal": null
+  }
+}

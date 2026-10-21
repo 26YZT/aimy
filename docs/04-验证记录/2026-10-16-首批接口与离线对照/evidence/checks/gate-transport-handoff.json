@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-16",
+  "task": "EVAL-TRANSPORT",
+  "status": "targeted_implementation_complete",
+  "write_ownership": "released_to_root",
+  "files": [
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/transport-events.ts",
+      "sha256": "1e4a23e8cfbf6d078cf3d161c82d8766f7b19948b27d3d73924f1f0e132ea3a3"
+    },
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/baseline-transport.ts",
+      "sha256": "994d9dd361de795ed087f50feec58e8de3cee0b493805819cd8007244a2fff21"
+    },
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/baseline-renderer-fetch.ts",
+      "sha256": "8f6daf71417b2f5aec6ab1eb59562ad604335b6f81b8a62aab37d17b0eef33b8"
+    },
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/baseline-transport.test.ts",
+      "sha256": "a35846b81e8100698412dc9bcab92b3408e979ca1c67a3d5190e233396f0eeab"
+    }
+  ],
+  "exports": {
+    "transport_events": [
+      "baselineTransportStart",
+      "baselineTransportRead",
+      "baselineTransportCancel",
+      "BASELINE_CHUNK_BYTES",
+      "BASELINE_RESPONSE_BYTES"
+    ],
+    "host": "registerBaselineTransport({context: Electron main Eventa context,campaign,budget,providerDefinition,getRun:()=>BaselineRun,authorizeSender:(WebContents)=>boolean,prepareTransport:()=>Promise<AuthorizedFetch>}) -> {flush,dispose,summary,cancelAll}",
+    "run": "BaselineRun = {arm:airi,caseId,runId,epoch}",
+    "renderer": "createBaselineRendererFetch(Electron renderer Eventa context,getEpoch:()=>number): typeof fetch"
+  },
+  "guarantees": [
+    "All three handlers authorize the actual IPC sender and main frame. Each request is bound to that exact WebContents/frame and a fixed host run.",
+    "The host reads getRun before and after waits. The baseline adapter performs the last synchronous guard after durable budget reserve/started and before the authorized send.",
+    "Renderer headers, including Authorization, never enter the start event. No getKey method, server, profile read or credential store write exists in this transport.",
+    "Success/error Eventa returns contain only request ID, bounded status/code, normalized content type and bounded base64 response chunks. Native causes and provider headers are not returned.",
+    "A pre-cancelled request ID stays consumed. Client abort rejects before a pending start finishes. Its abort and failure paths send cancellation. Consumed IDs reject any delayed start.",
+    "Each active request has a 30-second idle/start limit and a 120-second total limit, plus a 50ms authority watchdog. Navigation/destroy events revoke immediately.",
+    "At most 8 active requests, 256 consumed IDs per host lifetime, 8MiB response bytes per request and 64KiB per returned chunk. Completed/cancelled IDs cannot be reused.",
+    "Only arm airi is accepted. Aimy continues its existing gate. Each baseline actual HTTP has one adapter/ledger attempt.",
+    "dispose unregisters only its three invoke handlers and cancels owned requests. Other app Eventa handlers stay available."
+  ],
+  "coverage": [
+    "First SSE chunk delivered before completion and settlement; key injected only in host closure is absent from both Eventa directions and ledger.",
+    "Epoch change during preparation has zero sends/reservations. Aimy arm rejected.",
+    "Pre-cancel before start and client abort while start waits have zero sends.",
+    "Sibling authorized sender cannot read/cancel another owner; subframes rejected.",
+    "Concurrent read rejected without consuming another chunk.",
+    "Reader cancellation aborts native HTTP and preserves unknown fee.",
+    "Native stream Error canary becomes bounded stream-failed and is absent from Eventa.",
+    "64KiB chunks and 8MiB cap; oversized body halts with unknown fee.",
+    "Main-frame navigation and destroyed sender revoke pending authorization.",
+    "Timeout clock fixture stops stalled preparation. Unrelated Eventa handler still works after dispose."
+  ],
+  "checks": [
+    {
+      "command": "vitest run --config /tmp/aimy-closure-20261016/gate/transport.vitest.config.mts",
+      "result": "13 tests passed / actual Eventa main+renderer adapters, native IPC boundary fixtures, native HTTP/SSE, real disk ledger",
+      "exit_code": 0,
+      "log": "transport-final-tests.log",
+      "log_sha256": "db034f13c21bed7922b330647fd906b3b790b27ce4d674d1e09f7136eb186311"
+    },
+    {
+      "command": "tsc --ignoreConfig --noEmit --strict --skipLibCheck --target ESNext --module ESNext --moduleResolution Bundler --lib ESNext,DOM,DOM.Iterable --types node,vitest <four transport files>",
+      "result": "passed",
+      "exit_code": 0,
+      "log": "transport-typecheck-final.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "eslint --fix <four owned transport files>",
+      "result": "passed / zero warnings",
+      "exit_code": 0,
+      "log": "transport-lint-final.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "root_integration": [
+    "Create host context with @moeru/eventa/adapters/electron/main createContext(ipcMain).context. Supply your exact registered baseline sender predicate.",
+    "Create renderer context with existing electron renderer Eventa adapter. Only the original baseline SDK fetch is replaced. Credentials stay inside host prepareTransport/send.",
+    "Before changing case/run/epoch: cancelAll, abort active renderer request, update host run and live renderer getEpoch value. Then drain flush under your finite outer deadline.",
+    "flush waits accepted starts and adapter accounting. Renderer driver must separately await response completion. Any flush error halts campaign advancement even if disk failure prevented persisting paused state.",
+    "Bridge tests use native IPC object fixtures, not a real Electron process. Root must run the actual preload/renderer driver/IPC build and process-lifecycle integration.",
+    "No extra browser test file added. Node native Request/Response/ReadableStream and HTTP run with real Eventa. No real model calls."
+  ],
+  "limits": {
+    "real_model_calls": 0,
+    "real_credentials_read": false,
+    "real_profiles_read": false,
+    "dependencies_installed": false,
+    "product_code_or_launcher_changed": false,
+    "http_server_in_transport": false,
+    "extra_files_outside_allowlist": false
+  }
+}

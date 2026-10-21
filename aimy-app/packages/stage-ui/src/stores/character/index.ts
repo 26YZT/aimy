@@ -42,6 +42,7 @@ export const useCharacterStore = defineStore('character', () => {
   const reactions = ref<CharacterSparkNotifyReaction[]>([])
   const streamingReactions = ref<Map<string, StreamingReactionState>>(new Map())
   const sessions = useChatSessionStore()
+  const followupSpeech = new Map<string, { speech: SpeechClient, cancelled: boolean }>()
 
   async function emitTextOutput(text: string) {
     const speech = new Speech({ sessionId: sessions.activeSessionId, turnId: nanoid() }, 'read-aloud')
@@ -126,6 +127,58 @@ export const useCharacterStore = defineStore('character', () => {
     }
   }
 
+  /** Keeps internal notification speech cancellable until the existing host drains playback. */
+  function deliverFollowup(eventId: string, text: string, isCurrent: () => boolean): boolean {
+    if (!isCurrent() || !text.trim() || followupSpeech.has(eventId))
+      return false
+    const speech = new Speech({ sessionId: sessions.activeSessionId, turnId: `followup:${eventId}` }, 'notification')
+    const owned = { speech, cancelled: false }
+    followupSpeech.set(eventId, owned)
+    const current = () => !owned.cancelled && isCurrent()
+    const parser = parserFactory({
+      onLiteral: async (literal) => {
+        if (current() && literal)
+          await speech.write(literal)
+      },
+      onSpecial: async (special) => {
+        if (current() && special)
+          await speech.special(special)
+      },
+    })
+    recordSparkNotifyReaction(eventId, text, { metadata: { source: 'companion-followup' } })
+    void (async () => {
+      try {
+        if (!current())
+          return
+        await parser.consume(text)
+        if (!current())
+          return
+        await parser.end()
+        if (!current())
+          return
+        await speech.end()
+        if (!current())
+          return
+        await speech.finish()
+      }
+      finally {
+        if (!current())
+          await speech.cancel('Followup no longer current').catch(() => {})
+        if (followupSpeech.get(eventId) === owned)
+          followupSpeech.delete(eventId)
+      }
+    })().catch(() => { void speech.cancel('Followup speech failed').catch(() => {}) })
+    return true
+  }
+
+  /** Revokes only internally scheduled followups, preserving ordinary external Spark speech. */
+  function cancelFollowups(reason: string) {
+    for (const owned of followupSpeech.values()) {
+      owned.cancelled = true
+      void owned.speech.cancel(reason).catch(() => {})
+    }
+  }
+
   function clearReactions() {
     reactions.value = []
   }
@@ -139,6 +192,8 @@ export const useCharacterStore = defineStore('character', () => {
     onSparkNotifyReactionStreamEvent,
     onSparkNotifyReactionStreamEnd,
     clearReactions,
+    deliverFollowup,
+    cancelFollowups,
 
     emitTextOutput,
   }

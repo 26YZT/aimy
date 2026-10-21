@@ -148,7 +148,8 @@ export function useVoiceComposer(options: UseVoiceComposerOptions) {
 
   function fail(cause: unknown, fallback: string) {
     active.value = undefined
-    options.onError(errorMessageFrom(cause) ?? fallback)
+    if (!(cause instanceof Error) || cause.name !== 'AbortError')
+      options.onError(errorMessageFrom(cause) ?? fallback)
   }
 
   /** Starts one recording. A second call while a recording is active does nothing. */
@@ -164,13 +165,30 @@ export function useVoiceComposer(options: UseVoiceComposerOptions) {
       const replyToMessageId = options.replyToMessageId?.()
       const tools = options.tools?.()
       await controls.messageCommand({ type: 'record', id, sessionId, ...(replyToMessageId ? { replyToMessageId } : {}), ...(tools ? { tools: [...tools] } : {}) })
-        .catch(cause => fail(cause, 'Could not start recording'))
+        .then((result) => {
+          if (result.status === 'closed' && active.value?.id === id) {
+            active.value = undefined
+            recorded.delete(id)
+          }
+        })
+        .catch((cause) => {
+          recorded.delete(id)
+          if (active.value?.id === id)
+            fail(cause, 'Could not start recording')
+        })
       return
     }
 
     active.value = { mode, id, finishing: false }
     await controls.command({ type: 'begin', requestId: id, sessionId, target: 'composer' })
-      .catch(cause => fail(cause, 'Could not start dictation'))
+      .then((result) => {
+        if (result.status === 'closed' && active.value?.id === id)
+          active.value = undefined
+      })
+      .catch((cause) => {
+        if (active.value?.id === id)
+          fail(cause, 'Could not start dictation')
+      })
   }
 
   /**

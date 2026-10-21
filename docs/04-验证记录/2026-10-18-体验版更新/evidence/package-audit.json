@@ -1,0 +1,34 @@
+{
+  "app": "/tmp/aimy-preview-package-20261018/output/mac-arm64/Aimy体验版.app",
+  "files": 47552,
+  "comparedBuildFiles": 1380,
+  "forbiddenFiles": [],
+  "features": {
+    "companion-settings": [
+      "/out/renderer/assets/components-BAiqz1Ky.js"
+    ],
+    "COMPANION_SETTINGS_NOT_READY": [
+      "/out/renderer/assets/components-BAiqz1Ky.js"
+    ],
+    "local:companion/followup/v1": [
+      "/out/renderer/assets/components-BAiqz1Ky.js"
+    ],
+    "local:companion/review/v1": [
+      "/out/renderer/assets/components-BAiqz1Ky.js"
+    ],
+    "unsupported-stream": [
+      "/out/renderer/assets/interaction-Trvf9z9a.js"
+    ],
+    "file-too-large": [
+      "/out/renderer/assets/emacs-lisp-Dv0hCzlu.js",
+      "/out/renderer/assets/interaction-Trvf9z9a.js",
+      "/out/renderer/assets/models-Dfrl-LLO.js"
+    ]
+  },
+  "main": "preview-entry.mjs",
+  "version": "0.12.0-beta.5+aimy.20261018.1",
+  "profileIsolated": true,
+  "updaterDisabled": true,
+  "asarSha256": "48bc90b5efd5a72aa1a7366945e0aa4ae7b1538ef325eddfbcf3e6f344f8c2d0",
+  "rendererMatchesBuild": true
+}

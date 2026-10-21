@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-14",
+  "scope": "功能增量裁决/证据/字节保护核验；不代表真实产品效果",
+  "active_projects": 5,
+  "audit_records": 55,
+  "eligible_records_not_functions": 8,
+  "merged_function_slices": 5,
+  "excluded_candidate_ids": [
+    "CH01",
+    "CH02"
+  ],
+  "old_audit_records_retained": 57,
+  "classification_counts": {
+    "AIRI已有或不更强": 11,
+    "新增能力候选": 7,
+    "工程参考": 12,
+    "条件收益实验": 4,
+    "条件功能候选": 1,
+    "生产侧待证": 2,
+    "后置待证": 7,
+    "不纳入本期": 11
+  },
+  "case_reference_check": "pass",
+  "memory_observations": {
+    "positive": 10,
+    "negative_blocked": 9,
+    "counterexample": 5
+  },
+  "ryza_observations": 17,
+  "airi_neighbor_comparisons": 3,
+  "olv_comparison_families": 4,
+  "real_models_or_devices": 0,
+  "source_versions": {
+    "backend": "992309c0aa19845960228f880013d4685fde93b5",
+    "backend_shallow": true,
+    "frontend_source": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "frontend_shallow": true,
+    "critical_files_identical": 8,
+    "reproducible_build_verified": false
+  },
+  "evidence_copy_files": 39,
+  "old_plan_copies": 3,
+  "navigation": {
+    "files": 28,
+    "local_links": 210,
+    "broken": []
+  },
+  "protected_product_files": 5336,
+  "changed_product": [],
+  "git_index_unchanged": true,
+  "original_recovery_report_files": 28,
+  "original_changed": [],
+  "core_plan": {
+    "requirements": 14,
+    "tasks": 15,
+    "local_apis": 17,
+    "prompt_hashes": "match"
+  }
+}

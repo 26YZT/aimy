@@ -1,0 +1,47 @@
+$ moeru-lint .
+packages/stage-ui/src/tools/web-search.ts:84:24: warning eslint(no-control-regex): Unexpected control characters help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+packages/stage-ui/src/stores/providers/provider.ts:516:31: warning unicorn(no-useless-spread): Using a spread operator here creates a new array unnecessarily. help: `for…of` can iterate over iterable, it's unnecessary to convert to an array.
+packages/stage-ui/src/stores/character/orchestrator/store.ts:331:34: warning eslint(no-unused-vars): Parameter '_' is declared but never used. help: Consider removing this parameter.
+packages/stage-ui/src/libs/zod/index.ts:16:17: warning eslint(no-unused-vars): Parameter '_' is declared but never used. help: Consider removing this parameter.
+packages/stage-ui/src/database/storage.ts:52:21: warning unicorn(no-new-array): Do not use `new Array(singleArgument)`. help: It's not clear whether the argument is meant to be the length of the array or the only element. If the argument is the array's length, consider using `Array.from({ length: n })`. If the argument is the only element, use `[element]`.
+integrations/discord-bot/src/bots/discord/commands/summon.ts:388:41: warning eslint(no-unused-vars): Parameter '_' is declared but never used. help: Consider removing this parameter.
+packages/stage-ui/src/services/companion/speech-transform.ts:130:60: warning eslint(no-control-regex): Unexpected control characters help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+packages/pipelines-audio/src/llm-streaming-control/controller.ts:191:30: warning unicorn(no-useless-spread): Using a spread operator here creates a new array unnecessarily. help: `for…of` can iterate over iterable, it's unnecessary to convert to an array.
+packages/stage-ui/src/services/memory-acceptance-diagnostics.ts:41:127: warning eslint(no-control-regex): Unexpected control characters help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+packages/pipelines-audio/src/managers/playback-manager.ts:73:29: warning unicorn(no-useless-spread): Using a spread operator here creates a new array unnecessarily. help: `for…of` can iterate over iterable, it's unnecessary to convert to an array.
+packages/pipelines-audio/src/managers/playback-manager.ts:380:26: warning unicorn(no-useless-spread): Using a spread operator here creates a new array unnecessarily. help: `for…of` can iterate over iterable, it's unnecessary to convert to an array.
+packages/pipelines-audio/src/managers/playback-manager.ts:394:26: warning unicorn(no-useless-spread): Using a spread operator here creates a new array unnecessarily. help: `for…of` can iterate over iterable, it's unnecessary to convert to an array.
+packages/pipelines-audio/src/managers/playback-manager.ts:407:24: warning unicorn(no-useless-spread): Using a spread operator here creates a new array unnecessarily. help: `for…of` can iterate over iterable, it's unnecessary to convert to an array.
+server/apps/api/src/services/domain/openai-speech/index.ts:206:12: warning eslint(no-useless-catch): Unnecessary catch clause help: Remove the catch clause, since it does not provide any additional error handling or functionality beyond what the finalizer already provides.
+
+Oops! Something went wrong! :(
+
+ESLint: 10.9.0
+
+Error: Cannot find module '@radix-ui/colors'
+Require stack:
+- /Users/mima1234/Documents/aimy/aimy-app/docs/uno.config.ts
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)
+    at require.resolve (node:internal/modules/helpers:175:31)
+    at jitiResolve (/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/jiti@2.7.0/node_modules/jiti/dist/jiti.cjs:1:176713)
+    at jitiRequire (/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/jiti@2.7.0/node_modules/jiti/dist/jiti.cjs:1:178658)
+    at import (/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/jiti@2.7.0/node_modules/jiti/dist/jiti.cjs:1:187724)
+    at /Users/mima1234/Documents/aimy/aimy-app/docs/uno.config.ts:4:21
+    at async Function.import (/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/jiti@2.7.0/node_modules/jiti/dist/jiti.cjs:1:187718)
+    at async async (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unconfig@7.5.0/node_modules/unconfig/dist/index.mjs:73:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async iterateAsync (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/quansync@1.0.0/node_modules/quansync/dist/src-C2Pm6gXo.js:58:28)
+    at async loadConfig (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/@unocss+config@66.7.5/node_modules/@unocss/config/dist/index.mjs:26:17)
+    at async _getGenerator (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/@unocss+eslint-plugin@66.7.5_@typescript-eslint+types@8.67.0_eslint@10.9.0_jiti@2.7.0_s_6960abcfd4729e0785b3074ff1db76aa/node_modules/@unocss/eslint-plugin/dist/worker.mjs:43:30)
+    at async getGenerator (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/@unocss+eslint-plugin@66.7.5_@typescript-eslint+types@8.67.0_eslint@10.9.0_jiti@2.7.0_s_6960abcfd4729e0785b3074ff1db76aa/node_modules/@unocss/eslint-plugin/dist/worker.mjs:62:9)
+    at async actionSort (file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/@unocss+eslint-plugin@66.7.5_@typescript-eslint+types@8.67.0_eslint@10.9.0_jiti@2.7.0_s_6960abcfd4729e0785b3074ff1db76aa/node_modules/@unocss/eslint-plugin/dist/worker.mjs:69:34)
+    at async file:///Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/synckit@0.11.13/node_modules/synckit/lib/index.js:47:44
+[ELIFECYCLE] Command failed with exit code 2.

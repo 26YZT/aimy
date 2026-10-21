@@ -1,0 +1,13 @@
+{
+  "createdAt": "2026-10-17T16:32:24.635082+00:00",
+  "authorization": "2026-10-18 user approved retained candidates and docs-first implementation",
+  "phase": "documents-written-before-product-edits",
+  "branch": "codex/aimy-first-increment",
+  "productChangesThisRound": false,
+  "docs": {
+    "来源与验收.md": "bb083648df2539d3fa7c90b9165aecd3ad7bfad00ab6f5c7c838c2474a81ed4a",
+    "README.md": "ed4f9fd5f33626055420cb5e6bad37c15d6f2c2c5cd9536c56432fdd38f8921c",
+    "功能文档.md": "f861a501627a5ba1f67c647589f38a3016f584ebf0f16cf89b7cfafa63f73cbc",
+    "技术文档.md": "df4c919d724a9ddf64efb4524395496f55c4227243dcf9c5c94f41c3c4dbd7b8"
+  }
+}

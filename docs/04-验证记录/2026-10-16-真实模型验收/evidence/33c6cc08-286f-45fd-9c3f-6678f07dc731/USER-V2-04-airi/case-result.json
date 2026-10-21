@@ -1,0 +1,56 @@
+{
+  "caseId": "USER-V2-04",
+  "arm": "airi",
+  "buildManifestSha256": "02b90b6285002673a48b926e423f82ab0474eb3e230e4e638e89901d3830665b",
+  "processes": [
+    {
+      "pid": 20965,
+      "processNumber": 1,
+      "runId": "53f34c66-0f53-471c-b917-d53624884bae-airi-USER-V2-04-p1",
+      "cdpPort": 57514,
+      "channelPort": 57512,
+      "modelPort": 57513,
+      "profile": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1/runs/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-04-airi/profile",
+      "entrySha256": "4438c97eebb2780077065d46f297ab4727a16a44b29112a50c76af4781f4ef9e",
+      "debugPortOwnerVerified": true,
+      "targetId": "8DA89D53250D704E4240B7B9AA60EDDB",
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      },
+      "accounting": {
+        "acceptedRequests": 3,
+        "settledAttempts": 3,
+        "authorizationRejected": 0,
+        "plaintextSyntheticCredentialInEvidence": false
+      }
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "USER-V2-04-T1",
+      "transition": "create_fresh_case_profile_and_session",
+      "sourceSha256": "68e2df6f66d2acc8397ec92daef017dd85c69585158b10d2fa1a9d68e02f6b72",
+      "elapsedMs": 3724,
+      "sessionId": "V7G3ycNWGoT_ahEvIUp_k",
+      "processNumber": 1
+    },
+    {
+      "stepId": "USER-V2-04-T2",
+      "transition": "continue_same_session",
+      "sourceSha256": "97a5e8d0d4750f1168585aabb1f34bf16d7ecf369807f9499ea669da10c6efef",
+      "elapsedMs": 3177,
+      "sessionId": "V7G3ycNWGoT_ahEvIUp_k",
+      "processNumber": 1
+    },
+    {
+      "stepId": "USER-V2-04-T3",
+      "transition": "continue_same_session",
+      "sourceSha256": "212092af799d16c16d53ec834fc629032127961cfa7ae91dcf8966e172499bd9",
+      "elapsedMs": 4359,
+      "sessionId": "V7G3ycNWGoT_ahEvIUp_k",
+      "processNumber": 1
+    }
+  ]
+}

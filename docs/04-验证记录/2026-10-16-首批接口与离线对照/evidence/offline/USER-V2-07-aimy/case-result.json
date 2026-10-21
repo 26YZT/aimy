@@ -1,0 +1,48 @@
+{
+  "caseId": "USER-V2-07",
+  "arm": "aimy",
+  "buildManifestSha256": "3a28171b631009cc97e60e64b61ab641b25be63f2aefd7c0333a9e616271db83",
+  "processes": [
+    {
+      "pid": 92765,
+      "processNumber": 1,
+      "runId": "ca0c386c-b945-4879-b44e-477a5ccc7006-aimy-USER-V2-07-p1",
+      "cdpPort": 52727,
+      "channelPort": 52725,
+      "modelPort": 52726,
+      "profile": "/private/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-aimy/profile",
+      "entrySha256": "c9ea941eba1934884693d2d1a9b729ac0dade5dea280101fba877c5364851981",
+      "debugPortOwnerVerified": true,
+      "targetId": "D6F23015591F74470C5A3D4A67D2A0A4",
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      },
+      "accounting": {
+        "acceptedRequests": 4,
+        "settledAttempts": 4,
+        "authorizationRejected": 0,
+        "plaintextSyntheticCredentialInEvidence": false
+      }
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "USER-V2-07-T1",
+      "transition": "create_fresh_case_profile_and_session",
+      "sourceSha256": "a2876649c4c185ffb02d32859a82f4746d820a99571a2bc0027ed6b6ef1788c1",
+      "elapsedMs": 325,
+      "sessionId": "hzBSqB6T7WD_Xod5avwpC",
+      "processNumber": 1
+    },
+    {
+      "stepId": "USER-V2-07-T2",
+      "transition": "create_new_empty_session_keep_same_profile_principal_character",
+      "sourceSha256": "0367bb42cf80917ea3b76aa8684fbb50e91450cba8951dbd72332497125a96fd",
+      "elapsedMs": 197,
+      "sessionId": "3Euf0NwvNxLKSKubS1CFD",
+      "processNumber": 1
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "task": "LIVE-ERROR",
+  "status": "complete",
+  "date": "2026-10-16",
+  "scope": [
+    "packages/core-agent/src/runtime/request-guard.ts",
+    "packages/core-agent/src/runtime/request-guard.test.ts"
+  ],
+  "changes": [
+    "Only attemptGate requests sanitize unsuccessful HTTP response bodies, headers, and statusText while preserving status.",
+    "Network errors and abort reasons are replaced with stable messages without causes.",
+    "Non-2xx and transport failures account unknown usage once. Accounting callback failure is not settled twice.",
+    "Successful response streaming and ordinary non-campaign behavior remain unchanged."
+  ],
+  "checks": {
+    "red": "8 failed / 17 passed before source fix",
+    "green": "25 passed",
+    "typecheck": "core-agent tsc --noEmit exit 0",
+    "lint": "targeted eslint exit 0",
+    "diffCheck": "exit 0"
+  },
+  "commands": [
+    "cd packages/core-agent && node ../../node_modules/vitest/vitest.mjs run --config vitest.config.ts src/runtime/request-guard.test.ts",
+    "cd packages/core-agent && node ../../node_modules/typescript/bin/tsc --noEmit",
+    "node node_modules/eslint/bin/eslint.js packages/core-agent/src/runtime/request-guard.ts packages/core-agent/src/runtime/request-guard.test.ts"
+  ],
+  "limitations": [
+    "Initial root Vitest command blocked by existing missing @vitejs/plugin-vue in an unrelated workspace. Targeted package configuration succeeded.",
+    "No real model or real credential. No product build in this bounded task.",
+    "Stage-ui and budget files were not changed."
+  ],
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-guard.ts",
+      "sha256": "24ce2b651932770d83edf367a0f35b85697856029e090ab18cdbf6204234678f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-guard.test.ts",
+      "sha256": "e37bd4e27a2dda004ea980eba805d61e285b21e053e901d0c9cda7ecefda3316"
+    }
+  ]
+}

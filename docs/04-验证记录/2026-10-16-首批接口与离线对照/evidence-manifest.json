@@ -1,0 +1,1165 @@
+{
+  "date": "2026-10-16",
+  "entries": [
+    {
+      "source": "/tmp/aimy-closure-20261016/dataset-tests-isolated.log",
+      "artifact": "evidence/checks/dataset-tests-isolated.log",
+      "bytes": 621,
+      "sha256": "4e80a5cd56b30312c1730efef648ad83ade343b26f0babfda079982472cfd941",
+      "compression": null,
+      "artifactSha256": "4e80a5cd56b30312c1730efef648ad83ade343b26f0babfda079982472cfd941"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/core-build.log",
+      "artifact": "evidence/checks/core-build.log",
+      "bytes": 864,
+      "sha256": "c7624c51906d9208e46526718a2780d2a082bf8c174795df444d6207a54eb481",
+      "compression": null,
+      "artifactSha256": "c7624c51906d9208e46526718a2780d2a082bf8c174795df444d6207a54eb481"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/core-request-tests-final.log",
+      "artifact": "evidence/checks/core-request-tests-final.log",
+      "bytes": 243,
+      "sha256": "053ecffdc783b8c861dd9ddd2c522926f6ff80a9fbd3ece9077ec080846597d7",
+      "compression": null,
+      "artifactSha256": "053ecffdc783b8c861dd9ddd2c522926f6ff80a9fbd3ece9077ec080846597d7"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/memory-node-final.log",
+      "artifact": "evidence/checks/memory-node-final.log",
+      "bytes": 1308,
+      "sha256": "7a272e8350323897acb86783bbff3b9e8f3477940286681bd610819a64d94b49",
+      "compression": null,
+      "artifactSha256": "7a272e8350323897acb86783bbff3b9e8f3477940286681bd610819a64d94b49"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/memory-browser-final.log",
+      "artifact": "evidence/checks/memory-browser-final.log",
+      "bytes": 3945,
+      "sha256": "1a806feb6007ea8d1de272973c0e43451466bf3bc96e8af81e42a18497d4f865",
+      "compression": null,
+      "artifactSha256": "1a806feb6007ea8d1de272973c0e43451466bf3bc96e8af81e42a18497d4f865"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/gate-tests-final.log",
+      "artifact": "evidence/checks/gate-tests-final.log",
+      "bytes": 628,
+      "sha256": "137a9b9d3184ee87f5e882b64fac84495c396b6951918d288516207cdff9ca0a",
+      "compression": null,
+      "artifactSha256": "137a9b9d3184ee87f5e882b64fac84495c396b6951918d288516207cdff9ca0a"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/network-native-http-red.log",
+      "artifact": "evidence/checks/network-native-http-red.log",
+      "bytes": 1179,
+      "sha256": "7f1f23a09420fc733066d74a4eeef2da83c1ffdd0492a46dc5464dd264b0c5f9",
+      "compression": null,
+      "artifactSha256": "7f1f23a09420fc733066d74a4eeef2da83c1ffdd0492a46dc5464dd264b0c5f9"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/network-native-http-green.log",
+      "artifact": "evidence/checks/network-native-http-green.log",
+      "bytes": 221,
+      "sha256": "efaff9e206871d71ee0d89ae7d4c291168c616c4715104bbcd4a507578fd1561",
+      "compression": null,
+      "artifactSha256": "efaff9e206871d71ee0d89ae7d4c291168c616c4715104bbcd4a507578fd1561"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/root-scoped-lint-final.log",
+      "artifact": "evidence/checks/root-scoped-lint-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/root-tools-types-latest.log",
+      "artifact": "evidence/checks/root-tools-types-latest.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/root-driver-types.log",
+      "artifact": "evidence/checks/root-driver-types.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/stage-ui-types-final.log",
+      "artifact": "evidence/checks/stage-ui-types-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/desktop-types-final.log",
+      "artifact": "evidence/checks/desktop-types-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/product-desktop-build.log",
+      "artifact": "evidence/checks/product-desktop-build.log",
+      "bytes": 129768,
+      "sha256": "487289a12f7f15d6814c3193ffcd328d598928c75a737d1ded966bae32269eb8",
+      "compression": null,
+      "artifactSha256": "487289a12f7f15d6814c3193ffcd328d598928c75a737d1ded966bae32269eb8"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/product-desktop-build.exit",
+      "artifact": "evidence/checks/product-desktop-build.exit",
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "compression": null,
+      "artifactSha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/production-no-test-hooks.json",
+      "artifact": "evidence/checks/production-no-test-hooks.json",
+      "bytes": 92,
+      "sha256": "555c89f21f798f62423d9035e2297810f4f924f54f297f4f51a7e879c82bfec8",
+      "compression": null,
+      "artifactSha256": "555c89f21f798f62423d9035e2297810f4f924f54f297f4f51a7e879c82bfec8"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/wire-audit.json",
+      "artifact": "evidence/checks/wire-audit.json",
+      "bytes": 3244,
+      "sha256": "4c49e7951e1139d9fd77af71b0f64861882142803c27ae77a262a8eff6704acb",
+      "compression": null,
+      "artifactSha256": "4c49e7951e1139d9fd77af71b0f64861882142803c27ae77a262a8eff6704acb"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/git-diff-check.log",
+      "artifact": "evidence/checks/git-diff-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/final-git.json",
+      "artifact": "evidence/checks/final-git.json",
+      "bytes": 129,
+      "sha256": "6df0093be12dee063ef11d0a5fa5bbb5c71e77c899641bf973b4f32ccfb77c07",
+      "compression": null,
+      "artifactSha256": "6df0093be12dee063ef11d0a5fa5bbb5c71e77c899641bf973b4f32ccfb77c07"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/start-snapshot.json",
+      "artifact": "evidence/checks/start-snapshot.json",
+      "bytes": 409,
+      "sha256": "001f8158bd6ca9598fa938a047f6e472a388a12e0aaa6472d0e2c27c1267b5fc",
+      "compression": null,
+      "artifactSha256": "001f8158bd6ca9598fa938a047f6e472a388a12e0aaa6472d0e2c27c1267b5fc"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/full-02.log",
+      "artifact": "evidence/checks/full-02.log",
+      "bytes": 3305,
+      "sha256": "84442e3629721ede41aacdf434224d3da01c6a51be6772c8973a4ac662805227",
+      "compression": null,
+      "artifactSha256": "84442e3629721ede41aacdf434224d3da01c6a51be6772c8973a4ac662805227"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/build/direct-bin-tests.log",
+      "artifact": "evidence/checks/build-direct-bin-tests.log",
+      "bytes": 224,
+      "sha256": "84e125dc192cf25732f53d1ad00a967bca67aa83b68bb88f12d2ce774942e8ae",
+      "compression": null,
+      "artifactSha256": "84e125dc192cf25732f53d1ad00a967bca67aa83b68bb88f12d2ce774942e8ae"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/build/direct-bin-lint.log",
+      "artifact": "evidence/checks/build-direct-bin-lint.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/build/direct-bin-types.log",
+      "artifact": "evidence/checks/build-direct-bin-types.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compression": null,
+      "artifactSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/gate/transport-handoff.json",
+      "artifact": "evidence/checks/gate-transport-handoff.json",
+      "bytes": 6382,
+      "sha256": "ac8f47892ec6cb9321cd80de7619caa102c90f092441200904bd6ecfdffbcc5d",
+      "compression": null,
+      "artifactSha256": "ac8f47892ec6cb9321cd80de7619caa102c90f092441200904bd6ecfdffbcc5d"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/api/implementation-report.json",
+      "artifact": "evidence/checks/api-implementation-report.json",
+      "bytes": 11424,
+      "sha256": "3c7389a55fee5356bde47bfad3b07f84fb4e82c7354d4f20ab2ff3a240208dd4",
+      "compression": null,
+      "artifactSha256": "3c7389a55fee5356bde47bfad3b07f84fb4e82c7354d4f20ab2ff3a240208dd4"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/diagnostics/implementation-report.json",
+      "artifact": "evidence/checks/diagnostics-implementation-report.json",
+      "bytes": 4466,
+      "sha256": "f5233164dc313995eb10eeaacd8a0b676a9e4ca296e1c7b4bb829837364299ab",
+      "compression": null,
+      "artifactSha256": "f5233164dc313995eb10eeaacd8a0b676a9e4ca296e1c7b4bb829837364299ab"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/builds/airi/build-logs/core-agent.log",
+      "artifact": "evidence/superseded/builds/airi/build-logs/core-agent.log",
+      "bytes": 8171,
+      "sha256": "d271785c2e1a74f274c073980cc852faa9abe549334c05b39cd4bc3d3f66a52c",
+      "compression": null,
+      "artifactSha256": "d271785c2e1a74f274c073980cc852faa9abe549334c05b39cd4bc3d3f66a52c"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/pilot-01/run-result.json",
+      "artifact": "evidence/superseded/v2/pilot-01/run-result.json",
+      "bytes": 290,
+      "sha256": "4aaed3df27a696302c935ab984de0c9426ff369314faedc71f63333bc36e47e7",
+      "compression": null,
+      "artifactSha256": "4aaed3df27a696302c935ab984de0c9426ff369314faedc71f63333bc36e47e7"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/pilot-01/failure-process-cleanup.json",
+      "artifact": "evidence/superseded/v2/pilot-01/failure-process-cleanup.json",
+      "bytes": 454,
+      "sha256": "793c14d4efda35ed47188b439eff081ab7402d1bd2667d0ea8ae0fc75a1f3487",
+      "compression": null,
+      "artifactSha256": "793c14d4efda35ed47188b439eff081ab7402d1bd2667d0ea8ae0fc75a1f3487"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-01/run-result.json",
+      "artifact": "evidence/superseded/v2/full-01/run-result.json",
+      "bytes": 30628,
+      "sha256": "46973d98b95da91410d67057510f4fe562b525f6872a46a70d4b1f282c1b19ce",
+      "compression": null,
+      "artifactSha256": "46973d98b95da91410d67057510f4fe562b525f6872a46a70d4b1f282c1b19ce"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-01/USER-V2-01-airi/process-1/app.log",
+      "artifact": "evidence/superseded/v2/full-01/USER-V2-01-airi/process-1/app.log",
+      "bytes": 18593,
+      "sha256": "1d5c0bc81a9a3d25d049169826e8b1bf0583b9bfafeab71450a3f17b51698264",
+      "compression": null,
+      "artifactSha256": "1d5c0bc81a9a3d25d049169826e8b1bf0583b9bfafeab71450a3f17b51698264"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/run-result.json",
+      "artifact": "evidence/offline/run-result.json",
+      "bytes": 30629,
+      "sha256": "6742713b2105e9bd73ea0ed5f2d126f628441376ef3eced19eca655421cb897d",
+      "compression": null,
+      "artifactSha256": "6742713b2105e9bd73ea0ed5f2d126f628441376ef3eced19eca655421cb897d"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/shared-ledger.json",
+      "artifact": "evidence/offline/shared-ledger.json",
+      "bytes": 42936,
+      "sha256": "4b4931d9f1e121098d7338f8e9af4a7ed1a08603b8701a5efa8db8c742662e16",
+      "compression": null,
+      "artifactSha256": "4b4931d9f1e121098d7338f8e9af4a7ed1a08603b8701a5efa8db8c742662e16"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-aimy/USER-V2-01-T2.json",
+      "artifact": "evidence/offline/USER-V2-01-aimy/USER-V2-01-T2.json",
+      "bytes": 14247,
+      "sha256": "b988d276b1bb8b9bb57eb650e42970f15cc3138912bdbb62c7448b6a5c278653",
+      "compression": null,
+      "artifactSha256": "b988d276b1bb8b9bb57eb650e42970f15cc3138912bdbb62c7448b6a5c278653"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-aimy/USER-V2-01-T1.json",
+      "artifact": "evidence/offline/USER-V2-01-aimy/USER-V2-01-T1.json",
+      "bytes": 9752,
+      "sha256": "8a20a7419b2dd9526935d2edc4e9d1b4b953f5e056304850d8f297358e3e50e7",
+      "compression": null,
+      "artifactSha256": "8a20a7419b2dd9526935d2edc4e9d1b4b953f5e056304850d8f297358e3e50e7"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-01-aimy/case-result.json",
+      "bytes": 1497,
+      "sha256": "5fc4daaf682ab7d5e043067716f2904721c198e5b7ea25cfa82e17b919befd41",
+      "compression": null,
+      "artifactSha256": "5fc4daaf682ab7d5e043067716f2904721c198e5b7ea25cfa82e17b919befd41"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-airi/USER-V2-03-T2.json",
+      "artifact": "evidence/offline/USER-V2-03-airi/USER-V2-03-T2.json",
+      "bytes": 7609,
+      "sha256": "b13442a7efbb1cdff1b97768bab88872d5ff8f8a0360d001122685bf7c8a007c",
+      "compression": null,
+      "artifactSha256": "b13442a7efbb1cdff1b97768bab88872d5ff8f8a0360d001122685bf7c8a007c"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-airi/USER-V2-03-T3.json",
+      "artifact": "evidence/offline/USER-V2-03-airi/USER-V2-03-T3.json",
+      "bytes": 9998,
+      "sha256": "8528ee476fd6c5c56b054e747a5971387e5ca18f50f5ca91121f7be6a8272361",
+      "compression": null,
+      "artifactSha256": "8528ee476fd6c5c56b054e747a5971387e5ca18f50f5ca91121f7be6a8272361"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-airi/USER-V2-03-T1.json",
+      "artifact": "evidence/offline/USER-V2-03-airi/USER-V2-03-T1.json",
+      "bytes": 5043,
+      "sha256": "15acf099af83e6503cd7325a8f89a162b53a3e1ac88e75ffa5730e943891e427",
+      "compression": null,
+      "artifactSha256": "15acf099af83e6503cd7325a8f89a162b53a3e1ac88e75ffa5730e943891e427"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-03-airi/case-result.json",
+      "bytes": 1770,
+      "sha256": "637a2d2838b12c5e02a92a5d27600f3a28e6b9267aa97c21e8de86dae8c8e843",
+      "compression": null,
+      "artifactSha256": "637a2d2838b12c5e02a92a5d27600f3a28e6b9267aa97c21e8de86dae8c8e843"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-airi/USER-V2-02-T2.json",
+      "artifact": "evidence/offline/USER-V2-02-airi/USER-V2-02-T2.json",
+      "bytes": 7539,
+      "sha256": "9b624cbbcd074ce2142e38c33be4c1b5f3c8fb96602c776ace538ec012b2bfe8",
+      "compression": null,
+      "artifactSha256": "9b624cbbcd074ce2142e38c33be4c1b5f3c8fb96602c776ace538ec012b2bfe8"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-airi/USER-V2-02-T1.json",
+      "artifact": "evidence/offline/USER-V2-02-airi/USER-V2-02-T1.json",
+      "bytes": 5066,
+      "sha256": "263f37cc253c399965025882458f34a4d88883bfe9d29033b9d3efa67fa3f625",
+      "compression": null,
+      "artifactSha256": "263f37cc253c399965025882458f34a4d88883bfe9d29033b9d3efa67fa3f625"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-02-airi/case-result.json",
+      "bytes": 1497,
+      "sha256": "0b940fc532460c9c31b0d0f9cf9b788d4bfed79e19a0c82b954da2a8a42c9ed1",
+      "compression": null,
+      "artifactSha256": "0b940fc532460c9c31b0d0f9cf9b788d4bfed79e19a0c82b954da2a8a42c9ed1"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-aimy/USER-V2-07-T1.json",
+      "artifact": "evidence/offline/USER-V2-07-aimy/USER-V2-07-T1.json",
+      "bytes": 10054,
+      "sha256": "45a7445b6eb41fb2bc0a5943b6eeb2ccb803dc678a09ef2eda4b9c625cfdabe5",
+      "compression": null,
+      "artifactSha256": "45a7445b6eb41fb2bc0a5943b6eeb2ccb803dc678a09ef2eda4b9c625cfdabe5"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-aimy/USER-V2-07-T2.json",
+      "artifact": "evidence/offline/USER-V2-07-aimy/USER-V2-07-T2.json",
+      "bytes": 11546,
+      "sha256": "a178efac3740f7d5b6994feb78b54ceb598ed8a6897a584e2151d1188ad0aa2c",
+      "compression": null,
+      "artifactSha256": "a178efac3740f7d5b6994feb78b54ceb598ed8a6897a584e2151d1188ad0aa2c"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-07-aimy/case-result.json",
+      "bytes": 1538,
+      "sha256": "d4d33cffa1e02050acd1d465cc28b7b4fe8e416e14185e33c51ee26f23f1492b",
+      "compression": null,
+      "artifactSha256": "d4d33cffa1e02050acd1d465cc28b7b4fe8e416e14185e33c51ee26f23f1492b"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/USER-V2-05-T1.json",
+      "artifact": "evidence/offline/USER-V2-05-airi/USER-V2-05-T1.json",
+      "bytes": 5163,
+      "sha256": "8172210f81a99c2060672d7c438ed93bc755576c63263d8ce4f775af9f5047d4",
+      "compression": null,
+      "artifactSha256": "8172210f81a99c2060672d7c438ed93bc755576c63263d8ce4f775af9f5047d4"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-05-airi/case-result.json",
+      "bytes": 2348,
+      "sha256": "e6ba6f294c9ebe0ffb1df1a61110ead99edffef48197618a142cbb4cc9e8a217",
+      "compression": null,
+      "artifactSha256": "e6ba6f294c9ebe0ffb1df1a61110ead99edffef48197618a142cbb4cc9e8a217"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/USER-V2-05-T2.json",
+      "artifact": "evidence/offline/USER-V2-05-airi/USER-V2-05-T2.json",
+      "bytes": 7603,
+      "sha256": "7603889143d2ff5c23da1a831a6892a2c08dbc66ab6f243cb67a8b0ea9051062",
+      "compression": null,
+      "artifactSha256": "7603889143d2ff5c23da1a831a6892a2c08dbc66ab6f243cb67a8b0ea9051062"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-airi/USER-V2-08-T2.json",
+      "artifact": "evidence/offline/USER-V2-08-airi/USER-V2-08-T2.json",
+      "bytes": 5025,
+      "sha256": "4dc3affacf484ce6115633501c22771dfe736a904a583f03f2105bed0d43f276",
+      "compression": null,
+      "artifactSha256": "4dc3affacf484ce6115633501c22771dfe736a904a583f03f2105bed0d43f276"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-08-airi/case-result.json",
+      "bytes": 1538,
+      "sha256": "7b4a73d2195ed3ace4dc037e59fc00b6d5b400c00e1f5a7875bef7bf2a65d9f3",
+      "compression": null,
+      "artifactSha256": "7b4a73d2195ed3ace4dc037e59fc00b6d5b400c00e1f5a7875bef7bf2a65d9f3"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-airi/USER-V2-08-T1.json",
+      "artifact": "evidence/offline/USER-V2-08-airi/USER-V2-08-T1.json",
+      "bytes": 5307,
+      "sha256": "127fd4231f42889948ad6e41d700b9469b451179646d03dfa31d26be44548469",
+      "compression": null,
+      "artifactSha256": "127fd4231f42889948ad6e41d700b9469b451179646d03dfa31d26be44548469"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-airi/USER-V2-04-T1.json",
+      "artifact": "evidence/offline/USER-V2-04-airi/USER-V2-04-T1.json",
+      "bytes": 4923,
+      "sha256": "fac969e41db1863487d2b8ce773e3d9aa70ab71e1dca72dc6789191fc938cdf8",
+      "compression": null,
+      "artifactSha256": "fac969e41db1863487d2b8ce773e3d9aa70ab71e1dca72dc6789191fc938cdf8"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-airi/USER-V2-04-T2.json",
+      "artifact": "evidence/offline/USER-V2-04-airi/USER-V2-04-T2.json",
+      "bytes": 7516,
+      "sha256": "7a29401f6117cba3159fce35df176134fce66ea5d29fac9415737095eda3966c",
+      "compression": null,
+      "artifactSha256": "7a29401f6117cba3159fce35df176134fce66ea5d29fac9415737095eda3966c"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-04-airi/case-result.json",
+      "bytes": 1770,
+      "sha256": "849aef5c28086bfe3eb288b9c9276cd263d82d8502cca2e0e0df4b48a8fccb03",
+      "compression": null,
+      "artifactSha256": "849aef5c28086bfe3eb288b9c9276cd263d82d8502cca2e0e0df4b48a8fccb03"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-airi/USER-V2-04-T3.json",
+      "artifact": "evidence/offline/USER-V2-04-airi/USER-V2-04-T3.json",
+      "bytes": 9854,
+      "sha256": "7c8973456e3fe33695d2b6d97e67535798a46e855a15095f08a53de13072f844",
+      "compression": null,
+      "artifactSha256": "7c8973456e3fe33695d2b6d97e67535798a46e855a15095f08a53de13072f844"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-aimy/USER-V2-06-T1.json",
+      "artifact": "evidence/offline/USER-V2-06-aimy/USER-V2-06-T1.json",
+      "bytes": 9676,
+      "sha256": "19562a0fdf1c5874d026d96d713294bc1d35a92b7a30ddb29b520ac9db71d745",
+      "compression": null,
+      "artifactSha256": "19562a0fdf1c5874d026d96d713294bc1d35a92b7a30ddb29b520ac9db71d745"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-aimy/USER-V2-06-T2.json",
+      "artifact": "evidence/offline/USER-V2-06-aimy/USER-V2-06-T2.json",
+      "bytes": 13979,
+      "sha256": "d6750295024a520368a5485f259e8bf3f09bd9fbe78fa3769dc155995cdc6027",
+      "compression": null,
+      "artifactSha256": "d6750295024a520368a5485f259e8bf3f09bd9fbe78fa3769dc155995cdc6027"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-06-aimy/case-result.json",
+      "bytes": 1497,
+      "sha256": "28669dc62e5c71b6003be2faf020324136c5135ad8e8629ccedeb185c4d97225",
+      "compression": null,
+      "artifactSha256": "28669dc62e5c71b6003be2faf020324136c5135ad8e8629ccedeb185c4d97225"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-airi/USER-V2-07-T1.json",
+      "artifact": "evidence/offline/USER-V2-07-airi/USER-V2-07-T1.json",
+      "bytes": 5358,
+      "sha256": "cea6141b143d1715c09ddaa25aece728867bdcc3e016b975f69edc15444b6a27",
+      "compression": null,
+      "artifactSha256": "cea6141b143d1715c09ddaa25aece728867bdcc3e016b975f69edc15444b6a27"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-airi/USER-V2-07-T2.json",
+      "artifact": "evidence/offline/USER-V2-07-airi/USER-V2-07-T2.json",
+      "bytes": 4935,
+      "sha256": "fd50ab70bc2a959d2b5238adfe7319d64bc764906d184242ccc115ce20a918ef",
+      "compression": null,
+      "artifactSha256": "fd50ab70bc2a959d2b5238adfe7319d64bc764906d184242ccc115ce20a918ef"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-07-airi/case-result.json",
+      "bytes": 1537,
+      "sha256": "5c1200a74002ca0cac95f11274b2b5404b1ef61602ae85f7d7503433c27fcb8f",
+      "compression": null,
+      "artifactSha256": "5c1200a74002ca0cac95f11274b2b5404b1ef61602ae85f7d7503433c27fcb8f"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/USER-V2-05-T1.json",
+      "artifact": "evidence/offline/USER-V2-05-aimy/USER-V2-05-T1.json",
+      "bytes": 9664,
+      "sha256": "34cd3eafafaee52b18507fa3698602e7ab8f6db3c55202907068f32466b93a15",
+      "compression": null,
+      "artifactSha256": "34cd3eafafaee52b18507fa3698602e7ab8f6db3c55202907068f32466b93a15"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-05-aimy/case-result.json",
+      "bytes": 2348,
+      "sha256": "7545addc662c999efdffc21350998f4cbec392c5f5daf9aa0e16548c405f4f49",
+      "compression": null,
+      "artifactSha256": "7545addc662c999efdffc21350998f4cbec392c5f5daf9aa0e16548c405f4f49"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/USER-V2-05-T2.json",
+      "artifact": "evidence/offline/USER-V2-05-aimy/USER-V2-05-T2.json",
+      "bytes": 14039,
+      "sha256": "35fa42b213c6937a362fbbbdf63ced57c51b91f206c833e84bacb57939120c66",
+      "compression": null,
+      "artifactSha256": "35fa42b213c6937a362fbbbdf63ced57c51b91f206c833e84bacb57939120c66"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-aimy/USER-V2-08-T2.json",
+      "artifact": "evidence/offline/USER-V2-08-aimy/USER-V2-08-T2.json",
+      "bytes": 11675,
+      "sha256": "d0e5d242d083f93a2929650a36e43b916ec15d747c29fbb6d0b1367e123d7786",
+      "compression": null,
+      "artifactSha256": "d0e5d242d083f93a2929650a36e43b916ec15d747c29fbb6d0b1367e123d7786"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-08-aimy/case-result.json",
+      "bytes": 1538,
+      "sha256": "f0908d286b719572c3ac6aff71467509889a0441a33a62c6b0e6a599af325820",
+      "compression": null,
+      "artifactSha256": "f0908d286b719572c3ac6aff71467509889a0441a33a62c6b0e6a599af325820"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-aimy/USER-V2-08-T1.json",
+      "artifact": "evidence/offline/USER-V2-08-aimy/USER-V2-08-T1.json",
+      "bytes": 9952,
+      "sha256": "59972b8de78fea640cae147ff404329cd9bd280a9fbd10415c838de6c997c9d9",
+      "compression": null,
+      "artifactSha256": "59972b8de78fea640cae147ff404329cd9bd280a9fbd10415c838de6c997c9d9"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-aimy/USER-V2-04-T1.json",
+      "artifact": "evidence/offline/USER-V2-04-aimy/USER-V2-04-T1.json",
+      "bytes": 9184,
+      "sha256": "9066ad56c2b69c17d13dc82c0936cd1bac3d7f39833ecfaf7d6ae31545d95403",
+      "compression": null,
+      "artifactSha256": "9066ad56c2b69c17d13dc82c0936cd1bac3d7f39833ecfaf7d6ae31545d95403"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-aimy/USER-V2-04-T2.json",
+      "artifact": "evidence/offline/USER-V2-04-aimy/USER-V2-04-T2.json",
+      "bytes": 13865,
+      "sha256": "31b9e983d4924be589df0662b7cf100a3880b3c0a91c9a1193ec4572aaf64c9b",
+      "compression": null,
+      "artifactSha256": "31b9e983d4924be589df0662b7cf100a3880b3c0a91c9a1193ec4572aaf64c9b"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-04-aimy/case-result.json",
+      "bytes": 1771,
+      "sha256": "64dcac003a62853acb005b9ae1cec6a2ffd716484ac65b72b489f269b3367528",
+      "compression": null,
+      "artifactSha256": "64dcac003a62853acb005b9ae1cec6a2ffd716484ac65b72b489f269b3367528"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-aimy/USER-V2-04-T3.json",
+      "artifact": "evidence/offline/USER-V2-04-aimy/USER-V2-04-T3.json",
+      "bytes": 18036,
+      "sha256": "98383814c9f1d08e1925feb25e32e43350b5f931ca22f2d95e718b98dd7ee4df",
+      "compression": null,
+      "artifactSha256": "98383814c9f1d08e1925feb25e32e43350b5f931ca22f2d95e718b98dd7ee4df"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-airi/USER-V2-06-T1.json",
+      "artifact": "evidence/offline/USER-V2-06-airi/USER-V2-06-T1.json",
+      "bytes": 5169,
+      "sha256": "e3cd680d3b52d6dd0a350e5a667c358cdc910ac7f1c4d9507e677113c10abf17",
+      "compression": null,
+      "artifactSha256": "e3cd680d3b52d6dd0a350e5a667c358cdc910ac7f1c4d9507e677113c10abf17"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-airi/USER-V2-06-T2.json",
+      "artifact": "evidence/offline/USER-V2-06-airi/USER-V2-06-T2.json",
+      "bytes": 7573,
+      "sha256": "f6d2acf6f21dc300be34a1bbc6f40e8c71c5277d49160749358d61648048f932",
+      "compression": null,
+      "artifactSha256": "f6d2acf6f21dc300be34a1bbc6f40e8c71c5277d49160749358d61648048f932"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-06-airi/case-result.json",
+      "bytes": 1497,
+      "sha256": "5fec82be9ae09ad42f4f88bcf5f7f04f1e8f888213966c76bf36f7aaeaaf6453",
+      "compression": null,
+      "artifactSha256": "5fec82be9ae09ad42f4f88bcf5f7f04f1e8f888213966c76bf36f7aaeaaf6453"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-airi/USER-V2-01-T2.json",
+      "artifact": "evidence/offline/USER-V2-01-airi/USER-V2-01-T2.json",
+      "bytes": 7707,
+      "sha256": "3759cc5de8d7b67a25c24186d0f0aed6b0f33255a9e590987e0a0b0cdf867184",
+      "compression": null,
+      "artifactSha256": "3759cc5de8d7b67a25c24186d0f0aed6b0f33255a9e590987e0a0b0cdf867184"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-airi/USER-V2-01-T1.json",
+      "artifact": "evidence/offline/USER-V2-01-airi/USER-V2-01-T1.json",
+      "bytes": 5207,
+      "sha256": "2296981eccb178844a4a080a9f5f3382cb9c8cd9f93b61d7694617a70a4a320f",
+      "compression": null,
+      "artifactSha256": "2296981eccb178844a4a080a9f5f3382cb9c8cd9f93b61d7694617a70a4a320f"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-airi/case-result.json",
+      "artifact": "evidence/offline/USER-V2-01-airi/case-result.json",
+      "bytes": 1496,
+      "sha256": "ef4dd73d063fcac9831ccb984f803744d8eab5ae3d55c01d2fdbca3c54bf377a",
+      "compression": null,
+      "artifactSha256": "ef4dd73d063fcac9831ccb984f803744d8eab5ae3d55c01d2fdbca3c54bf377a"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-aimy/USER-V2-03-T2.json",
+      "artifact": "evidence/offline/USER-V2-03-aimy/USER-V2-03-T2.json",
+      "bytes": 14051,
+      "sha256": "a8b9827bf2af70aef21aae5db4d4cdac57aeab666eb15fe7757d79242d3c113c",
+      "compression": null,
+      "artifactSha256": "a8b9827bf2af70aef21aae5db4d4cdac57aeab666eb15fe7757d79242d3c113c"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-aimy/USER-V2-03-T3.json",
+      "artifact": "evidence/offline/USER-V2-03-aimy/USER-V2-03-T3.json",
+      "bytes": 18324,
+      "sha256": "e142cd9446dffd6ecd652df2444dd24ae089400501db52a76c756fa7a81831ac",
+      "compression": null,
+      "artifactSha256": "e142cd9446dffd6ecd652df2444dd24ae089400501db52a76c756fa7a81831ac"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-aimy/USER-V2-03-T1.json",
+      "artifact": "evidence/offline/USER-V2-03-aimy/USER-V2-03-T1.json",
+      "bytes": 9424,
+      "sha256": "c99e295a841016884dd0ea7408bc29b510ca8a68f0e70302a4532d905736ff18",
+      "compression": null,
+      "artifactSha256": "c99e295a841016884dd0ea7408bc29b510ca8a68f0e70302a4532d905736ff18"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-03-aimy/case-result.json",
+      "bytes": 1771,
+      "sha256": "9eb5acfd0bb75a7ac3010e435688ad969118bc4281106edf8a648dd8eb904719",
+      "compression": null,
+      "artifactSha256": "9eb5acfd0bb75a7ac3010e435688ad969118bc4281106edf8a648dd8eb904719"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-aimy/USER-V2-02-T2.json",
+      "artifact": "evidence/offline/USER-V2-02-aimy/USER-V2-02-T2.json",
+      "bytes": 13913,
+      "sha256": "de41037e9483b1f165229fde5edeb9e34f9fdfbca0cdcc330daa3d0229f16e70",
+      "compression": null,
+      "artifactSha256": "de41037e9483b1f165229fde5edeb9e34f9fdfbca0cdcc330daa3d0229f16e70"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-aimy/USER-V2-02-T1.json",
+      "artifact": "evidence/offline/USER-V2-02-aimy/USER-V2-02-T1.json",
+      "bytes": 9472,
+      "sha256": "fb429c961a0666e8fc56a1569cd7f967fa8b2a1ffe5529669480ba30574add53",
+      "compression": null,
+      "artifactSha256": "fb429c961a0666e8fc56a1569cd7f967fa8b2a1ffe5529669480ba30574add53"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-aimy/case-result.json",
+      "artifact": "evidence/offline/USER-V2-02-aimy/case-result.json",
+      "bytes": 1497,
+      "sha256": "1614f9c0d1a97723eb3a23eedeacf737e7b0f03e7ec7f46973f85a3e4d6801f6",
+      "compression": null,
+      "artifactSha256": "1614f9c0d1a97723eb3a23eedeacf737e7b0f03e7ec7f46973f85a3e4d6801f6"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-01-aimy/process-1/requests.jsonl",
+      "bytes": 19584,
+      "sha256": "4efb9015b8d7fc60889aac6c543b8ae192d741eed96759bb70ff2f3dcbaf8076",
+      "compression": null,
+      "artifactSha256": "4efb9015b8d7fc60889aac6c543b8ae192d741eed96759bb70ff2f3dcbaf8076"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-01-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "29940eb86385313856746426b8d44f5982505cc4a4326258b960a205ae632fa3",
+      "compression": null,
+      "artifactSha256": "29940eb86385313856746426b8d44f5982505cc4a4326258b960a205ae632fa3"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-01-aimy/process-1/app.log",
+      "bytes": 18095,
+      "sha256": "ea4386d32839a6eba4bdcef3b760e92c1e041d5842ef961c27dae290b68619b1",
+      "compression": null,
+      "artifactSha256": "ea4386d32839a6eba4bdcef3b760e92c1e041d5842ef961c27dae290b68619b1"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-03-airi/process-1/requests.jsonl",
+      "bytes": 14478,
+      "sha256": "3fe831005e8aa678752a9f587a77145ce2320c452b46524520736865618d4e25",
+      "compression": null,
+      "artifactSha256": "3fe831005e8aa678752a9f587a77145ce2320c452b46524520736865618d4e25"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-03-airi/process-1/host-final.json",
+      "bytes": 273,
+      "sha256": "0df49fcc190bcddc39869468dc133b7622cb97098b74767cdb4b15911a1f07d2",
+      "compression": null,
+      "artifactSha256": "0df49fcc190bcddc39869468dc133b7622cb97098b74767cdb4b15911a1f07d2"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-03-airi/process-1/app.log",
+      "bytes": 17884,
+      "sha256": "8ace964b6a2c5d726f28194d3452d14cdbaec141038e1be76b397afd2bed5dbb",
+      "compression": null,
+      "artifactSha256": "8ace964b6a2c5d726f28194d3452d14cdbaec141038e1be76b397afd2bed5dbb"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-02-airi/process-1/requests.jsonl",
+      "bytes": 9149,
+      "sha256": "1bf9cc16e05396c3b0638ed020a0da333b55b68d0b607136716b31b3362fc718",
+      "compression": null,
+      "artifactSha256": "1bf9cc16e05396c3b0638ed020a0da333b55b68d0b607136716b31b3362fc718"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-02-airi/process-1/host-final.json",
+      "bytes": 272,
+      "sha256": "5f29a1a3274671ed966da4d1ba94707a68e6fbc76d522f499dc64700a7149d84",
+      "compression": null,
+      "artifactSha256": "5f29a1a3274671ed966da4d1ba94707a68e6fbc76d522f499dc64700a7149d84"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-02-airi/process-1/app.log",
+      "bytes": 17882,
+      "sha256": "edc5626ca8d76ba122c302074bf8b5e5078af80dce08c6f571dbd97ac42c011f",
+      "compression": null,
+      "artifactSha256": "edc5626ca8d76ba122c302074bf8b5e5078af80dce08c6f571dbd97ac42c011f"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-07-aimy/process-1/requests.jsonl",
+      "bytes": 19191,
+      "sha256": "31edf512905194ef848538f8569963c5c31ef86fbcd481f3de8265b4b9867dbc",
+      "compression": null,
+      "artifactSha256": "31edf512905194ef848538f8569963c5c31ef86fbcd481f3de8265b4b9867dbc"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-07-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "345a239ce7ad6e1a133e4be1e6e4659d95df5db7a305fb0a6d21065bfd55f9cb",
+      "compression": null,
+      "artifactSha256": "345a239ce7ad6e1a133e4be1e6e4659d95df5db7a305fb0a6d21065bfd55f9cb"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-07-aimy/process-1/app.log",
+      "bytes": 18367,
+      "sha256": "59ce916e854152a208413fa4be5e07aef76c155fe714e42ac9bc69f6000eaf24",
+      "compression": null,
+      "artifactSha256": "59ce916e854152a208413fa4be5e07aef76c155fe714e42ac9bc69f6000eaf24"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/process-2/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-05-airi/process-2/requests.jsonl",
+      "bytes": 4879,
+      "sha256": "4a4c1b0b3b3b48c64e4ff42655e8bb3a60ced5a39983715c056097941e929d20",
+      "compression": null,
+      "artifactSha256": "4a4c1b0b3b3b48c64e4ff42655e8bb3a60ced5a39983715c056097941e929d20"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/process-2/host-final.json",
+      "artifact": "evidence/offline/USER-V2-05-airi/process-2/host-final.json",
+      "bytes": 272,
+      "sha256": "4ea8c22927770b4009df290942c15d9b737ec29847635c0aa9fd21dc3ec15672",
+      "compression": null,
+      "artifactSha256": "4ea8c22927770b4009df290942c15d9b737ec29847635c0aa9fd21dc3ec15672"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/process-2/app.log",
+      "artifact": "evidence/offline/USER-V2-05-airi/process-2/app.log",
+      "bytes": 18159,
+      "sha256": "c3944698a09a2d0079f656370150dcc2ef41b70ec687fc5151f468531a826b6f",
+      "compression": null,
+      "artifactSha256": "c3944698a09a2d0079f656370150dcc2ef41b70ec687fc5151f468531a826b6f"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-05-airi/process-1/requests.jsonl",
+      "bytes": 4429,
+      "sha256": "c528696a747b7aa9180b01df1908699f9dde11b15e70cd083f899b1c2e113d23",
+      "compression": null,
+      "artifactSha256": "c528696a747b7aa9180b01df1908699f9dde11b15e70cd083f899b1c2e113d23"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-05-airi/process-1/host-final.json",
+      "bytes": 272,
+      "sha256": "effe0c760b087750ea6fae81b904d8a335ca7e333dc38c2310e4fac798cb6e18",
+      "compression": null,
+      "artifactSha256": "effe0c760b087750ea6fae81b904d8a335ca7e333dc38c2310e4fac798cb6e18"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-05-airi/process-1/app.log",
+      "bytes": 17887,
+      "sha256": "31d120791a2472a89f41d229ec5550e4c42395dbfc9df47ea5f42c22057071f5",
+      "compression": null,
+      "artifactSha256": "31d120791a2472a89f41d229ec5550e4c42395dbfc9df47ea5f42c22057071f5"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-08-airi/process-1/requests.jsonl",
+      "bytes": 8864,
+      "sha256": "f3c23f46b3eda268fd02467b4d8691fdf872129955dff357902f1139879ba49f",
+      "compression": null,
+      "artifactSha256": "f3c23f46b3eda268fd02467b4d8691fdf872129955dff357902f1139879ba49f"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-08-airi/process-1/host-final.json",
+      "bytes": 272,
+      "sha256": "3c62f24b56d34f8d0f17dfed69cee24b7748fcf1cb2873dfa654c7b0e864da13",
+      "compression": null,
+      "artifactSha256": "3c62f24b56d34f8d0f17dfed69cee24b7748fcf1cb2873dfa654c7b0e864da13"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-08-airi/process-1/app.log",
+      "bytes": 18151,
+      "sha256": "9f386e4c8bffc0a0a97095416f798e73431681a6bfc3396dda8dd11775102665",
+      "compression": null,
+      "artifactSha256": "9f386e4c8bffc0a0a97095416f798e73431681a6bfc3396dda8dd11775102665"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-04-airi/process-1/requests.jsonl",
+      "bytes": 14121,
+      "sha256": "614dcd87550ff9f6f4d01eb6bbad93552d73883844952044fb63722e5050fb03",
+      "compression": null,
+      "artifactSha256": "614dcd87550ff9f6f4d01eb6bbad93552d73883844952044fb63722e5050fb03"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-04-airi/process-1/host-final.json",
+      "bytes": 273,
+      "sha256": "b018218e5a88b0a05d32f2838fddd132049c213c8313730ca5347e99bc3a2f55",
+      "compression": null,
+      "artifactSha256": "b018218e5a88b0a05d32f2838fddd132049c213c8313730ca5347e99bc3a2f55"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-04-airi/process-1/app.log",
+      "bytes": 17885,
+      "sha256": "7da752376e5e046d68933bd83f3b799addde3cdcb90d7e67c8787f93654f6232",
+      "compression": null,
+      "artifactSha256": "7da752376e5e046d68933bd83f3b799addde3cdcb90d7e67c8787f93654f6232"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-06-aimy/process-1/requests.jsonl",
+      "bytes": 19236,
+      "sha256": "1e14344431a4a7609502f1802c07b25c42103164f06f1c121515a2a8d884719b",
+      "compression": null,
+      "artifactSha256": "1e14344431a4a7609502f1802c07b25c42103164f06f1c121515a2a8d884719b"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-06-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "e15d47c4a0d48265e85b182ccdfd30e0cb821458287439823541fe94e07f9068",
+      "compression": null,
+      "artifactSha256": "e15d47c4a0d48265e85b182ccdfd30e0cb821458287439823541fe94e07f9068"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-06-aimy/process-1/app.log",
+      "bytes": 18100,
+      "sha256": "51d14dd6d464c6aeaf94aac9326df8e316cb1394f443690f8057296d5c758c9a",
+      "compression": null,
+      "artifactSha256": "51d14dd6d464c6aeaf94aac9326df8e316cb1394f443690f8057296d5c758c9a"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-07-airi/process-1/requests.jsonl",
+      "bytes": 8825,
+      "sha256": "da0bfb8d9755515e11a2f73e40a257bebc7275b3a79932264a389b1e244b4d47",
+      "compression": null,
+      "artifactSha256": "da0bfb8d9755515e11a2f73e40a257bebc7275b3a79932264a389b1e244b4d47"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-07-airi/process-1/host-final.json",
+      "bytes": 272,
+      "sha256": "406836c8b048f85175988ebf257ba8e580fa3f2dd4d6a0b89638ac8c58912c6e",
+      "compression": null,
+      "artifactSha256": "406836c8b048f85175988ebf257ba8e580fa3f2dd4d6a0b89638ac8c58912c6e"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-07-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-07-airi/process-1/app.log",
+      "bytes": 17886,
+      "sha256": "ac3ea055d1a4b5f9bb39d5f5880e7188bc60e95fc44f7005cac5a650839dc2fc",
+      "compression": null,
+      "artifactSha256": "ac3ea055d1a4b5f9bb39d5f5880e7188bc60e95fc44f7005cac5a650839dc2fc"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/process-2/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-05-aimy/process-2/requests.jsonl",
+      "bytes": 10070,
+      "sha256": "038fb3c11629091b7617132b3a2e223870e5f8204bafef3d7d91edd10bd576b2",
+      "compression": null,
+      "artifactSha256": "038fb3c11629091b7617132b3a2e223870e5f8204bafef3d7d91edd10bd576b2"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/process-2/host-final.json",
+      "artifact": "evidence/offline/USER-V2-05-aimy/process-2/host-final.json",
+      "bytes": 159,
+      "sha256": "da503452e9011471df61179cbab28a32972886c5473fa2e816cf5e33c2b9c316",
+      "compression": null,
+      "artifactSha256": "da503452e9011471df61179cbab28a32972886c5473fa2e816cf5e33c2b9c316"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/process-2/app.log",
+      "artifact": "evidence/offline/USER-V2-05-aimy/process-2/app.log",
+      "bytes": 18098,
+      "sha256": "1fe5fc95f1c80a431fdf1b9b48659b30a35a5d961ce42e44171d81dfeab10b12",
+      "compression": null,
+      "artifactSha256": "1fe5fc95f1c80a431fdf1b9b48659b30a35a5d961ce42e44171d81dfeab10b12"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-05-aimy/process-1/requests.jsonl",
+      "bytes": 9214,
+      "sha256": "e8f5bb32f6445b964716539148796ea1b825c64fc1d45bd2e4b93c1e907d0afe",
+      "compression": null,
+      "artifactSha256": "e8f5bb32f6445b964716539148796ea1b825c64fc1d45bd2e4b93c1e907d0afe"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-05-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "d948ea7af752b69154877a32784d8a750f23e9ac32c465029bf39d0306123da1",
+      "compression": null,
+      "artifactSha256": "d948ea7af752b69154877a32784d8a750f23e9ac32c465029bf39d0306123da1"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-05-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-05-aimy/process-1/app.log",
+      "bytes": 18102,
+      "sha256": "402fdb298b17b9ead2356dcedd1f5a376d18479c1ebf713db764e845cb9bcba3",
+      "compression": null,
+      "artifactSha256": "402fdb298b17b9ead2356dcedd1f5a376d18479c1ebf713db764e845cb9bcba3"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-08-aimy/process-1/requests.jsonl",
+      "bytes": 19218,
+      "sha256": "1d7ec7bbdbbf550163d6e8cb346819b331e00cbadfbf158179469d85bbcbbb34",
+      "compression": null,
+      "artifactSha256": "1d7ec7bbdbbf550163d6e8cb346819b331e00cbadfbf158179469d85bbcbbb34"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-08-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "fb9d491f6bdc7e7e4b1ad26695e3df6ac5e835ef15582310be4368b651d074ca",
+      "compression": null,
+      "artifactSha256": "fb9d491f6bdc7e7e4b1ad26695e3df6ac5e835ef15582310be4368b651d074ca"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-08-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-08-aimy/process-1/app.log",
+      "bytes": 18367,
+      "sha256": "7b3300d668359add7c1fcc3d06515983710e6499dff94d2035488cb7df51cb34",
+      "compression": null,
+      "artifactSha256": "7b3300d668359add7c1fcc3d06515983710e6499dff94d2035488cb7df51cb34"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-04-aimy/process-1/requests.jsonl",
+      "bytes": 29179,
+      "sha256": "4fb5dc0c17a51542b0bf7d300a5f359a20a2ec1f56e3e96d50a3750150673e7a",
+      "compression": null,
+      "artifactSha256": "4fb5dc0c17a51542b0bf7d300a5f359a20a2ec1f56e3e96d50a3750150673e7a"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-04-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "b932237f08e8d6c1dec2e439c6b4505a92d1fa469783142f1569db5335a78ce4",
+      "compression": null,
+      "artifactSha256": "b932237f08e8d6c1dec2e439c6b4505a92d1fa469783142f1569db5335a78ce4"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-04-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-04-aimy/process-1/app.log",
+      "bytes": 18095,
+      "sha256": "0ebefe2ccdc242d57e2533214011fa0ec1af9189eb15f8a367f3e9bdcd1c80d2",
+      "compression": null,
+      "artifactSha256": "0ebefe2ccdc242d57e2533214011fa0ec1af9189eb15f8a367f3e9bdcd1c80d2"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-06-airi/process-1/requests.jsonl",
+      "bytes": 9284,
+      "sha256": "f098bc652d99c26aef854267cb2fcfa294b30f2ee27d8a902b1b8480f58cc484",
+      "compression": null,
+      "artifactSha256": "f098bc652d99c26aef854267cb2fcfa294b30f2ee27d8a902b1b8480f58cc484"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-06-airi/process-1/host-final.json",
+      "bytes": 272,
+      "sha256": "4bfd5f474ad174a38e89716ee425372ecfb4d766d21f589a6af0c0950fc1c14d",
+      "compression": null,
+      "artifactSha256": "4bfd5f474ad174a38e89716ee425372ecfb4d766d21f589a6af0c0950fc1c14d"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-06-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-06-airi/process-1/app.log",
+      "bytes": 17882,
+      "sha256": "b923e919829830087de4a13309b8d2ad7c48d03a5d4c7020cedd3aa4fe6382ec",
+      "compression": null,
+      "artifactSha256": "b923e919829830087de4a13309b8d2ad7c48d03a5d4c7020cedd3aa4fe6382ec"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-airi/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-01-airi/process-1/requests.jsonl",
+      "bytes": 9458,
+      "sha256": "1899eca3f4e7b0882915c2c567eaca2b4b5d84f4f7165b497546c3546a0e6ab9",
+      "compression": null,
+      "artifactSha256": "1899eca3f4e7b0882915c2c567eaca2b4b5d84f4f7165b497546c3546a0e6ab9"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-airi/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-01-airi/process-1/host-final.json",
+      "bytes": 272,
+      "sha256": "e367cefb254beb3b744d5bc37ee999da3ce3024a58eead517c4d02c485a5890b",
+      "compression": null,
+      "artifactSha256": "e367cefb254beb3b744d5bc37ee999da3ce3024a58eead517c4d02c485a5890b"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-01-airi/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-01-airi/process-1/app.log",
+      "bytes": 17883,
+      "sha256": "5ce26fce34da2eee20e3f218244e563f563de08c07d2bac41e7dc1f11b6daa21",
+      "compression": null,
+      "artifactSha256": "5ce26fce34da2eee20e3f218244e563f563de08c07d2bac41e7dc1f11b6daa21"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-03-aimy/process-1/requests.jsonl",
+      "bytes": 29893,
+      "sha256": "7375f73602e1656f516764ac86a40497b990f1b538182c1294d8c545638e62d1",
+      "compression": null,
+      "artifactSha256": "7375f73602e1656f516764ac86a40497b990f1b538182c1294d8c545638e62d1"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-03-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "d2381840156654017dbd105f42f9e9bd7515cd546e3e6d2bd460f985cef8cc13",
+      "compression": null,
+      "artifactSha256": "d2381840156654017dbd105f42f9e9bd7515cd546e3e6d2bd460f985cef8cc13"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-03-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-03-aimy/process-1/app.log",
+      "bytes": 18098,
+      "sha256": "3420275c513782279fd59d030c80583868deffe56f67cbeb473e519c9569cea2",
+      "compression": null,
+      "artifactSha256": "3420275c513782279fd59d030c80583868deffe56f67cbeb473e519c9569cea2"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-aimy/process-1/requests.jsonl",
+      "artifact": "evidence/offline/USER-V2-02-aimy/process-1/requests.jsonl",
+      "bytes": 18966,
+      "sha256": "2717cef99a03e4b500422e89072e752b5991043ade8f0115bde1c53307faca2d",
+      "compression": null,
+      "artifactSha256": "2717cef99a03e4b500422e89072e752b5991043ade8f0115bde1c53307faca2d"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-aimy/process-1/host-final.json",
+      "artifact": "evidence/offline/USER-V2-02-aimy/process-1/host-final.json",
+      "bytes": 159,
+      "sha256": "a507d4eb6faa21aa848cbf22ede4487896568d53ddcdcdd139ff48ccffbf740c",
+      "compression": null,
+      "artifactSha256": "a507d4eb6faa21aa848cbf22ede4487896568d53ddcdcdd139ff48ccffbf740c"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/full-02/USER-V2-02-aimy/process-1/app.log",
+      "artifact": "evidence/offline/USER-V2-02-aimy/process-1/app.log",
+      "bytes": 18100,
+      "sha256": "526f8531cb0171b89f663b949197d70f578cd44ad1e98a92e4095ee08a21336c",
+      "compression": null,
+      "artifactSha256": "526f8531cb0171b89f663b949197d70f578cd44ad1e98a92e4095ee08a21336c"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/tool-bundles.json",
+      "artifact": "evidence/tool-bundles.json",
+      "bytes": 2819,
+      "sha256": "a52779f0256b9197473c9ef7f54170c65d03e2e0cae4fad32c4414bcbcfee5dc",
+      "compression": null,
+      "artifactSha256": "a52779f0256b9197473c9ef7f54170c65d03e2e0cae4fad32c4414bcbcfee5dc"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/builds/airi/prepare-manifest.json",
+      "artifact": "evidence/builds/airi/prepare-manifest.json.gz",
+      "bytes": 73845012,
+      "sha256": "2a5fe4dcbd73d7efefa5996b66a40e181de7ad969f3d60655db293b7e3d46a8b",
+      "compression": "gzip-original-bytes",
+      "artifactSha256": "87a14a65d34bd38063f6aa1980f1b44a0888b6cfd89e5efb36abda7230dc060b"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/builds/airi/build-manifest.json",
+      "artifact": "evidence/builds/airi/build-manifest.json.gz",
+      "bytes": 110994410,
+      "sha256": "097806d5507556f6632bc14d43d8ff9e022d697516cb8edd81d79f25c5d09c15",
+      "compression": "gzip-original-bytes",
+      "artifactSha256": "ddfaeef41c5f5e15b76ccd1503036c2f80e761ca20a1bff1f9b285d239f58c31"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/builds/aimy/prepare-manifest.json",
+      "artifact": "evidence/builds/aimy/prepare-manifest.json.gz",
+      "bytes": 73918760,
+      "sha256": "3e19e4d26c4f74f8de7ff94947bb3c501ca0be278a24338db769b7c9b4537fe0",
+      "compression": "gzip-original-bytes",
+      "artifactSha256": "bb48782e43dcf7067c8c633ac11a54868da97cfde21b5b20f9556dcca8e55a6e"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/v2/builds/aimy/build-manifest.json",
+      "artifact": "evidence/builds/aimy/build-manifest.json.gz",
+      "bytes": 111103517,
+      "sha256": "3a28171b631009cc97e60e64b61ab641b25be63f2aefd7c0333a9e616271db83",
+      "compression": "gzip-original-bytes",
+      "artifactSha256": "016beb81c2c7ae185416036aefd1a33ca5d6e8c1da267aab55b3ee45699459f8"
+    }
+  ]
+}

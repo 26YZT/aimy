@@ -1,0 +1,151 @@
+// Design reference only. No runtime or persistence.
+export const aimyTokens = {
+  "meta": {
+    "name": "Aimy · Quiet Rose / 静玫",
+    "version": "2.0.0-proposal",
+    "date": "2026-10-12",
+    "status": "design_reference_only",
+    "skillSource": "https://www.lovart.art/skills/pnVBXKl81a",
+    "skillReadScope": "public description and sample videos; full skill instructions not available"
+  },
+  "theme": {
+    "light": {
+      "canvas": "#F6F5F7",
+      "surface": "#FFFFFF",
+      "surfaceSubtle": "#F5F3F6",
+      "surfaceRaised": "#FFFFFF",
+      "text": "#26232A",
+      "textSecondary": "#69636E",
+      "textTertiary": "#716A78",
+      "border": "#E4E0E7",
+      "controlBorder": "#8E8396",
+      "action": "#2F2933",
+      "actionHover": "#49414E",
+      "actionPressed": "#1E1922",
+      "onAction": "#FFFFFF",
+      "accent": "#96415D",
+      "accentHover": "#7E334D",
+      "accentPressed": "#66253D",
+      "accentSoft": "#F6EAF0",
+      "onAccent": "#FFFFFF",
+      "focus": "#96415D",
+      "success": "#35634E",
+      "successSoft": "#EBF3EF",
+      "warning": "#805C23",
+      "warningSoft": "#FBF2E1",
+      "danger": "#A53546",
+      "dangerSoft": "#FBEDEF",
+      "disabled": "#EBE7EE",
+      "onDisabled": "#887D91",
+      "onDanger": "#FFFFFF"
+    },
+    "dark": {
+      "canvas": "#19181D",
+      "surface": "#222026",
+      "surfaceSubtle": "#2B2830",
+      "surfaceRaised": "#343039",
+      "text": "#F4F0F6",
+      "textSecondary": "#BAB1C3",
+      "textTertiary": "#ADA0B9",
+      "border": "#403A47",
+      "controlBorder": "#8D7E9B",
+      "action": "#EDE6F2",
+      "actionHover": "#FFFFFF",
+      "actionPressed": "#D4C7DF",
+      "onAction": "#2B2332",
+      "accent": "#E3A4BB",
+      "accentHover": "#F2BCD0",
+      "accentPressed": "#D48AA7",
+      "accentSoft": "#3C2A36",
+      "onAccent": "#2A1822",
+      "focus": "#E3A4BB",
+      "success": "#A4CCB9",
+      "successSoft": "#24372E",
+      "warning": "#E3C38D",
+      "warningSoft": "#3B3123",
+      "danger": "#F4A5B2",
+      "dangerSoft": "#432B34",
+      "disabled": "#3C3444",
+      "onDisabled": "#A89AB4",
+      "onDanger": "#2A1822"
+    }
+  },
+  "type": {
+    "sans": "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+    "mono": "\"SFMono-Regular\", Menlo, Consolas, monospace",
+    "scale": {
+      "caption": 12,
+      "label": 13,
+      "body": 14,
+      "message": 15,
+      "subheading": 18,
+      "heading": 24,
+      "page": 36
+    },
+    "lineHeight": {
+      "compact": 1.3,
+      "body": 1.6,
+      "message": 1.8
+    },
+    "weight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600
+    }
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    64
+  ],
+  "radius": {
+    "small": 6,
+    "control": 8,
+    "message": 14,
+    "window": 16,
+    "pill": 999
+  },
+  "motion": {
+    "fast": 120,
+    "standard": 160,
+    "enter": 220,
+    "easing": "cubic-bezier(.2,.8,.2,1)",
+    "reducedMotion": "disable transforms, animation, and smooth scrolling"
+  },
+  "layout": {
+    "chat": {
+      "preferredWidth": 520,
+      "minWidth": 360,
+      "padding": 24,
+      "messageMaxWidth": "86%"
+    },
+    "settings": {
+      "preferredWidth": 920,
+      "sidebar": 196,
+      "contentMaxWidth": 640
+    },
+    "controls": {
+      "button": 36,
+      "input": 40,
+      "iconHit": 36,
+      "coarseHit": 44,
+      "iconSize": 18,
+      "stroke": 1.65
+    },
+    "gallerySidebar": 208
+  },
+  "elevation": {
+    "windowLight": "0 18px 48px #261D3210, 0 2px 8px #261D3208",
+    "windowDark": "0 18px 48px #00000025",
+    "popover": "0 8px 28px #261D321A"
+  }
+} as const;
+
+export type AimyTheme = keyof typeof aimyTokens.theme;

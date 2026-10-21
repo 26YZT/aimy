@@ -1,0 +1,935 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "productRoot": "/Users/mima1234/Documents/aimy/aimy-app",
+  "managementDocsRoot": "/Users/mima1234/Documents/aimy/docs",
+  "authorization": {
+    "planning_and_docs": true,
+    "product_code_changes": false,
+    "dependency_install_or_upgrade": false,
+    "user_data_migration_or_deletion": false,
+    "real_model_or_device_tests": false,
+    "git_stage_commit_push": false,
+    "publishing": false
+  },
+  "existing_confirmed_goals": [
+    {
+      "id": "KNOWN-01",
+      "goal": "AIRI完整桌面成为唯一产品主工程",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-02",
+      "goal": "记忆自动保存，无需逐条确认，相关时主动想起",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-03",
+      "goal": "低费用观察为间隔看一眼",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-04",
+      "goal": "收起聊天后主要角色仍可见",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-05",
+      "goal": "macOS、本地优先、一个主要角色、无摄像头、BYOK、自用/少量邀请",
+      "status": "沿用当前产品底线"
+    }
+  ],
+  "first_release_review": {
+    "functional_slices": [
+      "MEM-F01",
+      "MEM-F02"
+    ],
+    "normal_chat_recall_task": "MEM-03",
+    "background_proactive_task": "PRO-01（后批）",
+    "task_ids": [
+      "BASE-01",
+      "LIFE-01",
+      "LOCAL-01",
+      "SRC-01",
+      "MEM-01",
+      "MEM-02",
+      "MEM-03",
+      "INT-01",
+      "EXP-01"
+    ],
+    "conditional_integrations": [
+      "PRO-01",
+      "VIS-02",
+      "CHAR-01"
+    ],
+    "field_policy": "这些是首批候选工单与建议依赖，不是执行完成或全部方案已确认"
+  },
+  "status": "已做定向开工评估：首批方向可支撑分阶段开发，建议基础收尾起步；记忆主功能实施契约尚需收口。本轮仍无实施授权或产品改动。",
+  "review_mode": "item_by_item",
+  "calendar_plan_withdrawn": true,
+  "correction_source": "用户明确更正：不是一天一天，而是一条一条提供选项确认；按天规划可不考虑",
+  "decisions": [
+    {
+      "id": "ITEM-01",
+      "date": "2026-10-14",
+      "topic": "首批增量范围",
+      "status": "confirmed_scope_only",
+      "options": [
+        {
+          "id": "A",
+          "label": "先做自动记忆、查看/更正/删除、相关召回；后台主动续聊放下一批",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "首批同时纳入记忆、相关召回和后台主动续聊，按依赖顺序分步开发",
+          "recommended": false
+        }
+      ],
+      "selected": "A",
+      "answer_text": "A．先做自动记忆、查看/更正/删除、相关召回；后台主动续聊放下一批（推荐）",
+      "confirmation_source": "本轮用户对选择工具的明确答复",
+      "confirmed_features": [
+        "共同前置：品牌收尾、本地数据和退出/取消保护",
+        "自动记忆",
+        "查看/更正/删除",
+        "相关召回与正常对话中引用"
+      ],
+      "deferred_from_first_release": [
+        "后台主动续聊"
+      ],
+      "not_confirmed_by_this_answer": [
+        "具体记忆类型",
+        "启用前历史补记",
+        "同时删除来源消息",
+        "UI设计稿/正式角色/音色",
+        "模型/预算/质量线",
+        "全部数据schema/API参数",
+        "代码实施/升级/迁移/真实测试/发布"
+      ],
+      "item": 1,
+      "original_question": "第1天先确认首批增量范围。品牌收尾、本地数据和退出/取消保护是共同前置；本轮仍只审方案、不改代码。你希望首批做到哪一步？",
+      "question": "首批增量范围做到哪一步？",
+      "review_mode": "item_by_item",
+      "date_is_confirmation_date_not_schedule": true
+    },
+    {
+      "id": "ITEM-02",
+      "item": 2,
+      "date": "2026-10-14",
+      "topic": "自动记忆内容",
+      "status": "confirmed_scope_only",
+      "question": "第2项：首批让 Aimy 自动记住哪些内容？这里说的是以后聊天能用上的信息，不是把每句话都记成长期记忆。",
+      "options": [
+        {
+          "id": "A",
+          "label": "称呼、偏好、边界，加重要近期事项和共同经历，例如面试、计划和聊过的重要事情",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "先只记称呼、偏好和边界；近期事项、共同经历以后再加",
+          "recommended": false
+        }
+      ],
+      "selected": "A",
+      "answer_text": "A．称呼、偏好、边界，加重要近期事项和共同经历，例如面试、计划和聊过的重要事情（推荐）",
+      "confirmation_source": "本轮用户对选择工具的明确答复",
+      "limits": "重要且有依据，不把每句话、角色猜测或引用别人的话当用户事实；具体时效/语义质量不因本项全部冻结"
+    },
+    {
+      "id": "ITEM-03",
+      "item": 3,
+      "date": "2026-10-14",
+      "topic": "记忆起点",
+      "status": "confirmed_scope_only",
+      "question": "第3项：记忆功能启用后，从哪些聊天开始整理长期记忆？",
+      "options": [
+        {
+          "id": "A",
+          "label": "只处理启用后的新聊天；已有聊天保留，但不自动批量补记",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "增加手动补记入口，由我挑选已有AIRI聊天整理；旧Aimy数据不参与",
+          "recommended": false
+        }
+      ],
+      "selected": "A",
+      "answer_text": "A．只处理启用后的新聊天；已有聊天保留，但不自动批量补记（推荐）",
+      "confirmation_source": "本轮用户对选择工具的明确答复",
+      "limits": "恢复启用期间已持久但漏入队的新消息仍属可靠自动记忆，不等于回放启用前历史；暂停再开不补暂停期间内容的细则仍待后续必要时确认"
+    },
+    {
+      "id": "ITEM-04",
+      "item": 4,
+      "date": "2026-10-14",
+      "topic": "手动忘记/删来源交互",
+      "status": "withdrawn_after_user_clarification",
+      "selected": null,
+      "original_question": "第4项：点“忘记这条”时，要不要同时提供删除相关聊天原文的选项？两种方案都要阻止已删内容被后台重新记回来。",
+      "response_text": "什么叫做点“忘记这条”时？不提供这类用户输入，取决于产品本身的记忆设计",
+      "confirmation_source": "本轮用户自由文本澄清",
+      "resolution": "撤回A/B题；日常记忆不依赖专门记住/忘记输入或手动管理按钮，由产品自动记忆设计管理；不解释为已选择任何扩大聊天删除模式"
+    },
+    {
+      "id": "ITEM-05",
+      "item": 5,
+      "date": "2026-10-14",
+      "asked_on": "2026-10-14",
+      "topic": "正常聊天的相处风格",
+      "status": "confirmed_preference",
+      "selected": "A",
+      "question": "第5项：正常聊天时，你希望 Aimy 更接近哪种相处风格？这会影响她的语气和回应方式。",
+      "options": [
+        {
+          "id": "A",
+          "label": "温柔自然、有主见，能安慰，也能开玩笑和适度拌嘴",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "理性平等，重分析和讨论，少用情绪化安慰",
+          "recommended": false
+        },
+        {
+          "id": "C",
+          "label": "活泼直接，爱接梗和开玩笑，聊天更有热闹感",
+          "recommended": false
+        }
+      ],
+      "answer_text": "选A，温柔自然、有主见，能安慰，也能开玩笑和适度拌嘴。",
+      "confirmation_source": "本轮用户普通文本明确选择"
+    },
+    {
+      "id": "ITEM-06",
+      "item": 6,
+      "date": "2026-10-14",
+      "asked_on": "2026-10-14",
+      "topic": "初次使用的可选自我介绍",
+      "status": "confirmed_preference",
+      "selected": "A",
+      "question": "第6项：第一次使用时，要不要提供一段可跳过的“先认识你”？只问称呼、兴趣和聊天偏好，平时的记忆仍自动处理。",
+      "options": [
+        {
+          "id": "A",
+          "label": "提供几道简短选择／填写，可全部跳过；回答作为初始档案，后续聊天再更新",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "直接开始聊天，不设初始填写环节，边聊边认识",
+          "recommended": false
+        }
+      ],
+      "answer_text": "选A，首次使用提供几道可跳过的选择和填写，作为初始档案，后续从聊天中自动更新。继续下一条确认。",
+      "confirmation_source": "本轮用户普通文本明确选择",
+      "implementation_design_pending": "已确认可跳过的初始化功能范围；具体字段/UI、来源类型/回执、版本与SRC/MEM适配仍待设计。初始化是新的本人输入，不伪造聊天消息、不自动回放旧历史。"
+    },
+    {
+      "id": "ITEM-07",
+      "item": 7,
+      "date": "2026-10-14",
+      "asked_on": "2026-10-14",
+      "topic": "正常聊天的记忆引用表达",
+      "status": "confirmed_preference",
+      "selected": "A",
+      "question": "第7项：正常聊天聊到相关话题、用到以前的记忆时，你希望 Aimy 怎么表达？",
+      "options": [
+        {
+          "id": "A",
+          "label": "自然接话，像熟悉你的朋友；必要时才说“你上次提过……”",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "跨会话提起旧事时，主动说“你之前提过……”；让我更清楚她记住了什么",
+          "recommended": false
+        }
+      ],
+      "shared_constraints": "只在正常聊天且话题相关时引用；不确定先核对，不编造过去，不把表达选择扩成后台主动续聊授权。",
+      "answer_text": "选A，像熟悉你的朋友一样自然接话，必要时才说“你上次提过”。继续必要的确认",
+      "confirmation_source": "本轮用户普通文本明确选择"
+    },
+    {
+      "id": "ITEM-08",
+      "item": 8,
+      "date": "2026-10-14",
+      "asked_on": "2026-10-14",
+      "topic": "首批文字聊天与记忆整理的模型运行位置",
+      "status": "confirmed_data_boundary",
+      "selected": "A",
+      "question": "第8项：首批文字聊天和记忆整理，模型在哪里运行？记忆保存在本机，但使用云端模型时，必要的聊天内容和相关记忆仍会发给该模型。这次只定方案，不调用模型。",
+      "options": [
+        {
+          "id": "A",
+          "label": "允许使用用户配置的云端模型，按需发送必要内容；数据在本机保存，不额外同步到 Aimy 云端",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "这两项都必须使用本机模型；先确认电脑性能，再验证本地模型效果",
+          "recommended": false
+        }
+      ],
+      "limits": "仅确认首批文字聊天与记忆处理的模型运行位置/数据传输边界；不视为批准真实调用、安装、读取密钥、同步历史、迁移数据、确定具体模型或费用；语音/看屏不据此宣称完全离线。",
+      "answer_text": "选A，允许使用用户配置的云端模型，数据本地保存，不额外同步到Aimy云端。继续下一项必要的确认。",
+      "confirmation_source": "本轮用户普通文本明确选择"
+    },
+    {
+      "id": "ITEM-09",
+      "item": 9,
+      "date": "2026-10-14",
+      "asked_on": "2026-10-14",
+      "topic": "聊天与记忆整理是否分别选模型",
+      "status": "confirmed_design_direction",
+      "selected": "B",
+      "question": "第9项：首批是否需要把“聊天模型”和“记忆整理模型”分开选择？共用模型的设置更简单；分开选择可以分别考虑聊天效果和整理成本，但需要多一套配置与验证。",
+      "options": [
+        {
+          "id": "A",
+          "label": "先共用一个用户配置的文字模型，分别完成聊天和记忆整理",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "首批就允许分别选模型，聊天用一个，记忆整理用另一个",
+          "recommended": false
+        }
+      ],
+      "limits": "只选择首批配置范围；共用模型不等于同一次请求或没有记忆整理调用成本；分开配置也不保证更便宜或质量更高。具体型号、费用与真实调用仍未确定；继续沿AIRI的Provider，不引入第二套模型运行时。",
+      "latest_user_response": "先看看拆解的产品是怎么做的，我再决定",
+      "source_review": {
+        "date": "2026-10-14",
+        "report": "docs/02-调研参考/2026-10-14-聊天与记忆模型分工对照.md",
+        "evidence_directory": "docs/02-调研参考/2026-10-14-聊天与记忆模型分工-证据",
+        "source_summary": "AionsHome混合分工；Ryza共用同一llm配置但另发请求；OLV默认history/外部Letta；Kirara按步骤选模型但默认memory为消息存取",
+        "offline_dispatch_checks_passed": 15,
+        "real_model_calls": 0,
+        "original_recommendation": "A：先共用一个模型",
+        "recommendation_after_source_review": "原B的细化：默认跟随聊天模型，允许需要时单独指定记忆模型；不强制两模型/两套密钥",
+        "recommendation_is_not_user_choice": false,
+        "quality_cost_comparison": "未验证分模型更准、更省或更快",
+        "airi_follow_up": {
+          "question": "airi自己是怎么做的？",
+          "summary": "普通桌面聊天用所选聊天模型；默认主线未接好个人长期事实整理。compaction为纯规则/可选同步formatter，默认仅计数；notebook内存条目与computer-use任务记忆分别限定范围，无内建独立记忆模型调用。",
+          "report_section": "5. AIRI自己怎样做：默认桌面主线与旁支分开看",
+          "additional_dynamic_tests": 0,
+          "real_model_calls": 0
+        },
+        "user_adopted_recommendation_on": "2026-10-14"
+      },
+      "answer_text": "好的，默认跟随聊天模型，需要时允许单独指定记忆整理模型，这样怎么样？是否记忆效果比现在的airi要好？",
+      "confirmation_source": "本轮用户普通文本采用默认跟随/可选覆盖方案，并询问预期记忆效果",
+      "selected_variant": "default_follow_chat_with_optional_memory_model_override",
+      "clarified_scope": "默认跟随当前作用域的聊天模型；允许用户需要时单独指定记忆整理模型。不要求初次配置两个模型，不强制不同型号/供应商/第二套密钥；只确认方案方向，未授权实施或真实调用。",
+      "explicit_reconfirmation": {
+        "date": "2026-10-14",
+        "text": "好的，就按默认跟随聊天模型、需要时可单独指定记忆整理模型的方案。继续下一项必要的确认，一条一条提供选项，用大白话讲清楚，先不要改产品代码。",
+        "scope": "再次明确采用既定方案，不扩大为产品代码或真实调用授权"
+      }
+    },
+    {
+      "id": "ITEM-10",
+      "item": 10,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-14",
+      "topic": "初次相处的关系起点",
+      "status": "confirmed_preference",
+      "selected": "B",
+      "question": "第10项：Aimy 刚认识用户时，以什么关系相处？性格已确定为温柔自然、有主见；这里确认的是称呼、亲近程度和玩笑分寸。",
+      "options": [
+        {
+          "id": "A",
+          "label": "先像亲切、有分寸的朋友，相处中自然变亲近",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "一开始就以亲密伴侣相处，称呼和表达更亲近",
+          "recommended": false
+        },
+        {
+          "id": "C",
+          "label": "首次使用让用户选择朋友或亲密伴侣；可跳过，跳过先按朋友相处",
+          "recommended": false
+        }
+      ],
+      "scope_limits": "只确认初次相处方式，不重新询问第5项性格或第7项自然引用；不默认增加好感值、等级、关系阶段经济、背景故事、资产或音色。不伪造共同经历；沿用用户边界与既有未成年人基础保护。若选C，初始化需要增加可跳过的关系偏好，但具体UI/字段与实现仍须补设计。",
+      "answer_text": "b",
+      "confirmation_source": "本轮用户普通文本选择第10项B"
+    },
+    {
+      "id": "ITEM-11",
+      "item": 11,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-15",
+      "topic": "首批验收范围",
+      "question": "功能实现后，首批验收要不要同时比较多套模型？",
+      "options": [
+        {
+          "id": "A",
+          "label": "先固定一套模型，与原 AIRI 做同条件对照，再由你实际试聊验收",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "首批同时比较2–3套模型组合，再选合适的一套；增加测试时间和调用费用",
+          "recommended": false
+        }
+      ],
+      "status": "confirmed_scope_only",
+      "selected": "A",
+      "answer_text": "A．先固定一套模型，与原 AIRI 做同条件对照，再由你实际试聊验收（推荐）",
+      "confirmation_source": "本轮选项工具明确答复",
+      "limits": "只确认验收/调研范围，未批准实施、充值或真实模型调用，未冻结完整评测集、精确型号、预算或判线。"
+    },
+    {
+      "id": "ITEM-12",
+      "item": 12,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-15",
+      "topic": "验收模型是否已有指定",
+      "question": "这套固定的验收模型，你是否已有指定？只需服务商与型号，不要密钥。",
+      "options": [
+        {
+          "id": "A",
+          "label": "暂未指定，先给我有依据的候选和费用，我再选",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "已有指定，使用我提供的服务商和型号",
+          "recommended": false
+        }
+      ],
+      "status": "confirmed_research_request",
+      "selected": "A",
+      "answer_text": "A．暂未指定，先给我有依据的候选和费用，我再选（推荐）",
+      "confirmation_source": "本轮选项工具明确答复",
+      "limits": "只确认验收/调研范围，未批准实施、充值或真实模型调用，未冻结完整评测集、精确型号、预算或判线。"
+    },
+    {
+      "id": "ITEM-13",
+      "item": 13,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-15",
+      "topic": "首批固定验收基准模型",
+      "status": "confirmed_baseline_model",
+      "selected": "A",
+      "question": "首批固定验收模型选哪一个？按聊天和记忆整理合计100万输入＋20万输出Token估算，不计缓存优惠、语音/看屏，不代表月费，目前未做效果实测。",
+      "options": [
+        {
+          "id": "A",
+          "label": "DeepSeek V4.1 Flash（deepseek-flash），¥1.8–3.6",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "千问3.7 Plus日期快照（qwen3.7-plus-2026-05-26，北京），¥3.6",
+          "recommended": false
+        },
+        {
+          "id": "C",
+          "label": "Kimi K2.6（kimi-k2.6，国内站），¥11.9",
+          "recommended": false
+        }
+      ],
+      "report": "docs/02-调研参考/2026-10-15-首批验收模型候选与费用.md",
+      "limits": "只选未来验收基准，不限制产品BYOK其它模型；不批准真实调用、充值、实施或总预算。别名/版本、思考模式、账户地域和兼容性在验收前核验。",
+      "answer_text": "A",
+      "confirmation_source": "本轮用户普通文本选择第13项A",
+      "confirmed_model": {
+        "provider": "deepseek",
+        "api_model_id": "deepseek-flash",
+        "official_reported_version": "DeepSeek-V4.1-Flash",
+        "version_evidence_date": "2026-10-15",
+        "exact_runtime_revision": "验收前核验；别名非永久固定权重",
+        "use": "首批文字与记忆验收基准，不限制产品BYOK其他模型"
+      }
+    },
+    {
+      "id": "ITEM-14",
+      "item": 14,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-15",
+      "topic": "首批文字与记忆验收调用总预算",
+      "status": "confirmed_planned_budget",
+      "selected": "A",
+      "question": "功能实现后，首批文字与记忆验收的模型调用费用，总上限设多少？包括原 AIRI 对照、记忆整理、重试和你的验收试聊；接近上限就暂停。这次只定预算，不开始调用。",
+      "options": [
+        {
+          "id": "A",
+          "label": "总上限 ¥10，先做小规模验收；不要求花完，不够时再看结果决定是否追加",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "总上限 ¥30，为修复后的复测和验收试聊留更多余量；同样不要求花完",
+          "recommended": false
+        }
+      ],
+      "answer_text": "A．总上限 ¥10，先做小规模验收；不要求花完，不够时再看结果决定是否追加（推荐）",
+      "confirmation_source": "本轮选项工具明确答复",
+      "limits": "只确认未来首批验收总上限；本轮不充值、不调用模型、不改产品。不得自动追加或按天/月重置，不代表日常使用费用上限。"
+    },
+    {
+      "id": "ITEM-15",
+      "item": 15,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-15",
+      "topic": "记忆查看入口的位置",
+      "status": "confirmed_interface_entry",
+      "selected": "A",
+      "question": "第15项：想查看 Aimy 记住了什么时，入口放在哪里？日常仍然正常聊天、自动整理记忆，不要求你输入专门的记忆指令。",
+      "options": [
+        {
+          "id": "A",
+          "label": "放在设置里的“关于我”，集中查看初始档案和重要记忆，聊天界面保持简洁",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "放在聊天旁可收起的“她记得什么”面板，需要时边聊边查看",
+          "recommended": false
+        }
+      ],
+      "limits": "只确认已约定查看能力的入口，不重问是否自动记忆/是否保留查看能力；两个方案均为拟新增界面，非AIRI已存在功能。不自动批准特殊记忆指令、每日手动管理流程或扩大删除聊天范围。具体UI/路由未冻结。",
+      "answer_text": "a",
+      "confirmation_source": "本轮用户普通文本选择第15项A"
+    },
+    {
+      "id": "ITEM-16",
+      "item": 16,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-15",
+      "topic": "首批日常试用的自然度门槛",
+      "status": "confirmed_trial_goal",
+      "selected": "A",
+      "question": "第16项：首批做到什么程度，就可以进入日常试用？保存、重启恢复、更正／删除和取消保护，两种都必须验过；这里选择的是对聊天自然度的要求。",
+      "options": [
+        {
+          "id": "A",
+          "label": "先做到可靠可用：记得对、更新得对、相关时能用；偶尔措辞生硬可以在试用中继续打磨",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "首批就把回忆的语气和时机也打磨到你满意，再进入日常试用",
+          "recommended": false
+        }
+      ],
+      "limits": "只选试用目标与自然度要求，数据可靠性/权限/取消保护都是共同前置；不默认接受假回忆或明显无关强插。不是可直接执行的完整量化Rubric或已通过验收，不自动扩大¥10预算，不授权本轮模型调用/实施。",
+      "answer_text": "A",
+      "confirmation_source": "用户在第17项提问前明确选择第16项A，接续时补记"
+    },
+    {
+      "id": "ITEM-17",
+      "item": 17,
+      "date": "2026-10-15",
+      "asked_on": "2026-10-15",
+      "topic": "验收素材的作者与准备分工",
+      "status": "confirmed_custom_after_correction",
+      "selected": null,
+      "confirmed_value": "user_authors_assistant_prepares_materials",
+      "question": "验收用的对话样例从哪里来？本轮只确定来源，不读取现有私人聊天。",
+      "original_options": [
+        {
+          "id": "A",
+          "label": "助手编写非隐私日常例子，用户不用准备材料"
+        },
+        {
+          "id": "B",
+          "label": "用户提供少量脱敏真实例子为主，助手补场景"
+        }
+      ],
+      "prior_answer": {
+        "selected": "A",
+        "text": "A．由我编写不含隐私的日常例子，覆盖称呼、偏好变化、近期安排和跨会话回忆，你不用准备材料（推荐）",
+        "superseded": true
+      },
+      "correction_text": "更正一下，由我编写不含隐私的日常例子，覆盖称呼、偏好变化、近期安排和跨会话回忆，你帮我准备材料",
+      "confirmation_source": "用户普通文本明确更正，不硬套原A/B",
+      "actual_agreement": {
+        "sample_author": "用户",
+        "assistant_responsibility": "准备空白填写材料，收到内容后整理结构、检查缺项/歧义；不代写个人事实",
+        "topic_scope": [
+          "称呼",
+          "偏好变化",
+          "近期安排",
+          "跨会话回忆"
+        ],
+        "privacy": "不含隐私，不读取现有私人聊天，素材不自动当作用户本人档案",
+        "human_acceptance": "用户实际试聊保持有效"
+      },
+      "delivery": "12-验收例子填写模板.md",
+      "limits": "只有空白作者填写材料，没有生成/冻结cases、模型回答、分数或通过结论，不授权真实模型调用或产品实施。",
+      "materials_received": "八例虚构验收素材V2",
+      "material_review": "14-用户验收素材V2-审阅.md"
+    }
+  ],
+  "confirmed_memory_content": [
+    "称呼",
+    "偏好",
+    "边界",
+    "重要近期事项",
+    "共同经历"
+  ],
+  "history_start": "启用后的新聊天；保留已有聊天但不自动批量补记",
+  "pending_topics": [
+    {
+      "topic": "八例V2执行规格草案",
+      "status": "assistant_design_work_pending",
+      "item_id": "ITEM-17",
+      "selected": null,
+      "template": "12-验收例子填写模板.md",
+      "review": "14-用户验收素材V2-审阅.md",
+      "note": "用户已确认保留八例，不再询问是否保留；先补具体规格供整稿审阅。"
+    },
+    {
+      "topic": "实际模型版本/模式与计费核验（工程验收事项）",
+      "status": "engineering_verification_pending",
+      "selected": null,
+      "note": "API型号与首批验收¥10总额已选，不重复问；别名实际版本、模式与计费须执行前核验。"
+    },
+    {
+      "topic": "验收标准与工单",
+      "status": "concrete_draft_review_pending",
+      "selected": null,
+      "note": "先由助手收口具体目标/验收草案，再逐份审阅；不重复已答方向。"
+    },
+    {
+      "topic": "正式角色/音色",
+      "status": "later_asset_review",
+      "selected": null,
+      "note": "方向保持未选；有可看的角色/可听的声音候选时再确认，不阻塞本轮文字记忆方案收口。"
+    }
+  ],
+  "progress": {
+    "last_answered_item": 17,
+    "confirmed_option_items": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "withdrawn_question_items": [
+      4
+    ],
+    "current_question_item": null,
+    "current_topic": null,
+    "calendar_schedule": null,
+    "automation_created": false,
+    "confirmed_custom_items": [
+      17
+    ]
+  },
+  "rules": [
+    "一次只问一条，讲清取舍并提供2–3个选项",
+    "实际答复后记录并继续下一条，不等待下一天",
+    "建议不等于选择，未答保持null",
+    "已确认范围不重复询问",
+    "按天规划撤回，无日历安排或工期承诺",
+    "工程细节由技术审查决定，不转嫁await/CAS等问题",
+    "本轮只改文档，产品代码/运行数据/依赖/Git暂存保持不动",
+    "只向用户确认真实体验、偏好、数据或费用取舍；记忆筛选/更新/淡化由产品设计，不让用户扮演算法操作员"
+  ],
+  "memory_interaction_clarification": {
+    "daily_manual_memory_commands_required": false,
+    "per_fact_confirmation_required": false,
+    "manual_forget_button_assumed": false,
+    "automatic_memory_design_owner": "产品/工程设计负责筛选、更新、时效与淡化；模型只给候选，程序维护状态/持久化",
+    "physical_chat_deletion_authorized": false,
+    "previous_view_correct_delete_scope": "保留可检查与数据维护能力目标；不默认把它实现成日常手动输入/按钮流程"
+  },
+  "confirmed_interaction_style": {
+    "choice": "A",
+    "description": "温柔自然、有主见，能安慰，也能开玩笑和适度拌嘴",
+    "target": "Aimy角色/互动默认风格",
+    "not_confirmed": [
+      "正式完整人设卡",
+      "角色格式/资产",
+      "音色",
+      "精确模型/预算",
+      "实际效果已达到此风格"
+    ]
+  },
+  "proposed_context_architecture": {
+    "status": "方案建议，未实现/不等于已采纳依赖",
+    "role_settings": "角色卡与受控提示词承载人格底色/互动规则",
+    "user_profile": "长期记忆内的稳定资料视图，非另建数据库",
+    "long_term_memory": "本人事实/近期事项/共同经历的持久来源与有效状态",
+    "retrieval": "根据当前话题选择当前事实/相关历史证据，可先用固定槽位+关键词/时间",
+    "domain_knowledge_base": "首批不自动新增文档/攻略/世界观知识服务；有明确需求后再评估",
+    "onboarding": "ITEM-06已选A：首次可跳过的选择/填写建立初始档案，后续聊天自动更新；具体字段/来源适配/UI待设计，未实施",
+    "user_text_trust": "资料/记忆作为上下文数据，不把自由文本自动升级成高权限系统指令",
+    "model_execution": "ITEM-08允许用户配置的云端模型按需处理必要内容，数据本地、不额外同步到Aimy云端；ITEM-09默认跟随聊天模型，需要时可单独指定记忆整理模型。均为已确认方向，未实施/未调用。"
+  },
+  "confirmed_recall_expression": {
+    "choice": "A",
+    "description": "像熟悉用户的朋友一样自然接话，必要时才说“你上次提过”",
+    "scope": "用户发起的正常聊天，话题相关时引用；后台主动续聊仍在后批",
+    "quality_pending": "相关性、真实性、自然度须后续模型与本人体验验证；未宣称已达到"
+  },
+  "confirmed_model_data_boundary": {
+    "choice": "A",
+    "scope": "首批文字聊天与记忆整理",
+    "user_configured_cloud_model_allowed": true,
+    "persistent_data_location": "本机",
+    "additional_aimy_cloud_sync": false,
+    "model_payload": "按需发送必要的聊天内容与相关记忆给用户配置的模型",
+    "not_authorized_by_this_answer": [
+      "本轮真实模型调用或付费测试",
+      "读取或回显真实凭据",
+      "精确模型与费用上限",
+      "迁移或删除现有数据",
+      "额外Aimy云端同步"
+    ]
+  },
+  "confirmed_memory_model_policy": {
+    "default": "follow_chat_model",
+    "optional_override": true,
+    "provider_authority": "沿用AIRI Provider与配置边界",
+    "memory_authority": "沿用同一Aimy Memory owner；更换模型不另建事实库",
+    "implementation_status": "未实现",
+    "exact_models_and_budget": "未定",
+    "quality_status": "功能增量有源码/离线依据；Aimy实现后的实际记忆准确率、召回质量和自然度尚未验证"
+  },
+  "engineering_boundary_not_a_user_choice": "唯一aimy-app，运行数据与旧Aimy隔离；具体profile路径由工程验证，不重复转嫁用户选择。本轮不迁移已有数据。",
+  "confirmed_relationship_start": {
+    "choice": "B",
+    "description": "初始以亲密伴侣相处，称呼和表达更亲近",
+    "limits": "沿用温柔自然、有主见、用户边界及既有未成年人基础保护；不伪造共同经历，不自动增加好感值/等级经济；正式背景/资产/音色仍未定",
+    "implemented": false
+  },
+  "last_updated_on": "2026-10-15",
+  "confirmed_acceptance_scope": {
+    "choice": "A",
+    "baseline": "固定一套模型，原AIRI与增量记忆链同条件对照",
+    "human_acceptance": "用户实际试聊",
+    "multi_model_benchmark_first_batch": false,
+    "exact_model": "deepseek-flash",
+    "budget": {
+      "currency": "CNY",
+      "maximum": 10,
+      "kind": "planned_first_acceptance_total"
+    },
+    "execution_authorized_this_round": false,
+    "model_version_note": "官方当前对应DeepSeek-V4.1-Flash，真实验收前记录实际版本/模式；本轮未调用"
+  },
+  "confirmed_first_acceptance_budget": {
+    "currency": "CNY",
+    "maximum": 10,
+    "scope": [
+      "原AIRI同条件对照",
+      "增量记忆链聊天与整理",
+      "重试及修复复测",
+      "用户验收试聊"
+    ],
+    "not_required_to_spend_all": true,
+    "automatic_top_up": false,
+    "automatic_daily_or_monthly_reset": false,
+    "pause_near_limit": true,
+    "real_call_authorized_this_round": false,
+    "engineering_note": "未来调用前按有效价/最大输出预留费用，记录实际用量；计价或用量未知先停。当前尚未实现预算保护。"
+  },
+  "confirmed_memory_view_entry": {
+    "choice": "A",
+    "location": "设置内的“关于我”",
+    "content": "集中查看首次档案与重要自动记忆",
+    "daily_interaction": "正常聊天，记忆自动整理，不依赖专门记忆指令",
+    "scope_limits": "只确认入口/信息范围，不冻结具体UI、路由或扩大删除聊天权限；不把查看页变成日常必须操作的流程",
+    "implemented": false
+  },
+  "evaluation_stage_diagnosis": {
+    "date": "2026-10-15",
+    "current_step": "STEP_01 定目标（最早未通过）",
+    "existing": "单模型同条件对照与本人试聊、DeepSeek Flash API ID、首批¥10总额已确认；现有目标卡v0.1仍为提案",
+    "gaps": "完整目标卡/可执行判线确认，覆盖矩阵与日期/隔离/进程等执行条件；用户八例素材已收到，无需重复催填",
+    "this_turn": "仅接收并审阅用户既有八例V2，保留原文与独立审阅意见；不生成新的用户对话，不冻结cases，不执行评测",
+    "next": "目标卡确认后才进入STEP_02覆盖矩阵，矩阵再确认后整理样本"
+  },
+  "confirmed_first_trial_goal": {
+    "choice": "A",
+    "description": "先可靠可用，记得对、更新得对、相关时能用；偶尔措辞生硬可在试用中打磨",
+    "required": "保存/重启/更正删除/取消与权限保护须验收；不默认接受假回忆或明显无关强插",
+    "quality_proven": false
+  },
+  "confirmed_evaluation_data_source": {
+    "author": "用户",
+    "content": "用户编写不含隐私的日常例子",
+    "assistant": "准备空白材料并整理检查，不擅自添写事实",
+    "read_existing_private_chats": false,
+    "automatically_import_as_personal_memory": false,
+    "final_cases_frozen": false,
+    "received_materials": {
+      "version": "V2（用户自标）",
+      "author": "用户",
+      "fictional": true,
+      "count": 8,
+      "source_file": "13-用户验收素材V2-原文.md",
+      "source_sha256": "37fa26c0f5ea08e4fb6b3c6b9691640c805231af31562f9cf0b036cb7c9e6bdc",
+      "review_file": "14-用户验收素材V2-审阅.md",
+      "status": "用户已确认保留八例核心素材；执行规格/完整评测设计待收敛",
+      "retention_approved": {
+        "date": "2026-10-15",
+        "user_text": "好的，就保留这8个案例。然后你需要问的问题还有吗？",
+        "scope": "保留八例用户虚构素材正文，不代表完整评测集/判线已冻结、已验收或批准执行"
+      }
+    }
+  },
+  "current_review_phase": {
+    "phase": "consolidate_concrete_handoff_drafts",
+    "additional_direction_questions_needed_now": false,
+    "material_count_retained": 8,
+    "user_review_still_needed": [
+      "具体首次认识/关于我界面与交互稿",
+      "完整评测目标卡、覆盖范围及验收判定稿（按评测阶段审阅）"
+    ],
+    "assistant_owned_work": [
+      "把已选内容同步到PRD/技术/API/Prompt/任务边界，处理旧提案冲突",
+      "提出虚拟日期、用例隔离、实际重启等执行规格与工程负例",
+      "核模型别名/模式/计费和开发环境版本等工程事项；本轮不执行真实调用/升级"
+    ],
+    "later_product_choices": [
+      "正式角色外观/格式和音色在有具体候选时再审，不作为本轮文字记忆方向的新增抽象选择题"
+    ],
+    "authorization_note": "用户仍要求先不改产品代码；保留案例/完成方向选择不等于实现、安装、模型调用或发布授权。",
+    "assessment_scope_note": "不追加已答首批方向题不等于整包待定项审查完成；本次明确发现实施契约仍需收口。"
+  },
+  "readiness_assessment": {
+    "date": "2026-10-15",
+    "scope": "定向开工评估，非整包全量审计",
+    "product_direction_ready_for_first_increment": true,
+    "recommended_first_task": "BASE-01，随后按依赖LIFE-01/LOCAL-01",
+    "foundation_can_be_started_after_implementation_instruction": true,
+    "memory_implementation_contract_ready": false,
+    "remaining_contract_work": [
+      "初始化来源/回执",
+      "可选记忆模型配置/快照与API任务同步",
+      "具体关于我/初始化交互稿",
+      "完整验收目标/覆盖及执行条件"
+    ],
+    "live_environment": {
+      "node": "v24.20.0",
+      "pnpm": "11.24.0",
+      "declared_node": "26.7.0",
+      "git_head": "b851ef3",
+      "build_or_app_tests_run": false
+    },
+    "authorization_current_turn": "开工条件评估；未改产品代码/升级/真实调用",
+    "report": "docs/91-管理记录/2026-10-15-增量开发开工评估.md"
+  },
+  "reuse_plan_clarification": {
+    "date": "2026-10-15",
+    "report": "16-首批增量复用来源与适配方式.md",
+    "user_intent": "AIRI上的1–100，复用候选没有或更强的能力；不从0重建",
+    "already_in_product": "AIRI完整底座已继承",
+    "candidate_code_integrated": false,
+    "first_batch_sources": [
+      "AIRI既有聊天/存储/请求/界面与可用纯规则",
+      "AionsHome AH-R01/02/03有界规则/叶子适配",
+      "Ryza RY03/04/08组织及词法选择参考"
+    ],
+    "other_projects": "OLV条件能力、Aions后台续聊、Kirara机制与Charakuru生产工具按既有后批/条件安排；Chromatic排除",
+    "remaining_work": "逐叶子原函数→目标文件→契约差异→验证输入的最终清单尚需收口；不凭研究报告冒称已经复制接入"
+  },
+  "concrete_first_increment_review": {
+    "version": "first-increment-review-v1",
+    "entry": "首批审定稿-v1/README.md",
+    "date": "2026-10-15",
+    "status": "awaiting_final_approval_after_clarification",
+    "implementation_authorized": false,
+    "model_calls": 0,
+    "review_ids": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5"
+    ],
+    "past_user_decisions_unchanged": true,
+    "first_task_count": 9,
+    "first_api_count": 18,
+    "note": "整稿完成后审定，方向选择不重问；不按天排期，不因旧范围A推定维护UI已批",
+    "approved_review_ids": [
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "remaining_review_ids": [
+      "R4",
+      "R5"
+    ],
+    "next_review_id": "FINAL_HANDOFF",
+    "review_mode": "one_plain_language_question_at_a_time",
+    "latest_confirmation": {
+      "question_number": 7,
+      "part_id": "acceptance_walkthrough_mode",
+      "status": "approved",
+      "answer": "A．由你先跑8例及AIRI对照、整理结果；我再实际试聊确认（推荐）",
+      "confirmed_by": "user",
+      "confirmed_on": "2026-10-15",
+      "source_question_call_id": "call_4219f9452d3d43eca631176a51431e7b",
+      "scope": "功能做好并满足执行条件后，助手先跑既定8例及原AIRI同条件对照，整理结果/问题，用户再实际试聊；案例、模型、¥10一次总额不变；当前不实施或调用"
+    },
+    "partially_approved_review_ids": [
+      "R5"
+    ],
+    "approved_question_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "next_question_part": "implementation_scope_approval",
+    "next_question_number": 8,
+    "confirmed_default_memory": {
+      "new_user_enabled": true,
+      "first_use_notice": true,
+      "pause_entry": "关于我"
+    },
+    "confirmed_pause_resume": {
+      "backfill_paused_chats": false,
+      "future_new_chats_only": true
+    },
+    "confirmed_maintenance_entry": "collapsed_data_maintenance",
+    "withdrawn_question_numbers": [
+      6
+    ],
+    "customer_dependency_judgment_required": false,
+    "handoff_revision": 2,
+    "confirmed_acceptance_roles": {
+      "assistant": "run retained eight scenarios and same-condition AIRI comparison, report evidence and problems",
+      "user": "actual trial chat and final experience acceptance"
+    },
+    "final_summary_entry": "首批审定稿-v1/最终审定摘要.md",
+    "latest_handoff_reply": {
+      "question_number": 8,
+      "source_question_call_id": "call_4520b5bbb5924d58ac32fb6dec07625b",
+      "date": "2026-10-15",
+      "response_type": "clarification_request_not_approval",
+      "user_questions": [
+        "这个顺序是怎么判断出来的：品牌与必要保护 → 复用规则、自动记忆和相关回忆 → 8例与AIRI对照 → 本人实际试聊",
+        "只在aimy-app开发具体位置；沿用AIRI源码增量还是参照复刻后再新增"
+      ],
+      "clarification": "品牌为现有收尾与基线管理顺序，不是记忆算法技术依赖；可靠数据/来源/取消保护是硬前置；每步都测，8例为整合后的完整对照；直接在已继承AIRI的aimy-app原代码上增量，候选仅有界移植",
+      "implementation_authorized": false
+    }
+  }
+}

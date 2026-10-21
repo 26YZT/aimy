@@ -1,0 +1,36 @@
+{
+  "method": "cua_repl native accessibility clicks",
+  "version": "0.12.0-beta.5+aimy.20261020.1",
+  "profile": "/tmp/aimy-oct20/native-package/appdata/Aimy-Preview",
+  "source": "Aimy Synthetic Screen Test",
+  "vision": "offline processCapture fixture; no model HTTP",
+  "steps": [
+    {
+      "surface": "Stage",
+      "action": "choose synthetic source",
+      "observed": "正在看：Aimy Synthetic Screen Test; 停止共享 value 1"
+    },
+    {
+      "surface": "Stage",
+      "action": "stop",
+      "observed": "共享屏幕 value 0"
+    },
+    {
+      "surface": "chat-floating",
+      "action": "choose synthetic source",
+      "observed": "正在看：Aimy Synthetic Screen Test; 停止共享 value 1"
+    },
+    {
+      "surface": "chat-floating",
+      "action": "stop",
+      "observed": "共享屏幕 value 0"
+    }
+  ],
+  "secretDecryptCalls": 0,
+  "normalIsolatedExit": true,
+  "limitations": [
+    "Model quality not evaluated",
+    "Me native click not counted; controller browser tests cover it",
+    "Initial scripted click did not reach source selector while onboarding was foreground; native clicks used after closing only test onboarding"
+  ]
+}

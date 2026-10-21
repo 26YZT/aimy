@@ -1,0 +1,14 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "src/speech-pipeline.test.ts",
+    "src/managers/playback-manager.test.ts",
+    "src/processors/tts-chunker.test.ts"
+  ],
+  "cwd": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio",
+  "exit_code": 0,
+  "log": "/tmp/aimy-20261014-primary-checks/pipelines-audio.log"
+}

@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "schemaVersion": 1,
+  "startedAt": "2026-10-15T15:11:42.117Z",
+  "runs": [
+    {
+      "cdpPort": 63445,
+      "channelPort": 63446,
+      "proxyPort": 63447,
+      "network": {
+        "forwardedChannel": 0,
+        "blockedGeneration": 0,
+        "blockedMetadata": 0,
+        "blockedOther": 3
+      },
+      "pid": 32838,
+      "portOwners": {
+        "cdp": [
+          32838
+        ],
+        "channel": [
+          32838
+        ]
+      },
+      "projection": {
+        "ready": true,
+        "scope": {
+          "principalId": "local",
+          "characterId": "default"
+        },
+        "factCount": 1,
+        "factsSha256": "9a645932f82ba56879c7957e9c60cb5b7a79dd8d2b301095f62fdcf03af2590d",
+        "pendingJobCount": 0,
+        "failedJobCount": 0,
+        "modelRoutesSafe": true,
+        "routeChecks": {
+          "chatProvider": true,
+          "chatDefinition": true,
+          "chatModel": true,
+          "chatEndpoint": true,
+          "followsChat": true
+        }
+      },
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      }
+    },
+    {
+      "cdpPort": 63474,
+      "channelPort": 63475,
+      "proxyPort": 63476,
+      "network": {
+        "forwardedChannel": 0,
+        "blockedGeneration": 0,
+        "blockedMetadata": 0,
+        "blockedOther": 3
+      },
+      "pid": 32889,
+      "portOwners": {
+        "cdp": [
+          32889
+        ],
+        "channel": [
+          32889
+        ]
+      },
+      "projection": {
+        "ready": true,
+        "scope": {
+          "principalId": "local",
+          "characterId": "default"
+        },
+        "factCount": 1,
+        "factsSha256": "9a645932f82ba56879c7957e9c60cb5b7a79dd8d2b301095f62fdcf03af2590d",
+        "pendingJobCount": 0,
+        "failedJobCount": 0,
+        "modelRoutesSafe": true,
+        "routeChecks": {
+          "chatProvider": true,
+          "chatDefinition": true,
+          "chatModel": true,
+          "chatEndpoint": true,
+          "followsChat": true
+        }
+      },
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      }
+    }
+  ],
+  "paths": {
+    "entry": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/out/main/index.js",
+    "profile": "/private/tmp/aimy-first-implementation-20261015/aimy-verified-synthetic-yzinvuz2",
+    "campaignConfig": "/private/tmp/aimy-first-implementation-20261015/synthetic-campaign.json",
+    "ledger": "/private/tmp/aimy-first-implementation-20261015/campaign/synthetic-ledger.json",
+    "output": "/private/tmp/aimy-first-implementation-20261015/ui-unlocked/restart-after-native"
+  },
+  "fingerprints": {
+    "entry": "ea418eade90b805ee28751cc550046b7c416a66ee2d50967c863f3ca8ec599be",
+    "campaign": "d460ae19acb253a2131ecd855aea4ba2d1d26d60d594fce7f889a2b25968dc2f",
+    "marker": "cf696e68b74097a02f3d4892c5797acb8002dd3bd3f70c13b43e2aa3a5f9e600"
+  },
+  "logPolicy": "Application output is stored only as chunk byte counts and SHA-256. Proxy evidence excludes headers, bodies, query and userinfo.",
+  "ledgerBefore": {
+    "exists": true,
+    "attempts": 5,
+    "recordsSha256": "96e66eb2f8b97a35acf8ce9d12f88e4be2e8415827a447650f4b435d9a73f74c",
+    "paused": false
+  },
+  "ledgerAfter": {
+    "exists": true,
+    "attempts": 5,
+    "recordsSha256": "96e66eb2f8b97a35acf8ce9d12f88e4be2e8415827a447650f4b435d9a73f74c",
+    "paused": false
+  },
+  "modelRequests": 0,
+  "finishedAt": "2026-10-15T15:11:50.028Z"
+}

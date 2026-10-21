@@ -1,0 +1,320 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/input_output.py",
+    "symbol": "Input",
+    "start": 4,
+    "end": 24,
+    "sha256": "4c1dc7e9f07a3169158b00cdbe5e7aca501aafc54c70fe2a5f7b5a597668c9d2",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/input_output.py",
+    "symbol": "Output",
+    "start": 27,
+    "end": 35,
+    "sha256": "4c1dc7e9f07a3169158b00cdbe5e7aca501aafc54c70fe2a5f7b5a597668c9d2",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/base.py",
+    "symbol": "Block",
+    "start": 7,
+    "end": 37,
+    "sha256": "8a27be8411e9b03fa486bd43598e9bee5813acf734a5bd865e6ef1c30c40d454",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/base.py",
+    "symbol": "ConditionBlock",
+    "start": 40,
+    "end": 59,
+    "sha256": "8a27be8411e9b03fa486bd43598e9bee5813acf734a5bd865e6ef1c30c40d454",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/base.py",
+    "symbol": "LoopBlock",
+    "start": 62,
+    "end": 89,
+    "sha256": "8a27be8411e9b03fa486bd43598e9bee5813acf734a5bd865e6ef1c30c40d454",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/base.py",
+    "symbol": "LoopEndBlock",
+    "start": 92,
+    "end": 107,
+    "sha256": "8a27be8411e9b03fa486bd43598e9bee5813acf734a5bd865e6ef1c30c40d454",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/param.py",
+    "symbol": "ParamMeta",
+    "start": 9,
+    "end": 19,
+    "sha256": "4c23232c5f2ad248b877981f299d5d0cc670964209a9059f413f595b9296893b",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/schema.py",
+    "symbol": "BlockInput",
+    "start": 8,
+    "end": 16,
+    "sha256": "48a159d4328fb27c539d56bc8a80e81b257052466ff07bb1643ff98753232f66",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/schema.py",
+    "symbol": "BlockOutput",
+    "start": 19,
+    "end": 25,
+    "sha256": "48a159d4328fb27c539d56bc8a80e81b257052466ff07bb1643ff98753232f66",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/schema.py",
+    "symbol": "BlockConfig",
+    "start": 28,
+    "end": 39,
+    "sha256": "48a159d4328fb27c539d56bc8a80e81b257052466ff07bb1643ff98753232f66",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/type_system.py",
+    "symbol": "TypeSystem",
+    "start": 5,
+    "end": 124,
+    "sha256": "7eab70bef5a7015d9cd65a0c1921abc0eeee0f42ba87817c8d89444b7c1cfe6b",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+    "symbol": "extract_block_param",
+    "start": 12,
+    "end": 63,
+    "sha256": "400b31811d7e082990faf06c3d32628a06e1e51c46a1b8fbd6f17a0674c07c67",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+    "symbol": "BlockRegistry",
+    "start": 66,
+    "end": 200,
+    "sha256": "400b31811d7e082990faf06c3d32628a06e1e51c46a1b8fbd6f17a0674c07c67",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/base.py",
+    "symbol": "WorkflowConfig",
+    "start": 8,
+    "end": 9,
+    "sha256": "5b3e126f3a12fc34a453e876cde43093f312b8bdc0b9f0eda68d9054822e31c4",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/base.py",
+    "symbol": "Workflow",
+    "start": 11,
+    "end": 17,
+    "sha256": "5b3e126f3a12fc34a453e876cde43093f312b8bdc0b9f0eda68d9054822e31c4",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/base.py",
+    "symbol": "Wire",
+    "start": 20,
+    "end": 34,
+    "sha256": "5b3e126f3a12fc34a453e876cde43093f312b8bdc0b9f0eda68d9054822e31c4",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/exceptions.py",
+    "symbol": "BlockExecutionFailedException",
+    "start": 1,
+    "end": 2,
+    "sha256": "e6b10f72fd1b9b26fd31e627c99f5d6fd81a09f34c22573d0a856acd12c5fcde",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/exceptions.py",
+    "symbol": "WorkflowExecutionTimeoutException",
+    "start": 4,
+    "end": 5,
+    "sha256": "e6b10f72fd1b9b26fd31e627c99f5d6fd81a09f34c22573d0a856acd12c5fcde",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/executor.py",
+    "symbol": "WorkflowExecutor",
+    "start": 18,
+    "end": 291,
+    "sha256": "52053038a02758903cbb4b7a7b98c7fe368e6cfefc5d3a80e8e429f3382abb4d",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system/basic.py",
+    "symbol": "TextBlock",
+    "start": 10,
+    "end": 20,
+    "sha256": "7450357ac6cebb20926a0e55f6a5dd5dd5e335e64d77c5a4281937453f2d450e",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system/basic.py",
+    "symbol": "TextConcatBlock",
+    "start": 24,
+    "end": 33,
+    "sha256": "7450357ac6cebb20926a0e55f6a5dd5dd5e335e64d77c5a4281937453f2d450e",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system/basic.py",
+    "symbol": "TextReplaceBlock",
+    "start": 37,
+    "end": 53,
+    "sha256": "7450357ac6cebb20926a0e55f6a5dd5dd5e335e64d77c5a4281937453f2d450e",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system/basic.py",
+    "symbol": "TextExtractByRegexBlock",
+    "start": 57,
+    "end": 75,
+    "sha256": "7450357ac6cebb20926a0e55f6a5dd5dd5e335e64d77c5a4281937453f2d450e",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/base.py",
+    "symbol": "DispatchRule",
+    "start": 15,
+    "end": 70,
+    "sha256": "841df1ff969513116bf13391c185db559ac42baf6719646e4c84149ba01922bc",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+    "symbol": "RegexMatchRule",
+    "start": 18,
+    "end": 35,
+    "sha256": "c47f97949360d438a4bbcd7d224709451b871619e78daf967889f02535f530ba",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+    "symbol": "PrefixMatchRule",
+    "start": 41,
+    "end": 65,
+    "sha256": "c47f97949360d438a4bbcd7d224709451b871619e78daf967889f02535f530ba",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+    "symbol": "KeywordMatchRule",
+    "start": 72,
+    "end": 89,
+    "sha256": "c47f97949360d438a4bbcd7d224709451b871619e78daf967889f02535f530ba",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/sender_rules.py",
+    "symbol": "ChatSenderMatchRule",
+    "start": 20,
+    "end": 59,
+    "sha256": "39d2987985840729b3a7dd745dcf4336ff9be921165b34b5e2fbce97b3176b48",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/sender_rules.py",
+    "symbol": "ChatTypeMatchRule",
+    "start": 108,
+    "end": 126,
+    "sha256": "39d2987985840729b3a7dd745dcf4336ff9be921165b34b5e2fbce97b3176b48",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+    "symbol": "SimpleDispatchRule",
+    "start": 13,
+    "end": 16,
+    "sha256": "2fa5d92788c9cf0de09a9518ab410a0271e09f3994abd0d3c266bd9efbaf7294",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+    "symbol": "RuleGroup",
+    "start": 18,
+    "end": 21,
+    "sha256": "2fa5d92788c9cf0de09a9518ab410a0271e09f3994abd0d3c266bd9efbaf7294",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+    "symbol": "CombinedDispatchRule",
+    "start": 23,
+    "end": 86,
+    "sha256": "2fa5d92788c9cf0de09a9518ab410a0271e09f3994abd0d3c266bd9efbaf7294",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/registry.py",
+    "symbol": "DispatchRuleRegistry",
+    "start": 17,
+    "end": 173,
+    "sha256": "c87f1a63f009c610c848eaa7e25b71596807beb34051706be1abefc8aa537231",
+    "method_subset": [
+      "__init__",
+      "register",
+      "get_active_rules"
+    ]
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/exceptions.py",
+    "symbol": "WorkflowNotFoundException",
+    "start": 1,
+    "end": 6,
+    "sha256": "52016d2f473d57f25ab0b342c3048dd3dd625b35ddf6f09a24322c73141ea70a",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/dispatcher.py",
+    "symbol": "WorkflowDispatcher",
+    "start": 16,
+    "end": 62,
+    "sha256": "3e7f68e6dca0dc9aa43aa4324967951a54dee8bdc2a3c4c8511376e864a3a41e",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/builtin_scopes.py",
+    "symbol": "MemberScope",
+    "start": 7,
+    "end": 26,
+    "sha256": "f81c3cc618f496b8a15c9d86bc4f809718f8540105d2219030bdc9082a652dd9",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/builtin_scopes.py",
+    "symbol": "GroupScope",
+    "start": 29,
+    "end": 45,
+    "sha256": "f81c3cc618f496b8a15c9d86bc4f809718f8540105d2219030bdc9082a652dd9",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/builtin_scopes.py",
+    "symbol": "GlobalScope",
+    "start": 48,
+    "end": 55,
+    "sha256": "f81c3cc618f496b8a15c9d86bc4f809718f8540105d2219030bdc9082a652dd9",
+    "method_subset": null
+  },
+  {
+    "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/memory_manager.py",
+    "symbol": "MemoryManager.query",
+    "start": 100,
+    "end": 119,
+    "sha256": "ef9f6a21d0e7ad573639adcd0a7645777105483c66d74a4904f02e532a271016",
+    "method_subset": [
+      "query"
+    ]
+  }
+]

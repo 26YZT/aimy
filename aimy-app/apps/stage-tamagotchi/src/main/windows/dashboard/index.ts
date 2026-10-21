@@ -60,10 +60,11 @@ export async function setupDashboardWindow(params: {
 
   setupConfig()
 
+  // Stored titles identify window settings independently of the visible product name.
   const windowConfig = getConfig().windows?.find(w => w.title === 'AIRI Dashboard' && w.tag === 'dashboard')
 
   const window = new BrowserWindow({
-    title: 'AIRI Dashboard',
+    title: 'Aimy Dashboard',
     width: windowConfig?.width ?? 1200.0,
     height: windowConfig?.height ?? 600.0,
     x: windowConfig?.x,

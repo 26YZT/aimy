@@ -1,0 +1,72 @@
+{
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 1789,
+      "sha256": "84ed615ce909e86ed964e5894c415578c8acf8c0b6d49998dfe3de61547e55f5"
+    },
+    {
+      "file": "airi-loader.mjs",
+      "bytes": 4644,
+      "sha256": "1886d1f6b700c92e70eff6b32207941b72044d4dec5783249f529b9d7e873ad9"
+    },
+    {
+      "file": "authored-capabilities.vrm",
+      "bytes": 4160,
+      "sha256": "ef7ef5ee2af95e837908b40c60682a5ddc30bbf7a3fa63b75ace0025b589021b"
+    },
+    {
+      "file": "blender-production-probe.py",
+      "bytes": 3485,
+      "sha256": "db3e9bbe420471eec9f2722efeab8dffb785bc4483c173f386eacfff771c389e"
+    },
+    {
+      "file": "blender-production-results.json",
+      "bytes": 910,
+      "sha256": "45241b3cbb09338b0234e342aea722ed377439b85ec29409cc6ac7c4a4be0bba"
+    },
+    {
+      "file": "blender-production.log",
+      "bytes": 1708,
+      "sha256": "2a0131cd3fae5878b07edb22e85d1fc153c2c07d6c9a1c122733578bb3e84334"
+    },
+    {
+      "file": "findings.md",
+      "bytes": 11831,
+      "sha256": "8b00cbcabac70156dc27a3350e242b4a7e3909bc400816e0cb428557099cb1e6"
+    },
+    {
+      "file": "loader-compare.mjs",
+      "bytes": 10747,
+      "sha256": "45097d0ddd0bbefe87fe9de8e9ddf70b0466a7498ec1ebeba85be4cca66d53ca"
+    },
+    {
+      "file": "loader-results.json",
+      "bytes": 3509,
+      "sha256": "5c894e8743186b93365101c95f585509a37c4713c1e7a0ccbfe2d0e51b654f25"
+    },
+    {
+      "file": "loader-run.log",
+      "bytes": 3094,
+      "sha256": "69681fe0f3f09d8109e9fb7b0e95fb36c26a5d39d7444136380cb076c1954833"
+    },
+    {
+      "file": "minimal-no-face.vrm",
+      "bytes": 2436,
+      "sha256": "20643d603cf486b8f8ec0318d66f4ad095b61e623b9d9379bd4448149d07cf3e"
+    },
+    {
+      "file": "source-manifest.json",
+      "bytes": 10032,
+      "sha256": "9cf330b531db18d566c85604b27a91fea4c5ecceb66196c4ce7fafacc4c39cb2"
+    },
+    {
+      "file": "standard-like.vrm",
+      "bytes": 2436,
+      "sha256": "20643d603cf486b8f8ec0318d66f4ad095b61e623b9d9379bd4448149d07cf3e"
+    }
+  ],
+  "product_code_changed": false,
+  "current_blender_scene_modified": false,
+  "full_workflow_verified": false
+}

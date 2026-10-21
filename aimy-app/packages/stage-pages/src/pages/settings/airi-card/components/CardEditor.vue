@@ -18,7 +18,7 @@ import { useVisionStore } from '@proj-airi/stage-ui/stores/modules/vision'
 import { useProviderStore } from '@proj-airi/stage-ui/stores/providers/provider'
 import { Button, FieldInput, FieldValues, GhostButton, IconButton } from '@proj-airi/ui'
 import { ComboboxSelect } from '@proj-airi/ui/components/form'
-import { isEqual } from 'es-toolkit'
+import { cloneDeep, isEqual } from 'es-toolkit'
 import { storeToRefs } from 'pinia'
 import { computed, nextTick, onMounted, onUnmounted, ref, shallowRef, toRaw, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -681,7 +681,7 @@ async function handleSave(activate: boolean) {
 
     let savedCardId: string
     if (isEditMode.value && props.cardId) {
-      if (!await cardStore.updateCard(props.cardId, cardWithModules)) {
+      if (!await cardStore.updateCard(props.cardId, cloneDeep(cardWithModules), { preserveAvatar: true })) {
         showError.value = true
         errorMessage.value = t('settings.pages.card.card_not_found')
         return

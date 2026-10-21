@@ -1,4 +1,5 @@
 export { default as OnboardingDialog } from './onboarding-dialog.vue'
 export { default as OnboardingScreen } from './onboarding.vue'
 export { default as OnboardingStepAnalyticsNotice } from './step-analytics-notice.vue'
+export { default as OnboardingStepUserProfile } from './step-user-profile.vue'
 export type { OnboardingStep } from './types'

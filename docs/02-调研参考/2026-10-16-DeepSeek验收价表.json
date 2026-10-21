@@ -1,0 +1,9 @@
+{
+  "observedAt": "2026-10-16T04:50:26.637178Z",
+  "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+  "sourceSha256": "6ce2120bb58893e37be0d7ab536bfac00ed95074eeb01308996b02670e8be069",
+  "modelVersion": "DeepSeek-V4.1-Flash",
+  "inputMicroYuanPerMillion": 2000000,
+  "cachedInputMicroYuanPerMillion": 40000,
+  "outputMicroYuanPerMillion": 8000000
+}

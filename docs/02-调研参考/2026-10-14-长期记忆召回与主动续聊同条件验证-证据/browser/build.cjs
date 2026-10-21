@@ -1,0 +1,17 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const out = __dirname;
+const repo = '/Users/mima1234/Documents/aimy/aimy-app';
+const pkg = path.join(repo, 'node_modules/.pnpm');
+const esbuildDir = fs.readdirSync(pkg).find(x => /^esbuild@/.test(x));
+const esbuild = require(path.join(pkg, esbuildDir, 'node_modules/esbuild'));
+const result = esbuild.buildSync({entryPoints:[path.join(out,'entry.ts')],outfile:path.join(out,'airi-repo.js'),bundle:true,platform:'browser',format:'iife',globalName:'AiriAudit',metafile:true,write:false});
+for (const f of result.outputFiles) fs.writeFileSync(f.path, f.contents);
+const ryza = '/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js';
+fs.copyFileSync(ryza,path.join(out,'ryza-longterm.js'));
+fs.copyFileSync('/tmp/aimy-20261014-memory-ab/fixtures.json',path.join(out,'fixtures.json'));
+const sourcePaths = [path.join(repo,'packages/stage-ui/src/database/repos/chat-sessions.repo.ts'),path.join(repo,'packages/stage-ui/src/database/storage.ts'),ryza];
+const manifest = sourcePaths.map(p => ({path:p,sha256:crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')}));
+fs.writeFileSync(path.join(out,'source-manifest.json'),JSON.stringify({date:'2026-10-14',esbuild:esbuildDir,sources:manifest,metafile:result.metafile,noSourceModification:true},null,2));
+console.log(JSON.stringify({bundleBytes:result.outputFiles[0].contents.length,sourceFiles:manifest.length}));

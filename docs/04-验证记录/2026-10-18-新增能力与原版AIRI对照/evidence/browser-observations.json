@@ -1,0 +1,99 @@
+[
+  {
+    "id": "PRO-SINGLE",
+    "baseline": [
+      70000,
+      100000,
+      130000
+    ],
+    "aimy": [
+      120000
+    ],
+    "sameFixedModelOutput": "刚才的话题还想听你说说。",
+    "interpretation": "Stronger fit for strict single followup; original scheduler intentionally supports reminder windows/repetition, not an upstream bug",
+    "limits": "Original full factory chain uses explicit fake bindings; current real IndexedDB coordinator uses synthetic generation/delivery, not complete native presentation"
+  },
+  {
+    "id": "PRO-PERSIST",
+    "baselineFreshStoreTasks": 0,
+    "aimyDatabasePlans": 1,
+    "interpretation": "Real IndexedDB plan versus in-memory notebook",
+    "limits": "Fresh store/repository, not an OS restart; normal Aimy quit cancels pending plans, so this is not a promise of restart alarms"
+  },
+  {
+    "id": "PRO-CANCEL-LATE",
+    "baseline": 1,
+    "aimy": 0,
+    "interpretation": "Additional cancel-before-delivery guard for new-message followup contract",
+    "limits": "Original lacks corresponding user-return cancellation API; no fabricated call to a missing baseline API; fixed generation, synthetic speech sinks"
+  },
+  {
+    "id": "PRO-CLAIM",
+    "claims": 1,
+    "stateAfterUncertainRecovery": "unknown",
+    "resent": false,
+    "interpretation": "Additional atomic admission and no blind retry; counterpart not present in baseline notebook API",
+    "limits": "Real IndexedDB, two module instances in one browser; process death not injected"
+  },
+  {
+    "id": "PRO-GUARDS",
+    "wrongSessionClaimed": false,
+    "removedSourceClaimed": false,
+    "quietHoursClaimed": false,
+    "interpretation": "Additional scope/source/quiet policy; original globally-scoped task does not promise this contract"
+  },
+  {
+    "id": "REVIEW-SOURCE",
+    "beforeSourceMutation": [
+      {
+        "factId": "f",
+        "factKey": "f",
+        "revision": 1,
+        "category": "plan",
+        "subject": "user",
+        "label": "围巾",
+        "text": "考虑买围巾，还没有买。",
+        "keywords": [],
+        "status": "current",
+        "kind": "direct",
+        "sourceVersions": [
+          {
+            "sourceId": "s",
+            "sourceRevision": 1,
+            "contentHash": "one"
+          }
+        ],
+        "dependsOnFactIds": [],
+        "confirmationAt": 1791943200000,
+        "committedAt": 1791943200000
+      }
+    ],
+    "afterSourceMutation": [
+      {
+        "factId": "f",
+        "factKey": "f",
+        "revision": 1,
+        "category": "plan",
+        "subject": "user",
+        "label": "围巾",
+        "text": "考虑买围巾，还没有买。",
+        "keywords": [],
+        "status": "current",
+        "kind": "direct",
+        "sourceVersions": [
+          {
+            "sourceId": "s",
+            "sourceRevision": 2,
+            "contentHash": "one"
+          }
+        ],
+        "dependsOnFactIds": [],
+        "confirmationAt": 1791943200000,
+        "committedAt": 1791943200000
+      }
+    ],
+    "review": "invalidated",
+    "interpretation": "Derived display follows source revisions; no new facts and no proof of stronger recall",
+    "limits": "New mechanism only; baseline notebook diary/focus has no same source-bound period-review API"
+  }
+]

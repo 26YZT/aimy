@@ -9,6 +9,7 @@ import { executeAppleSpeechStream, providerAppleSpeechTranscription } from '.'
 const mocks = vi.hoisted(() => ({
   dispose: vi.fn(),
   getLocales: vi.fn(),
+  transcription: vi.fn(() => ({ baseURL: new URL('apple-speech://transcription') })),
 }))
 
 vi.mock('@moeru/eventa/adapters/electron/renderer', () => ({
@@ -23,6 +24,7 @@ vi.mock('@proj-airi/stage-shared', () => ({
 vi.mock('@xsai-apple-speech/transcription-electron-plugin', () => ({
   createAppleSpeechProvider: () => ({
     getLocales: mocks.getLocales,
+    transcription: mocks.transcription,
   }),
 }))
 
@@ -63,6 +65,19 @@ describe('apple speech transcription provider', () => {
 
   it('exposes its Hearing settings view through the provider definition', () => {
     expect(providerAppleSpeechTranscription.views?.hearing).toBeTypeOf('function')
+  })
+
+  it('passes the selected dictation mode and accuracy options to the native provider', async () => {
+    vi.stubGlobal('window', { electron: { ipcRenderer: {} }, platform: 'darwin' })
+    const provider = await providerAppleSpeechTranscription.createProvider({ locale: 'zh-CN', transcriber: 'dictation' })
+    if (!('transcription' in provider))
+      throw new Error('Expected a transcription provider')
+    provider.transcription('apple-speech')
+    expect(mocks.transcription).toHaveBeenCalledWith({
+      locale: 'zh-CN',
+      transcriber: 'dictation',
+      options: { contentHints: { shortForm: true } },
+    })
   })
 
   it('converts PCM16 input and emits AIRI transcript snapshots', async () => {

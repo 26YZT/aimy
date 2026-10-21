@@ -1,0 +1,119 @@
+{
+  "newly_full_read_sources": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-marker-parser.ts",
+      "lines": 218,
+      "sha256": "3ecb2a0682c8e94beb2cbdb0695795c99a850c669f317f05920f37638877bc70",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/response-categoriser.ts",
+      "lines": 466,
+      "sha256": "ef82764d81d221e83103443a455144183c9b71ab5c35c3f1cd70a348ec47c0fb",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+      "lines": 358,
+      "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/types.ts",
+      "lines": 204,
+      "sha256": "2212e821746f5db42d803d061a05312068cc5a7afa7123e5acb5863ecf27cc31",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/schema.ts",
+      "lines": 102,
+      "sha256": "763b26470e6cd1281e880ff64065e0bda8ba7d2847321b894f7f3ed2e35c4c02",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/agent.ts",
+      "lines": 281,
+      "sha256": "27fb1addc12e2ea8193a7b15e6636a6072d7a15622c5691b95e669e2ebd18d8a",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/plugins/reaction.ts",
+      "lines": 33,
+      "sha256": "f634bf07dc5ad7bbe08a1df57abfdff3ebdfdf355ce8e39fcd8da8dda7800243",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/agents/spark-notify/plugins/builtin-tools.ts",
+      "lines": 34,
+      "sha256": "1d4266fb8df6e40e5b45fd2c0f0a2e7aed852795e9f00b8a77858ef4b97292f1",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/queues.ts",
+      "lines": 113,
+      "sha256": "ab9fb09cd1da93be3a28390c3f55c887bbd9b2bb9aa5df0f40b66a1f62d9ac0d",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/chromatic-main/packages/chromatic/src/index.ts",
+      "lines": 399,
+      "sha256": "52af601ba87b984194f3d6c75d7738d724c5e47344a9e0ed5c20d03bb5ed222e",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/chromatic-main/packages/preset/src/shared.ts",
+      "lines": 218,
+      "sha256": "29e803fbf385fcb61a191eacb12b543b942fd1b7b2fc17006a6dc827956f6f6a",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/chromatic-main/packages/preset/src/index.ts",
+      "lines": 7,
+      "sha256": "c40f5ee157c05efaa0182496758806bfc084296bc315b40479b49422506ea116",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/chromatic-main/packages/preset/src/index.node.ts",
+      "lines": 13,
+      "sha256": "94a09f4ef9ac13a1ea9b07012cda68cb95a49712e2e25e9fb4207f567e2d7700",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/scripts/verify-springs.mjs",
+      "lines": 12,
+      "sha256": "1558eaa46ce410d2184472dfc6089649b0a905232e966f3291e2a86e30d85d72",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/preview-gltf.mjs",
+      "lines": 44,
+      "sha256": "1647509e47222d9294636ef0c83e62001d659438f1a4859cc4fa8c45ec945404",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/spring-physics.mjs",
+      "lines": 130,
+      "sha256": "291c0d8cbfdc1dc08f3941d910dbd6334a7ad4272ad570dd8dae885a407ed0e8",
+      "read_level": "FULL_SOURCE_SEMANTIC_READ",
+      "executed": "see experiments.json; no entrypoint/server scripts executed"
+    }
+  ],
+  "prior_OLV_backend_scope": "/tmp/aimy-20261014-olv-audit/reading-scope.json",
+  "prior_targeted_kirara_charakuru_review": "/tmp/aimy-20261014-olv-audit/review-legacy.md",
+  "excluded": "individual OLV provider implementations remain factory/interface+AST level unless prior scope explicitly says full; no blanket all-source semantic reading claim"
+}

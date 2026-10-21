@@ -1,6 +1,7 @@
 import { createPinia } from 'pinia'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { createApp, nextTick } from 'vue'
+import { createI18n } from 'vue-i18n'
 
 import HearingConfig from './hearing-config.vue'
 
@@ -74,6 +75,7 @@ function mountHearingConfig(beforeEnable?: () => Promise<void>) {
   document.body.appendChild(host)
   const app = createApp(HearingConfig, { beforeEnable })
   app.use(createPinia())
+  app.use(createI18n({ legacy: false, locale: 'en', messages: { en: { stage: { chat: { 'voice-composer': { 'microphone-enable': 'Enable microphone input', 'microphone-disable': 'Disable microphone input' } } } } }, missingWarn: false, fallbackWarn: false }))
   app.mount(host)
 
   return { app, host }

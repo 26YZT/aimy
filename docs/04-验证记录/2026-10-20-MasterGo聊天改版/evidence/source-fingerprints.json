@@ -1,0 +1,9 @@
+{
+  "apps/stage-tamagotchi/src/renderer/components/messenger/messenger-view.vue": "03294eb620e2cab486e17c52ec207f02188a5bc11a33d20e1a4bd7dd3eb4099e",
+  "apps/stage-tamagotchi/src/renderer/components/messenger/messenger-window.vue": "fefae682e2eac26e4ce0c39d76aac46d377b2cf858d04bdb75adfb09cbff69e4",
+  "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue": "b4c67d36444fccc776bdfb6bfdf3a30df0218573c0e31bd4b7a26aad30680a93",
+  "apps/stage-tamagotchi/src/renderer/pages/chat-floating.vue": "50776e494d93a182e2965d4f9ca5193e74c1db6c3424c8548aec96c054ec9443",
+  "packages/stage-ui/src/components/scenarios/chat/components/assistant-item.vue": "a394a85c5834213590e33f1a357fe1280be61735b546d722f8be2211484fe453",
+  "packages/stage-ui/src/components/scenarios/chat/components/user-item.vue": "f09a1bc7c9e060dd352f3a9517d13e3fca73d4db1935eec4738363908c23f18f",
+  "packages/stage-ui/src/components/scenarios/chat/components/message-avatar.vue": "cd5894e93d636dca4f7f9c753de8ecbeb5751c162a24025c118fa53f82b3453e"
+}

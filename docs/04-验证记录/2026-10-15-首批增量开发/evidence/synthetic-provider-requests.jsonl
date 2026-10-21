@@ -1,0 +1,9 @@
+{"at": 1792060609.29004, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": false, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 16, "request_bytes": 115}
+{"at": 1792060647.0323, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": false, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 16, "request_bytes": 115}
+{"at": 1792060826.233622, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": false, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 16, "request_bytes": 115}
+{"at": 1792062411.1021361, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": true, "has_memory_evidence": true, "has_oolong": false, "max_tokens": null, "request_bytes": 20653}
+{"at": 1792062413.2743208, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "memory", "stream": true, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 2048, "request_bytes": 5238}
+{"at": 1792063530.5658581, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": true, "has_memory_evidence": true, "has_oolong": true, "max_tokens": null, "request_bytes": 19700}
+{"at": 1792063530.671125, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "memory", "stream": true, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 2048, "request_bytes": 5427}
+{"at": 1792063574.301426, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "chat", "stream": true, "has_memory_evidence": true, "has_oolong": true, "max_tokens": null, "request_bytes": 15672}
+{"at": 1792063574.33712, "path": "/v1/chat/completions", "model": "synthetic-memory", "kind": "memory", "stream": true, "has_memory_evidence": false, "has_oolong": false, "max_tokens": 2048, "request_bytes": 5437}

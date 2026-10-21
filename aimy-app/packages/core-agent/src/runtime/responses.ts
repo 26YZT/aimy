@@ -14,6 +14,7 @@ import { renderSegmentText } from '../messages/render-context'
 import { projectInput, projectRound } from '../messages/turns'
 import { createGeneration } from './generation'
 import { createContinuationScope, mergeRequestHeaders, replaceProviderConfig, supportsTools } from './request-context'
+import { assertRequestCurrent, guardedRequestFetch } from './request-guard'
 import { RequestSwitch } from './request-switch'
 import { toAiriStreamEvent } from './xsai-events'
 
@@ -186,7 +187,9 @@ export function streamResponses(input: {
   let providerConfigKeys = Object.keys(input.config)
   const requestOptions: ResponsesOptions = {
     ...input.config,
+    fetch: guardedRequestFetch(input.config.fetch, input.options, 'responses'),
     prepareStep: ({ input: current, steps }: { input: ItemParam[], steps: CompletionStep[] }) => {
+      assertRequestCurrent(input.options)
       const resolveStep = input.options?.resolveStep
       if (!resolveStep) {
         scopes.push(input.scope)
@@ -195,6 +198,7 @@ export function streamResponses(input: {
       return (async () => {
         const firstStep = scopes.length === 0 && input.initialStep
         const next = firstStep || await resolveStep()
+        assertRequestCurrent(input.options)
 
         const nextRequest = firstStep
           ? { protocol: 'responses' as const, config: input.config, webSearch: input.webSearch ?? false }
@@ -214,7 +218,7 @@ export function streamResponses(input: {
         providerConfigKeys = replaceProviderConfig(requestOptions, providerConfigKeys, nextRequest.config)
         Object.assign(requestOptions, {
           apiKey: nextRequest.config.apiKey,
-          fetch: nextRequest.config.fetch,
+          fetch: guardedRequestFetch(nextRequest.config.fetch, input.options, 'responses'),
           reasoning: nextRequest.config.reasoning,
           temperature: next.temperature,
           topP: next.topP,

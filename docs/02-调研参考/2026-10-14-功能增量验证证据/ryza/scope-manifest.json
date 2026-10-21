@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-14 Asia/Shanghai",
+  "sourceRyza": {
+    "root": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master",
+    "version": "1.2.23/code26",
+    "gitCommit": "unknown; archive has no .git",
+    "fileCount": 1764,
+    "fingerprint": "ee93d14443ec2e0f64966ea80d67fe80e2b4b24dbb97f778594a9f1503793cf6",
+    "fingerprintAlgorithm": "Python sorted(Path.rglob(\"*\")) path-component order; for each file: relative POSIX path + NUL + sha256(file bytes) + LF; SHA256 of concatenated UTF-8",
+    "allSourceFilesUnchangedFromOriginalAudit": true
+  },
+  "airi": {
+    "root": "/Users/mima1234/Documents/aimy/aimy-app",
+    "aimyHEAD": "b851ef3334320d13dd86cb8cafb449a70d154c9b"
+  },
+  "scopeFiles": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+      "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+      "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/cloud/mimo-audio/index.ts",
+      "sha256": "069ba9a1254224b06a1afbb49be5cb0de765487c138394b9fac2077e845ae299"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+      "sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenes/Stage.vue",
+      "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/features/motions/live2d/profiles.ts",
+      "sha256": "d4e105b4091cfa2d50d773cf731b6f638b43ee2223679aae8db7b53f6441fb4f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+      "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+      "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/android/app/src/main/java/com/ryza/chat/RyzaAlarm.java",
+      "sha256": "1c2a8e529192c02f9d1e9b7090cdd1a048f15ceac700fc37a12ae7d8c2275af2"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/config/layers.json",
+      "sha256": "ed448aa21f5fd43c5a334163df47bd93f5093aceb500789a9498ff8a4235cfc4"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+      "sha256": "52e654166286008886bf7cf155f0c8cf802d8ee30f9d48294ac428c1fa026428"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/web-storage.js",
+      "sha256": "7c052bbeb7222bdaebc1750d8fd62b359972811cf4ea49af96924f3576e2b37f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+      "sha256": "c7b9be46c521faf92c20930fbfdf3d2d1f061f498a3e450807b85cc77b41c250"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/app.js",
+      "sha256": "a71173cf55248600d7519b95247988a63506a6a70bfbca426e7f202a4d8b8df3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/avatar.js",
+      "sha256": "0ba836f1c2ee1ca8ab447d0eeb6fedd1430a73866073a9d6054cae35a57ffb12"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/config.js",
+      "sha256": "35b968664bf8708798b64e57730031a58f840ce09d1168bc0477c91c6653d604"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/crfstore.js",
+      "sha256": "6064edd321287d03246859d40fe527741a4eeedc98b581e3b1d8860105bc9968"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/echo.js",
+      "sha256": "168f7e04a36a34a1b1273f126093cbbac73b7b408edf4164d816b020bdd4c212"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/game.js",
+      "sha256": "a120fff55900395afc13d9d849657ab53bc7d000c93202fc1f788696b4517e44"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+      "sha256": "11fbb6fae5def1214cf939d275d001460fe6da02dcfd08165c56c286932c5611"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/npc.js",
+      "sha256": "043bd5b622863583dfb3aab2f96d277e77d686a5c64048fc5880127306b92d1e"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/turn.js",
+      "sha256": "e8516b2f19ca3b082ae517e316febae51d48bf5386cf535b4bee43b855bb7dac"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/voicecache.js",
+      "sha256": "f4ddf7445793720503131274a7c132bd370422ef0873b6f99bd59f71cb14f79c"
+    }
+  ],
+  "sourceWriteCount": 0,
+  "networkCalls": 0,
+  "realModels": 0,
+  "realDevices": 0,
+  "excludedFromDelta": [
+    "Chromatic"
+  ],
+  "eligibilityCounts": {
+    "已有": 3,
+    "新增": 3,
+    "待AB": 2,
+    "不适用": 4,
+    "工程参考": 1,
+    "窄更强": 0
+  }
+}

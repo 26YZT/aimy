@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/package.json",
+    "sha256": "28c6f3816282c710a8f67021422939cbff9a440ebadd67f083292da6edaf6648",
+    "total_lines": 85
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.js",
+    "sha256": "480f1d31a40b5720fbaaee44c1a21d83392c6cf9516672007813a1824483a058",
+    "total_lines": 199
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.cjs",
+    "sha256": "b10a7be0906f392b84e36b5bad32484d3d6869f9ef926439905825d428246f78",
+    "total_lines": 213
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.d.ts",
+    "sha256": "783a36e6a2d7f172437b5a7988430cca01fd87dd2c11d3b9b79a938600b4a637",
+    "total_lines": 79
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/indexedb.cjs",
+    "sha256": "36425b419aa7b1a1d6355542c26ec2e6936c512ca5daecb8d1baef59a4ae22af",
+    "total_lines": 48
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/index.cjs",
+    "sha256": "7a4b9ad12b0993dc895a753d85cacd9b75986f547e164c84ef508829b3d67dfd",
+    "total_lines": 532
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/shared/unstorage.DD6EOqvC.cjs",
+    "sha256": "ab2e24bab8f466813b0269b4ee9434a3548e302395948d550d7a5bc47b17f4e5",
+    "total_lines": 163
+  }
+]

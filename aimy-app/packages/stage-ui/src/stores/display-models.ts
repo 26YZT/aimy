@@ -151,17 +151,10 @@ export const useDisplayModelsStore = defineStore('display-models', () => {
       }
     }
 
-    displayModels.value.unshift(newDisplayModel)
-
-    // NOTICE:
-    // Keep this awaited. The settings model pick flow can call getDisplayModel immediately
-    // after import; fire-and-forget persistence creates a race where the selected custom model
-    // exists in the UI but is not yet readable from IndexedDB in a later route/render pass.
-    // Source/context: model-selector import flow -> settings-stage-model.updateStageModel().
-    // Removal condition: imported display models are persisted through a transactional queue
-    // that blocks pick/navigation until the write is durably complete.
+    // Publish only after persistence succeeds. The selector keeps its report open on failure,
+    // and getDisplayModel cannot expose an import that disappears after restart.
     await localforage.setItem<DisplayModelFile>(newDisplayModel.id, newDisplayModel)
-      .catch(err => console.error(err))
+    displayModels.value.unshift(newDisplayModel)
 
     return newDisplayModel
   }

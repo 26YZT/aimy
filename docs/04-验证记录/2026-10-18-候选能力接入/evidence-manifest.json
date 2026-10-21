@@ -1,0 +1,372 @@
+{
+  "date": "2026-10-18",
+  "copyPolicy": "original bytes; failed and passed runs retained separately",
+  "files": [
+    {
+      "source": "/tmp/aimy-round2-root/node-final-report.json",
+      "path": "evidence/root/node-final-report.json",
+      "bytes": 20213,
+      "sha256": "f6e9dca41ae3f59079506346163e02aa0fafbb20dfca3d2ec111a310e14eedfb"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/node-final-2.log",
+      "path": "evidence/root/node-final-2.log",
+      "bytes": 68,
+      "sha256": "17ddb0a0c182f3c601685b09c7e629bf57e7aea2c1d95f8e0b2e7b02747b4225"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/browser-final-report.json",
+      "path": "evidence/root/browser-final-report.json",
+      "bytes": 10965,
+      "sha256": "db49c6fb944a4af335e665c1c78cef3c1782386cf2c8b337a6a716bab8d344d5"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/browser-final-3.log",
+      "path": "evidence/root/browser-final-3.log",
+      "bytes": 933,
+      "sha256": "5ef90302db9c868601ec56dc1d90f0b3a82c519c397224b9789857176cea941e"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/voice-final-report.json",
+      "path": "evidence/root/voice-final-report.json",
+      "bytes": 4674,
+      "sha256": "2128f7501029267fd0cdfc8b3ea5678884cf793aca34623ef4d9fa2d23e4f54a"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/voice-final.log",
+      "path": "evidence/root/voice-final.log",
+      "bytes": 376148,
+      "sha256": "f8e6aab2188f36983cd5d9664a58c07570625fecf6dc7377d2a314171ec1a1b8"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/ui-browser-qa-2.log",
+      "path": "evidence/root/ui-browser-qa-2.log",
+      "bytes": 353,
+      "sha256": "21c8d380f5b5c027922426716703730acc32f9d86a427e341f0ca35230c4ef31"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/orchestrator-regression-final.log",
+      "path": "evidence/root/orchestrator-regression-final.log",
+      "bytes": 224,
+      "sha256": "9710abd627135d3aed7345448153f4ef7e7a49383b5560dccdabdad7deb34ddd"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/desktop-build-final.log",
+      "path": "evidence/root/desktop-build-final.log",
+      "bytes": 129782,
+      "sha256": "ffdfbf393a996cd763a2c1244d9f7cb04e8407c569f5b20e983f46e23f55f0dc"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/desktop-types-final-4.log",
+      "path": "evidence/root/desktop-types-final-4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/stage-pages-types-final.log",
+      "path": "evidence/root/stage-pages-types-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/live2d-types-final.log",
+      "path": "evidence/root/live2d-types-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/scoped-lint-final-2.log",
+      "path": "evidence/root/scoped-lint-final-2.log",
+      "bytes": 254,
+      "sha256": "d167c6139ccaf00a974648f9f0ef6a6047e2c873d0855de65465162ec039346e"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/root-lint.log",
+      "path": "evidence/root/root-lint.log",
+      "bytes": 6984,
+      "sha256": "3c8f5ae8360573a4b108b9e61dfca924eec49095dec2e3cf00472438aa893dc7"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/root-types.log",
+      "path": "evidence/root/root-types.log",
+      "bytes": 6732,
+      "sha256": "80079b90151284a5a47cf410ada0944a78f1815fe6a937f3a787c22273228892"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/diff-check.log",
+      "path": "evidence/root/diff-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/i18n-build.log",
+      "path": "evidence/root/i18n-build.log",
+      "bytes": 10054,
+      "sha256": "57ab4702d8620951e93a75f7854b3fdd9e71cede393e6212408dc52f185b2c74"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/vitest-node.config.mts",
+      "path": "evidence/root/vitest-node.config.mts",
+      "bytes": 996,
+      "sha256": "b0d4db036a50b0e005637f36ac35f322c071137e5e9d9d338252da56e4a2f796"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/vitest-browser.config.mts",
+      "path": "evidence/root/vitest-browser.config.mts",
+      "bytes": 972,
+      "sha256": "515c8315ae1b2d671d5477950c0ea26c1e9b3171de91ce052b8c5ba1af958580"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/vitest-ui.config.mts",
+      "path": "evidence/root/vitest-ui.config.mts",
+      "bytes": 1602,
+      "sha256": "f27110147fd560caa4f8dd1137e06d86b904680334d6e3026d59e745f134999f"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/vitest-voice.config.mts",
+      "path": "evidence/root/vitest-voice.config.mts",
+      "bytes": 1086,
+      "sha256": "24ba56f8b2e66cb99bf339918d8398a48312a49fcec46ed3eb76d9ca13cbf2dd"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/companion-card-0.png",
+      "path": "evidence/root/companion-card-0.png",
+      "bytes": 38237,
+      "sha256": "8370d09e354068d33aa0af6a3627221b31b2864e2be521883c93436b8cf6d7d3"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/companion-card-1.png",
+      "path": "evidence/root/companion-card-1.png",
+      "bytes": 22212,
+      "sha256": "7807459ee8fd78ac06ce6337c0f53d5bcbb52031b7d5292995540c319943c4a5"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/companion-card-2.png",
+      "path": "evidence/root/companion-card-2.png",
+      "bytes": 47060,
+      "sha256": "c59d9da48fc8c074988a8a05f7bea87fbe44b3a218565840c751a706e9238c26"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/companion-card-3.png",
+      "path": "evidence/root/companion-card-3.png",
+      "bytes": 22763,
+      "sha256": "4276510d5781512db0e0203eb75f74e20476b2371013295544041971fc79bad4"
+    },
+    {
+      "source": "/tmp/aimy-round2-root/companion-card-4.png",
+      "path": "evidence/root/companion-card-4.png",
+      "bytes": 37664,
+      "sha256": "622a28272757ca8a8c672208249780a7dd9abc719a57e64457d94ad3010312eb"
+    },
+    {
+      "source": "/tmp/aimy-round2-proactive/runtime-init-2.log",
+      "path": "evidence/proactive/runtime-init-2.log",
+      "bytes": 2132,
+      "sha256": "9567c9b56549df45ace832ddf4648a958c0b9e17f127701a56033b687cfa7475"
+    },
+    {
+      "source": "/tmp/aimy-round2-proactive/runtime-init-final.log",
+      "path": "evidence/proactive/runtime-init-final.log",
+      "bytes": 739,
+      "sha256": "7edad537000a625b34a598013489a0fa4d014f1e65592e404487d160426e7458"
+    },
+    {
+      "source": "/tmp/aimy-round2-proactive/runtime-init-lint-final.log",
+      "path": "evidence/proactive/runtime-init-lint-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-round2-proactive/stage-ui-final-types-2.log",
+      "path": "evidence/proactive/stage-ui-final-types-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/tmp/aimy-round2-proactive/vitest-regression.config.mts",
+      "path": "evidence/proactive/vitest-regression.config.mts",
+      "bytes": 824,
+      "sha256": "7421e756b5292aa5139d5bfdee907943f708a804f70b9b9c30bc32e2a363b6f6"
+    },
+    {
+      "source": "/tmp/aimy-round2-proactive/vitest-runtime.config.mts",
+      "path": "evidence/proactive/vitest-runtime.config.mts",
+      "bytes": 867,
+      "sha256": "3b9bce8549afb0dc99cf6a5ee1801d74bd9342ce0e43c796de24ff9c7815834f"
+    },
+    {
+      "source": "/tmp/aimy-round2-proactive/report.json",
+      "path": "evidence/proactive/report.json",
+      "bytes": 1242,
+      "sha256": "791888e6a400e3a1839ca5eca20a547476093009d54705cf33ee6bb195a75c0d"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/storage-red.log",
+      "path": "evidence/assets/storage-red.log",
+      "bytes": 3735,
+      "sha256": "5bce97f30770f792345342de95d733a1da2a93efee037b59c590a7223c27b735"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/storage-red.png",
+      "path": "evidence/assets/storage-red.png",
+      "bytes": 11932,
+      "sha256": "d85bfb0b784eed32fcec090ee5fb3640cd2a6d02c63eebb8894b0487d8164c46"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/storage-green.log",
+      "path": "evidence/assets/storage-green.log",
+      "bytes": 383,
+      "sha256": "293d5d40432b298ab67a82f9b94ebd944c1f00497819d43e1231bfc536ba29c9"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/storage-lint.log",
+      "path": "evidence/assets/storage-lint.log",
+      "bytes": 412,
+      "sha256": "c129a293343d6c2d45a87df9d622c4c7df794c97d17506c8e8ad49208bcc04c5"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/unit-final.log",
+      "path": "evidence/assets/unit-final.log",
+      "bytes": 223,
+      "sha256": "67cf4bf1598aa9f9033798c185f0851bdd1d22f0c7a8751a3dcc28cc9bd2d724"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/browser.config.mts",
+      "path": "evidence/assets/browser.config.mts",
+      "bytes": 1337,
+      "sha256": "99f1065a325b8ae94e7daafbf81f07d775d36ace4011f5aab3ffb8073b5ffcc8"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/vitest.config.mjs",
+      "path": "evidence/assets/vitest.config.mjs",
+      "bytes": 242,
+      "sha256": "3605cc929ee54b24df9f524dd3c5767a70cf9cb2053309c1cbf343f0a9eecbb8"
+    },
+    {
+      "source": "/tmp/aimy-round2-workflow-assets/lint-final.log",
+      "path": "evidence/assets/lint-final.log",
+      "bytes": 450,
+      "sha256": "cf41438c7bb177c68ac091f0f47fa1dd9b7bf285e908d2dc86f4385a2cdd00ea"
+    },
+    {
+      "source": "/tmp/aimy-round2-voice-alias-red.log",
+      "path": "evidence/voice/aimy-round2-voice-alias-red.log",
+      "bytes": 3632,
+      "sha256": "a927ad50a217c6ad28f7ef852272e899dcc28113b1841e5a61080ce46fe0d36f"
+    },
+    {
+      "source": "/tmp/aimy-round2-voice-alias-green.log",
+      "path": "evidence/voice/aimy-round2-voice-alias-green.log",
+      "bytes": 2008,
+      "sha256": "db8a5612eb80298ac81f074afba28466b0d8cba335753f58d5f5b2085ea0c977"
+    },
+    {
+      "source": "/tmp/aimy-round2-voice-ws-alias-red.log",
+      "path": "evidence/voice/aimy-round2-voice-ws-alias-red.log",
+      "bytes": 2390,
+      "sha256": "3ea8016ffb2aca629e6e8b42b8a04ba72d86eb66d103d72eb156a67e0d176a57"
+    },
+    {
+      "source": "/tmp/aimy-round2-voice-ws-alias-green.log",
+      "path": "evidence/voice/aimy-round2-voice-ws-alias-green.log",
+      "bytes": 1067,
+      "sha256": "d806c13e79af7035c1c6491c6488914beede67f2c6cfa29c867bb5dec6cbcee5"
+    },
+    {
+      "source": "/tmp/aimy-round2-voice-ws-alias-lint.log",
+      "path": "evidence/voice/aimy-round2-voice-ws-alias-lint.log",
+      "bytes": 412,
+      "sha256": "790610cc69b16760b2d11cf6313207257cf2549397572b187680a3fdd4ade0c7"
+    },
+    {
+      "source": "/tmp/aimy-round2-motion-red.log",
+      "path": "evidence/voice/aimy-round2-motion-red.log",
+      "bytes": 1212,
+      "sha256": "64e3c7994111cfa1ffb8f082b76644da1527a35e403dcc334ab188bbbbc6346f"
+    },
+    {
+      "source": "/tmp/aimy-round2-motion-green.log",
+      "path": "evidence/voice/aimy-round2-motion-green.log",
+      "bytes": 245,
+      "sha256": "64edba466bdd8a584b3cc4cc8a2867723f29d531657e84c93ff73d6f91b29e61"
+    },
+    {
+      "source": "/tmp/aimy-closure-20261016/product-build.mjs",
+      "path": "evidence/root/product-build.mjs",
+      "bytes": 158,
+      "sha256": "88518c8ba479d928553b408badde9059a8f06df5d3bd0499bef50db5b4a8aa2f"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/electron-2.log",
+      "path": "evidence/native/electron-2.log",
+      "bytes": 20802,
+      "sha256": "22043bda4b30b3a64db1a429a149b485567b942d733010779fc9d1274cc47e66"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/electron.log",
+      "path": "evidence/native/electron.log",
+      "bytes": 563,
+      "sha256": "d01648d335b974d35c68cdd1ab583ddbbbf1810c6fd045b8a38bc390aa01cb18"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/host.mjs",
+      "path": "evidence/native/host.mjs",
+      "bytes": 1783,
+      "sha256": "c29d50fc5b898be9584e41d9730119e524993e997e68a806db0d77de068d95d2"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/launch-2.json",
+      "path": "evidence/native/launch-2.json",
+      "bytes": 478,
+      "sha256": "21a099371bfc530308d3f629b7aa6abed1595f8523f69852a6f2e52c9acabdba"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/launch.json",
+      "path": "evidence/native/launch.json",
+      "bytes": 393,
+      "sha256": "b09279b9f4c3eecbcec70aaeb43298dd481ef6a0abff6db9f599f70c35297f78"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/network.sb",
+      "path": "evidence/native/network.sb",
+      "bytes": 202,
+      "sha256": "4d103420ebcd8ca55d4d635f913cd7621e1072a3a2247d1abef22d6e2ee05cdf"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/probe.json",
+      "path": "evidence/native/probe.json",
+      "bytes": 1037,
+      "sha256": "c36c2f30c35d6f06f1014374f5e74f4f93ae0bea625e4a8a4882c0f70f0b20ef"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/probe.mjs",
+      "path": "evidence/native/probe.mjs",
+      "bytes": 1725,
+      "sha256": "2c333749a1ef07ba82718ee063d0c951fcb9a05b3beb6195c92cffc5e3f93344"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/result.json",
+      "path": "evidence/native/result.json",
+      "bytes": 1060,
+      "sha256": "8c1cf1ecfb2ade45416164e56b137e8b4cffc8c9aa01b32f1f01347f1d43b77d"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/state-before-quit.json",
+      "path": "evidence/native/state-before-quit.json",
+      "bytes": 876,
+      "sha256": "8fdfd81dab0721d7c5cb058d2650286b6fb78f21fdb1f42e7327e1692af651fd"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/state.json",
+      "path": "evidence/native/state.json",
+      "bytes": 875,
+      "sha256": "51934bde16d66afe0439ad1fbb0911464f03f8188c9afd79962b7580add39d64"
+    },
+    {
+      "source": "/tmp/aimy-round2-native-smoke/will-quit.json",
+      "path": "evidence/native/will-quit.json",
+      "bytes": 82,
+      "sha256": "ef62f0d6cd88fd31a6c2cda99eb136e5be6c8edc21028d170c0a7b2f62eccd30"
+    }
+  ]
+}

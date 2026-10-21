@@ -1,11 +1,14 @@
 import type { MicrophoneSource } from '@proj-airi/audio/browser'
 import type { Ref } from 'vue'
 
+import type { ResourceLease } from '../../services/resource-policy'
+
 import { microphoneSource } from '@proj-airi/audio/browser'
 import { AudioInput } from '@proj-airi/pipelines-audio'
 import { useDevicesList } from '@vueuse/core'
 import { computed, markRaw, onScopeDispose, ref, shallowRef, watch } from 'vue'
 
+import { getResourcePolicy, requestResourceAccess } from '../../services/resource-policy'
 import { useAnalytics } from '../use-analytics'
 
 const UNKNOWN_STT_PROVIDER_ID = 'unknown'
@@ -76,14 +79,31 @@ export function useAudioDevice(selectedAudioInput: Ref<string> = ref('')) {
   const input = shallowRef(markRaw(new AudioInput(source.value, { historyMs: MICROPHONE_HISTORY_MS })))
 
   function createSource(constraints: MediaStreamConstraints): MicrophoneSource {
-    const created = markRaw(microphoneSource(constraints, {
+    let lease: ResourceLease | undefined
+    let created: MicrophoneSource
+    const original = microphoneSource(constraints, {
       contextOptions: MICROPHONE_CONTEXT,
       // A replaced device can close after the new one opened. Only the selected source updates the view.
       onStream: (opened) => {
+        if (!opened) {
+          lease?.release()
+          lease = undefined
+        }
         if (source.value === created)
           stream.value = opened
       },
-    }))
+    })
+    created = markRaw<MicrophoneSource>({
+      live: true,
+      get stream() { return original.stream },
+      get echoCancellation() { return original.echoCancellation },
+      open(signal) {
+        lease = getResourcePolicy()?.acquire('microphone')
+        const currentLease = lease
+        signal.addEventListener('abort', () => currentLease?.release(), { once: true })
+        return original.open(currentLease ? AbortSignal.any([signal, currentLease.signal]) : signal)
+      },
+    })
     return created
   }
 
@@ -106,13 +126,20 @@ export function useAudioDevice(selectedAudioInput: Ref<string> = ref('')) {
    * Subscribes until the first block arrives, then leaves. It reports a denied or missing device.
    * Device labels need enumeration after permission, so this also refreshes the device list.
    */
-  async function askPermission() {
+  async function askPermission(signal?: AbortSignal) {
+    signal?.throwIfAborted()
+    await requestResourceAccess('microphone')
+    signal?.throwIfAborted()
+    const lease = getResourcePolicy()?.acquire('microphone')
     const probe = new AbortController()
-    const reader = input.value.subscribe({ signal: probe.signal }).getReader()
+    const reader = input.value.subscribe({ signal: signal ? AbortSignal.any([probe.signal, signal]) : probe.signal }).getReader()
     try {
       await reader.read()
+      signal?.throwIfAborted()
+      lease?.assertCurrent()
       permissionGranted.value = true
       devices.value = await navigator.mediaDevices.enumerateDevices()
+      lease?.assertCurrent()
     }
     catch (error) {
       if (audioDeviceErrorCode(error) === 'permission_denied') {
@@ -122,7 +149,9 @@ export function useAudioDevice(selectedAudioInput: Ref<string> = ref('')) {
       throw error
     }
     finally {
+      lease?.release()
       probe.abort('Permission probe finished')
+      reader.releaseLock()
     }
   }
 

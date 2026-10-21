@@ -1,0 +1,97 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+    "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e",
+    "lines": 324
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+    "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7",
+    "lines": 150
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+    "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35",
+    "lines": 162
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+    "sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a",
+    "lines": 20
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+    "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9",
+    "lines": 24
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+    "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856",
+    "lines": 453
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+    "sha256": "e905772d5c74dcd6b2f7d858e6d504c5d23c2ff2565c77409e11353e85db7014",
+    "lines": 102
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+    "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7",
+    "lines": 358
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio/src/processors/tts-chunker.ts",
+    "sha256": "db1907ca4e411ba9067c7e7508dc1556662f801a1cc065960328c98585e9050f",
+    "lines": 525
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/utils/tts.ts",
+    "sha256": "303cb75528af604fff0ac635a34f25c056d15f5d3026454aacda7411d008ebc4",
+    "lines": 265
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/speech.ts",
+    "sha256": "bdbfe0b14c630ed1d969492a8fcbdbaf4af1433171cea0ee45c9435d9ec3050c",
+    "lines": 758
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/tools/mcp.ts",
+    "sha256": "24945aded6e7941649d1c1596bcd900502b4ce455c1cb09fba85853ace26acbe",
+    "lines": 159
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/airi/mcp-servers/index.ts",
+    "sha256": "c5a11812b4c3d9a5e7e2e9468289dfb60eafd7f7c4650f92a9e250bc13d894ae",
+    "lines": 531
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/stores/tools/mcp.ts",
+    "sha256": "2bc2db1a22181031d992c1041204a56aa5d08db60175ca6847843cf0fb6eec88",
+    "lines": 48
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+    "sha256": "5435f5534daf2f346f3c6dca67b5e245ea07a36b9ad47ed4729d5492dde4f759",
+    "lines": 190
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+    "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa",
+    "lines": 131
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+    "sha256": "677bbabe28e8eaa9527f71630397bc86b4a9154c147ae3fe81f9e3de7ac2f3c0",
+    "lines": 155
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/devtools/vision.vue",
+    "sha256": "cec84f073da077be93d642186c400895ef79bdd0f5edb9892c27552d63a76449",
+    "lines": 633
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/App.vue",
+    "sha256": "cc350e25147e59d63ffa5ef68e9eb2a2929ff97d03cff8e4a6b2db8bf4429550",
+    "lines": 413
+  }
+]

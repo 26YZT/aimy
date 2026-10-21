@@ -1,0 +1,381 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "gold_sha256": "47c98f5dfefbfaf2a7043d7ecd4afff3bf10d429b6c15c8c1333f9106c87c4b8",
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+      "symbol": "_json_list",
+      "start": 29,
+      "end": 43,
+      "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+      "symbol": "_coerce_ts",
+      "start": 78,
+      "end": 83,
+      "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+      "symbol": "_format_ts_label",
+      "start": 86,
+      "end": 87,
+      "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+      "symbol": "_memory_time_payload",
+      "start": 90,
+      "end": 108,
+      "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+      "symbol": "resolve_source_memories",
+      "start": 642,
+      "end": 682,
+      "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "MemorySearchRequest",
+      "start": 39,
+      "end": 46,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "MemorySearchResult",
+      "start": 50,
+      "end": 60,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_clean_query",
+      "start": 63,
+      "end": 64,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "extract_memory_search_requests",
+      "start": 67,
+      "end": 105,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "parse_memory_keywords",
+      "start": 108,
+      "end": 120,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_logical_day_start",
+      "start": 123,
+      "end": 126,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_parse_date",
+      "start": 129,
+      "end": 147,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "resolve_memory_time_window",
+      "start": 150,
+      "end": 165,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_norm",
+      "start": 168,
+      "end": 169,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "rank_memory_rows",
+      "start": 172,
+      "end": 257,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "actor_memory_query",
+      "start": 260,
+      "end": 278,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "search_actor_memories",
+      "start": 281,
+      "end": 331,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_attach_source_details",
+      "start": 334,
+      "end": 364,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_history_sources",
+      "start": 367,
+      "end": 376,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_excerpt",
+      "start": 379,
+      "end": 384,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_source_line",
+      "start": 387,
+      "end": 393,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_read_message",
+      "start": 396,
+      "end": 411,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "open_memory_source",
+      "start": 414,
+      "end": 450,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "search_chat_history",
+      "start": 453,
+      "end": 496,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "_format_time",
+      "start": 535,
+      "end": 536,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+      "symbol": "format_memory_search_context",
+      "start": 539,
+      "end": 570,
+      "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b",
+      "symbol": "LongTerm whole module",
+      "start": 1,
+      "end": 412,
+      "execution": "Original JavaScript; localStorage fake; no LLM"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7",
+      "symbol": "original module",
+      "start": 1,
+      "end": 151,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/types.ts",
+      "sha256": "497b40b242dc7716753aa8c33277ca8aa25bce96b4af46761652f5bc6ba439a7",
+      "symbol": "original module",
+      "start": 1,
+      "end": 75,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/merge.ts",
+      "sha256": "0f7632c172c9340c3d76b6a11a35ebb02151f10ab4a4eb6518a64839d289ef68",
+      "symbol": "original module",
+      "start": 1,
+      "end": 247,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/manager.ts",
+      "sha256": "99ac0d163d6e154ea7b72b51abcea4ddd1cdc3d2921a2085bdc7b74778e39bf5",
+      "symbol": "original module",
+      "start": 1,
+      "end": 151,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/context-registry.ts",
+      "sha256": "80b7202a70ede6aaf07c3d27597f10f85381665190a1f4f60f6403f644d2cc48",
+      "symbol": "original module",
+      "start": 1,
+      "end": 164,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/utils/event-source.ts",
+      "sha256": "7fef974944eb5bafeb653d556fa093c3e2c2355e913a587234ed55e3ece02cac",
+      "symbol": "original module",
+      "start": 1,
+      "end": 46,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/context-store.ts",
+      "sha256": "6a903814528e2a320c1c43e0dd9cd969fbc99d8c95ad8823f656a61c9da0856e",
+      "symbol": "original module",
+      "start": 1,
+      "end": 79,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/plugin-protocol/src/types/events.ts",
+      "sha256": "e346c44beeabd4418191e82704c8c1d2be316dfd56e50e9df11d4c87a16dc70e",
+      "symbol": "ContextUpdateStrategy",
+      "start": 545,
+      "end": 548,
+      "execution": "Original enum only; no Eventa/bootstrap"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/context-providers/runtime-prompt.ts",
+      "sha256": "1222d2caab9bc8dec10ae356d04dccc7ba0797fe1276a9970be9a7b54bad75f3",
+      "symbol": "original module",
+      "start": 1,
+      "end": 24,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/context-prompt.ts",
+      "sha256": "a80172e216049a1f47ff17a966e137d4386d80df94894bb3cc9655cbd11c9a00",
+      "symbol": "original module",
+      "start": 1,
+      "end": 80,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/render-context.ts",
+      "sha256": "f2ba4b135f94230609bef78b7dddcb94ea37d6b398d290ae5c40d49ead43d5d8",
+      "symbol": "original module",
+      "start": 1,
+      "end": 88,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/turns.ts",
+      "sha256": "840ddf2fc25e3455312c8b72dc01b8a470a0a1bb517933cda2b0520bc9d6b0ef",
+      "symbol": "original module",
+      "start": 1,
+      "end": 108,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+      "sha256": "706747b89b705108eded64c8736b4194f5bfac52f41714a2355f6b4b12238d8f",
+      "symbol": "original module",
+      "start": 1,
+      "end": 194,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/datetime-prefix.ts",
+      "sha256": "b8d541d38b257565e6373e41bc9187cba5f2f1d21920ff7b317867dbcb0d2489",
+      "symbol": "original module",
+      "start": 1,
+      "end": 35,
+      "execution": "CommonJS transpile only; relative source imports actual; Vue/Pinia/nanoid actual installed libraries"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "prependTextToContent",
+      "start": 28,
+      "end": 45,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "getMessageText",
+      "start": 47,
+      "end": 58,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "formatReplyPromptPrefix",
+      "start": 69,
+      "end": 84,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "getStablePromptTimestamp",
+      "start": 560,
+      "end": 566,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "buildContext",
+      "start": 568,
+      "end": 580,
+      "execution": "Exact AST function declaration; unwrapMessage identity and now fixed. Not full runtime dispatch."
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "symbol": "runtime-context append fragment",
+      "start": 881,
+      "end": 888,
+      "execution": "Exact original fragment wrapper; deps.context.snapshot returns actual contextStore snapshot, lifecycle recorder noop"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "read": "partial 530-630; actual runtimeContextProviders and callbacks",
+      "execution": "not executed; caller evidence only"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+      "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e",
+      "read": "partial1-230; notes not used in processSparkNotify; tasks separate",
+      "execution": "not executed; caller evidence only"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/chat.py",
+      "sha256": "9c1bcd0972c00c739b022018cb3edb07d075a42109c0dfa421a8dc88c6660b0f",
+      "read": "partial74-87 and2874-2928; real parser/caller/exception boundary",
+      "execution": "not executed; caller evidence only"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/database.py",
+      "sha256": "b1429034c0f886809e560cb390e1e8ee75811cba0cccecdc7a2b07b4a10a9217",
+      "read": "partial88-167,638-659; table field schema only",
+      "execution": "not executed; caller evidence only"
+    }
+  ],
+  "all_source_hashes_unchanged": true
+}

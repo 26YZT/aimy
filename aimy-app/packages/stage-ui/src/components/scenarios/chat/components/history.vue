@@ -45,6 +45,10 @@ const props = withDefaults(defineProps<{
    * them.
    */
   surface?: 'translucent' | 'opaque'
+  /** Messenger hosts show compact bubbles and avatars without changing message behavior. */
+  appearance?: 'stage' | 'messenger'
+  assistantAvatar?: string
+  userAvatar?: string
   /**
    * When the scrollbar shows: while scrolling, or also while the pointer is
    * over the history. A host that passes clicks through the empty history
@@ -71,6 +75,7 @@ const props = withDefaults(defineProps<{
   tailInset: 0,
   variant: 'desktop',
   surface: 'translucent',
+  appearance: 'stage',
   scrollbar: 'scroll',
   passive: false,
   expiredBefore: 0,
@@ -309,6 +314,8 @@ function emitToolCallRerun(
               :scroll-container="chatHistoryRef"
               :variant="variant"
               :surface="surface"
+              :appearance="appearance"
+              :avatar="assistantAvatar"
               :tool-call-renderers="toolCallRenderers"
               @copy="emitCopyMessage(message, index)"
               @delete="emitDeleteMessage(message, index)"
@@ -324,6 +331,8 @@ function emitToolCallRerun(
               :scroll-container="chatHistoryRef"
               :variant="variant"
               :surface="surface"
+              :appearance="appearance"
+              :avatar="userAvatar"
               @copy="emitCopyMessage(message, index)"
               @delete="emitDeleteMessage(message, index)"
               @reply="emitReplyMessage(message)"

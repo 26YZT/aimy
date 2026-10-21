@@ -1,0 +1,240 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt.ts",
+    "review": "full",
+    "ranges": "1-383",
+    "lines": 383,
+    "sha256": "12718b37961e2749bd3b4e8f7bea6d0ae9137aef6c2462bc46ab2dd2d61ce782"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt-types.ts",
+    "review": "full",
+    "ranges": "1-26",
+    "lines": 24,
+    "sha256": "22f0f7a579ea4c9501b3a4d419ed1bb961d6ccdff3733b5890176595dadac97b"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/end-detection.ts",
+    "review": "full",
+    "ranges": "1-23",
+    "lines": 23,
+    "sha256": "e5fb9751a644525af9f00eeba2beae8ecf97c43f992bdabdf00dfd6c8a6f7db4"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/controller.ts",
+    "review": "full",
+    "ranges": "1-285; recovered omitted 110-145 in separate read",
+    "lines": 285,
+    "sha256": "9b4e8c35b5319c0c50b62832630c232cdae80f5785a191a368cb6c9aa48bdab2"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+    "review": "full",
+    "ranges": "1-358",
+    "lines": 358,
+    "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+    "review": "full",
+    "ranges": "1-453",
+    "lines": 453,
+    "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+    "review": "full",
+    "ranges": "1-110",
+    "lines": 110,
+    "sha256": "046e4452947ca992d1950cfda4bd2bf661b5288be6a45d32d8204404774b4cca"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/audio/audio-device.ts",
+    "review": "full",
+    "ranges": "1-134",
+    "lines": 134,
+    "sha256": "1c1fdeac112b09c3557bcc8f6926ae1e0e29867471f730baab57cbc09a66908e"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/audio/src/browser/sources.ts",
+    "review": "full",
+    "ranges": "1-130",
+    "lines": 130,
+    "sha256": "a783f9c9b909e7c8550e6d41621696edffc0672a006868133b41f71ac1ca0e96"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/utils/voice-input-lifecycle.ts",
+    "review": "full",
+    "ranges": "all",
+    "lines": 85,
+    "sha256": "f61b476631898fbb8fff3ab607a1f906b8031086fe9f7a736822a01e6ba9bd24"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+    "review": "full",
+    "ranges": "1-190",
+    "lines": 190,
+    "sha256": "5435f5534daf2f346f3c6dca67b5e245ea07a36b9ad47ed4729d5492dde4f759"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/processing-store.ts",
+    "review": "full",
+    "ranges": "1-198",
+    "lines": 198,
+    "sha256": "3bf998c611caea71357ead67d6eed2bee77f4d41dd94d9d6b2d0a11705531f77"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+    "review": "full",
+    "ranges": "1-131",
+    "lines": 131,
+    "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+    "review": "full",
+    "ranges": "1-155",
+    "lines": 155,
+    "sha256": "677bbabe28e8eaa9527f71630397bc86b4a9154c147ae3fe81f9e3de7ac2f3c0"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/vision-read-queue.ts",
+    "review": "full",
+    "ranges": "1-66",
+    "lines": 66,
+    "sha256": "06ee4123f1bcccd33f17ad5035c8d756b174de9c59be6d66ca24f11c469d0f53"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/electron-screen-capture/src/main/index.ts",
+    "review": "full",
+    "ranges": "1-289",
+    "lines": 289,
+    "sha256": "cc49c6a4acd7cb01abe8cb527def95bdca2dd76e487c77386e4eae26c2783aec"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/electron-screen-capture/src/vue/use-electron-screen-capture.ts",
+    "review": "full",
+    "ranges": "1-59",
+    "lines": 59,
+    "sha256": "9b650ed62f82a614ad20839485f778e12e2a4f4e21ecf75e46711545304a72cf"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+    "review": "full",
+    "ranges": "1-324",
+    "lines": 324,
+    "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+    "review": "full",
+    "ranges": "1-150",
+    "lines": 150,
+    "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+    "review": "full",
+    "ranges": "1-235",
+    "lines": 235,
+    "sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+    "review": "partial",
+    "ranges": "395-470",
+    "lines": 470,
+    "sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/devtools/vision.vue",
+    "review": "full",
+    "ranges": "all; initial script then remainder template read separately",
+    "lines": 633,
+    "sha256": "cec84f073da077be93d642186c400895ef79bdd0f5edb9892c27552d63a76449"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/R4-记忆与语音增量技术方案.md",
+    "review": "full",
+    "ranges": "all",
+    "lines": 104,
+    "sha256": "474b8fd7c887d04ccc51822478e0ba7bbe96c1b548ced764ca8246407d13e9d1"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/R3-体验验收清单.md",
+    "review": "full",
+    "ranges": "all",
+    "lines": 78,
+    "sha256": "6f62aa45e49bcc6025de2403a1b3a6afc2463e725375e2f256b1df27133621ef"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/docs/01-决策记录/2026-10-13-三项产品行为与立项方法.md",
+    "review": "full",
+    "ranges": "all",
+    "lines": 89,
+    "sha256": "46b7b0342a50c11c7e2ccc897fbac977078e5a2c86652a26944c912c439e3425"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+    "review": "full",
+    "ranges": "all",
+    "lines": 207,
+    "sha256": "d0704953e37dc3197cf425cf60e73cdc87176a78de9405e303f6ae6e8a882563"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.ts",
+    "review": "full",
+    "ranges": "all",
+    "lines": 42,
+    "sha256": "086384c14bc361c52c90fa6fc7174988bb19d6a20f698f1d53841e1b579b4110"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice-messages.ts",
+    "review": "full",
+    "ranges": "all",
+    "lines": 145,
+    "sha256": "6a15392dbe7876be749d60a8970617ee2b06c401b5922727749ec64f06b7f801"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/components/WithScreenCapture.vue",
+    "review": "full",
+    "ranges": "all",
+    "lines": 124,
+    "sha256": "f2b0924e7569d5115263399b27255eecb7cfa7910928d9add01f04930e2891da"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/features/live2d/system-audio-lipsync.ts",
+    "review": "full",
+    "ranges": "all",
+    "lines": 325,
+    "sha256": "ab77752bda9437c117678f78d61a737f7279ed84a8c9a0836510665788c9319f"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+    "review": "full",
+    "ranges": "all",
+    "lines": 533,
+    "sha256": "c86c7f98809d210f6cd205249470cdccde1e49b8b120d0e8b97087af980cd46d"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+    "review": "full",
+    "ranges": "all",
+    "lines": 65,
+    "sha256": "b1cf1061efc6f3e9570859e55b18c48200316434b6aba1b9a2e6a799f819dd12"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/devtools/screen-capture.vue",
+    "review": "partial",
+    "ranges": "1-135",
+    "lines": 383,
+    "sha256": "4e592cfc21ba332306ffe7c010afd6de52fcd3db732883a4da6e40aa1336245b"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/index.vue",
+    "review": "partial",
+    "ranges": "current source callsite searches; 375-401 newly read; earlier 318-375 in Ryza audit",
+    "lines": 564,
+    "sha256": "9947b73be7d6c82091fae1bf4fb61281027be3e44716d1bfdbe2d3fe7420c8ad"
+  }
+]

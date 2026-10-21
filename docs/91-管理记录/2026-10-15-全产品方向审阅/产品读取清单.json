@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-15",
+  "agent": "direction_product_audit",
+  "file_count": 25,
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/AGENTS.md",
+      "sha256": "6fce025f00e2eec1598a87506287139edf0224f28e89048b59fc84a0fe7953db",
+      "lines": 46,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/README.md",
+      "sha256": "1df1f8592e65f55d72edd388b317544b4a4bce8ab927619f4bf86a0144a90de4",
+      "lines": 60,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/00-当前方向/开发方向与边界.md",
+      "sha256": "e373cb3a6c52de0c0a28dd97ff9edb3f14c767dbc365fa3101b779f24f46cb4c",
+      "lines": 53,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/PROJECT_STATE.md",
+      "sha256": "4f3b25d43bbf53c0a0727913879018840cd3c6ee2274cd676bd4b37778934dcd",
+      "lines": 89,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/任务编排.md",
+      "sha256": "6f4d3d0e7167d02fd441a84461c2ed9e143e25009bbb7c3725cd415e184b75f2",
+      "lines": 103,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/00-当前方向/PRD-2.0-对齐草案.md",
+      "sha256": "738a88a097349869bff36c631cd7aef2f30f921fe516113c8407fa4f51572172",
+      "lines": 86,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/01-决策记录/2026-10-10-AIRI直接衍生与旧样机隔离.md",
+      "sha256": "f824c7e6897e02823d311c8f6360277b7a662e39731c50ec51a0f0a55514eba4",
+      "lines": 86,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/01-决策记录/2026-10-13-三项产品行为与立项方法.md",
+      "sha256": "6495debe9408d76518e451d7d2b5f05a53269f4d4a23f2b3c04e063cb93adde4",
+      "lines": 91,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/01-决策记录/2026-10-14-只复用功能增量与Chromatic排除.md",
+      "sha256": "cfd361d447d23192edc74ae0397c3e73c89eea66a4d2a2ab8128df2148146f21",
+      "lines": 18,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/R2.5-人设与关系体验手册.md",
+      "sha256": "ec5672b80970055c6a4ffcbde9bb7d3f634cd89b0d23a0149f439a4300f7c0a1",
+      "lines": 7,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/R3-体验验收清单.md",
+      "sha256": "d4b19e31aae7f6ed506664cb02f8301fb53cabcfc4e5c0f0913dab66cefcab1e",
+      "lines": 80,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/R4-记忆与语音增量技术方案.md",
+      "sha256": "a6c9a97920ea3b7e50e1d48a64d2de416a18fa41f12ef93745984c72e5b892c8",
+      "lines": 106,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+      "sha256": "c4a9ea358551464e62ca0a9defea9b5a6e9dcc17d71f4fb7fcd9930ad2a5aacb",
+      "lines": 50,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/02-产品PRD.md",
+      "sha256": "d18c7440ad68074e78d69eaa876391913df70e0a1689db36b2967e303b647f36",
+      "lines": 89,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/06-Prompt与角色体验.md",
+      "sha256": "f4c6705cb73555ad9e1b86c08d9cd48ff6f55e1159dadb55e9743f02958ff50c",
+      "lines": 54,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/07-验证与AI评测计划.md",
+      "sha256": "799d15d47c86aba25412e9963ea4a1daaef5e391682dd040f3fbe0a4f341c5de",
+      "lines": 90,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/README.md",
+      "sha256": "4a47772c463cd4f7814a059683b49c5660aacf17fe786e1e2e9a62d29a0e0785",
+      "lines": 57,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/最终审定摘要.md",
+      "sha256": "46595094953853c8994307e458e556b84f7e3a0761ec62da7f71a86750d53410",
+      "lines": 42,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/02-首批PRD与交互规格.md",
+      "sha256": "5e3e9e16bf4253730af65d490225f519d858c0e990b6752a44fc6b8333f13239",
+      "lines": 84,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/06-验收与评测目标.md",
+      "sha256": "bd5ece2d68c16d7714bfe157005bb564b3106d30e07a7e566a1acbd5b6024970",
+      "lines": 121,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/07-Prompt草案与使用边界.md",
+      "sha256": "a843d53bcd588d3de33ea4a37a95defc53101b95c0efb7d652847604dd18bb69",
+      "lines": 17,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/审定清单.json",
+      "sha256": "a396a279e227b57b2122370fb8b480d76cc8586598fd580d834cbe428ffbf878",
+      "lines": 222,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/逐项审定记录.md",
+      "sha256": "c761a9ffde6dd908457cc45a6d3a9cabd88b4f32f28739348d06058e7a2f9117",
+      "lines": 17,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-10-AIRI实测与能力差距.md",
+      "sha256": "7324b7c56e5b063fb91129b57a4ff7ce766b84571c2355a28dbedb08a58d1343",
+      "lines": 128,
+      "read_scope": "full output / context",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-AIRI现状能力清单.md",
+      "sha256": "be7a58a46c841e5ac839b4be8360972ab5cc801e169f38e3e97f65c14b5f3003",
+      "lines": 208,
+      "read_scope": "rg-selected-lines",
+      "purpose": "product direction, source-of-truth and evidence coverage audit"
+    }
+  ],
+  "side_effects": {
+    "product_writes": 0,
+    "root_docs_writes": 0,
+    "installs_builds_model_calls_app_launches": 0,
+    "git_mutations": 0
+  }
+}

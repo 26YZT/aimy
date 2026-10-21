@@ -85,7 +85,9 @@ notice:
     preview-title: What is it?
 
 about:
+  title: About
   subtitle: Desktop ver.
+  upstream-credit: Aimy is based on Project AIRI. The links below describe the upstream project.
   current-version: Current Version
   common:
     cancel: Cancel
@@ -95,6 +97,8 @@ about:
     documentation: Documentations
     github: GitHub
   update:
+    protected-folder-note: This Aimy installation uses a protected Windows folder. Installing an update can require administrator permission.
+    downgrade-note: This channel provides an older version. Installing it will downgrade Aimy.
     lane:
       label: Update lane
       description: Choose channel release to follow

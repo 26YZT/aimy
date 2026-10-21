@@ -31,6 +31,11 @@ import { createIOTraceRecordingConfig } from './configs/io-trace-recording'
 import { emitAppBeforeQuit, emitAppWindowAllClosed } from './libs/bootkit/lifecycle'
 import { getElectronMainDirname, setElectronMainDirname } from './libs/electron/location'
 import { createI18n } from './libs/i18n'
+import { registerAcceptanceBudget } from './services/aimy/acceptance-budget'
+import { loadAcceptanceLedger } from './services/aimy/acceptance-config'
+import { ProviderSecretVault, registerProviderSecrets } from './services/aimy/provider-secrets'
+import { DesktopResourceLifecycle } from './services/aimy/resource-lifecycle'
+import { isTrustedSender } from './services/aimy/trusted-windows'
 import { setupAppleSpeechTranscriptionService } from './services/airi/apple-speech-transcription'
 import { setupAppleVisionService } from './services/airi/apple-vision'
 import { setupServerChannel } from './services/airi/channel-server'
@@ -153,9 +158,24 @@ let userFacingMainWindow: BrowserWindow | undefined
 let settingsWindowManager: SettingsWindowManager | undefined
 let extensionManagementWebContentsId: number | undefined
 const shouldStartMainProcess = installSingleInstanceGuard({ app, getWindow: () => userFacingMainWindow })
+let resourceLifecycle: DesktopResourceLifecycle | undefined
+let providerSecretVault: ProviderSecretVault | undefined
+let acceptanceLedger: Awaited<ReturnType<typeof loadAcceptanceLedger>>
+let disposeAcceptanceBudget: (() => void) | undefined
+let disposeProviderSecrets: (() => void) | undefined
 
 if (shouldStartMainProcess) {
-  initScreenCaptureForMain()
+  const { context } = createContext(ipcMain)
+  resourceLifecycle = new DesktopResourceLifecycle(context)
+  initScreenCaptureForMain({
+    authorizeCapture: (window, frame) => {
+      const service = resourceLifecycle
+      if (!service || frame !== window.webContents.mainFrame || !service.authorizeCapture(window.webContents, 'screen'))
+        throw new Error('Screen capture is not authorized')
+      const valid = service.authority.captureGuard('screen')
+      return () => valid() && !window.isDestroyed() && service.authorizeCapture(window.webContents, 'screen')
+    },
+  })
 }
 
 let fileLogger: FileLoggerHandle = nullFileLoggerHandle
@@ -167,7 +187,12 @@ app.whenReady().then(async () => {
   }
 
   setupSherpawModelAssetsProtocol(resolve(getElectronMainDirname(), '..', 'renderer'))
-  setupPermissionHandlers(session.defaultSession, hasSelectedScreenCaptureSource)
+  setupPermissionHandlers(session.defaultSession, sender => !!sender && hasSelectedScreenCaptureSource(sender.id), (sender, kind) => resourceLifecycle?.authorizeCapture(sender, kind) ?? false)
+  providerSecretVault = new ProviderSecretVault({ filePath: join(app.getPath('userData'), 'provider-secrets.json') })
+  const { context: secretContext } = createContext(ipcMain)
+  disposeProviderSecrets = registerProviderSecrets({ context: secretContext, vault: providerSecretVault, authorizeSender: isTrustedSender })
+  acceptanceLedger = await loadAcceptanceLedger(env.AIMY_ACCEPTANCE_CONFIG?.trim(), app.getPath('userData'))
+  disposeAcceptanceBudget = registerAcceptanceBudget({ context: secretContext, ledger: acceptanceLedger, authorizeSender: isTrustedSender, configurationOnly: env.AIMY_ACCEPTANCE_SETUP_ONLY === 'true' })
 
   // Initialize file logger and register the hook
   fileLogger = await setupFileLogger()
@@ -344,6 +369,7 @@ app.whenReady().then(async () => {
       ...dependsOn,
       onWindowCreated: (window) => {
         userFacingMainWindow = window
+        resourceLifecycle?.bindStage(window)
       },
     }),
   })
@@ -413,6 +439,7 @@ app.on('window-all-closed', () => {
 })
 
 let appExiting = false
+let exitApproved = false
 
 // Clean up server and intervals when app quits
 async function handleAppExit() {
@@ -441,20 +468,36 @@ async function handleAppExit() {
     }
   }
 
-  await Promise.all([
-    logIfError('execute onAppBeforeQuit hooks', () => emitAppBeforeQuit()),
-    logIfError('stop injeca', () => injeca.stop()),
-  ])
+  const exitDeadline = setTimeout(() => {
+    log.error('[app-exit] Shutdown deadline expired. Pending persistence is unknown.')
+    app.exit(1)
+  }, 8000)
+  await logIfError('stop renderer work', async () => {
+    const result = await resourceLifecycle?.shutdown()
+    if (result?.status === 'partial') {
+      exitedNormally = false
+      log.withFields({ missingWindowIds: result.missingWindowIds, failed: result.receipts.flatMap(item => item.failed) }).error('[app-exit] Renderer shutdown incomplete. Pending persistence is unknown.')
+    }
+  })
+  await logIfError('flush provider secret writes', () => providerSecretVault?.flush())
+  await logIfError('flush acceptance accounting', () => acceptanceLedger?.flush())
+  await logIfError('execute onAppBeforeQuit hooks', () => emitAppBeforeQuit())
+  await logIfError('stop injeca', () => injeca.stop())
+  disposeProviderSecrets?.()
+  disposeAcceptanceBudget?.()
+  resourceLifecycle?.dispose()
 
   // Prevent the global log hook from trying to write to the file after close() is called,
   // which would cause a recursive failure if close() itself throws.
   skipFileLogging = true
   await logIfError('flush file logs', () => fileLogger.close()) // Ensure all logs are flushed
+  clearTimeout(exitDeadline)
 
   if (!exitedNormally) {
     app.exit(1)
   }
   else {
+    exitApproved = true
     app.quit()
   }
 }
@@ -462,9 +505,10 @@ async function handleAppExit() {
 process.on('SIGINT', () => handleAppExit())
 
 app.on('before-quit', (event) => {
-  if (appExiting)
+  if (exitApproved)
     return
 
   event.preventDefault()
-  handleAppExit()
+  if (!appExiting)
+    void handleAppExit()
 })

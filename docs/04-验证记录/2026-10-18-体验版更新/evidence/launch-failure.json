@@ -1,0 +1,7 @@
+{
+  "type": "EXC_CRASH/SIGABRT",
+  "termination": "DYLD Library missing",
+  "reason": "Electron Framework blocked by hardened-runtime library validation due to different Team IDs",
+  "fix": "Restore prior preview adhoc signature flags=0x2, no hardened-runtime flag; no system security setting changes",
+  "privateUserDataRead": false
+}

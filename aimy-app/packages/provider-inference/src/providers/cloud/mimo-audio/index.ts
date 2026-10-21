@@ -1,8 +1,16 @@
+import type { SpeechProvider } from '@xsai-ext/providers/utils'
+
 import type { ProviderContext } from '../../../types'
 
 import { z } from 'zod'
 
 import { defineProvider } from '../../registry'
+import { readMimoPcm } from './stream'
+
+/** Built-in MiMo voices emit mono 24 kHz PCM through the existing speech owner. */
+export interface MimoStreamingSpeechProvider extends SpeechProvider {
+  streamSpeech: (text: string, options: { model: string, voice: string, signal: AbortSignal }) => Promise<ReadableStream<Float32Array>>
+}
 
 const mimoSpeechConfigSchema = z.object({
   apiKey: z.string(),
@@ -17,7 +25,7 @@ const mimoSpeechConfigSchema = z.object({
 const mimoTranscriptionConfigSchema = z.object({
   apiKey: z.string(),
   baseUrl: z.string().default('https://api.xiaomimimo.com/v1/'),
-  model: z.string().default('mimo-v2-omni'),
+  model: z.string().default('mimo-v2.5-asr'),
 })
 
 type MimoSpeechConfig = z.input<typeof mimoSpeechConfigSchema>
@@ -61,6 +69,34 @@ function createMimoSpeechProvider(config: MimoSpeechConfig) {
   const defaultFormat = config.format || 'wav'
 
   return {
+    async streamSpeech(text: string, options: { model: string, voice: string, signal: AbortSignal }) {
+      options.signal.throwIfAborted()
+      if (options.model !== 'mimo-v2.5-tts')
+        throw new Error('MiMo streaming requires a built-in voice model.')
+      const response = await fetch(new URL('chat/completions', baseUrl), {
+        method: 'POST',
+        signal: options.signal,
+        headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
+        body: JSON.stringify({
+          model: options.model,
+          stream: true,
+          messages: [
+            { role: 'user', content: config.stylePrompt?.trim() || 'Use a natural, clear speaking style.' },
+            { role: 'assistant', content: text },
+          ],
+          audio: { format: 'pcm16', voice: options.voice || defaultVoice },
+        }),
+      })
+      if (!response.ok || !response.body) {
+        await response.body?.cancel()
+        throw new Error(`MiMo TTS stream failed: HTTP ${response.status}`)
+      }
+      if (options.signal.aborted) {
+        await response.body.cancel()
+        options.signal.throwIfAborted()
+      }
+      return readMimoPcm(response.body, options.signal)
+    },
     speech: () => ({
       baseURL: baseUrl,
       model: defaultModel,
@@ -99,6 +135,7 @@ function createMimoSpeechProvider(config: MimoSpeechConfig) {
 
         const response = await fetch(new URL('chat/completions', baseUrl), {
           method: 'POST',
+          signal: init.signal,
           headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
           body: JSON.stringify({
             model,
@@ -140,13 +177,12 @@ function createMimoSpeechProvider(config: MimoSpeechConfig) {
 }
 
 function audioFormatFromDataUri(dataUri: string) {
-  const mimeType = dataUri.split(';')[0]?.split(':')[1] || 'audio/wav'
-  const format = mimeType.split('/')[1] || 'wav'
-  if (format === 'webm' || format === 'mp4')
-    return format
-  if (format === 'mpeg' || format === 'mp3')
+  const mimeType = dataUri.split(';')[0]?.split(':')[1]
+  if (mimeType === 'audio/mpeg' || mimeType === 'audio/mp3')
     return 'mp3'
-  return 'wav'
+  if (mimeType === 'audio/wav')
+    return 'wav'
+  throw new TypeError('MiMo ASR requires WAV or MP3 audio.')
 }
 
 async function readBlobAsDataUri(file: Blob): Promise<string> {
@@ -162,7 +198,7 @@ async function readBlobAsDataUri(file: Blob): Promise<string> {
 function createMimoTranscriptionProvider(config: MimoTranscriptionConfig) {
   const apiKey = config.apiKey?.trim() ?? ''
   const baseUrl = normalizeBaseUrl(config.baseUrl)
-  const defaultModel = config.model || 'mimo-v2-omni'
+  const defaultModel = config.model || 'mimo-v2.5-asr'
 
   return {
     transcription: (model: string) => ({
@@ -179,28 +215,30 @@ function createMimoTranscriptionProvider(config: MimoTranscriptionConfig) {
 
         const modelName = String(init.body.get('model') || defaultModel)
         const dataUri = await readBlobAsDataUri(file)
+        const format = audioFormatFromDataUri(dataUri)
         const base64Data = dataUri.split(',')[1]
         const response = await fetch(new URL('chat/completions', baseUrl), {
           method: 'POST',
+          signal: init.signal,
           headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
           body: JSON.stringify({
             model: modelName,
             messages: [{
               role: 'user',
               content: [
-                { type: 'text', text: 'Transcribe the audio content.' },
-                { type: 'input_audio', input_audio: { data: base64Data, format: audioFormatFromDataUri(dataUri) } },
+                { type: 'input_audio', input_audio: { data: base64Data, format } },
               ],
             }],
           }),
         })
-        if (!response.ok) {
-          const errorBody = await response.text().catch(() => '')
-          throw new Error(`MiMo transcription failed: ${response.status} ${response.statusText}${errorBody ? ` — ${errorBody}` : ''}`)
-        }
+        if (!response.ok)
+          throw new Error(`MiMo transcription failed: HTTP ${response.status}`)
 
         const data = await response.json() as { choices?: Array<{ message?: { content?: string } }> }
-        return new Response(JSON.stringify({ text: data.choices?.[0]?.message?.content || '' }), {
+        const text = data.choices?.[0]?.message?.content
+        if (typeof text !== 'string')
+          throw new Error('MiMo response missing transcription text.')
+        return new Response(JSON.stringify({ text }), {
           status: 200,
           headers: { 'Content-Type': 'application/json' },
         })
@@ -222,6 +260,7 @@ export const providerMimoAudioSpeech = defineProvider<MimoSpeechConfig, 'mimo-au
   validationRequiredWhen: config => Boolean(config.apiKey?.trim() && config.baseUrl?.trim()),
   validators: createMimoValidators<MimoSpeechConfig>('mimo-audio-speech'),
   extraMethods: {
+    publicCatalogs: { models: true, voices: true },
     listModels: async () => [
       { id: 'mimo-v2.5-tts', name: 'MiMo v2.5 TTS', provider: 'mimo-audio-speech', description: 'Preset voice synthesis with the built-in MiMo voice list', deprecated: false },
       { id: 'mimo-v2.5-tts-voicedesign', name: 'MiMo v2.5 TTS Voice Design', provider: 'mimo-audio-speech', description: 'Design a new voice from a natural language description', deprecated: false },
@@ -258,9 +297,9 @@ export const providerMimoAudioTranscription = defineProvider<MimoTranscriptionCo
   validationRequiredWhen: config => Boolean(config.apiKey?.trim() && config.baseUrl?.trim()),
   validators: createMimoValidators<MimoTranscriptionConfig>('mimo-audio-transcription'),
   extraMethods: {
+    publicCatalogs: { models: true },
     listModels: async () => [
-      { id: 'mimo-v2-omni', name: 'MiMo V2 Omni', provider: 'mimo-audio-transcription', description: 'Omni-modal model with native audio understanding and speech-to-text', contextLength: 256000, deprecated: false },
-      { id: 'mimo-v2.5', name: 'MiMo V2.5', provider: 'mimo-audio-transcription', description: 'Latest omni-modal model with audio understanding, 1M context', contextLength: 1_000_000, deprecated: false },
+      { id: 'mimo-v2.5-asr', name: 'MiMo V2.5 ASR', provider: 'mimo-audio-transcription', description: 'Speech recognition for WAV and MP3 audio', deprecated: false },
     ],
   },
 })

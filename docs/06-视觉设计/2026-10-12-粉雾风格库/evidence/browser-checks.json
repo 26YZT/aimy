@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-12",
+  "scope": "standalone design preview only",
+  "checks": [
+    {
+      "name": "default_permissions_off",
+      "passed": true
+    },
+    {
+      "name": "send_sample_only",
+      "passed": true
+    },
+    {
+      "name": "permission_explained_first",
+      "passed": true
+    },
+    {
+      "name": "independent_mic_permission",
+      "passed": true
+    },
+    {
+      "name": "permission_off_immediate",
+      "passed": true
+    },
+    {
+      "name": "escape_and_focus_return",
+      "passed": true
+    },
+    {
+      "name": "keyboard_tab_navigation",
+      "passed": true
+    },
+    {
+      "name": "dark_theme",
+      "passed": true
+    },
+    {
+      "name": "reduce_motion",
+      "passed": true
+    },
+    {
+      "name": "connection_is_demo",
+      "passed": true
+    },
+    {
+      "name": "reload_resets_preview",
+      "passed": true
+    },
+    {
+      "name": "all_images_loaded",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow",
+      "passed": true
+    }
+  ]
+}

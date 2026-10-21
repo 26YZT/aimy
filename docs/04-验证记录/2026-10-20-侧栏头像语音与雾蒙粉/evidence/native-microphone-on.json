@@ -1,0 +1,43 @@
+[
+  {
+    "route": "#/chat-floating",
+    "microphone": {
+      "enabled": true,
+      "ready": true,
+      "listening": true,
+      "recording": false,
+      "pending": false
+    },
+    "buttons": [
+      {
+        "label": "关闭麦克风输入",
+        "pressed": "true",
+        "enabled": "true"
+      }
+    ],
+    "avatarPresent": true
+  },
+  {
+    "route": "#/onboarding",
+    "buttons": [],
+    "avatarPresent": true
+  },
+  {
+    "route": "#/",
+    "microphone": {
+      "enabled": true,
+      "ready": true,
+      "listening": true,
+      "recording": false,
+      "pending": false
+    },
+    "buttons": [
+      {
+        "label": "关闭麦克风输入",
+        "pressed": "true",
+        "enabled": null
+      }
+    ],
+    "avatarPresent": true
+  }
+]

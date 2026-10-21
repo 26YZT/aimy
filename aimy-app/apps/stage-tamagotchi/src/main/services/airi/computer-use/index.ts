@@ -7,6 +7,7 @@ import { defineInvokeHandler } from '@moeru/eventa'
 import { app } from 'electron'
 
 import { computerUseReadImage, computerUseRun } from '../../../../shared/eventa/computer-use'
+import { COMPUTER_AUTOMATION_ENABLED } from '../../../../shared/product-capabilities'
 import { onAppBeforeQuit } from '../../../libs/bootkit/lifecycle'
 import { createComputerUseRuntime } from './runtime'
 
@@ -15,6 +16,8 @@ export function setupComputerUse(context: ReturnType<typeof createContext>['cont
   let runtime: ReturnType<typeof createComputerUseRuntime> | undefined
   let stopped = false
   function getRuntime() {
+    if (!COMPUTER_AUTOMATION_ENABLED)
+      throw new Error('Computer automation is not available in this Aimy release.')
     if (stopped)
       throw new Error('Computer use has stopped.')
     if (!runtime) {

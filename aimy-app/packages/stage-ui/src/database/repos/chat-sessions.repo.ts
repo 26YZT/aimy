@@ -1,6 +1,7 @@
 import type { ChatSessionRecord, ChatSessionsIndex } from '../../types/chat-session'
+import type { MemorySourceRef } from '../../types/memory'
 
-import { storage } from '../storage'
+import { storage, updateRawLocal, updateRawLocalMany } from '../storage'
 
 const tombstoneKey = (userId: string) => `local:chat/tombstones/${userId}`
 const outboxKey = (userId: string) => `local:chat/outbox/${userId}`
@@ -44,7 +45,62 @@ export const chatSessionsRepo = {
 
   async saveSession(sessionId: string, record: ChatSessionRecord) {
     const key = `local:chat/sessions/${sessionId}`
-    await storage.setItemRaw(key, record)
+    await updateRawLocal<ChatSessionRecord>(key, current => ({
+      meta: record.meta,
+      messages: record.messages,
+      ...(current?.memoryJournal ? { memoryJournal: current.memoryJournal } : {}),
+      ...(current?.memoryEligibility ? { memoryEligibility: current.memoryEligibility } : {}),
+    }))
+  },
+
+  /** A user input and its eligibility marker become discoverable in the same transaction. */
+  async commitSessionSnapshotAndIndex(sessionId: string, record: ChatSessionRecord, index: ChatSessionsIndex, sources: MemorySourceRef[] = []) {
+    if (record.meta.sessionId !== sessionId || record.meta.userId !== index.userId
+      || !index.characters[record.meta.characterId]?.sessions[sessionId]) {
+      throw new Error('A chat snapshot requires its owning index entry.')
+    }
+    await updateRawLocalMany([`local:chat/sessions/${sessionId}`, `local:chat/index/${index.userId}`], ([value]) => {
+      const previous = value as ChatSessionRecord | undefined
+      const memoryJournal = [...(previous?.memoryJournal ?? [])]
+      const memoryEligibility = [...(previous?.memoryEligibility ?? [])]
+      for (const input of record.memoryEligibility ?? []) {
+        if (!memoryEligibility.some(existing => existing.messageId === input.messageId))
+          memoryEligibility.push(input)
+      }
+      for (const source of sources) {
+        if (source.kind !== 'chat-message' || source.sessionId !== sessionId
+          || source.principalId !== record.meta.userId || source.characterId !== record.meta.characterId) {
+          throw new Error('A memory source must belong to the committed chat.')
+        }
+        const existing = memoryJournal.find(entry => entry.source.sourceId === source.sourceId && entry.source.sourceRevision === source.sourceRevision)
+        if (existing && JSON.stringify(existing.source) !== JSON.stringify(source))
+          throw new Error('A journal version cannot be replaced with different evidence.')
+        if (!existing)
+          memoryJournal.push({ source, acknowledged: false })
+      }
+      return [{
+        meta: record.meta,
+        messages: record.messages,
+        ...(memoryJournal.length ? { memoryJournal } : {}),
+        ...(memoryEligibility.length ? { memoryEligibility } : {}),
+      }, index]
+    })
+  },
+
+  /** An acknowledgment changes no chat text and cannot recreate a deleted session. */
+  async acknowledgeMemorySource(sessionId: string, source: MemorySourceRef) {
+    await updateRawLocalMany([`local:chat/sessions/${sessionId}`], ([value]) => {
+      const record = value as ChatSessionRecord | undefined
+      if (!record)
+        return [undefined]
+      for (const entry of record.memoryJournal ?? []) {
+        if (entry.source.sourceId === source.sourceId && entry.source.sourceRevision === source.sourceRevision
+          && entry.source.contentHash === source.contentHash) {
+          entry.acknowledged = true
+        }
+      }
+      return [record]
+    })
   },
 
   // Cleanup

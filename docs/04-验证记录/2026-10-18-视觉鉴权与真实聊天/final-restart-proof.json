@@ -1,0 +1,9 @@
+{
+  "cardVisionModel": "deepseek-flash",
+  "chatModel": "deepseek-flash",
+  "publicKeyAbsent": true,
+  "screenCaptureEnabled": false,
+  "visionKeyPresent": true,
+  "visionModel": "deepseek-flash",
+  "visionProvider": "vision-deepseek"
+}

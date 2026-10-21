@@ -1,0 +1,46 @@
+- generic
+  - region "Notifications alt+T" [ref=e66]
+    - list
+  - generic
+  - generic
+    - button [ref=e67]
+    - heading "设置 关于我" [level=1, ref=e68]
+      - StaticText "设置"
+      - StaticText "关于我"
+  - paragraph
+    - StaticText "Aimy 会在自然聊天中慢慢了解你。这里可以看看她记住了什么，不需要你每天整理。"
+  - LabelText
+    - StaticText "自动整理新聊天"
+    - StaticText "从新聊天里记下值得记住的内容。暂停后，已保存的记忆仍可用于聊天。"
+    - switch "自动整理新聊天 从新聊天里记下值得记住的内容。暂停后，已保存的记忆仍可用于聊天。" [checked=true, ref=e69]
+  - paragraph
+    - StaticText "整理会使用你选的模型，可能产生额外费用。不会自动补记启用前的聊天。"
+  - status
+    - StaticText "这条记忆已移除，不再用于后续回忆。聊天原文保留。"
+  - generic
+    - heading "你告诉我的" [level=2, ref=e70]
+    - list
+      - listitem [level=1]
+        - paragraph
+          - StaticText "用户希望被称为测试团团。"
+        - StaticText "2026年10月15日 21:47"
+        - button "看看原话" [expanded=false, ref=e74]
+          - StaticText "看看原话"
+  - generic
+    - heading "我们聊过的重要事情" [level=2, ref=e71]
+    - paragraph
+      - StaticText "可以先聊聊，我会慢慢了解你。"
+  - group
+    - DisclosureTriangle "资料维护" [expanded=true]
+      - StaticText "资料维护"
+    - paragraph
+      - StaticText "平时也可以在聊天中自然纠正。这里的操作只处理记忆，保留聊天原文；相关内容由 Aimy 自动处理。"
+    - paragraph
+      - StaticText "用户希望被称为测试团团。"
+    - button "更正" [ref=e72]
+      - StaticText "更正"
+    - button "从记忆中移除" [ref=e73]
+      - StaticText "从记忆中移除"
+  - group
+    - DisclosureTriangle "记忆整理模型" [expanded=false]
+      - StaticText "记忆整理模型"

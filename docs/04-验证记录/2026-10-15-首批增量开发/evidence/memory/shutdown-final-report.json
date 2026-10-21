@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-15",
+  "purpose": "Close the global shutdown ordering defect without changing product scope",
+  "boundary": {
+    "root": "/Users/mima1234/Documents/aimy/aimy-app",
+    "new_dependencies": false,
+    "main_index_modified": false,
+    "other_product_areas_modified": false,
+    "git_actions": false,
+    "real_model_calls": false
+  },
+  "changes": [
+    "All trusted windows prepare by stopping global generation, draining accepted local write actions, flushing owner queues, and draining continuations.",
+    "Only after all prepare receipts succeed does main ask its host-bound Stage window to finalize memory ownership and budget writes. Phase and sender must match.",
+    "Both phases share the same shutdown ID and absolute deadline. The existing application-wide 8 second watchdog and public shutdown signature remain intact.",
+    "A single window close only drains and flushes; it does not dispose the Stage memory owner. Failure keeps the window open and preserves the existing close-failed toast.",
+    "PersistenceDrain tracks the real caller Promise and owner Pinia action hook for a narrow write-action allowlist, including local secure-save prefixes that occur before synced RPC. It retains no action arguments, results, or errors.",
+    "Pending-at-close failures yield persisted:false; completed historical semantic errors do not poison later attempts. A failed attempt is reset only when host aborts that close."
+  ],
+  "verification": [
+    {
+      "name": "shutdown node suite",
+      "result": "passed",
+      "tests": 16,
+      "log": "/tmp/aimy-first-implementation-20261015/memory/shutdown-node-final.log"
+    },
+    {
+      "name": "real Pinia/provider-config browser boundary",
+      "result": "passed",
+      "tests": 2,
+      "log": "/tmp/aimy-first-implementation-20261015/memory/shutdown-browser.log",
+      "details": [
+        "deferred secure write followed by follower commit reaches durable localStorage before finalize",
+        "canary does not enter cross-window transport or persisted public state",
+        "native quota fault pending at close fails receipt; confirmed rollback permits a later close"
+      ]
+    },
+    {
+      "name": "scoped ESLint",
+      "result": "passed",
+      "log": "/tmp/aimy-first-implementation-20261015/memory/shutdown-lint-final.log"
+    },
+    {
+      "name": "desktop typecheck",
+      "result": "blocked by one out-of-scope diagnostic",
+      "log": "/tmp/aimy-first-implementation-20261015/memory/shutdown-typecheck-final.log",
+      "diagnostic": "packages/stage-ui/src/components/scenarios/providers/voicevox-family-settings.vue:64 SpeechProvider vs SpeechProviderWithExtraOptions"
+    },
+    {
+      "name": "whole App browser regression",
+      "result": "3 assertions passed, run failed due to 3 unhandled NOT_READY rejections",
+      "log": "/tmp/aimy-first-implementation-20261015/memory/shutdown-app-browser.log",
+      "diagnostic": "memory.reconcileSources -> assertRecordScope after runtime teardown / cross-case state"
+    },
+    {
+      "name": "isolated minimal follower App regression",
+      "result": "passed",
+      "tests": 1,
+      "skipped": 2,
+      "log": "/tmp/aimy-first-implementation-20261015/memory/shutdown-app-follower-browser.log"
+    }
+  ],
+  "limits": [
+    "Real Electron exit was not rerun by this subagent; parent owns desktop runtime verification.",
+    "No real cloud-model naturalness or 8-case product acceptance claim.",
+    "Source action tracking covers the explicit existing write allowlist, not all background work or model generation.",
+    "Out-of-scope App teardown and voicevox type errors were reported to root without editing their code."
+  ],
+  "files": [
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.ts",
+      "sha256": "bfa0025b4d1de3ce33ffbbf686f094e8a10c0b6b7183620a1fe5b27802f8a69b"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.test.ts",
+      "sha256": "927e781c7408cc42b61c2f7e22a1dae82627bb4477c0ecc2c92ccabcc231d880"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/shared/eventa/aimy-lifecycle.ts",
+      "sha256": "a9deeec92cc5d761ec1dd2226a6f6cd2f430ffdd1121efb71c5dd51dd589900f"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/resource-policy.ts",
+      "sha256": "e1c2803247075ebe73425b87609ecda3eed8a4c43d25a37ea38b05cfad66ba8c"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/resource-policy.test.ts",
+      "sha256": "98f228b7a52efd75436f6ff1ae1d55d2cc1481613d953d72337f3b460d558326"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.ts",
+      "sha256": "6ff981f5fb8a8c99eff5e37a998377b875b634e8f3f96c723d9b4fd5058f1841"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.test.ts",
+      "sha256": "92ecf6c0f8e031778d3219343572769cf777c3741d1f956ab7c42ad23098ecb1"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.browser.test.ts",
+      "sha256": "9d980caf43d0ffc4878893f1da8861d6f6b35b29ec78f203de8c6f5872db280a"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/App.vue",
+      "sha256": "7546951475533852f582cf672254cab0a6d3ba88800b029521aa11bc15b870c7"
+    }
+  ]
+}

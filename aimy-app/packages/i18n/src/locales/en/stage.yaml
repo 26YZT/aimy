@@ -32,6 +32,12 @@ chat:
     position: Playback position
     no-speech: No speech was recognized, so the voice message was not sent.
   voice-composer:
+    microphone-enable: Enable microphone input
+    microphone-disable: Disable microphone input
+    record-message: Record a voice message
+    dictate-message: Dictate a message
+    microphone-power: Microphone access
+    select-chat: Select an available chat before continuous listening.
     audio: Voice message
     transcription: Dictation
     hold-hint: Hold to record. Click to switch between voice message and dictation. Press Enter to record without holding.

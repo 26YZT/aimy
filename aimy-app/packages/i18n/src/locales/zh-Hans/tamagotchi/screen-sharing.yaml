@@ -1,0 +1,34 @@
+{
+  "start": "共享屏幕",
+  "stop": "停止共享",
+  "game": "陪我看游戏",
+  "choose": "选择要共享的画面",
+  "disclosure": "选中的画面会发送给你配置的视觉模型，可能产生模型费用。屏幕与麦克风分别控制；原始画面不长期保存。",
+  "gameNote": "一起看游戏画面、聊当前局势，不会替你点击或操作游戏。",
+  "loading": "正在准备…",
+  "cancel": "取消",
+  "sharing": "正在看：{source}",
+  "waiting": "已共享，等待识别：{source}",
+  "status": {
+    "off": "屏幕共享已关闭",
+    "choosing": "请选择画面",
+    "starting": "正在开始共享",
+    "sharing": "正在共享",
+    "error": "共享未能继续"
+  },
+  "errors": {
+    "SCREEN_OWNER_UNAVAILABLE": "主角色窗口尚未准备好，请打开角色窗口后重试。",
+    "SCREEN_MODE_INVALID": "共享模式无效，请重新选择。",
+    "SCREEN_MODEL_REQUIRED": "请先在“我 → 视觉设置”配置视觉模型。",
+    "SCREEN_SYSTEM_PERMISSION_REQUIRED": "请在 macOS 系统设置中允许 Aimy 录制屏幕，然后重试。",
+    "SCREEN_NO_SOURCES": "没有找到可共享的屏幕或窗口。",
+    "SCREEN_PERMISSION_FAILED": "没有获得屏幕共享许可。",
+    "SCREEN_VIDEO_TIMEOUT": "画面连接超时，请重新选择。",
+    "SCREEN_READ_FAILED": "没有成功识别画面，请检查视觉模型设置后重试。",
+    "SCREEN_CHOICE_REQUIRED": "请先选择要共享的画面。",
+    "SCREEN_SOURCE_INVALID": "这个窗口已不可用，请重新选择。",
+    "SCREEN_START_FAILED": "共享未能开始，请重新选择画面再试。",
+    "SCREEN_SESSION_UNAVAILABLE": "聊天已不存在或不属于当前角色，请重新选择聊天。",
+    "SCREEN_CHOICE_EXPIRED": "共享选择已改变，请重新选择画面。"
+  }
+}

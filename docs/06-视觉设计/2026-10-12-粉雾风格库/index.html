@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#FCF9FA"><title>Aimy · 粉雾风格库</title><link rel="icon" type="image/svg+xml" href="assets/aimy-icon-light.svg"><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css"><link rel="stylesheet" href="gallery.css"></head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <a class="brand" href="#"><img src="assets/aimy-icon-light.svg" alt="">aimy<span>粉雾风格库</span></a>
+    <nav class="site-nav" aria-label="风格库目录"><a href="#brand">品牌图标</a><a href="#screens">界面语言</a><a href="#components">组件</a><a href="#system">设计规范</a></nav>
+    <div class="header-actions"><button class="icon-btn" id="theme-toggle" aria-label="切换为夜间主题" aria-pressed="false"><svg class="icon"><use href="assets/ui-icons.svg#i-moon"/></svg></button><a class="btn secondary small" href="README.md">交付说明<svg class="icon" style="width:14px;height:14px"><use href="assets/ui-icons.svg#i-chevron"/></svg></a></div>
+  </header>
+  <main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="edition">Aimy · Visual language 01 / 2026</p>
+      <img class="hero-icon" src="assets/aimy-icon-light.svg" alt="Aimy：低垂猫耳侧脸，轻轻靠在衣袖上">
+      <h1 id="hero-title">轻轻靠近，<br>刚好陪着你。</h1>
+      <p class="description">把一抹樱粉，变成桌面上熟悉的陪伴。<br>柔软的轮廓，清楚的界面，留给对话更多空间。</p>
+      <div class="hero-actions"><a class="btn" href="#brand">看看品牌图标<svg class="icon" style="width:16px;height:16px"><use href="assets/ui-icons.svg#i-chevron"/></svg></a><a class="btn secondary" href="#components">浏览风格库</a></div>
+      <div class="hero-palette" aria-hidden="true"><i style="background:#FFF9FC"></i><i style="background:#FBE6EF"></i><i style="background:#EDBED0"></i><i style="background:#CE7094"></i><i style="background:#B44870"></i><span>雾白 / 樱粉 / 莓粉</span></div>
+    </div>
+    <div class="prototype">
+      <div class="app-window" aria-label="Aimy 交互设计预览">
+        <div class="window-title"><div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>Aimy<svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-expand"/></svg></div>
+        <div class="app-top"><div class="identity"><img class="avatar" src="assets/aimy-mark.svg" alt=""><div><strong>Aimy</strong><p>今天也在这里。</p></div></div><span class="badge rose" id="preview-state"><span class="dot"></span>文字陪伴</span></div>
+        <div class="app-tabs" role="tablist" aria-label="界面预览"><button id="tab-chat" role="tab" aria-selected="true" aria-controls="panel-chat" data-panel="chat">聊天</button><button id="tab-privacy" role="tab" aria-selected="false" aria-controls="panel-privacy" data-panel="privacy" tabindex="-1">隐私与权限</button><button id="tab-connect" role="tab" aria-selected="false" aria-controls="panel-connect" data-panel="connect" tabindex="-1">连接模型</button></div>
+        <div class="panel" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat">
+          <div class="chat-body" id="chat-messages" aria-live="polite" aria-relevant="additions"><div class="date">今天 · 21:08</div>
+            <div class="message user"><div class="bubble user">终于忙完了，想放空一会儿。</div></div>
+            <div class="message"><div class="message-label"><img class="tiny-avatar" src="assets/aimy-mark.svg" alt="">Aimy</div><div class="bubble aimy">那就先不赶着做下一件事。<br>我陪你待一会儿，好不好？</div></div>
+            <div class="message user"><div class="bubble user">好呀，今晚一起看电影。</div></div>
+          </div>
+          <form class="composer" id="chat-form"><label class="visually-hidden" for="message-input">消息内容</label><textarea id="message-input" placeholder="想说什么，都可以慢慢说…" maxlength="1000"></textarea><div class="composer-tools"><button class="icon-btn" type="button" data-demo="分享图片的视觉入口；本预览不上传文件。" aria-label="分享图片"><svg class="icon"><use href="assets/ui-icons.svg#i-image"/></svg></button><button class="icon-btn" type="button" id="screen-shortcut" aria-label="管理看屏权限"><svg class="icon"><use href="assets/ui-icons.svg#i-screen"/></svg></button><span class="input-hint">Enter 发送 · Shift + Enter 换行</span><button class="icon-btn" type="button" id="mic-shortcut" aria-label="管理麦克风权限"><svg class="icon"><use href="assets/ui-icons.svg#i-mic-off"/></svg></button><button class="icon-btn send" id="send" type="submit" disabled aria-label="发送预览消息"><svg class="icon"><use href="assets/ui-icons.svg#i-arrow"/></svg></button></div></form>
+        </div>
+        <div class="panel settings-body" id="panel-privacy" role="tabpanel" aria-labelledby="tab-privacy" hidden>
+          <h3>陪伴，由你决定。</h3><p>每一种感知，都有独立的开关。</p>
+          <div class="setting-row"><div><strong>麦克风 <span class="badge" id="mic-label">已关闭</span></strong><p>开启后，才开始听你说话。</p></div><button class="switch permission-switch" id="mic-switch" role="switch" aria-checked="false" aria-label="麦克风" data-permission="mic"></button></div>
+          <div class="setting-row"><div><strong>看屏 <span class="badge" id="screen-label">已关闭</span></strong><p>开启后，才查看你选择的屏幕。</p></div><button class="switch permission-switch" id="screen-switch" role="switch" aria-checked="false" aria-label="看屏" data-permission="screen"></button></div>
+          <div class="notice"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-shield"/></svg><span>随时关闭，随时停止感知。屏幕截图与原始录音默认不长期保存。</span></div>
+          <p style="margin-top:15px;font-size:11px">开关仅演示界面状态，不调用任何设备。</p>
+        </div>
+        <div class="panel connect-body" id="panel-connect" role="tabpanel" aria-labelledby="tab-connect" hidden>
+          <h3>给陪伴接上声音与思考。</h3><p>使用你自己的模型服务，按需要连接。</p>
+          <label class="field-label" for="provider">模型服务</label><select class="field" id="provider"><option>兼容 OpenAI 的服务</option><option>本地模型</option></select>
+          <label class="field-label" for="key-demo">API 密钥</label><input class="field" id="key-demo" value="仅为占位，不输入真实密钥" readonly aria-describedby="key-help"><p class="field-help" id="key-help">此处展示字段样式。请勿在设计预览中输入真实密钥。</p>
+          <div class="notice"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-key"/></svg><span>正式产品中，密钥只保存在这台设备的安全存储中。</span></div><button class="btn" id="connection-demo">测试连接样式</button>
+        </div>
+        <div class="privacy-footer"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-shield"/></svg><span id="permission-summary">麦克风关闭 · 看屏关闭</span></div>
+      </div>
+      <p class="prototype-caption">可交互设计提案 · 示例对话 · 未连接模型或设备<br>聊天、设置与桌面角色仍按独立窗口表达。</p>
+    </div>
+  </section>
+
+  <section class="section" id="brand" aria-labelledby="brand-title">
+    <div class="section-top"><div><p class="section-number">01 / BRAND</p><h2 id="brand-title">一眼认出，轻轻记住。</h2></div><p class="section-intro">猫耳、垂落的发梢、轻靠衣袖的侧脸。<br>保留参考图的亲近感，用重新绘制的矢量轮廓承接。</p></div>
+    <div class="icons-grid">
+      <article class="icon-card"><div class="icon-stage"><img src="assets/aimy-icon-light.svg" alt="雾白底粉色 Aimy 图标"></div><div class="icon-card-title">粉雾 · 主图标 <a class="asset-link" href="assets/aimy-icon-light.svg" download>SVG ↗</a></div><p>推荐默认版本。雾白底衬托双色剪影，适合 Dock、启动台与应用列表。</p></article>
+      <article class="icon-card"><div class="icon-stage night"><img src="assets/aimy-icon-dark.svg" alt="深梅灰底 Aimy 夜间图标"></div><div class="icon-card-title">夜雾 · 深色适配 <a class="asset-link" href="assets/aimy-icon-dark.svg" download>SVG ↗</a></div><p>深梅灰底，樱粉轮廓。作为夜间品牌资产备选，不随 UI 自动替换 Dock 图标。</p></article>
+      <article class="icon-card"><div class="icon-stage berry"><img src="assets/aimy-icon-rose.svg" alt="莓粉底 Aimy 反白图标"></div><div class="icon-card-title">莓粉 · 品牌强调 <a class="asset-link" href="assets/aimy-icon-rose.svg" download>SVG ↗</a></div><p>适合活动封面与品牌头像。UI 持续使用同一主标记，保持辨识一致。</p></article>
+    </div>
+    <div class="size-strip" aria-label="图标尺寸检视"><div class="size-item"><img src="assets/aimy-icon-light.svg" width="96" height="96" alt="96 像素图标"><span>96 px</span></div><div class="size-item"><img src="assets/aimy-icon-light.svg" width="64" height="64" alt="64 像素图标"><span>64 px</span></div><div class="size-item"><img src="assets/aimy-icon-light.svg" width="32" height="32" alt="32 像素图标"><span>32 px</span></div><div class="size-item"><img src="assets/aimy-icon-compact.svg" width="16" height="16" alt="16 像素简化图标"><span>16 px</span></div><div class="size-item"><img src="assets/aimy-tray-template.svg" width="22" height="22" alt="单色菜单栏图标" class="tray-image"><span>菜单栏</span></div><p>小尺寸减少发丝细节；菜单栏使用独立单色形状。矢量母版、透明 PNG 与 macOS ICNS 一并交付。</p></div>
+  </section>
+
+  <section class="section" id="screens" aria-labelledby="screens-title">
+    <div class="section-top"><div><p class="section-number">02 / INTERFACE</p><h2 id="screens-title">同一种温柔，不同的场景。</h2></div><p class="section-intro">保留 AIRI 的桌面角色、聊天和设置窗口结构。<br>视觉统一落在色彩、字体、控件与状态表达上。</p></div>
+    <div class="screen-grid">
+      <article class="screen-demo"><div class="screen-label"><span>A / 桌面陪伴</span><span>透明角色窗口 · 工具浮条</span></div><div class="stage-demo"><div class="stage-character"><img src="assets/aimy-mark.svg" alt="品牌标记占位，非正式角色模型"></div><div class="floating-tools"><button class="icon-btn active" aria-label="打开聊天预览" id="stage-chat"><svg class="icon"><use href="assets/ui-icons.svg#i-chat"/></svg></button><button class="icon-btn" aria-label="打开麦克风权限预览" id="stage-mic"><svg class="icon"><use href="assets/ui-icons.svg#i-mic-off"/></svg></button><button class="icon-btn" data-demo="音量按钮样式示例。" aria-label="音量样式"><svg class="icon"><use href="assets/ui-icons.svg#i-volume"/></svg></button><button class="icon-btn" data-demo="角色位置控制样式示例。" aria-label="移动角色样式"><svg class="icon"><use href="assets/ui-icons.svg#i-move"/></svg></button></div><div class="stage-caption">角色模型待定 · 此处使用品牌标记占位</div></div><p>角色本身保留独立表现空间。控制条轻量、默认安静，感知开启时才出现明确状态。</p></article>
+      <article class="screen-demo"><div class="screen-label"><span>B / 设置与偏好</span><span>少装饰 · 清楚分组</span></div><div class="mini-settings"><h3>舒服一点，刚刚好。</h3><div class="setting-row"><div><strong>外观</strong><p>白天轻盈，夜晚柔和。</p></div><div class="segmented" aria-label="主题"><button data-theme-option="light" aria-pressed="true">浅色</button><button data-theme-option="dark" aria-pressed="false">深色</button></div></div><div class="setting-row"><div><strong>减少动态效果</strong><p>减少界面的移动与过渡。</p></div><button class="switch" id="reduce-motion" role="switch" aria-checked="false" aria-label="减少动态效果"></button></div><div class="setting-row"><div><strong>语音输出</strong><p>音色与正式角色一起确认。</p></div><span class="badge">待设定</span></div><div class="notice"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-heart"/></svg><span>重要设置清楚呈现，不用情感文案代替权限说明。</span></div></div><p>设置页保留原版分组与导航，逐项映射语义色。品牌色只点亮当前选择与主要动作。</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="components" aria-labelledby="components-title">
+    <div class="section-top"><div><p class="section-number">03 / COMPONENTS</p><h2 id="components-title">从每一个细节，长成完整界面。</h2></div><p class="section-intro">组件共享同一套语义变量。<br>切换右上角主题，即可查看整套夜间状态。</p></div>
+    <div class="components-grid">
+      <article class="component-card"><h3>按钮 / 动作有轻重</h3><div class="sample-row"><button class="btn" data-demo="主按钮：用于一个区域中的主要行动。">开始聊天<svg class="icon" style="width:16px;height:16px"><use href="assets/ui-icons.svg#i-chat"/></svg></button><button class="btn secondary" data-demo="次按钮：边框样式，表达次要动作。">稍后再说</button><button class="btn ghost" data-demo="文字按钮：用于低优先级操作。">了解更多</button></div><div class="sample-row"><button class="btn" disabled>暂不可用</button><button class="btn soft" id="loading-demo"><svg class="icon" style="width:16px;height:16px"><use href="assets/ui-icons.svg#i-refresh"/></svg>重试状态</button><button class="btn danger" id="delete-demo">删除记录</button></div><p>默认 40 px 高；桌面图标按钮至少 32 px 热区。默认、悬停、按下、禁用、加载与焦点态齐备。</p></article>
+      <article class="component-card"><h3>输入 / 温和且明确</h3><div class="field-group"><label class="field-label" for="name-demo">如何称呼你</label><input class="field" id="name-demo" placeholder="你喜欢的称呼" maxlength="40"><p class="field-help">只展示输入样式，本预览不保存。</p></div><div class="field-group"><label class="field-label" for="error-demo">服务地址</label><input class="field" id="error-demo" value="example" aria-invalid="true" aria-describedby="error-help"><p class="field-error" id="error-help">请输入完整地址，例如 https://example.com/v1</p></div></article>
+      <article class="component-card"><h3>状态 / 颜色之外，也说清楚</h3><div class="sample-row"><span class="badge success"><span class="dot"></span>连接成功</span><span class="badge warning">权限未授予</span><span class="badge danger">连接失败</span><span class="badge">麦克风关闭</span></div><div class="status-list" style="margin-top:20px"><div class="notice danger"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-warning"/></svg><span>这次没有连接上。请检查服务地址后重试。</span></div><div class="notice warning"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-screen"/></svg><span>还没有看屏权限。你可以去系统设置中开启。</span></div></div><p>权限状态必须有文字；成功、提醒与危险色专门表达状态，不用来装饰。</p></article>
+      <article class="component-card"><h3>图标 / 安静地指向动作</h3><div class="icon-glyphs" id="glyphs" aria-label="统一 24 像素线性图标集"></div><div class="divider"></div><div class="sample-row"><button class="icon-btn" aria-label="查看聊天图标样式" data-demo="聊天图标：24 px 网格，1.8 px 圆头描边。"><svg class="icon"><use href="assets/ui-icons.svg#i-chat"/></svg></button><button class="icon-btn active" aria-label="查看已选中看屏样式" data-demo="选中状态用浅粉背景与深粉图形共同表达。"><svg class="icon"><use href="assets/ui-icons.svg#i-screen"/></svg></button><button class="icon-btn" aria-label="查看设置图标样式" data-demo="全套图标保持一致的圆角与描边。"><svg class="icon"><use href="assets/ui-icons.svg#i-settings"/></svg></button><span class="badge">24 px 网格 · 1.8 px 描边 · 圆头</span></div><p>界面统一使用线性图标。品牌剪影仅用于图标、头像和空状态，不替代功能图标。</p></article>
+      <article class="component-card"><h3>空状态 / 留下开始的空间</h3><div class="empty"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-chat"/></svg><strong>今天，想从哪里聊起？</strong><p>一件小事、一张图片，或者只是说声你好。</p><button class="btn soft small" id="hello-demo" style="margin-top:8px">先打个招呼</button></div></article>
+      <article class="component-card"><h3>记忆 / 后续能力的界面提案</h3><div class="notice" style="margin-bottom:16px"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-memory"/></svg><span>此卡仅定义风格。正式记忆机制仍待确定。</span></div><div style="border:1px solid var(--border);border-radius:12px;padding:16px"><div class="sample-row" style="justify-content:space-between"><strong style="font-size:13px;font-weight:500">喜欢温热的乌龙茶</strong><span class="badge rose">示例</span></div><p style="font-size:11px;color:var(--text-secondary);margin:8px 0 12px">来源：一次对话 · 示例内容</p><div class="sample-row"><button class="btn secondary small" data-demo="记忆纠正的视觉入口；本预览无记忆数据。">纠正</button><button class="btn ghost small" data-demo="记忆删除的视觉入口；本预览无记忆数据。">删除</button></div></div><p>来源、纠正、删除清楚可见。自动保存或先确认继续待答，不由视觉稿代替决定。</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="system" aria-labelledby="system-title">
+    <div class="section-top"><div><p class="section-number">04 / DESIGN SYSTEM</p><h2 id="system-title">柔和是感觉，清晰是标准。</h2></div><p class="section-intro">粉色用于品牌与交互，雾白承接内容。<br>正文、按钮与关键控件分别校验对比度。</p></div>
+    <div class="color-grid" id="color-grid"></div>
+    <div class="spec-grid">
+      <div class="spec-block"><h3>字体 / 跟随 macOS 的自然阅读</h3><div class="type-demo"><strong style="font-size:28px">今天也在这里。</strong><small>28 / 600</small></div><div class="type-demo"><strong style="font-size:20px">陪伴，由你决定。</strong><small>20 / 500</small></div><div class="type-demo"><span style="font-size:15px">不用急，我们慢慢聊。</span><small>15 / 400</small></div><div class="type-demo"><span style="font-size:13px;color:var(--text-secondary)">每一种感知，都有独立的开关。</span><small>13 / 400</small></div><p class="field-help">SF Pro / 苹方 · 正文 1.6 行高 · 对话 1.8 行高</p></div>
+      <div class="spec-block"><h3>间距与圆角 / 有规律地呼吸</h3><div class="radius-samples"><span style="border-radius:8px">8 px</span><span style="border-radius:12px">12 px</span><span style="border-radius:18px">18 px</span><span style="border-radius:24px">24 px</span></div><div class="measure-row"><span>紧密 / 8</span><i style="width:32px"></i><span>图标与文字</span></div><div class="measure-row"><span>常规 / 16</span><i style="width:64px"></i><span>控件与消息</span></div><div class="measure-row"><span>分组 / 24</span><i style="width:96px"></i><span>面板与区块</span></div><p class="field-help">4 px 基础网格 · 120–260 ms 过渡 · 遵循减少动态效果</p></div>
+    </div>
+    <div class="principles"><div><strong>01 / 粉色有角色</strong><p>浅粉留给氛围，深粉留给操作。正文使用梅灰色，长时间阅读更清楚。</p></div><div><strong>02 / 陪伴有边界</strong><p>麦克风与看屏独立控制，默认关闭。状态文案具体，不用“她很想你”替代授权。</p></div><div><strong>03 / 界面有分寸</strong><p>不在每个角落堆猫爪、爱心与装饰。品牌轮廓负责记忆，界面负责好用。</p></div></div>
+  </section>
+  </main>
+  <footer class="footer"><span>aimy · 粉雾 / v0.1 · 2026.10.12 · 设计提案，待视觉确认</span><div class="footer-links"><a href="design-spec.md">完整规范 ↗</a><a href="tokens.json" download>Tokens JSON ↗</a><a href="app-icons/Aimy.icns" download>macOS 图标 ↗</a></div></footer>
+</div>
+<dialog id="demo-dialog" aria-labelledby="dialog-title"><div class="dialog-kind"><svg class="icon" aria-hidden="true"><use href="assets/ui-icons.svg#i-shield"/></svg></div><h3 id="dialog-title">开启麦克风？</h3><p id="dialog-copy"></p><p style="margin-top:12px;font-size:11px">这是设计预览，只改变页面上的示例状态，不访问设备、不调用模型。</p><div class="dialog-actions"><button class="btn secondary" id="dialog-cancel">先不开启</button><button class="btn" id="dialog-confirm">开启预览状态</button></div></dialog>
+<div class="toast" role="status" aria-live="polite" id="toast"></div>
+<script src="preview.js"></script>
+</body></html>

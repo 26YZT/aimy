@@ -1,0 +1,34 @@
+{
+  "scope": "Actual selected current TS sources transpiled unchanged; dependency/IO boundaries injected. No model/device/network/real database. No production file written.",
+  "checks": [
+    {
+      "check": "actual_repo_roundtrip_and_idempotent_tombstone",
+      "passed": true,
+      "backend": "unstorage memoryDriver with clone boundary; not real IndexedDB"
+    },
+    {
+      "check": "actual_repo_concurrent_read_modify_write_loses_update",
+      "reproduced": true,
+      "stored": [
+        "b"
+      ],
+      "meaning": "Raw repository has no CAS; real app caller serializes operations. This does not prove the routed leader app loses data."
+    },
+    {
+      "check": "serialized_actual_repo_preserves_two_mutations",
+      "passed": true,
+      "queue": "synthetic single-writer queue; current repo function bodies unchanged"
+    },
+    {
+      "check": "actual_context_registry_does_not_scope_by_contextId",
+      "passed": true,
+      "observed": "scope-B",
+      "meaning": "Same source bucket replaces previous scope; runtime providers/snapshot do not receive session id. Memory projection must be request-scoped."
+    },
+    {
+      "check": "actual_compaction_preserves_existing_compacted_summary",
+      "passed": true,
+      "meaning": "When an application supplied sensitive summary text, setting a new formatter later does not rebuild compacted=true history. Default AIRI formatter only records removed-turn count; this is conditional provenance risk, not evidence current AIRI summarizes secrets."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": "0.12.0-beta.5+aimy.20261018.5",
+  "asarSha256": "ea9d7b5a6e4c36076902b3eb21d30b0f0e9d63350a802813f7dd2ab8e8993b26",
+  "controlledCloudRequests": 7,
+  "allControlledCloudHttp200": true,
+  "localVoiceCounts": {
+    "voicevox": 127,
+    "aivis-speech": 10
+  },
+  "localSynthesisPassed": true,
+  "freshProcessPersistence": true,
+  "selectionsUnchanged": true,
+  "captureOff": true,
+  "testsPassed": 50,
+  "normalLaunchRestored": true,
+  "appleResidualErrors": true,
+  "mimoResidualErrorsOnMixedBrandSample": true,
+  "userDataMigrated": false
+}

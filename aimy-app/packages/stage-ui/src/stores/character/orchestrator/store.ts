@@ -3,13 +3,14 @@ import type { WebSocketBaseEvent, WebSocketEventOf, WebSocketEvents } from '@pro
 
 import { createSparkNotifyAgent, createSparkNotifyReactionPlugin } from '@proj-airi/core-agent/agents/spark-notify'
 import { defineStore, storeToRefs } from 'pinia'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 import { useCharacterNotebookStore, useCharacterStore } from '../'
 import { useAiriRuntimePrompt } from '../../../composables/use-airi-runtime-prompt'
 import { useLLM } from '../../ai/chat-llm/llm'
 import { useModsServerChannelStore } from '../../mods/api/channel-server'
 import { useConsciousnessStore } from '../../modules/consciousness'
+import { useProviderConfigStore } from '../../providers/config'
 
 export { sparkNotifyCommandSchema } from '@proj-airi/core-agent/agents/spark-notify'
 
@@ -23,6 +24,8 @@ export const useCharacterOrchestratorStore = defineStore('character-orchestrator
   const runtimePrompt = useAiriRuntimePrompt()
   const modsServerChannelStore = useModsServerChannelStore()
 
+  const providerConfig = useProviderConfigStore()
+  const followupControllers = new Set<AbortController>()
   const processing = ref(false)
   const pendingNotifies = ref<Array<WebSocketEventOf<'spark:notify'>>>([])
 
@@ -69,6 +72,72 @@ export const useCharacterOrchestratorStore = defineStore('character-orchestrator
       }),
     ],
   })
+
+  /** Public non-secret route identity lets the lifecycle owner revoke pending speech on configuration changes. */
+  function followupRouteSignature() {
+    return JSON.stringify([activeProvider.value, activeModel.value, providerConfig.getProviderConfigRevision(activeProvider.value)])
+  }
+
+  /** Buffers an internal followup until its caller validates the durable claim again. */
+  async function generateFollowup(event: WebSocketEventOf<'spark:notify'>, guard: { signal: AbortSignal, isCurrent: () => boolean }): Promise<string> {
+    const controller = new AbortController()
+    followupControllers.add(controller)
+    const signal = AbortSignal.any([guard.signal, controller.signal])
+    const route = followupRouteSignature()
+    const stopWatch = watch(followupRouteSignature, () => controller.abort('Followup model changed'), { flush: 'sync' })
+    const assertCurrent = () => {
+      if (signal.aborted || !guard.isCurrent() || route !== followupRouteSignature())
+        throw new DOMException('Followup cancelled', 'AbortError')
+    }
+    try {
+      assertCurrent()
+      const providerId = activeProvider.value
+      const model = activeModel.value
+      if (!providerId || !model)
+        throw new Error('Followup requires a configured chat model')
+      const provider = await consciousnessStore.getChatProviderInstance(providerId)
+      assertCurrent()
+      let text = ''
+      const agent = createSparkNotifyAgent({
+        runner: {
+          run: async (request) => {
+            assertCurrent()
+            await stream(request.selectedChat.model, request.selectedChat.provider, request.conversation, {
+              providerId,
+              abortSignal: signal,
+              assertCurrent,
+              maxOutputTokens: 512,
+              maxInputTokens: 64_000,
+              supportsTools: false,
+              waitForTools: false,
+              onStreamEvent: async (event) => {
+                assertCurrent()
+                await request.onStreamEvent(event)
+              },
+            })
+          },
+        },
+        plugins: [createSparkNotifyReactionPlugin({ onDelta: () => {}, onEnd: (_id, result) => { text = result } })],
+      })
+      await agent.handle({ event, selectedChat: { providerId, model, provider }, systemPrompt: systemPrompt.value, runtimePrompt: runtimePrompt.value, control: { forceTextResponse: true } })
+      assertCurrent()
+      return text
+    }
+    finally {
+      stopWatch()
+      followupControllers.delete(controller)
+    }
+  }
+
+  /** Commits one buffered reaction through the existing AIRI presentation owner. */
+  function deliverFollowup(eventId: string, text: string, isCurrent: () => boolean): boolean {
+    return characterStore.deliverFollowup(eventId, text, isCurrent)
+  }
+
+  function cancelFollowups(reason: string) {
+    for (const controller of followupControllers) controller.abort(reason)
+    characterStore.cancelFollowups(reason)
+  }
 
   function computeNextRunAt(event: WebSocketEventOf<'spark:notify'>, attempts: number) {
     const now = Date.now()
@@ -317,6 +386,10 @@ export const useCharacterOrchestratorStore = defineStore('character-orchestrator
     stopTicker,
     dispose,
 
+    followupRouteSignature,
+    generateFollowup,
+    deliverFollowup,
+    cancelFollowups,
     handleSparkNotify: handleIncomingSparkNotify,
     handleSparkNotifyWithReaction,
     handleSparkEmit,

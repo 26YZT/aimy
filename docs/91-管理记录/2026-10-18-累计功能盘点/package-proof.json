@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-18",
+  "app": "/Users/mima1234/Applications/Aimy体验版.app",
+  "version": "0.12.0-beta.5+aimy.20261018.1",
+  "sha256": "48bc90b5efd5a72aa1a7366945e0aa4ae7b1538ef325eddfbcf3e6f344f8c2d0",
+  "matchesDeliveredPackage": true,
+  "comparedBuildFiles": 1380,
+  "mismatches": [],
+  "asarEntries": 47552,
+  "routes": [
+    "/",
+    "/about",
+    "/api/states",
+    "/caption",
+    "/chat",
+    "/chat-floating",
+    "/chat-page-shell",
+    "/dashboard",
+    "/desktop-overlay",
+    "/devtools",
+    "/editor",
+    "/inlay",
+    "/notice",
+    "/onboarding",
+    "/settings",
+    "/spotlight",
+    "/v2",
+    "/widgets"
+  ],
+  "optionalGodotResourcePresent": false,
+  "route_scan_note": "粗略字符串线索，不是完整路由清单，未用其数量证明功能完成"
+}

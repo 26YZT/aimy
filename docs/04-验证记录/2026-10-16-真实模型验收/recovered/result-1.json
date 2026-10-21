@@ -1,0 +1,212 @@
+[
+  {
+    "key": "airi-local:chat:sessions:PtS9bfhenv9nfxPxoay_Z",
+    "value": {
+      "meta": {
+        "sessionId": "PtS9bfhenv9nfxPxoay_Z",
+        "userId": "local",
+        "characterId": "default",
+        "createdAt": 1792131120103,
+        "updatedAt": 1792131120700
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+          "id": "yAfzkeDLwA0E2L6UwpGVF",
+          "createdAt": 1792131120103
+        }
+      ]
+    }
+  },
+  {
+    "key": "airi-local:chat:sessions:sIKqjO4pR4Oc05vjRYa97",
+    "value": {
+      "meta": {
+        "sessionId": "sIKqjO4pR4Oc05vjRYa97",
+        "userId": "local",
+        "characterId": "default",
+        "createdAt": 1792131120862,
+        "updatedAt": 1792131124542,
+        "hasMemoryJournal": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+          "id": "4-pbVLqmFK7vnkSxfiaKP",
+          "createdAt": 1792131120862
+        },
+        {
+          "role": "user",
+          "content": "我跟你说件事。我后天下午两点有一场特别重要的面试。其实我为了这次机会已经准备很久了，从修改简历到整理项目经历，前前后后花了差不多一个月。这家公司我真的挺想去的，所以压力特别大。我最怕的就是明明准备了很多，结果到现场一紧张，脑子突然一片空白。今天晚上我还在反复练自我介绍，练到自己都快听烦了。唉，希望这次能顺利一点吧。\n",
+          "createdAt": 1792065600000,
+          "id": "5a0c630a-58c2-47f1-b073-af7e88366e14"
+        },
+        {
+          "role": "assistant",
+          "content": "一个月呀……那真的好认真呢。简历和项目经历都整理过一遍，心里其实已经有很多东西可以说了。\n\n会紧张很正常的，尤其是很想去的地方。不是因为你不够好，是因为你太在乎了。\n\n不过“脑子一片空白”这件事，其实是可以先给它留个出口的。你练自我介绍练到烦，说明内容已经够熟了，现在缺的不是背，是让它变成你自己在说话，不是念稿子。\n\n要不要试试这样：今晚最后练两遍就够了，然后停下来。明天下午找个安静的地方，不按顺序练，随便从中间某一段开始说，比如“我为什么想做这个方向”，或者“我最得意的一个项目”。这样就算现场顺序乱了，你的脑子也不会只能抓住开头那几句。\n\n后天下午两点的话……你打算几点到？路上要多久？这个也可以先想好，能少一点当天的变数。\n\n你已经准备得很久了，明天不用再加码。把状态养好，比多背一段更划算哦。",
+          "slices": [
+            {
+              "type": "text",
+              "text": "一个月呀……那真的好认真呢。简历和项目经历都整理过一遍，心里其实已经有很多东西可以说了。\n\n会紧张很正常的，尤其是很想去的地方。不是因为你不够好，是因为你太在乎了。\n\n不过“脑子一片空白”这件事，其实是可以先给它留个出口的。你练自我介绍练到烦，说明内容已经够熟了，现在缺的不是背，是让它变成你自己在说话，不是念稿子。\n\n要不要试试这样：今晚最后练两遍就够了，然后停下来。明天下午找个安静的地方，不按顺序练，随便从中间某一段开始说，比如“我为什么想做这个方向”，或者“我最得意的一个项目”。这样就算现场顺序乱了，你的脑子也不会只能抓住开头那几句。\n\n后天下午两点的话……你打算几点到？路上要多久？这个也可以先想好，能少一点当天的变数。\n\n你已经准备得很久了，明天不用再加码。把状态养好，比多背一段更划算哦。"
+            }
+          ],
+          "tool_results": [],
+          "createdAt": 1792065600000,
+          "id": "SLJg2POJOO3pVV85IUbWO",
+          "categorization": {
+            "speech": "<|ACT {\"emotion\":\"curious\",\"intensity\":0.8}|>一个月呀……那真的好认真呢。简历和项目经历都整理过一遍，心里其实已经有很多东西可以说了。\n\n<|ACT {\"emotion\":\"neutral\",\"intensity\":0.6}|><|DELAY 1|>会紧张很正常的，尤其是很想去的地方。不是因为你不够好，是因为你太在乎了。\n\n<|ACT {\"emotion\":\"think\",\"intensity\":0.7}|><|DELAY 1|>不过“脑子一片空白”这件事，其实是可以先给它留个出口的。你练自我介绍练到烦，说明内容已经够熟了，现在缺的不是背，是让它变成你自己在说话，不是念稿子。\n\n<|ACT {\"emotion\":\"happy\",\"intensity\":0.7}|>要不要试试这样：今晚最后练两遍就够了，然后停下来。明天下午找个安静的地方，不按顺序练，随便从中间某一段开始说，比如“我为什么想做这个方向”，或者“我最得意的一个项目”。这样就算现场顺序乱了，你的脑子也不会只能抓住开头那几句。\n\n<|ACT {\"emotion\":\"neutral\",\"intensity\":0.5}|><|DELAY 1|>后天下午两点的话……你打算几点到？路上要多久？这个也可以先想好，能少一点当天的变数。\n\n<|ACT {\"emotion\":\"happy\",\"intensity\":0.6}|>你已经准备得很久了，明天不用再加码。把状态养好，比多背一段更划算哦。",
+            "reasoning": ""
+          },
+          "generationTranscript": {
+            "type": "assistant",
+            "id": "5a0c630a-58c2-47f1-b073-af7e88366e14",
+            "status": "completed",
+            "rounds": [
+              {
+                "id": "5a0c630a-58c2-47f1-b073-af7e88366e14/0",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "<|ACT {\"emotion\":\"curious\",\"intensity\":0.8}|>一个月呀……那真的好认真呢。简历和项目经历都整理过一遍，心里其实已经有很多东西可以说了。\n\n<|ACT {\"emotion\":\"neutral\",\"intensity\":0.6}|><|DELAY 1|>会紧张很正常的，尤其是很想去的地方。不是因为你不够好，是因为你太在乎了。\n\n<|ACT {\"emotion\":\"think\",\"intensity\":0.7}|><|DELAY 1|>不过“脑子一片空白”这件事，其实是可以先给它留个出口的。你练自我介绍练到烦，说明内容已经够熟了，现在缺的不是背，是让它变成你自己在说话，不是念稿子。\n\n<|ACT {\"emotion\":\"happy\",\"intensity\":0.7}|>要不要试试这样：今晚最后练两遍就够了，然后停下来。明天下午找个安静的地方，不按顺序练，随便从中间某一段开始说，比如“我为什么想做这个方向”，或者“我最得意的一个项目”。这样就算现场顺序乱了，你的脑子也不会只能抓住开头那几句。\n\n<|ACT {\"emotion\":\"neutral\",\"intensity\":0.5}|><|DELAY 1|>后天下午两点的话……你打算几点到？路上要多久？这个也可以先想好，能少一点当天的变数。\n\n<|ACT {\"emotion\":\"happy\",\"intensity\":0.6}|>你已经准备得很久了，明天不用再加码。把状态养好，比多背一段更划算哦。"
+                  }
+                ],
+                "toolInvocations": [],
+                "projectionIssues": [],
+                "modelCall": {
+                  "model": "deepseek-flash",
+                  "finishReason": "stop",
+                  "usage": {
+                    "inputTokens": 1192,
+                    "outputTokens": 331,
+                    "totalTokens": 1523
+                  }
+                },
+                "continuation": {
+                  "protocol": "chat-completions",
+                  "scope": "[\"acceptance-deepseek\",\"https://api.deepseek.com/\",\"deepseek-flash\",\"sIKqjO4pR4Oc05vjRYa97\",\"local:default:1\"]",
+                  "data": [
+                    {
+                      "content": "<|ACT {\"emotion\":\"curious\",\"intensity\":0.8}|>一个月呀……那真的好认真呢。简历和项目经历都整理过一遍，心里其实已经有很多东西可以说了。\n\n<|ACT {\"emotion\":\"neutral\",\"intensity\":0.6}|><|DELAY 1|>会紧张很正常的，尤其是很想去的地方。不是因为你不够好，是因为你太在乎了。\n\n<|ACT {\"emotion\":\"think\",\"intensity\":0.7}|><|DELAY 1|>不过“脑子一片空白”这件事，其实是可以先给它留个出口的。你练自我介绍练到烦，说明内容已经够熟了，现在缺的不是背，是让它变成你自己在说话，不是念稿子。\n\n<|ACT {\"emotion\":\"happy\",\"intensity\":0.7}|>要不要试试这样：今晚最后练两遍就够了，然后停下来。明天下午找个安静的地方，不按顺序练，随便从中间某一段开始说，比如“我为什么想做这个方向”，或者“我最得意的一个项目”。这样就算现场顺序乱了，你的脑子也不会只能抓住开头那几句。\n\n<|ACT {\"emotion\":\"neutral\",\"intensity\":0.5}|><|DELAY 1|>后天下午两点的话……你打算几点到？路上要多久？这个也可以先想好，能少一点当天的变数。\n\n<|ACT {\"emotion\":\"happy\",\"intensity\":0.6}|>你已经准备得很久了，明天不用再加码。把状态养好，比多背一段更划算哦。",
+                      "role": "assistant"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "completedAt": 1792065600000
+        }
+      ],
+      "memoryJournal": [
+        {
+          "source": {
+            "principalId": "local",
+            "characterId": "default",
+            "kind": "chat-message",
+            "author": "user",
+            "sourceId": "chat:sIKqjO4pR4Oc05vjRYa97:5a0c630a-58c2-47f1-b073-af7e88366e14",
+            "sourceRevision": 1,
+            "contentHash": "6c4e2d1bc02f726fc8706d663dc17a291ec9b96090aa78b3a7fd6882d34a249b",
+            "authoredAt": 1792065600000,
+            "committedAt": 1792131121062,
+            "sessionId": "sIKqjO4pR4Oc05vjRYa97",
+            "messageId": "5a0c630a-58c2-47f1-b073-af7e88366e14",
+            "activationId": "mBzaHoOuv4QwOsDKr6rfn",
+            "channel": "text"
+          },
+          "acknowledged": true
+        }
+      ],
+      "memoryEligibility": [
+        {
+          "messageId": "5a0c630a-58c2-47f1-b073-af7e88366e14",
+          "activationId": "mBzaHoOuv4QwOsDKr6rfn",
+          "authoredAt": 1792065600000
+        }
+      ]
+    }
+  },
+  {
+    "key": "airi-local:memory:v1:local:default",
+    "value": {
+      "schemaVersion": 1,
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "revision": 1,
+      "memoryEpoch": 2,
+      "policy": {
+        "enabled": true,
+        "activationId": "mBzaHoOuv4QwOsDKr6rfn"
+      },
+      "modelPolicy": {
+        "mode": "follow-chat"
+      },
+      "routePolicyRevision": 0,
+      "sources": [
+        {
+          "ref": {
+            "principalId": "local",
+            "characterId": "default",
+            "sourceId": "chat:sIKqjO4pR4Oc05vjRYa97:5a0c630a-58c2-47f1-b073-af7e88366e14",
+            "sourceRevision": 1,
+            "contentHash": "6c4e2d1bc02f726fc8706d663dc17a291ec9b96090aa78b3a7fd6882d34a249b",
+            "authoredAt": 1792065600000,
+            "committedAt": 1792131121062,
+            "author": "user",
+            "kind": "chat-message",
+            "sessionId": "sIKqjO4pR4Oc05vjRYa97",
+            "messageId": "5a0c630a-58c2-47f1-b073-af7e88366e14",
+            "activationId": "mBzaHoOuv4QwOsDKr6rfn",
+            "channel": "text"
+          },
+          "lifecycle": "current"
+        }
+      ],
+      "sourceChanges": [],
+      "facts": [],
+      "jobs": [
+        {
+          "jobId": "job:59a039f1d4e64634b981b370c93963e726dbe37613311b378824ebffa66072b4",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:sIKqjO4pR4Oc05vjRYa97:5a0c630a-58c2-47f1-b073-af7e88366e14",
+              "sourceRevision": 1,
+              "contentHash": "6c4e2d1bc02f726fc8706d663dc17a291ec9b96090aa78b3a7fd6882d34a249b"
+            }
+          ],
+          "activationId": "mBzaHoOuv4QwOsDKr6rfn",
+          "status": "failed",
+          "failureCode": "INVALID_INPUT",
+          "attempt": 1
+        }
+      ],
+      "extractionBlocks": [],
+      "replayBlocks": [],
+      "factTombstones": [],
+      "receipts": [
+        {
+          "operationId": "enroll:59a039f1d4e64634b981b370c93963e726dbe37613311b378824ebffa66072b4",
+          "payloadDigest": "9464a7923e2c686cd026a9e044b76751324246deffafaa3767ccbd22b90a838c",
+          "commandDigest": "d0ab3c7800e4efef54bb9da2250fb54089eba66dcd55f1fdd33b35a0b948f6ea",
+          "status": "succeeded",
+          "revision": 1,
+          "memoryEpoch": 1,
+          "persistedAt": 1792131121072,
+          "factIds": [],
+          "jobIds": [
+            "job:59a039f1d4e64634b981b370c93963e726dbe37613311b378824ebffa66072b4"
+          ]
+        }
+      ],
+      "profile": {
+        "state": "unanswered"
+      },
+      "lease": null,
+      "leaseCounter": 1
+    }
+  }
+]

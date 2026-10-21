@@ -1,0 +1,65 @@
+{
+  "correction": {
+    "fixtureCase": "LM03",
+    "contract_outcome": "fail",
+    "active": [
+      {
+        "id": "ek8ipyj8",
+        "date": "2026-10-14",
+        "category": "preference",
+        "importance": 3,
+        "summary": "用户喜欢美式咖啡",
+        "status": "active",
+        "keywords": []
+      },
+      {
+        "id": "e3xdlgad",
+        "date": "2026-10-14",
+        "category": "preference",
+        "importance": 3,
+        "summary": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+        "status": "active",
+        "keywords": []
+      }
+    ],
+    "writeOk": true
+  },
+  "deletion": {
+    "fixtureCase": "LM07",
+    "contract_outcome": "fail",
+    "removed": true,
+    "afterRemoval": [],
+    "afterLate": [
+      {
+        "id": "eykz3owf",
+        "date": "2026-10-14",
+        "category": "preference",
+        "importance": 3,
+        "summary": "用户喜欢美式咖啡",
+        "status": "active",
+        "keywords": []
+      }
+    ],
+    "writeOk": true
+  },
+  "limitations": [
+    "real native browser localStorage, actual LongTerm.consolidate/merge/remove/persist",
+    "LLM callback is fixed fixture, not model semantic quality",
+    "deletion case uses native stored entry id; it is not a source-message revision or per-fact tombstone"
+  ],
+  "afterFreshPageRealm": {
+    "entries": [
+      {
+        "id": "eykz3owf",
+        "date": "2026-10-14",
+        "category": "preference",
+        "importance": 3,
+        "summary": "用户喜欢美式咖啡",
+        "status": "active",
+        "keywords": []
+      }
+    ],
+    "writeOk": true
+  },
+  "semantic_model_tested": false
+}

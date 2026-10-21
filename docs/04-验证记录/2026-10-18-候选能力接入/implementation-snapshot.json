@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-18",
+  "branch": "codex/aimy-first-increment",
+  "scope": "current feature files and key inherited consumers; not all build inputs or attribution of all preexisting diffs",
+  "files": [
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "574cb216805121884b519a41fcb0dc8052edde31345d48088a5b487db5e973c1"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/App.vue",
+      "sha256": "8cbed5cd92244038fadc7660a5a7a5614c3a5a673797e2a5899a11fad5539d1a"
+    },
+    {
+      "path": "packages/i18n/src/locales/en/settings.yaml",
+      "sha256": "7432181115a2cd6bd9f71c84ccd9b2113bf9414f5ad9269faee09fd9e82fdc9f"
+    },
+    {
+      "path": "packages/i18n/src/locales/zh-Hans/settings.yaml",
+      "sha256": "161e53f34c7d7902671c4c51ffe17e37d7a9d3ff038e231d701990d7a730a22c"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/companion/index.vue",
+      "sha256": "a83c6e63db3e9ee8290be4f49e88d39d4953c100bc4be14a1af79b764d369483"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+      "sha256": "671f81389cbe44085937c94d169cf17c4035f90f950434f17aa21f47feef82aa"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/settings/companion-settings.browser.test.ts",
+      "sha256": "fecd2fb5281dbd6d0ade687eec9d37d72013323bc3a2c2f410feecaed28e8b14"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/settings/companion-settings.vue",
+      "sha256": "4a0d1e5f755b4472a4e37c30547c369299bd3b522af97fdb2444a3d937696cd6"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/settings/index.ts",
+      "sha256": "f96c2dfd9df5d17954e164aef9d61d5297a532aa096ff3de37c68c0a8509e08a"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/voice-drafts.ts",
+      "sha256": "e1ebb6e0a66f5193a25f8bf60ff94efec60b39c20828648643fcda61c4f3cdd2"
+    },
+    {
+      "path": "packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+      "sha256": "2e500b7f991537b9eb49a5d32202ce346d244a0155ca7606a133563bf730d791"
+    },
+    {
+      "path": "packages/stage-ui/src/models/vrm-inspection-import.browser.test.ts",
+      "sha256": "c01ad27c171f2d4f5a28e7a41973309222c29818a3973576500312f3e5bf0e2e"
+    },
+    {
+      "path": "packages/stage-ui/src/models/vrm-inspection-loader.browser.test.ts",
+      "sha256": "0cd509128cb4f4fd85a1c8ce1d7eca714748f6ff8d52450c90ceacdf352f2c7c"
+    },
+    {
+      "path": "packages/stage-ui/src/models/vrm-inspection.test.ts",
+      "sha256": "9e810df3c76d691e1584f8482fadfa0729e433704a9e0e8da32e633e54a9eb23"
+    },
+    {
+      "path": "packages/stage-ui/src/models/vrm-inspection.ts",
+      "sha256": "6a0c17aeb47e889b3fac6313166035a2949eaca27823a610e62fd2dc8f01ea0a"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/followup-generation.test.ts",
+      "sha256": "880f37bc32d7a7e18b1bbd75cabd46ddb359ff9652bf4f7553f86739c79234a1"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/followup-presentation.test.ts",
+      "sha256": "4dad821221b05b15c9617a463fa08e7a7cfce969019ff619d8dccaf54db1fe82"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/followup.browser.test.ts",
+      "sha256": "669c68546a890e5a213a7e2aa55918e5b2eb499e22761349b09e7b6c2cd11b01"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/followup.ts",
+      "sha256": "097e904b38ef1381a5710c8b07cfbfa4046fc210cff48ca02d39a553c6c62517"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/motion.ts",
+      "sha256": "8094a6dbde91a2f2f0c0ebd7150951cdd28ff3232383fe9688cd60062af52dbc"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/preferences.ts",
+      "sha256": "a54654f6bf2ce10299cc5613a6a7a30ab32dec0f676ed09cf5967c02605a14cb"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/review.browser.test.ts",
+      "sha256": "f4784ccaba58fbc53e4c480754a9aed7a42e397eb06f7610fa4f8c1720f4b688"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/review.ts",
+      "sha256": "ba1c2d120754764875e0521ae798dbaf419b0c03b374dcb77ce8c35bff2b971b"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/runtime.browser.test.ts",
+      "sha256": "0fde234da7c9c9b811b53ac81a8ba9b9b233a7db96bd527c61e42a847986c92f"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/settings.browser.test.ts",
+      "sha256": "ef5f2d816608f8bf19589b98c6bb6889d94157fc746706b8fef7c45774964e9d"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/settings.ts",
+      "sha256": "b06280b55f0847c6d7be0719e8d7c4020be551a266df9cce4878bfe331e80fe8"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/speech-transform.test.ts",
+      "sha256": "d3ebdf4bbe0397856067aa33518758043a1bbe263f650a10f151a97cbaef4ab3"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/speech-transform.ts",
+      "sha256": "188098f30249ddcde8f619313f7370179b3606a4feae2f05a2477f7bbd7be7b6"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/voice-policy.test.ts",
+      "sha256": "c629bee6b56cb84420327a09081354fdc624e880988811b365863e90fbb85182"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/voice-policy.ts",
+      "sha256": "097cb26959938a793460ab20674141eaa6504d3f4b395108328144695ef7bf6e"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/workflow.test.ts",
+      "sha256": "59b064b9243f8d680189b3d9c100e3eb527d5b7300684024f5d8bc842706b286"
+    },
+    {
+      "path": "packages/stage-ui/src/services/companion/workflow.ts",
+      "sha256": "0036702294185a9b5db0f780fa76e4008ae6fbc649068f73df7cfcb13b7a8b40"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/character/index.ts",
+      "sha256": "095b7a9eef1b43c863e9e5eee910baccd02077db6162105efc8107a8ce57f194"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/character/orchestrator/store.ts",
+      "sha256": "f91ff2b3abb680b87f2a7d8b255f71f3210e7c93e196788c94114f05282415c3"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/companion-settings.ts",
+      "sha256": "ed0449b5d3520a5b39610ffe3876c4922196f69a9b5b41ae298938e263a5f7f8"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/companion.ts",
+      "sha256": "fd2142f19e60836c3128188ce9954ea7b81b193d87d6e8fd0ad2e59d3fe6d313"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/display-models.ts",
+      "sha256": "06de0d2c6cb717fe8124a82ead640d3c94269925a5bc384afe20c8531ae8adec"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/speech-companion.browser.test.ts",
+      "sha256": "e7b2146479896e87e9a180c1776b9c6c745add1762c1b5c49cb2faf7cd57f308"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/speech.ts",
+      "sha256": "660d1ea37b869c5c57d2efd0252f744c02219de46693c4567af632f32e58b20f"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/voice.ts",
+      "sha256": "1861b613a6f91682d10a1d6c0c5e30ae858293a562125addaeed7af179f7c9f0"
+    },
+    {
+      "path": "packages/stage-ui/src/types/companion.ts",
+      "sha256": "a60bb32d0a1b8ffab07c284d3e2cfdfafd80f3ce9eaf8216653aa7211656924a"
+    },
+    {
+      "path": "packages/stage-ui-live2d/src/components/scenes/live2d/Model.vue",
+      "sha256": "2b33d4bc902418cced0119f236729401e801d384627e5134de58de677619a1cd"
+    },
+    {
+      "path": "packages/stage-ui-live2d/src/composables/live2d/companion-motion.test.ts",
+      "sha256": "4115ba09d35b558639f702094f045d1f2bf101258823bd88f6f405ef438a73c6"
+    },
+    {
+      "path": "packages/stage-ui-live2d/src/composables/live2d/companion-motion.ts",
+      "sha256": "9c3ce2abd862b9d8d5d9c4198fb2e6d846b7a8b87b7cabb2d35c63b1843f6547"
+    },
+    {
+      "path": "packages/stage-ui-live2d/src/composables/live2d/index.ts",
+      "sha256": "97cf8956f371725d3b9fe8302f10f4535413b32cbcf197901ac7703a778f9ad4"
+    },
+    {
+      "path": "scripts/inspect-vrm.ts",
+      "sha256": "3164fd4033b5857c566f5c18e6f378630450e1f10cc0cca424cd24b55867a249"
+    }
+  ]
+}

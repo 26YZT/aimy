@@ -1,0 +1,43 @@
+{
+  "repo": "Open-LLM-VTuber/Open-LLM-VTuber-Web",
+  "default_branch": "main",
+  "source_sha": "d176e7df2366952e3bacbf12cf9a8b18a4315932",
+  "source_commit_date": "2025-09-05T13:00:45Z",
+  "pinned_build_sha": "06a659b114fff788cf0daaa86e484576db4975bf",
+  "pinned_build_commit": {
+    "author": {
+      "name": "ylxmf2005",
+      "email": "42771977+ylxmf2005@users.noreply.github.com",
+      "date": "2025-08-21T12:35:28Z"
+    },
+    "committer": {
+      "name": "ylxmf2005",
+      "email": "42771977+ylxmf2005@users.noreply.github.com",
+      "date": "2025-08-21T12:35:28Z"
+    },
+    "message": "Deploying to build from @ Open-LLM-VTuber/Open-LLM-VTuber-Web@3d57a9a0125a0ca13e5d096f7092e4e494ed389e 🚀",
+    "tree": {
+      "sha": "c823f6b10338b33188b2382b8d70728d2b5b2b12",
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/trees/c823f6b10338b33188b2382b8d70728d2b5b2b12"
+    },
+    "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/commits/06a659b114fff788cf0daaa86e484576db4975bf",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "reviewed_source_sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+  "reviewed_source_commit_date": "2025-08-21T12:34:29Z",
+  "reviewed_source_note": "后端submodule build commit描述中注明的源commit；未独立复现其构建字节"
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "candidate_id": "KI01",
+    "proposed_selection": "工程参考",
+    "reason": "F04补正反例，原query跨extra_identifier反例成立；不算事实记忆新增",
+    "comparison_slices": [
+      "KI-DIFF-F04"
+    ],
+    "product_shortlist_selected": false
+  },
+  {
+    "candidate_id": "KI02",
+    "proposed_selection": "AIRI已有或不更强",
+    "reason": "本轮只补schema邻接，不测试所有optional Protocol/provider功能；原排重维持",
+    "comparison_slices": [
+      "KI-DIFF-F02"
+    ],
+    "product_shortlist_selected": false
+  },
+  {
+    "candidate_id": "KI03",
+    "proposed_selection": "工程参考",
+    "reason": "本轮未追加配置迁移运行测试，不泛称已复现",
+    "comparison_slices": [],
+    "product_shortlist_selected": false
+  },
+  {
+    "candidate_id": "KI04",
+    "proposed_selection": "已有相邻能力/工程差异",
+    "reason": "AIRI原schema真Zod支持帮助/默认/验证；Kirara图块反射不等于全表单产品增量",
+    "comparison_slices": [
+      "KI-DIFF-F02"
+    ],
+    "product_shortlist_selected": false
+  },
+  {
+    "candidate_id": "KI05",
+    "proposed_selection": "工程参考",
+    "reason": "本轮未追加追踪/脱敏运行测试，不泛称已复现",
+    "comparison_slices": [],
+    "product_shortlist_selected": false
+  },
+  {
+    "candidate_id": "KI06",
+    "proposed_selection": "后置独立需求",
+    "reason": "IM已有；本轮新增有界声明式路由差异与空group反例，无平台/市场测试",
+    "comparison_slices": [
+      "KI-DIFF-F03"
+    ],
+    "product_shortlist_selected": false
+  },
+  {
+    "candidate_id": "KI07",
+    "proposed_selection": "后置独立需求",
+    "reason": "普通typed DAG已执行，UI/分支可靠性未成立；AIRI已有内置自动化workflow",
+    "comparison_slices": [
+      "KI-DIFF-F01",
+      "KI-DIFF-F03"
+    ],
+    "product_shortlist_selected": false
+  },
+  {
+    "candidate_id": "KI08",
+    "proposed_selection": "不纳入本期",
+    "reason": "本轮没有运行任意exec/安装插件/启动双Web栈，不扩大研究运行边界",
+    "comparison_slices": [],
+    "product_shortlist_selected": false
+  }
+]

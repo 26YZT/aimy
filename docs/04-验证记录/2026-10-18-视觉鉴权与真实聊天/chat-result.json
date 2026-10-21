@@ -1,0 +1,18 @@
+{
+  "answer": "阿言，我看了你发来的画面描述：校验码是 AE9A15，两个大色块分别是红色和蓝色，底部帧计数是 820，还有一行“Local testonly”的提示。这是根据你共享的测试窗口内容回答的，不是我瞎猜的哦。",
+  "finishedAt": 1792328341443,
+  "httpStatuses": [
+    200
+  ],
+  "question": "请根据我当前共享的测试窗口回答：画面中的校验码是什么？两个大色块分别是什么颜色？不要猜测。",
+  "questionContainsAnswer": false,
+  "requestCount": 1,
+  "requestShape": {
+    "imageParts": 0,
+    "model": "deepseek-flash",
+    "promptContainsVisualCode": true
+  },
+  "sessionId": "gpjV6yH_0gVEZVG6BdT5h",
+  "startedAt": 1792328340199,
+  "status": "complete"
+}

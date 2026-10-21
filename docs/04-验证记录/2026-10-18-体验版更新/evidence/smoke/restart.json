@@ -1,0 +1,89 @@
+{
+  "route": "/settings/companion",
+  "headings": [
+    "稍后接着聊",
+    "回顾重要的事",
+    "声音与语音输入",
+    "角色互动",
+    "本地行为规则"
+  ],
+  "buttons": [
+    "取消当前续聊计划",
+    "每周",
+    "现在整理回顾",
+    "日语",
+    "温柔",
+    "添加规则",
+    "用当前话题试运行已保存规则",
+    "保存设置",
+    "重新载入"
+  ],
+  "before": {
+    "schemaVersion": 1,
+    "revision": 1,
+    "preferences": {
+      "followup": {
+        "enabled": false,
+        "delayMinutes": 17,
+        "maxPerDay": 4,
+        "quietStartHour": 22,
+        "quietEndHour": 8
+      },
+      "review": {
+        "idleEnabled": false,
+        "cadence": "week",
+        "maxItems": 8
+      },
+      "speech": {
+        "translationEnabled": false,
+        "targetLanguage": "ja",
+        "directorEnabled": false,
+        "style": "gentle",
+        "echoFilterEnabled": false,
+        "adaptiveSilenceEnabled": false
+      },
+      "interaction": {
+        "enabled": false,
+        "minimumIntervalMs": 800,
+        "avoidRecent": 2,
+        "models": {}
+      }
+    },
+    "rules": []
+  },
+  "after": {
+    "schemaVersion": 1,
+    "revision": 1,
+    "preferences": {
+      "followup": {
+        "enabled": false,
+        "delayMinutes": 17,
+        "maxPerDay": 4,
+        "quietStartHour": 22,
+        "quietEndHour": 8
+      },
+      "review": {
+        "idleEnabled": false,
+        "cadence": "week",
+        "maxItems": 8
+      },
+      "speech": {
+        "translationEnabled": false,
+        "targetLanguage": "ja",
+        "directorEnabled": false,
+        "style": "gentle",
+        "echoFilterEnabled": false,
+        "adaptiveSilenceEnabled": false
+      },
+      "interaction": {
+        "enabled": false,
+        "minimumIntervalMs": 800,
+        "avoidRecent": 2,
+        "models": {}
+      }
+    },
+    "rules": []
+  },
+  "saved": false,
+  "error": ""
+}

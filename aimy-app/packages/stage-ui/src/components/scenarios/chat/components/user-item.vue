@@ -23,11 +23,14 @@ const props = withDefaults(defineProps<{
   variant?: 'desktop' | 'mobile'
   /** How the bubble paints its background; see `ChatHistory`'s `surface`. */
   surface?: 'translucent' | 'opaque'
+  appearance?: 'stage' | 'messenger'
+  avatar?: string
 }>(), {
   canReply: false,
   scrollContainer: null,
   variant: 'desktop',
   surface: 'translucent',
+  appearance: 'stage',
 })
 
 const emit = defineEmits<{
@@ -69,10 +72,14 @@ const voiceOnly = computed(() => audio.value.length > 0 && !images.value.length 
 
 const containerClasses = computed(() => [
   'flex',
-  props.variant === 'mobile' ? 'ml-0 flex-row' : 'ml-12 flex-row-reverse',
+  props.appearance === 'messenger'
+    ? 'ml-0 flex-row-reverse items-start gap-2.5 pl-10 font-sans text-base leading-relaxed'
+    : ['font-cute', props.variant === 'mobile' ? 'ml-0 flex-row' : 'ml-12 flex-row-reverse'],
 ])
 
 const boxClasses = computed(() => {
+  if (props.appearance === 'messenger')
+    return ['messenger-outgoing relative min-w-0 px-3 py-2']
   const spacing = voiceOnly.value
     ? 'px-1.5 py-1.5'
     : props.variant === 'mobile' ? 'px-2 py-1.5 text-sm' : 'px-3 py-2'
@@ -90,7 +97,7 @@ const copyText = computed(() => getChatHistoryItemCopyText(props.message))
 </script>
 
 <template>
-  <div v-if="message.role === 'user'" :class="['font-cute ph-no-capture', containerClasses]">
+  <div v-if="message.role === 'user'" :class="['ph-no-capture', containerClasses]" :data-appearance="appearance">
     <ChatActionMenu
       :can-reply="canReply"
       :copy-text="copyText"
@@ -106,15 +113,15 @@ const copyText = computed(() => getChatHistoryItemCopyText(props.message))
           :ref="setMeasuredElement"
           :class="[
             'chat-message-item-container flex flex-col',
-            voiceOnly ? 'rounded-2xl' : 'min-w-20 rounded-xl',
+            appearance === 'stage' ? (voiceOnly ? 'rounded-2xl' : 'min-w-20 rounded-xl') : '',
             'h-unset <sm:h-fit',
-            'shadow-sm shadow-neutral-200/50 dark:shadow-none',
+            appearance === 'stage' ? 'shadow-sm shadow-neutral-200/50 dark:shadow-none' : '',
             boxClasses,
             (isStageWeb() || isStageCapacitor()) && props.variant === 'mobile' ? 'select-none sm:select-auto' : '',
           ]"
         >
           <ChatReplyQuote v-if="replyTarget" :target="replyTarget" />
-          <div v-if="variant === 'mobile'">
+          <div v-if="variant === 'mobile' && appearance === 'stage'">
             <span :class="['inline <sm:hidden text-sm font-normal', 'text-black/60 dark:text-white/65']">{{ label }}</span>
           </div>
           <div v-if="images.length" :class="['flex flex-wrap gap-2 py-2']">
@@ -139,3 +146,9 @@ const copyText = computed(() => getChatHistoryItemCopyText(props.message))
     </ChatActionMenu>
   </div>
 </template>
+
+<style scoped>
+.messenger-outgoing { border-radius: 20px 20px 4px 20px; background: linear-gradient(115deg, var(--aimy-outgoing, #f0e3e8), var(--aimy-outgoing-end, #eacdd8)); color: var(--aimy-outgoing-ink, #543a45); box-shadow: none; }
+.messenger-outgoing :deep(a) { color: inherit; text-decoration: underline; }
+:global(.dark .messenger-outgoing) { background: linear-gradient(115deg, var(--aimy-outgoing, #614551), var(--aimy-outgoing-end, #503a44)); color: var(--aimy-outgoing-ink, #f8e8ef); }
+</style>

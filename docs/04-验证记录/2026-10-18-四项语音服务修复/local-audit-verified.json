@@ -1,0 +1,70 @@
+[
+  {
+    "audio": {
+      "bytes": 139308,
+      "duration": 2.9013125,
+      "rms": 0.0518768252027541
+    },
+    "calls": [
+      {
+        "endpoint": "/version",
+        "status": 200
+      },
+      {
+        "endpoint": "/speakers",
+        "status": 200
+      },
+      {
+        "endpoint": "/audio_query",
+        "status": 200
+      },
+      {
+        "endpoint": "/synthesis",
+        "status": 200
+      }
+    ],
+    "configSaved": true,
+    "id": "voicevox",
+    "status": "passed",
+    "valid": true,
+    "voice": {
+      "id": "2",
+      "name": "四国めたん / ノーマル"
+    },
+    "voices": 127
+  },
+  {
+    "audio": {
+      "bytes": 289948,
+      "duration": 3.286875,
+      "rms": 0.13773999509860485
+    },
+    "calls": [
+      {
+        "endpoint": "/version",
+        "status": 200
+      },
+      {
+        "endpoint": "/speakers",
+        "status": 200
+      },
+      {
+        "endpoint": "/audio_query",
+        "status": 200
+      },
+      {
+        "endpoint": "/synthesis",
+        "status": 200
+      }
+    ],
+    "configSaved": true,
+    "id": "aivis-speech",
+    "status": "passed",
+    "valid": true,
+    "voice": {
+      "id": "888753760",
+      "name": "まお / ノーマル"
+    },
+    "voices": 10
+  }
+]

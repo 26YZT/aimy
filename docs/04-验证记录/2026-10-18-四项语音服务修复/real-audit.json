@@ -1,0 +1,103 @@
+{
+  "apple": [
+    {
+      "events": 12,
+      "expected": "这是Aimy语音连接测试。",
+      "id": "sample-0",
+      "text": "这是艾米语音连接测试"
+    },
+    {
+      "events": 13,
+      "expected": "你好，请帮我看看今天的天气。",
+      "id": "sample-1",
+      "text": "你好，请帮我看看今天的天气"
+    },
+    {
+      "events": 19,
+      "expected": "请检查麦克风和语音识别服务是否正常。",
+      "id": "sample-2",
+      "text": "请检查麦克风和语音识别服务是否正常"
+    },
+    {
+      "events": 16,
+      "expected": "我想喝一杯热茶，然后继续阅读这篇文章。",
+      "id": "sample-3",
+      "text": "我想喝饮杯热茶，然后继续阅读篇文章"
+    }
+  ],
+  "captureAfter": {
+    "microphone": true,
+    "screen": false
+  },
+  "captureBefore": {
+    "microphone": true,
+    "screen": false
+  },
+  "cloudRequests": [
+    {
+      "status": 200
+    },
+    {
+      "status": 200
+    },
+    {
+      "status": 200
+    }
+  ],
+  "mimo": [
+    {
+      "expected": "这是Aimy语音连接测试。",
+      "id": "sample-0",
+      "text": "这是艾米与英灵街测试。"
+    },
+    {
+      "expected": "请检查麦克风和语音识别服务是否正常。",
+      "id": "sample-2",
+      "text": "请检查麦克风和语音识别服务是否正常。"
+    }
+  ],
+  "selectionsAfter": {
+    "chat": {
+      "model": "deepseek-flash",
+      "provider": "deepseek"
+    },
+    "hearing": {
+      "model": "apple-speech",
+      "provider": "apple-speech-transcription"
+    },
+    "speech": {
+      "model": "mimo-v2.5-tts",
+      "provider": "mimo-audio-speech",
+      "voice": "冰糖"
+    },
+    "vision": {
+      "model": "deepseek-flash",
+      "provider": "vision-deepseek"
+    }
+  },
+  "selectionsBefore": {
+    "chat": {
+      "model": "deepseek-flash",
+      "provider": "deepseek"
+    },
+    "hearing": {
+      "model": "apple-speech",
+      "provider": "apple-speech-transcription"
+    },
+    "speech": {
+      "model": "mimo-v2.5-tts",
+      "provider": "mimo-audio-speech",
+      "voice": "冰糖"
+    },
+    "vision": {
+      "model": "deepseek-flash",
+      "provider": "vision-deepseek"
+    }
+  },
+  "status": "passed",
+  "tts": {
+    "bytes": 92204,
+    "duration": 1.92,
+    "rms": 0.10818338116298576
+  }
+}

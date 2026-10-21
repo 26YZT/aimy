@@ -1,0 +1,48 @@
+{
+  "task": "LIVE-HOST-BUILD-REVISION",
+  "status": "complete",
+  "scope": [
+    "apps/stage-tamagotchi/scripts/acceptance/live-build.ts",
+    "apps/stage-tamagotchi/scripts/acceptance/live-build.test.ts"
+  ],
+  "newApi": "reviseLiveHostBuild(campaign): Promise<LiveBuildBinding>",
+  "newOptionalField": "hostRevisionId",
+  "behavior": [
+    "Fully verifies the current bound desktop and host artifacts before compilation.",
+    "Actually compiles both live host entrypoints through installed Vite into host/revisions/<uuid>.",
+    "Records actual Vite module graph IDs with transformed-code SHA256 and external module names.",
+    "Writes new immutable bundle metadata. Existing desktop files, drivers, host revisions and metadata are unchanged.",
+    "Verifies exact revision paths, all desktop artifacts, driver chain and new host hashes before archiving and replacing target binding.",
+    "Initial non-revision bindings remain supported. Explicit sharing preserves revision identity."
+  ],
+  "checks": {
+    "tests": 14,
+    "actualViteHostCompilationsInTest": 4,
+    "strictTypecheck": "exit 0",
+    "targetedLint": "exit 0",
+    "diffCheck": "exit 0"
+  },
+  "testsInclude": [
+    "changed current host refuses revision",
+    "ledger and synthetic ciphertext untouched",
+    "desktop/driver/cache marker unchanged",
+    "initial and previous revision remain independently verifiable",
+    "missing or tampered new host rejected",
+    "revision explicitly shared to another campaign"
+  ],
+  "realModelCalls": 0,
+  "limitations": [
+    "Only temporary small desktop artifact trees were used. Current host sources were really compiled, but no Electron host was launched by these tests.",
+    "Root invokes revision after the pending host fix is complete. No existing real campaign/build was modified by this subtask."
+  ],
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-build.ts",
+      "sha256": "7da8abe459b0aa968d8f2f5997ca8a17d8848ede67ed5e04e1d3540a188bffc3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-build.test.ts",
+      "sha256": "534782002015121c39a247e891690e26e7f9ecb4087402f033c0ff3ec2c6a2ba"
+    }
+  ]
+}

@@ -25,7 +25,10 @@ import {
 } from '../../libs/chat-sync'
 import { captureAnalyticsEvent } from '../../libs/product-signals'
 import { SERVER_URL } from '../../libs/server'
+import { isCloudReplicaEnabled } from '../../services/local-data-policy'
+import { getMemorySessionPort } from '../../services/memory-session'
 import { useAuthStore } from '../auth'
+import { MemoryOperationError } from '../memory/schema'
 import { useAiriCardStore } from '../modules/airi-card'
 import { mergeLoadedSessionMessages } from './session-message-merge'
 
@@ -76,6 +79,8 @@ export const useChatSessionStore = defineStore('chat-session', () => {
   })
   const sessionMessages = ref<Record<string, ChatHistoryItem[]>>({})
   const sessionMetas = ref<Record<string, ChatSessionMeta>>({})
+  // Shared input follows the focused chat without navigating other windows or persisting a second selection.
+  const interactionTarget = ref<(Pick<ChatSessionMeta, 'sessionId' | 'userId' | 'characterId'> & { sourceId: string }) | null>(null)
   const sessionGenerations = ref<Record<string, number>>({})
   /** Canonical session index replicated so each window can derive its local selection. */
   const index = ref<ChatSessionsIndex | null>(null)
@@ -94,6 +99,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
   let ensureActiveEpoch = 0
 
   let persistQueue = Promise.resolve()
+  const persistenceFailures = new Set<string>()
   const loadedSessions = new Set<string>()
   const staleSessions = new Set<string>()
   const cloudHydratedSessions = new Set<string>()
@@ -151,25 +157,61 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     return cloudMapper
   }
 
-  /**
-   * Append a write task to the persist queue. Tasks always run sequentially
-   * regardless of whether prior tasks rejected — but rejections propagate to
-   * the awaiting caller AND are surfaced via console for debugging. The
-   * previous `then(task, task)` form silently swallowed prior rejections by
-   * running the next task as the rejection handler, which masked IDB
-   * failures from the cloud-sync cursor tracking that depends on them.
-   */
-  function enqueuePersist<T>(task: () => Promise<T>): Promise<T> {
-    const next = persistQueue.then(task)
-    // Keep the queue alive after a rejection but log it so silent IDB
-    // failures (quota, corruption) surface during dev.
+  /** Full writes clear only their own targets. Unrelated writes cannot hide a prior failed save. */
+  async function persistTargets<T>(targets: readonly string[], task: () => Promise<T>): Promise<T> {
+    try {
+      const result = await task()
+      targets.forEach(target => persistenceFailures.delete(target))
+      return result
+    }
+    catch (error) {
+      if (!(error instanceof MemoryOperationError)
+        || ['STORAGE_FAILED', 'STORAGE_CORRUPT', 'SCHEMA_UNSUPPORTED'].includes(error.code)) {
+        targets.forEach(target => persistenceFailures.add(target))
+      }
+      throw error
+    }
+  }
+
+  /** Keeps the queue usable after rejection while its failure ledger remains available to shutdown. */
+  function enqueuePersist<T>(task: () => Promise<T>, targets: readonly string[] = []): Promise<T> {
+    const next = persistQueue.then(() => persistTargets(targets, task))
     persistQueue = next.then(
       () => undefined,
-      (err) => {
-        console.warn('[chat-session] persist task failed:', errorMessageFrom(err))
-      },
+      () => { console.warn('[chat-session] A persistence task did not complete.') },
     )
     return next
+  }
+
+  async function flushPersistence(): Promise<void> {
+    let observed: Promise<void>
+    do {
+      observed = persistQueue
+      await observed
+    } while (persistQueue !== observed)
+    if (persistenceFailures.size)
+      throw new Error('Chat persistence has unresolved failures')
+  }
+
+  /** Confirms a rollback from actual stored bytes before clearing an earlier failed transaction. */
+  async function confirmSessionRollback(sessionId: string, messages: ChatHistoryItem[], generation: number): Promise<void> {
+    if (!persistenceFailures.has(`session:${sessionId}`))
+      return
+    const stored = await chatSessionsRepo.getSession(sessionId)
+    if (!stored || generation !== getSessionGeneration(sessionId)
+      || stored.meta.userId !== getCurrentUserId()
+      || JSON.stringify(stored.messages) !== JSON.stringify(messages)
+      || JSON.stringify(sessionMessages.value[sessionId]) !== JSON.stringify(messages)) {
+      return
+    }
+    sessionMetas.value[sessionId] = cloneDeep(stored.meta)
+    const characterIndex = index.value?.characters[stored.meta.characterId]
+    if (characterIndex)
+      characterIndex.sessions[sessionId] = cloneDeep(stored.meta)
+    persistenceFailures.delete(`session:${sessionId}`)
+    const storedIndex = await chatSessionsRepo.getIndex(stored.meta.userId)
+    if (JSON.stringify(storedIndex) === JSON.stringify(index.value))
+      persistenceFailures.delete(`index:${stored.meta.userId}`)
   }
 
   function snapshotMessages(messages: ChatHistoryItem[]) {
@@ -279,10 +321,10 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     if (!index.value)
       return
     const snapshot = cloneDeep(index.value)
-    await enqueuePersist(() => chatSessionsRepo.saveIndex(snapshot))
+    await enqueuePersist(() => chatSessionsRepo.saveIndex(snapshot), [`index:${snapshot.userId}`])
   }
 
-  async function persistSession(sessionId: string) {
+  async function persistSession(sessionId: string, enrollMessageId?: string) {
     await enqueuePersist(async () => {
       const meta = sessionMetas.value[sessionId]
       if (!meta)
@@ -290,7 +332,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
 
       const messages = snapshotMessages(ensureSessionMessageIds(sessionId))
       const now = Date.now()
-      const updatedMeta = {
+      const updatedMeta: ChatSessionMeta = {
         ...cloneDeep(meta),
         updatedAt: now,
       }
@@ -304,25 +346,62 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         meta: updatedMeta,
         messages,
       }
-
-      await chatSessionsRepo.saveSession(sessionId, record)
-
-      if (index.value) {
-        const snapshot = cloneDeep(index.value)
-        await chatSessionsRepo.saveIndex(snapshot)
+      const memory = getMemorySessionPort()
+      try {
+        const previous = memory ? await chatSessionsRepo.getSession(sessionId) : null
+        const sources = previous && memory ? await memory.reconcileSources(previous, messages) : []
+        if (enrollMessageId && memory) {
+          const input = await memory.prepareInput(record, enrollMessageId)
+          if (input) {
+            updatedMeta.hasMemoryJournal = true
+            record.memoryEligibility = [input.eligibility]
+            if (input.source)
+              sources.push(input.source)
+          }
+        }
+        if (index.value) {
+          const snapshot = cloneDeep(index.value)
+          await persistTargets([`session:${sessionId}`, `index:${snapshot.userId}`], () => chatSessionsRepo.commitSessionSnapshotAndIndex(sessionId, record, snapshot, sources))
+        }
+        else {
+          if (sources.length)
+            throw new Error('A memory source cannot persist without a session index.')
+          await persistTargets([`session:${sessionId}`], () => chatSessionsRepo.saveSession(sessionId, record))
+        }
+      }
+      finally {
+        // The chat transaction has its own result. Follow-up memory recovery cannot undo that commit.
+        await memory?.completeHistoryChange(sessionId).catch(() => {
+          console.warn('[chat-session] Memory source finalization remains pending.')
+        })
       }
     })
+    // A failed memory enqueue leaves its durable journal for recovery. Chat storage already succeeded.
+    void getMemorySessionPort()?.drainJournal(sessionId).catch(() => {})
   }
 
   function persistSessionMessages(sessionId: string) {
     return persistSession(sessionId)
   }
 
+  function queueSessionPersistence(sessionId: string) {
+    // The queue records failures for flushPersistence. Background callers must
+    // also consume their own rejection instead of leaking an unhandled Promise.
+    void persistSession(sessionId).catch(() => {})
+  }
+
   function replaceSessionMessages(sessionId: string, next: ChatHistoryItem[], options?: { persist?: boolean }) {
+    const previous = sessionMessages.value[sessionId] ?? []
+    if (previous.some(message => message.role === 'user'
+      && !next.some(candidate => candidate.id === message.id && candidate.role === 'user'
+        && JSON.stringify(candidate.content) === JSON.stringify(message.content)
+        && (!message.audioTranscripts?.some(Boolean) || JSON.stringify(candidate.audioTranscripts) === JSON.stringify(message.audioTranscripts))))) {
+      getMemorySessionPort()?.beforeHistoryChange()
+    }
     sessionMessages.value[sessionId] = next
 
     if (options?.persist !== false)
-      void persistSession(sessionId)
+      queueSessionPersistence(sessionId)
   }
 
   function setSessionMessages(sessionId: string, next: ChatHistoryItem[]) {
@@ -349,7 +428,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     if (!existing)
       replaceSessionMessages(sessionId, [...messages, message], { persist: false })
     try {
-      await persistSession(sessionId)
+      await persistSession(sessionId, existing ? undefined : message.id)
       if (getSessionGeneration(sessionId) !== generation || !sessionMetas.value[sessionId]
         || !sessionMessages.value[sessionId]?.some(item => item.id === message.id)) {
         throw new Error('Chat session changed before message persistence completed')
@@ -361,6 +440,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         if (current)
           replaceSessionMessages(sessionId, current.filter(item => item.id !== message.id), { persist: false })
       }
+      await confirmSessionRollback(sessionId, messages, generation).catch(() => {})
       throw error
     }
     return { status: existing ? 'existing' as const : 'inserted' as const, messageId: message.id }
@@ -386,7 +466,9 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     if (!await loadSession(payload.sessionId))
       throw new Error('Failed to load the target chat session')
 
-    const nextMessages = getSessionMessages(payload.sessionId).filter((message, messageIndex) => {
+    const generation = getSessionGeneration(payload.sessionId)
+    const previousMessages = getSessionMessages(payload.sessionId)
+    const nextMessages = previousMessages.filter((message, messageIndex) => {
       if (payload.messageId)
         return message.id !== payload.messageId
       if (payload.index !== undefined)
@@ -394,7 +476,17 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       return true
     })
 
-    setSessionMessages(payload.sessionId, nextMessages)
+    replaceSessionMessages(payload.sessionId, nextMessages, { persist: false })
+    const applied = sessionMessages.value[payload.sessionId]
+    try {
+      await persistSession(payload.sessionId)
+    }
+    catch (error) {
+      if (sessionMessages.value[payload.sessionId] === applied)
+        replaceSessionMessages(payload.sessionId, previousMessages, { persist: false })
+      await confirmSessionRollback(payload.sessionId, previousMessages, generation).catch(() => {})
+      throw error
+    }
   }
 
   /**
@@ -419,7 +511,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
   async function loadSession(sessionId: string): Promise<boolean> {
     const needsCloudHydration = () => {
       const meta = sessionMetas.value[sessionId]
-      return !!meta?.cloudChatId && !cloudHydratedSessions.has(sessionId)
+      return isCloudReplicaEnabled() && !!meta?.cloudChatId && !cloudHydratedSessions.has(sessionId)
     }
 
     if (loadedSessions.has(sessionId) && !staleSessions.has(sessionId) && !needsCloudHydration()) {
@@ -552,8 +644,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     index.value.characters[characterId] = characterIndex
 
     const record: ChatSessionRecord = { meta, messages: initialMessages }
-    await enqueuePersist(() => chatSessionsRepo.saveSession(sessionId, record))
-    await persistIndex()
+    await enqueuePersist(() => chatSessionsRepo.commitSessionSnapshotAndIndex(sessionId, record, cloneDeep(index.value!)), [`session:${sessionId}`, `index:${currentUserId}`])
 
     if (options?.setActive !== false)
       activeSessionId.value = sessionId
@@ -569,7 +660,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     // `cloudChatId` (POST /api/v1/chats) before the user types into it.
     // Reentrant: `reconcileCloudSessions` itself guards on `cloudReconcileTask`
     // so concurrent triggers collapse to a single in-flight task.
-    if (currentUserId !== 'local')
+    if (isCloudReplicaEnabled() && currentUserId !== 'local')
       void reconcileCloudSessions()
 
     return sessionId
@@ -590,6 +681,13 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     const meta = sessionMetas.value[sessionId]
     if (!meta)
       return
+    const memory = getMemorySessionPort()
+    if (memory) {
+      memory.beforeHistoryChange()
+      const record = await chatSessionsRepo.getSession(sessionId)
+      if (record)
+        await memory.removeSessionSources(record)
+    }
 
     // Snapshot count before the in-memory wipe below zeroes it out.
     const messageCount = (sessionMessages.value[sessionId] ?? []).length
@@ -607,7 +705,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     const characterId = meta.characterId
     const cloudChatId = meta.cloudChatId
     const currentUserId = getCurrentUserId()
-    const isCloudUser = currentUserId !== 'local'
+    const isCloudUser = isCloudReplicaEnabled() && currentUserId !== 'local'
 
     // ROOT CAUSE:
     //
@@ -638,12 +736,19 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       }
     }
 
-    await enqueuePersist(() => chatSessionsRepo.deleteSession(sessionId))
+    try {
+      await enqueuePersist(() => chatSessionsRepo.deleteSession(sessionId), [`session:${sessionId}`])
+    }
+    finally {
+      await memory?.completeHistoryChange(sessionId).catch(() => {
+        console.warn('[chat-session] Memory source finalization remains pending.')
+      })
+    }
     // Drop any pending outbox sends for this session — pushing messages
     // to a deleted chat is wasted work and may surface as a server-side
     // 404/410 next time we drain.
     if (isCloudUser)
-      await enqueuePersist(() => chatSessionsRepo.dropOutboxForSession(currentUserId, sessionId))
+      await enqueuePersist(() => chatSessionsRepo.dropOutboxForSession(currentUserId, sessionId), [`outbox-session:${currentUserId}:${sessionId}`])
     await persistIndex()
     await refreshOutboxPendingCount()
 
@@ -654,13 +759,13 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       // here and skip the adopt branch — preventing the ghost-session bug
       // where the server still has the row and re-creates the local mapping.
       // The reconcile-driven `drainTombstones` retries failed DELETEs.
-      await enqueuePersist(() => chatSessionsRepo.addTombstone(currentUserId, remoteChatId))
+      await enqueuePersist(() => chatSessionsRepo.addTombstone(currentUserId, remoteChatId), [`tombstone:${currentUserId}:${remoteChatId}`])
       if (cloudChatId) {
         getCloudMapper().deleteChat(cloudChatId).then(
           async () => {
             // Server confirmed the delete; reconcile will not see this id again,
             // so we can drop the tombstone.
-            await enqueuePersist(() => chatSessionsRepo.removeTombstones(currentUserId, [cloudChatId]))
+            await enqueuePersist(() => chatSessionsRepo.removeTombstones(currentUserId, [cloudChatId]), [`tombstone:${currentUserId}:${cloudChatId}`])
           },
           (err) => {
             console.warn('[chat-sync] DELETE /api/v1/chats failed for', sessionId, errorMessageFrom(err))
@@ -780,7 +885,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
 
     sessionMessages.value[sessionId] = merged.messages
     sessionMetas.value[sessionId] = { ...meta, cloudMaxSeq: merged.maxSeq }
-    void persistSession(sessionId)
+    queueSessionPersistence(sessionId)
   }
 
   /**
@@ -788,6 +893,8 @@ export const useChatSessionStore = defineStore('chat-session', () => {
    * times; uses `meta.cloudMaxSeq` as the cursor.
    */
   async function pullCloudMessages(sessionId: string) {
+    if (!isCloudReplicaEnabled())
+      return
     if (!wsClient || wsClient.status() !== 'open')
       return
     const meta = sessionMetas.value[sessionId]
@@ -827,6 +934,8 @@ export const useChatSessionStore = defineStore('chat-session', () => {
    * pass is scheduled in `finally` so catch-up pulls do not get lost.
    */
   async function reconcileCloudSessions(): Promise<void> {
+    if (!isCloudReplicaEnabled())
+      return
     if (cloudReconcileTask) {
       pendingReconcile = true
       return cloudReconcileTask
@@ -877,7 +986,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         const remoteIds = new Set(remoteChats.map(chat => chat.id))
         const stale = tombstones.filter(id => !remoteIds.has(id))
         if (stale.length > 0)
-          await enqueuePersist(() => chatSessionsRepo.removeTombstones(currentUserId, stale))
+          await enqueuePersist(() => chatSessionsRepo.removeTombstones(currentUserId, stale), stale.map(id => `tombstone:${currentUserId}:${id}`))
       }
 
       if (isStaleEpoch())
@@ -889,7 +998,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         if (!meta)
           continue
         sessionMetas.value[action.sessionId] = { ...meta, cloudChatId: action.cloudChatId }
-        void persistSession(action.sessionId)
+        queueSessionPersistence(action.sessionId)
       }
 
       // create: POST /api/v1/chats and bind. Mapper handles 409-as-claim.
@@ -903,7 +1012,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         if (!meta)
           continue
         sessionMetas.value[result.sessionId] = { ...meta, cloudChatId: result.cloudChatId }
-        void persistSession(result.sessionId)
+        queueSessionPersistence(result.sessionId)
 
         // Enqueue every pre-existing local syncable message into the
         // outbox so anonymous-era messages and turns typed during the
@@ -927,7 +1036,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
             replyToMessageId: message.replyToMessageId,
             attempts: 0,
             queuedAt: Date.now(),
-          }))
+          }), [`outbox-save:${currentUserId}:${message.id}`])
         }
       }
 
@@ -967,7 +1076,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         await enqueuePersist(() => chatSessionsRepo.saveSession(remote.id, {
           meta: adoptedMeta,
           messages: adoptedMessagesSnapshot,
-        }))
+        }), [`session:${remote.id}`])
       }
       if (isStaleEpoch())
         return
@@ -1018,6 +1127,8 @@ export const useChatSessionStore = defineStore('chat-session', () => {
    * from the auth `watch`.
    */
   function ensureCloudWsClient() {
+    if (!isCloudReplicaEnabled())
+      return
     if (getCurrentUserId() === 'local') {
       console.info('[chat-sync] WS skipped: anonymous user')
       return
@@ -1099,6 +1210,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     cloudHydratedSessions.clear()
     loadingSessions.clear()
     index.value = null
+    interactionTarget.value = null
     activeSessionId.value = ''
     cloudSyncReady.value = false
     // The outbox count belongs to the prior user. The identity action refreshes
@@ -1172,7 +1284,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
    */
   async function refreshOutboxPendingCount() {
     const userId = getCurrentUserId()
-    if (userId === 'local') {
+    if (!isCloudReplicaEnabled() || userId === 'local') {
       outboxPendingCount.value = 0
       return
     }
@@ -1207,6 +1319,8 @@ export const useChatSessionStore = defineStore('chat-session', () => {
    *   surface "X syncing".
    */
   async function pushMessageToCloud(sessionId: string, message: { id: string, role: CloudSyncableRole, content: string, replyToMessageId?: string }) {
+    if (!isCloudReplicaEnabled())
+      return
     const userId = getCurrentUserId()
     if (userId === 'local')
       return
@@ -1221,7 +1335,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       attempts: 0,
       queuedAt: Date.now(),
     }
-    await enqueuePersist(() => chatSessionsRepo.enqueueOutbox(userId, entry))
+    await enqueuePersist(() => chatSessionsRepo.enqueueOutbox(userId, entry), [`outbox-save:${userId}:${entry.messageId}`])
     await refreshOutboxPendingCount()
 
     // Opportunistic immediate send. Skip if WS not open or cloudChatId not
@@ -1236,7 +1350,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         chatId: entry.cloudChatId,
         messages: [{ id: entry.messageId, role: entry.role, content: entry.content, replyToMessageId: entry.replyToMessageId }],
       })
-      await enqueuePersist(() => chatSessionsRepo.dequeueOutbox(userId, [entry.messageId]))
+      await enqueuePersist(() => chatSessionsRepo.dequeueOutbox(userId, [entry.messageId]), [`outbox-save:${userId}:${entry.messageId}`, `outbox-update:${userId}:${entry.messageId}`])
       await refreshOutboxPendingCount()
     }
     catch (err) {
@@ -1246,7 +1360,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
         messageId: entry.messageId,
         attempts: 1,
         lastError: errMsg,
-      }]))
+      }]), [`outbox-update:${userId}:${entry.messageId}`])
     }
   }
 
@@ -1266,6 +1380,8 @@ export const useChatSessionStore = defineStore('chat-session', () => {
    * can see them via `outboxPendingCount`. They are NOT dropped silently.
    */
   async function drainOutbox(): Promise<void> {
+    if (!isCloudReplicaEnabled())
+      return
     if (outboxDrainTask)
       return outboxDrainTask
     outboxDrainTask = (async () => {
@@ -1323,9 +1439,9 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       }
 
       if (succeededIds.length > 0)
-        await enqueuePersist(() => chatSessionsRepo.dequeueOutbox(userId, succeededIds))
+        await enqueuePersist(() => chatSessionsRepo.dequeueOutbox(userId, succeededIds), succeededIds.flatMap(id => [`outbox-save:${userId}:${id}`, `outbox-update:${userId}:${id}`]))
       if (failedUpdates.length > 0)
-        await enqueuePersist(() => chatSessionsRepo.updateOutboxEntries(userId, failedUpdates))
+        await enqueuePersist(() => chatSessionsRepo.updateOutboxEntries(userId, failedUpdates), failedUpdates.map(entry => `outbox-update:${userId}:${entry.messageId}`))
       await refreshOutboxPendingCount()
     })().finally(() => {
       outboxDrainTask = undefined
@@ -1343,6 +1459,8 @@ export const useChatSessionStore = defineStore('chat-session', () => {
    * we just missed the original response.
    */
   async function drainTombstones(): Promise<void> {
+    if (!isCloudReplicaEnabled())
+      return
     const userId = getCurrentUserId()
     if (userId === 'local')
       return
@@ -1369,7 +1487,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       }
     }
     if (succeeded.length > 0)
-      await enqueuePersist(() => chatSessionsRepo.removeTombstones(userId, succeeded))
+      await enqueuePersist(() => chatSessionsRepo.removeTombstones(userId, succeeded), succeeded.map(id => `tombstone:${userId}:${id}`))
   }
 
   async function initialize() {
@@ -1444,6 +1562,33 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     },
   })
 
+  /** Registers a visible chat for shared microphone and screen input; this action runs in the session leader. */
+  async function setInteractionSession(sessionId: string, sourceId = 'direct') {
+    if (typeof sourceId !== 'string' || !sourceId || sourceId.length > 128)
+      throw new Error('INTERACTION_SESSION_UNAVAILABLE')
+    const meta = sessionMetas.value[sessionId]
+    if (!meta || meta.userId !== getCurrentUserId() || meta.characterId !== getCurrentCharacterId())
+      throw new Error('INTERACTION_SESSION_UNAVAILABLE')
+    const current = interactionTarget.value
+    if (current?.sessionId === sessionId && current.userId === meta.userId && current.characterId === meta.characterId && current.sourceId === sourceId)
+      return
+    interactionTarget.value = { sessionId, userId: meta.userId, characterId: meta.characterId, sourceId }
+  }
+
+  /** Resolves an authorized shared-input target without changing any window's navigation. */
+  function resolveInteractionSessionId(): string {
+    const target = interactionTarget.value
+    const meta = target && sessionMetas.value[target.sessionId]
+    if (target && target.userId === getCurrentUserId() && target.characterId === getCurrentCharacterId()) {
+      // A deleted focused chat must not silently redirect input into a different conversation.
+      return meta?.userId === target.userId && meta.characterId === target.characterId ? meta.sessionId : ''
+    }
+    const selected = sessionMetas.value[activeSessionId.value]
+    return selected?.userId === getCurrentUserId() && selected.characterId === getCurrentCharacterId()
+      ? selected.sessionId
+      : ''
+  }
+
   /** Selects and hydrates one conversation only in the current window. */
   async function setActiveSession(sessionId: string) {
     activeSessionId.value = sessionId
@@ -1508,8 +1653,24 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       }
     }
 
-    for (const sessionId of sessionIds)
-      await enqueuePersist(() => chatSessionsRepo.deleteSession(sessionId))
+    for (const sessionId of sessionIds) {
+      const memory = getMemorySessionPort()
+      if (memory) {
+        memory.beforeHistoryChange()
+        const record = await chatSessionsRepo.getSession(sessionId)
+        if (record)
+          await memory.removeSessionSources(record)
+      }
+      try {
+        await enqueuePersist(() => chatSessionsRepo.deleteSession(sessionId), [`session:${sessionId}`])
+      }
+      finally {
+        // The chat transaction has its own result. Follow-up memory recovery cannot undo that commit.
+        await memory?.completeHistoryChange(sessionId).catch(() => {
+          console.warn('[chat-session] Memory source finalization remains pending.')
+        })
+      }
+    }
 
     sessionMessages.value = {}
     sessionMetas.value = {}
@@ -1609,7 +1770,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     cloudHydratedSessions.clear()
     loadingSessions.clear()
 
-    await enqueuePersist(() => chatSessionsRepo.saveIndex(cloneDeep(payload.index)))
+    await enqueuePersist(() => chatSessionsRepo.saveIndex(cloneDeep(payload.index)), [`index:${payload.index.userId}`])
 
     for (const [sessionId, record] of Object.entries(payload.sessions)) {
       sessionMetas.value[sessionId] = cloneDeep(record.meta)
@@ -1618,7 +1779,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       await enqueuePersist(() => chatSessionsRepo.saveSession(sessionId, {
         meta: cloneDeep(record.meta),
         messages: cloneDeep(record.messages),
-      }))
+      }), [`session:${sessionId}`])
     }
 
     await ensureActiveSessionForCharacter()
@@ -1696,6 +1857,9 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     messages,
 
     setActiveSession,
+    setInteractionSession,
+    resolveInteractionSessionId,
+    interactionTarget,
     applyRemoteSnapshot,
     getSnapshot,
     cleanupMessages,
@@ -1709,6 +1873,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     commitUserMessage,
     recordInterruption,
     persistSessionMessages,
+    flushPersistence,
     getSessionMessages,
     getSessionMessagesIfLoaded,
     sessionMessages,
@@ -1738,7 +1903,9 @@ export const useChatSessionStore = defineStore('chat-session', () => {
   synced: {
     actions: [
       'activateCurrentUser',
+      'setInteractionSession',
       'commitUserMessage',
+      'flushPersistence',
       'recordInterruption',
       'createSession',
       'deleteMessage',

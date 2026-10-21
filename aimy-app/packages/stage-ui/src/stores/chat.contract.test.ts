@@ -17,6 +17,7 @@ import {
   AIRI_CHAT_ROUND_ID_HEADER,
   AIRI_CHAT_SESSION_ID_HEADER,
 } from '../libs/product-signals/headers'
+import { installScreenContextReader } from '../services/screen-context'
 import { useChatStore } from './chat'
 import { useContextObservabilityStore } from './devtools/context-observability'
 import { useConsciousnessSettingsStore } from './modules/consciousness-settings'
@@ -211,6 +212,7 @@ vi.mock('./chat/session-store', () => ({
     dispose: disposeSessionMock,
     ensureCurrentSession: ensureCurrentSessionMock,
     persistSessionMessages: persistSessionMessagesMock,
+    flushPersistence: async () => {},
     getSessionGeneration: () => currentGeneration,
     setSessionMessages: (sessionId: string, messages: any[]) => {
       sessionMessages[sessionId] = messages
@@ -445,6 +447,18 @@ describe('chat store contract', () => {
     expect(activeSessionIdRef.value).toBe('session-1')
   })
 
+  it('rejects a request if reasoning changes while the provider is being resolved', async () => {
+    const deferred = Promise.withResolvers<GenerationProvider>()
+    getChatProviderInstanceMock.mockReturnValueOnce(deferred.promise)
+    const store = useChatStore()
+    const result = expect(store.send({ sessionId: 'session-1', text: 'synthetic route change' })).rejects.toMatchObject({ name: 'AbortError' })
+    await vi.waitFor(() => expect(getChatProviderInstanceMock).toHaveBeenCalledTimes(1))
+    useConsciousnessSettingsStore().reasoning = true
+    deferred.resolve(provider)
+    await result
+    expect(llmStreamMock).not.toHaveBeenCalled()
+  })
+
   it('uses the target character settings for a voice submission', async () => {
     cardSelections.set('bob', { provider: 'bob-provider', model: 'bob-model' })
     llmStreamMock.mockImplementation(async (_model: string, _provider: GenerationProvider, _messages: Conversation, options: StreamOptions) => {
@@ -453,6 +467,7 @@ describe('chat store contract', () => {
     const store = useChatStore()
     await store.submit({ sessionId: 'session-2', messageId: 'bob-voice', text: 'For Bob' })
 
+    await vi.waitFor(() => expect(llmStreamMock).toHaveBeenCalledTimes(1))
     expect(getChatProviderInstanceMock).toHaveBeenCalledWith('bob-provider', { reasoning: 'disabled' })
     expect(llmStreamMock.mock.calls[0]?.[0]).toBe('bob-model')
     expect(activeSessionIdRef.value).toBe('session-1')
@@ -542,7 +557,7 @@ describe('chat store contract', () => {
       { role: 'system', id: 'system' },
       recording,
       { role: 'error', content: 'Provider failed' },
-      { role: 'error', content: 'Failed to resolve chat provider "mock-provider"' },
+      { role: 'error', content: expect.stringContaining('[GENERATION_REQUEST_FAILED]') },
     ])
     expect(llmStreamMock).not.toHaveBeenCalled()
   })
@@ -724,7 +739,7 @@ describe('chat store contract', () => {
       sessionId: 'session-1',
       text: 'Read this',
       attachments: [{ type: 'image', mimeType: 'image/png', data: 'aW1hZ2U=' }],
-    })).rejects.toThrow('Vision inference timed out after 60000ms')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
 
     expect(sessionMessages['session-1'].find(message => message.role === 'user')?.imageDescriptions).toBeUndefined()
   })
@@ -1235,7 +1250,7 @@ describe('chat store contract', () => {
     await expect(store.ingest('second turn', {
       model: 'gpt-test',
       chatProvider: provider,
-    })).rejects.toThrow('later turn rejected')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
 
     expect(chatAnalyticsMocks.trackMessageRoundFailed).toHaveBeenCalledWith({
       conversation_id: 'session-1',
@@ -1268,12 +1283,12 @@ describe('chat store contract', () => {
     await expect(store.send({
       sessionId: 'session-1',
       text: 'show partial output',
-    })).rejects.toThrow('stream interrupted')
+    })).rejects.toMatchObject({ code: 'GENERATION_REQUEST_FAILED' })
 
     expect(sessionMessages['session-1']?.slice(-3)).toMatchObject([
       { role: 'user', content: 'show partial output' },
       { role: 'assistant', interrupted: true, content: 'partial ' },
-      { role: 'error', content: 'stream interrupted', id: expect.any(String), createdAt: expect.any(Number) },
+      { role: 'error', content: expect.stringContaining('[GENERATION_REQUEST_FAILED]'), id: expect.any(String), createdAt: expect.any(Number) },
     ])
 
     llmStreamMock.mockImplementationOnce(async (_model: string, _chatProvider: GenerationProvider, _messages: Conversation, options: StreamOptions) => {
@@ -1557,6 +1572,50 @@ describe('chat store contract', () => {
         { source: 'system:minecraft', text: 'player is near spawn' },
       ],
     })
+  })
+
+  it('checks screen freshness again after asynchronous attachment reading', async () => {
+    let sharing = true
+    const dispose = installScreenContextReader(() => ({ available: sharing, revision: sharing ? '1' : '2', text: sharing ? 'EXPIRED_SCREEN_FRAME' : 'No current shared screen' }))
+    visionMocks.configured = true
+    const vision = Promise.withResolvers<string>()
+    visionMocks.runInference.mockReturnValue(vision.promise)
+    let sent = ''
+    llmStreamMock.mockImplementation(async (_model: string, _provider: GenerationProvider, context: Conversation, options: StreamOptions) => {
+      sent = JSON.stringify(context)
+      await options.onStreamEvent?.({ type: 'finish' })
+    })
+    try {
+      const sending = useChatStore().send({ sessionId: 'session-1', text: 'Read this', attachments: [{ type: 'image', mimeType: 'image/png', data: 'aW1hZ2U=' }] })
+      await vi.waitFor(() => expect(visionMocks.runInference).toHaveBeenCalledOnce())
+      sharing = false
+      vision.resolve('ATTACHED_IMAGE_DESCRIPTION')
+      await sending
+      expect(sent).toContain('ATTACHED_IMAGE_DESCRIPTION')
+      expect(sent).toContain('No current shared screen')
+      expect(sent).not.toContain('EXPIRED_SCREEN_FRAME')
+    }
+    finally { dispose() }
+  })
+
+  it('removes a stopped screen observation from the actual provider request', async () => {
+    let sharing = true
+    const dispose = installScreenContextReader(() => ({ available: sharing, revision: sharing ? '1' : '2', text: sharing ? 'SCREEN_ONLY_SECRET' : 'No current shared screen' }))
+    const prompts: string[] = []
+    llmStreamMock.mockImplementation(async (_model: string, _provider: GenerationProvider, context: Conversation, options: StreamOptions) => {
+      prompts.push(JSON.stringify(context))
+      await options.onStreamEvent?.({ type: 'finish' })
+    })
+    try {
+      const store = useChatStore()
+      await store.ingest('look', { model: 'gpt-test', chatProvider: provider })
+      sharing = false
+      await store.ingest('and now?', { model: 'gpt-test', chatProvider: provider })
+      expect(prompts[0]).toContain('SCREEN_ONLY_SECRET')
+      expect(prompts[1]).not.toContain('SCREEN_ONLY_SECRET')
+      expect(prompts[1]).toContain('No current shared screen')
+    }
+    finally { dispose() }
   })
 
   it('adds account context only to the signed-in request without retaining it in the registry', async () => {

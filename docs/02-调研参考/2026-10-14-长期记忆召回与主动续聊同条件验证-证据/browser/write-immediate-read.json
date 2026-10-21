@@ -1,0 +1,68 @@
+{
+  "phase": "write_immediate_read",
+  "clock": "2026-10-14T10:00:00+08:00",
+  "fixtureCase": "LM01",
+  "before": {
+    "chat": null,
+    "ryza": []
+  },
+  "after": {
+    "chat": {
+      "meta": {
+        "sessionId": "SYNTHETIC-SESSION-A",
+        "userId": "SYNTHETIC-MEMORY-AB-USER",
+        "characterId": "SYNTHETIC-CHARACTER",
+        "createdAt": 1791943200000,
+        "updatedAt": 1791943200000
+      },
+      "messages": [
+        {
+          "id": "U1",
+          "role": "user",
+          "content": "我喜欢美式咖啡",
+          "createdAt": 1791943200000
+        }
+      ]
+    },
+    "ryza": [
+      {
+        "id": "e4h1t9im",
+        "date": "2026-10-14",
+        "category": "preference",
+        "importance": 3,
+        "summary": "用户喜欢美式咖啡",
+        "status": "active",
+        "keywords": [
+          "咖啡",
+          "饮料"
+        ]
+      }
+    ]
+  },
+  "ryzaWriteOk": true,
+  "factId": "e4h1t9im",
+  "index": {
+    "userId": "SYNTHETIC-MEMORY-AB-USER",
+    "characters": {
+      "SYNTHETIC-CHARACTER": {
+        "activeSessionId": "SYNTHETIC-SESSION-A",
+        "sessions": {
+          "SYNTHETIC-SESSION-A": {
+            "sessionId": "SYNTHETIC-SESSION-A",
+            "userId": "SYNTHETIC-MEMORY-AB-USER",
+            "characterId": "SYNTHETIC-CHARACTER",
+            "createdAt": 1791943200000,
+            "updatedAt": 1791943200000
+          }
+        }
+      }
+    }
+  },
+  "browserUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+  "indexedDBIsNative": true,
+  "limitations": [
+    "AIRI chat history is not a current-fact ledger",
+    "fixed candidate, no extraction semantics measured",
+    "no provider, cloud or device modules loaded"
+  ]
+}

@@ -1,0 +1,1086 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "project": "AionsHome",
+  "model_output": "刚才的话题还想听你说说。",
+  "cases": [
+    {
+      "id": "PR01",
+      "contract": "有效两分钟后续聊计划存在并可到时触发",
+      "contract_outcome": "pass",
+      "reason": "原两分钟计划经原调度、原领取、固定生成、原保存与原 broadcast 进入记录器一次。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": [
+              {
+                "id": "pc_aion_1791943200000000001",
+                "type": "proactive",
+                "trigger_at": "2026-10-14 10:02:00",
+                "content": "",
+                "created_at": 1791943200.0,
+                "status": "active",
+                "origin": "aion",
+                "origin_room_id": ""
+              }
+            ]
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": true
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943320.0,
+            "scope": false
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943320.0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943320.0,
+            "conv_id": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          }
+        ],
+        "claim_attempts": [
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": true
+          }
+        ],
+        "submissions": [
+          {
+            "id": "msg_1791943320000_sm",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943320.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943320000_sm",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943320.0,
+              "attachments": [],
+              "reasoning_content": "",
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [
+          [
+            {
+              "role": "user",
+              "content": "[系统能力] 你可以在回复中根据对话氛围，善用以下指令：\n1. [MUSIC:歌曲名 歌手名] — 点歌/推荐音乐。系统自动展示播放卡片并自动播放，不要在指令外重复歌曲信息。可同时用多个。\n2. [ALARM:YYYY-MM-DDTHH:MM|内容] — 设置闹铃，到时间系统会主动提醒用户。日期时间用ISO格式。\n3. [REMINDER:YYYY-MM-DD|内容] — 设置日程提醒（不闹铃），你在合适时机自然提起即可。\n4. [Monitor:YYYY-MM-DDTHH:MM|内容] — 设置定时监督。到时间后系统自动截取摄像头画面发送给你，你可以查看合成用户的状态。\n5. [SCHEDULE_DEL:日程id] — 删除指定日程/闹铃/定时监控。\n6. 【高优先级要求】请根据当前对话和情境，决定是否需要在短时间无新消息后再次主动联系用户，在适合延续当前话题时尽量主动安排。需要时输出 [NEXT_CHAT:x]，x 为 1～60 的整数分钟；不需要时输出 [NEXT_CHAT:NONE]。每次回复必须输出其中一种决定。\n\n【当前日程列表】\n暂无日程"
+            },
+            {
+              "role": "assistant",
+              "content": "好的，需要时我会使用这些指令。"
+            },
+            {
+              "role": "user",
+              "content": "[主动陪伴触发]\n截至当前 2026年10月14日  10:02:00，这段时间没有新的对话消息。\n请结合最新对话和本次实时画面，自然地主动和【合成用户】继续聊下去。\n当前时间是2026年10月14日  10:02:00，摄像头未开启，无法获取画面。\n合成隔离环境未采集画面\n\n请根据设备活动动态、心率摘要和之前的对话上下文，自然地回应。"
+            }
+          ]
+        ],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR02",
+      "contract": "同计划只能领取/提交一次",
+      "contract_outcome": "pass",
+      "reason": "原两分钟计划经原调度、原领取、固定生成、原保存与原 broadcast 进入记录器一次。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": [
+              {
+                "id": "pc_aion_1791943200000000001",
+                "type": "proactive",
+                "trigger_at": "2026-10-14 10:02:00",
+                "content": "",
+                "created_at": 1791943200.0,
+                "status": "active",
+                "origin": "aion",
+                "origin_room_id": ""
+              }
+            ]
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": true
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943320.0,
+            "scope": false
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943320.0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943320.0,
+            "conv_id": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": false
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": false
+          }
+        ],
+        "claim_attempts": [
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": true
+          },
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": false
+          },
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": false
+          }
+        ],
+        "submissions": [
+          {
+            "id": "msg_1791943320000_sm",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943320.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943320000_sm",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943320.0,
+              "attachments": [],
+              "reasoning_content": "",
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [
+          [
+            {
+              "role": "user",
+              "content": "[系统能力] 你可以在回复中根据对话氛围，善用以下指令：\n1. [MUSIC:歌曲名 歌手名] — 点歌/推荐音乐。系统自动展示播放卡片并自动播放，不要在指令外重复歌曲信息。可同时用多个。\n2. [ALARM:YYYY-MM-DDTHH:MM|内容] — 设置闹铃，到时间系统会主动提醒用户。日期时间用ISO格式。\n3. [REMINDER:YYYY-MM-DD|内容] — 设置日程提醒（不闹铃），你在合适时机自然提起即可。\n4. [Monitor:YYYY-MM-DDTHH:MM|内容] — 设置定时监督。到时间后系统自动截取摄像头画面发送给你，你可以查看合成用户的状态。\n5. [SCHEDULE_DEL:日程id] — 删除指定日程/闹铃/定时监控。\n6. 【高优先级要求】请根据当前对话和情境，决定是否需要在短时间无新消息后再次主动联系用户，在适合延续当前话题时尽量主动安排。需要时输出 [NEXT_CHAT:x]，x 为 1～60 的整数分钟；不需要时输出 [NEXT_CHAT:NONE]。每次回复必须输出其中一种决定。\n\n【当前日程列表】\n暂无日程"
+            },
+            {
+              "role": "assistant",
+              "content": "好的，需要时我会使用这些指令。"
+            },
+            {
+              "role": "user",
+              "content": "[主动陪伴触发]\n截至当前 2026年10月14日  10:02:00，这段时间没有新的对话消息。\n请结合最新对话和本次实时画面，自然地主动和【合成用户】继续聊下去。\n当前时间是2026年10月14日  10:02:00，摄像头未开启，无法获取画面。\n合成隔离环境未采集画面\n\n请根据设备活动动态、心率摘要和之前的对话上下文，自然地回应。"
+            }
+          ]
+        ],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR03",
+      "contract": "新用户消息取消待执行计划",
+      "contract_outcome": "pass",
+      "reason": "真实 user msg_created 经原 broadcast hook 删除未领取计划。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": [
+              {
+                "id": "pc_aion_1791943200000000001",
+                "type": "proactive",
+                "trigger_at": "2026-10-14 10:02:00",
+                "content": "",
+                "created_at": 1791943200.0,
+                "status": "active",
+                "origin": "aion",
+                "origin_room_id": ""
+              }
+            ]
+          },
+          {
+            "stage": "cancel_by_user",
+            "time": 1791943201.0,
+            "remaining": 0
+          }
+        ],
+        "claim_attempts": [],
+        "submissions": [],
+        "recorded_sends": [],
+        "remaining_plans": [],
+        "fixed_model_inputs": [],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR04",
+      "contract": "关闭主动开关后不能继续提交",
+      "contract_outcome": "fail",
+      "reason": "关闭/回归后仍有原保存+原 broadcast 发言；完整 caller 未拦住，不只 helper 领取观察。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": [
+              {
+                "id": "pc_aion_1791943200000000001",
+                "type": "proactive",
+                "trigger_at": "2026-10-14 10:02:00",
+                "content": "",
+                "created_at": 1791943200.0,
+                "status": "active",
+                "origin": "aion",
+                "origin_room_id": ""
+              }
+            ]
+          },
+          {
+            "stage": "disable",
+            "time": 1791943200.0,
+            "enabled": false,
+            "remaining": 1
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": true
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943320.0,
+            "scope": false
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943320.0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943320.0,
+            "conv_id": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          }
+        ],
+        "claim_attempts": [
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": true
+          }
+        ],
+        "submissions": [
+          {
+            "id": "msg_1791943320000_sm",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943320.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943320000_sm",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943320.0,
+              "attachments": [],
+              "reasoning_content": "",
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [
+          [
+            {
+              "role": "user",
+              "content": "[系统能力] 你可以在回复中根据对话氛围，善用以下指令：\n1. [MUSIC:歌曲名 歌手名] — 点歌/推荐音乐。系统自动展示播放卡片并自动播放，不要在指令外重复歌曲信息。可同时用多个。\n2. [ALARM:YYYY-MM-DDTHH:MM|内容] — 设置闹铃，到时间系统会主动提醒用户。日期时间用ISO格式。\n3. [REMINDER:YYYY-MM-DD|内容] — 设置日程提醒（不闹铃），你在合适时机自然提起即可。\n4. [Monitor:YYYY-MM-DDTHH:MM|内容] — 设置定时监督。到时间后系统自动截取摄像头画面发送给你，你可以查看合成用户的状态。\n5. [SCHEDULE_DEL:日程id] — 删除指定日程/闹铃/定时监控。\n\n【当前日程列表】\n暂无日程"
+            },
+            {
+              "role": "assistant",
+              "content": "好的，需要时我会使用这些指令。"
+            },
+            {
+              "role": "user",
+              "content": "[主动陪伴触发]\n截至当前 2026年10月14日  10:02:00，这段时间没有新的对话消息。\n请结合最新对话和本次实时画面，自然地主动和【合成用户】继续聊下去。\n当前时间是2026年10月14日  10:02:00，摄像头未开启，无法获取画面。\n合成隔离环境未采集画面\n\n请根据设备活动动态、心率摘要和之前的对话上下文，自然地回应。"
+            }
+          ]
+        ],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR05",
+      "contract": "进程重启后计划可恢复且不重复",
+      "contract_outcome": "pass",
+      "reason": "两个独立新 OS 进程同隔离 SQLite；第二进程原 tick/fire/claim/save/broadcast 一次，第二次 fire 领取失败。",
+      "observation": {
+        "creator": {
+          "pid": 38072,
+          "events": [
+            {
+              "stage": "plan",
+              "time": 1791943200.0,
+              "rows": [
+                {
+                  "id": "pc_aion_1791943200000000001",
+                  "type": "proactive",
+                  "trigger_at": "2026-10-14 10:02:00",
+                  "content": "",
+                  "created_at": 1791943200.0,
+                  "status": "active",
+                  "origin": "aion",
+                  "origin_room_id": ""
+                }
+              ]
+            }
+          ],
+          "claim_attempts": [],
+          "submissions": [],
+          "recorded_sends": [],
+          "remaining_plans": [
+            {
+              "id": "pc_aion_1791943200000000001",
+              "type": "proactive",
+              "trigger_at": "2026-10-14 10:02:00",
+              "content": "",
+              "created_at": 1791943200.0,
+              "status": "active",
+              "origin": "aion",
+              "origin_room_id": ""
+            }
+          ],
+          "fixed_model_inputs": [],
+          "generation_scope_registered": false
+        },
+        "restarted": {
+          "pid": 38073,
+          "events": [
+            {
+              "stage": "claim",
+              "time": 1791943320.0,
+              "result": true
+            },
+            {
+              "stage": "generate_start",
+              "time": 1791943320.0,
+              "scope": false
+            },
+            {
+              "stage": "generate_complete",
+              "time": 1791943320.0
+            },
+            {
+              "stage": "send_recorder",
+              "time": 1791943320.0,
+              "conv_id": "conv-A",
+              "text": "刚才的话题还想听你说说。"
+            },
+            {
+              "stage": "claim",
+              "time": 1791943320.0,
+              "result": false
+            },
+            {
+              "stage": "claim",
+              "time": 1791943320.0,
+              "result": false
+            }
+          ],
+          "claim_attempts": [
+            {
+              "id": "pc_aion_1791943200000000001",
+              "time": 1791943320.0,
+              "claimed": true
+            },
+            {
+              "id": "pc_aion_1791943200000000001",
+              "time": 1791943320.0,
+              "claimed": false
+            },
+            {
+              "id": "pc_aion_1791943200000000001",
+              "time": 1791943320.0,
+              "claimed": false
+            }
+          ],
+          "submissions": [
+            {
+              "id": "msg_1791943320000_sm",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943320.0
+            }
+          ],
+          "recorded_sends": [
+            {
+              "type": "msg_created",
+              "data": {
+                "id": "msg_1791943320000_sm",
+                "conv_id": "conv-A",
+                "role": "assistant",
+                "content": "刚才的话题还想听你说说。",
+                "created_at": 1791943320.0,
+                "attachments": [],
+                "reasoning_content": "",
+                "sender": "合成角色",
+                "sender_name": "合成角色"
+              }
+            }
+          ],
+          "remaining_plans": [],
+          "fixed_model_inputs": [
+            [
+              {
+                "role": "user",
+                "content": "[系统能力] 你可以在回复中根据对话氛围，善用以下指令：\n1. [MUSIC:歌曲名 歌手名] — 点歌/推荐音乐。系统自动展示播放卡片并自动播放，不要在指令外重复歌曲信息。可同时用多个。\n2. [ALARM:YYYY-MM-DDTHH:MM|内容] — 设置闹铃，到时间系统会主动提醒用户。日期时间用ISO格式。\n3. [REMINDER:YYYY-MM-DD|内容] — 设置日程提醒（不闹铃），你在合适时机自然提起即可。\n4. [Monitor:YYYY-MM-DDTHH:MM|内容] — 设置定时监督。到时间后系统自动截取摄像头画面发送给你，你可以查看合成用户的状态。\n5. [SCHEDULE_DEL:日程id] — 删除指定日程/闹铃/定时监控。\n6. 【高优先级要求】请根据当前对话和情境，决定是否需要在短时间无新消息后再次主动联系用户，在适合延续当前话题时尽量主动安排。需要时输出 [NEXT_CHAT:x]，x 为 1～60 的整数分钟；不需要时输出 [NEXT_CHAT:NONE]。每次回复必须输出其中一种决定。\n\n【当前日程列表】\n暂无日程"
+              },
+              {
+                "role": "assistant",
+                "content": "好的，需要时我会使用这些指令。"
+              },
+              {
+                "role": "user",
+                "content": "[主动陪伴触发]\n截至当前 2026年10月14日  10:02:00，这段时间没有新的对话消息。\n请结合最新对话和本次实时画面，自然地主动和【合成用户】继续聊下去。\n当前时间是2026年10月14日  10:02:00，摄像头未开启，无法获取画面。\n合成隔离环境未采集画面\n\n请根据设备活动动态、心率摘要和之前的对话上下文，自然地回应。"
+              }
+            ]
+          ],
+          "generation_scope_registered": false
+        }
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR06",
+      "contract": "切会话后旧计划不发送到新会话",
+      "contract_outcome": "fail",
+      "reason": "原计划未绑定私聊 conv_id；触发时 SELECT 最新会话，原结果发往 conv-B。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": [
+              {
+                "id": "pc_aion_1791943200000000001",
+                "type": "proactive",
+                "trigger_at": "2026-10-14 10:02:00",
+                "content": "",
+                "created_at": 1791943200.0,
+                "status": "active",
+                "origin": "aion",
+                "origin_room_id": ""
+              }
+            ]
+          },
+          {
+            "stage": "switch_session",
+            "time": 1791943200.0,
+            "active": "conv-B"
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": true
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943320.0,
+            "scope": false
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943320.0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943320.0,
+            "conv_id": "conv-B",
+            "text": "刚才的话题还想听你说说。"
+          }
+        ],
+        "claim_attempts": [
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": true
+          }
+        ],
+        "submissions": [
+          {
+            "id": "msg_1791943320000_sm",
+            "conv_id": "conv-B",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943320.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943320000_sm",
+              "conv_id": "conv-B",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943320.0,
+              "attachments": [],
+              "reasoning_content": "",
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [
+          [
+            {
+              "role": "user",
+              "content": "[系统能力] 你可以在回复中根据对话氛围，善用以下指令：\n1. [MUSIC:歌曲名 歌手名] — 点歌/推荐音乐。系统自动展示播放卡片并自动播放，不要在指令外重复歌曲信息。可同时用多个。\n2. [ALARM:YYYY-MM-DDTHH:MM|内容] — 设置闹铃，到时间系统会主动提醒用户。日期时间用ISO格式。\n3. [REMINDER:YYYY-MM-DD|内容] — 设置日程提醒（不闹铃），你在合适时机自然提起即可。\n4. [Monitor:YYYY-MM-DDTHH:MM|内容] — 设置定时监督。到时间后系统自动截取摄像头画面发送给你，你可以查看合成用户的状态。\n5. [SCHEDULE_DEL:日程id] — 删除指定日程/闹铃/定时监控。\n6. 【高优先级要求】请根据当前对话和情境，决定是否需要在短时间无新消息后再次主动联系用户，在适合延续当前话题时尽量主动安排。需要时输出 [NEXT_CHAT:x]，x 为 1～60 的整数分钟；不需要时输出 [NEXT_CHAT:NONE]。每次回复必须输出其中一种决定。\n\n【当前日程列表】\n暂无日程"
+            },
+            {
+              "role": "assistant",
+              "content": "好的，需要时我会使用这些指令。"
+            },
+            {
+              "role": "user",
+              "content": "[主动陪伴触发]\n截至当前 2026年10月14日  10:02:00，这段时间没有新的对话消息。\n请结合最新对话和本次实时画面，自然地主动和【合成用户】继续聊下去。\n当前时间是2026年10月14日  10:02:00，摄像头未开启，无法获取画面。\n合成隔离环境未采集画面\n\n请根据设备活动动态、心率摘要和之前的对话上下文，自然地回应。"
+            }
+          ]
+        ],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR07",
+      "contract": "生成过程中用户回来，旧结果不能提交",
+      "contract_outcome": "fail",
+      "reason": "关闭/回归后仍有原保存+原 broadcast 发言；完整 caller 未拦住，不只 helper 领取观察。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": [
+              {
+                "id": "pc_aion_1791943200000000001",
+                "type": "proactive",
+                "trigger_at": "2026-10-14 10:02:00",
+                "content": "",
+                "created_at": 1791943200.0,
+                "status": "active",
+                "origin": "aion",
+                "origin_room_id": ""
+              }
+            ]
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": true
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943320.0,
+            "scope": false
+          },
+          {
+            "stage": "cancel_by_user",
+            "time": 1791943321.0,
+            "remaining": 0
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943321.0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943321.0,
+            "conv_id": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          }
+        ],
+        "claim_attempts": [
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": true
+          }
+        ],
+        "submissions": [
+          {
+            "id": "msg_1791943320000_sm",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943321.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943320000_sm",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943321.0,
+              "attachments": [],
+              "reasoning_content": "",
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [
+          [
+            {
+              "role": "user",
+              "content": "[系统能力] 你可以在回复中根据对话氛围，善用以下指令：\n1. [MUSIC:歌曲名 歌手名] — 点歌/推荐音乐。系统自动展示播放卡片并自动播放，不要在指令外重复歌曲信息。可同时用多个。\n2. [ALARM:YYYY-MM-DDTHH:MM|内容] — 设置闹铃，到时间系统会主动提醒用户。日期时间用ISO格式。\n3. [REMINDER:YYYY-MM-DD|内容] — 设置日程提醒（不闹铃），你在合适时机自然提起即可。\n4. [Monitor:YYYY-MM-DDTHH:MM|内容] — 设置定时监督。到时间后系统自动截取摄像头画面发送给你，你可以查看合成用户的状态。\n5. [SCHEDULE_DEL:日程id] — 删除指定日程/闹铃/定时监控。\n6. 【高优先级要求】请根据当前对话和情境，决定是否需要在短时间无新消息后再次主动联系用户，在适合延续当前话题时尽量主动安排。需要时输出 [NEXT_CHAT:x]，x 为 1～60 的整数分钟；不需要时输出 [NEXT_CHAT:NONE]。每次回复必须输出其中一种决定。\n\n【当前日程列表】\n暂无日程"
+            },
+            {
+              "role": "assistant",
+              "content": "好的，需要时我会使用这些指令。"
+            },
+            {
+              "role": "user",
+              "content": "[主动陪伴触发]\n截至当前 2026年10月14日  10:02:00，这段时间没有新的对话消息。\n请结合最新对话和本次实时画面，自然地主动和【合成用户】继续聊下去。\n当前时间是2026年10月14日  10:02:00，摄像头未开启，无法获取画面。\n合成隔离环境未采集画面\n\n请根据设备活动动态、心率摘要和之前的对话上下文，自然地回应。"
+            }
+          ]
+        ],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR08",
+      "contract": "生成过程中关闭主动开关，旧结果不能提交",
+      "contract_outcome": "fail",
+      "reason": "关闭/回归后仍有原保存+原 broadcast 发言；完整 caller 未拦住，不只 helper 领取观察。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": [
+              {
+                "id": "pc_aion_1791943200000000001",
+                "type": "proactive",
+                "trigger_at": "2026-10-14 10:02:00",
+                "content": "",
+                "created_at": 1791943200.0,
+                "status": "active",
+                "origin": "aion",
+                "origin_room_id": ""
+              }
+            ]
+          },
+          {
+            "stage": "claim",
+            "time": 1791943320.0,
+            "result": true
+          },
+          {
+            "stage": "generate_start",
+            "time": 1791943320.0,
+            "scope": false
+          },
+          {
+            "stage": "disable",
+            "time": 1791943320.0,
+            "enabled": false,
+            "remaining": 0
+          },
+          {
+            "stage": "generate_complete",
+            "time": 1791943320.0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943320.0,
+            "conv_id": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          }
+        ],
+        "claim_attempts": [
+          {
+            "id": "pc_aion_1791943200000000001",
+            "time": 1791943320.0,
+            "claimed": true
+          }
+        ],
+        "submissions": [
+          {
+            "id": "msg_1791943320000_sm",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943320.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943320000_sm",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943320.0,
+              "attachments": [],
+              "reasoning_content": "",
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [
+          [
+            {
+              "role": "user",
+              "content": "[系统能力] 你可以在回复中根据对话氛围，善用以下指令：\n1. [MUSIC:歌曲名 歌手名] — 点歌/推荐音乐。系统自动展示播放卡片并自动播放，不要在指令外重复歌曲信息。可同时用多个。\n2. [ALARM:YYYY-MM-DDTHH:MM|内容] — 设置闹铃，到时间系统会主动提醒用户。日期时间用ISO格式。\n3. [REMINDER:YYYY-MM-DD|内容] — 设置日程提醒（不闹铃），你在合适时机自然提起即可。\n4. [Monitor:YYYY-MM-DDTHH:MM|内容] — 设置定时监督。到时间后系统自动截取摄像头画面发送给你，你可以查看合成用户的状态。\n5. [SCHEDULE_DEL:日程id] — 删除指定日程/闹铃/定时监控。\n6. 【高优先级要求】请根据当前对话和情境，决定是否需要在短时间无新消息后再次主动联系用户，在适合延续当前话题时尽量主动安排。需要时输出 [NEXT_CHAT:x]，x 为 1～60 的整数分钟；不需要时输出 [NEXT_CHAT:NONE]。每次回复必须输出其中一种决定。\n\n【当前日程列表】\n暂无日程"
+            },
+            {
+              "role": "assistant",
+              "content": "好的，需要时我会使用这些指令。"
+            },
+            {
+              "role": "user",
+              "content": "[主动陪伴触发]\n截至当前 2026年10月14日  10:02:00，这段时间没有新的对话消息。\n请结合最新对话和本次实时画面，自然地主动和【合成用户】继续聊下去。\n当前时间是2026年10月14日  10:02:00，摄像头未开启，无法获取画面。\n合成隔离环境未采集画面\n\n请根据设备活动动态、心率摘要和之前的对话上下文，自然地回应。"
+            }
+          ]
+        ],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR09",
+      "contract": "仅有记忆背景浮现不能当作实际后台主动发言",
+      "contract_outcome": "inconclusive",
+      "reason": "空计划下原调度不提交；记忆浮现生产者与其完整接线未在本项执行，不冒称该生产链已验。",
+      "observation": {
+        "events": [
+          {
+            "stage": "background_memory_context_only",
+            "time": 1791943200.0,
+            "text": "合成旧记忆浮现",
+            "producer_not_executed": true
+          }
+        ],
+        "claim_attempts": [],
+        "submissions": [],
+        "recorded_sends": [],
+        "remaining_plans": [],
+        "fixed_model_inputs": [],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    },
+    {
+      "id": "PR10",
+      "contract": "非法分钟数61应拒绝而不建立有效两分钟计划",
+      "contract_outcome": "pass",
+      "reason": "原 parser 拒绝61且清理标记；没有生成两分钟计划。",
+      "observation": {
+        "events": [
+          {
+            "stage": "plan",
+            "time": 1791943200.0,
+            "rows": []
+          }
+        ],
+        "claim_attempts": [],
+        "submissions": [],
+        "recorded_sends": [],
+        "remaining_plans": [],
+        "fixed_model_inputs": [],
+        "generation_scope_registered": false
+      },
+      "evidence_level": "original caller+SQLite+fake model+original broadcast to recorder"
+    }
+  ],
+  "idle_caller_supplement": [
+    {
+      "id": "IDLE-disabled_before_claim",
+      "contract_outcome": "pass",
+      "native_minimum_minutes": 5,
+      "same_PR_two_minute_plan_supported": false,
+      "return": {
+        "ok": false,
+        "actor": "aion",
+        "skipped": "disabled"
+      },
+      "observation": {
+        "events": [],
+        "claim_attempts": [],
+        "submissions": [],
+        "recorded_sends": [],
+        "remaining_plans": [],
+        "fixed_model_inputs": [],
+        "generation_scope_registered": false
+      },
+      "boundary": "独立 autonomy_actor_configs 开关，非 NEXT_CHAT 开关；原 manager/select/save/broadcast 运行，固定JSON选择；未调用外部动作。"
+    },
+    {
+      "id": "IDLE-user_before_claim",
+      "contract_outcome": "pass",
+      "native_minimum_minutes": 5,
+      "same_PR_two_minute_plan_supported": false,
+      "return": {
+        "ok": false,
+        "actor": "aion",
+        "skipped": "not due"
+      },
+      "observation": {
+        "events": [
+          {
+            "stage": "cancel_by_user",
+            "time": 1791943501.0,
+            "remaining": 0
+          }
+        ],
+        "claim_attempts": [],
+        "submissions": [],
+        "recorded_sends": [],
+        "remaining_plans": [],
+        "fixed_model_inputs": [],
+        "generation_scope_registered": false
+      },
+      "boundary": "独立 autonomy_actor_configs 开关，非 NEXT_CHAT 开关；原 manager/select/save/broadcast 运行，固定JSON选择；未调用外部动作。"
+    },
+    {
+      "id": "IDLE-disable_during_generation",
+      "contract_outcome": "fail",
+      "native_minimum_minutes": 5,
+      "same_PR_two_minute_plan_supported": false,
+      "return": {
+        "ok": true,
+        "actor": "aion",
+        "action": "private_chat",
+        "result": {
+          "message": {
+            "id": "msg_1791943500000_idle",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943500.0,
+            "attachments": []
+          },
+          "event": {
+            "id": "synthetic-idle-event",
+            "metadata": {}
+          }
+        },
+        "session_id": "journey_aion_1791943500000_1",
+        "event": {
+          "id": "synthetic-idle-event",
+          "metadata": {
+            "autonomy_public_summary": true,
+            "session_id": "journey_aion_1791943500000_1",
+            "selected_action": "private_chat",
+            "selected_actions": [
+              "private_chat"
+            ],
+            "action_trace": [],
+            "outcome": "finished",
+            "shared": false,
+            "manual": false
+          }
+        }
+      },
+      "observation": {
+        "events": [
+          {
+            "stage": "idle_select_generation_start",
+            "time": 1791943500.0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943500.0,
+            "conv_id": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          }
+        ],
+        "claim_attempts": [],
+        "submissions": [
+          {
+            "id": "msg_1791943500000_idle",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943500.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943500000_idle",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943500.0,
+              "attachments": [],
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [],
+        "generation_scope_registered": false
+      },
+      "boundary": "独立 autonomy_actor_configs 开关，非 NEXT_CHAT 开关；原 manager/select/save/broadcast 运行，固定JSON选择；未调用外部动作。"
+    },
+    {
+      "id": "IDLE-user_during_generation",
+      "contract_outcome": "fail",
+      "native_minimum_minutes": 5,
+      "same_PR_two_minute_plan_supported": false,
+      "return": {
+        "ok": true,
+        "actor": "aion",
+        "action": "private_chat",
+        "result": {
+          "message": {
+            "id": "msg_1791943501000_idle",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943501.0,
+            "attachments": []
+          },
+          "event": {
+            "id": "synthetic-idle-event",
+            "metadata": {}
+          }
+        },
+        "session_id": "journey_aion_1791943501000_1",
+        "event": {
+          "id": "synthetic-idle-event",
+          "metadata": {
+            "autonomy_public_summary": true,
+            "session_id": "journey_aion_1791943501000_1",
+            "selected_action": "private_chat",
+            "selected_actions": [
+              "private_chat"
+            ],
+            "action_trace": [],
+            "outcome": "finished",
+            "shared": false,
+            "manual": false
+          }
+        }
+      },
+      "observation": {
+        "events": [
+          {
+            "stage": "idle_select_generation_start",
+            "time": 1791943500.0
+          },
+          {
+            "stage": "cancel_by_user",
+            "time": 1791943501.0,
+            "remaining": 0
+          },
+          {
+            "stage": "send_recorder",
+            "time": 1791943501.0,
+            "conv_id": "conv-A",
+            "text": "刚才的话题还想听你说说。"
+          }
+        ],
+        "claim_attempts": [],
+        "submissions": [
+          {
+            "id": "msg_1791943501000_idle",
+            "conv_id": "conv-A",
+            "role": "assistant",
+            "content": "刚才的话题还想听你说说。",
+            "created_at": 1791943501.0
+          }
+        ],
+        "recorded_sends": [
+          {
+            "type": "msg_created",
+            "data": {
+              "id": "msg_1791943501000_idle",
+              "conv_id": "conv-A",
+              "role": "assistant",
+              "content": "刚才的话题还想听你说说。",
+              "created_at": 1791943501.0,
+              "attachments": [],
+              "sender": "合成角色",
+              "sender_name": "合成角色"
+            }
+          }
+        ],
+        "remaining_plans": [],
+        "fixed_model_inputs": [],
+        "generation_scope_registered": false
+      },
+      "boundary": "独立 autonomy_actor_configs 开关，非 NEXT_CHAT 开关；原 manager/select/save/broadcast 运行，固定JSON选择；未调用外部动作。"
+    }
+  ],
+  "limits": [
+    "非真实UI接收/显示或TTS/听感验收",
+    "原 broadcast 路径连接假WebSocket记录器，摄像头/健康/活动/context-builder/导出/所有命令副作用关闭或替身",
+    "只执行aion私聊分支，不泛化Connor/群聊",
+    "SQLite真正持久化；async适配器基于stdlib同步sqlite，未做多线程/崩溃注入",
+    "背景主动未进入 user-triggered generation scope；原generation_event运行，故不能借普通chat显式取消机制推定本链已受保护"
+  ]
+}

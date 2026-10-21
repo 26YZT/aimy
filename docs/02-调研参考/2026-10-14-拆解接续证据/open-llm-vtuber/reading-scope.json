@@ -1,0 +1,115 @@
+{
+  "fully_read_recovery_and_reports": [
+    "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/主对话可读记录.md",
+    "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-Claude中断任务结果恢复/未完成分支/03-Open-LLM-VTuber后端未完成.md",
+    "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-12-Open-LLM-VTuber深度复用评估.md",
+    "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-Open-LLM-VTuber前端拆解复用评估.md"
+  ],
+  "full_read_backend_paths": [
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agent_factory.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/agent_interface.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/letta_agent.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/mem0_llm.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/input_types.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/output_types.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/claude_llm.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/llama_cpp_llm.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/ollama_llm.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/openai_compatible_llm.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/stateless_llm_interface.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm/stateless_llm_with_template.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/stateless_llm_factory.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/transformers.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/asr_factory.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/asr_interface.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/chat_history_manager.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/__init__.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/agent.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/character.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/i18n.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/main.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/system.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/tts_preprocessor.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/utils.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/vad.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/conversation_handler.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/conversation_utils.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/group_conversation.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/single_conversation.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/tts_manager.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/types.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/live/live_interface.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/live2d_model.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/json_detector.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/mcp_client.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/server_registry.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/tool_adapter.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/tool_executor.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/tool_manager.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/mcpp/types.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/message_handler.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/proxy_handler.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/proxy_message_queue.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/routes.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/server.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/service_context.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/tts_factory.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/tts/tts_interface.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/sentence_divider.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/stream_audio.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/tts_preprocessor.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/vad/silero.py",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/websocket_handler.py"
+  ],
+  "all_backend_py_modules_AST_indexed": 107,
+  "all_tracked_entries_byte_hashed": 254,
+  "prompts_all_read": [
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/group_conversation_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/tool_guidance_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/live_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/mcp_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/proactive_speak_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/live2d_expression_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/speakable_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/concise_style_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/think_tag_prompt.txt",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/prompt_loader.py"
+  ],
+  "character_examples_all_read": [
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/zh_米粒.yaml",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/zh_翻译腔.yaml",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/en_unhelpful_ai.yaml",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/characters/en_nuke_debate.yaml"
+  ],
+  "other_full_read": [
+    "run_server.py",
+    "pyproject.toml",
+    "LICENSE",
+    ".gitmodules",
+    "characters/README.md"
+  ],
+  "partial_read_templates": {
+    "config_templates/conf.default.yaml": [
+      [
+        1,
+        145
+      ]
+    ],
+    "config_templates/conf.ZH.default.yaml": [
+      [
+        1,
+        145
+      ]
+    ]
+  },
+  "exclusions": [
+    "individual ASR/TTS provider implementations: complete AST/symbol inventory, only interface/factory deep-read; no per-provider quality/runtime claims",
+    "config_manager/asr.py tts.py stateless_llm.py live.py: AST/symbol inventory; no claim all provider fields deeply audited",
+    "chat_group.py / utils/install_utils.py / asr/utils.py: symbol inventory only",
+    "upgrade_codes/scripts/.cursor/.gemini/doc: file inventory and AST where Python, not instructions, not deep functionality audit",
+    "frontend build subtree is uninitialized; only existing main d176e7 proactive timer source and license inspected as supplemental, cannot infer pinned source implementation equality",
+    "live2d-models/backgrounds/avatars/assets/cache/models/.git object bytes: not product content audit; tracked files only hash metadata",
+    "no conf.yaml/env/keychain/logs/chat_history real user data read"
+  ]
+}

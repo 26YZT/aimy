@@ -35,6 +35,8 @@ const props = defineProps<{
   sessionId: string
   replyToMessageId?: string
   tools?: ChatToolReference[]
+  /** Desktop hosts use the same continuous-input switch as the character toolbar. */
+  sharedInput?: boolean
   /** A flexible slot in the composer action row. The recording status shows there. */
   statusElement: HTMLElement | null
   /**
@@ -64,8 +66,10 @@ const { t } = useI18n()
 const mode = useLocalStorage<VoiceComposerMode>('ui/chat/voice-mode', 'audio')
 const { autoSendEnabled } = storeToRefs(useHearingStore())
 const devices = useSettingsAudioDevice()
-const { audioInputOptions, selectedAudioInput, enabled: listening } = storeToRefs(devices)
+const { audioInputOptions, selectedAudioInput } = storeToRefs(devices)
 const controls = useVoiceControlsStore()
+const { continuousListening: listening, microphoneEnabled, microphonePending } = storeToRefs(controls)
+const microphoneOn = computed(() => microphoneEnabled.value || microphonePending.value)
 
 /** Composer text before dictation started. The live transcript is shown after it until the input ends. */
 let draftBeforeDictation: string | undefined
@@ -87,8 +91,8 @@ const voice = useVoiceComposer({
 })
 const { phase, transcript, level, startedAt, pending } = voice
 const active = computed(() => phase.value !== 'idle')
-/** The options menu opens on hover, a right-click, or the up arrow. It stays closed while a recording runs. */
-const menu = useHoverMenu({ enabled: () => !active.value })
+/** The shared microphone switch remains reachable while this control records. */
+const menu = useHoverMenu({ enabled: () => phase.value !== 'processing' })
 const menuOpen = menu.open
 const activeMode = computed(() => voice.mode.value ?? mode.value)
 const now = useNow({ interval: 250 })
@@ -116,6 +120,10 @@ watch(transcript, (text) => {
 /** Triggering workflow: button click -> toggle -> start, or finish with the Auto send setting. */
 async function toggle() {
   menu.close()
+  if (props.sharedInput && !active.value) {
+    await controls.setMicrophoneEnabled(!microphoneOn.value).catch(() => toast.error(t('stage.chat.voice-composer.failed')))
+    return
+  }
   if (!active.value) {
     if (mode.value === 'transcription' && !voice.transcriptionConfigured.value) {
       toast(t('stage.chat.voice-composer.configure-title'), {
@@ -137,6 +145,20 @@ async function toggle() {
   // The host learns that recording closed through `recordingChange`. Its send guard reads that flag after this tick.
   await nextTick()
   emit('submit')
+}
+
+async function startManual(value: VoiceComposerMode) {
+  if (active.value)
+    return
+  menu.close()
+  mode.value = value
+  if (value === 'transcription' && !voice.transcriptionConfigured.value) {
+    emit('configure')
+    return
+  }
+  if (value === 'transcription')
+    draftBeforeDictation = draft.value
+  await voice.start(value)
 }
 
 /** Triggering workflow: status bar cancel, or Escape while recording -> discard the recording and restore the composer text. */
@@ -191,9 +213,11 @@ const currentDevice = computed(() => {
 // Source: `microphoneSource` in packages/audio/src/browser/sources.ts awaits `context.resume()`.
 // Remove when that source stops waiting for resume.
 async function setListening(value: boolean) {
-  if (value && !await devices.askPermission())
-    return
-  listening.value = value
+  await controls.setContinuousListening(value).catch(() => toast.error(t('stage.chat.voice-composer.failed')))
+}
+
+async function setMicrophone(value: boolean) {
+  await controls.setMicrophoneEnabled(value, listening.value).catch(() => toast.error(t('stage.chat.voice-composer.failed')))
 }
 
 /** The newest pending voice message. Older ones stay pending until this one is sent or discarded. */
@@ -214,6 +238,8 @@ async function sendPending(text: string): Promise<'none' | 'sent' | 'failed'> {
 
 defineExpose({ sendPending })
 const iconClass = computed(() => {
+  if (props.sharedInput && !active.value)
+    return microphonePending.value ? 'i-svg-spinners:ring-resize' : microphoneEnabled.value ? 'i-solar:microphone-3-bold' : 'i-ph:microphone-slash'
   if (phase.value === 'starting' || phase.value === 'processing')
     return 'i-svg-spinners:ring-resize'
   if (active.value)
@@ -222,6 +248,8 @@ const iconClass = computed(() => {
 })
 
 const buttonLabel = computed(() => {
+  if (props.sharedInput && !active.value)
+    return t(microphoneOn.value ? 'stage.chat.voice-composer.microphone-disable' : 'stage.chat.voice-composer.microphone-enable')
   if (!active.value)
     return t(`stage.chat.voice-composer.${mode.value}`)
   return t(autoSendEnabled.value ? 'stage.chat.voice-composer.stop-send' : 'stage.chat.voice-composer.stop')
@@ -267,22 +295,28 @@ const separatorClasses = ['mx-2 my-1 h-px bg-neutral-200/80 dark:bg-neutral-700/
       size="unset"
       type="button"
       data-testid="voice-input-button"
+      :data-microphone-enabled="microphoneEnabled"
+      :data-microphone-active="controls.microphoneActive"
       :disabled="!voice.available.value || (phase === 'processing')"
-      :aria-pressed="active"
+      :aria-pressed="active || (sharedInput && microphoneOn)"
+      :aria-busy="sharedInput && microphonePending"
       :aria-label="buttonLabel"
       :title="active ? buttonLabel : `${buttonLabel} · ${t('stage.chat.voice-composer.options-hint')}`"
       :class="[
-        'size-9 flex items-center justify-center rounded-full outline-none',
+        'relative size-9 flex items-center justify-center rounded-full outline-none',
         'focus:outline-none focus-visible:outline-none transition-colors duration-200 motion-reduce:transition-none',
         active
           ? 'bg-red-500 text-white hover:bg-red-600'
-          : 'bg-primary-100/90 text-primary-600 hover:bg-primary-200/90 dark:bg-primary-900/90 dark:text-primary-200 dark:hover:bg-primary-800/90',
+          : sharedInput && microphoneOn
+            ? 'bg-primary-300 text-primary-950 hover:bg-primary-400 dark:bg-primary-700 dark:text-white'
+            : 'bg-primary-100/90 text-primary-600 hover:bg-primary-200/90 dark:bg-primary-900/90 dark:text-primary-200 dark:hover:bg-primary-800/90',
       ]"
       @click="toggle"
       @contextmenu.prevent="menu.openNow()"
       @keydown.up.prevent="menu.openNow()"
     >
       <span :class="[iconClass, 'size-5']" aria-hidden="true" />
+      <span v-if="controls.microphoneActive && !active" data-testid="shared-microphone-active" aria-hidden="true" :class="['absolute right-0 top-0 size-2 rounded-full bg-primary-500 ring-2 ring-white dark:ring-neutral-900']" />
     </BasicButton>
     <DropdownMenu v-model:open="menuOpen" :modal="false" side="top" align="end" variant="blurry" :content-class="['min-w-[240px]']">
       <template #trigger>
@@ -293,7 +327,15 @@ const separatorClasses = ['mx-2 my-1 h-px bg-neutral-200/80 dark:bg-neutral-700/
         <DropdownMenuLabel :class="labelClasses">
           {{ t('stage.chat.voice-composer.mode') }}
         </DropdownMenuLabel>
-        <DropdownMenuRadioGroup v-model="mode">
+        <template v-if="sharedInput">
+          <DropdownMenuItem :class="itemClasses" :disabled="active" @select="startManual('audio')">
+            {{ t('stage.chat.voice-composer.record-message') }}
+          </DropdownMenuItem>
+          <DropdownMenuItem :class="itemClasses" :disabled="active" @select="startManual('transcription')">
+            {{ t('stage.chat.voice-composer.dictate-message') }}
+          </DropdownMenuItem>
+        </template>
+        <DropdownMenuRadioGroup v-else v-model="mode">
           <DropdownMenuRadioItem value="audio" :class="radioItemClasses" @select.prevent>
             <span :class="['i-solar:microphone-3-linear size-4 shrink-0']" />
             <span :class="['flex-1']">{{ t('stage.chat.voice-composer.audio') }}</span>
@@ -357,6 +399,12 @@ const separatorClasses = ['mx-2 my-1 h-px bg-neutral-200/80 dark:bg-neutral-700/
         </DropdownMenuSub>
         <DropdownMenuSeparator :class="separatorClasses" />
         <!-- Settings that change behavior are switches. The item toggles them, so the switch itself takes no input. -->
+        <DropdownMenuCheckboxItem :model-value="microphoneOn" data-testid="voice-menu-microphone" :class="itemClasses" @update:model-value="setMicrophone" @select.prevent>
+          <span :class="['flex-1']">{{ t('stage.chat.voice-composer.microphone-power') }}</span>
+          <span aria-hidden="true" :class="switchTrackClasses(microphoneOn)">
+            <span :class="switchThumbClasses(microphoneOn)" />
+          </span>
+        </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem v-model="autoSendEnabled" data-testid="voice-menu-auto-send" :class="itemClasses" @select.prevent>
           <span :class="['flex-1']">{{ t('stage.chat.voice-composer.auto-send') }}</span>
           <span aria-hidden="true" :class="switchTrackClasses(autoSendEnabled)">

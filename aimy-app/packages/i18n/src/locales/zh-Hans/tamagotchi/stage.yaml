@@ -79,7 +79,9 @@ notice:
     read-more: 阅读更多
     preview-title: 这是什么？
 about:
+  title: 关于
   subtitle: 桌面版本
+  upstream-credit: Aimy 基于 Project AIRI 开发，以下链接指向上游项目。
   current-version: 当前版本
   common:
     cancel: 取消
@@ -88,6 +90,8 @@ about:
     home: 首页
     documentation: 文档
   update:
+    protected-folder-note: Aimy 安装在受保护的 Windows 文件夹中，安装更新时可能需要管理员授权。
+    downgrade-note: 此频道提供的版本较旧，安装后会将 Aimy 降级。
     lane:
       label: 更新频道
       description: 选择更新频道

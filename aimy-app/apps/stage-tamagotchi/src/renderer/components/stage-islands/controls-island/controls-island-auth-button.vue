@@ -6,6 +6,8 @@ import { storeToRefs } from 'pinia'
 import { computed, onScopeDispose, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import ControlButton from './control-button.vue'
+
 import {
   electronAuthCallback,
   electronAuthCallbackError,
@@ -15,6 +17,7 @@ import {
 
 const props = defineProps<{
   active: boolean
+  compact?: boolean
   buttonStyle?: string
   iconClass?: string
 }>()
@@ -72,8 +75,18 @@ watch(isAuthenticated, (val) => {
 </script>
 
 <template>
+  <ControlButton
+    v-if="compact" :button-style="buttonStyle" :disabled="signingIn && !isAuthenticated"
+    :aria-label="isAuthenticated ? (userName || t('tamagotchi.stage.controls-island.open-settings')) : t('tamagotchi.stage.controls-island.login')"
+    :title="signingIn ? t('tamagotchi.stage.controls-island.logging-in') : (userName || t('tamagotchi.stage.controls-island.login'))"
+    @click="handleClick"
+  >
+    <span v-if="signingIn && !isAuthenticated" :class="['i-svg-spinners:ring-resize', iconClass || 'size-5']" />
+    <Avatar v-else-if="isAuthenticated" :src="userAvatar" :class="['size-5 overflow-hidden rounded-full']" />
+    <span v-else :class="['i-solar:login-3-bold-duotone', iconClass || 'size-5']" />
+  </ControlButton>
   <!-- Signing in state -->
-  <div v-if="signingIn && !isAuthenticated" flex="~ col gap-1.5" mb-1.5>
+  <div v-else-if="signingIn && !isAuthenticated" flex="~ col gap-1.5" mb-1.5>
     <div
       flex="~ items-center gap-3"
       rounded-xl px-3 py-2.5

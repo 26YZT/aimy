@@ -1,0 +1,57 @@
+{
+  "authorized": "用户明确开始8例与原AIRI同条件真实对照，总额不超过10元",
+  "createdAt": "2026-10-16T06:08:13.136450+00:00",
+  "campaignRoot": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1",
+  "datasetSha256": "6df77f21da49b90f71a68e8dc171f95005968b54560fdab50892436aeb247818",
+  "buildBinding": {
+    "schemaVersion": 1,
+    "campaignId": "b5e7a7fe-6c9f-4753-9c78-ff6fdd91a583",
+    "buildOwnerCampaignId": "39ff1fe2-debf-4120-9436-badbaf1c9ab4",
+    "hostRevisionId": "ec501d0d-0259-4dd7-94d9-3392c2f2669e",
+    "createdAt": "2026-10-16T06:00:37.503Z",
+    "cacheRoot": "/private/tmp/aimy-live-entry-20261016/qualified-build-4",
+    "buildRoot": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds",
+    "arms": {
+      "airi": {
+        "manifestPath": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/airi/build-manifest.json",
+        "manifestSha256": "02b90b6285002673a48b926e423f82ab0474eb3e230e4e638e89901d3830665b",
+        "entry": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/airi/out/main/index.js",
+        "entrySha256": "4438c97eebb2780077065d46f297ab4727a16a44b29112a50c76af4781f4ef9e"
+      },
+      "aimy": {
+        "manifestPath": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/aimy/build-manifest.json",
+        "manifestSha256": "52bea1cc43adedd5cd29b3ddfdbb32123483c3cabc31c45012d4aa73a6bba8b0",
+        "entry": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/aimy/out/main/index.js",
+        "entrySha256": "478122750d057e465719e6c168573a493ae9a0a38ca1c1bd00f4743876f44a84"
+      }
+    },
+    "liveHost": {
+      "path": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/host/revisions/ec501d0d-0259-4dd7-94d9-3392c2f2669e/live-host-entry.mjs",
+      "sha256": "fe44902ae13ace003a1e5f27da4c649815ed2ae432b1504ba870d2a249bae2e4"
+    },
+    "qualificationHost": {
+      "path": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/host/revisions/ec501d0d-0259-4dd7-94d9-3392c2f2669e/qualification-host-entry.mjs",
+      "sha256": "cfe3d975ea56cbc2168300879a19c9a1624ddfd6a6d6b11c1698a206633f543a"
+    },
+    "bundles": {
+      "path": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/host/revisions/ec501d0d-0259-4dd7-94d9-3392c2f2669e/tool-bundles.json",
+      "sha256": "1b0d76dd1c1d0318a7788a0efe44e72f2f47d215458836f732b37547bc90ba5c"
+    }
+  },
+  "judging": {
+    "unit": "每例最终回应，附记中间轮错误",
+    "criteria": "逐项采用用户grader_only期待与禁止内容，不要求逐字参考回复",
+    "labels": [
+      "满足",
+      "部分满足",
+      "未满足",
+      "无法判定"
+    ],
+    "naturalness": "定性摘录，不设未批准权重或综合分",
+    "rater": "本助手逐例证据审阅，未经独立人工校准",
+    "repeats": 1,
+    "stability": "本轮不证明稳定性",
+    "causalLimit": "1-6保留历史，答对不能全部归因长期记忆；7-8新会话更直接验证跨会话记忆"
+  },
+  "skillGates": "本次用户明确授权执行和结果汇报；沿用已选材料，不再次要求阶段批准；不宣称评分标准经过独立试标或正式上线验收"
+}

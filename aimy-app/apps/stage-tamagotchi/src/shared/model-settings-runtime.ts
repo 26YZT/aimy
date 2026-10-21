@@ -1,4 +1,5 @@
 import type { Live2DExpressionSettingsCommand } from '@proj-airi/stage-ui-live2d/stores/expression-store'
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
 import type { ModelSettingsRuntimeSnapshot } from '@proj-airi/stage-ui/components'
 
 import { defineEventa, defineInvokeEventa } from '@moeru/eventa'
@@ -29,6 +30,18 @@ export const applyLive2DExpressionSettingsCommand = defineInvokeEventa<
   ApplyLive2DExpressionSettingsCommandResponse,
   ApplyLive2DExpressionSettingsCommandRequest
 >('eventa:model-settings-runtime:live2d-expression:apply')
+
+/** A transient gesture request addressed to the loaded VRM in the main stage. */
+export interface ApplyVrmGestureRequest {
+  ownerInstanceId: string
+  modelId: string
+  gesture: VrmGesture
+}
+
+export const applyVrmGesture = defineInvokeEventa<
+  ApplyLive2DExpressionSettingsCommandResponse,
+  ApplyVrmGestureRequest
+>('eventa:model-settings-runtime:vrm-gesture:apply')
 
 let context: ReturnType<typeof createBroadcastChannelContext>['context'] | undefined
 

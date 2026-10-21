@@ -1,0 +1,180 @@
+{
+  "sameLoaderBytes": true,
+  "networkAttempts": 0,
+  "rows": [
+    {
+      "id": "minimal-no-face.vrm",
+      "baseline": {
+        "loaded": true,
+        "responses": {
+          "aa": [],
+          "happy": [],
+          "blink": []
+        },
+        "springJoints": 0
+      },
+      "aimy": {
+        "loaded": true,
+        "responses": {
+          "aa": [],
+          "happy": [],
+          "blink": []
+        },
+        "springJoints": 0
+      },
+      "newPreflight": {
+        "status": "warning",
+        "version": "1",
+        "bytes": 2436,
+        "capabilities": {
+          "humanoid": true,
+          "mouth": false,
+          "blink": false,
+          "emotion": false,
+          "lookAt": false,
+          "spring": false,
+          "mtoon": true
+        },
+        "errors": [],
+        "warnings": [
+          "missing-mouth",
+          "missing-blink",
+          "missing-emotion",
+          "missing-lookAt",
+          "missing-spring"
+        ]
+      },
+      "conclusion": "same actual loader capability; new preflight adds information only"
+    },
+    {
+      "id": "authored-capabilities.vrm",
+      "baseline": {
+        "loaded": true,
+        "expressionNames": [
+          "happy",
+          "aa",
+          "blink"
+        ],
+        "responses": {
+          "aa": [
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "happy": [
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "blink": [
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        "springJoints": 1
+      },
+      "aimy": {
+        "loaded": true,
+        "expressionNames": [
+          "happy",
+          "aa",
+          "blink"
+        ],
+        "responses": {
+          "aa": [
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "happy": [
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "blink": [
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        "springJoints": 1
+      },
+      "newPreflight": {
+        "status": "ready",
+        "version": "1",
+        "bytes": 4160,
+        "capabilities": {
+          "humanoid": true,
+          "mouth": true,
+          "blink": true,
+          "emotion": true,
+          "lookAt": true,
+          "spring": true,
+          "mtoon": true
+        },
+        "errors": [],
+        "warnings": []
+      },
+      "conclusion": "same actual loader capability; new preflight adds information only"
+    },
+    {
+      "id": "truncated-container",
+      "baseline": {
+        "loaded": false,
+        "errorType": "SyntaxError"
+      },
+      "aimy": {
+        "loaderInvoked": false,
+        "report": {
+          "status": "invalid",
+          "version": null,
+          "bytes": 8,
+          "capabilities": {
+            "humanoid": false,
+            "mouth": false,
+            "blink": false,
+            "emotion": false,
+            "lookAt": false,
+            "spring": false,
+            "mtoon": false
+          },
+          "errors": [
+            "invalid-container"
+          ],
+          "warnings": []
+        }
+      },
+      "conclusion": "both reject invalid file; new preflight gives structured reason before preview"
+    }
+  ],
+  "sources": [
+    {
+      "path": "/Users/mima1234/Documents/airi-main/packages/stage-ui-three/src/composables/vrm/loader.ts",
+      "sha256": "84e1cf24155dcab5f1553dd9177c8d8c95ae8e80d4279dcee18452bb28ac5d47",
+      "transform": "erase TS types and resolve the same installed three/VRM dependencies; no function body changed"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/src/composables/vrm/loader.ts",
+      "sha256": "84e1cf24155dcab5f1553dd9177c8d8c95ae8e80d4279dcee18452bb28ac5d47",
+      "transform": "erase TS types and resolve the same installed three/VRM dependencies; no function body changed"
+    }
+  ],
+  "limits": [
+    "same installed three and VRM libraries for both arms",
+    "authored synthetic assets; no GPU renderer, microphone or real character quality judgement",
+    "actual morph weights, not perceived facial expression quality"
+  ]
+}

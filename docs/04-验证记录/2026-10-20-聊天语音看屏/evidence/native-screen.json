@@ -1,0 +1,21 @@
+{
+  "reports": [
+    {
+      "surface": "stage",
+      "status": "sharing",
+      "syntheticSource": true
+    },
+    {
+      "surface": "chat",
+      "status": "sharing",
+      "syntheticSource": true,
+      "tabs": [
+        "聊天",
+        "角色",
+        "我"
+      ]
+    }
+  ],
+  "stopped": true,
+  "model": "synthetic processCapture stub; no model request"
+}

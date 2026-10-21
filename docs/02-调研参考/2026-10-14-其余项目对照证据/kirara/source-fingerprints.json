@@ -1,0 +1,1765 @@
+{
+  "source_root": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master",
+  "fixed_scope": "all *.py plus pyproject.toml/LICENSE; does not hash user config/DB/.env or arbitrary binary assets",
+  "source_file_count": 290,
+  "aggregate_algorithm": "SHA256(concat(relative_path+NUL+sha256+LF) in stored order)",
+  "aggregate_sha256": "f1e56e98786bbe968155b0027a135f66014cc43adaf72ae3807c7ead46af4f39",
+  "records": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/__init__.py",
+      "relative_path": "kirara_ai/__init__.py",
+      "sha256": "df03c53d2f8f4c81209cf8c9e00014a395b56430e008f56fd36b4e16b0fd3b04",
+      "bytes": 212
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/__main__.py",
+      "relative_path": "kirara_ai/__main__.py",
+      "sha256": "975b7f425bfca9117ac2d3e9db09d6a1844241cb4226eb5cc381065dfa9a05a7",
+      "bytes": 1196
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/alembic/env.py",
+      "relative_path": "kirara_ai/alembic/env.py",
+      "sha256": "44fd4289388d290f4dda628996b515a0255a6401377f5e7e9734913b761a16ab",
+      "bytes": 2201
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/alembic/versions/4a364dbb8dab_initial_migration.py",
+      "relative_path": "kirara_ai/alembic/versions/4a364dbb8dab_initial_migration.py",
+      "sha256": "3daa92501bb682e5f2bcbfdc95ff45d7cdf01129ee265d6af552bf1dd5ffe0a8",
+      "bytes": 3116
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/config/__init__.py",
+      "relative_path": "kirara_ai/config/__init__.py",
+      "sha256": "69e14ba5790da11d08357dae105912d8453bf2b85beeadf1f34c4d90c0351856",
+      "bytes": 487
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/config/config_loader.py",
+      "relative_path": "kirara_ai/config/config_loader.py",
+      "sha256": "97e8d4220477cf5145f42b1041fb92bb729132f968551c1dc38c3c081685dd16",
+      "bytes": 3121
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/config/global_config.py",
+      "relative_path": "kirara_ai/config/global_config.py",
+      "sha256": "e284cbe39138ba02ca179e9a4459dd1fd107f256fbf712e682c4e2ef2777fb86",
+      "bytes": 6693
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/database/__init__.py",
+      "relative_path": "kirara_ai/database/__init__.py",
+      "sha256": "9ff3f74e32e5dcf0c49f33dfd6df982a5b8bb691bfe098e2cc6236f8bca9fc25",
+      "bytes": 122
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/database/manager.py",
+      "relative_path": "kirara_ai/database/manager.py",
+      "sha256": "edfe4e5481adba1b3d82e7dff807996578ae57be90f2e18f7d2fa15ebb1e6f98",
+      "bytes": 3578
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/entry.py",
+      "relative_path": "kirara_ai/entry.py",
+      "sha256": "f81e5c6f0504f180f654a0e6c1a0cfa02f6cc04efa3af04f414f97a64f754fd2",
+      "bytes": 11352
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/__init__.py",
+      "relative_path": "kirara_ai/events/__init__.py",
+      "sha256": "b9114e0b614770295d4c2de5763479965e8a0238928c8997be70f394e903e2ff",
+      "bytes": 675
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/application.py",
+      "relative_path": "kirara_ai/events/application.py",
+      "sha256": "6cad8c610b101e1cbea077bb2f23a7f66a358b8f64c4c6f35009a26e1beb4e94",
+      "bytes": 196
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/event_bus.py",
+      "relative_path": "kirara_ai/events/event_bus.py",
+      "sha256": "7c46ac325bff6c1bc096ca50836cb55849eefec6cffceb81635cb3ea8f2270b4",
+      "bytes": 987
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/im.py",
+      "relative_path": "kirara_ai/events/im.py",
+      "sha256": "49f1e7dcb0cbabd439c031532a4ec1d7c549c6b6af24e2c2cb3b262e2390ecf6",
+      "bytes": 355
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/listen.py",
+      "relative_path": "kirara_ai/events/listen.py",
+      "sha256": "45005df7aea8b209f3211e307de24217a4988f01b3d20af6445ad74b302e46c2",
+      "bytes": 805
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/llm.py",
+      "relative_path": "kirara_ai/events/llm.py",
+      "sha256": "d85cabf5c2363a583a6b6905989f662dd79e9bcdc7c33925b5abd9f1112397e6",
+      "bytes": 461
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/plugin.py",
+      "relative_path": "kirara_ai/events/plugin.py",
+      "sha256": "17b849e1556877d4c521f492ec6b42014ccd10767aea4dc0fe4f3e365329a652",
+      "bytes": 371
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/tracing/__init__.py",
+      "relative_path": "kirara_ai/events/tracing/__init__.py",
+      "sha256": "db66b44f5f925392068d212085dd22d375cc0a783447420b68528dd67223ead8",
+      "bytes": 356
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/tracing/base.py",
+      "relative_path": "kirara_ai/events/tracing/base.py",
+      "sha256": "7292406295bddd0e9ea1a89c12f6ab47648aedad328025a2e077033b1c1a9217",
+      "bytes": 516
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/tracing/llm.py",
+      "relative_path": "kirara_ai/events/tracing/llm.py",
+      "sha256": "59c47a1e101e12cd2cfc6506f3cb1b514ea4f8ace42aa081745ff42f9f8b2182",
+      "bytes": 2262
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/events/workflow.py",
+      "relative_path": "kirara_ai/events/workflow.py",
+      "sha256": "0c0bfb286086d580a17e912c4c48a08815695b49bb40be9da5f57ef593cac656",
+      "bytes": 682
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/__init__.py",
+      "relative_path": "kirara_ai/im/__init__.py",
+      "sha256": "58b7de86d5886cecc0aeb67249dea89bd74d60aa52b61076ee5082b7db6fea20",
+      "bytes": 107
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/adapter.py",
+      "relative_path": "kirara_ai/im/adapter.py",
+      "sha256": "53a87c74daa39a8cef4cde0abc3bb917a749b737d3665f1b41cf010b95a6671e",
+      "bytes": 2489
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/im_registry.py",
+      "relative_path": "kirara_ai/im/im_registry.py",
+      "sha256": "5df161c9554c9b294fe9e3a0877deffcd14481f52ba19728636a1c92606bfe98",
+      "bytes": 2687
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/manager.py",
+      "relative_path": "kirara_ai/im/manager.py",
+      "sha256": "cf1462784a6a61328e348303e5948be3842c94a1373f7c19df15022629ce0bb6",
+      "bytes": 7021
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/message.py",
+      "relative_path": "kirara_ai/im/message.py",
+      "sha256": "d55f04808a3382b153dfe5f46d69b645ed26e05bb7a26b9014598505779838f0",
+      "bytes": 12409
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/profile.py",
+      "relative_path": "kirara_ai/im/profile.py",
+      "sha256": "a29964b9e5a8cfcc35ab7ca89f725ec4f8579a932d85fb72a0ef11ca665f07f7",
+      "bytes": 1038
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/sender.py",
+      "relative_path": "kirara_ai/im/sender.py",
+      "sha256": "a7e36cf13e8d44e306ef7ed243adef470b68fab97f48bbc6208fc889c4c9d970",
+      "bytes": 2498
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/internal.py",
+      "relative_path": "kirara_ai/internal.py",
+      "sha256": "9b695467c1667547323f1209573188c197ae22ea520c707145f8cc082b03e748",
+      "bytes": 298
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/ioc/__init__.py",
+      "relative_path": "kirara_ai/ioc/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/ioc/container.py",
+      "relative_path": "kirara_ai/ioc/container.py",
+      "sha256": "0b98043530e080ac8cec6461ee298be07ece1d652ed41eb2e6b9093bf9cd98ae",
+      "bytes": 5648
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/ioc/inject.py",
+      "relative_path": "kirara_ai/ioc/inject.py",
+      "sha256": "32a78fe1b0c2310c205c5d9d2e34279d014d1f7e9593fccaa6c18cd9e3900c63",
+      "bytes": 4549
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/adapter.py",
+      "relative_path": "kirara_ai/llm/adapter.py",
+      "sha256": "a82a430772835ad8d8a1db7c1991a82e87b14850164120abd924a6146975d894",
+      "bytes": 1113
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/format/__init__.py",
+      "relative_path": "kirara_ai/llm/format/__init__.py",
+      "sha256": "95defa1f3f7b19221513cb812a4ff0622ac5fb431c478e1bfbc989f462a3fdd9",
+      "bytes": 372
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/format/embedding.py",
+      "relative_path": "kirara_ai/llm/format/embedding.py",
+      "sha256": "70f8cbf6312bfe39c578e2fa802d11b585f5569124b771829e8ee9472746bbc2",
+      "bytes": 2115
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/format/message.py",
+      "relative_path": "kirara_ai/llm/format/message.py",
+      "sha256": "52d417caf1676fa5755d5e8e1d4126f2902763d89297d44a86c4fd8b396ea23a",
+      "bytes": 2355
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/format/request.py",
+      "relative_path": "kirara_ai/llm/format/request.py",
+      "sha256": "7f689012b04aad61876df34ede6c80db4f1dc1a4334f0591a0b86a7440286690",
+      "bytes": 1276
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/format/rerank.py",
+      "relative_path": "kirara_ai/llm/format/rerank.py",
+      "sha256": "cc39c45ef8efcbd9006b57dee618f55d76074d295667fa5b84e3794d350829a9",
+      "bytes": 3050
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/format/response.py",
+      "relative_path": "kirara_ai/llm/format/response.py",
+      "sha256": "967ad4cb24b24dcbd53646f1a1c0ae5919fbf8b170e8f2bd04fc7a3b088905f5",
+      "bytes": 600
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/format/tool.py",
+      "relative_path": "kirara_ai/llm/format/tool.py",
+      "sha256": "a16438142bbbbdba9a961818026dcb4ebdbf882f151692a447e1d478f9b25803",
+      "bytes": 3666
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/llm_manager.py",
+      "relative_path": "kirara_ai/llm/llm_manager.py",
+      "sha256": "f6ab301f94ade926109925f6ff638ef1b8cb57bc2fa4a9f036b83e4dfc7ff9de",
+      "bytes": 8805
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/llm_registry.py",
+      "relative_path": "kirara_ai/llm/llm_registry.py",
+      "sha256": "8ecc7f0e422ba33ad8e784021013fe42d73b336dd52f3b37289b45bf74542dfc",
+      "bytes": 2298
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/model_types.py",
+      "relative_path": "kirara_ai/llm/model_types.py",
+      "sha256": "cd39890e2f4f5a42d2fab962e6ba69dcea1534aa342915b439c9915b99377695",
+      "bytes": 3007
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/logger.py",
+      "relative_path": "kirara_ai/logger.py",
+      "sha256": "66951830eaef367bdb0b586725aa6eb66da1199260f2c53895439293b01426d1",
+      "bytes": 7603
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/mcp_module/__init__.py",
+      "relative_path": "kirara_ai/mcp_module/__init__.py",
+      "sha256": "b42c8c3e9e458ac2f9dc3afd46795e98ea486209c4e67ace54670ade0de623c3",
+      "bytes": 174
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/mcp_module/manager.py",
+      "relative_path": "kirara_ai/mcp_module/manager.py",
+      "sha256": "2ab67153865470916ff2326bbfcc5859f05c06fef283511d9b1dcc76b08079ea",
+      "bytes": 16946
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/mcp_module/models.py",
+      "relative_path": "kirara_ai/mcp_module/models.py",
+      "sha256": "887a248b9f0fdae2d2d0faff9e7aaf3777b515da3edc6624bbcf15ad2a0d072b",
+      "bytes": 204
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/mcp_module/server.py",
+      "relative_path": "kirara_ai/mcp_module/server.py",
+      "sha256": "fe56ade33bb06a62efafaf6ecf3491c40471fec3f15374c2f777832b66ae8817",
+      "bytes": 12263
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/__init__.py",
+      "relative_path": "kirara_ai/media/__init__.py",
+      "sha256": "9762b07868a4f2029feff8b46cf7c4ce2373af93fd47c4472b5b49c1f5380cd1",
+      "bytes": 352
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/carrier/__init__.py",
+      "relative_path": "kirara_ai/media/carrier/__init__.py",
+      "sha256": "9060d953bd00e3088db6917968ce57641c1f4090bc8270c8f15e94c03fa052c2",
+      "bytes": 225
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/carrier/provider.py",
+      "relative_path": "kirara_ai/media/carrier/provider.py",
+      "sha256": "11a959520e05f9eb1d4ce7440237cf53fb9c5190e011ca420895efc011ff50e3",
+      "bytes": 371
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/carrier/registry.py",
+      "relative_path": "kirara_ai/media/carrier/registry.py",
+      "sha256": "9b77301f034c947ced78bd59f6e14a44f3af247da9b0f950c77ed82c992ac361",
+      "bytes": 1230
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/carrier/service.py",
+      "relative_path": "kirara_ai/media/carrier/service.py",
+      "sha256": "cab2a34a564eadc950e10ad99b90f8618aa65c7ba322e2037f9cd4aed5fc0973",
+      "bytes": 5042
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/manager.py",
+      "relative_path": "kirara_ai/media/manager.py",
+      "sha256": "9b844a0ec5223cda08f845c2b02d4003a6f0c6229f66a2dfdd5b4b2e231dd358",
+      "bytes": 24029
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/media_object.py",
+      "relative_path": "kirara_ai/media/media_object.py",
+      "sha256": "b3acdde0689853e44aaceb42691c43259740a0b4282f4ce7d8738fdd816de3b5",
+      "bytes": 4124
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/metadata.py",
+      "relative_path": "kirara_ai/media/metadata.py",
+      "sha256": "6c04ce21a6b5e24bce9d74b79da71f49198980b3b25073b0da93aa9a194ea112",
+      "bytes": 2576
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/types/__init__.py",
+      "relative_path": "kirara_ai/media/types/__init__.py",
+      "sha256": "b7c637b22f94d5ea65f7ce303a1c6a3be92f2b348be4f00c5ed1acf6654b656b",
+      "bytes": 80
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/types/media_type.py",
+      "relative_path": "kirara_ai/media/types/media_type.py",
+      "sha256": "be62e62656bacecb6aa8cb39a0b1ba5a5395c17f77a73da2910642530073a559",
+      "bytes": 553
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/utils/__init__.py",
+      "relative_path": "kirara_ai/media/utils/__init__.py",
+      "sha256": "421ae59275344c55dd816b06ca3834d0e4715791c4b36ffad17a0f9b6ccc145f",
+      "bytes": 122
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/media/utils/mime.py",
+      "relative_path": "kirara_ai/media/utils/mime.py",
+      "sha256": "f878deb8e97aad295573138435a12c28fbfa238a7bce187c999ca8a6a4f77492",
+      "bytes": 1183
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/composes/__init__.py",
+      "relative_path": "kirara_ai/memory/composes/__init__.py",
+      "sha256": "bbba18a123820c127d6ed6b58176d3fd3640ab4756d6e3f8f89920ff3111328d",
+      "bytes": 719
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/composes/base.py",
+      "relative_path": "kirara_ai/memory/composes/base.py",
+      "sha256": "dc49ceccb941b01edd02094ac1762692acd332841f3cd33b85faf96768f5269b",
+      "bytes": 1146
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/composes/builtin_composes.py",
+      "relative_path": "kirara_ai/memory/composes/builtin_composes.py",
+      "sha256": "80f043d77b4f567b697cb011d3aaaaabca2a02f029664832b80abae38e32d5e0",
+      "bytes": 3296
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/composes/composer_strategy.py",
+      "relative_path": "kirara_ai/memory/composes/composer_strategy.py",
+      "sha256": "fa35b4a5f6d5ffa9b61feb79fafa036a44635a399412a1f0173327c5f015b6fa",
+      "bytes": 7102
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/composes/decomposer_strategy.py",
+      "relative_path": "kirara_ai/memory/composes/decomposer_strategy.py",
+      "sha256": "6d0c253a804b6c94586ddfa155ffba32023aec50565e2503d78c8a27d80b5dca",
+      "bytes": 15604
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/composes/xml_helper.py",
+      "relative_path": "kirara_ai/memory/composes/xml_helper.py",
+      "sha256": "14acc0a45516cf0d682f0629bd222015ee8aede7d738e660c614180e9bff6b4b",
+      "bytes": 2192
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/entry.py",
+      "relative_path": "kirara_ai/memory/entry.py",
+      "sha256": "41ad91be96833bf70b704bc01d3ee12ae0845a482d9c00bb40b3d7555e8b9b20",
+      "bytes": 367
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/memory_manager.py",
+      "relative_path": "kirara_ai/memory/memory_manager.py",
+      "sha256": "ef9f6a21d0e7ad573639adcd0a7645777105483c66d74a4904f02e532a271016",
+      "bytes": 7376
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/persistences/__init__.py",
+      "relative_path": "kirara_ai/memory/persistences/__init__.py",
+      "sha256": "c65c924b8787b2e71bbf01026457b6e5dd8d67ca39e9527425d8f19333de4879",
+      "bytes": 309
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/persistences/base.py",
+      "relative_path": "kirara_ai/memory/persistences/base.py",
+      "sha256": "d98d1e86b21ec33caf56545f7fa7f2aab1d733263ff4ecd3d776fba0d4f96769",
+      "bytes": 1763
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/persistences/codecs.py",
+      "relative_path": "kirara_ai/memory/persistences/codecs.py",
+      "sha256": "34ce7c5c354dfa67b15a33756d982e62e1dbe86017a99001d00db47ba21109ae",
+      "bytes": 1690
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/persistences/file_persistence.py",
+      "relative_path": "kirara_ai/memory/persistences/file_persistence.py",
+      "sha256": "72651a5a9296f3fba4b2256d47a4ac912db8bdc3d6a8ef70853af19821a1ccc0",
+      "bytes": 2277
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/persistences/redis_persistence.py",
+      "relative_path": "kirara_ai/memory/persistences/redis_persistence.py",
+      "sha256": "4617d6ffb63f4e3769b3839584d4d5c9bd3fee0578bdd808725a9147c4f75d28",
+      "bytes": 1977
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/registry.py",
+      "relative_path": "kirara_ai/memory/registry.py",
+      "sha256": "3852d80cfd0ef64b6424c0b3d9cbe4cb535146cc30cd7df491c4bfd177f42510",
+      "bytes": 1758
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/__init__.py",
+      "relative_path": "kirara_ai/memory/scopes/__init__.py",
+      "sha256": "0e7e5f50e0d3a65453ec4245ad90990e67cf8605bba385876ec7f173a7c01729",
+      "bytes": 166
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/base.py",
+      "relative_path": "kirara_ai/memory/scopes/base.py",
+      "sha256": "ac034d5e8a8f6df6e49e1218afa9d63e0bdbb1b8b99dd4216c1546f000fc5fe0",
+      "bytes": 408
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/scopes/builtin_scopes.py",
+      "relative_path": "kirara_ai/memory/scopes/builtin_scopes.py",
+      "sha256": "f81c3cc618f496b8a15c9d86bc4f809718f8540105d2219030bdc9082a652dd9",
+      "bytes": 1752
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugin_manager/models.py",
+      "relative_path": "kirara_ai/plugin_manager/models.py",
+      "sha256": "f3aaf806511f8b571a069b0a472e1644e997171d7da63c72a9a04b0f97847965",
+      "bytes": 444
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugin_manager/plugin.py",
+      "relative_path": "kirara_ai/plugin_manager/plugin.py",
+      "sha256": "8732c0704af304f2498e0f8797ceed8821f76c312b2fccc2424d67d74cb30637",
+      "bytes": 1008
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugin_manager/plugin_event_bus.py",
+      "relative_path": "kirara_ai/plugin_manager/plugin_event_bus.py",
+      "sha256": "dfad7ea13f3ec7173d064d7ad12bf009c02189802e2e6582fc20841eecd5d1f4",
+      "bytes": 1057
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugin_manager/plugin_loader.py",
+      "relative_path": "kirara_ai/plugin_manager/plugin_loader.py",
+      "sha256": "14581be7ee36a824e064be9c3aee97a11343e660ba84602b4a80fc67f802aeb1",
+      "bytes": 20152
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugin_manager/utils.py",
+      "relative_path": "kirara_ai/plugin_manager/utils.py",
+      "sha256": "74d41917355b156f846667cbb1b88da8698573e53d77206f22ac24fee838161a",
+      "bytes": 733
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/bundled_frpc/__init__.py",
+      "relative_path": "kirara_ai/plugins/bundled_frpc/__init__.py",
+      "sha256": "b94fa608ad9de2993e00b1edc182c2242f3f2d3c21c6529871590759f4179f76",
+      "bytes": 1471
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/bundled_frpc/frpc_manager.py",
+      "relative_path": "kirara_ai/plugins/bundled_frpc/frpc_manager.py",
+      "sha256": "d95c893fb4d0ae7b5533c84685f3d675bb5353c76bf9ec28a70e11607e97183f",
+      "bytes": 14261
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/bundled_frpc/models.py",
+      "relative_path": "kirara_ai/plugins/bundled_frpc/models.py",
+      "sha256": "7fc33db45c908751eb09167dd5b58adac625e530626f876f3d3ef9df96019b24",
+      "bytes": 776
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/bundled_frpc/routes.py",
+      "relative_path": "kirara_ai/plugins/bundled_frpc/routes.py",
+      "sha256": "ff420a3eda8819d29cab70f6eeaa2d31f14cb91d8f761b1ef6f26551a1efa160",
+      "bytes": 6897
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_http_legacy_adapter/__init__.py",
+      "relative_path": "kirara_ai/plugins/im_http_legacy_adapter/__init__.py",
+      "sha256": "fbb067d9ad783e52367b42e903db3ed9a752461d0490fd3986ceebe8da72ba3a",
+      "bytes": 1103
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_http_legacy_adapter/adapter.py",
+      "relative_path": "kirara_ai/plugins/im_http_legacy_adapter/adapter.py",
+      "sha256": "0cbf27b991bc0f6fd8c8b2b2bcab05566060ff3b9fad2e5cc0c8dd6d9ed217b2",
+      "bytes": 11405
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_http_legacy_adapter/setup.py",
+      "relative_path": "kirara_ai/plugins/im_http_legacy_adapter/setup.py",
+      "sha256": "b2a8c0a7f423245dc27741eb1d3a1b20ee9d01af04947e766646d9294356bd5d",
+      "bytes": 429
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_http_legacy_adapter/tests/api_test.py",
+      "relative_path": "kirara_ai/plugins/im_http_legacy_adapter/tests/api_test.py",
+      "sha256": "edf36500ad0ce185d8650bdac36f289da8d7230d523ea0e94abf7f6f4171273c",
+      "bytes": 3264
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_qqbot_adapter/__init__.py",
+      "relative_path": "kirara_ai/plugins/im_qqbot_adapter/__init__.py",
+      "sha256": "b2f2e12967d75ce542cfa6f8e0ca219e24ee6769d56271994f3f0babb80ce3bf",
+      "bytes": 1900
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_qqbot_adapter/adapter.py",
+      "relative_path": "kirara_ai/plugins/im_qqbot_adapter/adapter.py",
+      "sha256": "25de80759532c02f77d466d16525cd0362975aa9b64fa289997663340d35bd83",
+      "bytes": 11482
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_qqbot_adapter/setup.py",
+      "relative_path": "kirara_ai/plugins/im_qqbot_adapter/setup.py",
+      "sha256": "6898651d43413eac475d7a75a1245aefe6b30491a3bb1e98582ed5e4ee13cb58",
+      "bytes": 388
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_qqbot_adapter/utils.py",
+      "relative_path": "kirara_ai/plugins/im_qqbot_adapter/utils.py",
+      "sha256": "e9a4092410bf2cdfbd304dc1d2a592e3cba1b0a531c1783d097f191b4397ef58",
+      "bytes": 317
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_telegram_adapter/__init__.py",
+      "relative_path": "kirara_ai/plugins/im_telegram_adapter/__init__.py",
+      "sha256": "8c61e196f5a918b316557ebddd0bc757965e04d3782823ff5621b704266141cf",
+      "bytes": 1908
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_telegram_adapter/adapter.py",
+      "relative_path": "kirara_ai/plugins/im_telegram_adapter/adapter.py",
+      "sha256": "58fae3d638aa47b9380c7d3d6ccf94c4c30441a6c694915865c8770635fb1b0e",
+      "bytes": 14552
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_telegram_adapter/setup.py",
+      "relative_path": "kirara_ai/plugins/im_telegram_adapter/setup.py",
+      "sha256": "602daa230ceb70e8b29c11e5135eeb264b4b4f74eb156e35a855373448c43347",
+      "bytes": 439
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_wecom_adapter/__init__.py",
+      "relative_path": "kirara_ai/plugins/im_wecom_adapter/__init__.py",
+      "sha256": "1a1aeed3c4125a7a0b65724a9974dfc521e1fcd2d921e936961cd3b326447f26",
+      "bytes": 1263
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_wecom_adapter/adapter.py",
+      "relative_path": "kirara_ai/plugins/im_wecom_adapter/adapter.py",
+      "sha256": "f824907977f1f3b42f892951d732b7f89753ea97d3a62b416ce8c76933bbbe5a",
+      "bytes": 15765
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_wecom_adapter/delegates.py",
+      "relative_path": "kirara_ai/plugins/im_wecom_adapter/delegates.py",
+      "sha256": "159599f42c5c451b81428c70a439a26ba83c48e3209a64e4ac4136cde65339cc",
+      "bytes": 4844
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/im_wecom_adapter/setup.py",
+      "relative_path": "kirara_ai/plugins/im_wecom_adapter/setup.py",
+      "sha256": "70104e76abdc2ce8196b5f56f50aff16e66aa62d158ce2fc957856e1216d121a",
+      "bytes": 383
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/__init__.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/__init__.py",
+      "sha256": "74254c2ea988fd75d86be20112a0642e2f08810fbcf913c1a40192581dd81b71",
+      "bytes": 2667
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/alibabacloud_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/alibabacloud_adapter.py",
+      "sha256": "700e2a2f56790e19aa146068771acba1aef11774fc5592ca5f240e60f62b4634",
+      "bytes": 810
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/claude_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/claude_adapter.py",
+      "sha256": "b20020b52090df7e817d32ec75e3eefc3c605872c0ef86b42b200c47c74c7f90",
+      "bytes": 7930
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/deepseek_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/deepseek_adapter.py",
+      "sha256": "5235530ee59076eb7950429eb2dc58e4a3f780a684e56856afadbef022cc1d1a",
+      "bytes": 280
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/gemini_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/gemini_adapter.py",
+      "sha256": "16c688599c1c2f373b134c5f863d8462eb23e5776d311a54f9db7e76b6b53426",
+      "bytes": 13490
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/minimax_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/minimax_adapter.py",
+      "sha256": "f88e2cff4aa61180db78b10cb7b25dba23d5e10b10bd85cb9f55ba577f80574a",
+      "bytes": 276
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/mistral_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/mistral_adapter.py",
+      "sha256": "f4f1749542e6ecdb5291911fee55d410fa71d7a8f83a835a605b4b636bce5274",
+      "bytes": 1658
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/moonshot_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/moonshot_adapter.py",
+      "sha256": "39463ef59dc6d00fd5e985daac7c812845956d2a04c46300b10e51a4ffa706a0",
+      "bytes": 409
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/ollama_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/ollama_adapter.py",
+      "sha256": "97648e7eb774f06a3e3b408fff1f1602701417e266b577cadf49455bb0a3ed72",
+      "bytes": 8508
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/openai_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/openai_adapter.py",
+      "sha256": "e7428da1e18071a681eca303ab6d23550fc1d22a617c776f84a104f46c06348d",
+      "bytes": 11214
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/openrouter_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/openrouter_adapter.py",
+      "sha256": "8452d0942593c353d61e02268910975d36ef40286a69192e370584cb1a4ce914",
+      "bytes": 1842
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/setup.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/setup.py",
+      "sha256": "54da73534f6c2f6106df6dfd2f2261811e2955fe68938791b6fbe77164d22b26",
+      "bytes": 393
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/siliconflow_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/siliconflow_adapter.py",
+      "sha256": "c97529f1d1d9c9f2f1415390d636b40179148b8191b58518b1165c280a79c90f",
+      "bytes": 801
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/tencentcloud_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/tencentcloud_adapter.py",
+      "sha256": "0ed01644e4547799e8335d637f5e75d4112751d34adc9b9f867479fef4347df8",
+      "bytes": 292
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/tests/test_utils.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/tests/test_utils.py",
+      "sha256": "13945892d1ab1d471082e527821ba3733e21f512ef0651ccaa75173622f5c9fe",
+      "bytes": 12001
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/utils.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/utils.py",
+      "sha256": "453b85d67ddd983dcfbc2d3c648efb528ecfbf5a10526fd8c381e64eaee80de8",
+      "bytes": 6822
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/volcengine_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/volcengine_adapter.py",
+      "sha256": "3bbd9bc8208a1697bdd1c7f19efcb46095daedc96fb08acdcd705f55df129f0a",
+      "bytes": 7217
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugins/llm_preset_adapters/voyage_adapter.py",
+      "relative_path": "kirara_ai/plugins/llm_preset_adapters/voyage_adapter.py",
+      "sha256": "9222515a510d3d135d46767cff5f1a0cb54c2669a748bb5372c4af2e396bf107",
+      "bytes": 8208
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/system/__init__.py",
+      "relative_path": "kirara_ai/system/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/system/updater.py",
+      "relative_path": "kirara_ai/system/updater.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/tracing/__init__.py",
+      "relative_path": "kirara_ai/tracing/__init__.py",
+      "sha256": "afba3e8254eff2fc2f11bc313c947391066cf1b9166c294b4e3c07d1902a16cd",
+      "bytes": 375
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/tracing/core.py",
+      "relative_path": "kirara_ai/tracing/core.py",
+      "sha256": "c055dae4a0347323e070dd8b35731418b820ca760b7d4209697ad2294fe26192",
+      "bytes": 7420
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/tracing/decorator.py",
+      "relative_path": "kirara_ai/tracing/decorator.py",
+      "sha256": "77543a1ff5c74752d0b73a6682b4e8ad3c71bc11568f908598e1bc4e26913560",
+      "bytes": 1006
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/tracing/llm_tracer.py",
+      "relative_path": "kirara_ai/tracing/llm_tracer.py",
+      "sha256": "5e4e097c3eef3ba86f927c64f0daf62f1bd6c2c7a66e9ab7d724d545d83ec0d2",
+      "bytes": 13225
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/tracing/manager.py",
+      "relative_path": "kirara_ai/tracing/manager.py",
+      "sha256": "5c6e1da0ef3fb2c4376a1b16fe628da373afa0415f4767cdf9b001b284c8349c",
+      "bytes": 3738
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/tracing/models.py",
+      "relative_path": "kirara_ai/tracing/models.py",
+      "sha256": "e688004cae002e6ba40fa4c739a368d02774867c88187ac148a7c233a86d29aa",
+      "bytes": 5079
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/__init__.py",
+      "relative_path": "kirara_ai/web/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/__init__.py",
+      "relative_path": "kirara_ai/web/api/block/__init__.py",
+      "sha256": "30dfffd640715842e0de5a0aed4a739a8410db8ce2b3e97aa82baa9148772b08",
+      "bytes": 54
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/diagnostics/base_diagnostic.py",
+      "relative_path": "kirara_ai/web/api/block/diagnostics/base_diagnostic.py",
+      "sha256": "e3ea59851c00a954b1cf9e8a659d0f46d38fc0022caa736becbd7d3c3378bcee",
+      "bytes": 6573
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/diagnostics/import_check.py",
+      "relative_path": "kirara_ai/web/api/block/diagnostics/import_check.py",
+      "sha256": "6cfdd7279edd21426f4a7b82a61c7fb193b733130dc43840895813b672ef9741",
+      "bytes": 11302
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/diagnostics/jedi_syntax_check.py",
+      "relative_path": "kirara_ai/web/api/block/diagnostics/jedi_syntax_check.py",
+      "sha256": "873bad6b6dcf4e8f49136ef844dc02ae00a271b24ef70f21fb37088182f5ddb2",
+      "bytes": 3267
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/diagnostics/mandatory_function.py",
+      "relative_path": "kirara_ai/web/api/block/diagnostics/mandatory_function.py",
+      "sha256": "d052ca573ca4087741f6308553ddf49381966e0b7e07f7475c317626c728a37b",
+      "bytes": 12047
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/diagnostics/pyflakes_check.py",
+      "relative_path": "kirara_ai/web/api/block/diagnostics/pyflakes_check.py",
+      "sha256": "265c3a8736bf0d5724febfff082e7640d3f60a126a21db16ad1ca87ce503e222",
+      "bytes": 10777
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/models.py",
+      "relative_path": "kirara_ai/web/api/block/models.py",
+      "sha256": "c33e989bf3dcc9a451a5afe3e5d652eb302fc2561915c0965a7f94ea1b889bd0",
+      "bytes": 551
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/python_lsp.py",
+      "relative_path": "kirara_ai/web/api/block/python_lsp.py",
+      "sha256": "b18b69ba6ba6467689a5d23bf19ea274309090cf19966a9d627ab2babd9838b2",
+      "bytes": 21901
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/block/routes.py",
+      "relative_path": "kirara_ai/web/api/block/routes.py",
+      "sha256": "d1a1f5cd2319349002a77404d71483bbc94ea0dc45d794c6b16edc2c71e85cf1",
+      "bytes": 5221
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/dispatch/__init__.py",
+      "relative_path": "kirara_ai/web/api/dispatch/__init__.py",
+      "sha256": "d93b3317fbd3b06c11901c6b040e81a4f4449b50377cba0948ec8b1196bbf57c",
+      "bytes": 60
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/dispatch/models.py",
+      "relative_path": "kirara_ai/web/api/dispatch/models.py",
+      "sha256": "b9724cf6135bf8fb30152d6a2913bfd01bc726807fe141ecf8992c861d59fbd9",
+      "bytes": 330
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/dispatch/routes.py",
+      "relative_path": "kirara_ai/web/api/dispatch/routes.py",
+      "sha256": "f188f37b2496daaeb8b0802ed9c8a2814339cc9a4f70c8cf3da0e2ebeb18574d",
+      "bytes": 5621
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/im/__init__.py",
+      "relative_path": "kirara_ai/web/api/im/__init__.py",
+      "sha256": "cbb6d40e6d1a19abc867b8c2d2202032d77f30ff36d3b0a237b50589ae906a3a",
+      "bytes": 48
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/im/models.py",
+      "relative_path": "kirara_ai/web/api/im/models.py",
+      "sha256": "17485491b101054d7f9a379e5097ddb556d53a1e835a850f91a257e1beb46810",
+      "bytes": 895
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/im/routes.py",
+      "relative_path": "kirara_ai/web/api/im/routes.py",
+      "sha256": "124c6dab1046b76de92509aa10b4342ed49fb7bd1e1e8a58aec5cd6350dd4ca7",
+      "bytes": 9865
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/llm/__init__.py",
+      "relative_path": "kirara_ai/web/api/llm/__init__.py",
+      "sha256": "78b9f2c05277f3bb48e4651972e738d740792e5117f230d0fd76d0084e8b4a1d",
+      "bytes": 50
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/llm/models.py",
+      "relative_path": "kirara_ai/web/api/llm/models.py",
+      "sha256": "9c7ddbfee9565929e6e6ac906173bfb7e78f504f8c72b62844404d080bc6cb32",
+      "bytes": 1189
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/llm/routes.py",
+      "relative_path": "kirara_ai/web/api/llm/routes.py",
+      "sha256": "ac9387cae82c2e864ef1305720c88e0ac250879761c727564131d6e7dd005b22",
+      "bytes": 10552
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/mcp/__init__.py",
+      "relative_path": "kirara_ai/web/api/mcp/__init__.py",
+      "sha256": "37889ecc72d91eab6ecd92b645c5d9dc11707e7036f7273f57d59efba576518d",
+      "bytes": 49
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/mcp/models.py",
+      "relative_path": "kirara_ai/web/api/mcp/models.py",
+      "sha256": "1cf344075986b1e93e432df3b55d734326fc507178deba41f1e49fbe4c7d9a9e",
+      "bytes": 1435
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/mcp/routes.py",
+      "relative_path": "kirara_ai/web/api/mcp/routes.py",
+      "sha256": "ddc990e9d62b5b9a219ba7717a5fa185bde5d1ec4e205ecf8f700cceaccc8f47",
+      "bytes": 17951
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/media/__init__.py",
+      "relative_path": "kirara_ai/web/api/media/__init__.py",
+      "sha256": "d50e06d99d3622b0fea7a377f94d405b276dfe0deec71d3c49fd0eb486a4d407",
+      "bytes": 53
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/media/models.py",
+      "relative_path": "kirara_ai/web/api/media/models.py",
+      "sha256": "e84b4682e0e648ec504e57c52e5a392d511743c144ca9256c9398bbf756bd18c",
+      "bytes": 1276
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/media/routes.py",
+      "relative_path": "kirara_ai/web/api/media/routes.py",
+      "sha256": "2dce97fab853862d28a1f16f56e3e724ad5b19d08f97a17b22d3eb63a9ab42ec",
+      "bytes": 10845
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/plugin/__init__.py",
+      "relative_path": "kirara_ai/web/api/plugin/__init__.py",
+      "sha256": "fe6337ba9eefaee7dd16da8cb37e6d2477b543ca0647092ace02b7b3cba96559",
+      "bytes": 56
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/plugin/models.py",
+      "relative_path": "kirara_ai/web/api/plugin/models.py",
+      "sha256": "0c3771d69c0a5ce946c5be6846db77947cbc5a7a59fcd57b57e62536e11a71a0",
+      "bytes": 480
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/plugin/routes.py",
+      "relative_path": "kirara_ai/web/api/plugin/routes.py",
+      "sha256": "e3101f1dc3e6e82206b257dde627be5844dea7a772f5110de74294e3e17bdb23",
+      "bytes": 9737
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/system/__init__.py",
+      "relative_path": "kirara_ai/web/api/system/__init__.py",
+      "sha256": "47da7461f2d728d69a9f05748f9d4404ba920dd2033d2ab0fd5bfc88efcecf4b",
+      "bytes": 56
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/system/models.py",
+      "relative_path": "kirara_ai/web/api/system/models.py",
+      "sha256": "98ee5bc2084d316459392d8047fdc1de57505658dd94ec8a145ca743100ecfc7",
+      "bytes": 838
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/system/routes.py",
+      "relative_path": "kirara_ai/web/api/system/routes.py",
+      "sha256": "92945eb1f8a8da0da20ea8bc2c7b5e9468ba37a007ae8c98f0845b2ca3334b9b",
+      "bytes": 11276
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/system/utils.py",
+      "relative_path": "kirara_ai/web/api/system/utils.py",
+      "sha256": "2d04f7a046d1ed17bf13419b6bc0a100a6f1e8d27e0d53005494eb99386f049a",
+      "bytes": 4620
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/tracing/__init__.py",
+      "relative_path": "kirara_ai/web/api/tracing/__init__.py",
+      "sha256": "90f8fdb5a530075f39c0bf4de73a4b10c6605bb65fe1706f963b5ee93281c0e4",
+      "bytes": 57
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/tracing/routes.py",
+      "relative_path": "kirara_ai/web/api/tracing/routes.py",
+      "sha256": "17f0c986ab2bb13791adfa7e51b8b9d4ffca5dfaae91dfa576bb3868884b7179",
+      "bytes": 5550
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/workflow/__init__.py",
+      "relative_path": "kirara_ai/web/api/workflow/__init__.py",
+      "sha256": "050208a8357302f24cc8819251cdac8f7001cbf8ecde4c91ecbf3c92bc57117d",
+      "bytes": 60
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/workflow/models.py",
+      "relative_path": "kirara_ai/web/api/workflow/models.py",
+      "sha256": "7a897a0c9ae287755eadc27c97257daff4c8fe7625358ac0b56e7d973fde714a",
+      "bytes": 1180
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/api/workflow/routes.py",
+      "relative_path": "kirara_ai/web/api/workflow/routes.py",
+      "sha256": "43eeee459ac07660f4d406cb1c92f3611bac3bf7ff9bb85af8726b9f40ef2793",
+      "bytes": 8127
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/app.py",
+      "relative_path": "kirara_ai/web/app.py",
+      "sha256": "da430b7c91e4bfd4523f418e386ac27eab33a6784b2f013a6f13b63436b9c159",
+      "bytes": 13031
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/auth/middleware.py",
+      "relative_path": "kirara_ai/web/auth/middleware.py",
+      "sha256": "13b5eed54e686075aa662aabc3439e6731da03d5c883f3241dcc3bfca7ba53b7",
+      "bytes": 1011
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/auth/models.py",
+      "relative_path": "kirara_ai/web/auth/models.py",
+      "sha256": "7db0fc9eacf53442d897d314b367019ab4fa0356be8670c5f7a4db1deddaf193",
+      "bytes": 255
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/auth/routes.py",
+      "relative_path": "kirara_ai/web/auth/routes.py",
+      "sha256": "e8cc5e847a8c009cd783d39f67e429bdd30c2e88139c5c78fb80c7ef2d71641b",
+      "bytes": 2112
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/auth/services.py",
+      "relative_path": "kirara_ai/web/auth/services.py",
+      "sha256": "83cdb3f13a94ce898f67abfec875b8c2c9a3b5534d4065b1f7e225783151cfcc",
+      "bytes": 2407
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/auth/utils.py",
+      "relative_path": "kirara_ai/web/auth/utils.py",
+      "sha256": "aa1a0d18fb0140cc1fcec1be985ecdf232f41f3f818833ad412948d98f0e54ad",
+      "bytes": 869
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/web/utils.py",
+      "relative_path": "kirara_ai/web/utils.py",
+      "sha256": "bf9b6cb6374e0804909d8a16fe91e6fe43ada8e8684607491585d8aa5dc86560",
+      "bytes": 5129
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/__init__.py",
+      "relative_path": "kirara_ai/workflow/core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/__init__.py",
+      "relative_path": "kirara_ai/workflow/core/block/__init__.py",
+      "sha256": "29d95a841325bdbf06bb3caf774405e745161c20954a59ccff89b45cee64ee51",
+      "bytes": 435
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/base.py",
+      "relative_path": "kirara_ai/workflow/core/block/base.py",
+      "sha256": "8a27be8411e9b03fa486bd43598e9bee5813acf734a5bd865e6ef1c30c40d454",
+      "bytes": 3144
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/input_output.py",
+      "relative_path": "kirara_ai/workflow/core/block/input_output.py",
+      "sha256": "4c1dc7e9f07a3169158b00cdbe5e7aca501aafc54c70fe2a5f7b5a597668c9d2",
+      "bytes": 909
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/param.py",
+      "relative_path": "kirara_ai/workflow/core/block/param.py",
+      "sha256": "4c23232c5f2ad248b877981f299d5d0cc670964209a9059f413f595b9296893b",
+      "bytes": 719
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+      "relative_path": "kirara_ai/workflow/core/block/registry.py",
+      "sha256": "400b31811d7e082990faf06c3d32628a06e1e51c46a1b8fbd6f17a0674c07c67",
+      "bytes": 7416
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/schema.py",
+      "relative_path": "kirara_ai/workflow/core/block/schema.py",
+      "sha256": "48a159d4328fb27c539d56bc8a80e81b257052466ff07bb1643ff98753232f66",
+      "bytes": 814
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/type_system.py",
+      "relative_path": "kirara_ai/workflow/core/block/type_system.py",
+      "sha256": "7eab70bef5a7015d9cd65a0c1921abc0eeee0f42ba87817c8d89444b7c1cfe6b",
+      "bytes": 4882
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/__init__.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/__init__.py",
+      "sha256": "e2c714a752e5e66b0c92e4d7a51b64949e3bf030c0c68033494d56de7573af67",
+      "bytes": 610
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/dispatcher.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/dispatcher.py",
+      "sha256": "3e7f68e6dca0dc9aa43aa4324967951a54dee8bdc2a3c4c8511376e864a3a41e",
+      "bytes": 3102
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/exceptions.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/exceptions.py",
+      "sha256": "52016d2f473d57f25ab0b342c3048dd3dd625b35ddf6f09a24322c73141ea70a",
+      "bytes": 189
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/models/dispatch_rules.py",
+      "sha256": "2fa5d92788c9cf0de09a9518ab410a0271e09f3994abd0d3c266bd9efbaf7294",
+      "bytes": 3347
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/registry.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/registry.py",
+      "sha256": "c87f1a63f009c610c848eaa7e25b71596807beb34051706be1abefc8aa537231",
+      "bytes": 7152
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/base.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/rules/base.py",
+      "sha256": "841df1ff969513116bf13391c185db559ac42baf6719646e4c84149ba01922bc",
+      "bytes": 2540
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/rules/message_rules.py",
+      "sha256": "c47f97949360d438a4bbcd7d224709451b871619e78daf967889f02535f530ba",
+      "bytes": 4186
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/sender_rules.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/rules/sender_rules.py",
+      "sha256": "39d2987985840729b3a7dd745dcf4336ff9be921165b34b5e2fbce97b3176b48",
+      "bytes": 4642
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/dispatch/rules/system_rules.py",
+      "relative_path": "kirara_ai/workflow/core/dispatch/rules/system_rules.py",
+      "sha256": "b33b5b530b165c4782a8539dcd63539760876f5c1add0e3880ba169b1aec60a2",
+      "bytes": 3381
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/__init__.py",
+      "relative_path": "kirara_ai/workflow/core/execution/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/exceptions.py",
+      "relative_path": "kirara_ai/workflow/core/execution/exceptions.py",
+      "sha256": "e6b10f72fd1b9b26fd31e627c99f5d6fd81a09f34c22573d0a856acd12c5fcde",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/executor.py",
+      "relative_path": "kirara_ai/workflow/core/execution/executor.py",
+      "sha256": "52053038a02758903cbb4b7a7b98c7fe368e6cfefc5d3a80e8e429f3382abb4d",
+      "bytes": 13356
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/__init__.py",
+      "relative_path": "kirara_ai/workflow/core/workflow/__init__.py",
+      "sha256": "94ab09a0f6020475ac71114aa0499323dbc8469dde2f38db5cc1c72a0cc947cb",
+      "bytes": 214
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/base.py",
+      "relative_path": "kirara_ai/workflow/core/workflow/base.py",
+      "sha256": "5b3e126f3a12fc34a453e876cde43093f312b8bdc0b9f0eda68d9054822e31c4",
+      "bytes": 1031
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/builder.py",
+      "relative_path": "kirara_ai/workflow/core/workflow/builder.py",
+      "sha256": "06ffc44864da43b2e7c530ffc8969c92b45ed35128900e457563a97906a08032",
+      "bytes": 23444
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/workflow/registry.py",
+      "relative_path": "kirara_ai/workflow/core/workflow/registry.py",
+      "sha256": "2600ca50d60743fc4889d1a12022fca7bc631b394e60a9eb1c2d0e0434c82cb6",
+      "bytes": 4773
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/__init__.py",
+      "relative_path": "kirara_ai/workflow/implementations/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/__init__.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/__init__.py",
+      "sha256": "2a203d15c5659dda7b5455c77a4698afcf9870c77dee1a93a6b13de9c4aed37a",
+      "bytes": 88
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/game/dice.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/game/dice.py",
+      "sha256": "9583ca88c20410e03774060e2370b72aec7e7d0db9929e0d979c34e1bec12bb7",
+      "bytes": 1891
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/game/gacha.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/game/gacha.py",
+      "sha256": "d94fef18b9a3f8e39cc26f9fb99e6b7ed021be5a8b608b79b13743ea5fe63986",
+      "bytes": 2156
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/im/basic.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/im/basic.py",
+      "sha256": "3b195aa308d20cb3e3d3414ddaed3090a96658a63234fecfc39f4aae76a95c5c",
+      "bytes": 727
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/im/messages.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/im/messages.py",
+      "sha256": "93f67e59f4bf8db7d8214eeb0478edb053caa1e5fa8785b0f3b58a563a4a18a0",
+      "bytes": 4134
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/im/states.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/im/states.py",
+      "sha256": "c6cbdff779b03d85c3dc0cdc6b3f2373dbcb6a2b524734d47f3f6f9fe51113f3",
+      "bytes": 1155
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/im/user_profile.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/im/user_profile.py",
+      "sha256": "581be7ef8fde891a5afeeddf39d8c5b0c4a2cb758d8452841f90dd7bc920190a",
+      "bytes": 1732
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/llm/basic.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/llm/basic.py",
+      "sha256": "58eaa2f73df8f7e41c1b8695914d0323693cedae13f4a08220aef374d79128e7",
+      "bytes": 1002
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/llm/chat.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/llm/chat.py",
+      "sha256": "2dd3a66e59301246ea48879d241d5020a4f783530765688e0021310916d8a83c",
+      "bytes": 11616
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/llm/image.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/llm/image.py",
+      "sha256": "9223733445cf48b60836d51dc3056e55291cf0b4669bbf5441ef4df079e730f5",
+      "bytes": 2496
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/mcp/__init__.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/mcp/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/mcp/tool.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/mcp/tool.py",
+      "sha256": "d3b4a8f36b83289578e2fbcc8b1d7254fbcaf1c1f8810f4acc69d47ce4ae069b",
+      "bytes": 4089
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/memory/chat_memory.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/memory/chat_memory.py",
+      "sha256": "b5aba2b8f3ce91d43204952a96ab7c9091970567056799cabd4172f8d963c52d",
+      "bytes": 6598
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/memory/clear_memory.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/memory/clear_memory.py",
+      "sha256": "7a800f56d86a55153f648a4924745eececaa1914267e191ebd31d69b07f95692",
+      "bytes": 1529
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system/basic.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/system/basic.py",
+      "sha256": "7450357ac6cebb20926a0e55f6a5dd5dd5e335e64d77c5a4281937453f2d450e",
+      "bytes": 5372
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system/help.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/system/help.py",
+      "sha256": "196c1f16e67b2d76368da8a754c9edb94a014f144877166022a096c84a64772b",
+      "bytes": 3487
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/system_blocks.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/system_blocks.py",
+      "sha256": "f0a800a83976ba7357faf51f2c2295f5a7b79ca391a66ad928c66ec7fd701dc4",
+      "bytes": 4155
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/blocks/variables/variable_blocks.py",
+      "relative_path": "kirara_ai/workflow/implementations/blocks/variables/variable_blocks.py",
+      "sha256": "35f8f176aa51ed53b966fceb58caafcef99ff0897bccc13247f3b562b2663011",
+      "bytes": 1923
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/factories/__init__.py",
+      "relative_path": "kirara_ai/workflow/implementations/factories/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/factories/default_factory.py",
+      "relative_path": "kirara_ai/workflow/implementations/factories/default_factory.py",
+      "sha256": "3a69033798ff391ed28e39aa208b44ce3f2449ea5e5b0f6f58ddebc5d1158177",
+      "bytes": 4471
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/factories/game_factory.py",
+      "relative_path": "kirara_ai/workflow/implementations/factories/game_factory.py",
+      "sha256": "6e44b86ae155a0299a9de3f1f65ca86632a182d5ec8155fa9645d580a59baba1",
+      "bytes": 944
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/factories/system_factory.py",
+      "relative_path": "kirara_ai/workflow/implementations/factories/system_factory.py",
+      "sha256": "e2780cb48f7df8abd252ba2229cb22515070f957860cd03d4baac47a3b29395a",
+      "bytes": 1045
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/workflows/__init__.py",
+      "relative_path": "kirara_ai/workflow/implementations/workflows/__init__.py",
+      "sha256": "068f04cad38e9b76a1733c4eaa6a4d5a7af9b9a0234d830572c289e537404d02",
+      "bytes": 98
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/implementations/workflows/system_workflows.py",
+      "relative_path": "kirara_ai/workflow/implementations/workflows/system_workflows.py",
+      "sha256": "6eb1770801a6e774541a2f2d6352d61294baa2d52e117b9fabfbb2df02c3732d",
+      "bytes": 1133
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/utils/__init__.py",
+      "relative_path": "kirara_ai/workflow/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/__init__.py",
+      "relative_path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/__init__.py",
+      "relative_path": "tests/llm_adapters/__init__.py",
+      "sha256": "9b3fedc3cb86170dd5e070fc27cb87cb6b68c02187e643550d766f6d5b56a4c4",
+      "bytes": 120
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/conftest.py",
+      "relative_path": "tests/llm_adapters/conftest.py",
+      "sha256": "07f491920614992ae05e8e465fa18fda843e898edba6b0c7e47fd650e92a2102",
+      "bytes": 2779
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/__init__.py",
+      "relative_path": "tests/llm_adapters/mock_app/__init__.py",
+      "sha256": "9d18d02dc433963d07fd6f1caf08be97311dfdc26e2788829204e6f1154eebb2",
+      "bytes": 650
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/app.py",
+      "relative_path": "tests/llm_adapters/mock_app/app.py",
+      "sha256": "aa0bdd402d7e2650408ef3d7452cf018c0aff6f228855a0cb72f06b300567442",
+      "bytes": 1080
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/gemini.py",
+      "relative_path": "tests/llm_adapters/mock_app/gemini.py",
+      "sha256": "6522c6f8dbfabf3b52a878242f39b117a9c2dabf28be62de38608c6a62e37e3d",
+      "bytes": 1552
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/models/gemini.py",
+      "relative_path": "tests/llm_adapters/mock_app/models/gemini.py",
+      "sha256": "7c33be7ad62154abe6ae20f513c1b3c5d69614c9667cb0b87391262c712c7fdd",
+      "bytes": 7931
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/models/openai.py",
+      "relative_path": "tests/llm_adapters/mock_app/models/openai.py",
+      "sha256": "2435b11bdb5b35e7c602db63b733d52a6cc66a44000d6bd6156ea1b27c91e5d5",
+      "bytes": 4663
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/ollama.py",
+      "relative_path": "tests/llm_adapters/mock_app/ollama.py",
+      "sha256": "ba71980ed848c6b7474a8ceeaa9962746b9b68af5b3795f3e3783d8e72ae4ece",
+      "bytes": 618
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/openai.py",
+      "relative_path": "tests/llm_adapters/mock_app/openai.py",
+      "sha256": "6ed93cdce71d9594250a815a780243d0dcf08e06a17b88afaf461867daab503e",
+      "bytes": 1707
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/mock_app/voyage.py",
+      "relative_path": "tests/llm_adapters/mock_app/voyage.py",
+      "sha256": "65e5fd58d5f09289ff1c735585ad2a324932c81ab2f695b25334f7817fb2eeeb",
+      "bytes": 2436
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/test_gemini_adapter.py",
+      "relative_path": "tests/llm_adapters/test_gemini_adapter.py",
+      "sha256": "70a04b5e3e5a6b286eb4d93ca390ed433692d1e340bd241df44d17f25d246c78",
+      "bytes": 2201
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/test_ollama_adapter.py",
+      "relative_path": "tests/llm_adapters/test_ollama_adapter.py",
+      "sha256": "e90000fea43630f3255f669819be0e0130b0e379756eded97c4d310eb283ec52",
+      "bytes": 1497
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/test_openai_adapter.py",
+      "relative_path": "tests/llm_adapters/test_openai_adapter.py",
+      "sha256": "ed872554035c3a48823f64044cf2ecf8118a6cdc80c8d0f968ced51fe6ae0cdf",
+      "bytes": 3376
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/llm_adapters/test_voyage_adapter.py",
+      "relative_path": "tests/llm_adapters/test_voyage_adapter.py",
+      "sha256": "a05fedb4e7c5212a73f5e6e9d949607af4eae1f0952361857b9d46b5bb4de559",
+      "bytes": 3780
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/memory/__init__.py",
+      "relative_path": "tests/memory/__init__.py",
+      "sha256": "7472ebde0d8f59dbabf5becb9e9ca39e2deb4bee3b04c976738d8ef1c5baff56",
+      "bytes": 28
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/memory/test_composer_decomposer.py",
+      "relative_path": "tests/memory/test_composer_decomposer.py",
+      "sha256": "18ee9b22a49810e695467ece8b4400a28a34e67545a5f1b23788e2ee68fc078f",
+      "bytes": 5881
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/memory/test_composer_strategy.py",
+      "relative_path": "tests/memory/test_composer_strategy.py",
+      "sha256": "dc6865e68286afe526b86e6b6f61437271db8061d223cd24574043c4a637cd6d",
+      "bytes": 9375
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/memory/test_decomposer_strategy.py",
+      "relative_path": "tests/memory/test_decomposer_strategy.py",
+      "sha256": "bba207ca2f180a2aa3aa57b652579de4c5f64be238cbf2740089a62c671ef974",
+      "bytes": 12326
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/memory/test_memory_manager.py",
+      "relative_path": "tests/memory/test_memory_manager.py",
+      "sha256": "e5e813d96de8f3d48ee75c68ea5f390d96c454723fbf0deacf2787d1da934bf7",
+      "bytes": 6385
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/memory/test_persistence.py",
+      "relative_path": "tests/memory/test_persistence.py",
+      "sha256": "e2a80da90e7e98f57a8d0912be36dcdc4fd46bcccbd0799069dfca586d668bc5",
+      "bytes": 4832
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/memory/test_scope.py",
+      "relative_path": "tests/memory/test_scope.py",
+      "sha256": "6723a3b985b3acbd51a26ef2d1470a35d9b7403b4100b061422fb5162328d4f1",
+      "bytes": 4482
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/__init__.py",
+      "relative_path": "tests/system_blocks/__init__.py",
+      "sha256": "c43bdac88086267894873789e1c83f57ff0352a42f09f6a06a9b7e5a6774fabe",
+      "bytes": 21
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/game/__init__.py",
+      "relative_path": "tests/system_blocks/game/__init__.py",
+      "sha256": "8b5ffe43d7ef412efa95755bcd6375679eeda3a2fc9c0481ab9e3ea99089cbe9",
+      "bytes": 27
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/game/test_dice.py",
+      "relative_path": "tests/system_blocks/game/test_dice.py",
+      "sha256": "d5d169329e14e22557d8d3487ee541d4f015d62803ea3dd3553b4cc4c2e5930a",
+      "bytes": 3521
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/game/test_gacha.py",
+      "relative_path": "tests/system_blocks/game/test_gacha.py",
+      "sha256": "c716e742bb3bdac2c3e8f880d02bcd724b1295ce0c293f9192aa2cac63e2c6cf",
+      "bytes": 1972
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/im/__init__.py",
+      "relative_path": "tests/system_blocks/im/__init__.py",
+      "sha256": "d3932cf094a4e2e80de65c1fa47f92646f18609c37a218098b3e0c95c2fbd033",
+      "bytes": 24
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/im/test_messages.py",
+      "relative_path": "tests/system_blocks/im/test_messages.py",
+      "sha256": "29a5a4b97e580c0f5f7302d15e644cf208e6d3a4f3db46ed8ca8650db2abd3a2",
+      "bytes": 5576
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/im/test_states.py",
+      "relative_path": "tests/system_blocks/im/test_states.py",
+      "sha256": "7e2e06112092da55871a1b458815f58daef1b1aa642d0e37dcb90b58ec55ddbe",
+      "bytes": 1139
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/llm/__init__.py",
+      "relative_path": "tests/system_blocks/llm/__init__.py",
+      "sha256": "3a62e6e41c92e58d02e201f1866104f2c508bf1162098e1980506761b1e4ccc2",
+      "bytes": 25
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/llm/test_basic.py",
+      "relative_path": "tests/system_blocks/llm/test_basic.py",
+      "sha256": "d8125a49dd7980f7465d52cd9553deefdc828125d552c8e2c5541c1714f5642a",
+      "bytes": 1405
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/llm/test_chat.py",
+      "relative_path": "tests/system_blocks/llm/test_chat.py",
+      "sha256": "d9af5772fc835b420aa135899d065074305817dc2cf0cb97e44735d519b91962",
+      "bytes": 10791
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/llm/test_image.py",
+      "relative_path": "tests/system_blocks/llm/test_image.py",
+      "sha256": "885f559b1c2bf97f041322a48bb6473331199b4a768293881ad721d6421ed8b4",
+      "bytes": 2047
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/memory/__init__.py",
+      "relative_path": "tests/system_blocks/memory/__init__.py",
+      "sha256": "12b443eaeeb4e2da9c99aa903714b41c00ade9b23773d62389b637b8d340389a",
+      "bytes": 27
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/memory/test_chat_memory.py",
+      "relative_path": "tests/system_blocks/memory/test_chat_memory.py",
+      "sha256": "0a4e4d9f6c31c0fa23332a17fb755fe4f42f45377672efe1a17695372f5b6e74",
+      "bytes": 4299
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/memory/test_clear_memory.py",
+      "relative_path": "tests/system_blocks/memory/test_clear_memory.py",
+      "sha256": "33fd0774d6c11db0281e83bfaf2cb9dcb126cf1b55f84cd97dd1037430bd4053",
+      "bytes": 2578
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/system/__init__.py",
+      "relative_path": "tests/system_blocks/system/__init__.py",
+      "sha256": "7de43c24151ba8571697e6ce45255dcf14cd723e49100954068be2a6691753e7",
+      "bytes": 27
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/system/test_basic.py",
+      "relative_path": "tests/system_blocks/system/test_basic.py",
+      "sha256": "57833c46d3c073acb0083ffa507864898017c890ecc76dea467b5ea46dfd0afa",
+      "bytes": 2886
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/system_blocks/system/test_help.py",
+      "relative_path": "tests/system_blocks/system/test_help.py",
+      "sha256": "c0e064a36f04911cefec235d31183a068ffc4e34c1fe9b3a4b813a7c105e2c75",
+      "bytes": 6256
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_config_loader.py",
+      "relative_path": "tests/test_config_loader.py",
+      "sha256": "c5abe7b511d65cc0b86d88b77d509763a1addd664652d688c4f6d465483d4084",
+      "bytes": 3558
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_game_blocks.py",
+      "relative_path": "tests/test_game_blocks.py",
+      "sha256": "a70974257680a87f65d86ebe300f3bda4dbaaa6750467370cdba0478b098c498",
+      "bytes": 3226
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_mcp_server.py",
+      "relative_path": "tests/test_mcp_server.py",
+      "sha256": "dc981dae0463df8b7d48daa08189cbe707e4e3e096409899c211b569b6401d65",
+      "bytes": 9141
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_media.py",
+      "relative_path": "tests/test_media.py",
+      "sha256": "9627c8d0ad6b3145e89892b69450580e286c87b963147aaf7f7ba8d9259b22fd",
+      "bytes": 15617
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_media_element.py",
+      "relative_path": "tests/test_media_element.py",
+      "sha256": "a744589350783f1b8504d16d463d76913d8f69722154f1d31f3601295b7b4143",
+      "bytes": 3076
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_system_blocks.py",
+      "relative_path": "tests/test_system_blocks.py",
+      "sha256": "0898142acfef96b411c64d7e02f625405a35d2216dfc2cf909f6aae8946f016c",
+      "bytes": 6202
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_workflow_builder.py",
+      "relative_path": "tests/test_workflow_builder.py",
+      "sha256": "8b544cf4e8ac256cd982ca3c8ee0f2ebf06c46ba4fa8d7beacf9ad1401bf986a",
+      "bytes": 7409
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/test_workflow_factories.py",
+      "relative_path": "tests/test_workflow_factories.py",
+      "sha256": "78817a1030df4d1c20a487f4d996ce0e5e5fad01d7ce7d3a73a8243bfc0c2910",
+      "bytes": 1535
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/tracing/__init__.py",
+      "relative_path": "tests/tracing/__init__.py",
+      "sha256": "665155b12a614b049ed72dfa815faedb3dee8a7b47eb92ea2c1afaf4b7308502",
+      "bytes": 30
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/tracing/test_base.py",
+      "relative_path": "tests/tracing/test_base.py",
+      "sha256": "4d714f8c8379632d395d14c6ba5a5fe56be039c4146270b4f982cc6c8528a9f0",
+      "bytes": 3033
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/tracing/test_core.py",
+      "relative_path": "tests/tracing/test_core.py",
+      "sha256": "8ee768599d8546249b241366cfe2baa362de9b1f8fee9d032df4485cabaf6971",
+      "bytes": 4886
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/tracing/test_decorator.py",
+      "relative_path": "tests/tracing/test_decorator.py",
+      "sha256": "f1c99f42c12a36dc33ab95a5d9dad66f7a06ee9d3850a0163829d54b1a71134b",
+      "bytes": 2683
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/tracing/test_llm_tracer.py",
+      "relative_path": "tests/tracing/test_llm_tracer.py",
+      "sha256": "c88e7e25ba13386b3829ca825e40163c76f424eb741c38dde9c85a9ec5d2b827",
+      "bytes": 5293
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/tracing/test_manager.py",
+      "relative_path": "tests/tracing/test_manager.py",
+      "sha256": "d8b06b4580072706c4eb755f5d7fd534042e0fcf97e43cad075f76b79547613a",
+      "bytes": 3393
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/tracing/test_models.py",
+      "relative_path": "tests/tracing/test_models.py",
+      "sha256": "057b049ebef66f3bb1a13fa9f3c9eace434aad3153d0287caa13321955934a8d",
+      "bytes": 4228
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/utils/auth_test_utils.py",
+      "relative_path": "tests/utils/auth_test_utils.py",
+      "sha256": "23059144565dc65635cd33a254fb5e75c1fde431a0ace43daf46aa9cfebe6574",
+      "bytes": 867
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/utils/test_block_registry.py",
+      "relative_path": "tests/utils/test_block_registry.py",
+      "sha256": "cdb842279815c23b8009fe1f65fd2ec4e1368785294ab1c7b412ab51fe4f8394",
+      "bytes": 638
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/web/api/im/test_im.py",
+      "relative_path": "tests/web/api/im/test_im.py",
+      "sha256": "a936f691a5033ee26120b7fa5267d1d5366f91cc4554d45de715425f8241604e",
+      "bytes": 11143
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/web/api/llm/test_llm.py",
+      "relative_path": "tests/web/api/llm/test_llm.py",
+      "sha256": "375bd193998ee64975464158d466ade5c97d5f836c1b6d9f98ed8d40adb769fa",
+      "bytes": 8942
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/web/api/media/test_media.py",
+      "relative_path": "tests/web/api/media/test_media.py",
+      "sha256": "e6d080abbac075958d018a41a118061c94b92d352b766b893bfb7b5cbd99623a",
+      "bytes": 10293
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/web/api/plugin/test_plugin.py",
+      "relative_path": "tests/web/api/plugin/test_plugin.py",
+      "sha256": "40fdf691e12eff7330a02ac90ab931f5c0d4fc9b0e8e19c1c4bdabac8bb2fbd9",
+      "bytes": 10588
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/web/api/system/test_system.py",
+      "relative_path": "tests/web/api/system/test_system.py",
+      "sha256": "af81b4af0a5c28b0a4ffcfa87f558fbb5b53164e7ab9c395a98656a992d3069d",
+      "bytes": 5202
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/web/api/workflow/test_workflow.py",
+      "relative_path": "tests/web/api/workflow/test_workflow.py",
+      "sha256": "c53a1d2b508401e22d1f4764e72594c36349d0d36b512e906ef328e4acd58c3a",
+      "bytes": 7244
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/web/auth/test_auth.py",
+      "relative_path": "tests/web/auth/test_auth.py",
+      "sha256": "01d14e771de785a2793a8b0d55efafb0cf7837a594737f44f763c3fc21170330",
+      "bytes": 4423
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/workflow_executor/test_block.py",
+      "relative_path": "tests/workflow_executor/test_block.py",
+      "sha256": "b2032010b1ebf674aa3a4cfeb30742771da53ca8213eb1b96595fdcc40bddfb3",
+      "bytes": 887
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/workflow_executor/test_executor.py",
+      "relative_path": "tests/workflow_executor/test_executor.py",
+      "sha256": "197f0c0db0ca500e9b37a4187dda0777add6e95b38280a538cf5c69669bd9aa9",
+      "bytes": 6353
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/workflow_executor/test_input_output.py",
+      "relative_path": "tests/workflow_executor/test_input_output.py",
+      "sha256": "ebce3f08f876b43d9e2d967ad83dfc507596e3b4332d65e51408c02a90eeb09e",
+      "bytes": 907
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/tests/workflow_executor/test_workflow_basic.py",
+      "relative_path": "tests/workflow_executor/test_workflow_basic.py",
+      "sha256": "e2929828da09d78a96a69fcbb4a8a9ab4f1dce589fd0bb580c2d90698b60375a",
+      "bytes": 1408
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/pyproject.toml",
+      "relative_path": "pyproject.toml",
+      "sha256": "7404a667c122ed7911e26a4e50f8a78679219469209993587c5efb9f083dd8b6",
+      "bytes": 1815
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/LICENSE",
+      "relative_path": "LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "bytes": 34523
+    }
+  ],
+  "current_airi_executed_sources": {
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/engine.ts": "b84faf1eaca1a952569f0de552c9e321ddb15bf433a622c3118fb9d612ff2854",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/strategy.ts": "28550a19f0eeb7199d568b15d1872fd75a5aa27556b08fea1c9cc06946bb9d4f",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/app-aliases.ts": "4b85e9eadf5d3e5cafd36f1ffa06533058caf798c7e8e949bb79d5cc4d6bc8e4",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/transparency.ts": "5b28e0e026c2a4427a1f5f8ed4777cb3f668a8acfc3cf72373abf91781b682f4",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/utils/error-message.ts": "7aca92ceeb21c63c47518104c1930cc2eb836a6b4045a27bc540cd65a228d844",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/surface-resolver.ts": "063e8137268fa20b56d227914adea5aedbf0185bb7caf45ef6846efb7ce4ace7",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/terminal/interactive-patterns.ts": "57c46f8134d4783a6a04903de391d74a4ddca47fcf7ccdf5a2ef04be8aa5124a",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/types.ts": "f5f292082e8e77afe4d16eca7fecd7080c29ee9806d579fb0cf54e38ee895505",
+    "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/state.ts": "066f70ea4305e61e5cb5ac4861094ab834f2d3f46fbbb5f9f8f0f5737b59a1fe",
+    "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/generation.ts": "180da46fced45a22ee4322be4e7cf701ce95e031d4f8ef115d56a5e322f4b2d2",
+    "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/cloud/openai/index.ts": "a1a1a0c3bb0256042750495c36f9b9ef713e03299898d92c39303895ea1f0803",
+    "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/adapters/airi-adapter.ts": "f3985458e440008e85dd6e140a2193739806e092b40952297f349aa7d4570271"
+  },
+  "executed_source_hashes_unchanged_after_checks": true,
+  "changed": []
+}

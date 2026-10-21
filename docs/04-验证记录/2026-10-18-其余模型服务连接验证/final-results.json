@@ -1,0 +1,85 @@
+{
+  "appleAsr": {
+    "durationSeconds": 2.56,
+    "eventCount": 12,
+    "expectedPhraseMatched": false,
+    "finishedAt": 1792329502572,
+    "input": "synthetic PCM16",
+    "locale": "zh-CN",
+    "mode": "stream",
+    "provider": "apple-speech-transcription",
+    "sampleRate": 16000,
+    "startedAt": 1792329502100,
+    "status": "complete",
+    "text": "这是艾米与英灵接测试"
+  },
+  "capturePolicy": {
+    "active": true,
+    "appEpoch": 1,
+    "microphone": {
+      "enabled": false,
+      "epoch": 1
+    },
+    "reason": "stage-show",
+    "revision": 2,
+    "screen": {
+      "enabled": false,
+      "epoch": 1
+    }
+  },
+  "mimoAsr": {
+    "failure": {
+      "code": "GENERATION_REQUEST_FAILED",
+      "message": "The model request failed. Check the connection and provider settings. [GENERATION_REQUEST_FAILED]"
+    },
+    "finishedAt": 1792329438070,
+    "httpStatuses": [
+      400
+    ],
+    "model": "mimo-v2-omni",
+    "provider": "mimo-audio-transcription",
+    "requestCount": 1,
+    "serviceCode": "400",
+    "serviceMessage": "Unsupported model mimo-v2-omni",
+    "startedAt": 1792329437945,
+    "status": "failed"
+  },
+  "selections": {
+    "chat": {
+      "model": "deepseek-flash",
+      "provider": "deepseek"
+    },
+    "speech": {
+      "model": "mimo-v2.5-tts",
+      "provider": "mimo-audio-speech",
+      "voice": "冰糖"
+    },
+    "transcription": {
+      "model": "apple-speech",
+      "provider": "apple-speech-transcription"
+    },
+    "vision": {
+      "model": "deepseek-flash",
+      "provider": "vision-deepseek"
+    }
+  },
+  "tts": {
+    "byteCount": 122924,
+    "channels": 1,
+    "durationSeconds": 2.56,
+    "finishedAt": 1792329354885,
+    "httpStatuses": [
+      200
+    ],
+    "model": "mimo-v2.5-tts",
+    "nonSilentFraction": 0.86494140625,
+    "provider": "mimo-audio-speech",
+    "requestCount": 1,
+    "rms": 0.10811939766987148,
+    "sampleRate": 16000,
+    "startedAt": 1792329353705,
+    "status": "complete",
+    "text": "这是Aimy语音连接测试。",
+    "voice": "冰糖"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-14",
+  "scope": "文档、契约、来源字节与原型结果；非产品能力/模型设备验收",
+  "contracts": {
+    "requirements": 14,
+    "tasks": 15,
+    "local_operations": 17,
+    "candidate_mappings": 57,
+    "prompts": 5,
+    "dag": "acyclic",
+    "status": "pass"
+  },
+  "navigation": {
+    "files": 25,
+    "local_links": 154,
+    "broken": []
+  },
+  "protection": {
+    "product_files": 5336,
+    "changed": [],
+    "git_index_unchanged": true,
+    "original_recovery_and_reports": 28,
+    "original_changed": []
+  },
+  "evidence_copy": {
+    "files": 38,
+    "invalid": []
+  },
+  "prototype": {
+    "observations": 25,
+    "passed": 25,
+    "scope": "原型内存示例，不是产品权限/持久化/模型能力"
+  },
+  "credential_prefix_scan": {
+    "hits": [],
+    "limitation": "仅常见前缀检查，不是完整安全认证"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-14",
+  "sha": "992309c0aa19845960228f880013d4685fde93b5",
+  "checks_passed": 14,
+  "checks": [
+    {
+      "name": "clear_does_not_cancel_inflight_tts",
+      "pending_after_clear": true,
+      "tracked_after_clear": 0,
+      "late_payloads_new_queue": 1,
+      "sent_after_clear": 0
+    },
+    {
+      "name": "parallel_tts_ordered_send",
+      "send_order": [
+        "first",
+        "second"
+      ],
+      "real_audio": false
+    },
+    {
+      "name": "tts_failure_sends_silent_display",
+      "sent": [
+        {
+          "type": "audio",
+          "text": "shown",
+          "silent": true
+        }
+      ]
+    },
+    {
+      "name": "same_client_task_overwrite",
+      "both_tasks_pending": true,
+      "tracked_only_second": true,
+      "inputs": [
+        "first",
+        "second"
+      ]
+    },
+    {
+      "name": "proactive_skips_input_but_keeps_assistant",
+      "chunks": [
+        "proactive reply"
+      ],
+      "memory": [
+        {
+          "role": "assistant",
+          "content": "proactive reply"
+        }
+      ],
+      "decorator_edges": "stubbed_identity; actual _to_messages/_add_message/simple-chat path"
+    },
+    {
+      "name": "ack_early_loss_and_same_key_collision",
+      "early_receipt_retained": false,
+      "first_waiter_result": null,
+      "second_waiter_result": {
+        "type": "frontend-playback-complete"
+      },
+      "timeout_in_harness_only": true,
+      "caller_default_timeout": null
+    },
+    {
+      "name": "disconnect_pops_context_before_close",
+      "context_close_calls": 0,
+      "contexts_remaining": 0,
+      "cleanup_client_called": true
+    },
+    {
+      "name": "new_contexts_share_agent_reference",
+      "same_agent": true,
+      "second_context_sees_synthetic_memory": [
+        {
+          "role": "user",
+          "content": "synthetic A"
+        }
+      ],
+      "does_not_prove": "real frontend cross-talk"
+    },
+    {
+      "name": "mem0_empty_impl",
+      "tracked": true,
+      "bytes": 0,
+      "exports_LLM": false
+    },
+    {
+      "name": "json_string_brace_not_supported",
+      "valid_json": "{\"text\":\"}\",\"ok\":1}",
+      "detector_result": []
+    },
+    {
+      "name": "prompt_tool_arguments_mismatch",
+      "object_arguments_result": [],
+      "string_arguments_count": 1
+    },
+    {
+      "name": "sentence_helpers_edge_cases",
+      "comma_split": [
+        "你好，今天,",
+        "后面"
+      ],
+      "abbreviation_result": [
+        [
+          "Smith is here."
+        ],
+        ""
+      ]
+    },
+    {
+      "name": "letta_drops_image_inputs",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "fake"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nested_bracket_filter",
+      "nested_result": "hello world",
+      "unclosed_result": "hello"
+    }
+  ],
+  "source_hashes_used": {
+    "src/open_llm_vtuber/conversations/tts_manager.py": "55d94e8ddd134d4b1dd5565d6c6e7025b46a8ec05bb7a98c6eeebbc81aca55b0",
+    "src/open_llm_vtuber/conversations/conversation_handler.py": "98a285b0c956376f9c219d1802a2f027ba927b7f95f609dc04242f473305efa1",
+    "src/open_llm_vtuber/agent/input_types.py": "8ac302d9fd635049639f5362b0f43385589587e4483ef7ac6c37d3574911edfa",
+    "src/open_llm_vtuber/agent/agents/basic_memory_agent.py": "d0124df26b4ca24fd5e135959927b355f9e388350f4d9bbbae575dc714d2e1b7",
+    "src/open_llm_vtuber/message_handler.py": "5169cfc8f4c8d7593e888a164ef69e60f2dbedde86630f120e644122931024d7",
+    "src/open_llm_vtuber/websocket_handler.py": "977c8870ead0969a62fdc7dc1ad39a2016f9f8b9ed7ef7dbef4d641627119b9d",
+    "src/open_llm_vtuber/service_context.py": "5519a87db596f531d33578a2fe99fe05f80089321beec0f6fd8f5fbdceec281c",
+    "src/open_llm_vtuber/mcpp/json_detector.py": "b83d6c21db0639f1688bbd4c0ce90408308a3529424c390c13dd5dfb8cebf217",
+    "src/open_llm_vtuber/mcpp/tool_executor.py": "ff8ef482d6ad6f2ee4a24d7a6dcf2da4bdb0a58ee9f4488c6cfea2fd38b7c063",
+    "src/open_llm_vtuber/utils/sentence_divider.py": "55db1a29976e8404cdf529e13c54b7f00fd8aacc9347dba700cc5123756d533f",
+    "src/open_llm_vtuber/agent/agents/letta_agent.py": "ee482486575d35713133cefba3d999f5ffc53f838481cc9cd74ee68024a4ca01",
+    "src/open_llm_vtuber/utils/tts_preprocessor.py": "09643044af1e749d21c054c3f3e349767c7241ea14c467d3b1237754c5cddbd0"
+  },
+  "backend_AST_parse_pass": 107,
+  "product_started": false,
+  "dependencies_installed": false,
+  "network_used": false,
+  "real_models_or_devices_used": false,
+  "limits": [
+    "exact AST definitions but fake dependency edges; not full application test",
+    "no UI/device/audio/cost/quality acceptance",
+    "no real persistence crash/restart/durability test"
+  ]
+}

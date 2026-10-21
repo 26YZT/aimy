@@ -1,0 +1,14 @@
+{
+  "durationSeconds": 2.56,
+  "eventCount": 12,
+  "expectedPhraseMatched": false,
+  "finishedAt": 1792329502572,
+  "input": "synthetic PCM16",
+  "locale": "zh-CN",
+  "mode": "stream",
+  "provider": "apple-speech-transcription",
+  "sampleRate": 16000,
+  "startedAt": 1792329502100,
+  "status": "complete",
+  "text": "这是艾米与英灵接测试"
+}

@@ -1,0 +1,2 @@
+{"check": "autonomy_disable_during_action_selection", "real_source_executed": ["IdleAutonomyManager", "_run_actor_once", "_run_private_chat", "_select_action"], "result_ok": true, "saved_messages": [{"actor": "aion", "text": "synthetic stale autonomous reply", "enabled_at_save": false}], "limits": "Config, camera, model, and persistence are deterministic boundary stubs. No service or device was started."}
+{"check": "embedding_dimension_mismatch", "real_source_executed": "memory.cosine_similarity", "value": 0.0}

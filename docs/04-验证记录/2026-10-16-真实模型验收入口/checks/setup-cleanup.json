@@ -1,0 +1,40 @@
+{
+  "task": "SETUP-FAILURE-CLEANUP",
+  "status": "complete",
+  "scope": [
+    "apps/stage-tamagotchi/scripts/acceptance/live-runner.ts",
+    "apps/stage-tamagotchi/scripts/acceptance/live-runner.test.ts"
+  ],
+  "behavior": [
+    "Failure propagation waits for owned process exit, log closure and once-only lock release.",
+    "SIGINT has a 15 second bound, then SIGKILL has a 5 second exit-confirmation bound. Unconfirmed cleanup returns a stable error.",
+    "The same cleanup owns explicit stop and parent SIGINT/SIGTERM.",
+    "Pre-spawn and failed-spawn paths release the lock. Running-child errors do not falsely prove process exit.",
+    "Readiness polling is cancelled during cleanup. Log errors are handled without exposing native details."
+  ],
+  "checks": {
+    "realChildProcessTests": 4,
+    "testsDurationSeconds": 16.09,
+    "strictTypecheck": "exit 0",
+    "targetedLint": "exit 0",
+    "diffCheck": "exit 0"
+  },
+  "testBoundary": "Temporary installed electron fixture resolves to the actual Node executable. The launcher really spawns, signals, waits and drains local evidence. No Electron or credential mocks enter product runtime.",
+  "cases": [
+    "setup-ui failed followed by delayed graceful exit and drained log",
+    "setup-ui failed with ignored SIGINT and bounded SIGKILL",
+    "missing executable",
+    "missing manifest before spawn"
+  ],
+  "realModelCalls": 0,
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-runner.ts",
+      "sha256": "071050bf5a51ed902ab941b876100468d64d87b8e22e16b8beb440d2da51c590"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/live-runner.test.ts",
+      "sha256": "3f995f4e05fbc6f1d854adc174ade0a5c97cc7e75224a3eb82f97ddccee83de9"
+    }
+  ]
+}

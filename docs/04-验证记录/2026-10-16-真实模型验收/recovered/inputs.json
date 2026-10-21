@@ -1,0 +1,20 @@
+[
+  {
+    "case": 5,
+    "run": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "copiedIndexedDBOnly": "/tmp/aimy-real-memory-inspect/33c6cc08-286f-45fd-9c3f-6678f07dc731-5",
+    "original": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1/runs/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-05-aimy"
+  },
+  {
+    "case": 5,
+    "run": "14e3cea3-397d-4bdf-be28-19db2c6f215c",
+    "copiedIndexedDBOnly": "/tmp/aimy-real-memory-inspect/14e3cea3-397d-4bdf-be28-19db2c6f215c-5",
+    "original": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1/runs/14e3cea3-397d-4bdf-be28-19db2c6f215c/USER-V2-05-aimy"
+  },
+  {
+    "case": 7,
+    "run": "725d1201-270f-4162-8f3e-75555ceae73f",
+    "copiedIndexedDBOnly": "/tmp/aimy-real-memory-inspect/725d1201-270f-4162-8f3e-75555ceae73f-7",
+    "original": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1/runs/725d1201-270f-4162-8f3e-75555ceae73f/USER-V2-07-aimy"
+  }
+]

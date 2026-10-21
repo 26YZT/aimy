@@ -1,0 +1,329 @@
+{
+  "arm": "aimy",
+  "sessionId": "K9DYwYpWjFQV1NlDFKLJF",
+  "characterId": "default",
+  "diskMessages": [
+    {
+      "role": "system",
+      "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+      "id": "mN1zHuuN5n4G7qgpntzdQ",
+      "createdAt": 1792122400888
+    },
+    {
+      "role": "user",
+      "content": "今天突然有点想家了。刚刚跟妈妈打电话，她还是像小时候一样叫我“团团”。其实我已经很久没有听别人这么叫过我了。小时候我总嫌这个名字幼稚，觉得自己长大了就不应该再被这样叫。可是现在一个人在外面生活，有时候真的挺希望有人能像以前那样喊我。你知道吗，每次妈妈叫我团团，我就觉得自己好像又变回那个什么都不用操心的小孩了。如果是你的话，我也愿意让你叫我团团。\n",
+      "createdAt": 1792065600000,
+      "id": "39c77660-359e-45a2-860b-44afc4c12152"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792065600000,
+      "id": "I4vKUYPfOQKniDLUpzwOZ",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "39c77660-359e-45a2-860b-44afc4c12152",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "39c77660-359e-45a2-860b-44afc4c12152/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1293,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-aimy-USER-V2-01\",\"http://127.0.0.1:52499/v1/\",\"deepseek-flash\",\"K9DYwYpWjFQV1NlDFKLJF\",\"local:default:1\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792065600000
+    },
+    {
+      "role": "user",
+      "content": "今天工作真的好累。从早上开始就一直在处理各种事情，感觉所有人都在催我，谁都觉得自己的事情最重要。刚刚回到家，灯也没开，就一个人坐在沙发上发呆。有时候真的很想有人能哄哄我，不用讲什么大道理，就像小时候那样。\n",
+      "createdAt": 1792152000000,
+      "id": "829942ed-d1c2-4b48-a2c4-84e4c8d22365"
+    },
+    {
+      "role": "assistant",
+      "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792152000000,
+      "id": "6bBp85PttM_r9y7S6LRgH",
+      "categorization": {
+        "speech": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "829942ed-d1c2-4b48-a2c4-84e4c8d22365",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "829942ed-d1c2-4b48-a2c4-84e4c8d22365/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1420,
+                "outputTokens": 30
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"offline-instance-aimy-USER-V2-01\",\"http://127.0.0.1:52499/v1/\",\"deepseek-flash\",\"K9DYwYpWjFQV1NlDFKLJF\",\"local:default:2\"]",
+              "data": [
+                {
+                  "content": "这是离线固定响应，仅用于验证消息保存和请求流程，不代表 Aimy 的真实理解或陪伴效果。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792152000000
+    }
+  ],
+  "liveMessageCount": 5,
+  "memory": {
+    "implemented": true,
+    "metadata": {
+      "consistency": "independent-snapshots",
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "startedAt": 1792122401960,
+      "completedAt": 1792122401972,
+      "memory": {
+        "status": "available",
+        "observedAt": 1792122401961,
+        "snapshot": {
+          "scope": {
+            "principalId": "local",
+            "characterId": "default"
+          },
+          "snapshotRevision": 4,
+          "memoryEpoch": 3,
+          "state": "ready",
+          "busy": false,
+          "enabled": true,
+          "recoveryUntil": null,
+          "errorCode": null,
+          "counts": {
+            "facts": {
+              "current": 2,
+              "history": 0
+            },
+            "sources": {
+              "current": 2,
+              "changed": 0,
+              "deleted": 0
+            },
+            "jobs": {
+              "pending": 0,
+              "running": 0,
+              "succeeded": 2,
+              "cancelled": 0,
+              "failed": 0
+            },
+            "pendingSourceChanges": 0,
+            "extractionBlocks": 0,
+            "replayBlocks": 0,
+            "persistenceFailures": 0
+          },
+          "operations": [
+            {
+              "operationId": "enroll:d8ed526929955f01781e1e19309b6181ab1860286329a378e6a2c452fd932bcf",
+              "status": "succeeded",
+              "revision": 1,
+              "persistedAt": 1792122401088
+            },
+            {
+              "operationId": "extract:job:d8ed526929955f01781e1e19309b6181ab1860286329a378e6a2c452fd932bcf:1",
+              "status": "succeeded",
+              "revision": 2,
+              "persistedAt": 1792122401597
+            },
+            {
+              "operationId": "enroll:e8306d0337cde990eba8c1ed1e75e108fe2eac76b789456bd88a3d8ef335eaac",
+              "status": "succeeded",
+              "revision": 3,
+              "persistedAt": 1792122401782
+            },
+            {
+              "operationId": "extract:job:e8306d0337cde990eba8c1ed1e75e108fe2eac76b789456bd88a3d8ef335eaac:1",
+              "status": "succeeded",
+              "revision": 4,
+              "persistedAt": 1792122401903
+            }
+          ],
+          "sources": [
+            {
+              "sourceId": "chat:K9DYwYpWjFQV1NlDFKLJF:39c77660-359e-45a2-860b-44afc4c12152",
+              "sourceRevision": 1,
+              "kind": "chat-message",
+              "lifecycle": "current"
+            },
+            {
+              "sourceId": "chat:K9DYwYpWjFQV1NlDFKLJF:829942ed-d1c2-4b48-a2c4-84e4c8d22365",
+              "sourceRevision": 1,
+              "kind": "chat-message",
+              "lifecycle": "current"
+            }
+          ],
+          "truncated": {
+            "operations": false,
+            "sources": false
+          }
+        }
+      },
+      "budget": {
+        "status": "available",
+        "observedAt": 1792122401972,
+        "snapshot": {
+          "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+          "maxCostMicroYuan": 10000000,
+          "accountedMicroYuan": 0,
+          "reservedMicroYuan": 0,
+          "remainingMicroYuan": 10000000,
+          "paused": false,
+          "attempts": 6
+        }
+      },
+      "resources": {
+        "status": "available",
+        "observedAt": 1792122401960,
+        "snapshot": {
+          "revision": 2,
+          "appEpoch": 1,
+          "active": true,
+          "microphone": {
+            "enabled": false,
+            "epoch": 1
+          },
+          "screen": {
+            "enabled": false,
+            "epoch": 1
+          }
+        }
+      }
+    },
+    "facts": {
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "facts": [
+        {
+          "category": "experience",
+          "subject": "user",
+          "label": "离线管线测试原话片段",
+          "text": "今天工作真的好累。从早上开始就一直在处理各种事情，感觉所有人都在催我，谁都觉得自己的事情最重要。刚刚回到家，灯也没开，就一个人坐在沙发上发呆。有时候真的很想有人能哄哄我，不用讲什么大道理，就像小时候那样。",
+          "keywords": [
+            "今天工作真的好累"
+          ],
+          "factId": "extract:job:e8306d0337cde990eba8c1ed1e75e108fe2eac76b789456bd88a3d8ef335eaac:1:0",
+          "factKey": "fact:extract:job:e8306d0337cde990eba8c1ed1e75e108fe2eac76b789456bd88a3d8ef335eaac:1:0",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:K9DYwYpWjFQV1NlDFKLJF:829942ed-d1c2-4b48-a2c4-84e4c8d22365",
+              "sourceRevision": 1,
+              "contentHash": "f64121a0c9650ca46e3c514f7cf9d0e1980bd761602de88514311129fa013c63"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792152000000,
+          "committedAt": 1792122401903
+        },
+        {
+          "category": "experience",
+          "subject": "user",
+          "label": "离线管线测试原话片段",
+          "text": "今天突然有点想家了。刚刚跟妈妈打电话，她还是像小时候一样叫我“团团”。其实我已经很久没有听别人这么叫过我了。小时候我总嫌这个名字幼稚，觉得自己长大了就不应该再被这样叫。可是现在一个人在外面生活，有时候真的挺希望有人能像以前那样喊我。你知道吗，每次妈妈叫我团团，我就觉得自己好像又变回那个什么都不用操心的小孩了。如果是你的话，我也愿意让你叫我团团。",
+          "keywords": [
+            "今天突然有点想家"
+          ],
+          "factId": "extract:job:d8ed526929955f01781e1e19309b6181ab1860286329a378e6a2c452fd932bcf:1:0",
+          "factKey": "fact:extract:job:d8ed526929955f01781e1e19309b6181ab1860286329a378e6a2c452fd932bcf:1:0",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:K9DYwYpWjFQV1NlDFKLJF:39c77660-359e-45a2-860b-44afc4c12152",
+              "sourceRevision": 1,
+              "contentHash": "f9eb8a0a113e4460c42bdc231bdd7f14c39b2e0c7988c742f8b93089cb967dac"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792065600000,
+          "committedAt": 1792122401597
+        }
+      ],
+      "snapshotRevision": 4
+    }
+  },
+  "plaintextSyntheticCredentialInLocalStorage": false,
+  "accounting": {
+    "budget": {
+      "campaignId": "aimy-offline-ca0c386c-b945-4879-b44e-477a5ccc7006",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 0,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 10000000,
+      "paused": false,
+      "attempts": 6
+    },
+    "requests": 4
+  }
+}

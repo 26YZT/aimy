@@ -1,0 +1,16 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "--project",
+    "node",
+    "src/stores/character/orchestrator/index.test.ts",
+    "src/stores/modules/vision/orchestrator.test.ts",
+    "src/database/repos/chat-sessions.repo.test.ts"
+  ],
+  "cwd": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui",
+  "exit_code": 0,
+  "log": "/tmp/aimy-20261014-primary-checks/stage-ui.log"
+}

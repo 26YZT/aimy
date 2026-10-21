@@ -1,0 +1,1507 @@
+{
+  "date": "2026-10-14",
+  "status": "研究裁决建议；未选型接入、未改变产品代码或冻结架构",
+  "baseline": "2026-10-14-AIRI现状能力清单.json",
+  "input_scope": {
+    "recovered_complete_reports": 14,
+    "source_project_feature_entries": 164,
+    "airi_checkpoints": 84,
+    "projects": 6
+  },
+  "cost_scale": "相对结构成本：低为文本/纯规则；中为现有owner内跨层适配；中高/高涉及持久化、取消删除并发、服务/打包或真实体验。不作人日/预算承诺。",
+  "verdict_scale": {
+    "直接复用": "通常指沿用AIRI已经接入的能力；纯叶子/文本/生产工具仍是条件式候选，未执行接入。",
+    "借鉴设计": "按现有AIRI边界提取规则或适配叶子，保留必要来源与验收；不引入第二完整owner。",
+    "弃用": "本期不纳入、拒整体迁入或本版本没有实现；不表示永远禁止研究该项目。"
+  },
+  "counts": {
+    "decision_units": 57,
+    "by_verdict": {
+      "借鉴设计": 31,
+      "弃用": 18,
+      "直接复用": 8
+    },
+    "by_project": {
+      "AionsHome": 15,
+      "Ryza": 13,
+      "Open-LLM-VTuber": 14,
+      "kirara-ai": 8,
+      "Charakuru": 5,
+      "chromatic": 2
+    }
+  },
+  "decisions": [
+    {
+      "id": "AH-R01",
+      "project": "AionsHome",
+      "candidate": "后置共享画像的来源/版本/撤权规则",
+      "airi_capability_ids": [
+        "F07",
+        "F01",
+        "I04"
+      ],
+      "relative_advantage": "有明确事实来源与版本保护增量",
+      "verdict": "借鉴设计",
+      "subtype": "有界规则适配",
+      "conversion_cost": "中高",
+      "priority": "高",
+      "allowed_future_boundary": "消费AIRI已持久化消息；Repository/ModelGateway/EventSink均需AIRI适配；不用原config/ws/FastAPI",
+      "minimum_future_acceptance": "原文改删、关闭再开、手动revision变更时旧模型结果不能写；新进程恢复队列；输出只据本人证据",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/ws.py",
+          "line": 284
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 254
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 358
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/user_profile.py",
+          "line": 41
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 204
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+          "line": 96
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+          "line": 159
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 607
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R02",
+      "project": "AionsHome",
+      "candidate": "原子记忆+源消息管理",
+      "airi_capability_ids": [
+        "F07",
+        "F01",
+        "F05"
+      ],
+      "relative_advantage": "有明确自动事实保存与来源管理增量",
+      "verdict": "借鉴设计",
+      "subtype": "增量记忆设计",
+      "conversion_cost": "高",
+      "priority": "高",
+      "allowed_future_boundary": "AIRI现有聊天session/message ID作来源；原子写入、主进程持久化、管理UI共三层",
+      "minimum_future_acceptance": "自动写→重启召回；纠正只留新事实；删后原文/向量/派生的预期范围明示并验证",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 124
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+          "line": 935
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 104
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 181
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 266
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R03",
+      "project": "AionsHome",
+      "candidate": "主动搜索/时间解析/证据预算",
+      "airi_capability_ids": [
+        "F07",
+        "B04",
+        "H01"
+      ],
+      "relative_advantage": "有可解释召回/原文证据预算增量",
+      "verdict": "借鉴设计",
+      "subtype": "有界规则适配",
+      "conversion_cost": "中",
+      "priority": "高",
+      "allowed_future_boundary": "提取纯parse/rank/format规则到TS，输入Repository与EmbeddingGateway；保留AIRI工具循环",
+      "minimum_future_acceptance": "日期/否定/同事件重复/embedding失败文本后备；回执有source ID；注入攻击当历史证据",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+          "line": 641
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "line": 20
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R04",
+      "project": "AionsHome",
+      "candidate": "彻底忘记的派生清理契约",
+      "airi_capability_ids": [
+        "F07",
+        "F02"
+      ],
+      "relative_advantage": "新增价值在失败用例与删除契约，原实现不完整",
+      "verdict": "借鉴设计",
+      "subtype": "失败经验与验收",
+      "conversion_cost": "高",
+      "priority": "高",
+      "allowed_future_boundary": "先明确删除一条记录与忘记事实范围，再设计统一写入口；源记录、画像、压缩、缓存需同epoch语义",
+      "minimum_future_acceptance": "正在总结/压缩时删除；旧API兼容；同义重抽取；派生摘要不得复活已忘记事实",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 210
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memories.py",
+          "line": 336
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+          "line": 25
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+          "line": 641
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R05",
+      "project": "AionsHome",
+      "candidate": "日历压缩与lineage",
+      "airi_capability_ids": [
+        "F03",
+        "F07"
+      ],
+      "relative_advantage": "分层压缩/溯源有增量，当前并发缺陷未解决",
+      "verdict": "借鉴设计",
+      "subtype": "后置的叶子适配",
+      "conversion_cost": "高",
+      "priority": "中",
+      "allowed_future_boundary": "CalendarPlanner/LineageValidator可叶子化；模型/事务/索引适配量高，需源revision检查",
+      "minimum_future_acceptance": "候选在model await期间删改即拒写；冷档来源可追溯；无膨胀；失败输入保持active",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+          "line": 25
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+          "line": 642
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R06",
+      "project": "AionsHome",
+      "candidate": "自然续聊NEXT_CHAT语义",
+      "airi_capability_ids": [
+        "G01",
+        "G02",
+        "G08"
+      ],
+      "relative_advantage": "具体续聊策略有增量；AIRI已有调度基础",
+      "verdict": "借鉴设计",
+      "subtype": "持久策略增量",
+      "conversion_cost": "中",
+      "priority": "高",
+      "allowed_future_boundary": "AIRI已有spark notify/内存task；只增持久调度/开关/静默与预算策略，生成仍走AIRI聊天",
+      "minimum_future_acceptance": "关开关、新用户消息、切会话、隐藏/退出后pending及in-flight均不得错发；重启过期策略",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "line": 32
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "line": 93
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/schedule.py",
+          "line": 274
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R07",
+      "project": "AionsHome",
+      "candidate": "闲时回忆/休息/轻主动",
+      "airi_capability_ids": [
+        "G01",
+        "F07"
+      ],
+      "relative_advantage": "有回忆→轻主动行为样本，质量与打扰未测",
+      "verdict": "借鉴设计",
+      "subtype": "缩范围后置",
+      "conversion_cost": "中高",
+      "priority": "中",
+      "allowed_future_boundary": "仅本地rest/memory_browse/private_chat思想，依赖记忆和R06；不接购物/外发/摄像头",
+      "minimum_future_acceptance": "idle中用户回来即使结果失效；DND/每日期望预算；不凭AI感想更新用户事实",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_state.py",
+          "line": 250
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy.py",
+          "line": 595
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy.py",
+          "line": 1370
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_niches.py",
+          "line": 118
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_state.py",
+          "line": 198
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R08",
+      "project": "AionsHome",
+      "candidate": "受控语音导演/台词一致校验",
+      "airi_capability_ids": [
+        "C07",
+        "C05",
+        "E05"
+      ],
+      "relative_advantage": "有台词一致性与导演白名单规则；音色效果未测",
+      "verdict": "借鉴设计",
+      "subtype": "受控叶子适配",
+      "conversion_cost": "中",
+      "priority": "中",
+      "allowed_future_boundary": "解析与validate规则小；AIRI现有speech output/取消/voice provider；需确定音色所支持tag",
+      "minimum_future_acceptance": "导演不能改词义/加字；取消拒晚结果；错误不重复扣费；口型/表现与语音一体实测",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/expressive_voice.py",
+          "line": 50
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R09",
+      "project": "AionsHome",
+      "candidate": "TTS队列/缓存/半双工唤醒",
+      "airi_capability_ids": [
+        "C02",
+        "C04",
+        "C07"
+      ],
+      "relative_advantage": "同类AIRI已有；候选半双工/第二队列未证实更强",
+      "verdict": "弃用",
+      "subtype": "拒整体替换",
+      "conversion_cost": "整体替换高",
+      "priority": "无新增",
+      "allowed_future_boundary": "AIRI已VAD/ASR/provider/speech bus/interrupt，复制带第二音频生命周期",
+      "minimum_future_acceptance": "只对比具体首包/背压缺口后再定；真实中文延迟、顺序、抢话验证",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/voice.py",
+          "line": 18
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/asr.py",
+          "line": 16
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 30
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 175
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 494
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 599
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 68
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R10",
+      "project": "AionsHome",
+      "candidate": "VoiceCallPolicy纯JS阈值/打断guard",
+      "airi_capability_ids": [
+        "C02",
+        "C09"
+      ],
+      "relative_advantage": "纯JS可提取；阈值未证实优于AIRI",
+      "verdict": "直接复用",
+      "subtype": "待A/B的纯叶子候选",
+      "conversion_cost": "低",
+      "priority": "低",
+      "allowed_future_boundary": "17行无依赖UMD；AIRI已有silence/VAD参数，优先行为对照，非新pipeline",
+      "minimum_future_acceptance": "短长停顿语料A/B；打断仅指向当前turn；不会因背景噪音打断",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/voice-call-policy.js",
+          "line": 1
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R11",
+      "project": "AionsHome",
+      "candidate": "图像来源/新鲜度/失败上下文规则",
+      "airi_capability_ids": [
+        "D01",
+        "D05",
+        "D08"
+      ],
+      "relative_advantage": "新鲜度/来源规则有参考，采集链AIRI已具备",
+      "verdict": "借鉴设计",
+      "subtype": "沿AIRI视觉链适配",
+      "conversion_cost": "中",
+      "priority": "中",
+      "allowed_future_boundary": "沿用AIRI屏幕采集与Vision推理/ReplaceSelf上下文，不拷camera/activity链",
+      "minimum_future_acceptance": "只在独立看屏授权有效时采；陈旧/失败不得编造；撤权拒晚结果；原图不长期留存",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/camera.py",
+          "line": 760
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/camera.py",
+          "line": 428
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R12",
+      "project": "AionsHome",
+      "candidate": "反馈复盘before/after/diff",
+      "airi_capability_ids": [
+        "E01",
+        "E08"
+      ],
+      "relative_advantage": "复盘与可回退差异可参考；安全规则不能由模型改",
+      "verdict": "借鉴设计",
+      "subtype": "后置复盘规则",
+      "conversion_cost": "中",
+      "priority": "低",
+      "allowed_future_boundary": "AIRI已有角色卡/会话；只记录建议和可回退差异；关键安全边界仍代码固定",
+      "minimum_future_acceptance": "反馈可追溯；重复反馈不重复改；身份/权限/未成年人/危机规则不能被模型改",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/persona_evolution.py",
+          "line": 23
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R13",
+      "project": "AionsHome",
+      "candidate": "多角色群聊/Visitor Lounge",
+      "airi_capability_ids": [
+        "E01",
+        "H05"
+      ],
+      "relative_advantage": "多角色/访客超当前主要单角色范围",
+      "verdict": "弃用",
+      "subtype": "不纳入本期",
+      "conversion_cost": "高",
+      "priority": "无新增",
+      "allowed_future_boundary": "一期主要单角色；双角色表和Codex/访客OAuth/多端增加运行时与身份面",
+      "minimum_future_acceptance": "若以后立项须单列角色/访客scope、独立身份和模型预算，不能悄悄扩一期",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/chatroom.py",
+          "line": 29
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/chatroom.py",
+          "line": 3862
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/Connor-Codex/package.json",
+          "line": 1
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R14",
+      "project": "AionsHome",
+      "candidate": "生活功能/设备/外部社交/成人模块",
+      "airi_capability_ids": [
+        "H08",
+        "H09",
+        "D01"
+      ],
+      "relative_advantage": "生活/硬件/外部社交是范围差异，不自动算缺口",
+      "verdict": "弃用",
+      "subtype": "不纳入本期",
+      "conversion_cost": "高",
+      "priority": "无新增",
+      "allowed_future_boundary": "基金、定位、家居、购物、微信/小红书、Android、成人外设均超当前边界；无来源选择",
+      "minimum_future_acceptance": "未来真实需求另立项；不得把调研功能表变成需求表",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 153
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+          "line": 455
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "AH-R15",
+      "project": "AionsHome",
+      "candidate": "整套FastAPI/原生JS/Windows采集/配置",
+      "airi_capability_ids": [
+        "A01",
+        "B01",
+        "C10",
+        "F01"
+      ],
+      "relative_advantage": "完整运行时与AIRI重复、Windows耦合和状态成本高",
+      "verdict": "弃用",
+      "subtype": "拒整体迁入",
+      "conversion_cost": "高",
+      "priority": "无新增",
+      "allowed_future_boundary": "不是Python法律禁用：技术上可sidecar，但部署、进程、DB、音频、权限和版本成本高，当前未定",
+      "minimum_future_acceptance": "未来若考虑sidecar先固定IPC/schema/生命周期/凭证边界与macOS包验收；当前仍AIRI唯一owner",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 153
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/security_access.py",
+          "line": 948
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 320
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY01",
+      "project": "Ryza",
+      "candidate": "桌面窗口与显示集成",
+      "airi_capability_ids": [
+        "A01",
+        "A02",
+        "A05"
+      ],
+      "relative_advantage": "AIRI更贴合macOS桌面角色；Ryza透明/穿透缺失",
+      "verdict": "直接复用",
+      "subtype": "沿用AIRI既有",
+      "conversion_cost": "无新增",
+      "priority": "保持",
+      "allowed_future_boundary": "不换主进程、协议或窗口生命周期",
+      "minimum_future_acceptance": "按聊天收起/舞台隐藏/退出分别验角色与采集",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+          "line": 150
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY02",
+      "project": "Ryza",
+      "candidate": "Provider、流式音频和取消",
+      "airi_capability_ids": [
+        "B06",
+        "C04",
+        "C05",
+        "C07"
+      ],
+      "relative_advantage": "AIRI源码契约更完整，Ryza标准主链整句返回",
+      "verdict": "直接复用",
+      "subtype": "沿用AIRI既有",
+      "conversion_cost": "无新增",
+      "priority": "保持",
+      "allowed_future_boundary": "保留AIRI voice/audio/session owner",
+      "minimum_future_acceptance": "真实中文延迟、扬声器/AEC与取消后静音另验",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/turn.js",
+          "line": 223
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY03",
+      "project": "Ryza",
+      "candidate": "会话卡、事实条目与重要事件保护",
+      "airi_capability_ids": [
+        "F07",
+        "F03"
+      ],
+      "relative_advantage": "分层策略可补记忆占位，但异步更新/删除会复活",
+      "verdict": "借鉴设计",
+      "subtype": "部分纯规则适配",
+      "conversion_cost": "中高",
+      "priority": "高",
+      "allowed_future_boundary": "只取分层/保护思想，补来源版本与原子提交，不搬全store",
+      "minimum_future_acceptance": "模型期间新输入不丢；删除后在飞归纳不能复活",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+          "line": 210
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY04",
+      "project": "Ryza",
+      "candidate": "关键词日期排序与完整条目预算",
+      "airi_capability_ids": [
+        "F07",
+        "B04"
+      ],
+      "relative_advantage": "可作低成本可解释召回基线；非向量RAG",
+      "verdict": "借鉴设计",
+      "subtype": "有界叶子候选",
+      "conversion_cost": "低至中",
+      "priority": "中",
+      "allowed_future_boundary": "完整条目预算、当前有效版本过滤，接AIRI上下文",
+      "minimum_future_acceptance": "中文日期/纠正/同义事件；不截断JSON；失败可解释",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+          "line": 143
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY05",
+      "project": "Ryza",
+      "candidate": "表现节奏、去重与动作让位",
+      "airi_capability_ids": [
+        "E03",
+        "E06",
+        "E07"
+      ],
+      "relative_advantage": "动作意图冲突策略可比较；AIRI已可驱动动作",
+      "verdict": "借鉴设计",
+      "subtype": "按正式角色适配",
+      "conversion_cost": "中",
+      "priority": "中",
+      "allowed_future_boundary": "用AIRI motions/emotions/lipsync，保留模型自己的参数表",
+      "minimum_future_acceptance": "说话/idle/语义动作互不打架，同音频时钟实测",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/avatar.js",
+          "line": 138
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY06",
+      "project": "Ryza",
+      "candidate": "文本回声过滤",
+      "airi_capability_ids": [
+        "C09",
+        "C04"
+      ],
+      "relative_advantage": "可能补AEC末级，当前没有真机效果优势证据",
+      "verdict": "借鉴设计",
+      "subtype": "可选纯叶子实验",
+      "conversion_cost": "低至中",
+      "priority": "可选",
+      "allowed_future_boundary": "仅过滤已开始播放的文本；不取代现有录音与取消",
+      "minimum_future_acceptance": "短句/中文/噪声误伤与漏拦对比；关闭不保留迟到转写",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/voice.js",
+          "line": 79
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY07",
+      "project": "Ryza",
+      "candidate": "人设语气与TTS风格分开",
+      "airi_capability_ids": [
+        "E01",
+        "C07"
+      ],
+      "relative_advantage": "规则可参考，不等于需要增加ASMR产品模式",
+      "verdict": "借鉴设计",
+      "subtype": "内容与配置规则",
+      "conversion_cost": "低",
+      "priority": "中",
+      "allowed_future_boundary": "在现有角色卡与speech provider试验，音色另定",
+      "minimum_future_acceptance": "不改台词事实与安全规则；相同内容风格稳定",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+          "line": 51
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY08",
+      "project": "Ryza",
+      "candidate": "可编辑记忆与存储压力反馈",
+      "airi_capability_ids": [
+        "F01",
+        "F07"
+      ],
+      "relative_advantage": "可见失败有价值；原删除/存档不能保证一致性",
+      "verdict": "借鉴设计",
+      "subtype": "验收与错误反馈",
+      "conversion_cost": "中",
+      "priority": "高",
+      "allowed_future_boundary": "统一持久写入口、用户纠正删除反馈，不搬明文镜像",
+      "minimum_future_acceptance": "写失败可见；新进程同数据恢复；所有存储范围明确",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/settings.js",
+          "line": 656
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY09",
+      "project": "Ryza",
+      "candidate": "回听与收藏",
+      "airi_capability_ids": [
+        "C10",
+        "F01"
+      ],
+      "relative_advantage": "当前需求未选，原audio旁路造成不同owner",
+      "verdict": "借鉴设计",
+      "subtype": "后置",
+      "conversion_cost": "中",
+      "priority": "后置",
+      "allowed_future_boundary": "若将来立项，只用统一音频owner与删除策略",
+      "minimum_future_acceptance": "回放可取消、日志不泄密、删除覆盖Blob与索引",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/voicecache.js",
+          "line": 101
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY10",
+      "project": "Ryza",
+      "candidate": "RPG世界、经济、NPC、签到",
+      "airi_capability_ids": [
+        "E08",
+        "G01"
+      ],
+      "relative_advantage": "独有玩法但偏离当前现实桌面陪伴",
+      "verdict": "弃用",
+      "subtype": "不纳入本期",
+      "conversion_cost": "高",
+      "priority": "后置",
+      "allowed_future_boundary": "只保留确定性状态原则，不引入世界实体与资源",
+      "minimum_future_acceptance": "未来有独立需求再立项",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/game.js",
+          "line": 352
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY11",
+      "project": "Ryza",
+      "candidate": "Android与跨端壳/闹钟",
+      "airi_capability_ids": [
+        "A01",
+        "F01"
+      ],
+      "relative_advantage": "macOS一期无直接收益，删除native闹钟契约有缺陷",
+      "verdict": "弃用",
+      "subtype": "不纳入本期",
+      "conversion_cost": "高",
+      "priority": "后置",
+      "allowed_future_boundary": "不扩大平台；共用代码不写成跨设备同步",
+      "minimum_future_acceptance": "以后单列权限、后台、重启及全部存储删除",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/android/app/src/main/java/com/ryza/chat/AlarmScheduler.java",
+          "line": 119
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY12",
+      "project": "Ryza",
+      "candidate": "自写ZIP、明文镜像与eraser",
+      "airi_capability_ids": [
+        "F01",
+        "I04"
+      ],
+      "relative_advantage": "没有可靠性优势，存在不完整清除与展开预算风险",
+      "verdict": "弃用",
+      "subtype": "拒实现迁入",
+      "conversion_cost": "中高",
+      "priority": "当前不做",
+      "allowed_future_boundary": "保留AIRI loader与存储边界",
+      "minimum_future_acceptance": "并发停止、删除、预算与损坏文件用例作为回归",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/crfstore.js",
+          "line": 207
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "RY13",
+      "project": "Ryza",
+      "candidate": "计划中的vision/proactive/语义端点",
+      "airi_capability_ids": [
+        "D01",
+        "G01",
+        "C02"
+      ],
+      "relative_advantage": "候选文件未创建；不能作为现成增强模块",
+      "verdict": "弃用",
+      "subtype": "弃现成模块判断",
+      "conversion_cost": "不适用",
+      "priority": "当前不做",
+      "allowed_future_boundary": "只登记方案；不沿用来源旧工期",
+      "minimum_future_acceptance": "未来独立实验需要具体模型、预处理与AIRI对照",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/scripts/layering_check.js",
+          "line": 319
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL01",
+      "project": "Open-LLM-VTuber",
+      "candidate": "主动Prompt与允许沉默",
+      "airi_capability_ids": [
+        "G01",
+        "G07"
+      ],
+      "relative_advantage": "能说明单轮说什么；timer不强于AIRI调度",
+      "verdict": "借鉴设计",
+      "subtype": "改写通用Prompt",
+      "conversion_cost": "低至中",
+      "priority": "高",
+      "allowed_future_boundary": "在AIRI通知链内用授权上下文与记忆，允许不说",
+      "minimum_future_acceptance": "关闭/静默/预算/同内容去重，人设与真实依据稳定",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/prompts/utils/proactive_speak_prompt.txt",
+          "line": 1
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL02",
+      "project": "Open-LLM-VTuber",
+      "candidate": "系统触发不冒充用户发言",
+      "airi_capability_ids": [
+        "B01",
+        "F07",
+        "G01"
+      ],
+      "relative_advantage": "合成触发与真实用户输入区分有明确语义价值",
+      "verdict": "借鉴设计",
+      "subtype": "已有turn元数据内适配",
+      "conversion_cost": "中",
+      "priority": "高",
+      "allowed_future_boundary": "只标来源；保留实际assistant发言，沿现有chat历史",
+      "minimum_future_acceptance": "主动前后历史与重启一致；不把触发指令抽成用户事实",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+          "line": 273
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL03",
+      "project": "Open-LLM-VTuber",
+      "candidate": "显示、朗读、动作三路职责",
+      "airi_capability_ids": [
+        "C07",
+        "E03",
+        "E04"
+      ],
+      "relative_advantage": "契约命名清晰；AIRI已有分流和marker基础",
+      "verdict": "借鉴设计",
+      "subtype": "现有契约内收敛",
+      "conversion_cost": "中",
+      "priority": "中高",
+      "allowed_future_boundary": "不新增WS服务器，不替换AIRI结构化marker",
+      "minimum_future_acceptance": "旁白/工具不读出、动作随句、取消同时停音频与表现",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/output_types.py",
+          "line": 6
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL04",
+      "project": "Open-LLM-VTuber",
+      "candidate": "括号与Unicode过滤",
+      "airi_capability_ids": [
+        "C07",
+        "B01"
+      ],
+      "relative_advantage": "纯函数可比较；未闭合括号会吞后文",
+      "verdict": "借鉴设计",
+      "subtype": "有界叶子候选",
+      "conversion_cost": "低",
+      "priority": "可选",
+      "allowed_future_boundary": "先与AIRI narrative过滤比较，有确切中文缺口才适配",
+      "minimum_future_acceptance": "嵌套/未闭合/代码/数学不丢正文，chunk边界安全",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/tts_preprocessor.py",
+          "line": 108
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL05",
+      "project": "Open-LLM-VTuber",
+      "candidate": "通用模块Prompt骨架",
+      "airi_capability_ids": [
+        "E01",
+        "B04"
+      ],
+      "relative_advantage": "无语言运行时依赖，可读取复用；不能照搬人格和安全倾向",
+      "verdict": "直接复用",
+      "subtype": "文本骨架候选，内容改写",
+      "conversion_cost": "低",
+      "priority": "中",
+      "allowed_future_boundary": "保留MIT来源；用Aimy人设与明确安全边界",
+      "minimum_future_acceptance": "中文读数、简短风格、主动沉默、危机场景离线评测",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/service_context.py",
+          "line": 436
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL06",
+      "project": "Open-LLM-VTuber",
+      "candidate": "配置schema、默认与帮助文案",
+      "airi_capability_ids": [
+        "B06",
+        "I01",
+        "I04"
+      ],
+      "relative_advantage": "有组织方式参考，AIRI已具配置框架",
+      "verdict": "借鉴设计",
+      "subtype": "沿现有TS schema完善",
+      "conversion_cost": "中",
+      "priority": "中",
+      "allowed_future_boundary": "不增加YAML凭据权威或另一provider核心",
+      "minimum_future_acceptance": "校验失败拒写、设置迁移与重启一致、凭证不入日志",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/config_manager/main.py",
+          "line": 11
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL07",
+      "project": "Open-LLM-VTuber",
+      "candidate": "特定ASR/TTS提供方",
+      "airi_capability_ids": [
+        "C06",
+        "C07"
+      ],
+      "relative_advantage": "数量不证明中文效果更强，需要同条件实测",
+      "verdict": "借鉴设计",
+      "subtype": "后置窄adapter",
+      "conversion_cost": "中高",
+      "priority": "后置",
+      "allowed_future_boundary": "如确有体验收益，优先官方SDK窄接口",
+      "minimum_future_acceptance": "同设备语料的错误/延迟/音色/取消/成本/体积",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/asr/asr_factory.py",
+          "line": 5
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL08",
+      "project": "Open-LLM-VTuber",
+      "candidate": "整套首句分句器",
+      "airi_capability_ids": [
+        "C07"
+      ],
+      "relative_advantage": "AIRI已有，候选存在混合逗号与缩写丢字边界",
+      "verdict": "弃用",
+      "subtype": "拒整体迁入",
+      "conversion_cost": "无新增",
+      "priority": "当前不做",
+      "allowed_future_boundary": "保留失败样例，调整已有分句前先评测",
+      "minimum_future_acceptance": "中英文标点/缩写/数字/emoji/无标点/分块输入",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/sentence_divider.py",
+          "line": 173
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL09",
+      "project": "Open-LLM-VTuber",
+      "candidate": "TTSTaskManager与播放回执",
+      "airi_capability_ids": [
+        "C05",
+        "C08"
+      ],
+      "relative_advantage": "clear不取消在途、回执碰撞，未证实更强",
+      "verdict": "弃用",
+      "subtype": "拒整体替换",
+      "conversion_cost": "高",
+      "priority": "当前不做",
+      "allowed_future_boundary": "保留AIRI回执/取消/intent/owner机制",
+      "minimum_future_acceptance": "取消后无晚包/错序/重复播放；回执有turn身份",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/tts_manager.py",
+          "line": 174
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL10",
+      "project": "Open-LLM-VTuber",
+      "candidate": "BasicMemory与JSON历史",
+      "airi_capability_ids": [
+        "F01",
+        "F05",
+        "F07"
+      ],
+      "relative_advantage": "仅文字history，持久化与删除并不满足事实闭环",
+      "verdict": "弃用",
+      "subtype": "拒第二历史权威",
+      "conversion_cost": "高",
+      "priority": "当前不做",
+      "allowed_future_boundary": "使用AIRI聊天数据，长期事实另做增量",
+      "minimum_future_acceptance": "自动写入/跨重启/纠正/删除分别证明",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+          "line": 128
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL11",
+      "project": "Open-LLM-VTuber",
+      "candidate": "Mem0适配",
+      "airi_capability_ids": [
+        "F05",
+        "F07"
+      ],
+      "relative_advantage": "本版本tracked文件为空且导入类不存在",
+      "verdict": "弃用",
+      "subtype": "本版本无实现",
+      "conversion_cost": "不适用",
+      "priority": "当前不做",
+      "allowed_future_boundary": "不把配置名列为可用后端；不评价Mem0独立项目能力",
+      "minimum_future_acceptance": "未来若研究另固定独立版本，不沿空适配入口",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agent_factory.py",
+          "line": 88
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL12",
+      "project": "Open-LLM-VTuber",
+      "candidate": "Letta独立服务",
+      "airi_capability_ids": [
+        "F07",
+        "B03",
+        "C05"
+      ],
+      "relative_advantage": "该适配丢图、history/interrupt为空；独立服务另有成本",
+      "verdict": "借鉴设计",
+      "subtype": "后置独立实验",
+      "conversion_cost": "高",
+      "priority": "后置",
+      "allowed_future_boundary": "不默认增加sidecar，跨语言方式仍待比较后选择",
+      "minimum_future_acceptance": "图像/中断/删除/恢复/不可达/macOS打包单列",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/agent/agents/letta_agent.py",
+          "line": 20
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL13",
+      "project": "Open-LLM-VTuber",
+      "candidate": "MCP、ServiceContext、WS后端",
+      "airi_capability_ids": [
+        "H01",
+        "B01",
+        "C10"
+      ],
+      "relative_advantage": "AIRI已有；候选共享默认agent与漏关闭等增加负担",
+      "verdict": "弃用",
+      "subtype": "拒整体迁入",
+      "conversion_cost": "高",
+      "priority": "当前不做",
+      "allowed_future_boundary": "保留AIRI工具命名空间与连接owner，仅借状态反馈",
+      "minimum_future_acceptance": "同名工具不覆盖、循环预算、断连清理、session隔离",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/websocket_handler.py",
+          "line": 178
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "OL14",
+      "project": "Open-LLM-VTuber",
+      "candidate": "群聊、直播与代理服务",
+      "airi_capability_ids": [
+        "H05",
+        "G01"
+      ],
+      "relative_advantage": "不属于主要单角色桌面的当前缺口",
+      "verdict": "弃用",
+      "subtype": "不纳入本期",
+      "conversion_cost": "高",
+      "priority": "后置",
+      "allowed_future_boundary": "作为来源能力记录，不扩成平台产品",
+      "minimum_future_acceptance": "若有独立需求，再验作用域/用户身份/重连/预算",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/group_conversation.py",
+          "line": 53
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI01",
+      "project": "kirara-ai",
+      "candidate": "记忆scope、composer与decomposer",
+      "airi_capability_ids": [
+        "F07"
+      ],
+      "relative_advantage": "抽象可参考，但缓存查询/extra_identifier隔离不完整",
+      "verdict": "借鉴设计",
+      "subtype": "收敛单角色规则",
+      "conversion_cost": "中",
+      "priority": "中",
+      "allowed_future_boundary": "不搬manager/持久化；保留AIRI消息来源和有效事实规则",
+      "minimum_future_acceptance": "会话切换、来源归属、纠正/删除/重启一致",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/memory_manager.py",
+          "line": 100
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI02",
+      "project": "kirara-ai",
+      "candidate": "注册表与可选能力接口",
+      "airi_capability_ids": [
+        "B06",
+        "H02",
+        "H03"
+      ],
+      "relative_advantage": "AIRI已有对应契约；不是新缺口",
+      "verdict": "直接复用",
+      "subtype": "沿用AIRI既有",
+      "conversion_cost": "无新增",
+      "priority": "保持",
+      "allowed_future_boundary": "用现有provider/kit，kirara仅作接口组织旁证",
+      "minimum_future_acceptance": "能力声明与实际授权一致，不把空方法算支持",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/llm/adapter.py",
+          "line": 22
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI03",
+      "project": "kirara-ai",
+      "candidate": "配置版本迁移",
+      "airi_capability_ids": [
+        "B06",
+        "I01"
+      ],
+      "relative_advantage": "迁移规则可借；不需另起Pydantic服务",
+      "verdict": "借鉴设计",
+      "subtype": "局部迁移规则",
+      "conversion_cost": "低至中",
+      "priority": "中",
+      "allowed_future_boundary": "沿TS配置owner定义版本、校验和旧值迁移",
+      "minimum_future_acceptance": "旧配置损坏/迁移失败可恢复，用户不需删全配置",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/config/global_config.py",
+          "line": 39
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI04",
+      "project": "kirara-ai",
+      "candidate": "schema生成设置表单",
+      "airi_capability_ids": [
+        "I01"
+      ],
+      "relative_advantage": "可减少重复表单，但AIRI设置框架已完整",
+      "verdict": "借鉴设计",
+      "subtype": "有需求才局部适配",
+      "conversion_cost": "中",
+      "priority": "后置",
+      "allowed_future_boundary": "不整体换UI或引入工作流管理台",
+      "minimum_future_acceptance": "保留原路由/默认/禁用/错误状态",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/block/registry.py",
+          "line": 66
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI05",
+      "project": "kirara-ai",
+      "candidate": "追踪统计与内容脱敏",
+      "airi_capability_ids": [
+        "I06",
+        "I04"
+      ],
+      "relative_advantage": "产品反馈可借，AIRI已有IO tracing",
+      "verdict": "借鉴设计",
+      "subtype": "脱敏与诊断规则",
+      "conversion_cost": "低至中",
+      "priority": "中",
+      "allowed_future_boundary": "默认不记录真实凭据/原图/原录音；沿既有trace",
+      "minimum_future_acceptance": "错误可定位，输出不含秘密，删除与留存有界",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/tracing/llm_tracer.py",
+          "line": 219
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI06",
+      "project": "kirara-ai",
+      "candidate": "统一IM适配和市场",
+      "airi_capability_ids": [
+        "H05",
+        "H02"
+      ],
+      "relative_advantage": "优势在统一组织与覆盖；AIRI独立integration已存在",
+      "verdict": "借鉴设计",
+      "subtype": "后置",
+      "conversion_cost": "高",
+      "priority": "后置",
+      "allowed_future_boundary": "不因源码有QQ/微信接口扩大一期范围",
+      "minimum_future_acceptance": "未来每平台身份、收发作用域与退出单列",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/im/adapter.py",
+          "line": 63
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI07",
+      "project": "kirara-ai",
+      "candidate": "可视化积木工作流",
+      "airi_capability_ids": [
+        "H10",
+        "B01"
+      ],
+      "relative_advantage": "属于范式差异，当前桌面陪伴无已确认需要",
+      "verdict": "弃用",
+      "subtype": "不纳入本期",
+      "conversion_cost": "高",
+      "priority": "后置",
+      "allowed_future_boundary": "不替换AIRI聊天/通知编排",
+      "minimum_future_acceptance": "未来真需求再核类型/循环/失败/恢复",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/workflow/core/execution/executor.py",
+          "line": 18
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "KI08",
+      "project": "kirara-ai",
+      "candidate": "运行时pip装插件、exec与双Web栈",
+      "airi_capability_ids": [
+        "H02",
+        "H03",
+        "A01"
+      ],
+      "relative_advantage": "无当前增量，扩大执行和依赖生命周期",
+      "verdict": "弃用",
+      "subtype": "拒整体与相关实现",
+      "conversion_cost": "高",
+      "priority": "当前不做",
+      "allowed_future_boundary": "不导入Python核心或不受限代码执行；许可不是唯一否决理由",
+      "minimum_future_acceptance": "使用现有权限、清单和受控扩展owner",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/plugin_manager/plugin_loader.py",
+          "line": 209
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "CK01",
+      "project": "Charakuru",
+      "candidate": "本机角色制作工具链",
+      "airi_capability_ids": [
+        "E02",
+        "E09"
+      ],
+      "relative_advantage": "提供一条图像到VRM生产流程，非AIRI运行时缺件",
+      "verdict": "直接复用",
+      "subtype": "生产侧候选，未选择",
+      "conversion_cost": "高",
+      "priority": "角色另定后",
+      "allowed_future_boundary": "只有选择该路线后再试本机工具；不搬Kit到产品",
+      "minimum_future_acceptance": "成品有目标表情/口型/眨眼绑定，风格与功耗实测",
+      "source_evidence": [
+        {
+          "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/README.md",
+          "line": 159
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "CK02",
+      "project": "Charakuru",
+      "candidate": "授权Outputs导入AIRI",
+      "airi_capability_ids": [
+        "E02",
+        "E05"
+      ],
+      "relative_advantage": "AIRI已能导入VRM，具体资产的表现能力另核",
+      "verdict": "直接复用",
+      "subtype": "沿用现有导入入口",
+      "conversion_cost": "低但制作另计",
+      "priority": "条件式",
+      "allowed_future_boundary": "Kit对Outputs的条款不保证源画/第三方/AI内容清权",
+      "minimum_future_acceptance": "可导入不等于会笑会说；逐模型验证授权和绑定",
+      "source_evidence": [
+        {
+          "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/LICENSE",
+          "line": 184
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "CK03",
+      "project": "Charakuru",
+      "candidate": "AGENTS指针、工序Skill与交接",
+      "airi_capability_ids": [
+        "H02",
+        "I12"
+      ],
+      "relative_advantage": "内容生产方法可参考，不是新的角色运行能力",
+      "verdict": "借鉴设计",
+      "subtype": "开发与制作流程",
+      "conversion_cost": "低",
+      "priority": "中",
+      "allowed_future_boundary": "借组织结构和可复核交接，不直接复制受限Skills正文",
+      "minimum_future_acceptance": "来源/产物/确认点明确；机器结果不替代视觉选择",
+      "source_evidence": [
+        {
+          "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/AGENTS.md",
+          "line": 45
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "CK04",
+      "project": "Charakuru",
+      "candidate": "确定性脚本与物理对比验收",
+      "airi_capability_ids": [
+        "E05",
+        "E06",
+        "I12"
+      ],
+      "relative_advantage": "成品质量验证方法有价值，AIRI运行器无需替换",
+      "verdict": "借鉴设计",
+      "subtype": "生产侧验证方法",
+      "conversion_cost": "中",
+      "priority": "角色另定后",
+      "allowed_future_boundary": "用技术检查+人工审美；不直接继承旧价格和单一格式决定",
+      "minimum_future_acceptance": "目标部位物理ON/OFF有差异、错误退出；视觉另验",
+      "source_evidence": [
+        {
+          "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/scripts/verify-springs.mjs",
+          "line": 7
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "CK05",
+      "project": "Charakuru",
+      "candidate": "Kit/Skill/donor整体嵌入或在线建模",
+      "airi_capability_ids": [
+        "A01",
+        "E09",
+        "H08"
+      ],
+      "relative_advantage": "与一期运行时无关且再分发/素材条款需单独处理",
+      "verdict": "弃用",
+      "subtype": "不纳入本期",
+      "conversion_cost": "高",
+      "priority": "当前不做",
+      "allowed_future_boundary": "区分合条件私有操作与对外再分发，不称所有复制都禁止",
+      "minimum_future_acceptance": "当前不实施；未来若范围变化再核具体许可与资产",
+      "source_evidence": [
+        {
+          "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/LICENSE",
+          "line": 156
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "CH01",
+      "project": "chromatic",
+      "candidate": "调色库、UnoCSS预设与现有主题UI",
+      "airi_capability_ids": [
+        "I02"
+      ],
+      "relative_advantage": "AIRI已依赖1.1.4并有正式色相设置；无需新引入",
+      "verdict": "直接复用",
+      "subtype": "沿用AIRI既有",
+      "conversion_cost": "无新增",
+      "priority": "保持",
+      "allowed_future_boundary": "维护既有依赖，品牌内容按已定范围改；本轮不改",
+      "minimum_future_acceptance": "依赖与真实消费者一致，后续改色不损坏明暗主题",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/uno.config.ts",
+          "line": 7
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/system/color-scheme.vue",
+          "line": 91
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    },
+    {
+      "id": "CH02",
+      "project": "chromatic",
+      "candidate": "复制第二调色实现/把playground变产品",
+      "airi_capability_ids": [
+        "I02",
+        "I01"
+      ],
+      "relative_advantage": "没有新增能力，制造重复实现或超范围界面",
+      "verdict": "弃用",
+      "subtype": "拒重复引入",
+      "conversion_cost": "无新增",
+      "priority": "当前不做",
+      "allowed_future_boundary": "保留开发参考，不为用满API新增季节/情绪换色需求",
+      "minimum_future_acceptance": "有真实产品需求再用已装库，无需迁移源码",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-13-chromatic拆解复用评估.md",
+          "line": 141
+        }
+      ],
+      "adoption_status": "研究裁决建议，尚未接入"
+    }
+  ]
+}

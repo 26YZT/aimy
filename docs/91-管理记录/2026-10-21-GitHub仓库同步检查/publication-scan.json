@@ -1,0 +1,51 @@
+{
+  "scope": "Git tracked files plus non-ignored untracked files. No runtime profile or credential store reads. Matches contain no values.",
+  "candidate_files": 7678,
+  "text_files_scanned": 7260,
+  "binary_files_skipped": 347,
+  "bytes": 219711162,
+  "findings": [
+    {
+      "path": "aimy-app/.agents/skills/vueuse-functions/references/useJwt.md",
+      "line": 21,
+      "rule": "jwt-value"
+    },
+    {
+      "path": "aimy-app/.github/workflows/deploy-huggingface-spaces.yml",
+      "line": 20,
+      "rule": "url-credential"
+    },
+    {
+      "path": "aimy-app/.github/workflows/sponsors-svg.yml",
+      "line": 57,
+      "rule": "url-credential"
+    },
+    {
+      "path": "aimy-app/.github/workflows/update-post-release-readme-urls.yml",
+      "line": 75,
+      "rule": "url-credential"
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/providers/config-local-only.browser.test.ts",
+      "line": 144,
+      "rule": "url-credential"
+    },
+    {
+      "path": "aimy-app/server/apps/api/src/services/adapters/s3-config.test.ts",
+      "line": 40,
+      "rule": "url-credential"
+    },
+    {
+      "path": "aimy-app/server/apps/api/src/utils/envelope-crypto.test.ts",
+      "line": 17,
+      "rule": "provider-secret"
+    },
+    {
+      "path": "aimy-app/server/apps/api/src/utils/envelope-crypto.test.ts",
+      "line": 27,
+      "rule": "provider-secret"
+    }
+  ],
+  "limitation": "Pattern scan is not proof that every possible secret or image is absent.",
+  "review": "All 8 remaining matches are inherited documentation samples, CI variable expressions, and synthetic test inputs. The legacy credential scratch file is absent from the latest index. No credential validity checks were run."
+}

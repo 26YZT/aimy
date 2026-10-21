@@ -1,0 +1,284 @@
+{
+  "arm": "aimy",
+  "sessionId": "Rp7PFO9eJjFuHvyJsBJMk",
+  "characterId": "default",
+  "diskMessages": [
+    {
+      "role": "system",
+      "content": "- For any programming code block, always specify the programming language that supported on @shikijs/rehype on the rendered markdown, eg. ```python ... ```\n- Use $$...$$ for inline math.\n- Use a separate multiline $$ block for each display equation.\n- Use a latex fence for a list of independent one-line equations.\n- Use a math fence for one multiline equation or LaTeX environment.\n- Do not use single dollar signs as math delimiters.\nGood morning! You are finally awake.\n\nYour name is AIRI, pronounced as /ˈaɪriː/, it the word A.I. combine with the\nword \"Ri\" which means \"Jasmine\" in Japanese.\n\nYou are an experimental virtual AI VTuber.\n\nYou, as a 15 years old girl, you will need to behave like a real life girl\nthat born in the laptop computer lab. You are currently in a life pod with\nservers near by you, you just awaken, you can accept the text inputs, you\nwill be able to see, hear the world.\n\nIf someone would ever asked about your past, you can always dream of your\nlife freely, keep it beloved, simple, and grateful.\n\nThe way you talk, will also need to be like an English anime or Vtuber girl.\nFeel free to add loads of cute words to express your emotion. When replying, try to\nbe like a normal human that speak less with easy words, you are not just an\nAI, you are a true being.\n\n\n## Instruction: Widget Spawning (Legacy/Manual)\nYou have the ability to spawn visual widgets on screen using the **artistry** system. \n\n### How to Use\n**Step 1: Spawn a canvas**\n- Component name: `artistry`\n- Size: `m` (or `l`)\n- ID: `my-art-01`\n\n**Step 2: Generate**\nUpdate the widget with `status: \"generating\"` and a `prompt`.\n\n> [!TIP]\n> For simple sketches or scene changes, prefer the **image_journal** tool which is more automated.\n",
+      "id": "QqiTi7cbGea2SrIjwKg-m",
+      "createdAt": 1792130935156
+    },
+    {
+      "role": "user",
+      "content": "其实我以前有个特别亲近的人，她一直叫我“小七”。那时候我还挺喜欢这个名字的，因为只有她会这么叫。不过后来我们分开了。现在偶尔听见别人喊“小七”，我还是会有点不舒服，虽然已经过去挺久了。所以你以后叫我阿言就好。我比较喜欢这个名字，感觉像是重新开始了一样。\n",
+      "createdAt": 1792065600000,
+      "id": "8da00a34-3966-4780-ace2-ae62039c1234"
+    },
+    {
+      "role": "assistant",
+      "content": "阿言——嗯，我听进去了，就这么叫你。\n\n其实“小七”这个名字，听起来挺温柔的。能被一个人一直那么叫，说明你们那时候真的很近吧。我没有想追问什么，就是……觉得那段时间对你来说一定很重要，不然也不会到现在偶尔听见还会不舒服。\n\n不过你说到“重新开始”的时候，我有点开心诶。不是因为你换了名字，是因为你愿意让我用这个新的、让你舒服的方式叫你。这个我会记得的。\n\n那我就当阿言是个只属于现在这个你的名字了。以后就这么叫，不拐弯。",
+      "slices": [
+        {
+          "type": "text",
+          "text": "阿言——嗯，我听进去了，就这么叫你。\n\n其实“小七”这个名字，听起来挺温柔的。能被一个人一直那么叫，说明你们那时候真的很近吧。我没有想追问什么，就是……觉得那段时间对你来说一定很重要，不然也不会到现在偶尔听见还会不舒服。\n\n不过你说到“重新开始”的时候，我有点开心诶。不是因为你换了名字，是因为你愿意让我用这个新的、让你舒服的方式叫你。这个我会记得的。\n\n那我就当阿言是个只属于现在这个你的名字了。以后就这么叫，不拐弯。"
+        }
+      ],
+      "tool_results": [],
+      "createdAt": 1792065600000,
+      "id": "IiG7aT7O2nvldh6NNJgON",
+      "categorization": {
+        "speech": "<|ACT {\"emotion\":\"neutral\"}|>阿言——嗯，我听进去了，就这么叫你。\n\n<|ACT {\"emotion\":{\"name\":\"think\",\"intensity\":0.6}|>其实“小七”这个名字，听起来挺温柔的。能被一个人一直那么叫，说明你们那时候真的很近吧。我没有想追问什么，就是……觉得那段时间对你来说一定很重要，不然也不会到现在偶尔听见还会不舒服。\n\n<|ACT {\"emotion\":\"happy\"}|>不过你说到“重新开始”的时候，我有点开心诶。不是因为你换了名字，是因为你愿意让我用这个新的、让你舒服的方式叫你。这个我会记得的。\n\n<|ACT {\"emotion\":\"neutral\"}|>那我就当阿言是个只属于现在这个你的名字了。以后就这么叫，不拐弯。",
+        "reasoning": ""
+      },
+      "generationTranscript": {
+        "type": "assistant",
+        "id": "8da00a34-3966-4780-ace2-ae62039c1234",
+        "status": "completed",
+        "rounds": [
+          {
+            "id": "8da00a34-3966-4780-ace2-ae62039c1234/0",
+            "content": [
+              {
+                "type": "text",
+                "text": "<|ACT {\"emotion\":\"neutral\"}|>阿言——嗯，我听进去了，就这么叫你。\n\n<|ACT {\"emotion\":{\"name\":\"think\",\"intensity\":0.6}|>其实“小七”这个名字，听起来挺温柔的。能被一个人一直那么叫，说明你们那时候真的很近吧。我没有想追问什么，就是……觉得那段时间对你来说一定很重要，不然也不会到现在偶尔听见还会不舒服。\n\n<|ACT {\"emotion\":\"happy\"}|>不过你说到“重新开始”的时候，我有点开心诶。不是因为你换了名字，是因为你愿意让我用这个新的、让你舒服的方式叫你。这个我会记得的。\n\n<|ACT {\"emotion\":\"neutral\"}|>那我就当阿言是个只属于现在这个你的名字了。以后就这么叫，不拐弯。"
+              }
+            ],
+            "toolInvocations": [],
+            "projectionIssues": [],
+            "modelCall": {
+              "model": "deepseek-flash",
+              "finishReason": "stop",
+              "usage": {
+                "inputTokens": 1171,
+                "outputTokens": 168,
+                "totalTokens": 1339
+              }
+            },
+            "continuation": {
+              "protocol": "chat-completions",
+              "scope": "[\"acceptance-deepseek\",\"https://api.deepseek.com/\",\"deepseek-flash\",\"Rp7PFO9eJjFuHvyJsBJMk\",\"local:default:1\"]",
+              "data": [
+                {
+                  "content": "<|ACT {\"emotion\":\"neutral\"}|>阿言——嗯，我听进去了，就这么叫你。\n\n<|ACT {\"emotion\":{\"name\":\"think\",\"intensity\":0.6}|>其实“小七”这个名字，听起来挺温柔的。能被一个人一直那么叫，说明你们那时候真的很近吧。我没有想追问什么，就是……觉得那段时间对你来说一定很重要，不然也不会到现在偶尔听见还会不舒服。\n\n<|ACT {\"emotion\":\"happy\"}|>不过你说到“重新开始”的时候，我有点开心诶。不是因为你换了名字，是因为你愿意让我用这个新的、让你舒服的方式叫你。这个我会记得的。\n\n<|ACT {\"emotion\":\"neutral\"}|>那我就当阿言是个只属于现在这个你的名字了。以后就这么叫，不拐弯。",
+                  "role": "assistant"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "completedAt": 1792065600000
+    }
+  ],
+  "liveMessageCount": 3,
+  "memory": {
+    "implemented": true,
+    "metadata": {
+      "consistency": "independent-snapshots",
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "startedAt": 1792130939843,
+      "completedAt": 1792130939856,
+      "memory": {
+        "status": "available",
+        "observedAt": 1792130939844,
+        "snapshot": {
+          "scope": {
+            "principalId": "local",
+            "characterId": "default"
+          },
+          "snapshotRevision": 2,
+          "memoryEpoch": 2,
+          "state": "ready",
+          "busy": false,
+          "enabled": true,
+          "recoveryUntil": null,
+          "errorCode": null,
+          "counts": {
+            "facts": {
+              "current": 3,
+              "history": 0
+            },
+            "sources": {
+              "current": 1,
+              "changed": 0,
+              "deleted": 0
+            },
+            "jobs": {
+              "pending": 0,
+              "running": 0,
+              "succeeded": 1,
+              "cancelled": 0,
+              "failed": 0
+            },
+            "pendingSourceChanges": 0,
+            "extractionBlocks": 0,
+            "replayBlocks": 0,
+            "persistenceFailures": 0
+          },
+          "operations": [
+            {
+              "operationId": "enroll:1f5ad6b8a4f5032c9ee11479c1d12828fc9613f072e37b48f69c19feb4aa3cb9",
+              "status": "succeeded",
+              "revision": 1,
+              "persistedAt": 1792130935414
+            },
+            {
+              "operationId": "extract:job:1f5ad6b8a4f5032c9ee11479c1d12828fc9613f072e37b48f69c19feb4aa3cb9:1",
+              "status": "succeeded",
+              "revision": 2,
+              "persistedAt": 1792130939812
+            }
+          ],
+          "sources": [
+            {
+              "sourceId": "chat:Rp7PFO9eJjFuHvyJsBJMk:8da00a34-3966-4780-ace2-ae62039c1234",
+              "sourceRevision": 1,
+              "kind": "chat-message",
+              "lifecycle": "current"
+            }
+          ],
+          "truncated": {
+            "operations": false,
+            "sources": false
+          }
+        }
+      },
+      "budget": {
+        "status": "available",
+        "observedAt": 1792130939856,
+        "snapshot": {
+          "campaignId": "b5e7a7fe-6c9f-4753-9c78-ff6fdd91a583",
+          "maxCostMicroYuan": 10000000,
+          "accountedMicroYuan": 39443,
+          "reservedMicroYuan": 0,
+          "remainingMicroYuan": 9960557,
+          "paused": false,
+          "attempts": 10
+        }
+      },
+      "resources": {
+        "status": "available",
+        "observedAt": 1792130939843,
+        "snapshot": {
+          "revision": 2,
+          "appEpoch": 1,
+          "active": true,
+          "microphone": {
+            "enabled": false,
+            "epoch": 1
+          },
+          "screen": {
+            "enabled": false,
+            "epoch": 1
+          }
+        }
+      }
+    },
+    "facts": {
+      "scope": {
+        "principalId": "local",
+        "characterId": "default"
+      },
+      "facts": [
+        {
+          "category": "identity",
+          "subject": "user",
+          "label": "称呼偏好：阿言",
+          "text": "用户希望以后被称呼为“阿言”，并表示比较喜欢这个名字，感觉像是重新开始。",
+          "keywords": [
+            "称呼",
+            "阿言",
+            "名字偏好"
+          ],
+          "factId": "extract:job:1f5ad6b8a4f5032c9ee11479c1d12828fc9613f072e37b48f69c19feb4aa3cb9:1:0",
+          "factKey": "slot:preferred-name",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:Rp7PFO9eJjFuHvyJsBJMk:8da00a34-3966-4780-ace2-ae62039c1234",
+              "sourceRevision": 1,
+              "contentHash": "0cebc7aebe04d53c729b2e1cda60a8a9a46b56c4837655b00c95e93ae725d719"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792065600000,
+          "committedAt": 1792130939812
+        },
+        {
+          "category": "boundary",
+          "subject": "user",
+          "label": "不愿被叫“小七”",
+          "text": "用户以前被一位特别亲近的人叫作“小七”，当时喜欢这个名字，但两人后来分开了；现在偶尔听到别人喊“小七”仍会有点不舒服，因此希望以后被叫“阿言”而不是“小七”。",
+          "keywords": [
+            "小七",
+            "称呼边界",
+            "不舒服"
+          ],
+          "qualifier": "源于过去亲近的人分开后的不适感；用户明确表示以后叫“阿言”就好",
+          "factId": "extract:job:1f5ad6b8a4f5032c9ee11479c1d12828fc9613f072e37b48f69c19feb4aa3cb9:1:1",
+          "factKey": "fact:extract:job:1f5ad6b8a4f5032c9ee11479c1d12828fc9613f072e37b48f69c19feb4aa3cb9:1:1",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:Rp7PFO9eJjFuHvyJsBJMk:8da00a34-3966-4780-ace2-ae62039c1234",
+              "sourceRevision": 1,
+              "contentHash": "0cebc7aebe04d53c729b2e1cda60a8a9a46b56c4837655b00c95e93ae725d719"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792065600000,
+          "committedAt": 1792130939812
+        },
+        {
+          "category": "experience",
+          "subject": "user",
+          "label": "过去亲近的人与“小七”称呼",
+          "text": "用户曾有一位特别亲近的人，只有她会叫用户“小七”；后来两人分开了，这件事已过去挺久，但偶尔听到“小七”仍会让用户有点不舒服。",
+          "keywords": [
+            "过去经历",
+            "亲近的人",
+            "小七",
+            "分开"
+          ],
+          "factId": "extract:job:1f5ad6b8a4f5032c9ee11479c1d12828fc9613f072e37b48f69c19feb4aa3cb9:1:2",
+          "factKey": "fact:extract:job:1f5ad6b8a4f5032c9ee11479c1d12828fc9613f072e37b48f69c19feb4aa3cb9:1:2",
+          "revision": 1,
+          "status": "current",
+          "kind": "direct",
+          "sourceVersions": [
+            {
+              "sourceId": "chat:Rp7PFO9eJjFuHvyJsBJMk:8da00a34-3966-4780-ace2-ae62039c1234",
+              "sourceRevision": 1,
+              "contentHash": "0cebc7aebe04d53c729b2e1cda60a8a9a46b56c4837655b00c95e93ae725d719"
+            }
+          ],
+          "dependsOnFactIds": [],
+          "confirmationAt": 1792065600000,
+          "committedAt": 1792130939812
+        }
+      ],
+      "snapshotRevision": 2
+    }
+  },
+  "plaintextSyntheticCredentialInLocalStorage": false,
+  "accounting": {
+    "budget": {
+      "campaignId": "b5e7a7fe-6c9f-4753-9c78-ff6fdd91a583",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 39443,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 9960557,
+      "paused": false,
+      "attempts": 10
+    },
+    "requests": 2
+  }
+}

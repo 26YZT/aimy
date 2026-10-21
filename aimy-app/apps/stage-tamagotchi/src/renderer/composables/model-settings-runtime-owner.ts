@@ -1,14 +1,16 @@
 import type { Live2DExpressionSettingsCommand } from '@proj-airi/stage-ui-live2d/stores/expression-store'
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
 import type { ModelSettingsRuntimeSnapshot } from '@proj-airi/stage-ui/components/scenarios/settings/model-settings/runtime'
 import type { MaybeRefOrGetter } from 'vue'
 
-import type { ModelSettingsRuntimeContext } from '../../shared/model-settings-runtime'
+import type { ApplyLive2DExpressionSettingsCommandResponse, ModelSettingsRuntimeContext } from '../../shared/model-settings-runtime'
 
 import { defineInvokeHandler } from '@moeru/eventa'
 import { onBeforeUnmount, toValue, watch } from 'vue'
 
 import {
   applyLive2DExpressionSettingsCommand,
+  applyVrmGesture,
   getModelSettingsRuntimeContext,
   modelSettingsRuntimeOwnerGone,
   modelSettingsRuntimeSnapshotChanged,
@@ -20,6 +22,7 @@ interface UseModelSettingsRuntimeOwnerOptions {
   renderer: MaybeRefOrGetter<ModelSettingsRuntimeSnapshot['renderer'] | undefined>
   runtimeSnapshot: MaybeRefOrGetter<ModelSettingsRuntimeSnapshot>
   applyLive2DExpressionCommand: (command: Live2DExpressionSettingsCommand) => void
+  applyVrmGesture?: (gesture: VrmGesture) => boolean
   context?: ModelSettingsRuntimeContext
 }
 
@@ -78,9 +81,25 @@ export function useModelSettingsRuntimeOwner(options: UseModelSettingsRuntimeOwn
     }
   })
 
+  const stopGestureCommands = defineInvokeHandler(context, applyVrmGesture, (request): ApplyLive2DExpressionSettingsCommandResponse => {
+    const snapshot = toValue(options.runtimeSnapshot)
+    if (request.ownerInstanceId !== options.ownerInstanceId)
+      return { applied: false, snapshot, rejectionReason: 'owner-changed' }
+    if (!request.modelId || request.modelId !== snapshot.modelId)
+      return { applied: false, snapshot, rejectionReason: 'model-changed' }
+    if (toValue(options.renderer) !== 'vrm' || snapshot.phase !== 'mounted' || snapshot.controlsLocked)
+      return { applied: false, snapshot, rejectionReason: 'runtime-unavailable' }
+    if (!['wave', 'nod', 'stop'].includes(request.gesture))
+      return { applied: false, snapshot, rejectionReason: 'runtime-unavailable' }
+
+    const applied = options.applyVrmGesture?.(request.gesture) ?? false
+    return { applied, snapshot, rejectionReason: applied ? undefined : 'runtime-unavailable' }
+  })
+
   onBeforeUnmount(() => {
     stopSnapshotRequests()
     stopExpressionCommands()
+    stopGestureCommands()
     void context.emit(modelSettingsRuntimeOwnerGone, {
       ownerInstanceId: options.ownerInstanceId,
     }).catch((error) => {

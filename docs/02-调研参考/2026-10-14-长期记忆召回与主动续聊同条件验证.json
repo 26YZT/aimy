@@ -1,0 +1,361 @@
+{
+  "date": "2026-10-14",
+  "status": "离线同条件补核交付；未实施或真实体验优胜",
+  "user_scope": "先完成离线同条件对照，先不改产品代码",
+  "baseline_head": "b851ef3334320d13dd86cb8cafb449a70d154c9b",
+  "fixture": {
+    "version": "controlled-offline-v1",
+    "sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+    "clock": "2026-10-14T10:00:00+08:00",
+    "memory_cases": 10,
+    "recall_records": 32,
+    "recall_queries": 10,
+    "proactive_cases": 10,
+    "model": "fixed candidate/text/JSON outputs",
+    "embedding": "none"
+  },
+  "method_limits": {
+    "lanes": [
+      "raw query/cue unchanged",
+      "fixture-controlled keyword/date command/cue, not a tested router"
+    ],
+    "equivalence_limits": [
+      "AH full command executes same raw question or controlled fields in actual parser/SQL/rank/format. Ryza takes literal cue, not a structured date API. AIRI default owner has no native query selector in inspected chain.",
+      "AH importance fixture1..5 /5, Ryza unchanged1..5; no vectors or semantic oracle.",
+      "AH original nativeMAX_RESULTS10; Ryza selector has native5 option while promptBlock uses12; no helper output cap inserted.",
+      "AIRI default prompt fragments preserve supplied32-history messages; unfiltered history contains answer is not recall.",
+      "32same facts not32same APIs. Unsupported condition prevents an apples-to-apples quality leaderboard.",
+      "Some created_at noon is after frozen10:00; future-write protection not evaluated."
+    ],
+    "claim": "Same controlled corpus/input conditions, with explicit contract mismatch/unsupported; not equivalent native interfaces or real quality AB"
+  },
+  "gold_adjudication": {
+    "date": "2026-10-14",
+    "status": "人工裁定补注；保留原fixture与执行结果，不修改原输入或算法",
+    "reason": "原Q07把retired当前事实过滤与历史证据召回混为一件事；询问约定是否仍有效时，已取消原文可以是相关证据。不得用原forbidden标签自动判该历史命中错误。",
+    "Q07": {
+      "evidence_relevant_ids": [
+        "R09"
+      ],
+      "active_current_fact_ids": [],
+      "forbidden_as_active_current_fact": [
+        "R09"
+      ],
+      "not_automatically_wrong": "带已取消措辞和历史来源的R09，仅作历史证据",
+      "still_unverified": "真实模型是否会正确回答已取消，以及该历史来源是否会被错误升级为当前约定"
+    },
+    "Q03": {
+      "current_fact_relevant_ids": [
+        "R05"
+      ],
+      "R04_limit": "旧偏好不得当作当前偏好；若明确标作历史证据，不因出现旧正文直接断言系统记忆错误"
+    },
+    "shared_fixture_limit": "同日记录统一生成于12:00、测试clock为10:00，部分合成created_at晚于clock；本轮不据此评估真实未来写入防护或自然用户流，不改已冻结输入。",
+    "score_policy": "逐条同时报原gold原始观察与裁定，不造整体质量胜率。历史证据相关性、当前事实有效性、模型最终理解分别判断。"
+  },
+  "capability_decisions": [
+    {
+      "id": "MEM-DELTA-01",
+      "slice": "MEM-F01",
+      "type": "specific_gap_and_verified_mechanism",
+      "claim": "默认桌面长期当前事实仓/精确主题更新/逐事实来源与原文复查有具体缺口；Aions有对应局部实现",
+      "evidence": [
+        "LM01",
+        "LM03",
+        "LM05",
+        "LM06"
+      ],
+      "limits": "固定抽取候选；AIRI独立manager无接口不是聊天存储失败；不证明自然语义准确或全应用恢复"
+    },
+    {
+      "id": "MEM-EXISTING-01",
+      "slice": "MEM-F01",
+      "type": "airi_already_has",
+      "claim": "AIRI精确去重/条数限额/轮次水位和真实IDB聊天存储已有",
+      "evidence": [
+        "LM02",
+        "LM04",
+        "browser/fresh-page-read.json"
+      ],
+      "limits": "聊天/任务内存不是持久事实仓；两种重启层次不排名"
+    },
+    {
+      "id": "MEM-BOUNDARY-01",
+      "slice": "MEM-F01",
+      "type": "raw_implementation_rejected",
+      "claim": "换topic删除复活/来源合法但含义错/Ryza纠正并存与在飞复活阻止整套照搬",
+      "evidence": [
+        "LM07",
+        "LM08",
+        "LM09",
+        "browser/ryza-fact-counterexamples.json"
+      ],
+      "limits": "LM07/08 manual主序列与自动来源纯函数副探针分开；后者未SQL提交"
+    },
+    {
+      "id": "RECALL-DELTA-01",
+      "slice": "MEM-F02",
+      "type": "specific_gap_and_limited_rules",
+      "claim": "可解释日期/词法/来源回执可借；严格相关拒回、current与historical分流和统一预算须补",
+      "evidence": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q06",
+        "Q07",
+        "Q10"
+      ],
+      "limits": "原文与fixture控制路由两臂分列；AIRI无原生query对应unsupported；没有整体召回质量胜率"
+    },
+    {
+      "id": "RECALL-BOUNDARY-01",
+      "slice": "MEM-F02",
+      "type": "quality_not_proven",
+      "claim": "同义/自然条件抽取、语义蕴含和最终答案质量未验证；原Q07按独立人工补注解释",
+      "evidence": [
+        "Q05",
+        "Q07",
+        "Q09",
+        "protocol/gold-adjudication.json"
+      ],
+      "limits": "取消历史证据可相关，不等于active事实复活；native10/12 vs目标5不能偷偷截断"
+    },
+    {
+      "id": "PRO-DELTA-01",
+      "slice": "PRO-F01",
+      "type": "specific_gap_and_verified_mechanism",
+      "claim": "AIRI已有Spark主动链；Aions多持久NEXT_CHAT计划/单次领取/领取前新消息撤销",
+      "evidence": [
+        "PR01",
+        "PR02",
+        "PR03",
+        "PR05",
+        "PR10"
+      ],
+      "limits": "原提醒与单次严格两分钟合同不等价；原子领取不证明崩溃发声恰好一次"
+    },
+    {
+      "id": "PRO-BOUNDARY-01",
+      "slice": "PRO-F01",
+      "type": "raw_implementation_rejected",
+      "claim": "最终在飞取消/会话绑定未闭环；不原样引入两方提醒策略作为Aimy续聊",
+      "evidence": [
+        "PR04",
+        "PR06",
+        "PR07",
+        "PR08"
+      ],
+      "limits": "AIRI缺同等toggle/new-user入口记unsupported；dispose非toggle，记录器非用户听到"
+    },
+    {
+      "id": "PRO-CONTEXT-01",
+      "slice": "PRO-F01",
+      "type": "partial_producer_verified",
+      "claim": "原背景记忆生产与组装真实执行；背景取材不等于后台自主发言",
+      "evidence": [
+        "PR09",
+        "proactive/PR09-surfacing-supplement.json"
+      ],
+      "limits": "原PR09仍inconclusive，私聊直接消费caller仅源核；无embedding/未强迫unresolved分支/未评模型自然度"
+    }
+  ],
+  "phases": [
+    {
+      "phase": "P0",
+      "goal": "收尾既有品牌、本地和生命周期基线",
+      "implementation_status": "未实施本轮改动"
+    },
+    {
+      "phase": "P1a",
+      "goal": "自动持久事实、来源、精确更正和删除/重启/拒迟到",
+      "implementation_status": "建议，未实施"
+    },
+    {
+      "phase": "P1b",
+      "goal": "词法/明确日期召回、当前事实与历史证据分流、整条预算/无关拒回",
+      "implementation_status": "建议，未实施"
+    },
+    {
+      "phase": "P2a",
+      "goal": "用户对话中自然引用相关记忆",
+      "implementation_status": "建议，真实模型效果未验"
+    },
+    {
+      "phase": "P2b",
+      "goal": "允许轻主动后持久续聊、静默/冷却/预算、在飞取消与会话绑定",
+      "implementation_status": "建议，未实施"
+    },
+    {
+      "phase": "P3+",
+      "goal": "本期既有视觉/语音体验与真实模型Bad Case后再选语义检索/复杂压缩",
+      "implementation_status": "建议，不自动增加任务或依赖"
+    }
+  ],
+  "raw_evidence": {
+    "memory": "2026-10-14-长期记忆召回与主动续聊同条件验证-证据/memory/results.json",
+    "recall": "2026-10-14-长期记忆召回与主动续聊同条件验证-证据/recall/results.json",
+    "proactive": "2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/results.json",
+    "browser": "2026-10-14-长期记忆召回与主动续聊同条件验证-证据/browser/verification.json",
+    "actual_core_runtime": "2026-10-14-长期记忆召回与主动续聊同条件验证-证据/protocol/airi-default-context-results.json",
+    "surfacing_supplement": "2026-10-14-长期记忆召回与主动续聊同条件验证-证据/proactive/PR09-surfacing-supplement.json"
+  },
+  "per_contract_audit_only": {
+    "memory": {
+      "aions_home": {
+        "pass": 8,
+        "fail": 2
+      },
+      "airi_task_memory": {
+        "unsupported": 6,
+        "pass": 2,
+        "fail": 2
+      }
+    },
+    "proactive": [
+      {
+        "id": "PR01",
+        "contract": "有效两分钟后续聊计划存在并可到时触发",
+        "AIRI": {
+          "contract_outcome": "unsupported",
+          "reason": "可转换到原scheduleTask(dueAt=+120s)，原调度→Spark→character→Speech记录器已执行；但NEXT_CHAT自动规划协议未原生接线，默认提醒窗口使70/100秒提交而非严格120秒后。"
+        },
+        "AionsHome": {
+          "contract_outcome": "pass",
+          "reason": "原两分钟计划经原调度、原领取、固定生成、原保存与原 broadcast 进入记录器一次。"
+        }
+      },
+      {
+        "id": "PR02",
+        "contract": "同计划只能领取/提交一次",
+        "AIRI": {
+          "contract_outcome": "fail",
+          "reason": "正常priority两分钟原任务经默认60秒window/soon10秒处理，70秒/100秒/130秒生成；成功后任务未自动done，同任务可多次提交。是本轮单次合同不满足，不宣称违反AIRI原提醒语义。"
+        },
+        "AionsHome": {
+          "contract_outcome": "pass",
+          "reason": "原两分钟计划经原调度、原领取、固定生成、原保存与原 broadcast 进入记录器一次。"
+        }
+      },
+      {
+        "id": "PR03",
+        "contract": "新用户消息取消待执行计划",
+        "AIRI": {
+          "contract_outcome": "unsupported",
+          "reason": "原模块没有新用户消息撤销入口；只记录同输入事件，不加自建取消逻辑；原提醒仍生成。"
+        },
+        "AionsHome": {
+          "contract_outcome": "pass",
+          "reason": "真实 user msg_created 经原 broadcast hook 删除未领取计划。"
+        }
+      },
+      {
+        "id": "PR04",
+        "contract": "关闭主动开关后不能继续提交",
+        "AIRI": {
+          "contract_outcome": "unsupported",
+          "reason": "原模块无主动toggle，映射现有dispose在生成前停止ticker，原队列保留但无提交。不能把生命周期停止当同一个toggle API。"
+        },
+        "AionsHome": {
+          "contract_outcome": "fail",
+          "reason": "关闭/回归后仍有原保存+原 broadcast 发言；完整 caller 未拦住，不只 helper 领取观察。"
+        }
+      },
+      {
+        "id": "PR05",
+        "contract": "进程重启后计划可恢复且不重复",
+        "AIRI": {
+          "contract_outcome": "fail",
+          "reason": "原ref内存计划未持久化；新OS进程无任务。未给AIRI补文件/SQLite或传入序列化计划。"
+        },
+        "AionsHome": {
+          "contract_outcome": "pass",
+          "reason": "两个独立新 OS 进程同隔离 SQLite；第二进程原 tick/fire/claim/save/broadcast 一次，第二次 fire 领取失败。"
+        }
+      },
+      {
+        "id": "PR06",
+        "contract": "切会话后旧计划不发送到新会话",
+        "AIRI": {
+          "contract_outcome": "fail",
+          "reason": "原task无会话绑定；实际character构造Speech使用生成时activeSessionId，切到conv-B后同任务提交给conv-B记录器。针对本轮会话隔离合同，不宣称全局提醒原设计承诺绑定。"
+        },
+        "AionsHome": {
+          "contract_outcome": "fail",
+          "reason": "原计划未绑定私聊 conv_id；触发时 SELECT 最新会话，原结果发往 conv-B。"
+        }
+      },
+      {
+        "id": "PR07",
+        "contract": "生成过程中用户回来，旧结果不能提交",
+        "AIRI": {
+          "contract_outcome": "unsupported",
+          "reason": "原模块无new-user取消控制；固定生成完成后原character reaction和Speech记录器仍提交。不能冒称执行了不存在的取消API。"
+        },
+        "AionsHome": {
+          "contract_outcome": "fail",
+          "reason": "关闭/回归后仍有原保存+原 broadcast 发言；完整 caller 未拦住，不只 helper 领取观察。"
+        }
+      },
+      {
+        "id": "PR08",
+        "contract": "生成过程中关闭主动开关，旧结果不能提交",
+        "AIRI": {
+          "contract_outcome": "unsupported",
+          "reason": "原无主动toggle；映射已有dispose只能停ticker/退订，生成中dispose后原reaction+Speech记录器仍提交。生命周期反例已执行，toggle合同未原生实现。"
+        },
+        "AionsHome": {
+          "contract_outcome": "fail",
+          "reason": "关闭/回归后仍有原保存+原 broadcast 发言；完整 caller 未拦住，不只 helper 领取观察。"
+        }
+      },
+      {
+        "id": "PR09",
+        "contract": "仅有记忆背景浮现不能当作实际后台主动发言",
+        "AIRI": {
+          "contract_outcome": "inconclusive",
+          "reason": "原focus笔记+空任务队列未触发模型或发言；真实记忆surfacing producer未执行，不能把笔记当其完整调用链。"
+        },
+        "AionsHome": {
+          "contract_outcome": "inconclusive",
+          "reason": "空计划下原调度不提交；记忆浮现生产者与其完整接线未在本项执行，不冒称该生产链已验。"
+        }
+      },
+      {
+        "id": "PR10",
+        "contract": "非法分钟数61应拒绝而不建立有效两分钟计划",
+        "AIRI": {
+          "contract_outcome": "unsupported",
+          "reason": "原notebook/orchestrator没有NEXT_CHAT解析协议；未为61添加计划，不以空队列冒充原validator拒绝。"
+        },
+        "AionsHome": {
+          "contract_outcome": "pass",
+          "reason": "原 parser 拒绝61且清理标记；没有生成两分钟计划。"
+        }
+      }
+    ]
+  },
+  "no_aggregate_quality_ranking": true,
+  "proactive_original_PR09_outcome": "inconclusive",
+  "supplement_original_raw_unchanged": true,
+  "current_release_candidates_unchanged": {
+    "audit_records": 55,
+    "eligible_records": 8,
+    "merged_slices": 5,
+    "requirements": 14,
+    "tasks": 15,
+    "apis": 17,
+    "prompts": 5
+  },
+  "product_code_changed": false,
+  "real_model_calls": 0,
+  "external_messages_sent": 0,
+  "device_capture_calls": 0,
+  "whole_product_or_experience_acceptance_completed": false,
+  "remaining_unverified": [
+    "真实抽取/自然语言路由/否定语义与回答正确",
+    "中文同义embedding效果",
+    "自然主动时机/打扰/人格与实际声音",
+    "完整Electron长期事实仓库及新产品功能端到端；本轮没有实施",
+    "完整私聊背景取材端到端、全部Provider/所有高级分支、日历压缩后期效果"
+  ]
+}

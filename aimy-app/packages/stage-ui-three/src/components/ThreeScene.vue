@@ -12,6 +12,7 @@ import type { PresenceBubblePalette, PresenceBubbleState } from '@proj-airi/stag
 import type { TresContext } from '@tresjs/core'
 import type { DirectionalLight, SphericalHarmonics3, Texture, WebGLRenderer, WebGLRenderTarget } from 'three'
 
+import type { VrmGesture } from '../composables/vrm/gestures'
 import type { VrmInteractionTarget } from '../composables/vrm/interaction'
 import type { SceneBootstrap, ScenePhase, Vec3 } from '../stores/model-store'
 import type { VrmLifecycleReason } from '../trace'
@@ -981,6 +982,7 @@ watch(directionalLightRotation, (newRotation) => {
 }, { deep: true })
 
 defineExpose({
+  playGesture: (gesture: VrmGesture) => modelRef.value?.playGesture(gesture) ?? false,
   setExpression: (expression: string, intensity = 1) => {
     modelRef.value?.setExpression(expression, intensity)
   },

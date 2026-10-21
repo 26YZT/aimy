@@ -1,0 +1,18 @@
+- region "Notifications alt+T" [ref=e211]
+- button [ref=e212]
+- heading "设置 Xiaomi MiMo" [level=1, ref=e213]
+- heading "基础配置" [level=2, ref=e214]
+- button "Reset settings" [ref=e215]
+- textbox "API 密钥 API Key for Xiaomi MiMo" [ref=e221]
+- heading "声音配置" [level=2, ref=e216]
+- combobox "Model Select the MiMo TTS model to use for speech generation Show popup" [expanded=false, ref=e225]: MiMo v2.5 TTS
+- button "Show popup" [expanded=false, ref=e226]
+- textbox "Style prompt * Natural-language control sent as the user message. You can leave it empty for a neutral delivery." [ref=e222]
+- button "高级配置" [ref=e217]
+  - heading "高级配置" [level=2, ref=e223]
+- heading "实验平台" [level=2, ref=e218]
+- switch "选用自定义 SSML 启用后可以输入原始 SSML 而不是纯文本" [checked=false, ref=e224]
+- textbox "输入用于测试发音的文本" [ref=e219]: Hello! This is a test of the Xiaomi MiMo Speech.
+- combobox "声线 选择首选语音 Show popup" [expanded=false, ref=e227]: MiMo-默认 · EN ZH
+- button "Show popup" [expanded=false, ref=e228]
+- button "测试声音" [ref=e220]

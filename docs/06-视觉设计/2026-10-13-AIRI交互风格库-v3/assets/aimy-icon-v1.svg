@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512" role="img" aria-labelledby="title"><title id="title">Aimy 粉雾应用图标</title><rect x="48" y="48" width="416" height="416" rx="96" fill="#FFF9FC"/><g transform="translate(-36 0)">
+    <path d="M185 190l-40-21c-5-3-9 0-9 6l7 76 44-22z" fill="#CE7094"/>
+    <path d="M185 181c11-17 18-26 28-32l5-65c0-8 6-11 12-5l49 57c65 0 116 37 138 92 21 53 6 88 12 128 4 30 17 51 28 65-42 13-91 18-137 6l-75-45-54-10-13-31-27-9c-7-2-8-7-3-12l27-30c-7-40-1-76 10-109z" fill="#EDBED0"/>
+    <path d="M202 216c17 30 36 53 65 69 3 27-7 51-25 72-17 21-35 29-52 20-12-6-17-19-16-33l-20-9 26-28c-5-35 2-67 22-91z" fill="#FFF9FC"/>
+    <path d="M213 192c15 43 35 80 68 113l-12-88-28-28z" fill="#CE7094"/>
+    <path d="M303 284c11-10 25-9 31 2 7 14-3 31-20 35l-21 3 3-22z" fill="#FFF9FC"/>
+    <path d="M354 306c24-8 47 6 55 31l24 79c-44 19-91 21-133 11l-87-27c-8-2-8-12 0-14l65-17 47-48c9-8 18-12 29-15z" fill="#FFF9FC" stroke="#CE7094" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M278 370l-48 19 69 18" fill="none" stroke="#EDBED0" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M204 236c8 22 19 39 34 52" fill="none" stroke="#CE7094" stroke-width="10" stroke-linecap="round"/>
+    <path d="M186 318c8 2 16-1 20-7" fill="none" stroke="#CE7094" stroke-width="9" stroke-linecap="round"/>
+    <path d="M237 145l-13-32-9 36" fill="#FFF9FC" opacity=".9"/>
+    <path d="M170 208l-14-17 1 33" fill="#FFF9FC" opacity=".9"/>
+    <path d="M340 219c19 18 30 39 34 60" fill="none" stroke="#FFF9FC" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+    <path d="M335 389c18 2 32 12 41 25" fill="none" stroke="#CE7094" stroke-width="9" stroke-linecap="round"/>
+    
+    </g></svg>

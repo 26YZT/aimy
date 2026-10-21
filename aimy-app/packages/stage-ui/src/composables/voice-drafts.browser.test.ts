@@ -7,6 +7,7 @@ import { createApp, defineComponent, h } from 'vue'
 import { createI18n } from 'vue-i18n'
 
 import { useChatStore } from '../stores/chat'
+import { useHearingStore } from '../stores/modules/hearing'
 import { useVoiceDrafts } from './voice-drafts'
 
 const cleanups: (() => void)[] = []
@@ -65,4 +66,15 @@ it('keeps a draft available while its chat submission is pending', async () => {
   expect(chat.submit).toHaveBeenCalledWith(expect.objectContaining({ sessionId: 'session', messageId: 'draft', text: 'spoken' }))
   expect(drafts.drafts.value).toEqual([])
   expect(drafts.frontDraftId.value).toBeUndefined()
+})
+
+it('keeps suspected echo as an editable draft while allowing explicit user submission', async () => {
+  const { drafts, chat } = mountDrafts()
+  useHearingStore().autoSendEnabled = true
+  vi.mocked(chat.submit).mockResolvedValue({ sessionId: 'session', messageId: 'confirmed' })
+  expect(await drafts.acceptSpeech(spokenSubmission('A repeated sentence'), new AbortController().signal, { forceDraft: true })).toEqual({ status: 'drafted', draftId: 'draft' })
+  expect(chat.submit).not.toHaveBeenCalled()
+  expect(drafts.editDraft('draft', 'I really meant this sentence')).toBe(true)
+  await drafts.sendDraft('draft')
+  expect(chat.submit).toHaveBeenCalledWith(expect.objectContaining({ text: 'I really meant this sentence' }))
 })

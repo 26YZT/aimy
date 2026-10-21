@@ -1,0 +1,12 @@
+{
+  "case": "AIRI exact SparkNotify agent+reaction sink with fake runner/builtin result",
+  "firstDeltaDeliveredToSink": true,
+  "laterDeltaSuppressedAfterNoResponse": true,
+  "finalReaction": "",
+  "commands": [],
+  "pass": true,
+  "limit": "sink delivery only; host might buffer; does not prove audible or UI presentation; no real model/tool executed",
+  "sourceHashes": {
+    "agent": "27fb1addc12e2ea8193a7b15e6636a6072d7a15622c5691b95e669e2ebd18d8a"
+  }
+}

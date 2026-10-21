@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "status": "逐日审定中；Day1 A范围已确认，其余未答",
+  "productRoot": "/Users/mima1234/Documents/aimy/aimy-app",
+  "managementDocsRoot": "/Users/mima1234/Documents/aimy/docs",
+  "authorization": {
+    "planning_and_docs": true,
+    "product_code_changes": false,
+    "dependency_install_or_upgrade": false,
+    "user_data_migration_or_deletion": false,
+    "real_model_or_device_tests": false,
+    "git_stage_commit_push": false,
+    "publishing": false
+  },
+  "existing_confirmed_goals": [
+    {
+      "id": "KNOWN-01",
+      "goal": "AIRI完整桌面成为唯一产品主工程",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-02",
+      "goal": "记忆自动保存，无需逐条确认，相关时主动想起",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-03",
+      "goal": "低费用观察为间隔看一眼",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-04",
+      "goal": "收起聊天后主要角色仍可见",
+      "status": "沿用已确认"
+    },
+    {
+      "id": "KNOWN-05",
+      "goal": "macOS、本地优先、一个主要角色、无摄像头、BYOK、自用/少量邀请",
+      "status": "沿用当前产品底线"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DAY-01",
+      "day": 1,
+      "date": "2026-10-14",
+      "topic": "首批增量范围",
+      "status": "confirmed_scope_only",
+      "question": "第1天先确认首批增量范围。品牌收尾、本地数据和退出/取消保护是共同前置；本轮仍只审方案、不改代码。你希望首批做到哪一步？",
+      "options": [
+        {
+          "id": "A",
+          "label": "先做自动记忆、查看/更正/删除、相关召回；后台主动续聊放下一批",
+          "recommended": true
+        },
+        {
+          "id": "B",
+          "label": "首批同时纳入记忆、相关召回和后台主动续聊，按依赖顺序分步开发",
+          "recommended": false
+        }
+      ],
+      "selected": "A",
+      "answer_text": "A．先做自动记忆、查看/更正/删除、相关召回；后台主动续聊放下一批（推荐）",
+      "confirmation_source": "本轮用户对选择工具的明确答复",
+      "confirmed_features": [
+        "共同前置：品牌收尾、本地数据和退出/取消保护",
+        "自动记忆",
+        "查看/更正/删除",
+        "相关召回与正常对话中引用"
+      ],
+      "deferred_from_first_release": [
+        "后台主动续聊"
+      ],
+      "not_confirmed_by_this_answer": [
+        "具体记忆类型",
+        "启用前历史补记",
+        "同时删除来源消息",
+        "UI设计稿/正式角色/音色",
+        "模型/预算/质量线",
+        "全部数据schema/API参数",
+        "代码实施/升级/迁移/真实测试/发布"
+      ]
+    },
+    {
+      "id": "DAY-02",
+      "day": 2,
+      "date": null,
+      "topic": "记忆范围与起点",
+      "status": "not_asked",
+      "selected": null,
+      "questions_draft": [
+        {
+          "id": "memory_scope",
+          "options": [
+            {
+              "id": "A",
+              "label": "称呼/偏好/边界，加明确近期事项与少量共同经历",
+              "recommended": true
+            },
+            {
+              "id": "B",
+              "label": "首批先记称呼/偏好/边界，近期事项和经历后续加入",
+              "recommended": false
+            }
+          ]
+        },
+        {
+          "id": "history_start",
+          "options": [
+            {
+              "id": "A",
+              "label": "只从启用后的新消息开始；崩溃恢复仍涵盖已启用期间的漏入队消息",
+              "recommended": true
+            },
+            {
+              "id": "B",
+              "label": "以后提供手动挑选已有AIRI会话的有界补记，不涉及旧Aimy",
+              "recommended": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DAY-03",
+      "day": 3,
+      "date": null,
+      "topic": "更正和删除范围",
+      "status": "not_asked",
+      "selected": null,
+      "questions_draft": [
+        {
+          "id": "deletion_modes",
+          "options": [
+            {
+              "id": "A",
+              "label": "首批只删记忆，保留聊天；已知来源阻断后台重抽",
+              "recommended": true
+            },
+            {
+              "id": "B",
+              "label": "额外提供每次可选的删除相关已知消息，显示具体影响",
+              "recommended": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DAY-04",
+      "day": 4,
+      "date": null,
+      "topic": "正常聊天如何引用与场景",
+      "status": "not_asked",
+      "selected": null,
+      "questions_draft": [
+        {
+          "id": "recall_presentation",
+          "options": [
+            {
+              "id": "A",
+              "label": "相关时自然顺口提起，来源在记忆页可查看",
+              "recommended": true
+            },
+            {
+              "id": "B",
+              "label": "更明显提示记得哪次聊天，便于发现和纠错",
+              "recommended": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DAY-05",
+      "day": 5,
+      "date": null,
+      "topic": "界面、角色与运行数据",
+      "status": "not_asked",
+      "selected": null,
+      "questions_draft": [
+        {
+          "id": "entry",
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿AIRI设置里的记忆页和当前样式",
+              "recommended": true
+            },
+            {
+              "id": "B",
+              "label": "同页基础上另加角色旁快捷入口",
+              "recommended": false
+            }
+          ]
+        },
+        {
+          "id": "profile",
+          "options": [
+            {
+              "id": "A",
+              "label": "新主线使用明确独立的开发profile，不迁旧Aimy",
+              "recommended": true
+            },
+            {
+              "id": "B",
+              "label": "先备份核验现有AIRI开发profile，再决定继续使用或迁入新profile",
+              "recommended": false
+            }
+          ]
+        }
+      ],
+      "conditional_topics": [
+        "正式人设/角色格式/音色是否前置或先沿用示例，按首批实际需要再问"
+      ]
+    },
+    {
+      "id": "DAY-06",
+      "day": 6,
+      "date": null,
+      "topic": "模型、Prompt与预算",
+      "status": "not_asked",
+      "selected": null,
+      "required_inputs_later": [
+        "用户指定的精确模型ID",
+        "该批真实调用预算或次数上限",
+        "角色卡/Prompt体验取舍"
+      ],
+      "evaluation_gate": "只确认目标和预算；评测样本/规则继续遵循09目标卡流程，不自动冻结或执行"
+    },
+    {
+      "id": "DAY-07",
+      "day": 7,
+      "date": null,
+      "topic": "验收边界与首批工单",
+      "status": "not_asked",
+      "selected": null,
+      "questions_draft": [
+        {
+          "id": "acceptance_surface",
+          "options": [
+            {
+              "id": "A",
+              "label": "先验文字记忆闭环；现有语音保留并回归，未测试体验不标完成",
+              "recommended": true
+            },
+            {
+              "id": "B",
+              "label": "同时要求现有连续语音带记忆的实际体验通过才验收自用",
+              "recommended": false
+            }
+          ]
+        }
+      ],
+      "implementation_rule": "工单确认不自动解除当前不改代码边界；后续明确实施指令才开工"
+    }
+  ],
+  "first_release_review": {
+    "functional_slices": [
+      "MEM-F01",
+      "MEM-F02"
+    ],
+    "normal_chat_recall_task": "MEM-03",
+    "background_proactive_task": "PRO-01（后批）",
+    "task_ids": [
+      "BASE-01",
+      "LIFE-01",
+      "LOCAL-01",
+      "SRC-01",
+      "MEM-01",
+      "MEM-02",
+      "MEM-03",
+      "INT-01",
+      "EXP-01"
+    ],
+    "conditional_integrations": [
+      "PRO-01",
+      "VIS-02",
+      "CHAR-01"
+    ],
+    "field_policy": "这些是首批候选工单与建议依赖，不是执行完成或全部方案已确认"
+  },
+  "progress": {
+    "current_day": 1,
+    "current_day_status": "scope_confirmed_and_review_documented",
+    "next_day": 2,
+    "next_topic": "记哪些，以及是否补读已有AIRI聊天",
+    "next_question_sent": false,
+    "calendar_schedule": null,
+    "automation_created": false
+  },
+  "rules": [
+    "一次只向用户发当前主题少量选项",
+    "建议不等于选择，未答保持null",
+    "已确认产品目标不重复询问",
+    "按天是审定主题安排，不承诺开发工期",
+    "内部实现细节由技术审查决定，不将await/CAS等问题转嫁用户",
+    "本轮代码/运行数据/依赖/Git暂存保持不动"
+  ]
+}

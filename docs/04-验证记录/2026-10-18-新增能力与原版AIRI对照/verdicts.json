@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-18",
+  "realModelCalls": 0,
+  "paidCost": 0,
+  "productCodeModified": false,
+  "privateProfileAccessed": false,
+  "globalWinner": null,
+  "features": [
+    {
+      "id": "R2-PRO",
+      "verdict": "bounded-mechanism-improvement",
+      "evidence": [
+        "PRO-SINGLE",
+        "PRO-PERSIST",
+        "PRO-CANCEL-LATE",
+        "PRO-CLAIM",
+        "PRO-GUARDS"
+      ],
+      "notProven": [
+        "naturalness",
+        "native end-to-end A/B",
+        "restart alarm guarantee"
+      ]
+    },
+    {
+      "id": "R2-REVIEW",
+      "verdict": "new-organization-not-better-recall",
+      "evidence": [
+        "REVIEW-GROUP",
+        "REVIEW-SOURCE"
+      ],
+      "notProven": [
+        "semantic summary",
+        "memory accuracy",
+        "recall quality"
+      ]
+    },
+    {
+      "id": "R2-TTS",
+      "verdict": "new-option-quality-unverified",
+      "evidence": [
+        "TTS-OFF",
+        "TTS-TRANSLATE",
+        "TTS-WRONG-TRANSLATION",
+        "TTS-TRANSLATE-FAIL"
+      ],
+      "notProven": [
+        "translation accuracy",
+        "real latency",
+        "voice quality"
+      ]
+    },
+    {
+      "id": "R2-DIRECTOR",
+      "verdict": "benefit-not-established",
+      "evidence": [
+        "DIRECTOR-VALID",
+        "DIRECTOR-CHANGED-WORDS",
+        "DIRECTOR-BASELINE-PROSODY",
+        "DIRECTOR-UNSUPPORTED"
+      ],
+      "notProven": [
+        "better prosody than existing settings",
+        "worth extra model calls"
+      ]
+    },
+    {
+      "id": "R2-ENDPOINT",
+      "verdict": "speed-segmentation-tradeoff",
+      "evidence": [
+        "VAD-SHORT",
+        "VAD-LONG",
+        "VAD-PAUSE"
+      ],
+      "notProven": [
+        "ASR accuracy",
+        "actual mic latency",
+        "overall conversation smoothness"
+      ]
+    },
+    {
+      "id": "R2-ECHO",
+      "verdict": "extra-gate-with-false-positive-risk",
+      "evidence": [
+        "ECHO-LOOP",
+        "ECHO-INTENTIONAL-REPEAT",
+        "ECHO-SHORT",
+        "ECHO-OTHER",
+        "ECHO-EXPIRED"
+      ],
+      "notProven": [
+        "acoustic echo rejection",
+        "pre-ASR barge-in protection",
+        "real false-positive rate"
+      ]
+    },
+    {
+      "id": "R2-ACTIONS",
+      "verdict": "configuration-improvement-not-animation-quality",
+      "evidence": [
+        "HIT-HEAD",
+        "HIT-BODY",
+        "HIT-RAPID",
+        "HIT-UNKNOWN",
+        "HIT-REPEAT"
+      ],
+      "notProven": [
+        "real hit-area accuracy",
+        "animation aesthetics",
+        "never repeats"
+      ]
+    },
+    {
+      "id": "R2-FLOW",
+      "verdict": "new-local-entry-not-general-engine-upgrade",
+      "evidence": [
+        "FLOW-LOCAL",
+        "FLOW-BASELINE"
+      ],
+      "notProven": [
+        "broader workflow superiority",
+        "IM",
+        "graph editor"
+      ]
+    },
+    {
+      "id": "R2-ASSET",
+      "verdict": "better-import-feedback-and-failure-reporting-same-loader",
+      "evidence": [
+        "IMPORT-SAVE-FAIL",
+        "IMPORT-SAVE-OK",
+        "minimal-no-face.vrm",
+        "authored-capabilities.vrm",
+        "truncated-container"
+      ],
+      "notProven": [
+        "better character appearance",
+        "production asset quality",
+        "full GPU render"
+      ]
+    }
+  ]
+}

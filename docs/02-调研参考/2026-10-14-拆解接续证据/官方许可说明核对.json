@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "url": "https://www.gnu.org/licenses/gpl-faq.html#DoesTheGPLAllowMoney",
+      "date": "2026-10-14",
+      "reader": "agent-reach Jina Reader",
+      "retrieved_bytes": 133049,
+      "retrieved_sha256": "d337ac44dc35811d074a5579bc8d5152bea77df06dcd7c6cb8255c5b5a5e36ab"
+    },
+    {
+      "url": "https://www.gnu.org/licenses/agpl-3.0.html#section13",
+      "date": "2026-10-14",
+      "reader": "agent-reach Jina Reader",
+      "retrieved_bytes": 34202,
+      "retrieved_sha256": "de91b7875241749fb77d64baa25dcdbeb6e0d92b566e7acbdffe1de364b3fa30"
+    }
+  ],
+  "verified_scope": [
+    "GNU GPL FAQ明确允许按GPL条件销售程序副本。",
+    "AGPL第13节针对修改版与远程网络交互的用户提供对应源码机会；不应简化为商业用途一概禁止。"
+  ],
+  "not_decided": "没有据此判定任何特定Aimy组合的派生作品范围或未来发行方案。"
+}

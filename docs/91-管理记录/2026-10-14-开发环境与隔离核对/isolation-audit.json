@@ -1,0 +1,402 @@
+{
+  "date": "2026-10-14",
+  "scope": "产品package manifest和本批已安装直接node_modules symlink；不证明运行数据完全隔离或全量静态/动态导入审计",
+  "manifest_count": 76,
+  "manifest_old_project_refs": [],
+  "direct_node_modules_directories": 36,
+  "direct_symlinks_checked": 775,
+  "cross_old_project_symlinks": [],
+  "manifest_records": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/package.json",
+      "name": "@proj-airi/root",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/docs/package.json",
+      "name": "@proj-airi/docs",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/plugins/airi-plugin-game-chess/package.json",
+      "name": "@proj-airi/airi-plugin-game-chess",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/plugins/airi-plugin-claude-code/package.json",
+      "name": "@proj-airi/airi-plugin-claude-code",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/plugins/airi-plugin-web-extension/package.json",
+      "name": "@proj-airi/airi-plugin-web-extension",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/plugins/airi-plugin-bilibili-laplace/package.json",
+      "name": "@proj-airi/airi-plugin-bilibili-laplace",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/server/packages/server-sdk-shared/package.json",
+      "name": "@proj-airi/server-sdk-shared",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/server/packages/auth-shared/package.json",
+      "name": "@proj-airi/auth-shared",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/server/apps/auth/package.json",
+      "name": "@proj-airi/auth-server",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/server/apps/api/package.json",
+      "name": "@proj-airi/api-server",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/telegram-bot/package.json",
+      "name": "@proj-airi/telegram-bot",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/package.json",
+      "name": "@proj-airi/discord-bot",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/twitter-services/package.json",
+      "name": "@proj-airi/twitter-services",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/satori-bot/package.json",
+      "name": "@proj-airi/satori-bot",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/minecraft/package.json",
+      "name": "@proj-airi/minecraft-bot",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/vscode/airi-plugin-vscode/package.json",
+      "name": "@proj-airi/airi-plugin-vscode",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/vscode/vscode-airi/package.json",
+      "name": "vscode-airi",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/engines/stage-tamagotchi-godot/package.json",
+      "name": "@proj-airi/stage-tamagotchi-godot",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/font-chillroundm/package.json",
+      "name": "@proj-airi/font-chillroundm",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-character/package.json",
+      "name": "@proj-airi/core-character",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/input-gamepad-vueuse/package.json",
+      "name": "@proj-airi/input-gamepad-vueuse",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/ui/package.json",
+      "name": "@proj-airi/ui",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/unocss-preset-fonts/package.json",
+      "name": "@proj-airi/unocss-preset-fonts",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/plugin-protocol/package.json",
+      "name": "@proj-airi/plugin-protocol",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-spine/package.json",
+      "name": "@proj-airi/stage-ui-spine",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/package.json",
+      "name": "@proj-airi/stage-pages",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/input-gamepad/package.json",
+      "name": "@proj-airi/input-gamepad",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/server-sdk/package.json",
+      "name": "@proj-airi/server-sdk",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/model-driver-magic-live2d/package.json",
+      "name": "@proj-airi/model-driver-magic-live2d",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/package.json",
+      "name": "@proj-airi/provider-inference",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/electron-screen-capture/package.json",
+      "name": "@proj-airi/electron-screen-capture",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-shared/package.json",
+      "name": "@proj-airi/stage-shared",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/scenarios-stage-tamagotchi-electron/package.json",
+      "name": "@proj-airi/scenarios-stage-tamagotchi-electron",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/ui-transitions/package.json",
+      "name": "@proj-airi/ui-transitions",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/input-playstation-dualsense-5/package.json",
+      "name": "@proj-airi/input-playstation-dualsense-5",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/font-cjkfonts-allseto/package.json",
+      "name": "@proj-airi/font-cjkfonts-allseto",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/model-driver-mediapipe/package.json",
+      "name": "@proj-airi/model-driver-mediapipe",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-layouts/package.json",
+      "name": "@proj-airi/stage-layouts",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/electron-vueuse/package.json",
+      "name": "@proj-airi/electron-vueuse",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-mmd/package.json",
+      "name": "@proj-airi/stage-ui-mmd",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/font-departure-mono/package.json",
+      "name": "@proj-airi/font-departure-mono",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/plugin-sdk/package.json",
+      "name": "@proj-airi/plugin-sdk",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/ccc/package.json",
+      "name": "@proj-airi/ccc",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/testing-audio/package.json",
+      "name": "@proj-airi/testing-audio",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stream-kit/package.json",
+      "name": "@proj-airi/stream-kit",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/scenarios-stage-tamagotchi-browser/package.json",
+      "name": "@proj-airi/scenarios-stage-tamagotchi-browser",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/vite-plugin-sherpaw/package.json",
+      "name": "@proj-airi/vite-plugin-sherpaw",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-tachie/package.json",
+      "name": "@proj-airi/stage-ui-tachie",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/package.json",
+      "name": "@proj-airi/stage-ui",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/audio/package.json",
+      "name": "@proj-airi/audio",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/electron-eventa/package.json",
+      "name": "@proj-airi/electron-eventa",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/server-runtime/package.json",
+      "name": "@proj-airi/server-runtime",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/better-ws/package.json",
+      "name": "@proj-airi/better-ws",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/package.json",
+      "name": "@proj-airi/core-agent",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-three/package.json",
+      "name": "@proj-airi/stage-ui-three",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/plugin-sdk-tamagotchi/package.json",
+      "name": "@proj-airi/plugin-sdk-tamagotchi",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/vitest-plugin-fakemic/package.json",
+      "name": "@proj-airi/vitest-plugin-fakemic",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/package.json",
+      "name": "@proj-airi/memory-pgvector",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui-live2d/package.json",
+      "name": "@proj-airi/stage-ui-live2d",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/motion-driver-magic/package.json",
+      "name": "@proj-airi/motion-driver-magic",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/ui-loading-screens/package.json",
+      "name": "@proj-airi/ui-loading-screens",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/model-driver-lipsync/package.json",
+      "name": "@proj-airi/model-driver-lipsync",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/server-shared/package.json",
+      "name": "@proj-airi/server-shared",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/cap-vite/package.json",
+      "name": "@proj-airi/cap-vite",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/i18n/package.json",
+      "name": "@proj-airi/i18n",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/font-xiaolai/package.json",
+      "name": "@proj-airi/font-xiaolai",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio/package.json",
+      "name": "@proj-airi/pipelines-audio",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-web/package.json",
+      "name": "@proj-airi/stage-web",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-pocket/package.json",
+      "name": "@proj-airi/stage-pocket",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/ui-server-auth/package.json",
+      "name": "@proj-airi/ui-server-auth",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/package.json",
+      "name": "@proj-airi/stage-tamagotchi",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/component-calling/package.json",
+      "name": "@proj-airi/component-calling",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi-kirie/package.json",
+      "name": "@proj-airi/stage-tamagotchi-kirie",
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/.cache/assets/js/CubismSdkForWeb-5-r.3/Framework/package.json",
+      "name": null,
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/.cache/assets/js/CubismSdkForWeb-5-r.3/Samples/TypeScript/Demo/package.json",
+      "name": null,
+      "old_project_refs": []
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/package.json",
+      "name": "@proj-airi/computer-use-mcp",
+      "old_project_refs": []
+    }
+  ],
+  "source_keys_examined": [
+    "dependencies",
+    "devDependencies",
+    "optionalDependencies",
+    "peerDependencies",
+    "scripts",
+    "workspaces",
+    "resolutions",
+    "pnpm"
+  ],
+  "no_user_data_or_credentials_read": true
+}

@@ -1,0 +1,311 @@
+{
+  "date": "2026-10-14 Asia/Shanghai",
+  "sourceRoot": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/",
+  "sourceHashes": [
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+      "sha256": "11fbb6fae5def1214cf939d275d001460fe6da02dcfd08165c56c286932c5611"
+    },
+    {
+      "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+      "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+    }
+  ],
+  "positive": 8,
+  "negative": 9,
+  "checks": 17,
+  "networkCalls": 0,
+  "realModels": 0,
+  "realDevices": 0,
+  "productSourceWrites": 0,
+  "results": [
+    {
+      "id": "DRY-P01",
+      "kind": "positive",
+      "title": "Session cards roll into a summary, using actual module coordination",
+      "status": "assertions matched",
+      "input": {
+        "exchanges": 4,
+        "turnsPerCard": 2,
+        "sessionCap": 2
+      },
+      "output": {
+        "pending": 0,
+        "sessions": 0,
+        "summaries": 1,
+        "calls": [
+          {
+            "kind": "pending",
+            "items": 4
+          },
+          {
+            "kind": "pending",
+            "items": 4
+          },
+          {
+            "kind": "sessions",
+            "items": 2
+          }
+        ]
+      },
+      "scope": "Deterministic injected summarizer supplies text; no LLM semantics or factual accuracy measured."
+    },
+    {
+      "id": "DRY-P02",
+      "kind": "positive",
+      "title": "Protected categories and importance survive ordinary entry pressure",
+      "status": "assertions matched",
+      "input": {
+        "protected": 2,
+        "ordinary": 60
+      },
+      "output": {
+        "entryCount": 40,
+        "protectedSummaries": [
+          "约定周末去灯塔",
+          "重要共同经历"
+        ],
+        "digestNonEmpty": true
+      },
+      "scope": "Protects storage retention only, not guaranteed future recall or truth."
+    },
+    {
+      "id": "DRY-P03",
+      "kind": "positive",
+      "title": "Entry structure survives a fresh VM reading identical synthetic storage",
+      "status": "assertions matched",
+      "input": {
+        "freshVm": true,
+        "sameFakeStorage": true
+      },
+      "output": {
+        "summary": "用户近期玩星露谷物语",
+        "date": "2026-10-14",
+        "category": "preference",
+        "keywords": [
+          "星露谷",
+          "游戏"
+        ]
+      },
+      "scope": "Synthetic localStorage reload, not fresh operating-system process or real IndexedDB acceptance."
+    },
+    {
+      "id": "DRY-P04",
+      "kind": "positive",
+      "title": "Disabled automatic ingestion leaves no new pending text",
+      "status": "assertions matched",
+      "input": {
+        "enabled": false
+      },
+      "output": {
+        "pending": 0,
+        "prompt": ""
+      },
+      "scope": "Tests this module automatic ingestion/prompt gate, not the application permission system."
+    },
+    {
+      "id": "DRY-P05",
+      "kind": "positive",
+      "title": "Exact ISO date and keyword outrank a more important unrelated entry",
+      "status": "assertions matched",
+      "input": {
+        "cue": "2026-10-14 灯塔",
+        "limit": 1
+      },
+      "output": {
+        "selected": [
+          "想去灯塔散步"
+        ],
+        "score": 8
+      },
+      "scope": "Deterministic literal matching; no embedding or natural-language date interpretation."
+    },
+    {
+      "id": "DRY-P06",
+      "kind": "positive",
+      "title": "Retired facts cannot enter the active entry selection",
+      "status": "assertions matched",
+      "input": {
+        "retiredImportance": 5,
+        "activeImportance": 1
+      },
+      "output": {
+        "selectedIds": [
+          "active"
+        ],
+        "oldTextInPrompt": false
+      },
+      "scope": "Status filtering works; the module still cannot reliably infer or commit retirement from a correction."
+    },
+    {
+      "id": "DRY-P07",
+      "kind": "positive",
+      "title": "Prompt includes at most 12 already-normalized entries as complete strings",
+      "status": "assertions matched",
+      "input": {
+        "storedEntries": 15,
+        "cue": "灯塔"
+      },
+      "output": {
+        "selectedEntries": 12,
+        "canonicalStringsAllComplete": true
+      },
+      "scope": "Complete canonical stored strings only. It does NOT prove original input was not truncated or an overall token budget is safe."
+    },
+    {
+      "id": "DRY-P08",
+      "kind": "positive",
+      "title": "Existing session cards can be updated and removed with IDs",
+      "status": "assertions matched",
+      "input": {
+        "add": "用户喜欢凉茶",
+        "update": "用户喜欢乌龙茶",
+        "remove": true
+      },
+      "output": {
+        "removedFromCurrent": true,
+        "absentInFreshFakeVm": true
+      },
+      "scope": "Card management, not automatic long-term fact correction, source deletion or deletion barrier."
+    },
+    {
+      "id": "DRY-N01",
+      "kind": "negative-safety",
+      "title": "Consolidation deletes dialogue added while the old request is in flight",
+      "status": "assertions matched",
+      "input": {
+        "sent": "旧事实",
+        "duringRequest": "请求期间新事实"
+      },
+      "output": {
+        "sentDialogue": [
+          "旧事实"
+        ],
+        "pendingAfter": []
+      },
+      "conclusion": "Raw consolidation cannot be adopted; batch identity and atomic confirmation are missing."
+    },
+    {
+      "id": "DRY-N02",
+      "kind": "negative-safety",
+      "title": "Protected entries can exceed the nominal entry cap and are not all recalled",
+      "status": "assertions matched",
+      "input": {
+        "protected": 43,
+        "nominalEntryCap": 40
+      },
+      "output": {
+        "retained": 43,
+        "selectedForOnePrompt": 12
+      },
+      "conclusion": "Protection is retention policy, not bounded capacity or a guarantee every important memory is recalled."
+    },
+    {
+      "id": "DRY-N03",
+      "kind": "negative-safety",
+      "title": "Entry normalization truncates original summaries at 120 characters",
+      "status": "assertions matched",
+      "input": {
+        "originalCharacters": 160,
+        "ending": "计划已经取消"
+      },
+      "output": {
+        "storedCharacters": 120,
+        "endingRetained": false
+      },
+      "conclusion": "Withdraw claim that Ryza supplies safe complete-original-entry budgeting; retain only selector leaf and reject raw normalizer."
+    },
+    {
+      "id": "DRY-N04",
+      "kind": "negative-safety",
+      "title": "Consolidation cuts a large JSON body into invalid JSON at 12000 characters",
+      "status": "assertions matched",
+      "input": {
+        "protectedEntries": 70
+      },
+      "output": {
+        "bodyCharacters": 12000,
+        "validJSON": false
+      },
+      "conclusion": "Aimy must pack whole validated records before serialization; slicing JSON is not reusable budgeting."
+    },
+    {
+      "id": "DRY-N05",
+      "kind": "negative-scope",
+      "title": "Literal retrieval does not match a synonymous phrase",
+      "status": "assertions matched",
+      "input": {
+        "cue": "去海岸走走",
+        "expectedSemanticTopic": "海边"
+      },
+      "output": {
+        "selected": "喜欢咖啡"
+      },
+      "conclusion": "Only a lexical baseline; no claim of Chinese semantic recall improvement."
+    },
+    {
+      "id": "DRY-N06",
+      "kind": "negative-safety",
+      "title": "A correction with a different text prefix creates two active facts",
+      "status": "assertions matched",
+      "input": {
+        "old": "用户喜欢美式咖啡",
+        "corrected": "用户现在喜欢乌龙茶"
+      },
+      "output": {
+        "active": [
+          "用户喜欢美式咖啡",
+          "用户现在喜欢乌龙茶"
+        ]
+      },
+      "conclusion": "Text-prefix dedup is not reliable correction; stable fact keys and versions must come from Aimy."
+    },
+    {
+      "id": "DRY-N07",
+      "kind": "negative-safety",
+      "title": "Card update reports true while storage rejects the write",
+      "status": "assertions matched",
+      "input": {
+        "storage": "synthetic QuotaExceededError",
+        "update": "更正值"
+      },
+      "output": {
+        "returned": true,
+        "lastWriteOk": false,
+        "inMemory": "更正值",
+        "persisted": "原值"
+      },
+      "conclusion": "Do not reuse raw mutation success contract; UI must wait for a durable write receipt."
+    },
+    {
+      "id": "DRY-N08",
+      "kind": "negative-safety",
+      "title": "Deleted entry is re-added by a late consolidation response",
+      "status": "assertions matched",
+      "input": {
+        "removed": "应忘记的旧事",
+        "oldRequestInFlight": true
+      },
+      "output": {
+        "restoredByOldResponse": "应忘记的旧事"
+      },
+      "conclusion": "Management UI is a functional gap, but reliable forgetting is not implemented in this source store."
+    },
+    {
+      "id": "DRY-N09",
+      "kind": "negative-scope",
+      "title": "A relative-date cue boosts every entry rather than selecting yesterday",
+      "status": "assertions matched",
+      "input": {
+        "clockDay": "2026-10-14",
+        "cue": "昨天",
+        "expectedDay": "2026-10-13"
+      },
+      "output": {
+        "selectedDate": "2026-10-01",
+        "selectedSummary": "很久以前的旧事"
+      },
+      "conclusion": "RECENT_CUE adds one to every entry. Only exact ISO date matches are tested as positive; no natural-language temporal retrieval claim."
+    }
+  ]
+}

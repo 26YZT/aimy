@@ -45,5 +45,8 @@ export function mergeRequestHeaders(configured: HeadersInit | undefined, overrid
  * Request credentials and headers do not participate in this persisted scope.
  */
 export function createContinuationScope(config: GenerationRequest['config'], options?: StreamOptions) {
-  return JSON.stringify([options?.providerId, String(config.baseURL), config.model, options?.requestCorrelation?.conversationId])
+  const scope = [options?.providerId, String(config.baseURL), config.model, options?.requestCorrelation?.conversationId]
+  if (options?.contextRevision !== undefined)
+    scope.push(options.contextRevision)
+  return JSON.stringify(scope)
 }

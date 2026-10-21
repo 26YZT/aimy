@@ -1,3 +1,5 @@
+import { assertCloudReplicaAllowed } from './local-data-policy'
+
 export interface ProviderReplicaRow {
   id: string
   definitionId: string
@@ -72,6 +74,7 @@ export interface InferenceServiceProvidersService {
 
 export function createInferenceServiceProvidersService(): InferenceServiceProvidersService {
   async function listRemote(client: InferenceServiceProvidersRemoteClient): Promise<ProviderReplicaRow[]> {
+    assertCloudReplicaAllowed()
     const res = await client.api.v1.providers.$get()
     if (!res.ok)
       throw new Error('Failed to fetch providers')
@@ -84,6 +87,7 @@ export function createInferenceServiceProvidersService(): InferenceServiceProvid
     client: InferenceServiceProvidersRemoteClient,
     provider: { id: string, definitionId: string, config: Record<string, unknown> },
   ): Promise<ProviderReplicaRow> {
+    assertCloudReplicaAllowed()
     const res = await client.api.v1.providers[':id'].$put({
       param: { id: provider.id },
       json: {
@@ -102,6 +106,7 @@ export function createInferenceServiceProvidersService(): InferenceServiceProvid
     client: InferenceServiceProvidersRemoteClient,
     providerId: string,
   ): Promise<void> {
+    assertCloudReplicaAllowed()
     const res = await client.api.v1.providers[':id'].$delete({
       param: { id: providerId },
     })

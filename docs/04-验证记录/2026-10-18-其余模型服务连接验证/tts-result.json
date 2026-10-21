@@ -1,0 +1,19 @@
+{
+  "byteCount": 122924,
+  "channels": 1,
+  "durationSeconds": 2.56,
+  "finishedAt": 1792329354885,
+  "httpStatuses": [
+    200
+  ],
+  "model": "mimo-v2.5-tts",
+  "nonSilentFraction": 0.86494140625,
+  "provider": "mimo-audio-speech",
+  "requestCount": 1,
+  "rms": 0.10811939766987148,
+  "sampleRate": 16000,
+  "startedAt": 1792329353705,
+  "status": "complete",
+  "text": "这是Aimy语音连接测试。",
+  "voice": "冰糖"
+}

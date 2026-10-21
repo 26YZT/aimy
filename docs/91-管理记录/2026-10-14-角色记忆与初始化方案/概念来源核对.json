@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-14",
+  "purpose": "核对检索/知识库/长期记忆与profile概念，不是选型或实现",
+  "route": "agent-reach web/Jina Reader; Exa mcporter unavailable, used documented web reader fallback",
+  "sources": [
+    {
+      "title": "Retrieval - Docs by LangChain",
+      "url": "https://docs.langchain.com/oss/python/langchain/retrieval",
+      "accessed_date": "2026-10-14",
+      "local_raw": "/tmp/aimy-20261014-rag-explanation/retrieval.txt",
+      "sha256": "5817a4d2cf584432838d7c1b60a52a32afc1fd09d528e94216328843fb2614e0",
+      "supports": "知识库可含文档或结构化资料；检索取得相关上下文并与生成结合是RAG"
+    },
+    {
+      "title": "Memory overview - Docs by LangChain",
+      "url": "https://docs.langchain.com/oss/python/langgraph/memory",
+      "accessed_date": "2026-10-14",
+      "local_raw": "/tmp/aimy-20261014-rag-explanation/memory.txt",
+      "sha256": "e3dbafc75b1bb839b152d65eff534c43591b9b6fa66e269648c8d53e08b3a481",
+      "supports": "跨会话长期记忆、事实/经历/程序规则区分、可持续更新的profile"
+    }
+  ],
+  "claim_limits": "没有引入LangChain/LangGraph依赖、没有证明Aimy真实模型自然度或召回质量；原文只保留在tmp，不迁入产品"
+}

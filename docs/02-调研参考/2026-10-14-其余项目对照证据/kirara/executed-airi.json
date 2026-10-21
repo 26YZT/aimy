@@ -1,0 +1,100 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/engine.ts",
+    "sha256": "b84faf1eaca1a952569f0de552c9e321ddb15bf433a622c3118fb9d612ff2854",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 1529
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/strategy.ts",
+    "sha256": "28550a19f0eeb7199d568b15d1872fd75a5aa27556b08fea1c9cc06946bb9d4f",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 746
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/app-aliases.ts",
+    "sha256": "4b85e9eadf5d3e5cafd36f1ffa06533058caf798c7e8e949bb79d5cc4d6bc8e4",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 104
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/transparency.ts",
+    "sha256": "5b28e0e026c2a4427a1f5f8ed4777cb3f668a8acfc3cf72373abf91781b682f4",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 411
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/utils/error-message.ts",
+    "sha256": "7aca92ceeb21c63c47518104c1930cc2eb836a6b4045a27bc540cd65a228d844",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 19
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/surface-resolver.ts",
+    "sha256": "063e8137268fa20b56d227914adea5aedbf0185bb7caf45ef6846efb7ce4ace7",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 155
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/terminal/interactive-patterns.ts",
+    "sha256": "57c46f8134d4783a6a04903de391d74a4ddca47fcf7ccdf5a2ef04be8aa5124a",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 62
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/workflows/types.ts",
+    "sha256": "f5f292082e8e77afe4d16eca7fecd7080c29ee9806d579fb0cf54e38ee895505",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 179
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/state.ts",
+    "sha256": "066f70ea4305e61e5cb5ac4861094ab834f2d3f46fbbb5f9f8f0f5737b59a1fe",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 752
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/generation.ts",
+    "sha256": "180da46fced45a22ee4322be4e7cf701ce95e031d4f8ef115d56a5e322f4b2d2",
+    "symbol": "whole transpiled module",
+    "start": 1,
+    "end": 44
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/cloud/openai/index.ts",
+    "sha256": "a1a1a0c3bb0256042750495c36f9b9ef713e03299898d92c39303895ea1f0803",
+    "symbol": "261 expression",
+    "start": 14,
+    "end": 23
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/cloud/openai/index.ts",
+    "sha256": "a1a1a0c3bb0256042750495c36f9b9ef713e03299898d92c39303895ea1f0803",
+    "symbol": "304 expression",
+    "start": 38,
+    "end": 62
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/adapters/airi-adapter.ts",
+    "sha256": "f3985458e440008e85dd6e140a2193739806e092b40952297f349aa7d4570271",
+    "symbol": "263 expression",
+    "start": 36,
+    "end": 53
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/integrations/discord-bot/src/adapters/airi-adapter.ts",
+    "sha256": "f3985458e440008e85dd6e140a2193739806e092b40952297f349aa7d4570271",
+    "symbol": "214 expression",
+    "start": 211,
+    "end": 287
+  }
+]

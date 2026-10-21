@@ -1,0 +1,17 @@
+[
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/能力选择.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/邻接补核前-能力选择.json",
+    "sha256": "95204608f3a2ff9278c3a8d17f62e027787b5436026c30412b193c6b46f91e06"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/追溯矩阵.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/邻接补核前-追溯矩阵.json",
+    "sha256": "6ea95383d42248768e6fb65d9d9e3da40d07526ba25646fd084262daf95a9962"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/邻接补核前-01-能力选择与分期.md",
+    "sha256": "dd89e4dc7f876f36f9695299620bf5c465799456a88cff45b1f9c07520ac715f"
+  }
+]

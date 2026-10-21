@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-15",
+  "status": "engineering_milestone_delivered_full_acceptance_pending",
+  "docs_links_checked": [
+    "README.md",
+    "implementation-mapping.md",
+    "acceptance/runbook.md"
+  ],
+  "broken_local_links": [],
+  "git_index_unchanged": true,
+  "real_model_calls": 0,
+  "real_model_cost_cny": 0,
+  "current_product_changes": 154,
+  "validation_manifest": "evidence/ui-unlocked/final-source-manifest.json",
+  "runtime_report": "evidence/ui-unlocked/restart-after-native/memory-restart-report.json",
+  "remaining": [
+    "complete two-arm acceptance harness and baseline budget adapter",
+    "finish documented API contract differences",
+    "real 8-case AIRI comparison with shared CNY10 cap",
+    "human trial",
+    "stage settings-open control has an automation-only fallback; not signed off as an all-native path"
+  ],
+  "native_ui_followup": "解锁后窗口复测.md",
+  "native_ui_status": "critical_memory_operations_passed_with_settings_open_handler_fallback"
+}

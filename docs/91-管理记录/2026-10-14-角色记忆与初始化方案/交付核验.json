@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-14",
+  "status": "概念/来源/实际选择与文档范围核验；非产品实现",
+  "item5": "A已确认",
+  "item6": "待答，无默认选择",
+  "manual_memory_question4": "撤回保留",
+  "onboarding_implementation_authorized": false,
+  "domain_knowledge_or_vector_service_added": false,
+  "public_primary_sources_read": 2,
+  "counts": {
+    "requirements": 14,
+    "tasks": 15,
+    "apis_proposed": 17,
+    "prompts_unchanged": 5
+  },
+  "protected_product_files": 5336,
+  "changed_product": [],
+  "git_index_unchanged": true,
+  "real_model_or_device_calls": 0,
+  "user_runtime_data_read": false,
+  "navigation": {
+    "files": 17,
+    "links": 143,
+    "broken": []
+  }
+}

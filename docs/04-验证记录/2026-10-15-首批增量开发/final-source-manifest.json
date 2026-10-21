@@ -1,0 +1,892 @@
+{
+  "date": "2026-10-15",
+  "branch": "codex/aimy-first-increment",
+  "start_snapshot_sha256": "19df7e60f1ace129ca2817385cb451a7ac04fe9dc5399050c615581cfc5535c0",
+  "git_index_unchanged": true,
+  "git_index_sha256": "34b1b6e79d13613ae32c2b1fe076e5adfe58f2fd044a9714f782f7a4f9042c49",
+  "changed_product_paths": 147,
+  "files": [
+    {
+      "path": "aimy-app/.tool-versions",
+      "kind": "modified",
+      "sha256": "659de0150537142d7e779bb72a41850ed35e6149df15853f7803e662c11444ef",
+      "bytes": 40
+    },
+    {
+      "path": "aimy-app/THIRD_PARTY_NOTICES.md",
+      "kind": "new",
+      "sha256": "2ac08836fbbf33a94cfcc3d6ba470c6b95bfc0a0812a3682ee82d6c819da1c14",
+      "bytes": 692
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/electron.vite.config.ts",
+      "kind": "modified",
+      "sha256": "f52a7802729d20bb648b03df4294f5747110a716a55dc4e73a2449dd948b719c",
+      "bytes": 11006
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/scripts/acceptance/memory-restart.electron-smoke.ts",
+      "kind": "new",
+      "sha256": "e3514e6e58ded5950fb8b0957b9570664dd706f649e2c35e7d65d2b8ad37184a",
+      "bytes": 32071
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+      "kind": "modified",
+      "sha256": "ea843eda363f6c0944ab0d0f02e8a82e9f8e4112fedbbe01237aeed1531a93ac",
+      "bytes": 22277
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/libs/electron/location.ts",
+      "kind": "modified",
+      "sha256": "efefdf2cf6ddfda2c21f6c08a3ab7d3fe672f9bc714aafbffbcbcbc7aac5fc90",
+      "bytes": 5586
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts",
+      "kind": "new",
+      "sha256": "68c54b9d07ee3c54c436674f982dc34c929c0314793b221e3f622bcc8b5769a9",
+      "bytes": 9861
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.ts",
+      "kind": "new",
+      "sha256": "aef5fcaa744e4a40a05bfd32d57748c01dd6e95870399cbb0bbf1859df6cdce6",
+      "bytes": 17886
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-config.test.ts",
+      "kind": "new",
+      "sha256": "fba58f6efecdf6d5633d0d990e1969e1c89121172cfa4d6a1a293ec8e1f2453f",
+      "bytes": 2272
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/acceptance-config.ts",
+      "kind": "new",
+      "sha256": "e4683a39c384072c5445d4d8daa4a47c3e12c3409e414e5f36828314468dd758",
+      "bytes": 2246
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/provider-secrets.test.ts",
+      "kind": "new",
+      "sha256": "dc6779871d42d8630c5fc9cd15f0c2994dbc7767a9ba31807c86048249a51f92",
+      "bytes": 10323
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/provider-secrets.ts",
+      "kind": "new",
+      "sha256": "813568728a3c51042b83ab70d99b1455f9ff5703f970a091df58ae9218cab12e",
+      "bytes": 10630
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.test.ts",
+      "kind": "new",
+      "sha256": "927e781c7408cc42b61c2f7e22a1dae82627bb4477c0ecc2c92ccabcc231d880",
+      "bytes": 14887
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.ts",
+      "kind": "new",
+      "sha256": "bfa0025b4d1de3ce33ffbbf686f094e8a10c0b6b7183620a1fe5b27802f8a69b",
+      "bytes": 10691
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/aimy/trusted-windows.ts",
+      "kind": "new",
+      "sha256": "1d4fe02e2de945d730dfa4df3c860033ee6a85df0a8341865acc0241d19e2c9f",
+      "bytes": 1823
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.test.ts",
+      "kind": "modified",
+      "sha256": "6bf5d108d80b86bebd6a0b34fc642e91daeb85b487eda3d8fe3b4f8aab4b3082",
+      "bytes": 14016
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+      "kind": "modified",
+      "sha256": "682a35b12b78d4182f77dedbd2765bf84736a1a2eebd5983eba4e465d7b20134",
+      "bytes": 8854
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/tray/index.ts",
+      "kind": "modified",
+      "sha256": "5cbe9749e7de30636301886aa2d3904c33d78d41a742e8be2ed9cbd3a7156446",
+      "bytes": 13033
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/about/index.ts",
+      "kind": "modified",
+      "sha256": "5102b2e3fcf6df458db7003ad126fc84219c1b17b1f0a3ceb62312852c2c2514",
+      "bytes": 1627
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/dashboard/index.ts",
+      "kind": "modified",
+      "sha256": "df73dd179ebea352c0741d1c332845a1e010105ce04a0bcc5a89e7be35c78aee",
+      "bytes": 5840
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.test.ts",
+      "kind": "modified",
+      "sha256": "268e2e97e6268da415e92f1679726075addd3443311becaeeb6461ebf55a40d8",
+      "bytes": 2397
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.ts",
+      "kind": "modified",
+      "sha256": "10578ecfe757c24a2604fb4fdda90bb04b483dfcb0d739db121583ed407ab7ac",
+      "bytes": 2418
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/editor/index.ts",
+      "kind": "modified",
+      "sha256": "c590c83a3bd6c5574fc2a1142e26f3814344c384cfbeae2a5ae700aea973713d",
+      "bytes": 2275
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "kind": "modified",
+      "sha256": "074eb9ec8bb3821f30b786e567e21717d8ad14bfd9f4015eb8697e2a9302b39d",
+      "bytes": 8126
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/onboarding/index.ts",
+      "kind": "modified",
+      "sha256": "948eb1adc6ea47d00cb31b633c7967d5ed51997397fc2b59796a973b1d94cc63",
+      "bytes": 3401
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/shared/window.ts",
+      "kind": "modified",
+      "sha256": "969765f97b651d314981efb5c2e6625d562c2e169dd12ceee48b548439bfc786",
+      "bytes": 5983
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/main/windows/spotlight/index.ts",
+      "kind": "modified",
+      "sha256": "380ef900d36b878a1a67b425c5b037fee0bb9b8e44dee8ceacc5fa055a526f7d",
+      "bytes": 7580
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/App.vue",
+      "kind": "modified",
+      "sha256": "7102b198217de20dd0b6244bc55cec22d9751972f06707a7e0b694e31c842a11",
+      "bytes": 20179
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/beat-sync.html",
+      "kind": "modified",
+      "sha256": "90562fa204e74ce3897dd13d7ca6d38826a2c3a555a0bd41fc3106827835665f",
+      "bytes": 758
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/beat-sync.main.ts",
+      "kind": "modified",
+      "sha256": "cf520f8bb7746cb3801debe13196521bf1593e9b371ecb6c0f30707c077e6d07",
+      "bytes": 2098
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/bridges/acceptance-budget.ts",
+      "kind": "new",
+      "sha256": "5570b411d49c58b564070e8edcbed05e202e3ac985fc3474edda0110a222670e",
+      "bytes": 1189
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.browser.test.ts",
+      "kind": "new",
+      "sha256": "9d980caf43d0ffc4878893f1da8861d6f6b35b29ec78f203de8c6f5872db280a",
+      "bytes": 6955
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.test.ts",
+      "kind": "new",
+      "sha256": "92ecf6c0f8e031778d3219343572769cf777c3741d1f956ab7c42ad23098ecb1",
+      "bytes": 5810
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.ts",
+      "kind": "new",
+      "sha256": "6ff981f5fb8a8c99eff5e37a998377b875b634e8f3f96c723d9b4fd5058f1841",
+      "bytes": 8914
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/bridges/provider-secrets.ts",
+      "kind": "new",
+      "sha256": "20b7c5b434f250e58cf8f7b8426673e49b9eef354c91a5dc5f58f9ecfd1d460d",
+      "bytes": 738
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/bridges/resource-policy.test.ts",
+      "kind": "new",
+      "sha256": "98f228b7a52efd75436f6ff1ae1d55d2cc1481613d953d72337f3b460d558326",
+      "bytes": 2931
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/bridges/resource-policy.ts",
+      "kind": "new",
+      "sha256": "e1c2803247075ebe73425b87609ecda3eed8a4c43d25a37ea38b05cfad66ba8c",
+      "bytes": 2918
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/components/WithScreenCapture.vue",
+      "kind": "modified",
+      "sha256": "d1a0d908e3b7760f6591f93d6da9b44693176fcb732f65e2614ddfbe64637740",
+      "bytes": 4262
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+      "kind": "modified",
+      "sha256": "7c5bfda29a8e0c3254a857384bc7a06451b0c3b8d47aa1f2b16a9186696e8100",
+      "bytes": 20890
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+      "kind": "modified",
+      "sha256": "2611942d1489ae94242895f38fc3cca2b2be3caeb1537fcaa5c29e35d5d6c809",
+      "bytes": 6851
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/features/live2d/system-audio-lipsync.ts",
+      "kind": "modified",
+      "sha256": "daf576bb1b700d1125a9196b88471d2249258b8020098086ea83249be18adbf3",
+      "bytes": 11174
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/index.html",
+      "kind": "modified",
+      "sha256": "416aa7e35e108ce2ddf58fd6fa261911a14a819aa91186a11a3a746282e03bff",
+      "bytes": 958
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/main.ts",
+      "kind": "modified",
+      "sha256": "819f2faa2790c7d4f49b4cea23fd80c106cf62a2d47d8bbed5a83b6ed84ce4de",
+      "bytes": 4303
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/pages/about.vue",
+      "kind": "modified",
+      "sha256": "3ec3f667fea35b07b50a1ee6e275ac179f218912199f966378c2a68ae2e720d9",
+      "bytes": 20487
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/pages/devtools/screen-capture.vue",
+      "kind": "modified",
+      "sha256": "7a09da794886c8b49383ac663498ce93fbfb538d55f203cb4d5d49ec0de339f2",
+      "bytes": 13995
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/pages/devtools/vision.vue",
+      "kind": "modified",
+      "sha256": "a129e46b231391f4718064fb413fbfaf40fe83505f2319c94456326b4d7f10ed",
+      "bytes": 23018
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+      "kind": "modified",
+      "sha256": "d003a2e870db84cccdc4ef74dbec9491f1782fdde6f575ce81937901720a8947",
+      "bytes": 2921
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/shared/eventa/aimy-acceptance.ts",
+      "kind": "new",
+      "sha256": "9b5819a2bc17030288c231cf9c6d0e2ae7b9c5029a5c24c3981aca6dbafe9dc1",
+      "bytes": 1091
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/shared/eventa/aimy-lifecycle.ts",
+      "kind": "new",
+      "sha256": "a9deeec92cc5d761ec1dd2226a6f6cd2f430ffdd1121efb71c5dd51dd589900f",
+      "bytes": 1195
+    },
+    {
+      "path": "aimy-app/apps/stage-tamagotchi/src/shared/eventa/aimy-provider-secrets.ts",
+      "kind": "new",
+      "sha256": "f9a75ed9aea5a567f75b9cddba2c041d4cef0bd965fef5d4e0e58d5cb72d54ee",
+      "bytes": 644
+    },
+    {
+      "path": "aimy-app/licenses/AionsHome-MIT.txt",
+      "kind": "new",
+      "sha256": "4e165eb607354538d5e67d1f8c12a8be474fbf9f425e1b2649771e98b6b37e5f",
+      "bytes": 1071
+    },
+    {
+      "path": "aimy-app/licenses/Ryza-MIT.txt",
+      "kind": "new",
+      "sha256": "83498f657ba1d28b68a916915749bf52a638239bca7f08f544fbca6d7ffbe621",
+      "bytes": 1065
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/index.ts",
+      "kind": "modified",
+      "sha256": "61c5486642c80975df6fe00f0fc073eaf648c0f4d5dfa9529715eb11265d4670",
+      "bytes": 2596
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/chat-completions.ts",
+      "kind": "modified",
+      "sha256": "6d83d83ea368135d0884e38a239829fc4fc82f7e7aa08d6f1467f17bc13f935e",
+      "bytes": 5919
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.test.ts",
+      "kind": "modified",
+      "sha256": "1f45f2a2d3e135c163b4fd5d59c8fdc9cc26a4b6d6ba8f34f20ea68f18f20618",
+      "bytes": 66469
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "kind": "modified",
+      "sha256": "f4fa97a7fd2aee5e2e49a3f8b1d0efd76920685dbe76208c8561a141a0d1a701",
+      "bytes": 51714
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/generation-errors.test.ts",
+      "kind": "new",
+      "sha256": "4c9b7ad23f8fc494d53dde0eca5c824a050d091fdbd41da42e7db8972998a3b5",
+      "bytes": 2610
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+      "kind": "modified",
+      "sha256": "9c86a04e9e4d11f016c096649486a8a7df3e2f33fa0656a90bf908faa98740ed",
+      "bytes": 19123
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/request-context.ts",
+      "kind": "modified",
+      "sha256": "47b1b503f08dcbdec9c9c9a447bb7456a6fc8508042472ae0f3ec5cbcb70ff75",
+      "bytes": 2599
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/request-guard.test.ts",
+      "kind": "new",
+      "sha256": "59c39cf282425d3b3b6d3ba93bedec88675b798288eb2691035dd4e14c56d8bd",
+      "bytes": 5209
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/request-guard.ts",
+      "kind": "new",
+      "sha256": "68b7b7cd74c84171134cd7a44103efe552b45491d4cdd3561591cf9e04770db8",
+      "bytes": 3102
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/runtime/responses.ts",
+      "kind": "modified",
+      "sha256": "85162d64de6ec006fb916bc7323dc15794066ea56f32213ff9192437ceea8b51",
+      "bytes": 13161
+    },
+    {
+      "path": "aimy-app/packages/core-agent/src/types/llm.ts",
+      "kind": "modified",
+      "sha256": "1e833eafc3aaeb7888de742a23d7bbf0257e9ca38377beb225189c2f4113a27f",
+      "bytes": 5775
+    },
+    {
+      "path": "aimy-app/packages/electron-screen-capture/src/main/index.test.ts",
+      "kind": "new",
+      "sha256": "8afc2524e0eb4acf8d618a99a9bea7ff6430a23772a8be7fb7c251e22d9e73f6",
+      "bytes": 3866
+    },
+    {
+      "path": "aimy-app/packages/electron-screen-capture/src/main/index.ts",
+      "kind": "modified",
+      "sha256": "c74d27098b926a239ae54ab801e8d185fd539a4d34ee057a1e4dc39dc9e788cc",
+      "bytes": 11884
+    },
+    {
+      "path": "aimy-app/packages/i18n/src/locales/en/settings.yaml",
+      "kind": "modified",
+      "sha256": "fda65e1363e91954e58af878ffb23f97f1a4fb6d032d35083bdfe5a25ec8fed2",
+      "bytes": 93328
+    },
+    {
+      "path": "aimy-app/packages/i18n/src/locales/en/tamagotchi/settings.yaml",
+      "kind": "modified",
+      "sha256": "45aef136c3ff5af1a05a30f6c33aeb8e26acc711b20dc9eccae2eff8182ef966",
+      "bytes": 22598
+    },
+    {
+      "path": "aimy-app/packages/i18n/src/locales/en/tamagotchi/stage.yaml",
+      "kind": "modified",
+      "sha256": "682ae3c463f7a6a53ea3641c72ab4cabb997a0c84157bd054f9167a2f93c17c8",
+      "bytes": 4228
+    },
+    {
+      "path": "aimy-app/packages/i18n/src/locales/zh-Hans/settings.yaml",
+      "kind": "modified",
+      "sha256": "25e90d8a467737fa5849bf3a342abbc67b15d8d13cf09004200e71c9d62ff1a3",
+      "bytes": 84638
+    },
+    {
+      "path": "aimy-app/packages/i18n/src/locales/zh-Hans/tamagotchi/settings.yaml",
+      "kind": "modified",
+      "sha256": "123896018f3ba0407dc7df1417569f173a5a5572ec36c3d7bc2ca20ea3363b0e",
+      "bytes": 6128
+    },
+    {
+      "path": "aimy-app/packages/i18n/src/locales/zh-Hans/tamagotchi/stage.yaml",
+      "kind": "modified",
+      "sha256": "ef21f5ac79b3da77385ed2930f918198b5b0e22d996198271930e40df2e424a9",
+      "bytes": 4115
+    },
+    {
+      "path": "aimy-app/packages/stage-pages/src/pages/devtools/providers-transcription-realtime-aliyun-nls.vue",
+      "kind": "modified",
+      "sha256": "1b16055f1dda62ac506117ccba7573b8c4eae02592350efbff97a892ef8ef5d2",
+      "bytes": 15383
+    },
+    {
+      "path": "aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+      "kind": "modified",
+      "sha256": "3e30faf200ad4a4be619f2deb671d9c8458e0e33e78b2f131b99ba945dfb752d",
+      "bytes": 409
+    },
+    {
+      "path": "aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "kind": "modified",
+      "sha256": "420be6351b6ec205dd8a5387d3363af078fb70e84274df40d36906546bc83d22",
+      "bytes": 290
+    },
+    {
+      "path": "aimy-app/packages/stage-pages/src/pages/settings/modules/speech.vue",
+      "kind": "modified",
+      "sha256": "232849e8179dabdbd7915b71235c82a4fd2f867b2a93b6a5dea98764499c9183",
+      "bytes": 38299
+    },
+    {
+      "path": "aimy-app/packages/stage-pages/src/pages/settings/providers/transcription/aliyun-nls-transcription.vue",
+      "kind": "modified",
+      "sha256": "b9ac5dd15b8606269056f3c0075c2f891efaf58eaa32ecde5d66739d7b35b8d5",
+      "bytes": 16399
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/index.ts",
+      "kind": "modified",
+      "sha256": "22a0d3bef7e7e7966f5e681c1fa618239fc9a4346ad137eca8be1d9b1d00cd7b",
+      "bytes": 345
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding-navigation.browser.test.ts",
+      "kind": "new",
+      "sha256": "9de65d5088b90cd32a75b684637b4fa8d1a403a2159da48176f3b678456ffaa5",
+      "bytes": 10092
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+      "kind": "modified",
+      "sha256": "3dcf99943ec3d315907e12feadcb0735096276562eaa1db0e2a596037b6c0917",
+      "bytes": 10720
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-provider-configuration.vue",
+      "kind": "modified",
+      "sha256": "694076d2445cd342f70e8832018314fae92f1f385c433ce3fb2ac36b41258cc0",
+      "bytes": 13090
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.vue",
+      "kind": "new",
+      "sha256": "164158ad41c98cbeb7ef00c30228f80923deff9c3224062e65a833bb475a72f6",
+      "bytes": 5643
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-welcome.vue",
+      "kind": "modified",
+      "sha256": "273c4fae5940652aef8cdeec944a30c13b7cb0a279ab4dee7273b326011bb3ae",
+      "bytes": 6210
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/settings/about-me.browser.test.ts",
+      "kind": "new",
+      "sha256": "7828346b8d70c144a098107356bc349e13d1d987f454e1840e12f8e268ba306a",
+      "bytes": 11003
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/settings/about-me.vue",
+      "kind": "new",
+      "sha256": "57a5ba0549a8db29993fe7ee179710bca2129a44f72cade25e89428fef5dfdc9",
+      "bytes": 18377
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/components/scenarios/settings/index.ts",
+      "kind": "modified",
+      "sha256": "bc580060776cc4f9b8c572d21b21a51e279b306437e9549129b41ddcc3ccd9a4",
+      "bytes": 314
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/composables/audio/audio-device.ts",
+      "kind": "modified",
+      "sha256": "f966d8cc1d6772f55c3ee92b69aaed8e7f745b966f5df597f6b7c09e1bd88317",
+      "bytes": 7247
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/composables/use-provider-validation.ts",
+      "kind": "modified",
+      "sha256": "e908038c1b1e1decfc353d1fb8fe8ca28acbad38e04d1ea9c441bf5f85eabf12",
+      "bytes": 10691
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+      "kind": "modified",
+      "sha256": "80655ee24c5dc2991dce686a17b78bd0994ab86c9fa40b55911369ec8ce717f6",
+      "bytes": 6191
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "kind": "modified",
+      "sha256": "ac91bac863e776919e66c1e5ef6515fa266d68f61b195831657344b82ed7d250",
+      "bytes": 8827
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/database/repos/memory.repo.browser.test.ts",
+      "kind": "new",
+      "sha256": "f638437c27737832952f5bc83885e8ecd1b762ed7e3ea0ea530617ddf6ea7959",
+      "bytes": 13766
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/database/repos/memory.repo.ts",
+      "kind": "new",
+      "sha256": "08ce70f9c1a3638233bcc969850305a58e352163a0b0f4662f82adce3dea5783",
+      "bytes": 16289
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/database/storage.browser.test.ts",
+      "kind": "new",
+      "sha256": "7094327e347f9b639de00e44507aee9816c5a3152772e345b08eccba5980c93b",
+      "bytes": 2033
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/database/storage.ts",
+      "kind": "modified",
+      "sha256": "2efbcd2041f88d5261255a5ac4d6590035913375b7fbc4d58f4eec40111c20f9",
+      "bytes": 3537
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/auth-fetch-local-only.test.ts",
+      "kind": "new",
+      "sha256": "b0e40bbda7e3140d3e574cbe2211ab2a61d475184c790fce03522b712d86374d",
+      "bytes": 3231
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/auth-fetch.ts",
+      "kind": "modified",
+      "sha256": "718667c3e0d7f038f8bbc984d6dd4a956b1302e2512ac93fa09990c4571bc7a3",
+      "bytes": 3315
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/chat-sync/cloud-mapper.ts",
+      "kind": "modified",
+      "sha256": "6b3810183866063c9ed5eee48a392e389e259ab89dd877b90df3e8a3e1e44329",
+      "bytes": 11307
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/chat-sync/ws-client-local-only.browser.test.ts",
+      "kind": "new",
+      "sha256": "a1e1bcab18defce2bab8c4181c166870d5e55c81a4af63c8303425f4f03bc3c7",
+      "bytes": 1468
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/chat-sync/ws-client.ts",
+      "kind": "modified",
+      "sha256": "b8c862f027b3b863e62442af325b411ae0e72c1b2ad0087af8113c9ca8affa84",
+      "bytes": 18417
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/providers/validators/acceptance.test.ts",
+      "kind": "new",
+      "sha256": "c884f54289bfdd318452434af3dd77f4c9571574a12fc71e075f66393bb489e7",
+      "bytes": 2133
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/providers/validators/index.ts",
+      "kind": "modified",
+      "sha256": "57efaecd0b5ac76c07a0539850e24f74828ea4d859c2e67cb789beb60380ce1e",
+      "bytes": 449
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/providers/validators/run.ts",
+      "kind": "modified",
+      "sha256": "ae81d0402d6b02df74c0e3198fffb96fec96e4287e8cc5316429842293b7c12e",
+      "bytes": 1330
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/speech/streaming-pipeline.ts",
+      "kind": "modified",
+      "sha256": "40bb9dc154afa77fb92ef03ba81ead2cfb195e4f183ae8e6e6467bd8635ea91a",
+      "bytes": 18733
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/voice/voice-message.test.ts",
+      "kind": "modified",
+      "sha256": "9014ae23631a37abd6f4a7eb2121012401af4512943366fcfc0d09d968a66262",
+      "bytes": 9440
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/libs/voice/voice-message.ts",
+      "kind": "modified",
+      "sha256": "9adf4d56b02c59f3ccf8dfce039fa45c6e716b15a28feff801861775ad6f28d2",
+      "bytes": 9422
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/acceptance-generation.test.ts",
+      "kind": "new",
+      "sha256": "a13df59e940295eb64d8995f0742ad2b5d2f3cb6a2975ff5d7c8bf3a6a123177",
+      "bytes": 5572
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/acceptance-generation.ts",
+      "kind": "new",
+      "sha256": "54ab81c0721fc2cbd7794fb994f430d46fbc681a7b8db20ef28be9808de4cf44",
+      "bytes": 7541
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/inference-service-providers.ts",
+      "kind": "modified",
+      "sha256": "178ff7513b544c7d7502fec20de419c9796cd32f5f41c8df486ca52378bebeac",
+      "bytes": 3509
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/local-data-policy.test.ts",
+      "kind": "new",
+      "sha256": "ecd8bbc51238e46bf19617b50bee9b0fffdcf74951a87810d3a32adec2e029f0",
+      "bytes": 725
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/local-data-policy.ts",
+      "kind": "new",
+      "sha256": "ee8195266525b95f40fee8b3d66341403d63fc6476aa6544cb1f8880ce24d10d",
+      "bytes": 1010
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/memory-session.ts",
+      "kind": "new",
+      "sha256": "e0189816c76e5048d719734470c542a50d05d3043f3717f0f9f69dac50149a27",
+      "bytes": 1340
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/provider-secret-storage.test.ts",
+      "kind": "new",
+      "sha256": "994b4c44dd4394d9093c7a050d72cd762c6f35d67bdadc54be5d39211d509420",
+      "bytes": 1267
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/provider-secret-storage.ts",
+      "kind": "new",
+      "sha256": "9c30a1d0b5f404c65a62a42277fbaafa48d1c5b4dba88d9d64bf770cfdb0e360",
+      "bytes": 2332
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/resource-policy.browser.test.ts",
+      "kind": "new",
+      "sha256": "164e2057bf78aae64ee7a18f4e62902222c56bfc66e1b4215005a9a960731773",
+      "bytes": 2067
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/resource-policy.test.ts",
+      "kind": "new",
+      "sha256": "45d6ef8ec6fe1a4ad50f43640acf9d0482a60227c4a9c2c36de66627f9903f71",
+      "bytes": 5331
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/resource-policy.ts",
+      "kind": "new",
+      "sha256": "108674609773060c1c516f2c3d4c533312d368ae6eafbe08f39280f261ee1489",
+      "bytes": 6943
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/speech/speech-client-acceptance.test.ts",
+      "kind": "new",
+      "sha256": "4f3113d47ba5cd57be8eebd9523ac0172e432a954ae46fc200359885310346bb",
+      "bytes": 2369
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/services/speech/speech-client.ts",
+      "kind": "modified",
+      "sha256": "a71849d7d48e6552497273b0a3fba8950f7c37b76a8503ce01bc6588be0fbbe7",
+      "bytes": 3909
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/ai/chat-llm/llm.ts",
+      "kind": "modified",
+      "sha256": "e83eb0882f1179c749fd21ba6b5d6bfeb21c4ee9836333bbb11dc146bca27de4",
+      "bytes": 4088
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/chat-network-errors.browser.test.ts",
+      "kind": "new",
+      "sha256": "58900f3863df3f96960a24dfed79a42e5daaca782ed570f55ce106acb10d3f39",
+      "bytes": 4496
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/chat.contract.test.ts",
+      "kind": "modified",
+      "sha256": "fa278353b87993a0d0ef8ae4e5e0c519ba70c7c2571b439ca30607e1219eb4e6",
+      "bytes": 71735
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "kind": "modified",
+      "sha256": "51d821e2c9e406a83f80f9d909afa3eb63971a844424e2832833c39a108ff9b2",
+      "bytes": 46595
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/chat/session-store-lifecycle.browser.test.ts",
+      "kind": "modified",
+      "sha256": "8e78b5f69ce00a8b87e07aa501cb43a2d399e87af137b5075003823c4fbc24c5",
+      "bytes": 38375
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/chat/session-store.browser.test.ts",
+      "kind": "modified",
+      "sha256": "888b0dd5b8c9733aaa73ec4ea59559d8b4f607ad92815924e396fa652a0bd020",
+      "bytes": 21182
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "kind": "modified",
+      "sha256": "3f122c3e194a330893c745127a35ec857659995ce7880b7c5f7aac32b6920ba9",
+      "bytes": 72017
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory-integration.browser.test.ts",
+      "kind": "new",
+      "sha256": "5335fb945f04461446997ef8b6a106e6de21ce76d9016932144e2a395c88e846",
+      "bytes": 27356
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory.ts",
+      "kind": "new",
+      "sha256": "c9b6e1c4db0c77123765d1717521db7df019a0e7b10d02673bf28152bbc8ad1d",
+      "bytes": 45633
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory/budget.test.ts",
+      "kind": "new",
+      "sha256": "78547ae7a89ebd9ca0742ecdc80d6547d35497b906b5b3d11e4c5c93e15a9a1d",
+      "bytes": 1590
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory/budget.ts",
+      "kind": "new",
+      "sha256": "ca133c6adf9dee69e346d17614742605c635f59ca9ffcd93facfdca5c3ac73a9",
+      "bytes": 4541
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory/policy.test.ts",
+      "kind": "new",
+      "sha256": "e31b9d13c34f53f1eba085f03f62c3332c2b668ad521935e05e80d114f95fd43",
+      "bytes": 15084
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory/policy.ts",
+      "kind": "new",
+      "sha256": "c61510d34bd80ec7570f9800d877706b14ccddb51af4825a364a62f3d7bf288a",
+      "bytes": 27539
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory/prompts.ts",
+      "kind": "new",
+      "sha256": "f5ffac463a2b08dfb05d2b0abc74a24b6191a8f91f7fd2f60e9c219720238bc1",
+      "bytes": 4117
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/memory/schema.ts",
+      "kind": "new",
+      "sha256": "8a7b2862e4ea90cab8e3fef5e294b7f337b145a3497b87bb5bbdb5d905b1b9e2",
+      "bytes": 10052
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/modules/speech-acceptance.browser.test.ts",
+      "kind": "new",
+      "sha256": "abc0469ae60212b3b8f165bc7588aa12fbf0deb1e96048007c8845b3fbdb9000",
+      "bytes": 5460
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/modules/speech.ts",
+      "kind": "modified",
+      "sha256": "ef30a8066fbdbad5309098d8dd656a0096073a9388bf82349953d0ed6b38201a",
+      "bytes": 31843
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.test.ts",
+      "kind": "modified",
+      "sha256": "e375e22ea095bc0836804ee09b226f05a5ac145503c934639e09ddaf853e9689",
+      "bytes": 4553
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+      "kind": "modified",
+      "sha256": "22c050ea30101cb2c3ba1b9061fb68b391ceb9e0aba5727325fc5e13f9cb9b41",
+      "bytes": 5187
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/providers/config-local-only.browser.test.ts",
+      "kind": "new",
+      "sha256": "df29f1c4a904eebe8706e3a7825d2418cce4fd6c0c41b1d5e36fd8743289832f",
+      "bytes": 12630
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/providers/config.ts",
+      "kind": "modified",
+      "sha256": "9abeb301e7788bb9b186f04fcb35cc529a97f74a8c7bb6bbf7e574517a992460",
+      "bytes": 35220
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/providers/provider-local-runtime.browser.test.ts",
+      "kind": "new",
+      "sha256": "e014bc0dfc75a59944ea50653020c83aa8d18eacce1f57e3207621661d17fc65",
+      "bytes": 4176
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/providers/provider-model-catalog.browser.test.ts",
+      "kind": "modified",
+      "sha256": "0e2a7a1f3606bda65abe2b316fa197ade8bad5fdca9b56450926439f521e78c2",
+      "bytes": 11888
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/providers/provider.ts",
+      "kind": "modified",
+      "sha256": "68b37e03da94b78e1732b30e716e800e210450716014a867ee3a022ff38bb621",
+      "bytes": 48940
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/settings/audio-device-resource-policy.browser.test.ts",
+      "kind": "new",
+      "sha256": "2b69957e6ab439b8d5b95fae3f48737c88736f25549d9b45a0bb51c72dda0e11",
+      "bytes": 1899
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+      "kind": "modified",
+      "sha256": "0a41c55392f78b21695265a66c1f7910dfd45b4a3ef82bd2b2c1bbb845782e4a",
+      "bytes": 4959
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/voice-messages.ts",
+      "kind": "modified",
+      "sha256": "e9f9e1866775125b5758e7c03de2fdacff589299c9edbeee5f46fe5f143e6a80",
+      "bytes": 6210
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/stores/voice.ts",
+      "kind": "modified",
+      "sha256": "960af72e337d6302c6fae2a95f11ebf4fd687dff0a7111c7c790e4ff582ae54f",
+      "bytes": 19196
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/types/chat-session.ts",
+      "kind": "modified",
+      "sha256": "e58d2fa91a6e2c8ade862370989b32a1e8e177f9ce76c7f0d38148ff4427a359",
+      "bytes": 2215
+    },
+    {
+      "path": "aimy-app/packages/stage-ui/src/types/memory.ts",
+      "kind": "new",
+      "sha256": "c627c76557a36c34787679eb01b0c1055deaa371c791671422d047e971a61155",
+      "bytes": 7000
+    }
+  ]
+}

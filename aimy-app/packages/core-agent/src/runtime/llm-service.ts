@@ -7,10 +7,78 @@ import { APICallError } from '@xsai/shared'
 
 import { streamChatCompletions } from './chat-completions'
 import { createContinuationScope, supportsContentArray, supportsTools } from './request-context'
+import { assertRequestCurrent } from './request-guard'
 import { RequestSwitch } from './request-switch'
 import { streamResponses } from './responses'
 
 export { modelKey } from './request-context'
+
+const generationFailureMessages = {
+  GENERATION_ABORTED: 'Generation was cancelled.',
+  GENERATION_AUTH_FAILED: 'The model service rejected authentication. Check its configured credentials.',
+  GENERATION_RATE_LIMITED: 'The model service is rate limited. Try again later.',
+  GENERATION_TIMEOUT: 'The model service timed out. Try again later.',
+  GENERATION_UNAVAILABLE: 'The model service is unavailable. Try again later.',
+  GENERATION_INVALID_REQUEST: 'The model service rejected the request. Check the selected model and settings.',
+  GENERATION_REQUEST_FAILED: 'The model request failed. Check the connection and provider settings.',
+  ACCEPTANCE_BLOCKED: 'Paid acceptance is unavailable or paused. Check the campaign ledger before retrying.',
+  ACCEPTANCE_TEXT_ONLY: 'This acceptance campaign supports text and memory only. Remove image, audio and file inputs.',
+} as const
+
+/** Public errors carry bounded classifications instead of SDK URLs, headers, request bodies or response text. */
+export interface PublicGenerationFailure {
+  code: keyof typeof generationFailureMessages
+  status?: number
+  message: string
+}
+
+/**
+ * Projects an error for logs and persisted chat messages. Internal retry logic keeps the original error.
+ *
+ * @example
+ * projectGenerationFailure({ statusCode: 401, message: 'private response' }).code
+ * // => 'GENERATION_AUTH_FAILED'
+ */
+export function projectGenerationFailure(error: unknown): PublicGenerationFailure {
+  const value = error && typeof error === 'object' ? error as Record<string, unknown> : undefined
+  const candidateStatus = value?.statusCode ?? value?.status
+  const status = typeof candidateStatus === 'number' && Number.isSafeInteger(candidateStatus) && candidateStatus >= 400 && candidateStatus <= 599
+    ? candidateStatus
+    : undefined
+  let code: PublicGenerationFailure['code'] = 'GENERATION_REQUEST_FAILED'
+  if (value?.name === 'AbortError' || value?.code === 'ABORT_ERR')
+    code = 'GENERATION_ABORTED'
+  else if (typeof value?.code === 'string' && Object.hasOwn(generationFailureMessages, value.code))
+    code = value.code as PublicGenerationFailure['code']
+  else if (value?.name === 'AcceptanceBudgetError')
+    code = 'ACCEPTANCE_BLOCKED'
+  else if (status === 401 || status === 403)
+    code = 'GENERATION_AUTH_FAILED'
+  else if (status === 429)
+    code = 'GENERATION_RATE_LIMITED'
+  else if (status === 408)
+    code = 'GENERATION_TIMEOUT'
+  else if (status && status >= 500)
+    code = 'GENERATION_UNAVAILABLE'
+  else if (status)
+    code = 'GENERATION_INVALID_REQUEST'
+  const suffix = status ? `${code}; HTTP ${status}` : code
+  return { code, status, message: `${generationFailureMessages[code]} [${suffix}]` }
+}
+
+/** Creates the error that can cross into UI state without retaining a raw SDK cause. */
+export function publicGenerationError(error: unknown): Error {
+  const failure = projectGenerationFailure(error)
+  if (failure.code === 'GENERATION_ABORTED')
+    return new DOMException('Generation was cancelled', 'AbortError')
+  return Object.assign(new Error(failure.message), { name: 'GenerationRequestError', code: failure.code, status: failure.status })
+}
+
+function reportGenerationError(label: string, error: unknown) {
+  const failure = projectGenerationFailure(error)
+  if (failure.code !== 'GENERATION_ABORTED')
+    console.error(label, { code: failure.code, status: failure.status })
+}
 
 /**
  * Automatic retry for provider requests that fail with a temporary HTTP status
@@ -79,7 +147,9 @@ async function streamOnce({
   options,
   builtinToolsResolver,
 }: StreamFromOptions) {
+  assertRequestCurrent(options)
   const initialStep = await options?.resolveStep?.()
+  assertRequestCurrent(options)
   const currentModel = initialStep?.model ?? model
   const currentProvider = initialStep?.chatProvider ?? chatProvider
   // Resolve before async tool loading so all decisions use this request's configuration.
@@ -95,6 +165,7 @@ async function streamOnce({
   const customTools = supportedTools
     ? initialStep ? initialStep.tools ?? [] : await resolveTools(options)
     : []
+  assertRequestCurrent(options)
   const mergedTools = supportedTools ? [...builtinTools, ...customTools] : []
   const tools = mergedTools.length > 0 ? mergedTools : undefined
 
@@ -118,6 +189,7 @@ async function streamOnce({
 
     const onEvent = async (streamEvent: StreamEvent) => {
       try {
+        assertRequestCurrent(options)
         if (streamEvent != null)
           await options?.onStreamEvent?.(streamEvent)
         if (streamEvent?.type === 'error')
@@ -148,6 +220,7 @@ async function streamOnce({
         stepsSettled = true
         try {
           const generatedTurn = await streamResult.generatedTurn
+          assertRequestCurrent(options)
           await options?.onStreamEvent?.({ type: 'finish' })
           if (options?.abortSignal?.aborted)
             throw options.abortSignal.reason
@@ -167,7 +240,7 @@ async function streamOnce({
           usage = await streamResult.totalUsage
         }
         catch (error) {
-          console.error('Stream totalUsage error:', error)
+          reportGenerationError('Stream totalUsage error:', error)
         }
         try {
           const normalizedUsage = !usage
@@ -179,37 +252,37 @@ async function streamOnce({
         catch (error) {
           // Usage observers are telemetry-only and must not turn a completed
           // provider response into a failed user message.
-          console.error('Stream usage callback error:', error)
+          reportGenerationError('Stream usage callback error:', error)
         }
         resolveOnce()
       }).catch((error) => {
         // A failure after `steps` resolved belongs to optional usage
         // observation and cannot invalidate the completed response.
         if (stepsSettled) {
-          console.error('Stream usage observation error:', error)
+          reportGenerationError('Stream usage observation error:', error)
           resolveOnce()
           return
         }
         rejectOnce(error)
         if (!(error instanceof RequestSwitch))
-          console.error('Stream steps error:', error)
+          reportGenerationError('Stream steps error:', error)
       })
       // `steps` can reject before the success path awaits `messages`.
       // Keep this rejection sink so xsAI cannot create an unhandled rejection.
       void streamResult.generatedTurn.catch((error) => {
         if (!(error instanceof RequestSwitch))
-          console.error('Stream generated turn error:', error)
+          reportGenerationError('Stream generated turn error:', error)
       })
       void streamResult.usage.catch((error) => {
         if (!(error instanceof RequestSwitch))
-          console.error('Stream usage error:', error)
+          reportGenerationError('Stream usage error:', error)
       })
       // `steps` and `totalUsage` reject independently when xsAI fails a
       // stream. The success path awaits `totalUsage`, but if `steps` rejects
       // first that await never runs, so keep this unconditional rejection sink.
       void streamResult.totalUsage.catch((error) => {
         if (!(error instanceof RequestSwitch))
-          console.error('Stream totalUsage error:', error)
+          reportGenerationError('Stream totalUsage error:', error)
       })
     }
     catch (error) {
@@ -242,10 +315,12 @@ async function streamWithTransientRetry(input: StreamFromOptions) {
       })
     }
     catch (error) {
+      assertRequestCurrent(input.options)
       const delayMs = consumerNotified ? undefined : transientRetryDelayMs(error, attempt)
       if (delayMs == null)
         throw error
-      console.warn(`[llm] Retrying provider request in ${delayMs}ms (retry ${attempt + 1}/${transientRetry.backoffMs.length}):`, error)
+      const failure = projectGenerationFailure(error)
+      console.warn(`[llm] Retrying provider request in ${delayMs}ms (retry ${attempt + 1}/${transientRetry.backoffMs.length}):`, { code: failure.code, status: failure.status })
       await waitBeforeRetry(delayMs, input.options?.abortSignal)
     }
   }

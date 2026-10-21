@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-12",
+  "backend": {
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "LICENSE",
+    "scope": "backend root MIT; separate asset exception"
+  },
+  "frontend": {
+    "reviewed_source_sha": "3d57a9a0125a0ca13e5d096f7092e4e494ed389e",
+    "current_default_source_sha": "d176e7df2366952e3bacbf12cf9a8b18a4315932",
+    "license_path": "LICENSE",
+    "reviewed_license_sha256": "12f7da34b1480c006316978a4460bb8cfbff57adabe30288d20c0e01f93fa550",
+    "current_default_license_sha256": "12f7da34b1480c006316978a4460bb8cfbff57adabe30288d20c0e01f93fa550",
+    "bytes_equal": true,
+    "scope": "Open-LLM-VTuber License 1.0; Apache 2.0 with commercial additional conditions",
+    "commercial_permission_obtained": false
+  },
+  "assets": "Cubism Core and example models retain separate terms; no asset permission confirmed"
+}

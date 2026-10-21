@@ -1,0 +1,842 @@
+[
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": ".gitmodules",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/.gitmodules",
+    "ok": true,
+    "bytes": 117,
+    "lines": 4,
+    "sha256": "ac12c202b81ee003ad9957de0c6148f258db0b3c53fbe557120a948ee3aa2394"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "LICENSE",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE",
+    "ok": true,
+    "bytes": 1216,
+    "lines": 23,
+    "sha256": "c48a8498e88fbb1e6da5438f19e919e6eb926cd7d25372b2ed35ff92b2631bd1"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "LICENSE-Live2D.md",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE-Live2D.md",
+    "ok": true,
+    "bytes": 57705,
+    "lines": 646,
+    "sha256": "5e2b759bba52c9d01bc79fcd3ea589aa0a7d50e4f6010a62185309947b657371"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "README.CN.md",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/README.CN.md",
+    "ok": true,
+    "bytes": 10280,
+    "lines": 139,
+    "sha256": "e65126762bc3f0b161ef55ca3fa7c2f62597e84aa1fb3af4186906c671641dfe"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "README.md",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/README.md",
+    "ok": true,
+    "bytes": 11536,
+    "lines": 158,
+    "sha256": "3b6cf6adbf7c49a00e89d99c0fdb582a316054f8bb44332f7c95800fdd674140"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "config_templates/conf.ZH.default.yaml",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/config_templates/conf.ZH.default.yaml",
+    "ok": true,
+    "bytes": 26287,
+    "lines": 499,
+    "sha256": "c7b514f0fd204f4faf9d82cf1ec63f4f9e041095d731fd0968a3c8ec7e49d2c3"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "config_templates/conf.default.yaml",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/config_templates/conf.default.yaml",
+    "ok": true,
+    "bytes": 25210,
+    "lines": 503,
+    "sha256": "d065ad0f1e40a5eb355b5cb152fddac9dad2400ae78ad383115064b690fd423c"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "mcp_servers.json",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/mcp_servers.json",
+    "ok": true,
+    "bytes": 250,
+    "lines": 12,
+    "sha256": "f6e90cb3f156aa009b8f9cde3aa3c13bf41f08658edeac1b7f4b44e9df48dfcb"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "model_dict.json",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/model_dict.json",
+    "ok": true,
+    "bytes": 679,
+    "lines": 30,
+    "sha256": "fa83d9e0a5063a81906d7116581048b4c90b0e85e088be3553915d46b5cf2202"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/concise_style_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/concise_style_prompt.txt",
+    "ok": true,
+    "bytes": 479,
+    "lines": 18,
+    "sha256": "8918f8f33a0158da90aea02d0cf9c7b20868cfbb60733390eb53d0799fdd60e6"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/group_conversation_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/group_conversation_prompt.txt",
+    "ok": true,
+    "bytes": 396,
+    "lines": 7,
+    "sha256": "0dcfe15bbe2639911112ee17ec2083f0ef1679f9a9cd86232d5b2dd764683ae5"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/live2d_expression_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/live2d_expression_prompt.txt",
+    "ok": true,
+    "bytes": 572,
+    "lines": 14,
+    "sha256": "16f7774498182c0c1a8a082ef622185057691b6c6b949fadc6b3218c557ddaac"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/live_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/live_prompt.txt",
+    "ok": true,
+    "bytes": 427,
+    "lines": 9,
+    "sha256": "96fe9c22139d41b335b1c906047f84a25c849afb69072c99e30d0b1efee3e3c2"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/mcp_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/mcp_prompt.txt",
+    "ok": true,
+    "bytes": 1693,
+    "lines": 36,
+    "sha256": "a0b5d598d201ba9e430071a2feec12158e32e71ccc6cfaab70adeedae8075231"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/proactive_speak_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/proactive_speak_prompt.txt",
+    "ok": true,
+    "bytes": 84,
+    "lines": 1,
+    "sha256": "0520ccd58da8c9c114842bff19fdd1297b4e7a16d0e96daf70d2a1aef99ff5f9"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/speakable_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/speakable_prompt.txt",
+    "ok": true,
+    "bytes": 1280,
+    "lines": 13,
+    "sha256": "dd5691e792608462b906b799b92adad6201b5e2631e325fa13c0e67eb668116a"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/think_tag_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/think_tag_prompt.txt",
+    "ok": true,
+    "bytes": 428,
+    "lines": 6,
+    "sha256": "2dfc6593cf199cdc050dd1263b59440f193127fc2dbd5d120feac62282a78e01"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "prompts/utils/tool_guidance_prompt.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/prompts/utils/tool_guidance_prompt.txt",
+    "ok": true,
+    "bytes": 256,
+    "lines": 1,
+    "sha256": "3a679d35e62ff976426cdc68959d15a9cc532969f6ca0ef99a940e7942313560"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "pyproject.toml",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/pyproject.toml",
+    "ok": true,
+    "bytes": 1840,
+    "lines": 68,
+    "sha256": "65b6f81d92183fb0f7b65a0dfd2d5ca2826d0a1b6f3ede021305c092fb8f2d7d"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "requirements.txt",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/requirements.txt",
+    "ok": true,
+    "bytes": 42047,
+    "lines": 1191,
+    "sha256": "a9630175fc7c518604f6153b8f5df2e4bddf74b47b277eb0e467ea3db84460b3"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "run_server.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/run_server.py",
+    "ok": true,
+    "bytes": 6916,
+    "lines": 178,
+    "sha256": "85b8e8c8cf637615addae4703b8436d350fe91bd6fef2a4afe7140fda7c7054d"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/agent_factory.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agent_factory.py",
+    "ok": true,
+    "bytes": 5393,
+    "lines": 132,
+    "sha256": "a965695d277c2c7b89a96d5e55f5a52b60db3ac28e7e719fcfe1f59be92e6eeb"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/agents/__init__.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/__init__.py",
+    "ok": true,
+    "bytes": 0,
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/agents/agent_interface.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/agent_interface.py",
+    "ok": true,
+    "bytes": 1771,
+    "lines": 54,
+    "sha256": "934da3dc1f0878b0510ead83aaf67ce9fb59d59cceb737237f7ff3d3df442595"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/basic_memory_agent.py",
+    "ok": true,
+    "bytes": 28012,
+    "lines": 702,
+    "sha256": "d0124df26b4ca24fd5e135959927b355f9e388350f4d9bbbae575dc714d2e1b7"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/agents/hume_ai.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/hume_ai.py",
+    "ok": true,
+    "bytes": 9099,
+    "lines": 256,
+    "sha256": "133c1343f7f6ee76271019ac934a81b329989468687eb05386127cb4a9079366"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/agents/letta_agent.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/letta_agent.py",
+    "ok": true,
+    "bytes": 4431,
+    "lines": 128,
+    "sha256": "ee482486575d35713133cefba3d999f5ffc53f838481cc9cd74ee68024a4ca01"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/agents/mem0_llm.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/mem0_llm.py",
+    "ok": true,
+    "bytes": 0,
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/input_types.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/input_types.py",
+    "ok": true,
+    "bytes": 2313,
+    "lines": 94,
+    "sha256": "8ac302d9fd635049639f5362b0f43385589587e4483ef7ac6c37d3574911edfa"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/output_types.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/output_types.py",
+    "ok": true,
+    "bytes": 2259,
+    "lines": 77,
+    "sha256": "e14963eac1d24cbc24841b87a1533c6b068fd33052f5d87096cf18495bed7c38"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/stateless_llm/openai_compatible_llm.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/stateless_llm/openai_compatible_llm.py",
+    "ok": true,
+    "bytes": 10717,
+    "lines": 237,
+    "sha256": "1c413175789c137c3236ec66fad4ec8f1e5461a3a8c469443cc6a20e470ba26d"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/stateless_llm_factory.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/stateless_llm_factory.py",
+    "ok": true,
+    "bytes": 3173,
+    "lines": 82,
+    "sha256": "70cf729e499e2f610c6a5ade123efb3c4eb0d8bfb7206bb4550119f3a459301b"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/agent/transformers.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/transformers.py",
+    "ok": true,
+    "bytes": 7959,
+    "lines": 217,
+    "sha256": "9ed81560afce8f88226102c2d6a432a27fedfcb4b4b854e9bf0dbcb68c958d8f"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/asr/asr_factory.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/asr/asr_factory.py",
+    "ok": true,
+    "bytes": 2434,
+    "lines": 62,
+    "sha256": "4d049c53686c76b23b392ecad317f5fd964cf123cceb8e2b23030033689b89b2"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/asr/asr_interface.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/asr/asr_interface.py",
+    "ok": true,
+    "bytes": 1840,
+    "lines": 57,
+    "sha256": "01512d27333849e4300492ed086563f1dce780404c0edaf296d7e6f2ef3d9e54"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/chat_group.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/chat_group.py",
+    "ok": true,
+    "bytes": 12064,
+    "lines": 299,
+    "sha256": "75f13dcfc1857d7e9014ca552c07358771d3231ba4a139f7b029f1f26b558e32"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/chat_history_manager.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/chat_history_manager.py",
+    "ok": true,
+    "bytes": 12540,
+    "lines": 374,
+    "sha256": "fb63f7764d54087371cd80d7b4d346c97001aad8d0795888cde6320fe074762c"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/__init__.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/__init__.py",
+    "ok": true,
+    "bytes": 2831,
+    "lines": 125,
+    "sha256": "4e06615556c7552f5dc2cc21773886d605b5c0120c1938a3dda04dec1b0385e4"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/agent.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/agent.py",
+    "ok": true,
+    "bytes": 8726,
+    "lines": 226,
+    "sha256": "9133de6f72318e25dc983fb9807860d3de3e3e825f18e3be78256d0c9cc391aa"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/asr.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/asr.py",
+    "ok": true,
+    "bytes": 16640,
+    "lines": 375,
+    "sha256": "0b87ca781cc593d006f35b983e9c36f72be62579946aef9f5b36693a699d58de"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/character.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/character.py",
+    "ok": true,
+    "bytes": 3324,
+    "lines": 84,
+    "sha256": "0647ec0a75be41291bc858e69a4b59f6f0a66e4e54a03e8f391032a273052089"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/i18n.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/i18n.py",
+    "ok": true,
+    "bytes": 4302,
+    "lines": 139,
+    "sha256": "67755f9133465815d30039e057269f7b47d490a321b3a4576cfdcab46d44d737"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/live.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/live.py",
+    "ok": true,
+    "bytes": 1100,
+    "lines": 34,
+    "sha256": "e9f04f3ac6b3a96dc88b7984ae8ea2fd1068df1f3aa43ecac6e31ab544f6e812"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/main.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/main.py",
+    "ok": true,
+    "bytes": 1022,
+    "lines": 30,
+    "sha256": "ad0ee1cd5f36fa4233caea6f3011c736a3c5a2ae485bd20a9092851dfc655b31"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/stateless_llm.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/stateless_llm.py",
+    "ok": true,
+    "bytes": 11209,
+    "lines": 285,
+    "sha256": "56b73b612f2c464e76cbd696c580ac05517b65445e2f1746dbe382ca824ea588"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/system.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/system.py",
+    "ok": true,
+    "bytes": 1588,
+    "lines": 39,
+    "sha256": "12fed4a92e2a430af39d1037e70fb245a2cf70b0404d52f15092109de82eab99"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/tts.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/tts.py",
+    "ok": true,
+    "bytes": 32724,
+    "lines": 816,
+    "sha256": "8ad15bf1ae03702db822701339dd6d2457b0fc6182b1a9e18c6b11e989e63c0c"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/tts_preprocessor.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/tts_preprocessor.py",
+    "ok": true,
+    "bytes": 4818,
+    "lines": 118,
+    "sha256": "6a4c5b47a575125ca244e10565897131f6070fe7d8ea7c9309ae9796040de29e"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/utils.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/utils.py",
+    "ok": true,
+    "bytes": 5399,
+    "lines": 181,
+    "sha256": "5060ad55c036b88bec0e5b8a33bd427da5e1ba2c9c62a2832c450254e16bb3bf"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/config_manager/vad.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/config_manager/vad.py",
+    "ok": true,
+    "bytes": 2700,
+    "lines": 64,
+    "sha256": "344f6593f88d546a005eb6a84e9eedc57cb989776f89ffa8ca1c67156c9d0c54"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/conversations/__init__.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/__init__.py",
+    "ok": true,
+    "bytes": 0,
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/conversations/conversation_handler.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/conversation_handler.py",
+    "ok": true,
+    "bytes": 7958,
+    "lines": 213,
+    "sha256": "98a285b0c956376f9c219d1802a2f027ba927b7f95f609dc04242f473305efa1"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/conversations/conversation_utils.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/conversation_utils.py",
+    "ok": true,
+    "bytes": 8050,
+    "lines": 293,
+    "sha256": "ddf48e7124a08da35118f4fafd35d67e997a7e23d4e4df486c7bc1cdacd0fc0b"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/conversations/group_conversation.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/group_conversation.py",
+    "ok": true,
+    "bytes": 13865,
+    "lines": 394,
+    "sha256": "21a2f39b7e9458e5748d9eb01eb1553c92fd8f044280c3cbfc11515ce3293748"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/conversations/single_conversation.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/single_conversation.py",
+    "ok": true,
+    "bytes": 6675,
+    "lines": 174,
+    "sha256": "fb1d57d19fe4709e3ee4b26c47ef427a903478963d909de68eddd554d3dac96b"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/conversations/tts_manager.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/tts_manager.py",
+    "ok": true,
+    "bytes": 6542,
+    "lines": 182,
+    "sha256": "55d94e8ddd134d4b1dd5565d6c6e7025b46a8ec05bb7a98c6eeebbc81aca55b0"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/conversations/types.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/types.py",
+    "ok": true,
+    "bytes": 2033,
+    "lines": 68,
+    "sha256": "ef4eb60542f5bb44efd5cc88c042da8d8fadb98b4174ee6897d650ea9a6db3f2"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/live2d_model.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/live2d_model.py",
+    "ok": true,
+    "bytes": 7183,
+    "lines": 194,
+    "sha256": "0267907013e0b6ec6bf1ab87b06b71b2870a528d2ea4f28228c64004256b82d5"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/json_detector.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/json_detector.py",
+    "ok": true,
+    "bytes": 5317,
+    "lines": 158,
+    "sha256": "b83d6c21db0639f1688bbd4c0ce90408308a3529424c390c13dd5dfb8cebf217"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/mcp_client.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/mcp_client.py",
+    "ok": true,
+    "bytes": 7661,
+    "lines": 197,
+    "sha256": "0f2c54b391ffd1b914509fb3e7841f165ad2307c2e65ea8dc5c1088cbe5c3ddb"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/server_registry.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/server_registry.py",
+    "ok": true,
+    "bytes": 3770,
+    "lines": 103,
+    "sha256": "026112f20cedf744cdc75807114f2aaff744c335f7517363d73a20c45ac58f5f"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/tool_adapter.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/tool_adapter.py",
+    "ok": true,
+    "bytes": 10520,
+    "lines": 232,
+    "sha256": "270d01b601db0b5bb12943edb8b274857ace84a4f3dc29b506c68bb7fccdd32c"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/tool_executor.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/tool_executor.py",
+    "ok": true,
+    "bytes": 15699,
+    "lines": 382,
+    "sha256": "ff8ef482d6ad6f2ee4a24d7a6dcf2da4bdb0a58ee9f4488c6cfea2fd38b7c063"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/tool_manager.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/tool_manager.py",
+    "ok": true,
+    "bytes": 1819,
+    "lines": 50,
+    "sha256": "466aae21af755b910e97723557f18585fe5ded3400eafca8d18338c54da2491c"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/types.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/types.py",
+    "ok": true,
+    "bytes": 3099,
+    "lines": 93,
+    "sha256": "e2136521dd83292f9932c4b28646a489005776071987997fbbc4c71f67761b19"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/mcpp/utils/path.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/mcpp/utils/path.py",
+    "ok": true,
+    "bytes": 783,
+    "lines": 24,
+    "sha256": "fbadd0b5fb668aea651db4cc10af910f45b3a57ee6ca0368a9d67a546763e547"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/message_handler.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/message_handler.py",
+    "ok": true,
+    "bytes": 3093,
+    "lines": 92,
+    "sha256": "5169cfc8f4c8d7593e888a164ef69e60f2dbedde86630f120e644122931024d7"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/proxy_handler.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/proxy_handler.py",
+    "ok": true,
+    "bytes": 12034,
+    "lines": 311,
+    "sha256": "8c6e5e85bed885bbd6e3a5563377dbe87679ef989f81bd70377daddbaaf9dad2"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/proxy_message_queue.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/proxy_message_queue.py",
+    "ok": true,
+    "bytes": 6546,
+    "lines": 164,
+    "sha256": "c1a2a35658bacedd6f83dbb7f9c76e162ac491b0789da3ac518a8d30d3939f61"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/routes.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/routes.py",
+    "ok": true,
+    "bytes": 9097,
+    "lines": 254,
+    "sha256": "237d1987363c6b647efecafa436a05b1a4702e485dfbdd4c5ae59876a731b131"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/server.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/server.py",
+    "ok": true,
+    "bytes": 5973,
+    "lines": 162,
+    "sha256": "05bb8978adbd338c5253661c221f27f8616596fb441f766d4d4efe55f6c4ff77"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/service_context.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/service_context.py",
+    "ok": true,
+    "bytes": 23234,
+    "lines": 572,
+    "sha256": "5519a87db596f531d33578a2fe99fe05f80089321beec0f6fd8f5fbdceec281c"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/tts/tts_factory.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/tts/tts_factory.py",
+    "ok": true,
+    "bytes": 9805,
+    "lines": 227,
+    "sha256": "a6303176a8d7bed0accc54e63fcba4fb5ed7061b9e7faf9acd59b737a85779bc"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/tts/tts_interface.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/tts/tts_interface.py",
+    "ok": true,
+    "bytes": 2691,
+    "lines": 81,
+    "sha256": "c6feacca2bda961dd3d5c7a3b442df09b85ed705ace4d87de76ebdaab0f913c5"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/utils/__init__.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/utils/__init__.py",
+    "ok": true,
+    "bytes": 0,
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/utils/install_utils.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/utils/install_utils.py",
+    "ok": true,
+    "bytes": 4937,
+    "lines": 140,
+    "sha256": "1076070850846ba0ac7a56b4673a8584a1558c5f13f54a8e54468d4abacc0d8b"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/utils/sentence_divider.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/utils/sentence_divider.py",
+    "ok": true,
+    "bytes": 20028,
+    "lines": 608,
+    "sha256": "55db1a29976e8404cdf529e13c54b7f00fd8aacc9347dba700cc5123756d533f"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/utils/stream_audio.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/utils/stream_audio.py",
+    "ok": true,
+    "bytes": 2877,
+    "lines": 86,
+    "sha256": "f0f4cf89dfc0563dee1a5eaba2d3c924213514627339030bddff625426dccd50"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/utils/tts_preprocessor.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/utils/tts_preprocessor.py",
+    "ok": true,
+    "bytes": 5679,
+    "lines": 196,
+    "sha256": "09643044af1e749d21c054c3f3e349767c7241ea14c467d3b1237754c5cddbd0"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/vad/__init__.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/vad/__init__.py",
+    "ok": true,
+    "bytes": 0,
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/vad/silero.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/vad/silero.py",
+    "ok": true,
+    "bytes": 7642,
+    "lines": 227,
+    "sha256": "49b70a7bd3da324871cf10efe1316efad9cf5db5ee079be544eaf3990b7f65e6"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/vad/vad_factory.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/vad/vad_factory.py",
+    "ok": true,
+    "bytes": 689,
+    "lines": 21,
+    "sha256": "94fae3acd230bd69ac37538506a5d547afae82d3f04fbb295fc6ee932a511226"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/vad/vad_interface.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/vad/vad_interface.py",
+    "ok": true,
+    "bytes": 377,
+    "lines": 12,
+    "sha256": "2ebbc27cf957766e9a7e759b7e22d5119ce9ce3b3123eb4c862e1fe8152cf3ec"
+  },
+  {
+    "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+    "sha": "992309c0aa19845960228f880013d4685fde93b5",
+    "path": "src/open_llm_vtuber/websocket_handler.py",
+    "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/websocket_handler.py",
+    "ok": true,
+    "bytes": 23172,
+    "lines": 612,
+    "sha256": "977c8870ead0969a62fdc7dc1ad39a2016f9f8b9ed7ef7dbef4d641627119b9d"
+  }
+]

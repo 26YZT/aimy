@@ -4,6 +4,8 @@ import { errorMessageFrom } from '@moeru/std'
 
 import * as v from 'valibot'
 
+import { assertCloudReplicaAllowed } from '../../services/local-data-policy'
+
 const REMOTE_CHAT_TYPES = ['private', 'bot', 'group', 'channel'] as const
 
 const RemoteChatSchema = v.object({
@@ -123,7 +125,11 @@ async function throwOnError(res: Response): Promise<void> {
  *   idempotency window.
  */
 export function createCloudChatMapper(options: CreateCloudChatMapperOptions): CloudChatMapper {
-  const fetchImpl = options.fetch ?? globalThis.fetch.bind(globalThis)
+  const transport = options.fetch ?? globalThis.fetch.bind(globalThis)
+  const fetchImpl: typeof fetch = (input, init) => {
+    assertCloudReplicaAllowed()
+    return transport(input, init)
+  }
   const requestTimeoutMs = options.requestTimeoutMs ?? 10_000
 
   function endpoint(path: string): string {

@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-12",
+  "observed_at_utc": "2026-10-12T08:06:14.743153+00:00",
+  "report": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-12-Open-LLM-VTuber深度复用评估.md",
+  "fixed_source_links_checked": 26,
+  "fixed_source_links": [
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/README.md#L14",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/output_types.py#L45-L63",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-audio-task.ts#L128-L199",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-audio-task.ts#L85-L98",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-interrupt.ts#L13-L37",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-media-capture.tsx#L54-L131",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/main/index.ts#L70-L73",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/basic_memory_agent.py#L176-L223",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agent_factory.py#L88-L108",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/agent/agents/letta_agent.py#L53-L58",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/proactive-speak-context.tsx",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/conversation_handler.py#L33-L62",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/tts_manager.py#L174-L182",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/conversation_handler.py#L97-L110",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/conversation_utils.py#L162-L190",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/message_handler.py#L16-L55",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/chat_history_manager.py#L121-L146",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/main/index.ts#L31-L49",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/main/index.ts#L91-L98",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/context/screen-capture-context.tsx",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/src/open_llm_vtuber/conversations/single_conversation.py#L94-L96",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/src/hooks/utils/use-media-capture.tsx#L128",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/LICENSE#L21-L29",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/3d57a9a0125a0ca13e5d096f7092e4e494ed389e/src/renderer/WebSDK/Core/LICENSE.md",
+      "source_exists": true,
+      "line_range_valid": true
+    },
+    {
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/blob/992309c0aa19845960228f880013d4685fde93b5/LICENSE-Live2D.md",
+      "source_exists": true,
+      "line_range_valid": true
+    }
+  ],
+  "local_links_checked": 15,
+  "source_file_hashes_checked": 132,
+  "json_and_raw_copy_validation": true,
+  "license_snapshot_validation": true,
+  "git_index_unchanged": true,
+  "non_document_tracked_changes": [],
+  "issues": [],
+  "scope": "document and source evidence integrity only; not application acceptance",
+  "json_files_parsed": 12,
+  "recursive_trees_not_truncated": {
+    "tree.json": true,
+    "frontend-pinned-build-tree.json": true,
+    "frontend-build-source-tree.json": true
+  },
+  "report_sha256": "a19f791fec7f8ed9d1dd0949f6964f6708cbf2284ff4e68be8b4b524b76c4da6",
+  "isolated_harness_sha256": "b6b5c71411afc52978a706f120d2ba59712239d16d68c45bb4451d8a0f56ffa5",
+  "saved_harness_rerun_matches_saved_results": true
+}

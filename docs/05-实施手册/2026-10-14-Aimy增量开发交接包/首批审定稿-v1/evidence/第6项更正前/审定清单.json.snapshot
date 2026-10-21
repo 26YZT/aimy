@@ -1,0 +1,138 @@
+{
+  "version": "first-increment-review-v1",
+  "date": "2026-10-15",
+  "status": "review_in_progress",
+  "implementation_authorized": false,
+  "real_model_calls": 0,
+  "items": [
+    {
+      "review_id": "R1",
+      "subject": "复用/存储",
+      "proposal": "AIRI sole owner + bounded Aions/Ryza rules + same IndexedDB envelope",
+      "status": "approved",
+      "answer": "A．认可，按这份复用清单接入并验证（推荐）",
+      "confirmed_by": "user",
+      "confirmed_on": "2026-10-15",
+      "source_question_call_id": "call_a545dd8babe447749f24078a07dc3819",
+      "approved_scope": "沿用AIRI既有底座和本地保存，按本稿AionsHome/Ryza有界复用清单适配、补齐可靠性并验证；仅此项方案认可",
+      "implementation_authorized": false
+    },
+    {
+      "review_id": "R2",
+      "subject": "初始化/启用",
+      "proposal": "afterModelSteps, skippable profile, new-only activation/journal",
+      "status": "approved",
+      "answer": "第2/3/4项均选A：先配置模型、资料可跳过，默认自动记忆可暂停，恢复只处理新聊天不补记暂停期间",
+      "approved_parts": [
+        {
+          "question_number": 2,
+          "part_id": "onboarding_sequence",
+          "status": "approved",
+          "answer": "A．先配好聊天模型，再填可跳过的资料，然后开始聊天（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_87c1cd2616044c6eb148a909026d3e57",
+          "scope": "只确认模型配置在前、可跳过的初始资料在后；默认启用等细节未因此获批"
+        },
+        {
+          "question_number": 3,
+          "part_id": "automatic_memory_default",
+          "status": "approved",
+          "answer": "A．默认开启，首次简短说明；用户可在“关于我”暂停（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_2fd6fe65d47046f2ae8db75573a2efa5",
+          "scope": "新用户完成首次设置后自动记忆默认开启、首次简短告知、关于我可暂停；只处理开启后新聊天，默认开关确认不扩为整包实施授权"
+        },
+        {
+          "question_number": 4,
+          "part_id": "pause_resume_backfill",
+          "status": "approved",
+          "answer": "A．不补记，只整理重新开启后的新聊天（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_aeaf821aad3342fba4da6ec17b59e4fb",
+          "scope": "普通聊天记录保留；自动记忆恢复后不补记暂停期间，只整理恢复后新聊天"
+        }
+      ],
+      "pending_parts": [],
+      "confirmed_default": {
+        "new_user_enabled": true,
+        "first_use_notice": true,
+        "pause_entry": "关于我"
+      },
+      "approved_scope": "首次流程、默认开关与暂停恢复规则；不代表技术schema全文冻结、整包通过或产品开工",
+      "confirmed_pause_resume": {
+        "backfill_paused_chats": false,
+        "future_new_chats_only": true
+      },
+      "implementation_authorized": false
+    },
+    {
+      "review_id": "R3",
+      "subject": "查看/维护",
+      "proposal": "About Me, natural correction, secondary maintenance memory-only with impact preview; no clear-all",
+      "status": "partially_approved",
+      "answer": null,
+      "approved_parts": [
+        {
+          "question_number": 5,
+          "part_id": "maintenance_entry_placement",
+          "status": "approved",
+          "answer": "A．平时以查看为主，展开“资料维护”后才显示修改、移除操作（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_311fd5562a1a48a68c80dcc22abcdf1a",
+          "scope": "关于我默认以查看为主，折叠资料维护内显示修改/移除；日常自动记忆和自然聊天纠正；处理记忆并保留聊天原文"
+        }
+      ],
+      "pending_parts": [
+        "dependent_memory_removal"
+      ],
+      "confirmed_maintenance_entry": "collapsed_data_maintenance",
+      "implementation_authorized": false
+    },
+    {
+      "review_id": "R4",
+      "subject": "环境/隔离",
+      "proposal": "verify installed Node24.20/pnpm11.24 then align declaration, isolated profile without migration",
+      "status": "pending_user_review",
+      "answer": null
+    },
+    {
+      "review_id": "R5",
+      "subject": "工程/评测",
+      "proposal": "engineering hard gates + retained 8 materials, STEP_01 target proposal, campaign-wide CNY10",
+      "status": "pending_user_review",
+      "answer": null
+    }
+  ],
+  "already_confirmed_decisions": "parent 审定账本.json decisions preserved; no re-asking or assumed approval",
+  "formal_assets_and_voice": "deferred_without_implicit_choice",
+  "review_mode": "one_plain_language_question_at_a_time",
+  "progress": {
+    "approved_review_ids": [
+      "R1",
+      "R2"
+    ],
+    "remaining_review_ids": [
+      "R3",
+      "R4",
+      "R5"
+    ],
+    "next_review_id": "R3",
+    "next_question_part": "dependent_memory_removal",
+    "note": "每次只审一个用户可理解的独立行为；认可入口摆放不等于认可连带移除范围",
+    "approved_question_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "partially_approved_review_ids": [
+      "R3"
+    ],
+    "next_question_number": 6
+  }
+}

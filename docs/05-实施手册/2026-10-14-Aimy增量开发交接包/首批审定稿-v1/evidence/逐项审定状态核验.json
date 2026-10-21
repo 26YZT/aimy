@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-15",
+  "scope": "explicit human review-state update only",
+  "approved_question_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+  ],
+  "withdrawn_question_numbers": [
+    6
+  ],
+  "question_6_chosen_option": null,
+  "approved_review_ids": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "partially_approved_review_ids": [
+    "R5"
+  ],
+  "remaining_review_ids": [
+    "R4",
+    "R5"
+  ],
+  "next_question_number": 8,
+  "next_question_part": "implementation_scope_approval",
+  "previous_17_decisions_unchanged": true,
+  "other_review_items_unchanged": true,
+  "final_approval_answer": null,
+  "implementation_authorized": false,
+  "product_code_written": false,
+  "real_model_calls": 0,
+  "final_question_8_reply": "clarification_request_not_approval",
+  "checks": "question 8 clarification recorded without option A/B; prior decisions and reviews unchanged",
+  "latest_activity": "first_principles_full_product_review",
+  "direction_audit_completed": true,
+  "confirmed_choices_unchanged": true
+}

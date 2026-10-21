@@ -1,0 +1,8 @@
+{
+  "chatModel": "deepseek-flash",
+  "publicKeyAbsent": true,
+  "screenCaptureEnabled": false,
+  "visionKeyPresent": true,
+  "visionModel": "deepseek-v4-pro",
+  "visionProvider": "vision-deepseek"
+}

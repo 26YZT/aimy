@@ -1,0 +1,695 @@
+{
+  "date": "2026-10-14",
+  "scope": "Actual AST-extracted current source bodies with original SQLite SQL; stdlib async SQLite shim; model/config/notify are deterministic boundaries. No source top-level import, credentials, network, model or device. Fresh subprocess reads synthetic SQLite, not a running FastAPI/AIRI app.",
+  "observations": [
+    {
+      "test_id": "DM-P01",
+      "slice": "MEM-F01",
+      "kind": "positive",
+      "description": "真实任务/SQL保存有来源画像",
+      "observed": {
+        "facts": 1,
+        "sources": [
+          "private:u1"
+        ],
+        "job": "done",
+        "model_calls": 1
+      },
+      "real_source_targets": [
+        "post_sentinel.enqueue_event",
+        "_context_for_job",
+        "_apply_analysis",
+        "run_pending_once"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "enqueue_event",
+          "start": 212,
+          "end": 235
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_context_for_job",
+          "start": 254,
+          "end": 278
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_apply_analysis",
+          "start": 358,
+          "end": 498
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "run_pending_once",
+          "start": 501,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P02",
+      "slice": "MEM-F01",
+      "kind": "positive",
+      "description": "新Python进程读取同合成SQLite",
+      "observed": {
+        "facts": 1,
+        "job": "done",
+        "limits": "不是启动完整FastAPI或AIRI IndexedDB"
+      },
+      "real_source_targets": [
+        "post_sentinel._read",
+        "snapshot data storage shape"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_read",
+          "start": 89,
+          "end": 92
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N01",
+      "slice": "MEM-F01",
+      "kind": "negative_blocked",
+      "description": "模型引用非白名单source拒写",
+      "observed": {
+        "facts": 0,
+        "job": "pending"
+      },
+      "real_source_targets": [
+        "post_sentinel._apply_analysis",
+        "run_pending_once"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_apply_analysis",
+          "start": 358,
+          "end": 498
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "run_pending_once",
+          "start": 501,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N02",
+      "slice": "MEM-F01",
+      "kind": "negative_blocked",
+      "description": "模型await期间原文edit后旧结果拒写",
+      "observed": {
+        "facts": 0,
+        "job": "skipped"
+      },
+      "real_source_targets": [
+        "post_sentinel._context_for_job",
+        "run_pending_once"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_context_for_job",
+          "start": 254,
+          "end": 278
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "run_pending_once",
+          "start": 501,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N03",
+      "slice": "MEM-F01",
+      "kind": "negative_blocked",
+      "description": "模型await期间原文delete后旧结果拒写",
+      "observed": {
+        "facts": 0,
+        "job": "skipped"
+      },
+      "real_source_targets": [
+        "post_sentinel._context_for_job",
+        "run_pending_once"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_context_for_job",
+          "start": 254,
+          "end": 278
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "run_pending_once",
+          "start": 501,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N04",
+      "slice": "MEM-F01",
+      "kind": "negative_blocked",
+      "description": "模型await期间手动revision更新不被旧结果覆盖",
+      "observed": {
+        "retained": "合成用户的新称呼是米米",
+        "job": "pending"
+      },
+      "real_source_targets": [
+        "post_sentinel.save_manual",
+        "run_pending_once"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "save_manual",
+          "start": 142,
+          "end": 201
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "run_pending_once",
+          "start": 501,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N05",
+      "slice": "MEM-F01",
+      "kind": "negative_blocked",
+      "description": "关闭再开但epoch改变，旧模型拒写",
+      "observed": {
+        "facts": 0,
+        "job": "skipped"
+      },
+      "real_source_targets": [
+        "post_sentinel.invalidate_pending",
+        "run_pending_once"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "invalidate_pending",
+          "start": 204,
+          "end": 209
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "run_pending_once",
+          "start": 501,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N06",
+      "slice": "MEM-F01",
+      "kind": "negative_blocked",
+      "description": "手动删画像后同ref不能重建",
+      "observed": {
+        "deleted_key": "fact.90b9b2c8c24147acbb6fcbb6c11950f1",
+        "changed": false
+      },
+      "real_source_targets": [
+        "post_sentinel.save_manual",
+        "_apply_analysis"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "save_manual",
+          "start": 142,
+          "end": 201
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_apply_analysis",
+          "start": 358,
+          "end": 498
+        }
+      ]
+    },
+    {
+      "test_id": "DM-C01",
+      "slice": "MEM-F01",
+      "kind": "counterexample",
+      "description": "删除同ref屏障不能保证另topic同义事实不重建",
+      "observed": {
+        "new_fact_created": true,
+        "same_source": "private:u1",
+        "limits": "真实_apply_analysis接受边界输出；不是实际模型一定这样输出"
+      },
+      "real_source_targets": [
+        "post_sentinel._apply_analysis"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_apply_analysis",
+          "start": 358,
+          "end": 498
+        }
+      ]
+    },
+    {
+      "test_id": "DM-C02",
+      "slice": "MEM-F01",
+      "kind": "counterexample",
+      "description": "有效source ID不等于模型理解本人/否定正确",
+      "observed": {
+        "wrong_candidate_with_valid_source_accepted": true,
+        "limits": "故意假模型错误候选；检测确定性校验边界，不评真实模型精确率"
+      },
+      "real_source_targets": [
+        "post_sentinel._apply_analysis",
+        "run_pending_once"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "_apply_analysis",
+          "start": 358,
+          "end": 498
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "symbol": "run_pending_once",
+          "start": 501,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P03",
+      "slice": "MEM-F02",
+      "kind": "positive",
+      "description": "任务过截止是unknown而非done",
+      "observed": {
+        "status": "unknown"
+      },
+      "real_source_targets": [
+        "user_profile_policy.lifecycle"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+          "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+          "symbol": "lifecycle",
+          "start": 96,
+          "end": 115
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P04",
+      "slice": "MEM-F02",
+      "kind": "positive",
+      "description": "持续项目与临时项目采用不同老化规则",
+      "observed": {
+        "temporary_20days": "stale",
+        "sustained_20days": "active",
+        "limits": "这些天数是原项目政策，不证明Aimy用户偏好"
+      },
+      "real_source_targets": [
+        "user_profile_policy.lifecycle"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+          "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+          "symbol": "lifecycle",
+          "start": 96,
+          "end": 115
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P05",
+      "slice": "MEM-F02",
+      "kind": "positive",
+      "description": "共享画像输出1200字符内并保持整条事实",
+      "observed": {
+        "chars": 1013,
+        "included": 5,
+        "total": 30
+      },
+      "real_source_targets": [
+        "user_profile_policy.render_context"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+          "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+          "symbol": "render_context",
+          "start": 159,
+          "end": 203
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P06",
+      "slice": "MEM-F02",
+      "kind": "positive",
+      "description": "无向量分数时关键词+日期取正确事件并带source回执",
+      "observed": {
+        "ids": [
+          "m1"
+        ],
+        "source_receipt": true,
+        "limits": "只验证rank/format原函数，不是端到端真实embedding质量"
+      },
+      "real_source_targets": [
+        "active_memory_search.extract_memory_search_requests",
+        "resolve_memory_time_window",
+        "rank_memory_rows",
+        "format_memory_search_context"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "symbol": "extract_memory_search_requests",
+          "start": 67,
+          "end": 105
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "symbol": "resolve_memory_time_window",
+          "start": 150,
+          "end": 165
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "symbol": "rank_memory_rows",
+          "start": 172,
+          "end": 257
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "symbol": "format_memory_search_context",
+          "start": 539,
+          "end": 570
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N07",
+      "slice": "MEM-F02",
+      "kind": "negative_blocked",
+      "description": "无时间窗口无关键词命中时不硬召回",
+      "observed": {
+        "results": 0
+      },
+      "real_source_targets": [
+        "active_memory_search.rank_memory_rows"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "symbol": "rank_memory_rows",
+          "start": 172,
+          "end": 257
+        }
+      ]
+    },
+    {
+      "test_id": "DM-C03",
+      "slice": "MEM-F02",
+      "kind": "counterexample",
+      "description": "中文非法月日未归一化为拒绝结果，会抛ValueError",
+      "observed": {
+        "raised": "ValueError",
+        "limits": "真实纯函数边界；上层可能另有异常处理，不能称完整服务崩溃"
+      },
+      "real_source_targets": [
+        "active_memory_search._parse_date",
+        "resolve_memory_time_window"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "symbol": "_parse_date",
+          "start": 129,
+          "end": 147
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "symbol": "resolve_memory_time_window",
+          "start": 150,
+          "end": 165
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P07",
+      "slice": "PRO-F01",
+      "kind": "positive",
+      "description": "NEXT_CHAT限定1–60并剥离可见标签",
+      "observed": {
+        "valid_minutes": 2,
+        "61_rejected": true
+      },
+      "real_source_targets": [
+        "proactive_companionship.extract_next_chat_decision"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "symbol": "extract_next_chat_decision",
+          "start": 63,
+          "end": 75
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P08",
+      "slice": "PRO-F01",
+      "kind": "positive",
+      "description": "timer落SQLite，新Python进程只领取一次",
+      "observed": {
+        "first_claim": true,
+        "second_claim": false,
+        "limits": "新进程执行claim原函数；没有启动真实ScheduleManager/_fire_monitor/模型/设备"
+      },
+      "real_source_targets": [
+        "proactive_companionship.process_visible_message_event",
+        "claim_proactive_timer"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "symbol": "process_visible_message_event",
+          "start": 93,
+          "end": 145
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "symbol": "claim_proactive_timer",
+          "start": 148,
+          "end": 155
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N08",
+      "slice": "PRO-F01",
+      "kind": "negative_blocked",
+      "description": "新用户可见消息撤销待领取timer",
+      "observed": {
+        "remaining": 0
+      },
+      "real_source_targets": [
+        "proactive_companionship.process_visible_message_event"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "symbol": "process_visible_message_event",
+          "start": 93,
+          "end": 145
+        }
+      ]
+    },
+    {
+      "test_id": "DM-C04",
+      "slice": "PRO-F01",
+      "kind": "counterexample",
+      "description": "禁用后已有timer仍可领取，整套不能称正确可用增强",
+      "observed": {
+        "enabled": false,
+        "claim_after_disable": true
+      },
+      "real_source_targets": [
+        "proactive_companionship.set_proactive_enabled",
+        "claim_proactive_timer"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "symbol": "set_proactive_enabled",
+          "start": 36,
+          "end": 38
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "symbol": "claim_proactive_timer",
+          "start": 148,
+          "end": 155
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P09",
+      "slice": "MEM-F01",
+      "kind": "positive",
+      "description": "原memory_library创建与读取合成原子记录",
+      "observed": {
+        "stored": "合成原子记忆",
+        "source_selection": "[]",
+        "limits": "手动CRUD路径，非自动_digest；DTO/embedding/WS边界假实现"
+      },
+      "real_source_targets": [
+        "routes.memory_library.create_memory",
+        "_get"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "symbol": "create_memory",
+          "start": 161,
+          "end": 178
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "symbol": "_get",
+          "start": 57,
+          "end": 61
+        }
+      ]
+    },
+    {
+      "test_id": "DM-P10",
+      "slice": "MEM-F01",
+      "kind": "positive",
+      "description": "更正内容且embedding失败时不挂旧向量",
+      "observed": {
+        "content": "合成更正后的事实",
+        "embedding": null
+      },
+      "real_source_targets": [
+        "routes.memory_library.update_memory"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "symbol": "update_memory",
+          "start": 182,
+          "end": 207
+        }
+      ]
+    },
+    {
+      "test_id": "DM-N09",
+      "slice": "MEM-F01",
+      "kind": "negative_blocked",
+      "description": "有关联派生时不确认则409",
+      "observed": {
+        "status_code": 409
+      },
+      "real_source_targets": [
+        "routes.memory_library.delete_memory",
+        "_related"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "symbol": "delete_memory",
+          "start": 211,
+          "end": 227
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "symbol": "_related",
+          "start": 64,
+          "end": 72
+        }
+      ]
+    },
+    {
+      "test_id": "DM-C05",
+      "slice": "MEM-F01",
+      "kind": "counterexample",
+      "description": "确认删记录会去父引用但保留派生正文，不等于忘记事实",
+      "observed": {
+        "parent_rows": 0,
+        "child_content_remains": true,
+        "child_sources": "[]",
+        "limits": "这是源码和UI声明的删除语义，不冒称意外bug"
+      },
+      "real_source_targets": [
+        "routes.memory_library.delete_memory"
+      ],
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "symbol": "delete_memory",
+          "start": 211,
+          "end": 227
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "positive": 10,
+    "negative_blocked": 9,
+    "counterexample": 5
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "translation": {
+    "normal": {
+      "display": "你好，小米！",
+      "tts": "こんにちは、シャオミー！"
+    },
+    "returned_display": "你好，小米！",
+    "punctuation_skipped_translation": true,
+    "translation_error_propagates": true,
+    "TTS_on_failure": 0,
+    "limit": "translator+TTS stub; no real translation quality, latency, API or audio",
+    "initial_disabled_no_engine": true,
+    "disable_after_enabled_leaves_existing_engine": true,
+    "disable_check_scope": "exact disabled branch; no provider/network"
+  },
+  "filters": [
+    {
+      "id": "plain",
+      "input": "你好，世界。",
+      "olv": "你好，世界。"
+    },
+    {
+      "id": "asterisk",
+      "input": "*轻轻挥手*你好",
+      "olv": "你好"
+    },
+    {
+      "id": "nested",
+      "input": "你好[轻声(深呼吸)]世界。",
+      "olv": "你好世界。"
+    },
+    {
+      "id": "fullwidth",
+      "input": "你好（轻轻挥手）世界。",
+      "olv": "你好（轻轻挥手）世界。"
+    },
+    {
+      "id": "code",
+      "input": "变量a<b>c。",
+      "olv": "变量ac。"
+    },
+    {
+      "id": "math",
+      "input": "需要 (2+3) 个",
+      "olv": "需要 个"
+    },
+    {
+      "id": "unclosed",
+      "input": "你好[未闭合文字",
+      "olv": "你好"
+    }
+  ],
+  "system_trigger_memory": {
+    "name": "proactive_skips_input_but_keeps_assistant",
+    "chunks": [
+      "proactive reply"
+    ],
+    "memory": [
+      {
+        "role": "assistant",
+        "content": "proactive reply"
+      }
+    ],
+    "decorator_edges": "stubbed_identity; actual _to_messages/_add_message/simple-chat path"
+  },
+  "sourceHashes": {
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/utils/tts_preprocessor.py": "09643044af1e749d21c054c3f3e349767c7241ea14c467d3b1237754c5cddbd0",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/conversations/conversation_utils.py": "ddf48e7124a08da35118f4fafd35d67e997a7e23d4e4df486c7bc1cdacd0fc0b",
+    "/Users/mima1234/Documents/资料/拆解项目/Open-LLM-VTuber/src/open_llm_vtuber/service_context.py": "5519a87db596f531d33578a2fe99fe05f80089321beec0f6fd8f5fbdceec281c"
+  },
+  "network_models_devices_used": false
+}

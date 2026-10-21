@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-18T03:57:01.229Z",
+  "oldApp": "/Users/mima1234/Applications/Aimy体验版.app",
+  "asarSha256": "619f8275c040417981c704c43e9bf05fd13dba11b7f339314cf579ad7aad5177",
+  "companionSettingsAssets": [],
+  "version": "0.12.0-beta.5",
+  "main": "preview-entry.mjs"
+}

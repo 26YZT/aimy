@@ -1,0 +1,183 @@
+{
+  "date": "2026-10-14 Asia/Shanghai",
+  "source": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master",
+  "networkCalls": 0,
+  "realModelCalls": 0,
+  "realMicCalls": 0,
+  "sourceWrites": 0,
+  "checks": 13,
+  "results": [
+    {
+      "id": "T01",
+      "kind": "confirmed-behavior",
+      "evidence": {
+        "queuedPlaybackOrder": [
+          "blob:active",
+          "blob:low",
+          "blob:high"
+        ],
+        "meaning": "Waiting intents are FIFO; priority controls preemption only. AIRI speech-pipeline sorts priority."
+      }
+    },
+    {
+      "id": "T02",
+      "kind": "pass",
+      "evidence": {
+        "playedCount": 0,
+        "revoked": [
+          "blob:cancelled"
+        ],
+        "meaning": "Cancelled late synthesis output is discarded."
+      }
+    },
+    {
+      "id": "T03",
+      "kind": "risk-reproduced",
+      "evidence": {
+        "played": [
+          "blob:active",
+          "blob:queued"
+        ],
+        "epoch": 1,
+        "stateAfterBargeIn": "speaking",
+        "meaning": "App barge-in calls interrupt, which promotes rather than drops queued speech."
+      }
+    },
+    {
+      "id": "T04",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "inputSamples": 128000,
+        "inputDurationMs": 8000,
+        "retainedFrames": 38,
+        "wavSamples": 2816,
+        "wavDurationMs": 176,
+        "meaning": "WAV contains only last 176 ms for 128-sample audio render blocks."
+      }
+    },
+    {
+      "id": "T05",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "voiceListening": false,
+        "sttListening": false,
+        "delivered": [
+          "late text after microphone off"
+        ],
+        "meaning": "Actual asynchronous Stt + Voice gate accepts late provider text after stop; no generation/permission guard."
+      }
+    },
+    {
+      "id": "T06",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "mockCaptureStartResolved": true,
+        "userWantsMic": false,
+        "tracksStoppedBeforeCleanup": 0,
+        "meaning": "Stop during pending getUserMedia does not invalidate its eventual stream; mock host reproduces startup race."
+      }
+    },
+    {
+      "id": "T07",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "sentDialogue": [
+          "old fact"
+        ],
+        "pendingAfter": [],
+        "meaning": "New dialogue after request serialization is cleared by old consolidation response."
+      }
+    },
+    {
+      "id": "T08",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "afterDeleteThenStaleResponse": [
+          "deleted preference"
+        ],
+        "meaning": "Consolidation in flight can resurrect an entry removed by deterministic API."
+      }
+    },
+    {
+      "id": "T09",
+      "kind": "defect-reproduced",
+      "evidence": {
+        "primaryDuringInflight": {
+          "v": 1,
+          "pending": [],
+          "sessions": [],
+          "summaries": []
+        },
+        "freshVmLoadStatus": "ok",
+        "freshVmRecoveredPending": 0,
+        "meaning": "A new VM with identical storage observes valid-but-empty primary while summary is in flight; simulated restart, not real process crash."
+      }
+    },
+    {
+      "id": "T10",
+      "kind": "risk-reproduced",
+      "evidence": {
+        "diskProfile": {},
+        "cachedProfile": {
+          "ryza.old": "stale"
+        },
+        "meaning": "Empty disk snapshot does not clear an existing Chromium cache; persistent erase/restore semantics need a durable empty-generation marker."
+      }
+    },
+    {
+      "id": "T11",
+      "kind": "pass",
+      "evidence": {
+        "matrix": [
+          {
+            "url": "https://example.invalid/v1",
+            "allowed": true
+          },
+          {
+            "url": "http://127.0.0.1:11434/v1",
+            "allowed": true
+          },
+          {
+            "url": "http://localhost:1234",
+            "allowed": true
+          },
+          {
+            "url": "http://[::1]:50021",
+            "allowed": true
+          },
+          {
+            "url": "http://192.168.1.1",
+            "allowed": false
+          },
+          {
+            "url": "http://127.0.0.1.evil.invalid",
+            "allowed": false
+          },
+          {
+            "url": "file:///tmp/nope",
+            "allowed": false
+          }
+        ],
+        "meaning": "Actual desktop initial-target policy accepts HTTPS and loopback HTTP; no network requested and redirect handling untested."
+      }
+    },
+    {
+      "id": "T12",
+      "kind": "pass",
+      "evidence": {
+        "exactEchoWithinWindow": true,
+        "expiredEcho": false,
+        "meaning": "Actual echo pure algorithm passes exact text and expiry checks; no physical AEC, language quality or false-positive measurement."
+      }
+    },
+    {
+      "id": "T13",
+      "kind": "contract-risk-reproduced",
+      "evidence": {
+        "webAlarms": 0,
+        "nativeAlarms": 1,
+        "meaning": "Actual web Alarm.remove only pushes an upsert array. Java schedule has same upsert semantics; deleted ids require cancel, which web never calls. Native implementation is modeled, not executed on Android."
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "sha": "06a659b114fff788cf0daaa86e484576db4975bf",
+  "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/trees/06a659b114fff788cf0daaa86e484576db4975bf",
+  "tree": [
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec03ebc081763e14352ac0c8e0590fde7789c1b3",
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/trees/ec03ebc081763e14352ac0c8e0590fde7789c1b3"
+    },
+    {
+      "path": "assets/main-QEkl09-0.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0022881fda2f9d2126d4229b0da155152bc5cd20",
+      "size": 41060,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/0022881fda2f9d2126d4229b0da155152bc5cd20"
+    },
+    {
+      "path": "assets/main-nu7uwxNJ.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1091e740a63cd545e28f97485ce0b34c9296da71",
+      "size": 1895632,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/1091e740a63cd545e28f97485ce0b34c9296da71"
+    },
+    {
+      "path": "favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c72b6a62e370d1cf53bfc0b8bde8cab6937df835",
+      "size": 99709,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/c72b6a62e370d1cf53bfc0b8bde8cab6937df835"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61cd6a5cc392222fb5a199fee773d5dbe2b2fa03",
+      "size": 314,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/61cd6a5cc392222fb5a199fee773d5dbe2b2fa03"
+    },
+    {
+      "path": "libs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ccc697e5acecad5ff923dc9cb7e35143ab219e78",
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/trees/ccc697e5acecad5ff923dc9cb7e35143ab219e78"
+    },
+    {
+      "path": "libs/live2d.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d3c0a9847251a16cffc38d107176e94fc86765f",
+      "size": 129056,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/8d3c0a9847251a16cffc38d107176e94fc86765f"
+    },
+    {
+      "path": "libs/live2dcubismcore.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f60145f1097aa97c5a46730d6765373161478bd",
+      "size": 222574,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/2f60145f1097aa97c5a46730d6765373161478bd"
+    },
+    {
+      "path": "libs/live2dcubismcore.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e7fe178ff46c163f4d809009c82bce81d4ce588",
+      "size": 206492,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/2e7fe178ff46c163f4d809009c82bce81d4ce588"
+    },
+    {
+      "path": "libs/ort-wasm-simd-threaded.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd14f597d10767878a9bca8d3a314ce4195bf353",
+      "size": 9960821,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/fd14f597d10767878a9bca8d3a314ce4195bf353"
+    },
+    {
+      "path": "libs/ort-wasm-simd.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4985f027591a554867f70b85c73a60bc106c5ad",
+      "size": 10014674,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/b4985f027591a554867f70b85c73a60bc106c5ad"
+    },
+    {
+      "path": "libs/ort-wasm-threaded.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b29841babcf428023d68458c34b35292b5950ef0",
+      "size": 9149637,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/b29841babcf428023d68458c34b35292b5950ef0"
+    },
+    {
+      "path": "libs/ort-wasm.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b2dd9abf54a8fdca4fbc824b87daedf37701de3",
+      "size": 9223228,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/5b2dd9abf54a8fdca4fbc824b87daedf37701de3"
+    },
+    {
+      "path": "libs/silero_vad_legacy.onnx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6db48d6e2a0797a2ec173c008384f7710189344",
+      "size": 1807522,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/e6db48d6e2a0797a2ec173c008384f7710189344"
+    },
+    {
+      "path": "libs/silero_vad_v5.onnx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3e3a900c0d70e67b5e2b90a33ad856ee7947930",
+      "size": 2327524,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/b3e3a900c0d70e67b5e2b90a33ad856ee7947930"
+    },
+    {
+      "path": "libs/vad.worklet.bundle.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ef1306ffb6d3f5e9119c3c2d55581d6c002aa57",
+      "size": 2642,
+      "url": "https://api.github.com/repos/Open-LLM-VTuber/Open-LLM-VTuber-Web/git/blobs/8ef1306ffb6d3f5e9119c3c2d55581d6c002aa57"
+    }
+  ],
+  "truncated": false
+}

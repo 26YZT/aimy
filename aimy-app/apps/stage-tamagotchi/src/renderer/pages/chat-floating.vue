@@ -12,7 +12,7 @@ import { useI18n } from 'vue-i18n'
 import ChatDanmakuFeedMenu from '../components/chat-window/chat-danmaku-feed-menu.vue'
 import ChatSpeechMuteButton from '../components/chat-window/chat-speech-mute-button.vue'
 import ChatWindowStyleMenu from '../components/chat-window/chat-window-style-menu.vue'
-import InteractiveArea from '../components/InteractiveArea.vue'
+import MessengerWindow from '../components/messenger/messenger-window.vue'
 
 import {
   electronChatFloatingContentHidden,
@@ -29,7 +29,7 @@ import { useControlsIslandStore } from '../stores/controls-island'
 
 const { activeCard } = storeToRefs(useAiriCardStore())
 const sessionsDrawerOpen = shallowRef(false)
-const interactiveArea = useTemplateRef<InstanceType<typeof InteractiveArea>>('interactive-area')
+const interactiveArea = useTemplateRef<InstanceType<typeof MessengerWindow>>('interactive-area')
 const { t } = useI18n()
 
 // Folded until the main process answers, so the first unfold plays the same
@@ -227,8 +227,8 @@ function moveByKeyboard(delta: WindowDelta) {
       @after-enter="hitTest"
       @after-leave="reportContentHidden()"
     >
-      <div v-show="contentShown" :class="['absolute inset-0 flex flex-col gap-1 pt-3']">
-        <div :class="['flex items-center gap-2 px-4', characterOnLeft ? 'flex-row-reverse' : '']">
+      <div v-show="contentShown" :class="['absolute inset-0 flex flex-col gap-1 pt-3', { 'messenger-floating-frame': !danmaku }]">
+        <div :class="['chat-floating-toolbar flex items-center gap-2 px-4', characterOnLeft ? 'flex-row-reverse' : '']">
           <div
             :class="[
               'shrink-0 rounded-full p-0.5 shadow-md',
@@ -281,7 +281,7 @@ function moveByKeyboard(delta: WindowDelta) {
               @click="sessionsDrawerOpen = true"
             >
               <div class="i-solar:chat-line-bold shrink-0 text-neutral-400 dark:text-neutral-500" />
-              <span class="truncate text-sm font-medium">{{ activeCard?.name || 'AIRI' }}</span>
+              <span class="truncate text-sm font-medium">{{ danmaku && activeCard?.name ? activeCard.name : 'Aimy' }}</span>
             </button>
             <ChatSpeechMuteButton :class="['shrink-0 rounded-full!']" />
             <ChatDanmakuFeedMenu v-if="danmaku" :class="['shrink-0 rounded-full!']" />
@@ -306,9 +306,10 @@ function moveByKeyboard(delta: WindowDelta) {
         </div>
 
         <div :class="['relative min-h-0 flex-1']">
-          <InteractiveArea
+          <MessengerWindow
             ref="interactive-area"
             v-model:composer-folded="composerFolded"
+            :danmaku="danmaku"
             floating
             :composer-foldable="danmaku"
             :passive="passiveFeed"
@@ -382,3 +383,12 @@ function moveByKeyboard(delta: WindowDelta) {
 meta:
   layout: stage
 </route>
+
+<style scoped>
+.messenger-floating-frame { gap: 0; padding-top: 0; border: 1px solid var(--aimy-line, #eadce2); border-radius: 16px; overflow: hidden; background: var(--aimy-panel, #fffdfd); }
+.messenger-floating-frame .chat-floating-toolbar { padding: 5px 10px; gap: 4px; border-bottom: 1px solid var(--aimy-line, #eadce2); }
+.messenger-floating-frame .chat-floating-toolbar > div { box-shadow: none; background: transparent; --un-ring-shadow: 0 0 transparent; }
+.messenger-floating-frame .chat-floating-toolbar > div:nth-child(2) { flex: 1; }
+:global(.dark .messenger-floating-frame) { border-color: var(--aimy-line, #46333e); background: var(--aimy-panel, #281d23); }
+:global(.dark .messenger-floating-frame .chat-floating-toolbar) { border-color: var(--aimy-line, #46333e); }
+</style>

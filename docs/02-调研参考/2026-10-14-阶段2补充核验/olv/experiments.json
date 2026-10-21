@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-14",
+  "node": "v24.20.0",
+  "experiments": 4,
+  "results": [
+    {
+      "case": "AIRI exact marker parser",
+      "boundaryCases": 65,
+      "completeMarkerSeparated": true,
+      "incompleteMarkerSuppressed": true,
+      "pass": true,
+      "limit": "does not validate ACT JSON or actual audio"
+    },
+    {
+      "case": "AIRI exact VoiceResponse with fake streaming provider/playback",
+      "producerSignalAborted": true,
+      "lateWriteRejected": true,
+      "lateAudioCancelled": 1,
+      "audioEnqueues": 0,
+      "waitedForSilenceReceipt": true,
+      "pass": true,
+      "limit": "not real provider/network/audible cancellation; nonstream branch not run"
+    },
+    {
+      "case": "Charakuru exact JSON/VRM spring structural helpers",
+      "syntheticJSONOnly": true,
+      "minimalAccepted": true,
+      "externalURIRejected": true,
+      "cycleRejected": true,
+      "missingTailRejected": true,
+      "incompleteCoverageRejected": true,
+      "expressionsPresent": false,
+      "lookAtPresent": false,
+      "pass": true,
+      "limit": "structure accepted does not prove facial compatibility/full glTF validity/90 frame physics/appearance/rights"
+    },
+    {
+      "case": "existing AIRI installed Chromatic",
+      "version": "1.1.4",
+      "shades": 11,
+      "hueWrapConsistent": true,
+      "alpha": 0.35,
+      "pass": true,
+      "limit": "not CSS contrast/browser visual sign-off/animation cleanup"
+    }
+  ],
+  "sourceManifest": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-marker-parser.ts",
+      "sha256": "3ecb2a0682c8e94beb2cbdb0695795c99a850c669f317f05920f37638877bc70"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+      "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/preview-gltf.mjs",
+      "sha256": "1647509e47222d9294636ef0c83e62001d659438f1a4859cc4fa8c45ec945404"
+    },
+    {
+      "path": "/tmp/charakuru-extract/charakuru-1.0.4-2026-10-12T17-55-01-211Z/public/spring-physics.mjs",
+      "sha256": "291c0d8cbfdc1dc08f3941d910dbd6334a7ad4272ad570dd8dae885a407ed0e8"
+    }
+  ],
+  "dependenciesInstalled": false,
+  "productStarted": false,
+  "modelsDevicesNetworkUsed": false
+}

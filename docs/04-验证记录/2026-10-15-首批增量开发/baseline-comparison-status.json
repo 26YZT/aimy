@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-15",
+  "status": "source_candidate_verified_runtime_comparison_not_run",
+  "designated_readonly_source": "/Users/mima1234/Documents/airi-main",
+  "candidate_readonly_source": "/Users/mima1234/Documents/aimy/.baseline/airi-evaluation-2026-10-10/source",
+  "import_commit": "bf4190376ebfc1df932c61f2b2f832387505e70d",
+  "import_commit_is_upstream_commit": false,
+  "upstream_commit": "unknown: external source has no .git",
+  "agent_audit": {
+    "package_version": "0.12.0-beta.5",
+    "critical_source_paths_compared": 565,
+    "differences": 0,
+    "package_lock_tool_versions_equal": true,
+    "direct_dependency_links_within_candidate": 231,
+    "candidate_electron_version": "43.4.1",
+    "candidate_output_files": 1378,
+    "candidate_main_sha256": "e0567f7b4983194eaf5fac01a03434405cd915eddecfe12809cd4aed3288af5e",
+    "candidate_renderer_main_sha256": "c7dcca385e891d3a9977aa375a4b4a11cc4e0c77969a537dba2beb87f006665c"
+  },
+  "limits": [
+    "No current-turn baseline launch or real two-arm run",
+    "No complete saved output-to-source fingerprint binding for old build",
+    "No independent baseline final-HTTP budget adapter has been implemented",
+    "No user runtime data or credentials inspected"
+  ],
+  "source": "read-only implement_base_brand audit delivered to parent; parent record of audit, not a new runtime result"
+}

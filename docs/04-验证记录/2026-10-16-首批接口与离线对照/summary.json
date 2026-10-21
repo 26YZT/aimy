@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-16",
+  "status": "engineering-and-offline-flow-passed",
+  "productRoot": "/Users/mima1234/Documents/aimy/aimy-app",
+  "desktopRoot": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi",
+  "branch": "codex/aimy-first-increment",
+  "scope": "AIRI inherited first memory increment; no proactive background conversation",
+  "tests": {
+    "uniqueTargetedTests": 177,
+    "groups": {
+      "policy": 27,
+      "memoryRepositoryBrowser": 22,
+      "memoryIntegrationBrowser": 34,
+      "aboutMeBrowser": 9,
+      "diagnostics": 9,
+      "requestGuard": 13,
+      "generationGateAndBaselineAdapter": 25,
+      "baselineEventaTransport": 13,
+      "buildPreparation": 19,
+      "dataset": 5,
+      "offlineNodeNetwork": 1
+    }
+  },
+  "builds": {
+    "airi": {
+      "status": "built",
+      "sourceSha256": "e58c7e3301854b7b46897f2f953c6584cb72ba81b7c925dc30f094fe7e3fb4a7",
+      "preparedSha256": "67df9c716b6b20c5c44ebe8c5cf97d5a8dd0e4903e94d17d571f2c73661d2fc0",
+      "artifactsSha256": "03c95c32d1bb8fc5d9a04b94be6947c41cd9474e268cf6aed4673af2fd491934",
+      "entry": "/private/tmp/aimy-closure-20261016/v2/builds/airi/out/main/index.js",
+      "packageManagerExecuted": false,
+      "sourceFiles": 110850,
+      "lineage": {
+        "repositoryImportCommit": "bf4190376ebfc1df932c61f2b2f832387505e70d",
+        "upstreamCommit": null
+      },
+      "commands": [
+        {
+          "package": "@proj-airi/core-agent",
+          "runner": "direct-node-bin",
+          "exitCode": 0,
+          "logSha256": "1e8f7c204f644f0610acec576b7d2314cc9ee91b75f68fdf569322cafe1a1577"
+        },
+        {
+          "package": "@proj-airi/i18n",
+          "runner": "direct-node-bin",
+          "exitCode": 0,
+          "logSha256": "2499bcad64c5259d5cf2ace711f51c1b116c0c19d153af0fae70301e23f72a22"
+        },
+        {
+          "package": "@proj-airi/stage-tamagotchi",
+          "runner": "direct-node-bin",
+          "exitCode": 0,
+          "logSha256": "c3aff0b52928f9e4c33e9712bc7b9cdfc63458b9b8aab1ddf2d25689d80c166f"
+        }
+      ]
+    },
+    "aimy": {
+      "status": "built",
+      "sourceSha256": "0eaf92099b390fd2c9cb96933f8e6149648ba6b9dc00bdc03a3a1701ee8791df",
+      "preparedSha256": "24eacbe644232c60a360c399692d100aad96da0de6b041d024fc733389a24802",
+      "artifactsSha256": "c678a2f017bd01f52ca002db5621cd6ade61422db6780263b3e05e92d5fef14b",
+      "entry": "/private/tmp/aimy-closure-20261016/v2/builds/aimy/out/main/index.js",
+      "packageManagerExecuted": false,
+      "sourceFiles": 110975,
+      "lineage": {
+        "repositoryImportCommit": "bf4190376ebfc1df932c61f2b2f832387505e70d",
+        "upstreamCommit": null
+      },
+      "commands": [
+        {
+          "package": "@proj-airi/core-agent",
+          "runner": "direct-node-bin",
+          "exitCode": 0,
+          "logSha256": "491d0f6f17e0401317a12b8620588a99efc3630a549edbf884741bc96dcabb1a"
+        },
+        {
+          "package": "@proj-airi/i18n",
+          "runner": "direct-node-bin",
+          "exitCode": 0,
+          "logSha256": "43ea199e09987399046d24c14c71d2cf2ac49f7d58d248d7d4ace3087fe92674"
+        },
+        {
+          "package": "@proj-airi/stage-tamagotchi",
+          "runner": "direct-node-bin",
+          "exitCode": 0,
+          "logSha256": "d6dadae81bb3aa2957d4e1905799aa1a23b6e68f113fda2d2b549467a3b332ac"
+        }
+      ]
+    }
+  },
+  "originalBaselineSourceUnchangedComparedWithFirstPreparation": true,
+  "ordinaryDesktopBuild": {
+    "exitCode": 0,
+    "entrySha256": "ea418eade90b805ee28751cc550046b7c416a66ee2d50967c863f3ca8ec599be",
+    "testDriverPresent": false,
+    "scenarioOverridePresent": false
+  },
+  "offline": {
+    "acceptedRun": "evidence/offline/run-result.json",
+    "cases": 8,
+    "arms": 2,
+    "userInputs": 36,
+    "fixtureRequests": 54,
+    "chatRequests": 36,
+    "memoryRequests": 18,
+    "distinctProcesses": 18,
+    "gracefulExits": 18,
+    "realModelCalls": 0,
+    "realCostYuan": 0,
+    "semanticScores": null,
+    "wireAudit": "evidence/checks/wire-audit.json",
+    "realModelEvidence": false,
+    "humanAcceptance": false
+  },
+  "git": {
+    "stagingCommitPushPerformed": false,
+    "currentCachedDiffEmpty": true,
+    "indexSha256Before": "34b1b6e79d13613ae32c2b1fe076e5adfe58f2fd044a9714f782f7a4f9042c49",
+    "indexSha256After": "6d2d4d150c68cc8147c6c5a7a9e85f8f2a98e97145ed0a49d7b184523f16ee6b",
+    "indexByteEquality": false,
+    "note": "Index bytes changed; status/stat-cache refresh can change metadata. No before-stage tree snapshot, so no byte-preservation claim is made. Current staged diff is empty; no stage/reset/commit/push commands were used."
+  },
+  "remaining": [
+    "Official-model runner/credential activation is not provided by the offline-only runner; a dedicated secure configuration and evaluation-stage readiness are still required.",
+    "Real DeepSeek 8-case AIRI/Aimy comparison within the already-approved combined CNY 10 budget.",
+    "Human conversational acceptance.",
+    "Workspace-wide typecheck/lint remain blocked by existing optional dependency gaps; no dependency installation is used to mask them."
+  ],
+  "supersededEvidence": [
+    "first pnpm-triggered auto-install copy: rejected, network downloads blocked but local-cache dependencies added",
+    "pilot-01: outer OS sandbox conflicted with Electron child sandbox; no Chromium sandbox was disabled",
+    "pilot-02/full-01: flow passed but debugger Node HTTP was incorrectly blocked; not final accepted run",
+    "full-02: node HTTP null-path regression fixed; no app initialization errors"
+  ]
+}

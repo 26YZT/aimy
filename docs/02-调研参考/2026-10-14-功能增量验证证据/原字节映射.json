@@ -1,0 +1,197 @@
+[
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/README.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/README.md",
+    "sha256": "fcd52a57310ee5c2a9c5a3d7e3e791beb5e0712208f9541dbff0239c8616d27a"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/airi-narrative.mjs",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/airi-narrative.mjs",
+    "sha256": "c8693e4db4df7e1c5e1216c75a0906d30882a164af6a680e78f95606a1362dc8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/backend-delta-results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/backend-delta-results.json",
+    "sha256": "1a38ab0bb9eac7bd6bf4ef84e7d1485233802193b523911841b04cbf750d5937"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/backend-run.log",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/backend-run.log",
+    "sha256": "7e64d4832c7a036ccb743fc57f689bd4360c1b582981880aec38040aba449b1b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/candidate-decisions.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/candidate-decisions.json",
+    "sha256": "c1002ad7d5bec82d17299e5bb695a392d6e7a1a40df9981400019d2d66db9591"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/delta-findings.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/delta-findings.md",
+    "sha256": "1e8c0e91d73fa5831c2ac8985ae9b4a6cc4da954c6497f29e507677f82e487e9"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/delta_checks.mjs",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/delta_checks.mjs",
+    "sha256": "49d659b1daf60a68cfd67f992d8b15438df58b71eb6df877e7a255b1d556e63c"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/delta_checks.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/delta_checks.py",
+    "sha256": "43d3fad83d255e4e906246e587e4064cf6cd7eb6539c21186b27e6b35605f312"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/frontend-delta-results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/frontend-delta-results.json",
+    "sha256": "e042302d6dd52f3f0629337f8d5344698040522edb26fe79189de7042df30a5a"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/frontend-run.log",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/frontend-run.log",
+    "sha256": "cef6e02bda6b92428ae35298bf6e0db4e9974efbd238126122563d3e61e34ea1"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/frontend-source-manifest.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/frontend-source-manifest.json",
+    "sha256": "207bef25e7a60d1d59dcef28cb98a7e79cd549a7374c424ca9138299cbfe1c48"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/frontend-version-comparison.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/frontend-version-comparison.json",
+    "sha256": "f390f0e66831e0c1c5fc968f3f555bf349bf917f450f5da3e907044cbfcd989b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/olv-tap-isolated.mjs",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/olv-tap-isolated.mjs",
+    "sha256": "f70457462f8066e92088b11948afe55ca7bf8d5211451a3fa0d89090d6e2e76e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/package-manifest.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/package-manifest.json",
+    "sha256": "85a143f5fd5639e04126025c3d8338faa6ac5b0beb5de97ffe0309d1896a7522"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/pinned-build-commit.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/pinned-build-commit.json",
+    "sha256": "ceb27e2171cc0e2664bfc9a26d0b54144114d204b525f0849bd99b3f92391eb8"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/pinned-source-commit.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/pinned-source-commit.json",
+    "sha256": "c65758ed166f038bcba38757693494a1ea8401ca989e3d88896a6abc6ffab97b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/review-current.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/review-current.md",
+    "sha256": "0fd33d53ecc29add13b15ef49c177c2443b514a403f0b75a6b45780c8c8f536e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-olv/source-provenance.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/olv/source-provenance.json",
+    "sha256": "f03455cfd232a8a32ad10507469d139eb5432d8ebc85b1ef23bb5b87caf1641f"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/README.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/README.md",
+    "sha256": "41320a1a2f19988b30b03287f253a01abfb884b347538e46121095efd5c505b1"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/build_delta.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/build_delta.py",
+    "sha256": "97ee56548748cb99bf6cf7236dbba49b4d5229867769da1c0887ad23722f576d"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/candidate-delta.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/candidate-delta.json",
+    "sha256": "7b707b2a35d7230c4d94444cab148c2bdfc0e519aaf15db748a5b71d449f7288"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/checks.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/checks.py",
+    "sha256": "2f6e110fd5d1e6b997d9561a12cb9d59b08d2bca8028bea5213d7fad1e5046ec"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/executed-targets-unique.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/executed-targets-unique.json",
+    "sha256": "d694520c66329d9fde5ee7a722a9fafc0b18a8cf790f41b4fd2dc431434211cb"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/executed-targets.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/executed-targets.json",
+    "sha256": "e762aab3f07025c27ba84ca1355c3f330cdce9f20ef391207a5eec217d7aff1a"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/functional-slices.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/functional-slices.json",
+    "sha256": "70b92f82ac4b6442abde83bcecaae60ccd1ca54280925bc49a4722f030705e34"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/results.json",
+    "sha256": "07909bb657531a88911b37b6398a3daa0368a9bd49adc1e7982077462c3f1233"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/verification.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/verification.json",
+    "sha256": "f9ff3dc55dd44f3f003b87b469fbb3a01a2df1b26a64ab228430ef6c517a5182"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/README.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/README.md",
+    "sha256": "55b608799d078afa24a9a2ed5ed684509031a1a67e408878d970c1c10f900019"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/airi-counterpart-results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/airi-counterpart-results.json",
+    "sha256": "b4843993654704ec3df896d565cf051ec2c88c74c22b004fb3bea4fd28e9cf74"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/airi-counterparts.cjs",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/airi-counterparts.cjs",
+    "sha256": "cffa9d22db548e387ef5f84674b46e62a59f5891b48412f26a981d9c6065fa48"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/build-report.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/build-report.py",
+    "sha256": "cef0f53c184bf6591d6512fd94d207e37c749aa395a95cec15113319ac0628ea"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/delta-ryza.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/delta-ryza.md",
+    "sha256": "524fb82b2cb413481e491e09da35954f1d221d088c8576c749d08e7730537607"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/eligibility.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/eligibility.json",
+    "sha256": "53538a0e23f16078da96406688f196446de638e787bee112d16853bd939282da"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/positive-negative-results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/positive-negative-results.json",
+    "sha256": "2887b39f42391961e7cd3e0ddfd064978f13c496d10f6a50642f0c5543a95d23"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/positive-negative.cjs",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/positive-negative.cjs",
+    "sha256": "23e0c9772a088aeed700e89e45ef8f22d0d71c500047a4352487b33e79539b05"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/review-current.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/review-current.md",
+    "sha256": "fb219227abf9329afa51da8eff9b6c3d5d2def86ab5871642c49ab1c7cd1ea25"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/scope-manifest.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/scope-manifest.json",
+    "sha256": "44416b3dda3c69fad635ff0d29f8ee54fdd998e50004a072c5e42875cccae5c5"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-ryza/verification.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/ryza/verification.json",
+    "sha256": "2048999360ae2d676adc2a65d46da0430cb8b0677b861a3b10d6ec4a55594cf9"
+  },
+  {
+    "source": "/tmp/aimy-20261014-delta-memory/review-current.md",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-功能增量验证证据/memory/review-current.md",
+    "sha256": "30901431829fced04629987afc54b7011391b8e81c6bc58ed02ed468bb8d5d2e"
+  }
+]

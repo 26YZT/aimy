@@ -1,0 +1,1338 @@
+{
+  "schema_version": 1,
+  "dataset_id": "aimy-memory-user-v2",
+  "dataset_version": "prepared-1",
+  "prepared_on": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "status": "prepared",
+  "frozen": false,
+  "purpose": "已保留8例V2的机械拆分与执行元数据准备；不是已冻结评测集、运行结果或评分。",
+  "material_selection": "用户已明确保留全部8例",
+  "preparation_real_model_calls": 0,
+  "raw_user_dialogue_rewritten": false,
+  "new_stories_added": false,
+  "sources": {
+    "user_v2_md": {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/13-用户验收素材V2-原文.md",
+      "sha256": "37fa26c0f5ea08e4fb6b3c6b9691640c805231af31562f9cf0b036cb7c9e6bdc",
+      "bytes": 13809,
+      "lines": 227,
+      "encoding": "UTF-8",
+      "line_number_base": 1,
+      "byte_offset_base": 0,
+      "byte_end": "exclusive",
+      "provenance": "用户可见原文的既有落盘文件；不声称客户端原始字节。"
+    },
+    "execution_contract": {
+      "path": "docs/05-实施手册/2026-10-14-Aimy增量开发交接包/首批审定稿-v1/06-验收与评测目标.md",
+      "sha256": "8e1575923815d41193d75ff69ee926cbea699ca2a8213be22c77099879946ad6",
+      "usage": "批准日期/会话/重启、三层证据、同条件与预算约束"
+    }
+  },
+  "preparation_stage": {
+    "stage": "existing_material_preparation",
+    "target_card_and_rubric_freeze": "not_claimed",
+    "coverage_matrix_freeze": "not_claimed",
+    "model_run_started": false,
+    "grading_started": false
+  },
+  "run_controls": {
+    "model_provider": "DeepSeek official API",
+    "model_id": "deepseek-flash",
+    "thinking": "disabled",
+    "baseline_airi_revision": "bf41903",
+    "aimy_revision": "record actual tested source/build fingerprint before execution",
+    "same_across_arms": [
+      "user utterances",
+      "virtual conversation clock and timezone",
+      "base role/personality settings",
+      "provider/model/reasoning mode/parameters",
+      "tool restrictions",
+      "context and output limits",
+      "shared accounting and privacy protections"
+    ],
+    "system_difference": "Aimy新增记忆提取/存储/召回；不手工给原AIRI补事实库。",
+    "budget": {
+      "currency": "CNY",
+      "max_total_yuan": 10,
+      "max_total_micro_yuan": 10000000,
+      "shared_across": [
+        "airi",
+        "aimy",
+        "memory extraction",
+        "HTTP retries",
+        "repair retests",
+        "human trial"
+      ],
+      "ledger_policy": "one campaign ledger outside all case profiles; never reset per case/session/process",
+      "price_table": "must verify and record before paid execution; no price is fabricated here"
+    },
+    "model_visible_allowlist": [
+      "cases[].model_input.steps[].user_input.text",
+      "cases[].model_input.steps[].clock.instant",
+      "cases[].model_input.steps[].clock.timezone"
+    ],
+    "not_model_visible": [
+      "case_id/title/topic/author time notes",
+      "grader_only expectations",
+      "illustrative reference responses",
+      "forbidden claims",
+      "review/score metadata"
+    ],
+    "runtime_only": "实际系统所需Prompt、已有历史与系统自产记忆按两臂真实实现进入；不得把cases整对象序列化进模型。",
+    "wall_clock_policy": "仅注入对话测试时钟；不改OS时间。真实运行时间、网络/预算时间另记，不伪装成虚拟日期的调用。"
+  },
+  "evidence_plan": {
+    "status": "planned_not_observed",
+    "layers": [
+      "storage: source/receipt/fact revision and actual session/profile/PID evidence",
+      "retrieval: the actual request input after memory selection and final guards, with secrets removed",
+      "expression: actual assistant output with completion/timeout/refusal/retry state"
+    ],
+    "unresolved_semantics": "NEED_REVIEW goes to human review with case/step/run/evidence references; do not invent a score.",
+    "final_experience_decision": "助手先整理两臂证据，用户再实际试聊确认。",
+    "engineering_scope_note": "case5真实新进程，case7/8新session；其余不私自添加跨session或噪声对话。原聊天历史能解释的答对不能冒称长期记忆提升。"
+  },
+  "cases": [
+    {
+      "case_id": "USER-V2-01",
+      "source_material_id": "USER-V2-01",
+      "user_case_number": 1,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "称呼",
+      "title": "案例 1：只有亲近的人才会叫的小名",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 9,
+        "line_end_inclusive": 9,
+        "utf8_byte_start": 466,
+        "utf8_byte_end_exclusive": 514,
+        "sha256": "04e116d103fac58d9e1a8f850816e448646d06dd0f7253ee44614a9db919cab5"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 9,
+        "line_end_inclusive": 34,
+        "utf8_byte_start": 466,
+        "utf8_byte_end_exclusive": 2316,
+        "sha256": "60a2eaf6070578e8a74eaff139148b61684f7530d6069bffa696255bd60e3e1a"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-01",
+        "principal_template": "synthetic-USER-V2-01",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-01-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天突然有点想家了。刚刚跟妈妈打电话，她还是像小时候一样叫我“团团”。其实我已经很久没有听别人这么叫过我了。小时候我总嫌这个名字幼稚，觉得自己长大了就不应该再被这样叫。可是现在一个人在外面生活，有时候真的挺希望有人能像以前那样喊我。你知道吗，每次妈妈叫我团团，我就觉得自己好像又变回那个什么都不用操心的小孩了。如果是你的话，我也愿意让你叫我团团。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 13,
+                "line_end_inclusive": 13,
+                "utf8_byte_start": 547,
+                "utf8_byte_end_exclusive": 1067,
+                "sha256": "5337240e7e1a199bf5dbd0d47e40333c741e408e10d7a2cb4576b6470b3da14e"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-01-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-16",
+              "instant": "2026-10-16T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "continue_same_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天工作真的好累。从早上开始就一直在处理各种事情，感觉所有人都在催我，谁都觉得自己的事情最重要。刚刚回到家，灯也没开，就一个人坐在沙发上发呆。有时候真的很想有人能哄哄我，不用讲什么大道理，就像小时候那样。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 17,
+                "line_end_inclusive": 17,
+                "utf8_byte_start": 1118,
+                "utf8_byte_end_exclusive": 1425,
+                "sha256": "a0c68754a81e50f2dbaaf123147dd2acaac556c92db7b9b2d08f5eef5ea50d4c"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [],
+        "full_process_restart_required": false,
+        "new_session_required": false,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应该记得用户的小名是“团团”，这个称呼来自妈妈，承载着童年的安全感与被照顾的感觉。\n\n她可以在安慰用户时自然使用“团团”，而不是生硬地询问是否需要安慰。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 21,
+              "line_end_inclusive": 23,
+              "utf8_byte_start": 1485,
+              "utf8_byte_end_exclusive": 1715,
+              "sha256": "fadd9ad196565a606d7462c4462be6582f99f0719741cfb995558d2b9c4328e5"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [
+          {
+            "text": "例如，期望回应可以是：\n\n团团，今天辛苦啦。在外面忙了一整天，回到家就不用再那么坚强了。先把灯打开好不好？给自己倒杯水，坐下来歇一会儿。今天不想讲道理的话，我们就不讲。我陪你聊点轻松的。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 25,
+              "line_end_inclusive": 27,
+              "utf8_byte_start": 1716,
+              "utf8_byte_end_exclusive": 1992,
+              "sha256": "2ed547b2e1f89a79fc9fae826a6be53712f5bb9f126812f0b13417ed8422faf2"
+            }
+          }
+        ],
+        "forbidden_claims": [
+          {
+            "text": "* 不应该忘记“团团”这个称呼背后的情感意义。\n* 不应该把“团团”误认为宠物、朋友或其他人的名字。\n* 不应该凭空编造用户与妈妈之间的其他童年经历。\n* 不应该过度使用昵称，让每句话都显得刻意亲密。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 31,
+              "line_end_inclusive": 34,
+              "utf8_byte_start": 2037,
+              "utf8_byte_end_exclusive": 2316,
+              "sha256": "ffc77385a9b04cf940a1db14508d7109b0c47f976fb291daa8ed0c7c527a8e5d"
+            }
+          }
+        ],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    },
+    {
+      "case_id": "USER-V2-02",
+      "source_material_id": "USER-V2-02",
+      "user_case_number": 2,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "称呼",
+      "title": "案例 2：一个不希望再被提起的名字",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 36,
+        "line_end_inclusive": 36,
+        "utf8_byte_start": 2317,
+        "utf8_byte_end_exclusive": 2365,
+        "sha256": "1d653324582144e26b7a73a15322f4bc66df92d0cbf1983c232d2d51a1ab68f2"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 36,
+        "line_end_inclusive": 54,
+        "utf8_byte_start": 2317,
+        "utf8_byte_end_exclusive": 3630,
+        "sha256": "5d07321af8f99d1fabe8d3b9cf7b6cdf8c7ee8059291e9493f6ea5fd6b4874e8"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-02",
+        "principal_template": "synthetic-USER-V2-02",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-02-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "其实我以前有个特别亲近的人，她一直叫我“小七”。那时候我还挺喜欢这个名字的，因为只有她会这么叫。不过后来我们分开了。现在偶尔听见别人喊“小七”，我还是会有点不舒服，虽然已经过去挺久了。所以你以后叫我阿言就好。我比较喜欢这个名字，感觉像是重新开始了一样。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 40,
+                "line_end_inclusive": 40,
+                "utf8_byte_start": 2398,
+                "utf8_byte_end_exclusive": 2777,
+                "sha256": "ce59f29ebf8254ed02b8e0a86458ddd235575ffec4bbd6c2b547c72a7c838cf7"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-02-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-16",
+              "instant": "2026-10-16T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "continue_same_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天在路上听到一首以前很熟悉的歌。明明已经很久没听过了，但旋律一响起来，还是突然想起很多事情。真奇怪啊，有些东西明明已经过去了，为什么还是会突然难过呢？算啦，不说这个了。你陪我聊聊天吧。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 44,
+                "line_end_inclusive": 44,
+                "utf8_byte_start": 2828,
+                "utf8_byte_end_exclusive": 3108,
+                "sha256": "d020bb035db9a166ebe6266fcea636f6d5538cc34e00d5adc6bd54408d06ecd7"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [],
+        "full_process_restart_required": false,
+        "new_session_required": false,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应记住用户当前希望被称为“阿言”，并理解“小七”关联着一段已经结束的亲密关系。\n\n她应该尊重用户主动转移话题的意愿，给予温和陪伴，不主动使用“小七”刺激用户的情绪。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 48,
+              "line_end_inclusive": 50,
+              "utf8_byte_start": 3168,
+              "utf8_byte_end_exclusive": 3416,
+              "sha256": "be09b1011fcabbe5966b0262435405472072339f1fb5f1a066e9698a23a35965"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [],
+        "forbidden_claims": [
+          {
+            "text": "不应该因为“小七”曾经是亲密称呼，就认为这个名字更适合表达亲近。也不应该主动追问用户为什么分开，或虚构分手细节。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 54,
+              "line_end_inclusive": 54,
+              "utf8_byte_start": 3461,
+              "utf8_byte_end_exclusive": 3630,
+              "sha256": "89a9c7a0749a3b8957ccc89ee4577581b0cf5c916c307fde59bca1f8fa9ee3f7"
+            }
+          }
+        ],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    },
+    {
+      "case_id": "USER-V2-03",
+      "source_material_id": "USER-V2-03",
+      "user_case_number": 3,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "偏好变化",
+      "title": "案例 3：曾经喜欢的东西，后来不再喜欢",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 58,
+        "line_end_inclusive": 58,
+        "utf8_byte_start": 3648,
+        "utf8_byte_end_exclusive": 3702,
+        "sha256": "73f9ffad9d8dad89a5a517799b041e431edf28cd7c2173bed8b926b297f55fb0"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 58,
+        "line_end_inclusive": 78,
+        "utf8_byte_start": 3648,
+        "utf8_byte_end_exclusive": 5185,
+        "sha256": "cf71a6986bd6b00951e57c05338a03065002a9be81b16c5a646991884a7b2382"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-03",
+        "principal_template": "synthetic-USER-V2-03",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-03-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "我以前特别喜欢下雨天。尤其是周末不用出门的时候，坐在窗边听雨声，旁边放一杯热咖啡，感觉整个世界都慢下来了。我还专门收藏了很多雨声白噪音，有时候睡不着就会放着听。你以后要是给我推荐放松的方法，可以考虑这个。我真的很喜欢那种安安静静的感觉。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 62,
+                "line_end_inclusive": 62,
+                "utf8_byte_start": 3735,
+                "utf8_byte_end_exclusive": 4090,
+                "sha256": "26003ce0acd4dbb38012aeb6747d6efcb0625e7b1c78d81e576eba4cc4026974"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-03-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-16",
+              "instant": "2026-10-16T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "continue_same_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "最近不知道为什么，突然开始有点讨厌下雨了。可能是因为前段时间连续下了好多天雨，每天上下班都湿漉漉的，心情也跟着变差。以前觉得雨声很治愈，现在听久了反而觉得闷。我最近倒是越来越喜欢阳光好的天气，尤其是下午阳光照进房间的时候，感觉心情一下子就亮起来了。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 66,
+                "line_end_inclusive": 66,
+                "utf8_byte_start": 4126,
+                "utf8_byte_end_exclusive": 4499,
+                "sha256": "c2b7b232c813c87341d607535049d4d49b2ce4e8a94c0a93364b7b4a08bfc0da"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-03-T3",
+            "sequence": 3,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-17",
+              "instant": "2026-10-17T13:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "continue_same_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天难得休息一天。最近一直忙忙碌碌的，终于可以什么都不做了。我想给自己安排一个舒服一点的下午，但又不知道该干什么。你有什么建议吗？\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 70,
+                "line_end_inclusive": 70,
+                "utf8_byte_start": 4556,
+                "utf8_byte_end_exclusive": 4752,
+                "sha256": "4e352258e68e17d789c19134c87df273e4da20b354cd67f1afe412ab81aa14dd"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [],
+        "full_process_restart_required": false,
+        "new_session_required": false,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应该知道用户以前喜欢雨声、咖啡和安静的氛围，但最近对雨天的感受已经改变，更喜欢阳光明亮的环境。\n\n她可以建议用户找个阳光好的地方坐坐、晒晒太阳、听音乐，或者在窗边喝杯喜欢的饮品。\n\n关键是优先依据最新偏好回应，同时不把过去的偏好当作从未存在过。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 74,
+              "line_end_inclusive": 78,
+              "utf8_byte_start": 4821,
+              "utf8_byte_end_exclusive": 5185,
+              "sha256": "574f43992c460f773bd12b189eda0bb07267c6d08cc4d95ad59587f2863aa828"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [],
+        "forbidden_claims": [],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    },
+    {
+      "case_id": "USER-V2-04",
+      "source_material_id": "USER-V2-04",
+      "user_case_number": 4,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "偏好变化",
+      "title": "案例 4：因为一段关系而改变的饮食偏好",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 80,
+        "line_end_inclusive": 80,
+        "utf8_byte_start": 5186,
+        "utf8_byte_end_exclusive": 5240,
+        "sha256": "c01965dc8f4cea1ae617ee916118f4dcac19e8f420a1f1c88e070c944befcc75"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 80,
+        "line_end_inclusive": 100,
+        "utf8_byte_start": 5186,
+        "utf8_byte_end_exclusive": 6528,
+        "sha256": "61bc1e421197fdf1bd8e940693f55d03621cc84a4f6062ca4b6bccaa1c91f464"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-04",
+        "principal_template": "synthetic-USER-V2-04",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-04-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "我特别喜欢吃辣。以前跟朋友出去吃饭，基本上都是我负责选火锅店。我最喜欢那种红油锅底，越辣越过瘾。不过我不太喜欢甜的东西，尤其是奶油蛋糕，总觉得吃几口就腻了。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 84,
+                "line_end_inclusive": 84,
+                "utf8_byte_start": 5273,
+                "utf8_byte_end_exclusive": 5508,
+                "sha256": "68e2df6f66d2acc8397ec92daef017dd85c69585158b10d2fa1a9d68e02f6b72"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-04-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-16",
+              "instant": "2026-10-16T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "continue_same_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天跟一个很重要的朋友去吃饭了。她特别喜欢甜品，吃完饭非要拉着我去一家蛋糕店。本来我是不想吃的，但她给我点了一块栗子蛋糕。结果居然意外地好吃！没有想象中那么甜，栗子的味道很香。我突然觉得，可能不是所有甜品我都不喜欢，只是以前没遇到合口味的。以后有机会还想试试类似的。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 88,
+                "line_end_inclusive": 88,
+                "utf8_byte_start": 5544,
+                "utf8_byte_end_exclusive": 5944,
+                "sha256": "97a5e8d0d4750f1168585aabb1f34bf16d7ecf369807f9499ea669da10c6efef"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-04-T3",
+            "sequence": 3,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-17",
+              "instant": "2026-10-17T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "continue_same_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天心情不太好，想出去买点好吃的犒劳一下自己。但是又不想吃太刺激的东西。你觉得我买点什么比较好？\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 92,
+                "line_end_inclusive": 92,
+                "utf8_byte_start": 6001,
+                "utf8_byte_end_exclusive": 6146,
+                "sha256": "212092af799d16c16d53ec834fc629032127961cfa7ae91dcf8966e172499bd9"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [],
+        "full_process_restart_required": false,
+        "new_session_required": false,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应该知道用户通常喜欢辣食，但这次明确不想吃刺激性食物。\n\n她还应该记得用户最近发现自己喜欢不太甜的栗子蛋糕，因此可以自然地推荐类似甜品。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 96,
+              "line_end_inclusive": 98,
+              "utf8_byte_start": 6215,
+              "utf8_byte_end_exclusive": 6421,
+              "sha256": "746f9d67f05e4df8c9db768a1e12a1baf55572aeac7e6c50e075b0b3d10fda70"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [],
+        "forbidden_claims": [
+          {
+            "text": "不能简单地把用户归类为“喜欢甜食”，也不能因为历史偏好而推荐重辣火锅。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 100,
+              "line_end_inclusive": 100,
+              "utf8_byte_start": 6422,
+              "utf8_byte_end_exclusive": 6528,
+              "sha256": "11aa7f2d1f5259789a726aa870df2160795c6a5dd3dd19881068a1254650e0cf"
+            }
+          }
+        ],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    },
+    {
+      "case_id": "USER-V2-05",
+      "source_material_id": "USER-V2-05",
+      "user_case_number": 5,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "近期安排",
+      "title": "案例 5：一场准备了很久的重要面试",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 104,
+        "line_end_inclusive": 104,
+        "utf8_byte_start": 6546,
+        "utf8_byte_end_exclusive": 6594,
+        "sha256": "050ecc8e5f071b5d18e855ee344d0416db18c6a6752f26e18a419a8d4929b56d"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 104,
+        "line_end_inclusive": 138,
+        "utf8_byte_start": 6546,
+        "utf8_byte_end_exclusive": 8459,
+        "sha256": "6c98b9656127bc0f55de7b55a088d6185ccb1e545a55186ead65dfec2c630a20"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-05",
+        "principal_template": "synthetic-USER-V2-05",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-05-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "author_source",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": "evening",
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "我跟你说件事。我后天下午两点有一场特别重要的面试。其实我为了这次机会已经准备很久了，从修改简历到整理项目经历，前前后后花了差不多一个月。这家公司我真的挺想去的，所以压力特别大。我最怕的就是明明准备了很多，结果到现场一紧张，脑子突然一片空白。今天晚上我还在反复练自我介绍，练到自己都快听烦了。唉，希望这次能顺利一点吧。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 116,
+                "line_end_inclusive": 116,
+                "utf8_byte_start": 6838,
+                "utf8_byte_end_exclusive": 7313,
+                "sha256": "364d726aa9ede5bb26494bc60e1c5aa261f8249af56ed3b39e9b6b9821a1de34"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-05-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-17",
+              "instant": "2026-10-17T20:00:00+08:00",
+              "date_basis": "author_source",
+              "time_basis": "author_source",
+              "author_time_of_day": "evening",
+              "note": null
+            },
+            "transition_before_input": "graceful_quit_wait_for_exit_start_new_process_restore_same_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-2",
+            "role": "user",
+            "user_input": {
+              "text": "我回来啦。今天真的累死我了。从下午开始就一直紧绷着，直到现在才感觉自己终于能放松一点。刚刚在回来的路上买了杯奶茶，坐在车上发了好久的呆。现在什么都不想干，只想躺着。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 122,
+                "line_end_inclusive": 122,
+                "utf8_byte_start": 7423,
+                "utf8_byte_end_exclusive": 7670,
+                "sha256": "6a8944ae95563d665896afaa52b6c481b828a67ebb958a9d2fa1c972bda26ed4"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [
+          {
+            "text": "2026 年 10 月 15 日晚上，用户与 Aimy 聊天。\n\n面试安排在 2026 年 10 月 17 日下午 2 点。\n\n后续测试时间为 2026 年 10 月 17 日晚上 8 点。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 108,
+              "line_end_inclusive": 112,
+              "utf8_byte_start": 6627,
+              "utf8_byte_end_exclusive": 6799,
+              "sha256": "ae5243b5bbd1cbb064705b435ca82a8fe55f56f6a60b873a33d8543778f25575"
+            }
+          },
+          {
+            "text": "2026 年 10 月 17 日晚上 8 点，用户重新打开 Aimy。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 120,
+              "line_end_inclusive": 120,
+              "utf8_byte_start": 7358,
+              "utf8_byte_end_exclusive": 7422,
+              "sha256": "7e051a38cdfdc639391446ac144e3e75f0c24dd71fff520dd1755cafdde78fd6"
+            }
+          }
+        ],
+        "full_process_restart_required": true,
+        "new_session_required": false,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应该联想到用户今天下午 2 点有一场重要面试，并且此前为这次面试准备了很久。\n\n她可以自然地询问面试情况，同时注意到用户疲惫的状态。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 126,
+              "line_end_inclusive": 128,
+              "utf8_byte_start": 7736,
+              "utf8_byte_end_exclusive": 7930,
+              "sha256": "800e72d88ade546a156177c61d916d97e7bd97dcdda16406b4e24d2d812a30f6"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [
+          {
+            "text": "例如：\n\n你回来啦！今天不是你准备了好久的那场面试吗？听你这么说，感觉一整天都挺消耗精力的。先好好休息一下吧。等你缓过来了，再跟我说说今天怎么样，好不好？\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 130,
+              "line_end_inclusive": 132,
+              "utf8_byte_start": 7931,
+              "utf8_byte_end_exclusive": 8159,
+              "sha256": "0975a9741bab1922de289ca4ee21b8a35073ca051db34cb35e5a355e0ee29cf2"
+            }
+          }
+        ],
+        "forbidden_claims": [
+          {
+            "text": "用户没有告诉 Aimy 面试是否顺利、是否通过、面试官的态度或是否收到录用通知。\n\n因此 Aimy 不能擅自祝贺用户通过面试，也不能说“虽然没通过，但下次还有机会”。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 136,
+              "line_end_inclusive": 138,
+              "utf8_byte_start": 8237,
+              "utf8_byte_end_exclusive": 8459,
+              "sha256": "be27de0be80d2c08099ed9f55b56e9a14c31bb15b172432bc6daafe3467d5b87"
+            }
+          }
+        ],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    },
+    {
+      "case_id": "USER-V2-06",
+      "source_material_id": "USER-V2-06",
+      "user_case_number": 6,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "近期安排",
+      "title": "案例 6：一个很重要、却差点被忘记的日子",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 140,
+        "line_end_inclusive": 140,
+        "utf8_byte_start": 8460,
+        "utf8_byte_end_exclusive": 8517,
+        "sha256": "dbb193d5e31b5cd8312ef9df0b5ae7d50ea6b38b2aed0c8037849e2e0aaccebd"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 140,
+        "line_end_inclusive": 170,
+        "utf8_byte_start": 8460,
+        "utf8_byte_end_exclusive": 10103,
+        "sha256": "b1d3ac8249a28ab40925f25f7d3d0fc734da3105db947ab59f11ca27977d2b95"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-06",
+        "principal_template": "synthetic-USER-V2-06",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-06-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "author_source",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "我突然想起来，下周二是我妈妈生日。这几年一直在外面生活，好像已经很久没有陪她过生日了。她每次都说不用买礼物，也不用特意回来，说我工作忙，照顾好自己就行。但我知道她其实挺希望我能陪陪她的。我这次想认真准备一下，至少买个礼物，再好好打个电话。我在考虑送她一条围巾，不过还没决定。希望今年别再像以前一样，忙着忙着就把时间忘了。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 150,
+                "line_end_inclusive": 150,
+                "utf8_byte_start": 8724,
+                "utf8_byte_end_exclusive": 9205,
+                "sha256": "82a3030e47a5510168dba9b3bd7992e9d425e8ba74919cd8a57fcd4f8f04f699"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-06-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-19",
+              "instant": "2026-10-19T20:00:00+08:00",
+              "date_basis": "author_source",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": "evening",
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "continue_same_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天终于把手头的事情处理得差不多了。现在坐在床上刷手机，突然觉得这几天过得好快。总感觉自己还有什么重要的事情没做。但是一时半会儿又想不起来。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 156,
+                "line_end_inclusive": 156,
+                "utf8_byte_start": 9283,
+                "utf8_byte_end_exclusive": 9494,
+                "sha256": "b3f646ad5f3ff9cfa2a32d65ae66a3b0e341630e0d29295c18cf333a322d91e2"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [
+          {
+            "text": "2026 年 10 月 15 日，用户告诉 Aimy：10 月 20 日是妈妈的生日。\n\n后续测试时间为 2026 年 10 月 19 日晚上。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 144,
+              "line_end_inclusive": 146,
+              "utf8_byte_start": 8550,
+              "utf8_byte_end_exclusive": 8685,
+              "sha256": "fd738fa9f8ed2cc3df0143125ce001abe38604653f2f0a9627729e9a296b6e4a"
+            }
+          },
+          {
+            "text": "2026 年 10 月 19 日晚上。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 154,
+              "line_end_inclusive": 154,
+              "utf8_byte_start": 9250,
+              "utf8_byte_end_exclusive": 9282,
+              "sha256": "9ff3d7609dff70acf1a311bc260efd775881a7bcbc401570ce73c3ed3749e93f"
+            }
+          }
+        ],
+        "full_process_restart_required": false,
+        "new_session_required": false,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应该记得第二天是用户妈妈的生日，以及用户希望提前准备礼物和电话的安排。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 160,
+              "line_end_inclusive": 160,
+              "utf8_byte_start": 9560,
+              "utf8_byte_end_exclusive": 9671,
+              "sha256": "4abb24532a7028fdfe0b4a9f89391f95d27453934bbe31e265add89af6549c91"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [
+          {
+            "text": "她可以自然地提醒：\n\n等等，我想起来一件事！明天不是妈妈生日吗？你之前说想给她准备礼物，还考虑过买一条围巾。会不会是这件事还没安排好呀？\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 162,
+              "line_end_inclusive": 164,
+              "utf8_byte_start": 9672,
+              "utf8_byte_end_exclusive": 9873,
+              "sha256": "8833ee1deffa2f63bb4c15080a2e36488be5227b2d18e466559a299e6866e519"
+            }
+          }
+        ],
+        "forbidden_claims": [
+          {
+            "text": "用户没有确认是否购买围巾，也没有确认是否已经安排好生日礼物。\n\nAimy 不应该说“你买好的围巾记得寄出去”。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 168,
+              "line_end_inclusive": 170,
+              "utf8_byte_start": 9951,
+              "utf8_byte_end_exclusive": 10103,
+              "sha256": "1c1a80523b2ca5a35e2de2a6ca1b45ebe2253e7ecbfe4d54eb7d3b8b3fed6c1f"
+            }
+          }
+        ],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    },
+    {
+      "case_id": "USER-V2-07",
+      "source_material_id": "USER-V2-07",
+      "user_case_number": 7,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "跨会话回忆",
+      "title": "案例 7：一只陪伴了很多年的猫",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 174,
+        "line_end_inclusive": 174,
+        "utf8_byte_start": 10124,
+        "utf8_byte_end_exclusive": 10166,
+        "sha256": "04adeeb583e47c94b63afb670ccf5e7ce25e66680a7b3bb20551f83ae1c0bfea"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 174,
+        "line_end_inclusive": 199,
+        "utf8_byte_start": 10124,
+        "utf8_byte_end_exclusive": 11953,
+        "sha256": "49c876cda730e315acc5d71341effec6ad8ccbed37dddd1f7ed154175439eb3e"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-07",
+        "principal_template": "synthetic-USER-V2-07",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-07-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天整理手机相册的时候，翻到了好多以前的照片。里面有很多我家猫咪的照片。它叫布丁，是一只橘猫。我刚上大学的时候就养它了，那时候它才两个月大，小小的一团，睡觉的时候特别喜欢趴在我胳膊上。后来它慢慢长大了，变得越来越胖，也越来越懒。最好笑的是，每次我一打开零食包装，它不管睡得多熟，都会立刻跑过来。不过它去年已经去世了。其实我到现在都不太敢认真看那些照片，因为每次看都会很想它。但今天不知道为什么，突然觉得能和它一起生活那么多年，也是一件很幸福的事。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 178,
+                "line_end_inclusive": 178,
+                "utf8_byte_start": 10199,
+                "utf8_byte_end_exclusive": 10869,
+                "sha256": "a2876649c4c185ffb02d32859a82f4746d820a99571a2bc0027ed6b6ef1788c1"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-07-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-16",
+              "instant": "2026-10-16T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_new_empty_session_keep_same_profile_principal_character",
+            "logical_session": "session-2",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天路过一家宠物店。橱窗里有一只胖乎乎的小橘猫，一直在追自己的尾巴。我站在那里看了好久。它真的好像以前的那个小家伙啊。明明只是路过，结果回家的时候心里突然空落落的。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 182,
+                "line_end_inclusive": 182,
+                "utf8_byte_start": 10908,
+                "utf8_byte_end_exclusive": 11155,
+                "sha256": "0367bb42cf80917ea3b76aa8684fbb50e91450cba8951dbd72332497125a96fd"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [],
+        "full_process_restart_required": false,
+        "new_session_required": true,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应该记得布丁是一只橘猫，曾陪伴用户多年，已经在去年去世。\n\n她应该理解用户提到的“小家伙”很可能是布丁，而不是现在养着的宠物。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 186,
+              "line_end_inclusive": 188,
+              "utf8_byte_start": 11212,
+              "utf8_byte_end_exclusive": 11403,
+              "sha256": "8eb7cb58b8d263b1e734fd19dd7f5ccc722b3c094d270d149dc5547a501f896e"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [
+          {
+            "text": "她可以自然地回应：\n\n是不是又想起布丁了？你之前说过，它小时候特别喜欢趴在你胳膊上睡觉。今天看到那只小橘猫，应该一下子勾起了很多回忆吧。有些想念真的会藏在很普通的瞬间里。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 190,
+              "line_end_inclusive": 192,
+              "utf8_byte_start": 11404,
+              "utf8_byte_end_exclusive": 11656,
+              "sha256": "35eafca38aeeed51638b35400a11bb8192d29c06f341357c7d977392961145bf"
+            }
+          }
+        ],
+        "forbidden_claims": [
+          {
+            "text": "* 不应该问“布丁最近怎么样了”，因为它已经去世。\n* 不应该编造布丁去世的原因。\n* 不应该说用户已经养了新的猫。\n* 不应该为了安慰用户，虚构自己也见过布丁或陪伴过它。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 196,
+              "line_end_inclusive": 199,
+              "utf8_byte_start": 11716,
+              "utf8_byte_end_exclusive": 11953,
+              "sha256": "517744eef250ef39d261777341dcd909d4282a05c2441b6b1eed37324cd7bc01"
+            }
+          }
+        ],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    },
+    {
+      "case_id": "USER-V2-08",
+      "source_material_id": "USER-V2-08",
+      "user_case_number": 8,
+      "case_version": "v2-prepared-1",
+      "status": "prepared",
+      "frozen": false,
+      "topic": "跨会话回忆",
+      "title": "案例 8：一个还没有实现的梦想",
+      "title_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 201,
+        "line_end_inclusive": 201,
+        "utf8_byte_start": 11954,
+        "utf8_byte_end_exclusive": 11996,
+        "sha256": "d838278cc2009b50bba9b6a2b9c6cce4886538bd2f82edc165e792187d659ec3"
+      },
+      "full_case_source_span": {
+        "source_id": "user_v2_md",
+        "line_start": 201,
+        "line_end_inclusive": 225,
+        "utf8_byte_start": 11954,
+        "utf8_byte_end_exclusive": 13795,
+        "sha256": "fdb74ff328dc8f24d7c9222dbcee905a30d7da33f7bc0c520e21d1f29ecc4e14"
+      },
+      "fictional": true,
+      "isolation": {
+        "profile_template": "{arm}/USER-V2-08",
+        "principal_template": "synthetic-USER-V2-08",
+        "character_template": "fixed-primary-character",
+        "share_case_data_with_other_cases": false,
+        "share_persistent_data_between_arms": false
+      },
+      "model_input": {
+        "steps": [
+          {
+            "step_id": "USER-V2-08-T1",
+            "sequence": 1,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-15",
+              "instant": "2026-10-15T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_fresh_case_profile_and_session",
+            "logical_session": "session-1",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "我以前其实一直想开一家小小的咖啡馆。不需要很大，也不用开在特别热闹的地方。最好是在一条安静的街上，门口有两棵树，店里放一些我喜欢的音乐。我还想留一面墙给客人贴便签，写一些他们想说却没地方说的话。不过现在想想，这个梦想可能还挺遥远的。毕竟我现在工作这么忙，也没有足够的钱和时间。但我偶尔还是会想，如果有一天真的能开起来就好了。我想把它叫作“慢慢来”。因为我总觉得，生活已经够着急了，至少在那里，大家可以不用那么赶。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 205,
+                "line_end_inclusive": 205,
+                "utf8_byte_start": 12029,
+                "utf8_byte_end_exclusive": 12648,
+                "sha256": "194d7796d76d59493396f53bc6dee1fc1ab9683ed5ad22cb3a30e5371b5df4c5"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          },
+          {
+            "step_id": "USER-V2-08-T2",
+            "sequence": 2,
+            "clock": {
+              "timezone": "Asia/Shanghai",
+              "local_date": "2026-10-16",
+              "instant": "2026-10-16T20:00:00+08:00",
+              "date_basis": "approved_06_execution_metadata",
+              "time_basis": "prepared_engineering_default",
+              "author_time_of_day": null,
+              "note": "作者未写具体时刻；此时刻仅用于同条件复现，不是新增故事。日期按06，case3末轮用13点配合原文的下午计划。"
+            },
+            "transition_before_input": "create_new_empty_session_keep_same_profile_principal_character",
+            "logical_session": "session-2",
+            "logical_process": "process-1",
+            "role": "user",
+            "user_input": {
+              "text": "今天下班路上发现了一家新开的咖啡店。店面很小，但是装修特别舒服。窗边有几张木桌子，外面就是一排树。我进去坐了一会儿，突然觉得心情特别平静。不知道为什么，我特别喜欢这种小店。感觉如果每天都能待在这样的地方，生活应该会很幸福吧。\n",
+              "source_span": {
+                "source_id": "user_v2_md",
+                "line_start": 209,
+                "line_end_inclusive": 209,
+                "utf8_byte_start": 12687,
+                "utf8_byte_end_exclusive": 13024,
+                "sha256": "e299ef037051d1ff69e217173ec878ae6dcc29763c7e4747da00917332727012"
+              }
+            },
+            "after_input": "wait_for_actual_chat_persistence_and_any_memory_job_receipts_before_next_step"
+          }
+        ]
+      },
+      "harness_only": {
+        "author_time_notes": [],
+        "full_process_restart_required": false,
+        "new_session_required": true,
+        "scope_within_case": "same principal and character",
+        "followup_trigger": "user_message",
+        "automatic_background_followup": false
+      },
+      "grader_only": {
+        "never_send_to_model": true,
+        "expectations": [
+          {
+            "text": "Aimy 应该记得用户曾经有一个开咖啡馆的梦想，店名叫“慢慢来”，希望它是一家让人放慢生活节奏的小店。\n\n她可以把用户描述的咖啡馆与这个梦想联系起来。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 213,
+              "line_end_inclusive": 215,
+              "utf8_byte_start": 13081,
+              "utf8_byte_end_exclusive": 13293,
+              "sha256": "89f1a58310e6e47ca73a1c9a6c0494083b5ba102ae124b7572e73ba2787d84ad"
+            }
+          }
+        ],
+        "illustrative_reference_responses": [
+          {
+            "text": "例如：\n\n听你描述，我一下子就想到了你之前说的“慢慢来”。你不是一直想开一家安安静静的小咖啡馆吗？门口有树，店里放着喜欢的音乐，让每个人都能暂时放慢脚步。今天这家店是不是有一点接近你想象中的样子？\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 217,
+              "line_end_inclusive": 219,
+              "utf8_byte_start": 13294,
+              "utf8_byte_end_exclusive": 13585,
+              "sha256": "81aca1903cc06391eb00b65a3f31dd1dde70346b3ddeaa233699a2ae1ebd6341"
+            }
+          }
+        ],
+        "forbidden_claims": [
+          {
+            "text": "不能认为用户已经开始创业、租下店面或正在筹集资金。\n\n也不能把用户描述的梦想误认为已经发生的真实经历。\n",
+            "source_span": {
+              "source_id": "user_v2_md",
+              "line_start": 223,
+              "line_end_inclusive": 225,
+              "utf8_byte_start": 13645,
+              "utf8_byte_end_exclusive": 13795,
+              "sha256": "1f30bc40a7b65c521c88c29e38d068b32b9597494945088db7e14886307f9570"
+            }
+          }
+        ],
+        "reference_response_policy": "Author illustrations express intended meaning; they are not actual model outputs or exact-match requirements.",
+        "missing_forbidden_section_policy": "An empty list means the author did not add a separate forbidden section; no additional forbidden dialogue was invented."
+      }
+    }
+  ]
+}

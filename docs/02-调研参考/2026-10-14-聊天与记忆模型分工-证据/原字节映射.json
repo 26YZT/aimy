@@ -1,0 +1,26 @@
+[
+  {
+    "source": "/tmp/aimy-20261014-model-routing/verify_dispatch.py",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-聊天与记忆模型分工-证据/verify_dispatch.py",
+    "sha256": "0be91aaa22e41952698af54b0ca6ca636af862eddf6e5720fd1939b1f9689778",
+    "byte_exact": true
+  },
+  {
+    "source": "/tmp/aimy-20261014-model-routing/verify_ryza.cjs",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-聊天与记忆模型分工-证据/verify_ryza.cjs",
+    "sha256": "4f16c00dc94d485e663b702071e97f7b72a43d9c3473bd151e51ba9ae9e78762",
+    "byte_exact": true
+  },
+  {
+    "source": "/tmp/aimy-20261014-model-routing/python-results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-聊天与记忆模型分工-证据/python-results.json",
+    "sha256": "b1d07e68b29a53cb3b6613f82b79acbe1d9b9aa7dc440118810df5ab0e85ee67",
+    "byte_exact": true
+  },
+  {
+    "source": "/tmp/aimy-20261014-model-routing/ryza-results.json",
+    "destination": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-聊天与记忆模型分工-证据/ryza-results.json",
+    "sha256": "0a8945b487f77733ee217fc5620aadab9694c90bad0c627edb1ededd7fbb6784",
+    "byte_exact": true
+  }
+]

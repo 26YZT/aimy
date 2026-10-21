@@ -1,0 +1,14 @@
+[
+  {
+    "id": "deepseek",
+    "keyFieldExists": true,
+    "keyFieldIsString": true,
+    "resolvedKeyPresent": true
+  },
+  {
+    "id": "vision-deepseek",
+    "keyFieldExists": true,
+    "keyFieldIsString": true,
+    "resolvedKeyPresent": false
+  }
+]

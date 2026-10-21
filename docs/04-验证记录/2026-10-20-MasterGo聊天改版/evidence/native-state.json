@@ -1,0 +1,35 @@
+{
+  "pid": 3890,
+  "userData": "/Users/mima1234/Library/Caches/Aimy-Build/MasterGo-20261020/native-package/appdata/Aimy-Preview",
+  "secretReads": 0,
+  "screenPermission": "granted",
+  "windows": [
+    {
+      "id": 5,
+      "title": "Aimy",
+      "url": "file:///Users/mima1234/Library/Caches/Aimy-Build/MasterGo-20261020/package/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/index.html?stage-runtime=minimal&synced-leader=false#/chat-floating",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "title": "Aimy",
+      "url": "file:///Users/mima1234/Library/Caches/Aimy-Build/MasterGo-20261020/package/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/index.html?synced-leader=true#/",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "title": "Aimy Beat Sync",
+      "url": "file:///Users/mima1234/Library/Caches/Aimy-Build/MasterGo-20261020/package/Aimy%E4%BD%93%E9%AA%8C%E7%89%88.app/Contents/Resources/app.asar/out/renderer/beat-sync.html",
+      "visible": true
+    },
+    {
+      "id": 1,
+      "title": "Aimy Synthetic Screen Test",
+      "url": "data:text/html;charset=utf-8,%3Ctitle%3EAimy%20Synthetic%20Screen%20Test%3C%2Ftitle%3E%3Cbody%20style%3D%22background%3A%23ccead3%3Bfont%3A26px%20sans-serif%3Bpadding%3A32px%22%3E%3Ch1%3EScreen%20test%3C%2Fh1%3E%3Cp%3EBlue%20square%20%C2%B7%2042%3C%2Fp%3E%3Cdiv%20style%3D%22width%3A90px%3Bheight%3A90px%3Bbackground%3Ablue%22%3E%3C%2Fdiv%3E%3C%2Fbody%3E",
+      "visible": true
+    }
+  ],
+  "blockedOrigins": [
+    "https://cloud.airi.build"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-15",
+  "version": "first-increment-review-v1",
+  "status": "documentation_verified_pending_user_review",
+  "checks": {
+    "json_files_parsed": 14,
+    "local_links_checked": 53,
+    "file_boundary": {
+      "existing": 65,
+      "proposed_new": 53
+    },
+    "first_release": {
+      "requirements": 10,
+      "tasks": 9,
+      "local_operations": 18
+    },
+    "reuse": {
+      "fixed_source_files": 4,
+      "review_records": 18,
+      "adapted_rules": 12
+    },
+    "airi_source_anchors_checked": 57,
+    "new_prompt_drafts_checked": 3,
+    "protected_old_documents_unchanged": 11,
+    "protected_product": {
+      "scope": "git tracked plus nonignored untracked aimy-app paths; ignored dependency/build/user data not read",
+      "paths": 5337,
+      "changed_paths": [],
+      "index_unchanged": true
+    },
+    "user_review": {
+      "explicit_A_questions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "withdrawn_custom_question": 6,
+      "pending_final_question": 8,
+      "remaining_whole_review": [
+        "R4",
+        "R5"
+      ],
+      "api_contract_proposal_version": 3,
+      "customer_dependency_judgment_required": false,
+      "implementation_authorized": false
+    }
+  },
+  "errors": [],
+  "product_implementation_authorized": false,
+  "this_turn": {
+    "product_files_written": 0,
+    "dependency_installs_or_upgrades": 0,
+    "product_tests_or_builds_run": 0,
+    "application_or_browser_launched": 0,
+    "real_model_calls": 0,
+    "real_user_credentials_or_database_read": false,
+    "git_stage_commit_push": false
+  },
+  "limits": [
+    "source/links/traceability and unchanged-byte checks only",
+    "new product features, real model semantics, devices, native windows and human acceptance not verified",
+    "protected product excludes ignored dependency/build/user-data paths; those were not written by this task",
+    "user V2 kept as material; no frozen model cases/runs/scores"
+  ]
+}

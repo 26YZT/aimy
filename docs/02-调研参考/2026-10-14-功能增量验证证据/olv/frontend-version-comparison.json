@@ -1,0 +1,50 @@
+[
+  {
+    "path": "src/renderer/src/context/proactive-speak-context.tsx",
+    "pinned_sha256": "5cbf303f620c847cdaff9e8c0bbfae00e4dd430d94cf45e1c77d4fd6d3397493",
+    "main_d176_sha256": "5cbf303f620c847cdaff9e8c0bbfae00e4dd430d94cf45e1c77d4fd6d3397493",
+    "identical": true
+  },
+  {
+    "path": "src/renderer/src/hooks/utils/use-trigger-speak.ts",
+    "pinned_sha256": "f2f86a75121d8bf7be7d8b62ae197102a00c5b21e7c5494f35fe128cdcdfd1c0",
+    "main_d176_sha256": "f2f86a75121d8bf7be7d8b62ae197102a00c5b21e7c5494f35fe128cdcdfd1c0",
+    "identical": true
+  },
+  {
+    "path": "src/renderer/src/hooks/utils/use-interrupt.ts",
+    "pinned_sha256": "0bd652f354cb9a773136b1f5e6acac59781201b16457a854edfa61f86350b9eb",
+    "main_d176_sha256": "0bd652f354cb9a773136b1f5e6acac59781201b16457a854edfa61f86350b9eb",
+    "identical": true
+  },
+  {
+    "path": "src/renderer/src/hooks/utils/use-audio-task.ts",
+    "pinned_sha256": "3b551a78479fc1bcb6821aa09f471d0d9f3f69679ec88600efe341639243d3de",
+    "main_d176_sha256": "3b551a78479fc1bcb6821aa09f471d0d9f3f69679ec88600efe341639243d3de",
+    "identical": true
+  },
+  {
+    "path": "src/renderer/src/utils/task-queue.ts",
+    "pinned_sha256": "c699e2abcc41a546d14782ca2a1948b639a9f82f4fbd11c10ce3bafa6b2b5234",
+    "main_d176_sha256": "c699e2abcc41a546d14782ca2a1948b639a9f82f4fbd11c10ce3bafa6b2b5234",
+    "identical": true
+  },
+  {
+    "path": "src/renderer/src/services/websocket-handler.tsx",
+    "pinned_sha256": "270e4932a1dff84b8585004781314c6eec91615a5ff715c0a406232117d160d6",
+    "main_d176_sha256": "270e4932a1dff84b8585004781314c6eec91615a5ff715c0a406232117d160d6",
+    "identical": true
+  },
+  {
+    "path": "src/renderer/WebSDK/src/lappmodel.ts",
+    "pinned_sha256": "0546db05e93a2b310e46b2f5c40c26431a25837f5d3c0f0028bb071904b95863",
+    "main_d176_sha256": "0546db05e93a2b310e46b2f5c40c26431a25837f5d3c0f0028bb071904b95863",
+    "identical": true
+  },
+  {
+    "path": "LICENSE",
+    "pinned_sha256": "12f7da34b1480c006316978a4460bb8cfbff57adabe30288d20c0e01f93fa550",
+    "main_d176_sha256": "12f7da34b1480c006316978a4460bb8cfbff57adabe30288d20c0e01f93fa550",
+    "identical": true
+  }
+]

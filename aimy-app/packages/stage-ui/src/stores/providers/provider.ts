@@ -24,7 +24,9 @@ import {
 } from '../../libs/providers'
 import { selectProviderMetadata, selectProvidersMetadata } from '../../libs/providers/metadata'
 import { getSchemaDefault } from '../../libs/zod'
+import { isCloudReplicaEnabled } from '../../services/local-data-policy'
 import { useAuthStore } from '../auth'
+import { AcceptanceBudgetError } from '../memory/budget'
 import { useProviderConfigStore } from './config'
 import { normalizeProviderConfigDefaults } from './config-defaults'
 
@@ -33,6 +35,7 @@ export type { ModelInfo, VoiceInfo } from '../../libs/providers/types'
 /** Request-local provider configuration carried across the leader RPC boundary. */
 export interface VoiceCatalogConfiguration {
   definitionId: string
+  configurationRevision?: number
   config: Record<string, unknown>
 }
 
@@ -85,7 +88,11 @@ export const useProviderStore = defineStore('provider', () => {
   const authStore = useAuthStore()
   const providerConfigStore = useProviderConfigStore()
   const providerStateStore = useProviderStateStore()
-  const providerCredentials = computed(() => providerConfigStore.configs)
+  const providerCredentials = computed(() => Object.fromEntries(Object.entries(providerConfigStore.providers).map(([id, provider]) => [id, provider.config])))
+  function configurationFingerprint(providerId: string) {
+    return JSON.stringify([providerCredentials.value[providerId], providerConfigStore.getProviderConfigRevision(providerId)])
+  }
+
   const addedProviders = computed(() => providerConfigStore.addedProviders)
   // Provider instances contain functions and transport handles. Keep this map
   // private so it never enters Pinia state.
@@ -246,47 +253,60 @@ export const useProviderStore = defineStore('provider', () => {
     config: Record<string, unknown>,
     options: { onlyChatPingCheck?: boolean, skipChatPingCheck?: boolean } = {},
   ) {
-    await waitForProviderMetadata()
-    const definition = getProviderDefinition(providerId)
-    const schemaDefaults = getDefaultProviderConfig(providerId)
-    const plan = await getValidatorsOfProvider({
-      definition,
-      config,
-      schemaDefaults,
-      contextOptions: { t },
-    })
+    try {
+      await waitForProviderMetadata()
+      const definition = getProviderDefinition(providerId)
+      config = await providerConfigStore.resolveProviderConfig(providerId, config) ?? config
+      const schemaDefaults = getDefaultProviderConfig(providerId)
+      const plan = await getValidatorsOfProvider({
+        definition,
+        config,
+        schemaDefaults,
+        contextOptions: { t },
+      })
 
-    if (options.onlyChatPingCheck) {
-      plan.configValidators = []
-      plan.providerValidators = plan.providerValidators.filter(validator => validator.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
-      plan.steps = plan.steps.filter(step => step.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
+      if (options.onlyChatPingCheck) {
+        plan.configValidators = []
+        plan.providerValidators = plan.providerValidators.filter(validator => validator.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
+        plan.steps = plan.steps.filter(step => step.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
+      }
+      else if (options.skipChatPingCheck) {
+        plan.providerValidators = plan.providerValidators.filter(validator => !validator.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
+        plan.steps = plan.steps.filter(step => !step.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
+      }
+
+      if (plan.providerValidators.length > 0 || plan.configValidators.length > 0)
+        await runProviderValidation(plan, { t })
+
+      const configOnly = !options.onlyChatPingCheck && !plan.shouldValidate
+      const result = validationResultFromPlan(plan, configOnly)
+      if (result.valid)
+        return result
+      if (!isCloudReplicaEnabled()) {
+        return { errors: [new Error('Provider validation failed')], reason: 'Provider validation failed', valid: false }
+      }
+
+      const reasons = result.reason ? result.reason.split('; ') : []
+      const defaultBaseUrl = typeof schemaDefaults.baseUrl === 'string' ? schemaDefaults.baseUrl.trim() : ''
+      if (defaultBaseUrl && reasons.some(reason => reason.includes('Base URL is required')))
+        appendUniqueReason(reasons, `Default to ${defaultBaseUrl}.`)
+
+      if (!configOnly && plan.steps.some(step => step.id === 'openai-compatible:check-connectivity' && step.status === 'invalid')) {
+        const troubleshooting = definition.business?.({ t })?.troubleshooting?.validators?.openaiCompatibleCheckConnectivity?.content ?? ''
+        appendUniqueReason(reasons, troubleshooting)
+      }
+
+      return {
+        ...result,
+        reason: reasons.join('; '),
+      }
     }
-    else if (options.skipChatPingCheck) {
-      plan.providerValidators = plan.providerValidators.filter(validator => !validator.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
-      plan.steps = plan.steps.filter(step => !step.id.includes(CHAT_COMPLETIONS_VALIDATOR_ID))
-    }
-
-    if (plan.providerValidators.length > 0 || plan.configValidators.length > 0)
-      await runProviderValidation(plan, { t })
-
-    const configOnly = !options.onlyChatPingCheck && !plan.shouldValidate
-    const result = validationResultFromPlan(plan, configOnly)
-    if (result.valid)
-      return result
-
-    const reasons = result.reason ? result.reason.split('; ') : []
-    const defaultBaseUrl = typeof schemaDefaults.baseUrl === 'string' ? schemaDefaults.baseUrl.trim() : ''
-    if (defaultBaseUrl && reasons.some(reason => reason.includes('Base URL is required')))
-      appendUniqueReason(reasons, `Default to ${defaultBaseUrl}.`)
-
-    if (!configOnly && plan.steps.some(step => step.id === 'openai-compatible:check-connectivity' && step.status === 'invalid')) {
-      const troubleshooting = definition.business?.({ t })?.troubleshooting?.validators?.openaiCompatibleCheckConnectivity?.content ?? ''
-      appendUniqueReason(reasons, troubleshooting)
-    }
-
-    return {
-      ...result,
-      reason: reasons.join('; '),
+    catch (error) {
+      if (error instanceof AcceptanceBudgetError)
+        throw error
+      if (!isCloudReplicaEnabled())
+        throw new Error('Provider validation failed')
+      throw error
     }
   }
 
@@ -313,7 +333,7 @@ export const useProviderStore = defineStore('provider', () => {
     // Web Speech API doesn't require credentials - use empty config if not present
     if (providerId === 'browser-web-speech-api') {
       if (!providerCredentials.value[providerId]) {
-        providerConfigStore.ensureProvider(providerId, providerId, getDefaultProviderConfig(providerId))
+        await providerConfigStore.ensureProvider(providerId, providerId, getDefaultProviderConfig(providerId))
       }
     }
 
@@ -322,7 +342,7 @@ export const useProviderStore = defineStore('provider', () => {
       return false
 
     initializeProviderRuntimeState(providerId)
-    const configString = JSON.stringify(config || {})
+    const configString = configurationFingerprint(providerId)
     const runtimeState = providerRuntimeState.value[providerId]
     const configuredProvider = providerConfigStore.providers[providerId]
     const cacheKey = `${providerId}:${configString}`
@@ -492,10 +512,10 @@ export const useProviderStore = defineStore('provider', () => {
 
   // Follower windows never run onAfterSync. Drop stale local clients when
   // replicated credentials change.
-  watch(providerCredentials, () => {
+  watch(() => providerConfigStore.providers, () => {
     for (const providerId of [...providerInstanceCache.keys()]) {
       const current = providerCredentials.value[providerId]
-      if (current && previousCredentialHashes.get(providerId) === JSON.stringify(current))
+      if (current && previousCredentialHashes.get(providerId) === configurationFingerprint(providerId))
         continue
       void disposeProviderInstance(providerId)
     }
@@ -534,7 +554,7 @@ export const useProviderStore = defineStore('provider', () => {
       // Also cache the current config to prevent re-validation from overwriting
       const config = providerCredentials.value[providerId]
       if (config) {
-        providerRuntimeState.value[providerId].validatedCredentialHash = JSON.stringify(config)
+        providerRuntimeState.value[providerId].validatedCredentialHash = configurationFingerprint(providerId)
       }
     }
     // The leader stores status before this action resolves. Callers read it immediately.
@@ -591,6 +611,8 @@ export const useProviderStore = defineStore('provider', () => {
 
   async function listProviderModels(providerId: string, config: Record<string, unknown>) {
     const definition = getProviderDefinition(providerId)
+    if (!definition.extraMethods?.publicCatalogs?.models)
+      config = await providerConfigStore.resolveProviderConfig(providerId, config) ?? config
     const provider = await definition.createProvider(config)
     try {
       if (definition.extraMethods?.listModelCatalog) {
@@ -630,6 +652,7 @@ export const useProviderStore = defineStore('provider', () => {
   function getVoiceCatalogConfiguration(providerId: string): VoiceCatalogConfiguration {
     return {
       definitionId: getProviderDefinition(providerId).id,
+      configurationRevision: providerConfigStore.getProviderConfigRevision(providerId),
       config: structuredClone(toRaw(providerConfigStore.getProviderConfig(providerId) ?? {})),
     }
   }
@@ -641,7 +664,7 @@ export const useProviderStore = defineStore('provider', () => {
     // Discovery inputs belong to the adapter. Synthesis controls must not clear
     // a voice selection; unknown adapters conservatively retain the full config.
     const catalogConfig = selectConfig ? selectConfig(configuration.config) : configuration.config
-    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(catalogConfig)))
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify([catalogConfig, configuration.configurationRevision])))
     return {
       definitionId: configuration.definitionId,
       model,
@@ -660,7 +683,11 @@ export const useProviderStore = defineStore('provider', () => {
     if (!listVoices)
       return []
 
-    const config = request.config
+    if (request.configurationRevision !== undefined && request.configurationRevision !== providerConfigStore.getProviderConfigRevision(providerId))
+      throw new Error('Provider configuration changed before voice discovery')
+    const config = definition.extraMethods?.publicCatalogs?.voices
+      ? request.config
+      : await providerConfigStore.resolveProviderConfig(providerId, request.config) ?? request.config
     const ownerEpoch = voiceOwnerEpoch
     const sessionEpoch = definition.configuredBy === 'authentication' ? voiceSessionEpoch : undefined
     const requestKey = JSON.stringify([providerId, request.definitionId, model ?? null, config, sessionEpoch])
@@ -714,6 +741,7 @@ export const useProviderStore = defineStore('provider', () => {
     providerId: string,
     config: Record<string, unknown>,
   ) {
+    config = await providerConfigStore.resolveProviderConfig(providerId, config) ?? config
     const definition = getProviderDefinition(providerId)
     const loadModel = definition.extraMethods?.loadModel
     if (!loadModel)
@@ -790,7 +818,8 @@ export const useProviderStore = defineStore('provider', () => {
       return { models: [] }
     }
     catch (error) {
-      console.error(`Error fetching models for ${providerId}:`, error)
+      const message = isCloudReplicaEnabled() ? errorMessageFrom(error) ?? 'Unknown error' : 'Could not load provider models'
+      console.error(`Error fetching models for ${providerId}:`, message)
       const currentRuntimeState = providerRuntimeState.value[providerId]
       if (currentRuntimeState) {
         providerRuntimeState.value = {
@@ -798,7 +827,7 @@ export const useProviderStore = defineStore('provider', () => {
           [providerId]: {
             ...currentRuntimeState,
             modelStatus: 'error',
-            modelError: errorMessageFrom(error) ?? 'Unknown error',
+            modelError: message,
           },
         }
       }
@@ -829,8 +858,8 @@ export const useProviderStore = defineStore('provider', () => {
   async function refreshModelsForChangedCredentials() {
     const changedProviders: string[] = []
 
-    for (const [providerId, currentConfig] of Object.entries(providerCredentials.value)) {
-      const currentHash = JSON.stringify(currentConfig)
+    for (const providerId of Object.keys(providerCredentials.value)) {
+      const currentHash = configurationFingerprint(providerId)
       const previousHash = previousCredentialHashes.get(providerId)
 
       if (currentHash !== previousHash) {
@@ -916,34 +945,44 @@ export const useProviderStore = defineStore('provider', () => {
     await waitForProviderMetadata()
     const definition = getProviderDefinition(providerId)
 
-    // Providers that don't require credentials use empty config
-    let config = providerCredentials.value[providerId]
-    const noCredentials = definition.requiresCredentials === false || providerId === 'browser-web-speech-api'
-    if (!config && noCredentials) {
-      config = await getInitialProviderConfig(providerId)
-      const definitionId = getProviderDefinitionId(providerId)
-      providerConfigStore.ensureProvider(providerId, definitionId, config)
-    }
-
-    if (!config && !noCredentials && (providerId !== 'prompt-api'))
-      throw new Error(`Provider credentials for ${providerId} not found`)
-
-    // Configuration snapshots can arrive after a follower creates an instance.
-    // Compare serialized values so an equivalent snapshot preserves its transport.
-    const configKey = JSON.stringify(config)
+    // A matching runtime instance already owns its credentials. Reuse it before touching native storage.
+    const configKey = configurationFingerprint(providerId)
     const cached = providerInstanceCache.get(providerId)
     if (cached && cached.configKey === configKey)
       return cached.instance as R
     if (cached)
       await disposeProviderInstance(providerId)
 
+    // Providers that don't require credentials use empty config
+    let revision = providerConfigStore.getProviderConfigRevision(providerId)
+    let config = await providerConfigStore.resolveProviderConfig(providerId)
+    const noCredentials = definition.requiresCredentials === false || providerId === 'browser-web-speech-api'
+    if (!config && noCredentials) {
+      config = await getInitialProviderConfig(providerId)
+      const definitionId = getProviderDefinitionId(providerId)
+      await providerConfigStore.ensureProvider(providerId, definitionId, config)
+      revision = providerConfigStore.getProviderConfigRevision(providerId)
+    }
+
+    if (!config && !noCredentials && (providerId !== 'prompt-api'))
+      throw new Error(`Provider credentials for ${providerId} not found`)
+
+    // Initial configuration creation changes the fingerprint before the instance is published.
+    const resolvedConfigKey = configurationFingerprint(providerId)
+
     try {
       const instance = await definition.createProvider(config || {})
-      providerInstanceCache.set(providerId, { configKey, instance })
-      previousCredentialHashes.set(providerId, JSON.stringify(config || {}))
+      if (revision !== providerConfigStore.getProviderConfigRevision(providerId)) {
+        await disposeTemporaryProvider(instance)
+        throw new Error('Provider configuration changed during initialization')
+      }
+      providerInstanceCache.set(providerId, { configKey: resolvedConfigKey, instance })
+      previousCredentialHashes.set(providerId, resolvedConfigKey)
       return instance as R
     }
     catch (error) {
+      if (!isCloudReplicaEnabled())
+        throw new Error('Could not create provider instance')
       console.error(`Error creating provider instance for ${providerId}:`, error)
       throw error
     }
@@ -1181,14 +1220,12 @@ export const useProviderStore = defineStore('provider', () => {
       'initializeProvider',
       'listProviderVoices',
       'loadModelsForConfiguredProviders',
-      'loadProviderModel',
       'refreshListedProviderValidation',
       'refreshModelsForChangedCredentials',
       'resetProviderSettings',
       'setProviderAvailabilityOverride',
       'setProviderUnconfigured',
       'validateProvider',
-      'validateProviderConfig',
     ],
     state: false,
   },

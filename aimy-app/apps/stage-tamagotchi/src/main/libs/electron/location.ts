@@ -2,8 +2,11 @@ import type { BrowserWindow, LoadFileOptions, LoadURLOptions } from 'electron'
 
 import { join } from 'node:path'
 import { env } from 'node:process'
+import { pathToFileURL } from 'node:url'
 
 import { is } from '@electron-toolkit/utils'
+
+import { registerTrustedWindow } from '../../services/aimy/trusted-windows'
 
 let electronMainDirname: string = ''
 
@@ -34,6 +37,8 @@ export function baseUrl(parentOfIndexHtml: string, filename?: string) {
 }
 
 export async function load(window: BrowserWindow, url: string | { url: string, options?: LoadURLOptions } | { file: string, options?: LoadFileOptions }) {
+  const documentUrl = typeof url === 'string' ? url : 'file' in url ? pathToFileURL(url.file).href : url.url
+  registerTrustedWindow(window, documentUrl)
   try {
     if (typeof url === 'object' && 'url' in url) {
       return await window.loadURL(url.url, url.options)

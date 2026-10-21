@@ -1,62 +1,38 @@
 <script setup lang="ts">
-import { HearingConfigDialog } from '@proj-airi/stage-ui/components'
-import { useAudioAnalyzer, useAudioContextFromStream } from '@proj-airi/stage-ui/composables'
+import { HearingConfig } from '@proj-airi/stage-ui/components'
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
-import { useSettingsAudioDevice } from '@proj-airi/stage-ui/stores/settings'
 import { storeToRefs } from 'pinia'
-import { onMounted, onUnmounted, watch } from 'vue'
+import { DialogContent, DialogOverlay, DialogPortal, DialogRoot, DialogTitle, VisuallyHidden } from 'reka-ui'
+import { nextTick, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const show = defineModel('show', { type: Boolean, default: false })
-
-const hearingStore = useHearingStore()
-const settingsAudioDeviceStore = useSettingsAudioDevice()
-const { autoSendEnabled } = storeToRefs(hearingStore)
-const { enabled, stream } = storeToRefs(settingsAudioDeviceStore)
-
-const { audioContext, initialize, dispose, pause } = useAudioContextFromStream(stream)
-const { volumeLevel, startAnalyzer, stopAnalyzer } = useAudioAnalyzer()
-
-// NOTICE: Do not call `startStream()` / `stopStream()` from this component.
-//
-// `useSettingsAudioDevice()` already owns the mic stream lifecycle via the persisted `enabled` state.
-// We previously toggled the stream here as well, which introduced a second lifecycle controller: the
-// dialog could recreate the MediaStream while the page-level transcription pipeline still believed
-// the old session was active.
-//
-// That produced the "VAD still works, but no transcript arrives" failure after retoggling the mic.
-//
-// This component should only react to the current stream to drive analyzer UI state.
-watch([enabled, stream], ([isEnabled, currentStream]) => {
-  if (isEnabled && currentStream) {
-    initialize().then(() => {
-      if (audioContext.value)
-        return startAnalyzer(audioContext.value)
-    })
+const { autoSendEnabled } = storeToRefs(useHearingStore())
+const { t } = useI18n()
+let trigger: HTMLElement | undefined
+watch(show, async (open) => {
+  if (open) {
+    trigger = document.activeElement instanceof HTMLElement ? document.activeElement : undefined
+    return
   }
-  else {
-    stopAnalyzer()
-    pause()
-  }
-}, { immediate: true })
-
-onMounted(async () => {
-  if (audioContext.value) {
-    await startAnalyzer(audioContext.value)
-  }
-})
-
-onUnmounted(async () => {
-  await stopAnalyzer()
-  await dispose()
+  await nextTick()
+  if (trigger?.isConnected)
+    trigger.focus()
 })
 </script>
 
 <template>
-  <HearingConfigDialog
-    v-model:show="show"
-    v-model:auto-send="autoSendEnabled"
-    :volume-level="volumeLevel"
-  >
-    <slot />
-  </HearingConfigDialog>
+  <slot />
+  <!-- Opening device settings never requests permission or creates a second capture/analyzer owner. -->
+  <DialogRoot :open="show" @update:open="show = $event">
+    <DialogPortal>
+      <DialogOverlay :class="['fixed inset-0 z-[9999]']" />
+      <DialogContent :aria-describedby="undefined" :class="['fixed left-1/2 top-1/2 z-[9999] max-h-[90vh] w-[min(440px,92vw)] overflow-y-auto rounded-2xl bg-white p-6 text-neutral-900 shadow-xl outline-none -translate-x-1/2 -translate-y-1/2 dark:bg-neutral-900 dark:text-neutral-100']">
+        <VisuallyHidden>
+          <DialogTitle>{{ t('tamagotchi.stage.controls-island.open-hearing-controls') }}</DialogTitle>
+        </VisuallyHidden>
+        <HearingConfig v-model:auto-send="autoSendEnabled" />
+      </DialogContent>
+    </DialogPortal>
+  </DialogRoot>
 </template>

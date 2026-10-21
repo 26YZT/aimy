@@ -1,0 +1,13 @@
+{
+  "selectionsUnchanged": true,
+  "cloudTaskRequests": 2,
+  "liveMicrophoneCaptured": false,
+  "screenCaptured": false,
+  "ttsPassed": true,
+  "mimoAsrPassed": false,
+  "appleAsrConnected": true,
+  "appleAsrPhraseMatched": false,
+  "captureOff": true,
+  "archiveUnchanged": true,
+  "normalLaunchRestored": true
+}

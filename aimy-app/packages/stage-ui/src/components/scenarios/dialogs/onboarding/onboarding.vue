@@ -11,7 +11,7 @@ import type {
 
 import { isCustomProvidersDisabled } from '@proj-airi/stage-shared'
 import { storeToRefs } from 'pinia'
-import { computed, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 
 import StepModelSelection from './step-model-selection.vue'
 import StepProviderConfiguration from './step-provider-configuration.vue'
@@ -19,6 +19,7 @@ import StepProviderSelection from './step-provider-selection.vue'
 import StepWelcome from './step-welcome.vue'
 
 import { useAnalytics } from '../../../../composables/use-analytics'
+import { useAiriCardStore } from '../../../../stores/modules/airi-card'
 import { useConsciousnessStore } from '../../../../stores/modules/consciousness'
 import { useProviderConfigStore } from '../../../../stores/providers/config'
 import { useProviderStore } from '../../../../stores/providers/provider'
@@ -30,12 +31,19 @@ interface Emits {
 
 const props = withDefaults(defineProps<{
   extraSteps?: OnboardingStep[]
+  afterModelSteps?: OnboardingStep[]
+  localOnly?: boolean
 }>(), {
   extraSteps: () => [],
+  afterModelSteps: () => [],
+  localOnly: false,
 })
 const emit = defineEmits<Emits>()
 const step = ref(0)
 const direction = ref<'next' | 'previous'>('next')
+const navigationPending = ref(false)
+let navigationEpoch = 0
+let disposed = false
 const pendingProviderConfig = ref<ProviderConfigData | null>(null)
 const { trackOnboardingCompleted, trackOnboardingStarted, trackOnboardingStepCompleted } = useAnalytics()
 
@@ -43,9 +51,11 @@ const providersStore = useProviderStore()
 
 const providerStore = useProviderConfigStore()
 const { allChatProvidersMetadata } = storeToRefs(providersStore)
+const airiCardStore = useAiriCardStore()
 const consciousnessStore = useConsciousnessStore()
 const {
   activeProvider,
+  activeModel,
 } = storeToRefs(consciousnessStore)
 
 // Popular providers for first-time setup
@@ -75,17 +85,9 @@ function selectProvider(provider: ProviderMetadata) {
   selectedProviderId.value = provider.id
 }
 
-const requestPreviousStep: OnboardingStepPrevHandler = () => {
-  return navigatePrevious()
-}
-
-const requestNextStep: OnboardingStepNextHandler = async (configData?: ProviderConfigData) => {
-  pendingProviderConfig.value = configData ?? null
-  await navigateNext()
-}
-
 async function saveProviderConfiguration(data: ProviderConfigData) {
-  if (!selectedProvider.value)
+  const provider = selectedProvider.value
+  if (!provider)
     return
 
   const config: Record<string, unknown> = {}
@@ -106,17 +108,17 @@ async function saveProviderConfiguration(data: ProviderConfigData) {
   // Provider configuration is leader-owned synchronized state. Route the save
   // through synced actions so the leader persists it and replicates it back;
   // the `configs` computed projection discards direct writes on recompute.
-  await providersStore.initializeProvider(selectedProvider.value.id)
-  await providerStore.patchProviderConfig(selectedProvider.value.id, config)
-  await providersStore.forceProviderConfigured(selectedProvider.value.id)
+  await providersStore.initializeProvider(provider.id)
+  await providerStore.patchProviderConfig(provider.id, config)
+  await providersStore.forceProviderConfigured(provider.id)
 
-  activeProvider.value = selectedProvider.value.id
+  activeProvider.value = provider.id
 
   try {
-    await consciousnessStore.loadModelsForProvider(selectedProvider.value.id)
+    await consciousnessStore.loadModelsForProvider(provider.id)
   }
-  catch (err) {
-    console.error('[onboarding] Failed to load models for provider:', err)
+  catch {
+    console.error('[onboarding] Could not load the provider model list.')
   }
 }
 
@@ -126,7 +128,8 @@ const allSteps = computed<OnboardingStep[]>(() => {
       id: 'welcome',
       component: StepWelcome,
       props: () => ({
-        customProviderSetupEnabled: !isCustomProvidersDisabled(),
+        customProviderSetupEnabled: props.localOnly || !isCustomProvidersDisabled(),
+        localOnly: props.localOnly,
       }),
     },
     {
@@ -163,15 +166,41 @@ const allSteps = computed<OnboardingStep[]>(() => {
     {
       id: 'model-selection',
       component: StepModelSelection,
+      beforeNext: async () => {
+        if (!activeProvider.value || !activeModel.value)
+          return false
+        // The card owns this choice across card application and process restarts.
+        return await airiCardStore.updateActiveCardConsciousness({ provider: activeProvider.value, model: activeModel.value })
+      },
     },
+    ...props.afterModelSteps,
   ]
 
   return coreSteps
 })
 
 const currentStep = computed(() => allSteps.value[step.value] ?? null)
-const isLastStep = computed(() => step.value === allSteps.value.length - 1)
 const currentStepProps = computed(() => currentStep.value?.props?.() ?? {})
+
+// A callback belongs to its rendered step. Late work from an old step cannot advance a newer one.
+const requestNextStep = computed<OnboardingStepNextHandler>(() => {
+  const index = step.value
+  const id = currentStep.value?.id
+  const providerId = selectedProviderId.value
+  return async (configData) => {
+    if (disposed || navigationPending.value || step.value !== index || currentStep.value?.id !== id
+      || selectedProviderId.value !== providerId) {
+      return
+    }
+    pendingProviderConfig.value = configData ?? null
+    await navigateNext(index, id)
+  }
+})
+const requestPreviousStep = computed<OnboardingStepPrevHandler>(() => {
+  const index = step.value
+  const id = currentStep.value?.id
+  return () => navigatePrevious(index, id)
+})
 
 async function handleSave() {
   trackOnboardingStepCompleted(currentStep.value?.id ?? 'unknown')
@@ -190,33 +219,55 @@ async function canPassGuard(guard?: OnboardingStepGuard) {
   return await guard()
 }
 
-async function navigateNext() {
-  if (!currentStep.value)
+async function navigateNext(index: number, id: string | undefined) {
+  const current = currentStep.value
+  if (disposed || navigationPending.value || !current || step.value !== index || current.id !== id)
     return
-
-  if (!(await canPassGuard(currentStep.value.beforeNext)))
-    return
-
-  if (isLastStep.value) {
-    await handleSave()
-    return
+  const epoch = ++navigationEpoch
+  navigationPending.value = true
+  try {
+    if (!(await canPassGuard(current.beforeNext)))
+      return
+    if (disposed || epoch !== navigationEpoch || step.value !== index || currentStep.value?.id !== id)
+      return
+    if (index === allSteps.value.length - 1) {
+      await handleSave()
+      return
+    }
+    trackOnboardingStepCompleted(current.id)
+    direction.value = 'next'
+    step.value = index + 1
   }
-
-  trackOnboardingStepCompleted(currentStep.value.id)
-  direction.value = 'next'
-  step.value++
+  finally {
+    if (epoch === navigationEpoch)
+      navigationPending.value = false
+  }
 }
 
-async function navigatePrevious() {
-  if (!currentStep.value || step.value <= 0)
+async function navigatePrevious(index: number, id: string | undefined) {
+  const current = currentStep.value
+  if (disposed || navigationPending.value || !current || index <= 0 || step.value !== index || current.id !== id)
     return
-
-  if (!(await canPassGuard(currentStep.value.beforePrev)))
-    return
-
-  direction.value = 'previous'
-  step.value--
+  const epoch = ++navigationEpoch
+  navigationPending.value = true
+  try {
+    if (!(await canPassGuard(current.beforePrev)))
+      return
+    if (disposed || epoch !== navigationEpoch || step.value !== index || currentStep.value?.id !== id)
+      return
+    direction.value = 'previous'
+    step.value = index - 1
+  }
+  finally {
+    if (epoch === navigationEpoch)
+      navigationPending.value = false
+  }
 }
+
+onBeforeUnmount(() => {
+  disposed = true
+  navigationEpoch++
+})
 
 onMounted(() => {
   trackOnboardingStarted({ entry: 'app_start' })
@@ -224,19 +275,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="onboarding-step-container" min-h-0 flex flex-1 flex-col>
+  <fieldset :disabled="navigationPending" :aria-busy="navigationPending" :class="['onboarding-step-container', 'min-h-0 min-w-0 flex flex-1 flex-col']">
     <Transition :name="direction === 'next' ? 'slide-next' : 'slide-prev'" mode="out-in">
       <component
         :is="currentStep.component"
         v-if="currentStep"
         :key="currentStep.id"
-        class="flex flex-1 flex-col"
+        :class="['flex flex-1 flex-col']"
         v-bind="currentStepProps"
         :on-next="requestNextStep"
         :on-previous="requestPreviousStep"
       />
     </Transition>
-  </div>
+  </fieldset>
 </template>
 
 <style scoped>

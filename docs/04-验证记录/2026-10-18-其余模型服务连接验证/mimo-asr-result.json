@@ -1,0 +1,17 @@
+{
+  "failure": {
+    "code": "GENERATION_REQUEST_FAILED",
+    "message": "The model request failed. Check the connection and provider settings. [GENERATION_REQUEST_FAILED]"
+  },
+  "finishedAt": 1792329438070,
+  "httpStatuses": [
+    400
+  ],
+  "model": "mimo-v2-omni",
+  "provider": "mimo-audio-transcription",
+  "requestCount": 1,
+  "serviceCode": "400",
+  "serviceMessage": "Unsupported model mimo-v2-omni",
+  "startedAt": 1792329437945,
+  "status": "failed"
+}

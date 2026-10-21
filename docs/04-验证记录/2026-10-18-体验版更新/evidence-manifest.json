@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-18",
+  "files": [
+    {
+      "path": "evidence/installed-before.json",
+      "sha256": "efe1bf773a12dcb6cc73f1848f8973c1b6272c1a893b2cefdb4cf819520aaaa4"
+    },
+    {
+      "path": "evidence/build.log",
+      "sha256": "9a25464dd0b9db8797390ed96ffe915cd9384661776f51b542a250e17b7721ab"
+    },
+    {
+      "path": "evidence/package.mts",
+      "sha256": "d2b4106d0cd0af5d4741dd3a1bfd1850eb4a4052a319c0073025e4b500e1c2ae"
+    },
+    {
+      "path": "evidence/package.log",
+      "sha256": "74e77c5eb2f23890833f4dbe93e3050f6e9cc00ac440f4c07b8261cfd533450d"
+    },
+    {
+      "path": "evidence/package-path-failure.log",
+      "sha256": "e8b7c4f8cfa668e70e9dbffe3910a129bc8348c4972ed56ced5c6d34a453304b"
+    },
+    {
+      "path": "evidence/audit.cjs",
+      "sha256": "4cd5d731d169fbd9f836639aea5f79d36747af3bcf72603643c9d6f71ed15436"
+    },
+    {
+      "path": "evidence/overlay-receipt.json",
+      "sha256": "f993dceb5a12814a505a225acb4fe53a99ac15a5e145e8af0089a18fcf0b8152"
+    },
+    {
+      "path": "evidence/package-audit.json",
+      "sha256": "4f895e78b7c2fe81bb9af834e1359633e1d02080e35b37374ac4bc80ba3dcc11"
+    },
+    {
+      "path": "evidence/codesign.log",
+      "sha256": "5ab237d79117244a9f7db75670dfca95e8ecd6ce8fd33533048b2f33be802dbf"
+    },
+    {
+      "path": "evidence/signature-verify.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/installed-signature-verify.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/delivery.json",
+      "sha256": "b27bc90936e70d7c4fb3f359c11282e2a7892511b72c03b7c0d9bbd73133fb10"
+    },
+    {
+      "path": "evidence/overlay/preview-entry.mjs",
+      "sha256": "cd040744fca24b87d50fdb96f2d3da3b0472a9cfc25b341da36fe3546f293c6f"
+    },
+    {
+      "path": "evidence/smoke/host.mjs",
+      "sha256": "2f30463dd03b422bd0bb72b22f935ec9cd3462abbbc9614bd5c4906e9dbad2da"
+    },
+    {
+      "path": "evidence/smoke/network.sb",
+      "sha256": "3bc4bc2655508907c371725870c2480f728e3bbcf25fa6bb3d6bc62b41f82e3a"
+    },
+    {
+      "path": "evidence/smoke/probe.mjs",
+      "sha256": "3e05deb5da7c86e694eb832bbf5ac11d08bff4b1ffbee1f7f48e7c66c8f44258"
+    },
+    {
+      "path": "evidence/smoke/first.json",
+      "sha256": "b162eac471e4aeffdc1a35ef08c134611a1f48dcc585e0afa48d6a9ff217645e"
+    },
+    {
+      "path": "evidence/smoke/restart.json",
+      "sha256": "9fc5b0ace425d5daf588eef756fbd4bf8066db2efe7e70b9e007c82a40995906"
+    },
+    {
+      "path": "evidence/smoke/state-first.json",
+      "sha256": "dfa2d953bffe986c99c9a7ecca987a1201d4e38978f019424db1d0cbf0fc04da"
+    },
+    {
+      "path": "evidence/smoke/state-restart.json",
+      "sha256": "0d2cd12b9d12fff81378a1dc589c0f6c1e8ec3e6760c3e541836933d6bd89bb0"
+    },
+    {
+      "path": "evidence/smoke/quit-first.json",
+      "sha256": "4897222791e25a6254ca7cf154d70975c27bff9647c93f10f8e4d3b2ec4c029f"
+    },
+    {
+      "path": "evidence/smoke/quit-restart.json",
+      "sha256": "b597adf6a88600a195e6ec7f5a0380c606dd0dccc5bfb8376ca8bc0020ed131e"
+    },
+    {
+      "path": "evidence/smoke/launch.json",
+      "sha256": "ebbb7dbf1af08a13ee68e5d20ccbf3f9b6b218d21d305bd65c4a758ab45f3a68"
+    },
+    {
+      "path": "evidence/smoke/launch-restart.json",
+      "sha256": "5e9b179904b638f22ca7c9bc809d06e750126802afd8a8bd7e01301625279ff0"
+    },
+    {
+      "path": "evidence/smoke/will-quit-first.json",
+      "sha256": "4cc7d89c8a148ddddd6289dc746e9379ad58dcbdd2b423851f835c2de04e256e"
+    },
+    {
+      "path": "evidence/smoke/will-quit.json",
+      "sha256": "9de9ca48ad110873abbd55b17bb9458e233e2e0c15061806dc0d8c16c40a0195"
+    },
+    {
+      "path": "evidence/codesign-corrected.log",
+      "sha256": "7132f75c91ec16246da80960a0e41527cccde63c9d6b7c654b13205571702273"
+    },
+    {
+      "path": "evidence/installed-signature-corrected.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/installed-signature-identity.log",
+      "sha256": "41bdb14c8be1bf02681c8adbee49ad3de9844fa7805aacb2225e3e74d231efbd"
+    },
+    {
+      "path": "evidence/launch-failure.json",
+      "sha256": "b179efb4ccb1c9ad3565735ff8858c500f18cd4a44229fb6ee98ce5c21fbf514"
+    }
+  ]
+}

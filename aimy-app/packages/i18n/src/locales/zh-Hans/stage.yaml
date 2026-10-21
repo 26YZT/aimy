@@ -32,6 +32,12 @@ chat:
     position: 播放位置
     no-speech: 没有识别到说话，语音消息没有发送。
   voice-composer:
+    microphone-enable: 开启麦克风输入
+    microphone-disable: 关闭麦克风输入
+    record-message: 录一条语音消息
+    dictate-message: 录音转为文字
+    microphone-power: 麦克风总开关
+    select-chat: 请选择一个可用聊天，再开始连续聆听。
     audio: 语音消息
     transcription: 语音转文字
     hold-hint: 按住录音。单击在语音消息和语音转文字之间切换。按 Enter 可以免按住录音。

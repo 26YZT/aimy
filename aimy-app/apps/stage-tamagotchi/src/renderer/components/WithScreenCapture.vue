@@ -2,10 +2,11 @@
 import type { SourcesOptions } from 'electron'
 
 import { useElectronScreenCapture } from '@proj-airi/electron-screen-capture/vue'
+import { getResourcePolicy, onResourceRevoked, requestResourceAccess } from '@proj-airi/stage-ui/services/resource-policy'
 import { Button } from '@proj-airi/ui'
 import { useWindowFocus } from '@vueuse/core'
 import { DialogContent, DialogDescription, DialogOverlay, DialogPortal, DialogRoot, DialogTitle } from 'reka-ui'
-import { onMounted, ref, toRef, watch } from 'vue'
+import { onBeforeUnmount, onMounted, ref, toRef, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const props = defineProps<{
@@ -34,6 +35,11 @@ const {
 const focused = useWindowFocus()
 
 async function checkPermissions() {
+  if (getResourcePolicy() && !getResourcePolicy()?.state.screen.enabled) {
+    hasPermissions.value = false
+    showDialog.value = true
+    return
+  }
   if (window.platform === 'darwin') {
     const status = await checkMacOSPermission()
     hasPermissions.value = status === 'granted'
@@ -47,10 +53,18 @@ async function checkPermissions() {
 }
 
 async function requestPermission() {
+  await requestResourceAccess('screen')
   if (window.platform === 'darwin') {
     await requestMacOSPermission()
   }
+  await checkPermissions()
+  showDialog.value = !hasPermissions.value
 }
+
+onBeforeUnmount(onResourceRevoked((_, kind) => {
+  if (!kind || kind === 'screen')
+    hasPermissions.value = false
+}))
 
 onMounted(async () => {
   await checkPermissions()
@@ -114,7 +128,7 @@ watch(hasPermissions, (nextHasPermissions, previousHasPermissions) => {
           >
             {{ t('tamagotchi.settings.screen-capture.permissions-prompt.dismiss') }}
           </Button>
-          <Button @click="requestMacOSPermission()">
+          <Button @click="requestPermission()">
             {{ t('tamagotchi.settings.screen-capture.permissions-prompt.open-preferences') }}
           </Button>
         </div>

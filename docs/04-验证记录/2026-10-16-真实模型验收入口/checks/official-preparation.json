@@ -1,0 +1,59 @@
+{
+  "prepared": true,
+  "root": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1",
+  "qualificationRun": "/private/tmp/aimy-live-entry-20261016/qualification-3/runs/7beb4ace-9027-4b35-9fa4-08b4a20a6b5d",
+  "build": {
+    "schemaVersion": 1,
+    "campaignId": "b5e7a7fe-6c9f-4753-9c78-ff6fdd91a583",
+    "buildOwnerCampaignId": "39ff1fe2-debf-4120-9436-badbaf1c9ab4",
+    "hostRevisionId": "87e06a7b-a8c7-484b-b4bf-e8a5755a32cd",
+    "createdAt": "2026-10-16T05:51:06.627Z",
+    "cacheRoot": "/private/tmp/aimy-live-entry-20261016/qualified-build-4",
+    "buildRoot": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds",
+    "arms": {
+      "airi": {
+        "manifestPath": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/airi/build-manifest.json",
+        "manifestSha256": "02b90b6285002673a48b926e423f82ab0474eb3e230e4e638e89901d3830665b",
+        "entry": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/airi/out/main/index.js",
+        "entrySha256": "4438c97eebb2780077065d46f297ab4727a16a44b29112a50c76af4781f4ef9e"
+      },
+      "aimy": {
+        "manifestPath": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/aimy/build-manifest.json",
+        "manifestSha256": "52bea1cc43adedd5cd29b3ddfdbb32123483c3cabc31c45012d4aa73a6bba8b0",
+        "entry": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/builds/aimy/out/main/index.js",
+        "entrySha256": "478122750d057e465719e6c168573a493ae9a0a38ca1c1bd00f4743876f44a84"
+      }
+    },
+    "liveHost": {
+      "path": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/host/revisions/87e06a7b-a8c7-484b-b4bf-e8a5755a32cd/live-host-entry.mjs",
+      "sha256": "e3fb6370ae38646f29fdff13aec4f3855a0009ba7027fc42094a1ccbb00bf544"
+    },
+    "qualificationHost": {
+      "path": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/host/revisions/87e06a7b-a8c7-484b-b4bf-e8a5755a32cd/qualification-host-entry.mjs",
+      "sha256": "8f81d382d8e23c0d4d7029062131a3e125bdc34d7f4d940df4d6cebbe3dc602a"
+    },
+    "bundles": {
+      "path": "/private/tmp/aimy-live-entry-20261016/qualified-build-4/host/revisions/87e06a7b-a8c7-484b-b4bf-e8a5755a32cd/tool-bundles.json",
+      "sha256": "89fee7c23560522bd64a1ef14f718e1b3e02cb8b659257b1c28b82bdac4988a9"
+    }
+  },
+  "status": {
+    "campaignId": "b5e7a7fe-6c9f-4753-9c78-ff6fdd91a583",
+    "purpose": "official",
+    "configured": false,
+    "credentialCode": "LIVE_CREDENTIAL_PATH_DENIED",
+    "priceCurrent": true,
+    "budget": {
+      "campaignId": "b5e7a7fe-6c9f-4753-9c78-ff6fdd91a583",
+      "maxCostMicroYuan": 10000000,
+      "accountedMicroYuan": 0,
+      "reservedMicroYuan": 0,
+      "remainingMicroYuan": 10000000,
+      "paused": false,
+      "attempts": 0
+    },
+    "billing": "conservative-peak-price-bound",
+    "automaticExecution": false
+  },
+  "realModelCalls": 0
+}

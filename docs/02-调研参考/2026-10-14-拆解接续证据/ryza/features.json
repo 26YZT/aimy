@@ -1,0 +1,370 @@
+[
+  {
+    "id": "RYZ-001",
+    "feature": "静态 Web 核与三个宿主",
+    "behavior": "HTML 按顺序加载 IIFE，全局对象与注入端口复用；不是三端账号同步",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/index.html",
+    "line": 335,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-002",
+    "feature": "Windows 桌面无边框壳",
+    "behavior": "420×860、min 340×560，可缩放；transparent=false",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+    "line": 150,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-003",
+    "feature": "桌面置顶开关",
+    "behavior": "IPC 切 screen-saver 层；状态仅进程变量、初始 false",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+    "line": 192,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-004",
+    "feature": "桌面拖动/最小化/关闭",
+    "behavior": "顶栏 CSS app-region + preload 有界方法",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/shell.js",
+    "line": 23,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-005",
+    "feature": "单实例恢复焦点",
+    "behavior": "requestSingleInstanceLock；第二实例 restore/focus",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+    "line": 211,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-006",
+    "feature": "稳定自定义协议",
+    "behavior": "ryza://app 加 privileged secure/fetch/CORS；没有本地桌面端口",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+    "line": 19,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-007",
+    "feature": "跨升级文本状态镜像",
+    "behavior": "localStorage 原型代理 → 80ms 合并 → JSON tmp/rename；关闭/隐藏同步 flush",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/web-storage.js",
+    "line": 72,
+    "evidence": "接线源码；空快照风险 T10"
+  },
+  {
+    "id": "RYZ-008",
+    "feature": "初始代理目标限制",
+    "behavior": "HTTPS 任意主机；HTTP 仅 loopback；URL parser 规范化",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/proxy-target.js",
+    "line": 34,
+    "evidence": "真实纯函数矩阵通过 T11"
+  },
+  {
+    "id": "RYZ-009",
+    "feature": "三端 HTTP 代理契约",
+    "behavior": "GET/POST、Authorization/api-key/model/content-type；超时与方法有差异",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+    "line": 84,
+    "evidence": "接线源码；未网络实测"
+  },
+  {
+    "id": "RYZ-010",
+    "feature": "Android WebView 宿主",
+    "behavior": "Java Activity + 127.0.0.1:8765 AssetServer；共享 Web 树",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/android/app/src/main/java/com/ryza/chat/MainActivity.java",
+    "line": 42,
+    "evidence": "接线源码；未真机"
+  },
+  {
+    "id": "RYZ-011",
+    "feature": "Android 麦克风与文件选择",
+    "behavior": "只 grant AUDIO_CAPTURE；SAF 文件选择、不申请全盘存储",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/android/app/src/main/java/com/ryza/chat/MainActivity.java",
+    "line": 72,
+    "evidence": "接线源码；未真机"
+  },
+  {
+    "id": "RYZ-012",
+    "feature": "Android 返回/桌面 Esc",
+    "behavior": "先关闭 modal、overlay、sheet、菜单，再返回聊天；Android fallback退出",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/back.js",
+    "line": 36,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-013",
+    "feature": "Android 原生闹钟",
+    "behavior": "AlarmManager 精确/非精确回退、锁屏通知、贪睡、重启重排",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/android/app/src/main/java/com/ryza/chat/AlarmScheduler.java",
+    "line": 119,
+    "evidence": "接线源码；删闹钟契约风险 T13"
+  },
+  {
+    "id": "RYZ-014",
+    "feature": "浏览器/Electron 页内闹钟",
+    "behavior": "无原生桥时 5s tick；依赖进程与页面，不能保证退出后响",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/alarm.js",
+    "line": 127,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-015",
+    "feature": "BYOK OpenAI 兼容聊天",
+    "behavior": "/chat/completions，整包 XHR JSON；没有本快照流式 token/TTS 分句实现",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 1310,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-016",
+    "feature": "五种会话模式",
+    "behavior": "chat/story/immersive/asmr/text 的 prompt；语音样式另表",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 33,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-017",
+    "feature": "可编辑人设/用户档案",
+    "behavior": "替换人设块，输出协议与场景块继续由代码组织",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 79,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-018",
+    "feature": "静态/动态 prompt 分区",
+    "behavior": "静态人格协议前缀 + 记忆 + 本轮场景；意图是前缀缓存友好",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 255,
+    "evidence": "接线源码；未测缓存命中率"
+  },
+  {
+    "id": "RYZ-019",
+    "feature": "上下文预算",
+    "behavior": "估算预算、成对裁历史、85%压力触发记忆压缩",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 1341,
+    "evidence": "接线源码；非精确 tokenizer"
+  },
+  {
+    "id": "RYZ-020",
+    "feature": "标签/状态解析",
+    "behavior": "首行白名单 emotion/attitude 等；<state> JSON 清洗；副作用后由 reducer限定",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 264,
+    "evidence": "接线源码；宽松 JSON 非完整 schema"
+  },
+  {
+    "id": "RYZ-021",
+    "feature": "回复代际与 XHR 取消",
+    "behavior": "newTurn 自增 epoch；单槽 _inflight；返回前再次判 stale",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 1306,
+    "evidence": "接线源码；不覆盖所有异步写者"
+  },
+  {
+    "id": "RYZ-022",
+    "feature": "TTS/STT 提供商注册表",
+    "behavior": "5 个 TTS 行 + 1 个 STT 行；独立凭据字段，VOICEVOX/Aivis本地",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/providers.js",
+    "line": 29,
+    "evidence": "接线源码；AIRI 已有更广矩阵"
+  },
+  {
+    "id": "RYZ-023",
+    "feature": "语音模式风格与播放调节",
+    "behavior": "ASMR 0.93×/0.82 gain，immersive 0.97×/0.95；非实时变声模型",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+    "line": 51,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-024",
+    "feature": "四槽语言矩阵/七种 UI 语言",
+    "behavior": "UI、录音语音包、LLM 输出、TTS独立，TTS不同时额外翻译",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/i18n.js",
+    "line": 1871,
+    "evidence": "接线源码；翻译无取消"
+  },
+  {
+    "id": "RYZ-025",
+    "feature": "回合/播放队列",
+    "behavior": "queue/interrupt/replace；等待队列 FIFO；单个 active utterance",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/turn.js",
+    "line": 223,
+    "evidence": "真实函数行为 T01/T02/T03"
+  },
+  {
+    "id": "RYZ-026",
+    "feature": "中途停止播放",
+    "behavior": "AbortSignal接 <audio> pause/rate复位/口型复位；error/play拒绝也结算",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/app.js",
+    "line": 1998,
+    "evidence": "接线源码；无设备实测"
+  },
+  {
+    "id": "RYZ-027",
+    "feature": "可选用户开口打断",
+    "behavior": "默认关闭；700ms首句保护 + 240ms确认；capture额外先等能量200ms",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/voice.js",
+    "line": 305,
+    "evidence": "接线源码；误触与排队风险"
+  },
+  {
+    "id": "RYZ-028",
+    "feature": "半双工/冷却/文本回声门",
+    "behavior": "说话时丢转写、结束冷却800ms、LCS近20s回看",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/voice.js",
+    "line": 79,
+    "evidence": "纯函数 T12；关麦漏门 T05"
+  },
+  {
+    "id": "RYZ-029",
+    "feature": "PCM采集/WAV/ASR",
+    "behavior": "getUserMedia + AudioWorklet/ScriptProcessor；RMS能量门，无 Silero模型",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/stt.js",
+    "line": 242,
+    "evidence": "真实函数 T04/T05 + 假宿主 T06 暴露缺陷"
+  },
+  {
+    "id": "RYZ-030",
+    "feature": "自动发语音转写",
+    "behavior": "先填输入框，可选延迟发送；编辑后不自动发",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/app.js",
+    "line": 1313,
+    "evidence": "接线源码；stop未清该计时器"
+  },
+  {
+    "id": "RYZ-031",
+    "feature": "会话卡/压缩摘要",
+    "behavior": "8轮→session，8卡→summary，摘要满再压；旋转 bak/corrupt",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+    "line": 210,
+    "evidence": "接线源码；提交前清批次 T09"
+  },
+  {
+    "id": "RYZ-032",
+    "feature": "带日期事实/关系事件记忆",
+    "behavior": "关键词/日期/重要度排序最多12条 + digest；承诺等受保护",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+    "line": 143,
+    "evidence": "接线源码；并发/删除风险 T07/T08"
+  },
+  {
+    "id": "RYZ-033",
+    "feature": "原始对话日志",
+    "behavior": "最多400条，写失败提示；不等于事实记忆",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/app.js",
+    "line": 2398,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-034",
+    "feature": "三存档槽/导入导出",
+    "behavior": "设置含凭据、聊天、记忆、游戏、每日、闹钟整体快照",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/settings.js",
+    "line": 656,
+    "evidence": "接线源码；非原子且长期 pending未入快照"
+  },
+  {
+    "id": "RYZ-035",
+    "feature": "语音缓存/回听/收藏",
+    "behavior": "IDB ryza_voice；8MB/40条逐出，收藏豁免；回放旁路 Turn",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/voicecache.js",
+    "line": 101,
+    "evidence": "接线源码；删除与预算边界未通过"
+  },
+  {
+    "id": "RYZ-036",
+    "feature": "Spine 4.2角色/场景双骨架",
+    "behavior": "角色与背景共享WebGL；姿态/镜头/看向/热区受官方骨骼/表驱动",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/avatar.js",
+    "line": 2981,
+    "evidence": "接线源码；缺主要二进制，无渲染实测"
+  },
+  {
+    "id": "RYZ-037",
+    "feature": "动作节奏/去重/语义动作让位",
+    "behavior": "说话1.8–3.8s、闲置3.8–7.4s、近5组去重、语义动作2.3s让位",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/avatar.js",
+    "line": 138,
+    "evidence": "实现参数；不是官方参数/效果验收"
+  },
+  {
+    "id": "RYZ-038",
+    "feature": "本地服装 ZIP 导入",
+    "behavior": "64MB/64条规则、单页 atlas、PNG尺寸与Spine4.2；IDB持久化",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/crfstore.js",
+    "line": 207,
+    "evidence": "接线源码；自写ZIP长度/预算风险"
+  },
+  {
+    "id": "RYZ-039",
+    "feature": "NPC/旁白/译文分段",
+    "behavior": "每行话者；仅主角色台词送 TTS；候选按场景与概率打分",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/npc.js",
+    "line": 101,
+    "evidence": "接线源码；单角色Aimy不需NPC系统"
+  },
+  {
+    "id": "RYZ-040",
+    "feature": "确定性 RPG 数值 reducer",
+    "behavior": "有限值 clamp、体力/金钱/背包/任务/冒险日志；不是情感关系模型",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/game.js",
+    "line": 352,
+    "evidence": "接线源码；不建议引入整个玩法"
+  },
+  {
+    "id": "RYZ-041",
+    "feature": "世界/时间/移动",
+    "behavior": "5区/多地点数据、每日确定性NPC漂移；real/flow/manual时钟",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/world.js",
+    "line": 110,
+    "evidence": "接线源码；不等于桌面活动感知"
+  },
+  {
+    "id": "RYZ-042",
+    "feature": "主线/支线/本地玩法",
+    "behavior": "8段主线、离线采集/调合/战斗/造船；LLM动态文案有回退",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/quests.js",
+    "line": 20,
+    "evidence": "接线源码；Aimy当前不采纳"
+  },
+  {
+    "id": "RYZ-043",
+    "feature": "每日登录/欢迎任务",
+    "behavior": "本地奖励经 Game发放；首启天数、连续签到",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/daily.js",
+    "line": 11,
+    "evidence": "接线源码；Aimy当前不采纳"
+  },
+  {
+    "id": "RYZ-044",
+    "feature": "存储压力提示",
+    "behavior": "最多每分钟 canary write，HUD刷新触发；不是持续健康/成功写入保证",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/app.js",
+    "line": 993,
+    "evidence": "接线源码"
+  },
+  {
+    "id": "RYZ-045",
+    "feature": "模型不能打开用户权限",
+    "behavior": "NSFW用户布尔硬门；仅可借鉴“权限由代码维护”原则",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/nsfw.js",
+    "line": 19,
+    "evidence": "接线源码；本功能不进入Aimy一期"
+  },
+  {
+    "id": "RYZ-046",
+    "feature": "分层声明与离线守卫",
+    "behavior": "layers/mayImport/denyRefs + cycle/core/proxy/version/MIME；有声明例外",
+    "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/scripts/layering_check.js",
+    "line": 319,
+    "evidence": "原守卫通过；不证明行为安全"
+  }
+]

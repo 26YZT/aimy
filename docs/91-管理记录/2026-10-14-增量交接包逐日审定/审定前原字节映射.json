@@ -1,0 +1,72 @@
+[
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/01-能力选择与分期.md",
+    "sha256": "f527375eb137c98bb13473409a1c767c40356159373c29e733e4b82a24b3de59"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/02-产品PRD.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/02-产品PRD.md",
+    "sha256": "7e934bbf9836c7c11d9f1d37792c3d01448a0d5f52c57d615c313876bcea2ae5"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/03-技术设计.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/03-技术设计.md",
+    "sha256": "7f6670bc67fe3a5cddf8507b2d8c12fc5855ea9e3c08689ff6e90d2f6f09de29"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/04-API与事件契约.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/04-API与事件契约.md",
+    "sha256": "228d9ee65f1459625cf1d99bf84085e52069e556dc0c3b5a1626583e76fdd2d4"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/05-界面与交互.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/05-界面与交互.md",
+    "sha256": "c87502d76cccd3da35bc4850ba7fb79765f9ff18e5d1117f715c2c15896214ce"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/06-Prompt与角色体验.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/06-Prompt与角色体验.md",
+    "sha256": "9f150aef0e26c580d95f7b58aa438ab16d15ad1835b94350055ac35f05d75e8f"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/07-验证与AI评测计划.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/07-验证与AI评测计划.md",
+    "sha256": "c0f53f09f96c3d9c6c29a4e0b5d92421aa2b661856c1804d50d2381b0cd705f0"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/08-开发任务与交接.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/08-开发任务与交接.md",
+    "sha256": "a0de1028700f6abd6ce8ba7dece3a5cca67b9a9d22b3cb6d84164c1399350ecb"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/09-模型评测目标卡.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/09-模型评测目标卡.md",
+    "sha256": "a51a628d2096199715ed8b857dbdad492f00f3ea13ffd429c056aba31506d7cc"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/Prompt目录.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/Prompt目录.json",
+    "sha256": "80255ebd39c723fcfb5c33894cd5f2571e56fb80a8f9fda5021d291c02da3cf5"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/README.md",
+    "sha256": "75646f231a7fb312bc5981480ff1940fc69fa5b9dfd80933554efe441c0d5396"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/接口目录.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/接口目录.json",
+    "sha256": "fe14d1ad44331c0b877bd59c749405a80afab5038297e3bcf0bf745543e2050a"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/能力选择.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/能力选择.json",
+    "sha256": "6b6173dd582eab9784654313c56695988024ee1416ef3b42591e3adf33ec1aaa"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/追溯矩阵.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-增量交接包逐日审定/审定前原文/追溯矩阵.json",
+    "sha256": "122e4e1993a4fe27bfd142e914a09f358712575ad9a68c5af4331020a235bfc0"
+  }
+]

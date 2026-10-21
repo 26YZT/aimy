@@ -1,0 +1,101 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "sources": {
+    "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py": {
+      "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3",
+      "loaded_original_ranges": [
+        {
+          "name": "_coerce_ts",
+          "start": 78,
+          "end": 83
+        },
+        {
+          "name": "_format_ts_label",
+          "start": 86,
+          "end": 87
+        },
+        {
+          "name": "_memory_time_payload",
+          "start": 90,
+          "end": 108
+        },
+        {
+          "name": "_memory_line_with_evidence",
+          "start": 111,
+          "end": 116
+        },
+        {
+          "name": "format_recalled_memories_for_prompt",
+          "start": 119,
+          "end": 120
+        },
+        {
+          "name": "recall_memories",
+          "start": 281,
+          "end": 328
+        },
+        {
+          "name": "build_surfacing_memories",
+          "start": 427,
+          "end": 529
+        },
+        {
+          "name": "_LEADING_DATE_RE",
+          "start": 833,
+          "end": 839
+        }
+      ],
+      "transform": "removed @timed decorators only; function bodies unchanged"
+    },
+    "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/context_builder.py": {
+      "sha256": "b36aee31e764559e6e7a2125d3d3ef5ee32e4eb29026b6601c73fca64f4d07bd",
+      "loaded_original_ranges": [
+        {
+          "name": "_memory_debug_item",
+          "start": 274,
+          "end": 291
+        },
+        {
+          "name": "_build_recall_query",
+          "start": 301,
+          "end": 325
+        },
+        {
+          "name": "build_memory_blocks",
+          "start": 329,
+          "end": 502
+        }
+      ],
+      "transform": "removed @timed decorators only; function bodies unchanged"
+    },
+    "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/chat.py": {
+      "sha256": "9c1bcd0972c00c739b022018cb3edb07d075a42109c0dfa421a8dc88c6660b0f",
+      "source_checked_only_ranges": [
+        [
+          1392,
+          1440
+        ],
+        [
+          2046,
+          2101
+        ]
+      ],
+      "executed": false,
+      "scope": "private route uses original producer inline; group builder consumes build_memory_blocks.time_block; these caller ranges source checked only"
+    },
+    "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/chatroom.py": {
+      "sha256": "28fd309cced9aa49c6b3efb15c9d7c33fc642427787704403db4e0fd542a0303",
+      "source_checked_only_ranges": [
+        [
+          1138,
+          1151
+        ]
+      ],
+      "executed": false,
+      "scope": "private route uses original producer inline; group builder consumes build_memory_blocks.time_block; these caller ranges source checked only"
+    }
+  },
+  "script_sha256": "b6430d88f5659751aa7f43899f5208c0ebca2887a2840fd1d59cb190f24a42cd",
+  "original_raw_unchanged": true,
+  "semantic_scope": "original build_surfacing_memories+build_memory_blocks noembedding branches actually executed; not autonomous sender"
+}

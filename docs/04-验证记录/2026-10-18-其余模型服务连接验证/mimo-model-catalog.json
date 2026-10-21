@@ -1,0 +1,15 @@
+{
+  "source": "Normalized record of the observed authenticated MiMo GET /v1/models response",
+  "status": 200,
+  "models": [
+    "mimo-v2.5",
+    "mimo-v2.5-asr",
+    "mimo-v2.5-pro",
+    "mimo-v2.5-tts",
+    "mimo-v2.5-tts-voiceclone",
+    "mimo-v2.5-tts-voicedesign",
+    "mimo-v2.6-flash",
+    "mimo-v2.6-pro",
+    "mimo-v2.6-pro-ultraspeed"
+  ]
+}

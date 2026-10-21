@@ -1,0 +1,19 @@
+{
+  "installedApp": "/Users/mima1234/Applications/Aimy体验版.app",
+  "backupApp": "/Users/mima1234/Library/Application Support/Aimy-Package-Backups/20261018/Aimy体验版.app",
+  "desktopShortcut": "/Users/mima1234/Desktop/Aimy体验版.app",
+  "version": "0.12.0-beta.5+aimy.20261018.1",
+  "newAsarSha256": "48bc90b5efd5a72aa1a7366945e0aa4ae7b1538ef325eddfbcf3e6f344f8c2d0",
+  "previousAsarSha256": "619f8275c040417981c704c43e9bf05fd13dba11b7f339314cf579ad7aad5177",
+  "signatureVerified": true,
+  "stableBundleId": "ai.aimy.preview",
+  "stableDataPath": "/Users/mima1234/Library/Application Support/Aimy-Preview",
+  "userDataFilesReadOrMigratedByInstaller": false,
+  "credentialsReadByInstaller": false,
+  "openedInstalledApp": true,
+  "mainProcessPid": 13689,
+  "launchCheckedAt": "2026-10-18 12:06:14 +0800",
+  "privateWindowContentsInspected": false,
+  "localSignature": "adhoc without hardened-runtime, matches previous preview",
+  "initialLaunchFailure": "hardened-runtime library validation Team ID mismatch; corrected by restoring previous preview signing policy"
+}

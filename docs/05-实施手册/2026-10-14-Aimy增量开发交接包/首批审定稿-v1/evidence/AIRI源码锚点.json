@@ -1,0 +1,576 @@
+{
+  "date": "2026-10-15",
+  "scope": "read-only current aimy-app source; installed libraries metadata only",
+  "anchors": [
+    {
+      "path": "packages/stage-ui/src/database/storage.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+      "sha256": "fc54da57c438fd82abe010c2170752ab0748feef716a73b095812bf5e9199ce4",
+      "line_start": 6,
+      "line_end": 11,
+      "symbol": "storage/local/outbox mounts",
+      "bytes": 356
+    },
+    {
+      "path": "packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35",
+      "line_start": 29,
+      "line_end": 48,
+      "symbol": "durable get/save session",
+      "bytes": 5833
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "line_start": 136,
+      "line_end": 142,
+      "symbol": "canonical user/character fallback",
+      "bytes": 64952
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "line_start": 162,
+      "line_end": 172,
+      "symbol": "enqueuePersist",
+      "bytes": 64952
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "line_start": 285,
+      "line_end": 367,
+      "symbol": "persistSession and commitUserMessage",
+      "bytes": 64952
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "line_start": 385,
+      "line_end": 397,
+      "symbol": "deleteMessage lacks awaited persistence",
+      "bytes": 64952
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "line_start": 1209,
+      "line_end": 1246,
+      "symbol": "pushMessageToCloud",
+      "bytes": 64952
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "line_start": 1737,
+      "line_end": 1757,
+      "symbol": "synced owner action list",
+      "bytes": 64952
+    },
+    {
+      "path": "packages/stage-ui/src/types/chat-session.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/chat-session.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/chat-session.ts",
+      "sha256": "311a36378e08bc0a3b9b4d1591e26386a05b522bf1b87d847f3db1241fc0051d",
+      "line_start": 10,
+      "line_end": 38,
+      "symbol": "ChatSessionMeta/Record",
+      "bytes": 1645
+    },
+    {
+      "path": "packages/stage-ui/src/types/chat.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/chat.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/chat.ts",
+      "sha256": "7716a580faa5639b64dde4ef5a0af01eadcf8ce79804c7dd32293ec1d8556ca6",
+      "line_start": 1,
+      "line_end": 16,
+      "symbol": "core type reexports",
+      "bytes": 335
+    },
+    {
+      "path": "packages/core-agent/src/types/chat.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/types/chat.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/types/chat.ts",
+      "sha256": "795dae4aeaba6a3e5ec86062d6d9703b525fba0e1faf205f77d4efb7bff04804",
+      "line_start": 31,
+      "line_end": 100,
+      "symbol": "generationTranscript/providerTranscript/ChatHistoryItem",
+      "bytes": 4842
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "line_start": 292,
+      "line_end": 327,
+      "symbol": "streamWithStageAdapters",
+      "bytes": 44220
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "line_start": 382,
+      "line_end": 447,
+      "symbol": "async final ASR request projection",
+      "bytes": 44220
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "line_start": 542,
+      "line_end": 609,
+      "symbol": "runtime wiring and append callback",
+      "bytes": 44220
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "line_start": 893,
+      "line_end": 935,
+      "symbol": "retry creates a new request after history slice",
+      "bytes": 44220
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/consciousness.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/consciousness.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/consciousness.ts",
+      "sha256": "18a1f01bb3f08a93541f7c9e6e58ce8d414aa21679b7f629c2298de1c3fb41b3",
+      "line_start": 21,
+      "line_end": 23,
+      "symbol": "chat route selection",
+      "bytes": 7000
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/consciousness.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/consciousness.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/consciousness.ts",
+      "sha256": "18a1f01bb3f08a93541f7c9e6e58ce8d414aa21679b7f629c2298de1c3fb41b3",
+      "line_start": 129,
+      "line_end": 144,
+      "symbol": "reasoning depends on current chat selection",
+      "bytes": 7000
+    },
+    {
+      "path": "packages/stage-ui/src/stores/providers/provider.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/provider.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/provider.ts",
+      "sha256": "99a87e8d995d7d5eee7b55ac53541565109655e09910fc0fd3dd1f5291e844b6",
+      "line_start": 915,
+      "line_end": 965,
+      "symbol": "provider instance and GenerationProvider factory",
+      "bytes": 46764
+    },
+    {
+      "path": "packages/stage-ui/src/stores/providers/config.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/config.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/config.ts",
+      "sha256": "fd2250a95cc4cd34adaf02e3a6c6bf40f44c8c4fd2ef417e039be38a5c22654e",
+      "line_start": 48,
+      "line_end": 53,
+      "symbol": "local config persistence",
+      "bytes": 16886
+    },
+    {
+      "path": "packages/stage-ui/src/stores/providers/config.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/config.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/providers/config.ts",
+      "sha256": "fd2250a95cc4cd34adaf02e3a6c6bf40f44c8c4fd2ef417e039be38a5c22654e",
+      "line_start": 368,
+      "line_end": 462,
+      "symbol": "automatic provider cloud sync",
+      "bytes": 16886
+    },
+    {
+      "path": "packages/stage-ui/src/services/inference-service-providers.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/inference-service-providers.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/services/inference-service-providers.ts",
+      "sha256": "3f92129eab064021bffcd69c952e383b389ae45b21c45799bfdabe139c1a572c",
+      "line_start": 73,
+      "line_end": 98,
+      "symbol": "raw cloud provider API",
+      "bytes": 3348
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "line_start": 274,
+      "line_end": 290,
+      "symbol": "runtime deps/context provider signature",
+      "bytes": 50192
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "line_start": 568,
+      "line_end": 579,
+      "symbol": "native transcript preference",
+      "bytes": 50192
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "line_start": 741,
+      "line_end": 759,
+      "symbol": "durable user then unawaited callback",
+      "bytes": 50192
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "line_start": 890,
+      "line_end": 940,
+      "symbol": "display projection vs actual request",
+      "bytes": 50192
+    },
+    {
+      "path": "packages/core-agent/src/runtime/llm-service.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+      "sha256": "f7474bfc16bafb4166124aa30e85e0cfe1a12bf98abd1f7c89c673f394fadd60",
+      "line_start": 82,
+      "line_end": 101,
+      "symbol": "async tool gap before stream adapter",
+      "bytes": 15321
+    },
+    {
+      "path": "packages/core-agent/src/runtime/llm-service.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/llm-service.ts",
+      "sha256": "f7474bfc16bafb4166124aa30e85e0cfe1a12bf98abd1f7c89c673f394fadd60",
+      "line_start": 229,
+      "line_end": 250,
+      "symbol": "transient retry loop",
+      "bytes": 15321
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-completions.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-completions.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-completions.ts",
+      "sha256": "f62fa818c080ddf97c5f005b09bcf7fe8a5d2ed400c2f67df2d252ebe592796f",
+      "line_start": 41,
+      "line_end": 114,
+      "symbol": "per-step options and streamText",
+      "bytes": 5614
+    },
+    {
+      "path": "packages/core-agent/src/runtime/responses.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+      "sha256": "212363665b735b45085cb1c0a730e59f4a0e742cae3f8ffe1ad78651a097f88f",
+      "line_start": 78,
+      "line_end": 90,
+      "symbol": "native then portable rendering",
+      "bytes": 12870
+    },
+    {
+      "path": "packages/core-agent/src/runtime/responses.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/responses.ts",
+      "sha256": "212363665b735b45085cb1c0a730e59f4a0e742cae3f8ffe1ad78651a097f88f",
+      "line_start": 189,
+      "line_end": 242,
+      "symbol": "per-step provider options",
+      "bytes": 12870
+    },
+    {
+      "path": "packages/core-agent/src/runtime/request-context.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-context.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/request-context.ts",
+      "sha256": "76bd7db411283193ede935af5ec6d41c8d7a1c0fda541a0668233259895e6ad4",
+      "line_start": 43,
+      "line_end": 49,
+      "symbol": "current continuation scope excludes memory epoch",
+      "bytes": 2491
+    },
+    {
+      "path": "packages/core-agent/src/messages/chat-completions.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+      "sha256": "706747b89b705108eded64c8736b4194f5bfac52f41714a2355f6b4b12238d8f",
+      "line_start": 168,
+      "line_end": 193,
+      "symbol": "native then portable rendering",
+      "bytes": 9487
+    },
+    {
+      "path": "packages/core-agent/src/types/llm.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/types/llm.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/types/llm.ts",
+      "sha256": "d7cb3f9f4e4ae6b5d3abf3d745306469ac342f8e62b6361dab5440535dbc8a98",
+      "line_start": 46,
+      "line_end": 102,
+      "symbol": "StreamOptions",
+      "bytes": 4747
+    },
+    {
+      "path": "packages/stage-ui/src/stores/auth.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/auth.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/auth.ts",
+      "sha256": "62b90e30879a44407377fba2fb79d6e8e11b8c0ee9e2d96fb86031e141820821",
+      "line_start": 86,
+      "line_end": 95,
+      "symbol": "userId and sessionVersion",
+      "bytes": 16672
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/airi-card.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/airi-card.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/airi-card.ts",
+      "sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376",
+      "line_start": 97,
+      "line_end": 111,
+      "symbol": "default active card",
+      "bytes": 44122
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/airi-card.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/airi-card.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/airi-card.ts",
+      "sha256": "20131bc0fab2f946125ced8817ba8774f39e7a76deb9696339bfff916532e376",
+      "line_start": 878,
+      "line_end": 900,
+      "symbol": "initialize repairs missing default/card id",
+      "bytes": 44122
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+      "sha256": "05f6aa7fa257ed588501bdaf3064036eabd25baacab05ad5a574902ec4697646",
+      "line_start": 123,
+      "line_end": 165,
+      "symbol": "extraSteps before model selection",
+      "bytes": 8562
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+      "sha256": "c06ad7a364acabaca115dad5f661f3e01d7eb3b86686af585dcfdd224d1b94a4",
+      "line_start": 35,
+      "line_end": 60,
+      "symbol": "desktop extra steps and handlers",
+      "bytes": 2754
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/App.vue",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/App.vue",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/App.vue",
+      "sha256": "cc350e25147e59d63ffa5ef68e9eb2a2929ff97d03cff8e4a6b2db8bf4429550",
+      "line_start": 273,
+      "line_end": 284,
+      "symbol": "full runtime auth/card readiness",
+      "bytes": 16360
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/main.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/main.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/main.ts",
+      "sha256": "67f66bf1998bf36480f0185d28fc2ad70d17bb6f91eb403a11b828e2d0a2dfac",
+      "line_start": 44,
+      "line_end": 83,
+      "symbol": "host bridge before Pinia/app mount",
+      "bytes": 2880
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/shared/eventa/index.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/shared/eventa/index.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/shared/eventa/index.ts",
+      "sha256": "bfca93b34731b2636af29892a9c1f89b11e5b1e14d331f391598b79f722b7086",
+      "line_start": 502,
+      "line_end": 506,
+      "symbol": "window/app lifecycle events",
+      "bytes": 30995
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/index.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+      "sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136",
+      "line_start": 81,
+      "line_end": 84,
+      "symbol": "APP_USER_DATA_PATH",
+      "bytes": 19420
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/index.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/index.ts",
+      "sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136",
+      "line_start": 418,
+      "line_end": 470,
+      "symbol": "handleAppExit",
+      "bytes": 19420
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/window.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/window.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/window.ts",
+      "sha256": "f8bf0f7ba798dd7f1221bc0d78c6287e52cfa0546db014ebc2a65a3f59731ce6",
+      "line_start": 21,
+      "line_end": 61,
+      "symbol": "window lifecycle and same sender check",
+      "bytes": 4643
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+      "sha256": "d0704953e37dc3197cf425cf60e73cdc87176a78de9405e303f6ae6e8a882563",
+      "line_start": 152,
+      "line_end": 207,
+      "symbol": "permission allowlist and authorization callback",
+      "bytes": 8302
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24",
+      "line_start": 155,
+      "line_end": 161,
+      "symbol": "close main means hide",
+      "bytes": 8039
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.ts",
+      "sha256": "086384c14bc361c52c90fa6fc7174988bb19d6a20f698f1d53841e1b579b4110",
+      "line_start": 22,
+      "line_end": 34,
+      "symbol": "sequential lifecycle hooks",
+      "bytes": 1171
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+      "sha256": "b1cf1061efc6f3e9570859e55b18c48200316434b6aba1b9a2e6a799f819dd12",
+      "line_start": 20,
+      "line_end": 25,
+      "symbol": "animation pause only minimized",
+      "bytes": 2126
+    },
+    {
+      "path": "packages/stage-ui/src/stores/settings/audio-device.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/settings/audio-device.ts",
+      "sha256": "046e4452947ca992d1950cfda4bd2bf661b5288be6a45d32d8204404774b4cca",
+      "line_start": 29,
+      "line_end": 45,
+      "symbol": "hold subscription",
+      "bytes": 3508
+    },
+    {
+      "path": "packages/audio/src/browser/sources.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/audio/src/browser/sources.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/audio/src/browser/sources.ts",
+      "sha256": "a783f9c9b909e7c8550e6d41621696edffc0672a006868133b41f71ac1ca0e96",
+      "line_start": 109,
+      "line_end": 127,
+      "symbol": "late microphone resolve cleanup and abort",
+      "bytes": 5284
+    },
+    {
+      "path": "packages/stage-ui/node_modules/unstorage/drivers/indexedb.mjs",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/node_modules/unstorage/drivers/indexedb.mjs",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/indexedb.mjs",
+      "sha256": "2bdcc9e01973e39dc53734272c0d39aa961f5677d2fd4b48ae6c39e62d18e23d",
+      "line_start": 1,
+      "line_end": 49,
+      "symbol": "installed IndexedDB driver",
+      "bytes": 1231
+    },
+    {
+      "path": "packages/stage-ui/node_modules/idb-keyval/dist/index.js",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/node_modules/idb-keyval/dist/index.js",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.js",
+      "sha256": "480f1d31a40b5720fbaaee44c1a21d83392c6cf9516672007813a1824483a058",
+      "line_start": 1,
+      "line_end": 112,
+      "symbol": "installed transactional update",
+      "bytes": 6943
+    },
+    {
+      "path": "package.json",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/package.json",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/package.json",
+      "sha256": "4c6311f485dd42d82bf8a72ad58feeda1788046e5c24d125b3d5cf864f56ea50",
+      "line_start": 1,
+      "line_end": 70,
+      "symbol": "root scripts",
+      "bytes": 5508
+    },
+    {
+      "path": "packages/core-agent/package.json",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/package.json",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/package.json",
+      "sha256": "507587c21ac887c28d699e29a4a7c04839189c333ae54c16cfe8d8dcbec07152",
+      "line_start": 1,
+      "line_end": 65,
+      "symbol": "core no test script",
+      "bytes": 2205
+    },
+    {
+      "path": "packages/stage-ui/vitest.config.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/vitest.config.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/vitest.config.ts",
+      "sha256": "9e7273def0760a0c839ad186338aba9384fdfc5d4233b7bbc24e443dbefebf3f",
+      "line_start": 1,
+      "line_end": 83,
+      "symbol": "node/browser projects and env loading",
+      "bytes": 2425
+    },
+    {
+      "path": "apps/stage-tamagotchi/vitest.node.config.ts",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/vitest.node.config.ts",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/vitest.node.config.ts",
+      "sha256": "941c660a7673d8232613ec6cde9857a150e22c5ed13935736c155d29794b1262",
+      "line_start": 1,
+      "line_end": 20,
+      "symbol": "node project and env loading",
+      "bytes": 553
+    },
+    {
+      "path": ".tool-versions",
+      "absolute_path": "/Users/mima1234/Documents/aimy/aimy-app/.tool-versions",
+      "resolved_path": "/Users/mima1234/Documents/aimy/aimy-app/.tool-versions",
+      "sha256": "92b4b010a28e33f380a19ffb25432a4293036330198803aed9f9ade53733ece4",
+      "line_start": 1,
+      "line_end": 3,
+      "symbol": "declared versions",
+      "bytes": 39
+    }
+  ]
+}

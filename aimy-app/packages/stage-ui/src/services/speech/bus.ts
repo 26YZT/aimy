@@ -86,7 +86,7 @@ export interface VoiceDraft {
 /** A snapshot replaces earlier presentation state. Commands still target the original request or draft identity. */
 export interface VoiceHostSnapshot {
   readonly connected: boolean
-  readonly microphone?: { readonly enabled: boolean, readonly ready: boolean, readonly error?: string }
+  readonly microphone?: { readonly enabled: boolean, readonly ready: boolean, readonly listening?: boolean, readonly recording?: boolean, readonly pending?: boolean, readonly error?: string }
   readonly input?: {
     readonly requestId: string
     readonly sessionId: string
@@ -123,6 +123,8 @@ export type VoiceInputCommand
  * `text` is present only for `end` of a `composer` input that produced a transcript.
  */
 export const voiceInputCommand = defineInvokeEventa<{ status: 'accepted' | 'closed', text?: string }, VoiceInputCommand>('eventa:voice:input-command')
+/** Both window controls address the existing audio host. Disabling revokes all microphone consumers. */
+export const voiceMicrophoneCommand = defineInvokeEventa<{ status: 'accepted' | 'closed' }, { enabled: boolean, continuous?: boolean }>('eventa:voice:microphone-command')
 export const voiceRequestSnapshot = defineEventa('eventa:voice:request-snapshot')
 export const voiceSnapshotChanged = defineEventa<VoiceHostSnapshot>('eventa:voice:snapshot-changed')
 

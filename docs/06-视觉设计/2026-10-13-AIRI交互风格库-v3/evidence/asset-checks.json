@@ -1,0 +1,45 @@
+{
+  "local_missing_links": [],
+  "json_valid": true,
+  "svg_valid": true,
+  "preserved_prior_files": 115,
+  "changed_prior_files": [],
+  "reference_screenshot_bytes_preserved": true,
+  "icon_master": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "format": "raster PNG; not SVG"
+  },
+  "exports": [
+    {
+      "size": 1024,
+      "mode": "RGB"
+    },
+    {
+      "size": 512,
+      "mode": "RGB"
+    },
+    {
+      "size": 256,
+      "mode": "RGB"
+    },
+    {
+      "size": 128,
+      "mode": "RGB"
+    },
+    {
+      "size": 64,
+      "mode": "RGB"
+    },
+    {
+      "size": 32,
+      "mode": "RGB"
+    }
+  ],
+  "browser_passed": 34,
+  "native_product_verification": "not_performed",
+  "human_approval": "pending"
+}

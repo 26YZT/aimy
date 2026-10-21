@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-12",
+  "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+  "sha": "992309c0aa19845960228f880013d4685fde93b5",
+  "python_files_parsed": 64,
+  "isolated_checks_passed": 2,
+  "results": [
+    {
+      "case": "clear_during_tts_generation",
+      "source_sha256": "55d94e8ddd134d4b1dd5565d6c6e7025b46a8ec05bb7a98c6eeebbc81aca55b0",
+      "synthesis_still_pending_after_clear": true,
+      "tracked_tasks_after_clear": 0,
+      "late_payloads_in_replacement_queue": 1,
+      "payloads_sent_after_clear": 0,
+      "scope": "exact AST class, fake TTS and fake payload; parent conversation cancellation not exercised"
+    },
+    {
+      "case": "two_text_triggers_same_client",
+      "source_sha256": "98a285b0c956376f9c219d1802a2f027ba927b7f95f609dc04242f473305efa1",
+      "both_conversation_tasks_pending": true,
+      "launched_inputs": [
+        "first",
+        "second"
+      ],
+      "map_tracks_only_second": true,
+      "scope": "exact AST trigger function, mocked conversation and group; frontend submission path not exercised"
+    }
+  ],
+  "application_launched": false,
+  "dependencies_installed": false,
+  "real_devices_or_models_used": false,
+  "does_not_prove": [
+    "complete interruption chain",
+    "late audio actually played",
+    "ASR/TTS/model quality",
+    "macOS packaging",
+    "Aimy integration",
+    "persistent storage durability"
+  ]
+}

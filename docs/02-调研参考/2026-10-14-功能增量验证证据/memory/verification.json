@@ -1,0 +1,106 @@
+{
+  "candidate_count": 16,
+  "functional_slices": 3,
+  "observations": 24,
+  "positive": 10,
+  "negative_blocked": 9,
+  "counterexamples": 5,
+  "source_target_symbols_unique": 48,
+  "current_source_hashes_match": true,
+  "real_model_ab": false,
+  "device_used": false,
+  "product_source_modified": false,
+  "outputs": [
+    {
+      "name": "README.md",
+      "bytes": 11024,
+      "sha256": "41320a1a2f19988b30b03287f253a01abfb884b347538e46121095efd5c505b1"
+    },
+    {
+      "name": "bad-source.db",
+      "bytes": 45056,
+      "sha256": "657a8fad2bb1f02a09804354395bddfa94391655c5083b2d2893c072075e457b"
+    },
+    {
+      "name": "build_delta.py",
+      "bytes": 14829,
+      "sha256": "97ee56548748cb99bf6cf7236dbba49b4d5229867769da1c0887ad23722f576d"
+    },
+    {
+      "name": "candidate-delta.json",
+      "bytes": 55433,
+      "sha256": "7b707b2a35d7230c4d94444cab148c2bdfc0e519aaf15db748a5b71d449f7288"
+    },
+    {
+      "name": "checks.py",
+      "bytes": 23301,
+      "sha256": "2f6e110fd5d1e6b997d9561a12cb9d59b08d2bca8028bea5213d7fad1e5046ec"
+    },
+    {
+      "name": "epoch.db",
+      "bytes": 45056,
+      "sha256": "821b776635e76f4eeee069b3e783eae0c99c7eedec759c1e58a915aaead06810"
+    },
+    {
+      "name": "executed-targets-unique.json",
+      "bytes": 12613,
+      "sha256": "d694520c66329d9fde5ee7a722a9fafc0b18a8cf790f41b4fd2dc431434211cb"
+    },
+    {
+      "name": "executed-targets.json",
+      "bytes": 37841,
+      "sha256": "e762aab3f07025c27ba84ca1355c3f330cdce9f20ef391207a5eec217d7aff1a"
+    },
+    {
+      "name": "forget.db",
+      "bytes": 45056,
+      "sha256": "2f4c289fd230d2132c0d910301d4fcab4347296dee94cd352e408fdf35323f59"
+    },
+    {
+      "name": "functional-slices.json",
+      "bytes": 2876,
+      "sha256": "70b92f82ac4b6442abde83bcecaae60ccd1ca54280925bc49a4722f030705e34"
+    },
+    {
+      "name": "library.db",
+      "bytes": 16384,
+      "sha256": "c3f28a9aa6607f63664b5fba5839225d7e9657247842654dc7b2375aabc09083"
+    },
+    {
+      "name": "manual-revision.db",
+      "bytes": 45056,
+      "sha256": "7f9f46fad0a31ff212afcd1e1a62d2a7dd028aecfa82de7654f603b857bd66cf"
+    },
+    {
+      "name": "positive.db",
+      "bytes": 45056,
+      "sha256": "ed580a4ce46c14d7f036bd108fe6e587f13e04ba478917b43c8d5b217a9df13a"
+    },
+    {
+      "name": "proactive.db",
+      "bytes": 20480,
+      "sha256": "ec5049270050c3c2ec1fc7dfb54c7d964679013e29c9eb763ad4f556c447598f"
+    },
+    {
+      "name": "quoted-counter.db",
+      "bytes": 45056,
+      "sha256": "8c1ec76bfd39348f1a27acaa7df448d2aa1bbc8a3fdabe173c776abc1ffdc0cc"
+    },
+    {
+      "name": "results.json",
+      "bytes": 23796,
+      "sha256": "07909bb657531a88911b37b6398a3daa0368a9bd49adc1e7982077462c3f1233"
+    },
+    {
+      "name": "source-delete.db",
+      "bytes": 45056,
+      "sha256": "014d715d21826457e1175a4056b1babfd4ea9986c06263ba8daa442a373b8655"
+    },
+    {
+      "name": "source-edit.db",
+      "bytes": 45056,
+      "sha256": "4f87e2a18b56406092542e3f6b5af001beda97e5a2ae5e0edd3f0771f7eb61cf"
+    }
+  ],
+  "per_observation_source_hashes": true
+}

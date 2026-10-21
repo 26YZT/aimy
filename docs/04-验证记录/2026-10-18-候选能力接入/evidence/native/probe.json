@@ -1,0 +1,51 @@
+{
+  "title": "Aimy",
+  "mainRoute": "/",
+  "appMounted": true,
+  "canvasCount": 1,
+  "routeRegistered": true,
+  "routePaths": [
+    "/settings",
+    "/settings/companion",
+    "/settings/companion",
+    "/settings/companion"
+  ],
+  "lazyComponentLoaded": true,
+  "settingsReady": true,
+  "settingsRevision": 0,
+  "preferences": {
+    "followup": {
+      "enabled": false,
+      "delayMinutes": 15,
+      "maxPerDay": 4,
+      "quietStartHour": 22,
+      "quietEndHour": 8
+    },
+    "review": {
+      "idleEnabled": false,
+      "cadence": "week",
+      "maxItems": 8
+    },
+    "speech": {
+      "translationEnabled": false,
+      "targetLanguage": "ja",
+      "directorEnabled": false,
+      "style": "gentle",
+      "echoFilterEnabled": false,
+      "adaptiveSilenceEnabled": false
+    },
+    "interaction": {
+      "enabled": false,
+      "minimumIntervalMs": 800,
+      "avoidRecent": 2,
+      "models": {}
+    }
+  },
+  "runtime": {
+    "plans": 0,
+    "reviews": 0,
+    "error": ""
+  },
+  "passwordFields": 0,
+  "bodyExcerpt": ""
+}

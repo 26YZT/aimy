@@ -1,0 +1,376 @@
+{
+  "date": "2026-10-15",
+  "task": "LIFE-01 plus BASE title correction",
+  "status": "implementation_and_scoped_tests_complete_root_integration_pending",
+  "product_root": "/Users/mima1234/Documents/aimy/aimy-app",
+  "files": [
+    {
+      "path": "apps/stage-tamagotchi/src/main/index.ts",
+      "batch_start_sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136",
+      "current_sha256": "67cd5537ecf44f11628fa4d2fd111910f878414ff8d88a36b60f14b5adad696c",
+      "status": "adapted",
+      "ownership": "returned_to_root_earlier_for_budget_integration"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/libs/electron/location.ts",
+      "batch_start_sha256": "3feadba51558050aa666ec9872e653c278ff232ff9aee6e10a74dd5691032c44",
+      "current_sha256": "efefdf2cf6ddfda2c21f6c08a3ab7d3fe672f9bc714aafbffbcbcbc7aac5fc90",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/trusted-windows.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "1d4fe02e2de945d730dfa4df3c860033ee6a85df0a8341865acc0241d19e2c9f",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "d16582d1b76d09330c5e23d9ad9af61e479cf217260d2ecbd60562e6ddfbb658",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.test.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "7f7cf75643f0b6b97c8f4c4b8c0832f6be19561fd25cf9ec251706cc7d81dbc2",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+      "batch_start_sha256": "d0704953e37dc3197cf425cf60e73cdc87176a78de9405e303f6ae6e8a882563",
+      "current_sha256": "682a35b12b78d4182f77dedbd2765bf84736a1a2eebd5983eba4e465d7b20134",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/media-permissions.test.ts",
+      "batch_start_sha256": "7b39f1bcf413eee89e81365d7785555a7d2548d6f6138e9ddba6581160d16a21",
+      "current_sha256": "6bf5d108d80b86bebd6a0b34fc642e91daeb85b487eda3d8fe3b4f8aab4b3082",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/shared/eventa/aimy-lifecycle.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "c6a9e0f6c99859a046ac77b728e2acd314eb27e3c11ca7720a18250ad8ac7976",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/resource-policy.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "70b3efece77d3d7fed7d88bb7cd2c4976b048bb74967ca38926bba528d5ce106",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/beat-sync.main.ts",
+      "batch_start_sha256": "d3a19b159ed0e55bbb532dec8f4c3f1b1bc65cb647ae6738c9447b98e3dbe393",
+      "current_sha256": "cf520f8bb7746cb3801debe13196521bf1593e9b371ecb6c0f30707c077e6d07",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/components/WithScreenCapture.vue",
+      "batch_start_sha256": "f2b0924e7569d5115263399b27255eecb7cfa7910928d9add01f04930e2891da",
+      "current_sha256": "d1a0d908e3b7760f6591f93d6da9b44693176fcb732f65e2614ddfbe64637740",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+      "batch_start_sha256": "5435f5534daf2f346f3c6dca67b5e245ea07a36b9ad47ed4729d5492dde4f759",
+      "current_sha256": "2611942d1489ae94242895f38fc3cca2b2be3caeb1537fcaa5c29e35d5d6c809",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+      "batch_start_sha256": "c86c7f98809d210f6cd205249470cdccde1e49b8b120d0e8b97087af980cd46d",
+      "current_sha256": "7c5bfda29a8e0c3254a857384bc7a06451b0c3b8d47aa1f2b16a9186696e8100",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/features/live2d/system-audio-lipsync.ts",
+      "batch_start_sha256": "ab77752bda9437c117678f78d61a737f7279ed84a8c9a0836510665788c9319f",
+      "current_sha256": "daf576bb1b700d1125a9196b88471d2249258b8020098086ea83249be18adbf3",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/screen-capture.vue",
+      "batch_start_sha256": "4e592cfc21ba332306ffe7c010afd6de52fcd3db732883a4da6e40aa1336245b",
+      "current_sha256": "7a09da794886c8b49383ac663498ce93fbfb538d55f203cb4d5d49ec0de339f2",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/vision.vue",
+      "batch_start_sha256": "cec84f073da077be93d642186c400895ef79bdd0f5edb9892c27552d63a76449",
+      "current_sha256": "a129e46b231391f4718064fb413fbfaf40fe83505f2319c94456326b4d7f10ed",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/services/resource-policy.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "108674609773060c1c516f2c3d4c533312d368ae6eafbe08f39280f261ee1489",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/services/resource-policy.test.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "45d6ef8ec6fe1a4ad50f43640acf9d0482a60227c4a9c2c36de66627f9903f71",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/services/resource-policy.browser.test.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "164e2057bf78aae64ee7a18f4e62902222c56bfc66e1b4215005a9a960731773",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/audio/audio-device.ts",
+      "batch_start_sha256": "1c1fdeac112b09c3557bcc8f6926ae1e0e29867471f730baab57cbc09a66908e",
+      "current_sha256": "f966d8cc1d6772f55c3ee92b69aaed8e7f745b966f5df597f6b7c09e1bd88317",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/settings/audio-device.ts",
+      "batch_start_sha256": "046e4452947ca992d1950cfda4bd2bf661b5288be6a45d32d8204404774b4cca",
+      "current_sha256": "0a41c55392f78b21695265a66c1f7910dfd45b4a3ef82bd2b2c1bbb845782e4a",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+      "batch_start_sha256": "677bbabe28e8eaa9527f71630397bc86b4a9154c147ae3fe81f9e3de7ac2f3c0",
+      "current_sha256": "80655ee24c5dc2991dce686a17b78bd0994ab86c9fa40b55911369ec8ce717f6",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+      "batch_start_sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa",
+      "current_sha256": "22c050ea30101cb2c3ba1b9061fb68b391ceb9e0aba5727325fc5e13f9cb9b41",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/voice.ts",
+      "batch_start_sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856",
+      "current_sha256": "960af72e337d6302c6fae2a95f11ebf4fd687dff0a7111c7c790e4ff582ae54f",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/voice-messages.ts",
+      "batch_start_sha256": "6a15392dbe7876be749d60a8970617ee2b06c401b5922727749ec64f06b7f801",
+      "current_sha256": "e9f9e1866775125b5758e7c03de2fdacff589299c9edbeee5f46fe5f143e6a80",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/libs/voice/voice-message.ts",
+      "batch_start_sha256": "bead66c4eb4681b9f1b0627a45e76166e446f30c2a8674c3523ba5b2658ac3e9",
+      "current_sha256": "9adf4d56b02c59f3ccf8dfce039fa45c6e716b15a28feff801861775ad6f28d2",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/libs/voice/voice-message.test.ts",
+      "batch_start_sha256": "87d2fba61bf8073afa00a9f69ff4b3b214912fc9c72bad9cf409dc8b1e85229b",
+      "current_sha256": "9014ae23631a37abd6f4a7eb2121012401af4512943366fcfc0d09d968a66262",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/devtools/providers-transcription-realtime-aliyun-nls.vue",
+      "batch_start_sha256": "0ede4528f2eb78598363ca9f407ca9f0293c8e5927cc2d892c085aef74df4a2d",
+      "current_sha256": "1b16055f1dda62ac506117ccba7573b8c4eae02592350efbff97a892ef8ef5d2",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/providers/transcription/aliyun-nls-transcription.vue",
+      "batch_start_sha256": "f634ded6e4c75cba56663f1f85b872df5856e70088b3e1044d874b2714757b93",
+      "current_sha256": "b9ac5dd15b8606269056f3c0075c2f891efaf58eaa32ecde5d66739d7b35b8d5",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/electron-screen-capture/src/main/index.ts",
+      "batch_start_sha256": "cc49c6a4acd7cb01abe8cb527def95bdca2dd76e487c77386e4eae26c2783aec",
+      "current_sha256": "c74d27098b926a239ae54ab801e8d185fd539a4d34ee057a1e4dc39dc9e788cc",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/electron-screen-capture/src/main/index.test.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "8afc2524e0eb4acf8d618a99a9bea7ff6430a23772a8be7fb7c251e22d9e73f6",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/index.html",
+      "batch_start_sha256": "dbab014f12b5afd7f3f6994566e1a45c6564e077e6ae23bc7b71aa1c5a25e43e",
+      "current_sha256": "416aa7e35e108ce2ddf58fd6fa261911a14a819aa91186a11a3a746282e03bff",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/beat-sync.html",
+      "batch_start_sha256": "644d2a6f243d89444834104106ae748c34b918339de222d6db2944b8b64b912e",
+      "current_sha256": "90562fa204e74ce3897dd13d7ca6d38826a2c3a555a0bd41fc3106827835665f",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/shared/window.ts",
+      "batch_start_sha256": "0177efae28ac89c3e93b52b67b788187e2787c1a0d00f4baf7a1faf35d778d6f",
+      "current_sha256": "969765f97b651d314981efb5c2e6625d562c2e169dd12ceee48b548439bfc786",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/settings/audio-device-resource-policy.browser.test.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "2b69957e6ab439b8d5b95fae3f48737c88736f25549d9b45a0bb51c72dda0e11",
+      "status": "new",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/vision/orchestrator.test.ts",
+      "batch_start_sha256": "d388e70d04f45e92ec510488e6fedd117b6eba3e0d714ff218fdc9e532163a3e",
+      "current_sha256": "e375e22ea095bc0836804ee09b226f05a5ac145503c934639e09ddaf853e9689",
+      "status": "adapted",
+      "ownership": "returned_to_root"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/resource-policy.test.ts",
+      "batch_start_sha256": null,
+      "current_sha256": "57c625b06ce9a2310b063753c1fc63be8a24b6d42f51ef0c8d333968c1321e8d",
+      "status": "new",
+      "ownership": "returned_to_root"
+    }
+  ],
+  "tests_passed": 65,
+  "checks": [
+    {
+      "label": "desktop",
+      "command": "vitest run --config apps/stage-tamagotchi/vitest.node.config.ts [five scoped files]",
+      "file_count": 5,
+      "tests": 42,
+      "exit_code": 0,
+      "log": "desktop-tests.log",
+      "log_sha256": "6b7998fd6e8f95ec454af0db2e9e704068a2074b4e66e80fc5975a26f9015085"
+    },
+    {
+      "label": "node",
+      "command": "vitest run --config /tmp/aimy-first-implementation-20261015/life/vitest.config.mts",
+      "file_count": 4,
+      "tests": 21,
+      "exit_code": 0,
+      "log": "node-tests.log",
+      "log_sha256": "029b68808d59562826b56df7ede44ba1acaae9880db61aa791801db4dff5d061"
+    },
+    {
+      "label": "browser",
+      "command": "vitest run --config /tmp/aimy-first-implementation-20261015/life/vitest.browser.config.mts",
+      "file_count": 2,
+      "tests": 2,
+      "exit_code": 0,
+      "log": "browser-tests.log",
+      "log_sha256": "5ee16d8edc65046482b98ac19a37c6d256ffacae3c6bc01d51840d1906592f90"
+    },
+    {
+      "label": "lint",
+      "command": "pnpm exec eslint [owned TS/Vue files excluding root-owned main/index.ts]",
+      "exit_code": 0,
+      "warning_count": 6,
+      "log": "lint-final.txt",
+      "note": "Existing upstream comment-length warnings. HTML titles were inspected separately.",
+      "log_sha256": "44f1483e5738a45237aafd7ff9dc878a5a3a53663ba2072474efe927d95bf436"
+    },
+    {
+      "label": "capture-package-build",
+      "command": "pnpm -F @proj-airi/electron-screen-capture build",
+      "exit_code": 0,
+      "note": "Existing tsdown build. No install, upgrade, lockfile or package.json change."
+    },
+    {
+      "label": "capture-package-types",
+      "command": "pnpm -F @proj-airi/electron-screen-capture typecheck",
+      "exit_code": 0
+    },
+    {
+      "label": "desktop-types",
+      "command": "pnpm -F @proj-airi/stage-tamagotchi typecheck",
+      "status": "failed_with_root_integration_diagnostics",
+      "exec_session": 23922,
+      "exit_code": 2,
+      "diagnostics": [
+        {
+          "path": "packages/stage-ui/src/services/acceptance-generation.ts",
+          "line": 128,
+          "code": "TS2322",
+          "message": "unknown is not assignable to string"
+        },
+        {
+          "path": "packages/stage-ui/src/stores/chat.ts",
+          "line": 13,
+          "code": "TS2305",
+          "message": "@proj-airi/core-agent has no exported member projectGenerationFailure"
+        }
+      ],
+      "note": "No LIFE-owned file appears in this run diagnostics. This does not mark the complete desktop typecheck as passed."
+    },
+    {
+      "label": "diff-whitespace",
+      "command": "git diff --check -- [owned paths]",
+      "exit_code": 0
+    }
+  ],
+  "contracts": {
+    "bootstrap": "installDesktopResourcePolicy() before Pinia/App in every desktop renderer; BeatSync installs the same bridge in its own entry.",
+    "shutdown_participants": "registerDesktopShutdownParticipant({id,stop,flush}); application calls stop then flush; single-window close calls only flush after local capture revocation.",
+    "resource_eventa": "resourceSnapshot/resourceSetEnabled/resourceChanged, shutdownRequested/shutdownCompleted, windowCloseAborted in shared/eventa/aimy-lifecycle.ts.",
+    "authority": "Host load() registers the expected document and actual BrowserWindow/WebContents. Main-frame identity and current document are checked, not renderer-supplied URLs.",
+    "cancel": "Per-kind capture epoch and app epoch. Hidden/minimized/quit deny new calls and revoke active/late capture. Focus loss does not revoke. Folding chat does not hide the stage.",
+    "close": "Main close-to-hide remains unchanged. Destroying windows wait at most 2.5 seconds for their own flush. Failure/unknown keeps the window. Failure recovery matches shutdownId. App exit has an 8 second outer limit.",
+    "voice": "Original AIRI audio input/controller/VoiceMessage retained. Capture leases cancel input and ASR. Late transcripts cannot amend a persisted voice message after capture revocation.",
+    "screen": "Original selected-source mutex and all existing capture owners retained. Thumbnails, selection waits and final callbacks check authorization/epoch. A selected source is bound to its WebContents owner. Source abort separately prevents late vision publishing without revoking independent screen users.",
+    "cross_window": "Original shared microphone enabled preference retained. Startup waits for host default-off and never auto-grants stored consent. A window close releases only its own holding and ignores subsequent local start attempts while closing.",
+    "branding": "HTML document titles use Aimy. Existing privileged-window navigation guard preserves host-owned role titles. Internal persisted title/tag keys and upstream identifiers remain."
+  },
+  "root_actions": [
+    "Integrate final main/index.ts budget registration after LIFE ownership handoff.",
+    "Root owns renderer/main.ts and App.vue bootstrap/stop/flush hooks; child did not edit them.",
+    "Use windowCloseAborted for an existing user-facing save-failure toast if desired; main currently preserves the window and logs the failure.",
+    "Record expanded consumer paths and exact Eventa symbols in root docs.",
+    "Resolve the two current acceptance-generation/core export integration diagnostics and run final desktop build/typecheck."
+  ],
+  "unverified": [
+    "Real macOS microphone/screen permission and physical-device stop/restart are not exercised by this child.",
+    "The Chromium stream test uses generated audio tracks, not a microphone. The two-window regression uses two policy owners and the real Pinia store, not two Electron processes.",
+    "Parent G0 launch, fresh process persistence, user trial and actual model/voice/vision experience remain separate evidence."
+  ],
+  "boundaries": {
+    "real_model_calls": 0,
+    "credentials_read": false,
+    "old_user_data_read_or_migrated": false,
+    "git_index_or_commit_written": false,
+    "new_dependencies": false,
+    "root_docs_written": false
+  }
+}

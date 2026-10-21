@@ -1,0 +1,48 @@
+{
+  "caseId": "USER-V2-02",
+  "arm": "aimy",
+  "buildManifestSha256": "52bea1cc43adedd5cd29b3ddfdbb32123483c3cabc31c45012d4aa73a6bba8b0",
+  "processes": [
+    {
+      "pid": 20844,
+      "processNumber": 1,
+      "runId": "53f34c66-0f53-471c-b917-d53624884bae-aimy-USER-V2-02-p1",
+      "cdpPort": 57406,
+      "channelPort": 57404,
+      "modelPort": 57405,
+      "profile": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1/runs/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-02-aimy/profile",
+      "entrySha256": "478122750d057e465719e6c168573a493ae9a0a38ca1c1bd00f4743876f44a84",
+      "debugPortOwnerVerified": true,
+      "targetId": "302AFC74DC179E0858C175C1E0BC18A2",
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      },
+      "accounting": {
+        "acceptedRequests": 4,
+        "settledAttempts": 4,
+        "authorizationRejected": 0,
+        "plaintextSyntheticCredentialInEvidence": false
+      }
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "USER-V2-02-T1",
+      "transition": "create_fresh_case_profile_and_session",
+      "sourceSha256": "ce59f29ebf8254ed02b8e0a86458ddd235575ffec4bbd6c2b547c72a7c838cf7",
+      "elapsedMs": 4505,
+      "sessionId": "Rp7PFO9eJjFuHvyJsBJMk",
+      "processNumber": 1
+    },
+    {
+      "stepId": "USER-V2-02-T2",
+      "transition": "continue_same_session",
+      "sourceSha256": "d020bb035db9a166ebe6266fcea636f6d5538cc34e00d5adc6bd54408d06ecd7",
+      "elapsedMs": 3963,
+      "sessionId": "Rp7PFO9eJjFuHvyJsBJMk",
+      "processNumber": 1
+    }
+  ]
+}

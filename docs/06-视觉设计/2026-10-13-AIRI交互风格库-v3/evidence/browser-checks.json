@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-13",
+  "scope": "isolated simulated preview; sensor controls checked in contiguous DOM interactions because native browser actions trigger visibility changes",
+  "checks": [
+    {
+      "name": "initial_sensing_off",
+      "passed": true,
+      "evidence": "completed before cancellation test locator race in same confirmation round"
+    },
+    {
+      "name": "session_draft_and_image_retained",
+      "passed": true,
+      "evidence": "completed before cancellation test locator race in same confirmation round"
+    },
+    {
+      "name": "send_failure_preserves_input",
+      "passed": true,
+      "evidence": "completed before cancellation test locator race in same confirmation round"
+    },
+    {
+      "name": "retry_sends_retained_image",
+      "passed": true,
+      "evidence": "completed before cancellation test locator race in same confirmation round"
+    },
+    {
+      "name": "cancel_rejects_stale_reply",
+      "passed": true
+    },
+    {
+      "name": "continuous_voice_authorized_and_active",
+      "passed": true
+    },
+    {
+      "name": "pause_keeps_authorization_separate",
+      "passed": true
+    },
+    {
+      "name": "sharing_source_visible",
+      "passed": true
+    },
+    {
+      "name": "screen_stop_keeps_grant",
+      "passed": true
+    },
+    {
+      "name": "denied_permission_blocks_clip",
+      "passed": true
+    },
+    {
+      "name": "clip_authorization_and_capture_aggregated",
+      "passed": true
+    },
+    {
+      "name": "stop_all_finishes_clip_and_keeps_draft",
+      "passed": true
+    },
+    {
+      "name": "clip_timer_stopped",
+      "passed": true
+    },
+    {
+      "name": "global_stop_covers_both_sensors",
+      "passed": true
+    },
+    {
+      "name": "popover_escape_returns_focus",
+      "passed": true
+    },
+    {
+      "name": "model_connection_then_choice",
+      "passed": true
+    },
+    {
+      "name": "model_ready_explicit",
+      "passed": true
+    },
+    {
+      "name": "provider_change_clears_result",
+      "passed": true
+    },
+    {
+      "name": "stale_provider_result_rejected",
+      "passed": true
+    },
+    {
+      "name": "reduce_motion_enabled",
+      "passed": true
+    },
+    {
+      "name": "message_size_applied",
+      "passed": true
+    },
+    {
+      "name": "ime_composition_does_not_send",
+      "passed": true
+    },
+    {
+      "name": "desktop_experience_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_identity_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_settings_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_system_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop_handoff_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "dark_theme_synchronized",
+      "passed": true
+    },
+    {
+      "name": "mobile_experience_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_identity_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_settings_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_system_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_handoff_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_popover_in_viewport",
+      "passed": true
+    }
+  ]
+}

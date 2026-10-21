@@ -1,0 +1,8 @@
+{
+  "scope": "Actual installed unstorage normalizer/mount and actual indexedb-driver prefix executed; idb-keyval.set is a capture stub; no real IDB opened.",
+  "logicalKey": "local:aimy/memory/v1/user%3A1%2F%3F/main%2F%E5%A5%B3",
+  "physicalKey": "airi-local:aimy:memory:v1:user%3A1%2F%3F:main%2F%E5%A5%B3",
+  "defaultDatabase": "keyval-store",
+  "defaultObjectStore": "keyval",
+  "passed": true
+}

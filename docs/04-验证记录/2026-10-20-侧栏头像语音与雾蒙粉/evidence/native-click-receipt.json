@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-20",
+  "packageVersion": "0.12.0-beta.5+aimy.20261020.3",
+  "isolatedProfile": "/Users/mima1234/Library/Caches/Aimy-Build/Rose-20261020/native-package/appdata/Aimy-Preview",
+  "realSecretsDecrypted": 0,
+  "paidModelCalls": 0,
+  "nativeClicks": [
+    "Open chat from character rail",
+    "Edit avatar from chat header",
+    "Open macOS file chooser; choose local reference PNG; Save",
+    "Enable microphone from character rail; chat label switched to Disable",
+    "Disable microphone from chat; both snapshots inactive",
+    "Chat right-click menu contains voice message and dictation",
+    "Start synthetic voice recording; recording timer shown; Escape cancels",
+    "Close chat; character right-hand rail remains available"
+  ],
+  "evidence": [
+    "native-chat.png",
+    "native-rail.png",
+    "native-microphone-on.json",
+    "native-microphone-off.json",
+    "native-ui-avatar-before.json",
+    "native-ui-avatar-restart.json"
+  ],
+  "limitations": [
+    "Synthetic Chromium audio device; no real speech recognition or TTS evaluation",
+    "External network blocked; test showed Failed to fetch on continuous recognition, so ASR success is not claimed",
+    "Native corner dragging not repeated; multi-size positioning covered by browser geometry tests"
+  ],
+  "installed": "/Users/mima1234/Applications/Aimy体验版.app"
+}

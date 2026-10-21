@@ -11,6 +11,7 @@ import { useBackgroundStore } from '@proj-airi/stage-ui/stores/background'
 import { useDisplayModelsStore } from '@proj-airi/stage-ui/stores/display-models'
 import { useAiriCardStore } from '@proj-airi/stage-ui/stores/modules/airi-card'
 import { Button, GhostButton, Select } from '@proj-airi/ui'
+import { cloneDeep } from 'es-toolkit'
 import { storeToRefs } from 'pinia'
 import {
   DialogContent,
@@ -176,10 +177,10 @@ const activeBackgroundId = computed({
 
     extension.airi.modules.activeBackgroundId = val
 
-    await cardStore.updateCard(props.cardId, {
+    await cardStore.updateCard(props.cardId, cloneDeep({
       ...selectedCard.value,
       extensions: extension,
-    })
+    }), { preserveAvatar: true })
     trackSceneBackgroundSet({ source: 'card_gallery', cleared: val === 'none' })
   },
 })

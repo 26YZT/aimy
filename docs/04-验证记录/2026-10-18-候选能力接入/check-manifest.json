@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-18",
+  "uniqueAutomatedTests": 111,
+  "realModelCalls": 0,
+  "paidCostThisRound": 0,
+  "checks": [
+    {
+      "name": "logic",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/vitest run --config /tmp/aimy-round2-root/vitest-node.config.mts --reporter=json --outputFile=/tmp/aimy-round2-root/node-final-report.json",
+      "exitCode": 0,
+      "passed": 64,
+      "uniqueContribution": 64
+    },
+    {
+      "name": "state-runtime-browser",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/vitest run --config /tmp/aimy-round2-root/vitest-browser.config.mts --reporter=json --outputFile=/tmp/aimy-round2-root/browser-final-report.json",
+      "exitCode": 0,
+      "passed": 27,
+      "uniqueContribution": 27
+    },
+    {
+      "name": "speech-browser",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/vitest run --config /tmp/aimy-round2-root/vitest-voice.config.mts --reporter=json --outputFile=/tmp/aimy-round2-root/voice-final-report.json",
+      "exitCode": 0,
+      "passed": 12,
+      "uniqueContribution": 12
+    },
+    {
+      "name": "settings-ui",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/vitest run --config /tmp/aimy-round2-root/vitest-ui.config.mts",
+      "exitCode": 0,
+      "passed": 1,
+      "uniqueContribution": 1
+    },
+    {
+      "name": "vrm-loader-import",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/vitest run --config /tmp/aimy-round2-workflow-assets/browser.config.mts",
+      "exitCode": 0,
+      "passed": 2,
+      "uniqueContribution": 2
+    },
+    {
+      "name": "original-orchestrator",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/vitest run --config /tmp/aimy-round2-proactive/vitest-regression.config.mts",
+      "exitCode": 0,
+      "passed": 9,
+      "uniqueContribution": 5
+    },
+    {
+      "name": "typecheck-stage-tamagotchi",
+      "cwd": "aimy-app/apps/stage-tamagotchi",
+      "command": "./node_modules/.bin/vue-tsc --noEmit",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-stage-ui",
+      "cwd": "aimy-app/packages/stage-ui",
+      "command": "./node_modules/.bin/vue-tsc --noEmit",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-stage-ui-live2d",
+      "cwd": "aimy-app/packages/stage-ui-live2d",
+      "command": "./node_modules/.bin/vue-tsc --noEmit",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-stage-pages",
+      "cwd": "aimy-app/packages/stage-pages",
+      "command": "./node_modules/.bin/vue-tsc --noEmit",
+      "exitCode": 0
+    },
+    {
+      "name": "desktop-build",
+      "cwd": "aimy-app/apps/stage-tamagotchi",
+      "command": "env -i HOME=/Users/mima1234 PATH=/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin NODE_ENV=production node /tmp/aimy-closure-20261016/product-build.mjs",
+      "exitCode": 0
+    },
+    {
+      "name": "root-lint",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/moeru-lint .",
+      "exitCode": 2,
+      "limitation": "docs/uno.config.ts missing @radix-ui/colors"
+    },
+    {
+      "name": "root-typecheck",
+      "cwd": "aimy-app",
+      "command": "pnpm_config_verify_deps_before_run='' TURBO_TELEMETRY_DISABLED=1 ./node_modules/.bin/turbo run typecheck -F='./packages/*' -F='./apps/*' -F='./server/**' -F='./services/*' -F='./docs'",
+      "exitCode": 2,
+      "limitation": "model-driver-mediapipe and optional workspace dependencies missing"
+    },
+    {
+      "name": "scoped-lint",
+      "cwd": "aimy-app",
+      "command": "./node_modules/.bin/moeru-lint packages/stage-ui/src/services/companion packages/stage-ui/src/types/companion.ts packages/stage-ui/src/stores/companion.ts packages/stage-ui/src/stores/companion-settings.ts packages/stage-ui/src/components/scenarios/settings/companion-settings.vue packages/stage-ui/src/components/scenarios/settings/companion-settings.browser.test.ts packages/stage-ui/src/models/vrm-inspection* packages/stage-ui-live2d/src/composables/live2d/companion-motion* packages/stage-pages/src/pages/settings/companion/index.vue scripts/inspect-vrm.ts apps/stage-tamagotchi/src/renderer/App.vue",
+      "exitCode": 0,
+      "warnings": "intentional control-character rejection regex; inherited comments in worker-specific lint logs"
+    },
+    {
+      "name": "diff-check",
+      "cwd": "/Users/mima1234/Documents/aimy",
+      "command": "git diff --check -- aimy-app",
+      "exitCode": 0
+    },
+    {
+      "name": "isolated-native-startup-exit",
+      "result": "passed bounded smoke; native clicks not performed",
+      "evidence": "evidence/native/result.json",
+      "profile": "/tmp/aimy-round2-native-profile",
+      "remainingOwnedProcesses": []
+    }
+  ]
+}

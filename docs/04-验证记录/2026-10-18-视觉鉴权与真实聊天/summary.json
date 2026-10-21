@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-18",
+  "appVersion": "aimy.20261018.3",
+  "asarSha256": "fb0c506eaaade067530f8cbb4d412984c27a96bd6791493c239a205006a947f8",
+  "rootCauses": [
+    "vision API key was blank",
+    "deepseek-v4-pro has no vision support"
+  ],
+  "configurationRepairs": [
+    "reuse existing chat DeepSeek key through encrypted provider store",
+    "vision model changed to deepseek-flash"
+  ],
+  "liveRequests": 3,
+  "screenToVisionPassed": true,
+  "visionContextToChatPassed": true,
+  "questionContainedAnswer": false,
+  "sourceCodeChanged": false,
+  "restartPersistence": "passed",
+  "cardVisionModelSaved": "deepseek-flash",
+  "finalRestart": {
+    "cardVisionModel": "deepseek-flash",
+    "chatModel": "deepseek-flash",
+    "publicKeyAbsent": true,
+    "screenCaptureEnabled": false,
+    "visionKeyPresent": true,
+    "visionModel": "deepseek-flash",
+    "visionProvider": "vision-deepseek"
+  },
+  "normalLaunchRestored": true,
+  "archiveUnchangedAtEnd": true
+}

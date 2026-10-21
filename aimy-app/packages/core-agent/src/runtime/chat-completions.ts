@@ -11,6 +11,7 @@ import { streamText } from '@xsai/stream-text'
 import { chatContentToString, chatMessagesToProjectionEntries, conversationToChatMessages } from '../messages/chat-completions'
 import { createGeneration } from './generation'
 import { createContinuationScope, mergeRequestHeaders, replaceProviderConfig, supportsContentArray, supportsTools } from './request-context'
+import { assertRequestCurrent, guardedRequestFetch } from './request-guard'
 import { RequestSwitch } from './request-switch'
 import { toAiriStreamEvent } from './xsai-events'
 
@@ -38,7 +39,9 @@ export function streamChatCompletions(input: {
   let providerConfigKeys = Object.keys(input.config)
   const requestOptions: Parameters<typeof streamText>[0] = {
     ...input.config,
+    fetch: guardedRequestFetch(input.config.fetch, input.options, 'chat-completions'),
     prepareStep: ({ input: current, steps }: { input: Message[], steps: CompletionStep[] }) => {
+      assertRequestCurrent(input.options)
       const resolveStep = input.options?.resolveStep
       if (!resolveStep) {
         scopes.push(input.scope)
@@ -47,6 +50,7 @@ export function streamChatCompletions(input: {
       return (async () => {
         const firstStep = scopes.length === 0 && input.initialStep
         const next = firstStep || await resolveStep()
+        assertRequestCurrent(input.options)
 
         const nextRequest = firstStep
           ? { protocol: 'chat-completions' as const, config: input.config }
@@ -66,7 +70,7 @@ export function streamChatCompletions(input: {
         providerConfigKeys = replaceProviderConfig(requestOptions, providerConfigKeys, nextRequest.config)
         Object.assign(requestOptions, {
           apiKey: nextRequest.config.apiKey,
-          fetch: nextRequest.config.fetch,
+          fetch: guardedRequestFetch(nextRequest.config.fetch, input.options, 'chat-completions'),
           temperature: next.temperature,
           topP: next.topP,
           headers: mergeRequestHeaders(nextRequest.config.headers, next.headers),

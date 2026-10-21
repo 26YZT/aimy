@@ -1,0 +1,10 @@
+{
+  "app": "/tmp/aimy-preview-package-20261016/output/mac-arm64/Aimy体验版.app",
+  "files": 47512,
+  "forbiddenFiles": [],
+  "main": "preview-entry.mjs",
+  "profileIsolated": true,
+  "updaterDisabled": true,
+  "testDriverAbsent": true,
+  "sourceUnchanged": true
+}

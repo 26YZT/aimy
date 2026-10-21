@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "cases": 8,
+  "arms": [
+    "airi",
+    "aimy"
+  ],
+  "inputs": 36,
+  "normalProcessExits": 18,
+  "fixtureRequests": 54,
+  "settledAttempts": 54,
+  "realModelCalls": 0,
+  "semanticScores": null,
+  "plaintextSyntheticKeyInEvidence": false,
+  "case5RestartBothArms": true,
+  "cases7and8FreshSessions": true,
+  "run": "/tmp/aimy-live-entry-20261016/qualification-3/runs/7beb4ace-9027-4b35-9fa4-08b4a20a6b5d"
+}

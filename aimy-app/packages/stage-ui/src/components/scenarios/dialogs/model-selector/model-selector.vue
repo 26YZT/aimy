@@ -2,6 +2,7 @@
 import type { Live2DValidationReport } from '@proj-airi/stage-ui-live2d'
 import type { TachieValidationReport } from '@proj-airi/stage-ui-tachie'
 
+import type { VrmInspectionReport } from '../../../../models/vrm-inspection'
 import type { DisplayModel } from '../../../../stores/display-models'
 
 import { validateLive2DZip } from '@proj-airi/stage-ui-live2d'
@@ -10,12 +11,13 @@ import { Button } from '@proj-airi/ui'
 import { useFileDialog } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
 import { DropdownMenuContent, DropdownMenuItem, DropdownMenuPortal, DropdownMenuRoot, DropdownMenuTrigger, EditableArea, EditableEditTrigger, EditableInput, EditablePreview, EditableRoot, EditableSubmitTrigger } from 'reka-ui'
-import { ref, watch } from 'vue'
+import { onUnmounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import Live2DReportModal from './reports/live2d/modal.vue'
 import TachieReportModal from './tachieReportModal.vue'
 
+import { formatVrmInspectionReport, inspectVrmFile } from '../../../../models/vrm-inspection'
 import { DisplayModelFormat, useDisplayModelsStore } from '../../../../stores/display-models'
 
 const props = defineProps<{
@@ -49,6 +51,16 @@ const validationReport = ref<Live2DValidationReport | null>(null)
 const showTachieReportModal = ref(false)
 const pendingTachieFile = ref<File | null>(null)
 const tachieValidationReport = ref<TachieValidationReport | null>(null)
+const vrmReport = ref<VrmInspectionReport | null>(null)
+const pendingVrmFile = ref<File | null>(null)
+const vrmImporting = ref(false)
+const vrmImportFailed = ref(false)
+const vrmFileInput = ref<HTMLInputElement>()
+let vrmInspectionEpoch = 0
+
+onUnmounted(() => {
+  vrmInspectionEpoch++
+})
 
 watch(() => props.selectedModel?.id, (modelId) => {
   highlightDisplayModelCard.value = modelId
@@ -131,16 +143,69 @@ function handleMobilePick() {
 async function handleAddVRMModel(file: FileList | null) {
   if (file === null || file.length === 0)
     return
-  if (!file[0].name.endsWith('.vrm'))
+  if (!file[0].name.toLowerCase().endsWith('.vrm') || vrmImporting.value)
     return
+  const epoch = ++vrmInspectionEpoch
+  const candidate = file[0]
+  pendingVrmFile.value = null
+  vrmReport.value = null
+  vrmImportFailed.value = false
+  const report = await inspectVrmFile(candidate)
+  if (epoch !== vrmInspectionEpoch)
+    return
+  vrmReport.value = report
+  pendingVrmFile.value = report.status === 'invalid' ? null : candidate
+}
 
-  // NOTICE:
-  // Keep this await for the same import-then-pick race as Live2D imports above.
-  // The returned model id is only safe to highlight after addDisplayModel has updated the store.
-  // Source/context: model selector import flow -> settings model pick -> settings-stage-model.getDisplayModel().
-  // Removal condition: addDisplayModel becomes a synchronous transaction or pick is blocked by explicit import state.
-  const displayModel = await displayModelStore.addDisplayModel(DisplayModelFormat.VRM, file[0])
-  highlightDisplayModelCard.value = displayModel.id
+function openVrmDialog() {
+  if (!vrmFileInput.value || vrmImporting.value)
+    return
+  vrmFileInput.value.value = ''
+  vrmFileInput.value.click()
+}
+
+function handleVrmFileChange(event: Event) {
+  if (event.target instanceof HTMLInputElement)
+    void handleAddVRMModel(event.target.files)
+}
+
+function closeVrmReport() {
+  vrmInspectionEpoch++
+  vrmReport.value = null
+  pendingVrmFile.value = null
+}
+
+async function confirmVrmImport() {
+  if (!pendingVrmFile.value || vrmReport.value?.status === 'invalid' || vrmImporting.value)
+    return
+  vrmImporting.value = true
+  vrmImportFailed.value = false
+  const epoch = vrmInspectionEpoch
+  try {
+    const displayModel = await displayModelStore.addDisplayModel(DisplayModelFormat.VRM, pendingVrmFile.value)
+    if (epoch === vrmInspectionEpoch) {
+      highlightDisplayModelCard.value = displayModel.id
+      closeVrmReport()
+    }
+  }
+  catch {
+    if (epoch === vrmInspectionEpoch)
+      vrmImportFailed.value = true
+  }
+  finally {
+    vrmImporting.value = false
+  }
+}
+
+function downloadVrmReport() {
+  if (!vrmReport.value)
+    return
+  const url = URL.createObjectURL(new Blob([formatVrmInspectionReport(vrmReport.value)], { type: 'application/json' }))
+  const link = document.createElement('a')
+  link.href = url
+  link.download = 'vrm-inspection.json'
+  link.click()
+  setTimeout(() => URL.revokeObjectURL(url), 0)
 }
 
 async function handleAddSpineModel(file: FileList | null) {
@@ -201,13 +266,11 @@ const mapFormatRenderer: Record<DisplayModelFormat, string> = {
 }
 
 const live2dDialog = useFileDialog({ accept: '.zip', multiple: false, reset: true })
-const vrmDialog = useFileDialog({ accept: '.vrm', multiple: false, reset: true })
 const spineDialog = useFileDialog({ accept: '.zip', multiple: false, reset: true })
 const tachieDialog = useFileDialog({ accept: TACHIE_ARCHIVE_SUFFIX, multiple: false, reset: true })
 const mmdDialog = useFileDialog({ accept: '.zip,.pmx,.pmd', multiple: false, reset: true })
 
 live2dDialog.onChange(handleAddLive2DModel)
-vrmDialog.onChange(handleAddVRMModel)
 spineDialog.onChange(handleAddSpineModel)
 tachieDialog.onChange(handleAddTachieModel)
 mmdDialog.onChange(handleAddMMDModel)
@@ -215,6 +278,7 @@ mmdDialog.onChange(handleAddMMDModel)
 
 <template>
   <div pt="4 sm:0" gap="4 sm:6" h-full flex flex-col>
+    <input ref="vrmFileInput" type="file" accept=".vrm" hidden @change="handleVrmFileChange">
     <Live2DReportModal
       v-model:open="showReportModal"
       :report="validationReport"
@@ -270,7 +334,7 @@ mmdDialog.onChange(handleAddMMDModel)
                   'data-[highlighted]:bg-primary-300/20 dark:data-[highlighted]:bg-primary-100/20',
                   'data-[highlighted]:text-primary-400 dark:data-[highlighted]:text-primary-200',
                 ]"
-                transition="colors duration-200 ease-in-out" @click="vrmDialog.open()"
+                transition="colors duration-200 ease-in-out" @click="openVrmDialog"
               >
                 VRM
               </DropdownMenuItem>
@@ -313,6 +377,39 @@ mmdDialog.onChange(handleAddMMDModel)
         </DropdownMenuRoot>
       </div>
     </div>
+    <section v-if="vrmReport" role="status" :class="['flex flex-col gap-3 rounded-lg p-4', 'bg-neutral-100 dark:bg-neutral-900']">
+      <h3 :class="['font-semibold']">
+        {{ t('settings.model-select.vrm-report.title') }} · {{ t(`settings.model-select.vrm-report.${vrmReport.status}`) }}
+      </h3>
+      <p :class="['text-sm text-neutral-600 dark:text-neutral-400']">
+        {{ t('settings.model-select.vrm-report.description') }}
+      </p>
+      <ul v-if="vrmReport.errors.length" :class="['list-disc pl-5 text-sm text-red-600 dark:text-red-400']">
+        <li v-for="error in vrmReport.errors" :key="error">
+          {{ t(`settings.model-select.vrm-report.errors.${error}`) }}
+        </li>
+      </ul>
+      <dl v-if="vrmReport.version" :class="['grid grid-cols-2 gap-x-3 gap-y-1 text-sm']">
+        <template v-for="(present, capability) in vrmReport.capabilities" :key="capability">
+          <dt>{{ t(`settings.model-select.vrm-report.capabilities.${capability}`) }}</dt>
+          <dd>{{ t(`settings.model-select.vrm-report.${present ? 'present' : 'missing'}`) }}</dd>
+        </template>
+      </dl>
+      <p v-if="vrmImportFailed" role="alert" :class="['text-sm text-red-600 dark:text-red-400']">
+        {{ t('settings.model-select.vrm-report.import-failed') }}
+      </p>
+      <div :class="['flex flex-wrap gap-2']">
+        <Button :disabled="vrmImporting" @click="closeVrmReport">
+          {{ t('settings.model-select.vrm-report.close') }}
+        </Button>
+        <Button @click="downloadVrmReport">
+          {{ t('settings.model-select.vrm-report.download') }}
+        </Button>
+        <Button v-if="pendingVrmFile" :disabled="vrmImporting" @click="confirmVrmImport">
+          {{ t('settings.model-select.vrm-report.import') }}
+        </Button>
+      </div>
+    </section>
     <div v-if="displayModelsFromIndexedDBLoading">
       Loading display models...
     </div>

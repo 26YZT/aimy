@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { WIP } from '@proj-airi/stage-ui/components'
+import { AboutMe } from '@proj-airi/stage-ui/components'
 </script>
 
 <template>
-  <WIP />
+  <AboutMe />
 </template>
 
 <route lang="yaml">
 meta:
   layout: settings
-  titleKey: settings.pages.modules.memory-long-term.title
+  titleKey: settings.pages.memory.title
   subtitleKey: settings.title
   stageTransition:
     name: slide

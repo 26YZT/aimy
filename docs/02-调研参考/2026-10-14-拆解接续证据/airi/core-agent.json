@@ -1,0 +1,17 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "src/voice/controller.test.ts",
+    "src/voice/output/response.test.ts",
+    "src/voice/input/end-detection.test.ts",
+    "src/messages/compaction.test.ts",
+    "src/runtime/chat-orchestrator-runtime.test.ts",
+    "src/runtime/llm-marker-parser.test.ts"
+  ],
+  "cwd": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent",
+  "exit_code": 0,
+  "log": "/tmp/aimy-20261014-primary-checks/core-agent.log"
+}

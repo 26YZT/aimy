@@ -1,4 +1,5 @@
 import type { Live2DExpressionSettingsCommand } from '@proj-airi/stage-ui-live2d/stores/expression-store'
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
 import type {
   ModelSettingsRuntimeSnapshot,
 } from '@proj-airi/stage-ui/components/scenarios/settings/model-settings/runtime'
@@ -13,6 +14,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 
 import {
   applyLive2DExpressionSettingsCommand,
+  applyVrmGesture,
   getModelSettingsRuntimeContext,
   modelSettingsRuntimeOwnerGone,
   modelSettingsRuntimeSnapshotChanged,
@@ -29,9 +31,31 @@ export function useModelSettingsRuntimeSnapshot(options: UseModelSettingsRuntime
   const runtimeSnapshot = ref<ModelSettingsRuntimeSnapshot>(createEmptyModelSettingsRuntimeSnapshot())
   const context = options.context ?? getModelSettingsRuntimeContext()
   const invokeExpressionCommand = defineInvoke(context, applyLive2DExpressionSettingsCommand)
+  const invokeGesture = defineInvoke(context, applyVrmGesture)
 
   const requestCurrent = () => {
     void context.emit(modelSettingsRuntimeSnapshotRequested, undefined)
+  }
+
+  const sendVrmGesture = async (gesture: VrmGesture) => {
+    const snapshot = runtimeSnapshot.value
+    if (!snapshot.ownerInstanceId || !snapshot.modelId || snapshot.renderer !== 'vrm' || snapshot.phase !== 'mounted' || snapshot.controlsLocked)
+      return false
+
+    try {
+      const response = await invokeGesture({ ownerInstanceId: snapshot.ownerInstanceId, modelId: snapshot.modelId, gesture }, {
+        signal: AbortSignal.timeout(options.commandTimeoutMs ?? 1000),
+      })
+      // A newer owner snapshot takes precedence over a reply for the outgoing model.
+      if (runtimeSnapshot.value.ownerInstanceId !== snapshot.ownerInstanceId || runtimeSnapshot.value.modelId !== snapshot.modelId)
+        return false
+      runtimeSnapshot.value = response.snapshot
+      return response.applied
+    }
+    catch {
+      requestCurrent()
+      return false
+    }
   }
 
   const sendLive2DExpressionCommand = async (command: Live2DExpressionSettingsCommand) => {
@@ -94,5 +118,6 @@ export function useModelSettingsRuntimeSnapshot(options: UseModelSettingsRuntime
     runtimeSnapshot,
     requestCurrent,
     sendLive2DExpressionCommand,
+    sendVrmGesture,
   }
 }

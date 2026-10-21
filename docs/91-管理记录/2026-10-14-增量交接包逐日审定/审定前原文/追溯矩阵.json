@@ -1,0 +1,1538 @@
+{
+  "date": "2026-10-14",
+  "status": "当前追溯v1.3：只补离线证据与收窄归因；原14需求/15任务未实施",
+  "tasks": [
+    {
+      "task_id": "BASE-01",
+      "phase": "P0",
+      "objective": "收尾B5/B6/B8并固定可运行基线",
+      "dependencies": [],
+      "allowed_future_paths": [
+        "apps/stage-tamagotchi/src/main/windows/",
+        "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+        "本任务实际命中的用户可见i18n/署名文件"
+      ],
+      "requirements": [
+        "REQ-BASE-01",
+        "REQ-CHAT-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-01"
+      ],
+      "acceptance": "原版入口/角色/文字回归、品牌可见点逐项截图；不能全仓替换AIRI字符串",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "LIFE-01",
+      "phase": "P0",
+      "objective": "统一资源lease、窗口语义和有限退出握手",
+      "dependencies": [
+        "BASE-01"
+      ],
+      "allowed_future_paths": [
+        "apps/stage-tamagotchi/src/main/",
+        "apps/stage-tamagotchi/src/shared/",
+        "apps/stage-tamagotchi/src/renderer/App.vue",
+        "packages/stage-ui/src/stores/settings/audio-device.ts",
+        "packages/stage-ui/src/stores/voice.ts",
+        "实际手动录音/电平/ambient消费者"
+      ],
+      "requirements": [
+        "REQ-LIFE-01",
+        "REQ-OBS-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-03",
+        "ENG-04",
+        "ENG-05"
+      ],
+      "acceptance": "授权迟到不复活，所有订阅释放；chat收起仍见角色；失焦不撤权；隐藏/min/quit停止",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "LOCAL-01",
+      "phase": "P0",
+      "objective": "同步发送闸门与本地凭据策略",
+      "dependencies": [
+        "BASE-01",
+        "LIFE-01"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-ui/src/stores/providers/config.ts",
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/stage-ui/src/stores/chat/session-store.ts",
+        "packages/stage-ui/src/services/inference-service-providers.ts",
+        "apps/stage-tamagotchi/src/main/内拟新增secret桥",
+        "apps/stage-tamagotchi/src/shared/内拟新增契约"
+      ],
+      "requirements": [
+        "REQ-LOCAL-01",
+        "REQ-OBS-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-02",
+        "ENG-17"
+      ],
+      "acceptance": "合成凭据验证无默认上传/日志静态泄露；旧outbox冻结；安全存储失败无明文回退",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "SRC-01",
+      "phase": "P1",
+      "objective": "统一来源版本/重试血缘和请求上下文端口",
+      "dependencies": [
+        "LOCAL-01"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/stage-ui/src/stores/chat/session-store.ts",
+        "packages/stage-ui/src/types/chat.ts",
+        "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+        "新增来源适配器与对应类型",
+        "packages/core-agent/src/runtime/request-context.ts",
+        "packages/core-agent/src/runtime/responses.ts",
+        "packages/core-agent/src/messages/chat-completions.ts"
+      ],
+      "requirements": [
+        "REQ-CHAT-01",
+        "REQ-MEM-01",
+        "REQ-MEM-02",
+        "REQ-MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-06",
+        "ENG-09",
+        "ENG-10"
+      ],
+      "acceptance": "持久user、最终ASR、retry/import/改删都覆盖；实际Conversation按请求投影，不改hook副本假注入；本地native continuation/providerTranscript/generationTranscript按memoryEpoch失效，拦截两协议实际请求验证",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "MEM-01",
+      "phase": "P1",
+      "objective": "MemoryRepo单key CAS/schema/屏障/恢复",
+      "dependencies": [
+        "SRC-01"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-ui/src/database/repos/memory.repo.ts（拟新增）",
+        "packages/stage-ui/src/stores/memory/（拟新增）",
+        "packages/stage-ui/src/types/memory.ts（拟新增）"
+      ],
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-MEM-02",
+        "REQ-MEM-03"
+      ],
+      "engineering_scenarios": [
+        "ENG-07",
+        "ENG-08",
+        "ENG-09",
+        "ENG-10",
+        "ENG-11"
+      ],
+      "acceptance": "独立真实浏览器IDB与新进程恢复；事务abort无假成功；旧lease/模型不能越屏障；删除不受新增容量门阻碍",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "MEM-02",
+      "phase": "P1",
+      "objective": "自动提取任务、严格候选校验及费用门",
+      "dependencies": [
+        "MEM-01"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-ui/src/stores/memory/",
+        "packages/stage-ui/src/stores/chat.ts",
+        "原Provider适配端口",
+        "对应Prompt注册/加载文件"
+      ],
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-REL-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-06",
+        "ENG-09",
+        "ENG-10",
+        "ENG-17",
+        "ENG-18"
+      ],
+      "acceptance": "自动保存无逐条确认；assistant/system/观察推断不写本人事实；source/revision/epoch/预算复查",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "MEM-03",
+      "phase": "P1",
+      "objective": "召回、来源UI、纠正/删除与历史投影失效",
+      "dependencies": [
+        "MEM-01",
+        "MEM-02"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-pages/src/pages/settings/memory/index.vue",
+        "packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+        "packages/stage-ui/src/stores/memory/",
+        "packages/stage-ui/src/stores/chat.ts",
+        "对应既有locale条目",
+        "packages/core-agent/src/runtime/request-context.ts",
+        "packages/core-agent/src/runtime/responses.ts",
+        "packages/core-agent/src/messages/chat-completions.ts"
+      ],
+      "requirements": [
+        "REQ-MEM-02",
+        "REQ-MEM-03",
+        "REQ-REL-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-08",
+        "ENG-09",
+        "ENG-10",
+        "ENG-11"
+      ],
+      "acceptance": "新会话/重启召回；源码/摘要/在飞回答删除同步；来源不可用与PARTIAL_DELETE明确；同视口前后UI评审；本地native continuation/providerTranscript/generationTranscript按memoryEpoch失效，拦截两协议实际请求验证",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "PRO-01",
+      "phase": "P2",
+      "objective": "自然回忆及可沉默的持久续聊",
+      "dependencies": [
+        "MEM-03",
+        "LIFE-01"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-ui/src/stores/character/orchestrator/store.ts",
+        "packages/stage-ui/src/stores/memory/的事件存储",
+        "packages/stage-ui/src/stores/chat.ts的assistant-only端口",
+        "packages/core-agent/src/agents/spark-notify/agent.ts",
+        "packages/core-agent/src/agents/spark-notify/types.ts",
+        "packages/core-agent/src/agents/spark-notify/plugins/reaction.ts",
+        "packages/stage-ui/src/stores/mods/api/spark-notify-reaction.ts",
+        "对应schema/策略测试（拟新增）"
+      ],
+      "requirements": [
+        "REQ-MEM-04",
+        "REQ-PRO-01",
+        "REQ-REL-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-12",
+        "ENG-13"
+      ],
+      "acceptance": "先资格后模型、先完整决定后呈现；event所有状态去重；新输入让位；system不写user；崩溃unknown不补播",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "VIS-01",
+      "phase": "P3",
+      "objective": "现有看屏链代次/取消/预算/单owner",
+      "dependencies": [
+        "LIFE-01",
+        "LOCAL-01"
+      ],
+      "allowed_future_paths": [
+        "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+        "packages/stage-ui/src/stores/modules/vision/",
+        "packages/stage-ui/src/composables/vision/",
+        "实际ambient/devtools等采集入口的策略适配"
+      ],
+      "requirements": [
+        "REQ-VIS-01",
+        "REQ-LIFE-01",
+        "REQ-OBS-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-03",
+        "ENG-14",
+        "ENG-15"
+      ],
+      "acceptance": "AP01-04转为负例回归；A慢B快不错源；stop后不发布；队列signal取消、预算耗尽暂停",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "VIS-02",
+      "phase": "P3",
+      "objective": "看屏产品入口与间隔/统计反馈",
+      "dependencies": [
+        "VIS-01"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-pages/src/pages/settings/modules/vision.vue",
+        "实际ControlsIsland/快捷面板组件",
+        "对应locale条目"
+      ],
+      "requirements": [
+        "REQ-VIS-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-14",
+        "ENG-15"
+      ],
+      "acceptance": "30/60/180秒建议档；来源/授权/当前状态分开；停止常驻；不重命名computer-use充当看屏",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "VOICE-01",
+      "phase": "P4",
+      "objective": "真实中文语音与表现基线采样",
+      "dependencies": [
+        "LIFE-01",
+        "LOCAL-01"
+      ],
+      "allowed_future_paths": [
+        "本任务默认只读；docs/04-验证记录/新目录",
+        "必要最小诊断埋点需另列实际文件"
+      ],
+      "requirements": [
+        "REQ-VOICE-01",
+        "REQ-CHAR-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-05",
+        "ENG-16"
+      ],
+      "acceptance": "固定ASR/TTS/设备；耳机与外放、短附和/回声/噪声/有效插话、PCM与首声时间分开；失败如实记录",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "VOICE-02",
+      "phase": "条件实验",
+      "objective": "证实缺口后onset/EOT局部对照",
+      "dependencies": [
+        "VOICE-01"
+      ],
+      "allowed_future_paths": [
+        "packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+        "packages/stage-ui/src/stores/settings/audio-device.ts",
+        "拟新增可拔插EOT adapter",
+        "必要最小core-agent/input插件适配",
+        "packages/stage-ui/src/composables/audio/audio-device.ts",
+        "对应有界PCM历史/首尾样本坐标测试（拟新增）"
+      ],
+      "requirements": [
+        "REQ-VOICE-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-05"
+      ],
+      "acceptance": "onset与EOT分工；确认+pre-roll样本范围真实；一个终点协调者；模型文件/预处理固定；无改善撤回实验",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "条件实验未启动",
+      "condition": "VOICE-01真实基线证实可由onset/EOT局部改进的缺口"
+    },
+    {
+      "task_id": "CHAR-01",
+      "phase": "P4",
+      "objective": "角色/朗读/动作协调与人格体验",
+      "dependencies": [
+        "VOICE-01",
+        "MEM-03"
+      ],
+      "allowed_future_paths": [
+        "现有角色卡/合法marker/表现适配实际命中文件",
+        "正式资产另选后限定导入文件",
+        "既有stage渲染器的必要小改"
+      ],
+      "requirements": [
+        "REQ-CHAR-01",
+        "REQ-REL-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-16",
+        "ENG-18"
+      ],
+      "acceptance": "不替换renderer；坏ACT拒执行；人格/音色分开；示例与正式资产能力/来源分别验收",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "INT-01",
+      "phase": "整合",
+      "objective": "跨层负例、重启/退出与最小回归",
+      "dependencies": [
+        "MEM-03",
+        "PRO-01",
+        "VIS-02",
+        "CHAR-01"
+      ],
+      "allowed_future_paths": [
+        "前置任务实际diff内的测试/修复",
+        "docs/04-验证记录/新目录"
+      ],
+      "requirements": [
+        "REQ-BASE-01",
+        "REQ-LOCAL-01",
+        "REQ-CHAT-01",
+        "REQ-LIFE-01",
+        "REQ-VOICE-01",
+        "REQ-MEM-01",
+        "REQ-MEM-02",
+        "REQ-MEM-03",
+        "REQ-MEM-04",
+        "REQ-PRO-01",
+        "REQ-VIS-01",
+        "REQ-CHAR-01",
+        "REQ-REL-01",
+        "REQ-OBS-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-01",
+        "ENG-02",
+        "ENG-03",
+        "ENG-04",
+        "ENG-05",
+        "ENG-06",
+        "ENG-07",
+        "ENG-08",
+        "ENG-09",
+        "ENG-10",
+        "ENG-11",
+        "ENG-12",
+        "ENG-13",
+        "ENG-14",
+        "ENG-15",
+        "ENG-16",
+        "ENG-17",
+        "ENG-18"
+      ],
+      "acceptance": "独立review、针对性原回归、fresh process+真实模型/设备分层记录；未过底线不进入分发",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    },
+    {
+      "task_id": "EXP-01",
+      "phase": "体验迭代",
+      "objective": "本人实际使用与按Bad Case迭代",
+      "dependencies": [
+        "INT-01"
+      ],
+      "allowed_future_paths": [
+        "docs/04-验证记录/新体验目录",
+        "后续修复须另给有限代码边界"
+      ],
+      "requirements": [
+        "REQ-MEM-04",
+        "REQ-PRO-01",
+        "REQ-VIS-01",
+        "REQ-VOICE-01",
+        "REQ-CHAR-01",
+        "REQ-REL-01"
+      ],
+      "engineering_scenarios": [
+        "ENG-18"
+      ],
+      "acceptance": "相关时想起且不打扰、30分钟稳定、可接受自然度；区分观察与归因假设；同冻结回归复测",
+      "writer": "本批单一主写者；实施前填实际负责人",
+      "status": "未实施；等待自身前置依赖"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "REQ-BASE-01",
+      "task_ids": [
+        "BASE-01",
+        "INT-01"
+      ],
+      "api_operations": [],
+      "engineering_scenarios": [
+        "ENG-01"
+      ]
+    },
+    {
+      "requirement_id": "REQ-CHAR-01",
+      "task_ids": [
+        "VOICE-01",
+        "CHAR-01",
+        "INT-01",
+        "EXP-01"
+      ],
+      "api_operations": [],
+      "engineering_scenarios": [
+        "ENG-05",
+        "ENG-16"
+      ]
+    },
+    {
+      "requirement_id": "REQ-CHAT-01",
+      "task_ids": [
+        "BASE-01",
+        "SRC-01",
+        "INT-01"
+      ],
+      "api_operations": [],
+      "engineering_scenarios": [
+        "ENG-01",
+        "ENG-08"
+      ]
+    },
+    {
+      "requirement_id": "REQ-LIFE-01",
+      "task_ids": [
+        "LIFE-01",
+        "VIS-01",
+        "INT-01"
+      ],
+      "api_operations": [
+        "perception.start",
+        "perception.stop",
+        "perception.stopAll"
+      ],
+      "engineering_scenarios": [
+        "ENG-03",
+        "ENG-04",
+        "ENG-05",
+        "ENG-14"
+      ]
+    },
+    {
+      "requirement_id": "REQ-LOCAL-01",
+      "task_ids": [
+        "LOCAL-01",
+        "INT-01"
+      ],
+      "api_operations": [],
+      "engineering_scenarios": [
+        "ENG-02",
+        "ENG-17"
+      ]
+    },
+    {
+      "requirement_id": "REQ-MEM-01",
+      "task_ids": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "INT-01"
+      ],
+      "api_operations": [
+        "memory.policy",
+        "memory.enqueueSource",
+        "memory.commitCandidates"
+      ],
+      "engineering_scenarios": [
+        "ENG-06",
+        "ENG-07",
+        "ENG-09"
+      ]
+    },
+    {
+      "requirement_id": "REQ-MEM-02",
+      "task_ids": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03",
+        "INT-01"
+      ],
+      "api_operations": [
+        "memory.list",
+        "memory.source",
+        "memory.resolveRequest"
+      ],
+      "engineering_scenarios": [
+        "ENG-08",
+        "ENG-09",
+        "ENG-10"
+      ]
+    },
+    {
+      "requirement_id": "REQ-MEM-03",
+      "task_ids": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03",
+        "INT-01"
+      ],
+      "api_operations": [
+        "memory.correct",
+        "memory.forget",
+        "operation.get"
+      ],
+      "engineering_scenarios": [
+        "ENG-09",
+        "ENG-10",
+        "ENG-11"
+      ]
+    },
+    {
+      "requirement_id": "REQ-MEM-04",
+      "task_ids": [
+        "PRO-01",
+        "INT-01",
+        "EXP-01"
+      ],
+      "api_operations": [
+        "proactive.consider"
+      ],
+      "engineering_scenarios": [
+        "ENG-12",
+        "ENG-13"
+      ]
+    },
+    {
+      "requirement_id": "REQ-OBS-01",
+      "task_ids": [
+        "LIFE-01",
+        "LOCAL-01",
+        "VIS-01",
+        "INT-01"
+      ],
+      "api_operations": [
+        "diagnostics.summary"
+      ],
+      "engineering_scenarios": [
+        "ENG-02",
+        "ENG-04",
+        "ENG-11",
+        "ENG-15",
+        "ENG-17"
+      ]
+    },
+    {
+      "requirement_id": "REQ-PRO-01",
+      "task_ids": [
+        "PRO-01",
+        "INT-01",
+        "EXP-01"
+      ],
+      "api_operations": [
+        "proactive.configure"
+      ],
+      "engineering_scenarios": [
+        "ENG-12",
+        "ENG-13",
+        "ENG-15"
+      ]
+    },
+    {
+      "requirement_id": "REQ-REL-01",
+      "task_ids": [
+        "MEM-02",
+        "MEM-03",
+        "PRO-01",
+        "CHAR-01",
+        "INT-01",
+        "EXP-01"
+      ],
+      "api_operations": [],
+      "engineering_scenarios": [
+        "ENG-06",
+        "ENG-13",
+        "ENG-18"
+      ]
+    },
+    {
+      "requirement_id": "REQ-VIS-01",
+      "task_ids": [
+        "VIS-01",
+        "VIS-02",
+        "INT-01",
+        "EXP-01"
+      ],
+      "api_operations": [
+        "vision.configure"
+      ],
+      "engineering_scenarios": [
+        "ENG-03",
+        "ENG-14",
+        "ENG-15"
+      ]
+    },
+    {
+      "requirement_id": "REQ-VOICE-01",
+      "task_ids": [
+        "VOICE-01",
+        "VOICE-02",
+        "INT-01",
+        "EXP-01"
+      ],
+      "api_operations": [
+        "presentation.cancel"
+      ],
+      "engineering_scenarios": [
+        "ENG-05",
+        "ENG-16"
+      ]
+    }
+  ],
+  "candidate_mappings": [
+    {
+      "candidate_id": "RY01",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P0",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "BASE-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY02",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P0",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "VOICE-02"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "KI02",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P0",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "BASE-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R01",
+      "selection": "新增能力候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "MEM-F01"
+      ],
+      "phase": "P1",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-MEM-03"
+      ],
+      "implementation_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "MEM-03"
+      ],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "LM01",
+          "LM03",
+          "LM04",
+          "LM05",
+          "LM06",
+          "LM09"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "AH-R02",
+      "selection": "新增能力候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "MEM-F01"
+      ],
+      "phase": "P1",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-MEM-02"
+      ],
+      "implementation_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "MEM-03"
+      ],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "LM07",
+          "LM08"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "AH-R03",
+      "selection": "新增能力候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "MEM-F02"
+      ],
+      "phase": "P1",
+      "requirements": [
+        "REQ-MEM-02"
+      ],
+      "implementation_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03"
+      ],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q09",
+          "Q10"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "AH-R04",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P1",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R06",
+      "selection": "新增能力候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "PRO-F01"
+      ],
+      "phase": "P2",
+      "requirements": [
+        "REQ-PRO-01",
+        "REQ-MEM-04"
+      ],
+      "implementation_tasks": [
+        "PRO-01"
+      ],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "PR01",
+          "PR02",
+          "PR03",
+          "PR04",
+          "PR05",
+          "PR06",
+          "PR07",
+          "PR08",
+          "PR10"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "AH-R11",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P3",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VIS-01",
+        "VIS-02"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R12",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P5",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "LIFE-01",
+        "LOCAL-01",
+        "VIS-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY03",
+      "selection": "新增能力候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "MEM-F01"
+      ],
+      "phase": "P1",
+      "requirements": [
+        "REQ-MEM-01",
+        "REQ-MEM-02"
+      ],
+      "implementation_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "MEM-03"
+      ],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "LM03-browser",
+          "LM07-browser"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "RY04",
+      "selection": "新增能力候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "MEM-F02"
+      ],
+      "phase": "P1",
+      "requirements": [
+        "REQ-MEM-02"
+      ],
+      "implementation_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03"
+      ],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "Q01",
+          "Q02",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q10"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "RY05",
+      "selection": "条件收益实验",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P4",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "CHAR-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY07",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P1/P4",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "MEM-02",
+        "MEM-03",
+        "PRO-01",
+        "VOICE-01",
+        "CHAR-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY08",
+      "selection": "新增能力候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "MEM-F01"
+      ],
+      "phase": "P1",
+      "requirements": [
+        "REQ-MEM-03"
+      ],
+      "implementation_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03"
+      ],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "browser-delete-and-fresh-realm",
+          "LM07-browser"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "OL01",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P2",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "PRO-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL02",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P2",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "PRO-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL03",
+      "selection": "条件功能候选",
+      "product_increment_eligible": true,
+      "functional_slices": [
+        "OLV-F01",
+        "OLV-F02"
+      ],
+      "phase": "语言/正式Live2D资产需求成立后，先有界实验；未自动纳入本期PRD",
+      "requirements": [
+        "REQ-CHAR-01",
+        "REQ-VOICE-01"
+      ],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": true
+    },
+    {
+      "candidate_id": "OL05",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P1/P2",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "PRO-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL06",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P0",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "LIFE-01",
+        "LOCAL-01",
+        "VIS-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "KI01",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P1",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "SRC-01",
+        "MEM-01",
+        "MEM-03"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "KI03",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "各批",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "BASE-01",
+        "SRC-01",
+        "MEM-01",
+        "MEM-03"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "KI05",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "各批",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "LIFE-01",
+        "LOCAL-01",
+        "VIS-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "CK03",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "各批",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "LIFE-01",
+        "LOCAL-01",
+        "VIS-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R08",
+      "selection": "条件收益实验",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P4条件实验",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "VOICE-02",
+        "CHAR-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R10",
+      "selection": "条件收益实验",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P4条件实验",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "VOICE-02"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY06",
+      "selection": "条件收益实验",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P4条件实验",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "VOICE-02"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL04",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "P4条件实验",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "CHAR-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "CK01",
+      "selection": "生产侧局部已验",
+      "product_increment_eligible": false,
+      "functional_slices": [
+        "PROD-CHAR-01"
+      ],
+      "phase": "正式角色选定后",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "CHAR-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "CK02",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "正式角色选定后",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "CHAR-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "CK04",
+      "selection": "生产侧局部已验",
+      "product_increment_eligible": false,
+      "functional_slices": [
+        "PROD-CHAR-01"
+      ],
+      "phase": "正式角色选定后",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [
+        "VOICE-01",
+        "CHAR-01"
+      ],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R05",
+      "selection": "后置待证",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R07",
+      "selection": "后置待证",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "controlled_offline_evidence": {
+        "report": "../../02-调研参考/2026-10-14-长期记忆召回与主动续聊同条件验证.md",
+        "case_ids": [
+          "PR09",
+          "PR09-surfacing-supplement",
+          "idle-caller-supplement"
+        ],
+        "meaning": "原代码/SQL/固定输出与真实存储局部证据；非整套/真实效果优胜"
+      }
+    },
+    {
+      "candidate_id": "RY09",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY10",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY11",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL07",
+      "selection": "后置待证",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL12",
+      "selection": "后置待证",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL14",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "KI04",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "KI06",
+      "selection": "后置机制局部已验",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "verified_backlog_slices": [
+        "KI-DIFF-F03"
+      ],
+      "current_release_selected": false
+    },
+    {
+      "candidate_id": "KI07",
+      "selection": "后置机制局部已验",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "后续独立需求",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false,
+      "verified_backlog_slices": [
+        "KI-DIFF-F01"
+      ],
+      "current_release_selected": false
+    },
+    {
+      "candidate_id": "AH-R09",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R13",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R14",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "AH-R15",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY12",
+      "selection": "工程参考",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "RY13",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL08",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL09",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL10",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL11",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "OL13",
+      "selection": "AIRI已有或不更强",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "KI08",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    },
+    {
+      "candidate_id": "CK05",
+      "selection": "不纳入本期",
+      "product_increment_eligible": false,
+      "functional_slices": [],
+      "phase": "本期",
+      "requirements": [],
+      "implementation_tasks": [],
+      "engineering_reference_tasks": [],
+      "conditional_spec_change_required": false
+    }
+  ],
+  "scope_update": "2026-10-14用户明确Chromatic不纳入；当前5项目55审核记录，历史2条见范围校正归档；不指示移除AIRI已有依赖",
+  "supplement_scope": "AIRI task-memory/workflow/schema/IM邻接已补；Kirara机制差异后置，Charakuru生产检查局部已验；不自动扩15任务",
+  "controlled_validation_scope": {
+    "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+    "memory_cases": 10,
+    "recall_records": 32,
+    "recall_queries": 10,
+    "proactive_cases": 10,
+    "real_model_calls": 0,
+    "original_PR09_outcome": "inconclusive",
+    "background_producer_partial_supplement": true,
+    "no_quality_ranking": true,
+    "product_code_changed": false
+  }
+}

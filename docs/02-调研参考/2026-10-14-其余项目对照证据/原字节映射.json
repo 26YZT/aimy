@@ -1,0 +1,192 @@
+[
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/README.md",
+    "sha256": "2d76f2ccff1777c72872ed5d08e8e8735764df9d077381161df43f7798165343"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/airi-checks.cjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/airi-checks.cjs",
+    "sha256": "bd3294ff7fd9597e8e0580994315f0a34f523f0e771fdc5571c992fb60864ad9"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/airi-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/airi-results.json",
+    "sha256": "73ec0704a34e19f313d0cba863761b140e21693602d8fa4b8883a614d27aefb1"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/build-package.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/build-package.py",
+    "sha256": "26de048f95edb579c13c98b3975faa3cf7d9fd7e9ae6ed25094fe85151ead028"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/candidate-map.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/candidate-map.json",
+    "sha256": "1278b4d8b35c48cc097e48e6562dc7cbf56149af72d1623d9bdcbf0a03ea2a08"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/checks.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/checks.py",
+    "sha256": "0db5012308297e8b624589c08bce819e00788ce30f704e76320931a1c8d040cb"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/executed-airi.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/executed-airi.json",
+    "sha256": "1c60289d6b49f0ed4cc92345766de1dcba07201fe2056849247cb78d435b6cb7"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/executed-kirara.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/executed-kirara.json",
+    "sha256": "ad9c38fa53297fbbdb4e41cab8406d31b5d386d1265afbccced8b1ce789b8805"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/feature-map.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/feature-map.json",
+    "sha256": "36e3b0b26f3a9f2d8b87ae0fcddf464c7e76f7af59e5660316c865a972ab9e5d"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/kirara-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/kirara-results.json",
+    "sha256": "f4de6981875b9a4e9b43b5cf25bc22872680024d5c573ea055834aeca52f2ea0"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/read-coverage.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/read-coverage.json",
+    "sha256": "597ed2fed30b00ae2d6a519877c02aa8facc25cfe1fe8bfefb6340a75dba8908"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/run-summary.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/run-summary.json",
+    "sha256": "01fe33a739498c86a2be10d2d52a384e8ac2dacf674c76fa930b56c6e924ac3f"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/source-fingerprints.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/source-fingerprints.json",
+    "sha256": "be7b26e4ad28ae885a38cd0b190afa1bc817aa508c3dafa91fe031b6c5b3311f"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/README.md",
+    "sha256": "84ed615ce909e86ed964e5894c415578c8acf8c0b6d49998dfe3de61547e55f5"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/airi-loader.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/airi-loader.mjs",
+    "sha256": "1886d1f6b700c92e70eff6b32207941b72044d4dec5783249f529b9d7e873ad9"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/authored-capabilities.vrm",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/authored-capabilities.vrm",
+    "sha256": "ef7ef5ee2af95e837908b40c60682a5ddc30bbf7a3fa63b75ace0025b589021b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/blender-production-probe.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/blender-production-probe.py",
+    "sha256": "db3e9bbe420471eec9f2722efeab8dffb785bc4483c173f386eacfff771c389e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/blender-production-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/blender-production-results.json",
+    "sha256": "45241b3cbb09338b0234e342aea722ed377439b85ec29409cc6ac7c4a4be0bba"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/blender-production.log",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/blender-production.log",
+    "sha256": "2a0131cd3fae5878b07edb22e85d1fc153c2c07d6c9a1c122733578bb3e84334"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/findings.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/findings.md",
+    "sha256": "8b00cbcabac70156dc27a3350e242b4a7e3909bc400816e0cb428557099cb1e6"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/loader-compare.mjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/loader-compare.mjs",
+    "sha256": "45097d0ddd0bbefe87fe9de8e9ddf70b0466a7498ec1ebeba85be4cca66d53ca"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/loader-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/loader-results.json",
+    "sha256": "5c894e8743186b93365101c95f585509a37c4713c1e7a0ccbfe2d0e51b654f25"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/loader-run.log",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/loader-run.log",
+    "sha256": "69681fe0f3f09d8109e9fb7b0e95fb36c26a5d39d7444136380cb076c1954833"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/minimal-no-face.vrm",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/minimal-no-face.vrm",
+    "sha256": "20643d603cf486b8f8ec0318d66f4ad095b61e623b9d9379bd4448149d07cf3e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/package-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/package-manifest.json",
+    "sha256": "6e74b5b1d84adfd923d5666a7096b9f6e239548188aaf5c29c401d9dc80208ad"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/source-manifest.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/source-manifest.json",
+    "sha256": "9cf330b531db18d566c85604b27a91fea4c5ecceb66196c4ce7fafacc4c39cb2"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/standard-like.vrm",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/standard-like.vrm",
+    "sha256": "20643d603cf486b8f8ec0318d66f4ad095b61e623b9d9379bd4448149d07cf3e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/README.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/README.md",
+    "sha256": "8dd8f3460d73b1ccc00011c4a643a405bffc0a34a7eb3ead5e89bee88cd0b505"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/airi-task-memory-checks.cjs",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/airi-task-memory-checks.cjs",
+    "sha256": "00abf91931df013139ec1fa41dd470f91c19e9ad187d63d2c377295d03f13f2c"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/airi-task-memory-results.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/airi-task-memory-results.json",
+    "sha256": "03d935d10ac6df60f186833fcbfe6c75133f447584677eb0cb5cd38109df9450"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/build-coverage.py",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/build-coverage.py",
+    "sha256": "26dd62d9d9c47f5c8ac4293c696be4b65dab27b20969cd9fdbc304c4a454cd41"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/coverage-findings.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/coverage-findings.md",
+    "sha256": "1f362c8e3c49dffd172d18809ed91733597344a506c4c29f2af56f6d6ee0d90e"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/coverage-matrix.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/coverage-matrix.json",
+    "sha256": "181e24b26bad73e02d70791f556cb70f27f615e36332313a0e07068c1a294c6c"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/coverage-matrix.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/coverage-matrix.md",
+    "sha256": "a9fa37cfaf972fb43f8c54235cf5686c301d3269da95d1a3753c6118fdd28e69"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/verification.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/verification.json",
+    "sha256": "a11f47b4cb626a4915b36b3a3452824cea26fd095c1a88e93fe3be8c83b0c16b"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-kirara/review-formal.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/kirara/review-formal.md",
+    "sha256": "7ba39b9caa7e00bf9bc72fbf4157b2c92900d963766b580597a7a948be8a3784"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-charakuru/review-formal.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/charakuru/review-formal.md",
+    "sha256": "1455effb98fdece9cfba3e184125ad9e9d68a7fd0fc23106c9ad403fb6af7309"
+  },
+  {
+    "source": "/tmp/aimy-20261014-remaining-coverage/review-formal.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-其余项目对照证据/coverage/review-formal.md",
+    "sha256": "38d60f5c683f3ccbbe8395415afb8803d35b4eb476b9bde9a1bd7fd3f5df0fa8"
+  }
+]

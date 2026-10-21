@@ -1,0 +1,86 @@
+{
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "fcd52a57310ee5c2a9c5a3d7e3e791beb5e0712208f9541dbff0239c8616d27a",
+      "bytes": 1541
+    },
+    {
+      "file": "airi-narrative.mjs",
+      "sha256": "c8693e4db4df7e1c5e1216c75a0906d30882a164af6a680e78f95606a1362dc8",
+      "bytes": 14397
+    },
+    {
+      "file": "backend-delta-results.json",
+      "sha256": "1a38ab0bb9eac7bd6bf4ef84e7d1485233802193b523911841b04cbf750d5937",
+      "bytes": 2275
+    },
+    {
+      "file": "backend-run.log",
+      "sha256": "7e64d4832c7a036ccb743fc57f689bd4360c1b582981880aec38040aba449b1b",
+      "bytes": 2276
+    },
+    {
+      "file": "candidate-decisions.json",
+      "sha256": "c1002ad7d5bec82d17299e5bb695a392d6e7a1a40df9981400019d2d66db9591",
+      "bytes": 1403
+    },
+    {
+      "file": "delta-findings.md",
+      "sha256": "1e8c0e91d73fa5831c2ac8985ae9b4a6cc4da954c6497f29e507677f82e487e9",
+      "bytes": 12952
+    },
+    {
+      "file": "delta_checks.mjs",
+      "sha256": "49d659b1daf60a68cfd67f992d8b15438df58b71eb6df877e7a255b1d556e63c",
+      "bytes": 3534
+    },
+    {
+      "file": "delta_checks.py",
+      "sha256": "43d3fad83d255e4e906246e587e4064cf6cd7eb6539c21186b27e6b35605f312",
+      "bytes": 4044
+    },
+    {
+      "file": "frontend-delta-results.json",
+      "sha256": "e042302d6dd52f3f0629337f8d5344698040522edb26fe79189de7042df30a5a",
+      "bytes": 2855
+    },
+    {
+      "file": "frontend-run.log",
+      "sha256": "cef6e02bda6b92428ae35298bf6e0db4e9974efbd238126122563d3e61e34ea1",
+      "bytes": 1951
+    },
+    {
+      "file": "frontend-source-manifest.json",
+      "sha256": "207bef25e7a60d1d59dcef28cb98a7e79cd549a7374c424ca9138299cbfe1c48",
+      "bytes": 83848
+    },
+    {
+      "file": "frontend-version-comparison.json",
+      "sha256": "f390f0e66831e0c1c5fc968f3f555bf349bf917f450f5da3e907044cbfcd989b",
+      "bytes": 2144
+    },
+    {
+      "file": "olv-tap-isolated.mjs",
+      "sha256": "f70457462f8066e92088b11948afe55ca7bf8d5211451a3fa0d89090d6e2e76e",
+      "bytes": 3230
+    },
+    {
+      "file": "pinned-build-commit.json",
+      "sha256": "ceb27e2171cc0e2664bfc9a26d0b54144114d204b525f0849bd99b3f92391eb8",
+      "bytes": 1025
+    },
+    {
+      "file": "pinned-source-commit.json",
+      "sha256": "c65758ed166f038bcba38757693494a1ea8401ca989e3d88896a6abc6ffab97b",
+      "bytes": 1183
+    },
+    {
+      "file": "source-provenance.json",
+      "sha256": "f03455cfd232a8a32ad10507469d139eb5432d8ebc85b1ef23bb5b87caf1641f",
+      "bytes": 642
+    }
+  ],
+  "all_delta_assertions_passed": true,
+  "product_code_changed": false
+}

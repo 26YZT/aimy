@@ -98,7 +98,8 @@ describe('provider model catalog synchronization', () => {
     await expect.poll(() => leader.providerConfigStore.getProviderConfig(transcriptionProviderId)?.api).toBe('responses')
     await expect.poll(() => follower.providerConfigStore.getProviderConfig(transcriptionProviderId)?.api).toBe('responses')
     expect(leader.providerConfigStore.getProviderConfig(transcriptionProviderId)?.apiKey).toBe('test')
-    expect(traffic).toHaveBeenCalledWith(expect.objectContaining({ name: 'onCall', rest: expect.arrayContaining(['invokeAction', expect.objectContaining({ actionName: 'patchProviderConfig' })]) }))
+    // Forms prepare secure references locally before the leader commits their configuration version.
+    expect(traffic).toHaveBeenCalledWith(expect.objectContaining({ name: 'onCall', rest: expect.arrayContaining(['invokeAction', expect.objectContaining({ actionName: 'commitPreparedConfiguration' })]) }))
     expect(traffic).not.toHaveBeenCalledWith(expect.objectContaining({ name: 'onCall', rest: expect.arrayContaining(['replaceState']) }))
     await expect(follower.providerConfigStore.patchProviderConfig('missing', { api: 'responses' })).resolves.toBe(false)
     expect(leader.providerConfigStore.getProvider('missing')).toBeUndefined()

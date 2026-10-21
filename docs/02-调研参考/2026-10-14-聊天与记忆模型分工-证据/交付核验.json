@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-14",
+  "report": "docs/02-调研参考/2026-10-14-聊天与记忆模型分工对照.md",
+  "selected_source_files": 20,
+  "source_bytes_match_recorded_manifest": true,
+  "raw_copy_bytes_match": true,
+  "offline_dispatch_checks_passed": 15,
+  "real_model_calls": 0,
+  "local_report_links_valid": true,
+  "item09_selected": null,
+  "next_item_asked": false,
+  "product_code_write_operations": 0,
+  "scope": "Only this report, copied isolated checks, manifest and decision documentation; not whole product acceptance."
+}

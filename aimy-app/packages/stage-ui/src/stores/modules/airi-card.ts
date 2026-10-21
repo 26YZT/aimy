@@ -1,5 +1,6 @@
 import type { Card, ccv3 } from '@proj-airi/ccc'
 
+import type { CharacterAvatarCancellation, CharacterAvatarUpdate } from '../../libs/character-avatar'
 import type { DocumentFields, DocumentSnapshot, DocumentSyncClient, LocalDocumentChanges } from '../../libs/document-sync'
 import type { CardModuleDefaults } from '../../services/airi-card-modules'
 import type { AiriCard, AiriExtension } from '../../types/airiCard'
@@ -13,13 +14,15 @@ import { isEqual } from 'es-toolkit'
 import { nanoid } from 'nanoid'
 import { defineStore, storeToRefs } from 'pinia'
 import { array, looseObject, object, parse, safeParse, string } from 'valibot'
-import { computed, ref, toRaw, watch } from 'vue'
+import { computed, onScopeDispose, reactive, ref, toRaw, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { toast } from 'vue-sonner'
 
 import { DEFAULT_ARTISTRY_WIDGET_SPAWNING_PROMPT } from '../../constants/prompts/character-defaults'
 import { documentSyncRepo } from '../../database/repos/document-sync.repo'
 import { authedFetch } from '../../libs/auth-fetch'
+import { CharacterAvatarError, parseCharacterAvatarCancellation, parseCharacterAvatarUpdate, validateCharacterAvatar } from '../../libs/character-avatar'
+import { CharacterAvatarRequests } from '../../libs/character-avatar/requests'
 import { joinCard, splitCard } from '../../libs/character-card-sync'
 import { createDocumentSyncClient, syncedValues, synchronize } from '../../libs/document-sync'
 import { CHARACTER_CARD_SYNC_FLAG } from '../../libs/feature-flags'
@@ -27,6 +30,7 @@ import { captureAnalyticsEvent } from '../../libs/product-signals'
 import { SERVER_URL } from '../../libs/server'
 import { wakeWordSchema } from '../../libs/voice/wake-words'
 import { resolveModuleSelection } from '../../services/airi-card-modules'
+import { isCloudReplicaEnabled } from '../../services/local-data-policy'
 import { useAuthStore } from '../auth'
 import { useFeatureFlagsStore } from '../feature-flags'
 import { useProviderConfigStore } from '../providers/config'
@@ -89,7 +93,7 @@ export const useAiriCardStore = defineStore('airi-card', () => {
   const { userId } = storeToRefs(useAuthStore())
   const featureFlagsStore = useFeatureFlagsStore()
   /** Cloud sync is a device choice, off by default. Settings > System > Experimental Features owns it. */
-  const cloudSyncEnabled = computed(() => featureFlagsStore.isEnabled(CHARACTER_CARD_SYNC_FLAG.key))
+  const cloudSyncEnabled = computed(() => isCloudReplicaEnabled() && featureFlagsStore.isEnabled(CHARACTER_CARD_SYNC_FLAG.key))
 
   // Pinia synchronization owns cross-window updates. Local storage only loads
   // and saves this renderer's durable copy; listening to storage events here
@@ -109,6 +113,16 @@ export const useAiriCardStore = defineStore('airi-card', () => {
   let pendingAuthenticationSetup: Promise<void> | undefined
 
   const activeCard = computed(() => cards.value.get(activeCardId.value))
+  let avatarContextGeneration = 0
+  const avatarRequests = new CharacterAvatarRequests()
+  onScopeDispose(() => {
+    avatarContextGeneration++
+    avatarRequests.dispose()
+  })
+  watch([userId, activeCardId], () => {
+    avatarContextGeneration++
+    avatarRequests.cancelPending()
+  }, { flush: 'sync' })
   function useRuntimeModuleStores() {
     return {
       artistry: useArtistryStore(),
@@ -269,7 +283,7 @@ export const useAiriCardStore = defineStore('airi-card', () => {
     return true
   }
 
-  const updateCard = async (id: string, updates: AiriCard | Card | ccv3.CharacterCardV3) => {
+  const updateCard = async (id: string, updates: AiriCard | Card | ccv3.CharacterCardV3, options: { preserveAvatar?: boolean } = {}) => {
     await pendingAuthenticationSetup
     const existingCard = cards.value.get(id)
     if (!existingCard)
@@ -281,11 +295,82 @@ export const useAiriCardStore = defineStore('airi-card', () => {
     }
 
     const card = newAiriCard(updatedCard)
+    if (options.preserveAvatar) {
+      const metadata = { ...card.metadata }
+      if (existingCard.metadata?.avatar === undefined)
+        delete metadata.avatar
+      else
+        metadata.avatar = existingCard.metadata.avatar
+      if (Object.keys(metadata).length)
+        card.metadata = metadata
+      else
+        delete card.metadata
+    }
     cards.value.set(id, card)
     if (id === activeCardId.value)
       await applyActiveCardSettings(card)
 
     return true
+  }
+
+  /** Commits only the avatar through the original card persistence owner, before publishing its synchronized snapshot. */
+  async function updateCardAvatar(request: CharacterAvatarUpdate): Promise<boolean> {
+    const input = parseCharacterAvatarUpdate(request)
+    const permit = avatarRequests.begin(input)
+    try {
+      const generation = avatarContextGeneration
+      const current = () => generation === avatarContextGeneration
+        && (userId.value || 'local') === input.ownerId && activeCardId.value === input.activeCardId
+        && (!permit || permit.current())
+      if (!current())
+        throw new CharacterAvatarError('changed')
+      await pendingAuthenticationSetup
+      if (input.avatar !== null) {
+        if (typeof input.avatar !== 'string')
+          throw new CharacterAvatarError('format')
+        await validateCharacterAvatar(input.avatar, permit?.signal)
+      }
+      if (!current())
+        throw new CharacterAvatarError('changed')
+      const existing = cards.value.get(input.cardId)
+      if (!existing)
+        throw new CharacterAvatarError('missing')
+      const previousAvatar = typeof existing.metadata?.avatar === 'string' ? existing.metadata.avatar : null
+      if (previousAvatar !== input.expectedAvatar)
+        throw new CharacterAvatarError('changed')
+      const metadata = { ...existing.metadata }
+      if (input.avatar === null)
+        delete metadata.avatar
+      else
+        metadata.avatar = input.avatar
+      const next = new Map(cards.value)
+      next.set(input.cardId, { ...existing, metadata })
+      try {
+        // Use the existing key and Map serializer. Its ordinary reactive persistence then observes identical bytes.
+        // A quota failure happens before state publication, so other windows retain the previous card.
+        const serialized = StorageSerializers.map.write(next)
+        if (!current())
+          throw new CharacterAvatarError('changed')
+        localStorage.setItem('airi-cards', serialized)
+      }
+      catch (cause) {
+        if (cause instanceof CharacterAvatarError)
+          throw cause
+        throw new CharacterAvatarError('storage')
+      }
+      // The manual-reset ref does not make replacement values reactive. Keep ordinary Map.set edits observable.
+      cards.value = reactive(next)
+      permit?.complete()
+      return true
+    }
+    finally {
+      permit?.cancel()
+    }
+  }
+
+  /** Revokes a known local save intent, including one that has not reached the leader yet. */
+  async function cancelCardAvatar(input: CharacterAvatarCancellation): Promise<boolean> {
+    return avatarRequests.cancel(parseCharacterAvatarCancellation(input))
   }
 
   const getCard = (id: string) => {
@@ -1019,6 +1104,8 @@ export const useAiriCardStore = defineStore('airi-card', () => {
     addCard,
     removeCard,
     updateCard,
+    updateCardAvatar,
+    cancelCardAvatar,
     restoreCardVersion,
     restoreDeletedCard,
     cardHistory,
@@ -1080,6 +1167,8 @@ export const useAiriCardStore = defineStore('airi-card', () => {
       'updateActiveCardVision',
       'selectActiveCardVisionProvider',
       'updateCard',
+      'updateCardAvatar',
+      'cancelCardAvatar',
       'restoreCardVersion',
       'restoreDeletedCard',
       'synchronizeCards',

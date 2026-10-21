@@ -17,6 +17,7 @@ import { useSettingsGeneral } from '../../../../stores/settings'
 
 interface Props {
   customProviderSetupEnabled: boolean
+  localOnly?: boolean
   onNext: OnboardingStepNextHandler
 }
 
@@ -35,14 +36,10 @@ async function handleLogin() {
   onboardingStore.showingSetup = false
   await authStore.requestLogin()
 }
-
-function handleLocalSetup() {
-  props.onNext()
-}
 </script>
 
 <template>
-  <div relative h-full flex flex-col>
+  <div :class="['relative h-full flex flex-col']">
     <div :class="['absolute', 'right-0', 'top-0', 'z-10']">
       <DropdownMenu
         align="end"
@@ -55,7 +52,7 @@ function handleLocalSetup() {
               'h-8 w-8',
               'flex items-center justify-center',
               'rounded-lg',
-              'outline-none',
+              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400',
               'text-neutral-500 transition-colors duration-200',
               'hover:bg-neutral-100/80 hover:text-neutral-700',
               'dark:text-neutral-400 dark:hover:bg-neutral-800/80 dark:hover:text-neutral-200',
@@ -64,7 +61,7 @@ function handleLocalSetup() {
             :aria-label="t('settings.language.title')"
             type="button"
           >
-            <div class="i-lucide:globe" h-5 w-5 />
+            <div :class="['i-lucide:globe h-5 w-5']" />
           </button>
         </template>
 
@@ -92,7 +89,7 @@ function handleLocalSetup() {
         :duration="500"
         :class="['mb-1', 'flex', 'justify-center', 'md:mb-4', 'md:pt-8', 'lg:pt-16']"
       >
-        <img :src="onboardingLogo" max-h="50" aspect-square h-auto w-auto select-none object-cover>
+        <img :src="onboardingLogo" :alt="t(props.localOnly ? 'settings.dialogs.onboarding.localTitle' : 'settings.dialogs.onboarding.title')" :class="['max-h-50 aspect-square h-auto w-auto', 'select-none object-cover']">
       </div>
       <h2
         v-motion
@@ -101,7 +98,7 @@ function handleLocalSetup() {
         :duration="500"
         :class="['mb-0', 'text-3xl', 'text-neutral-800', 'font-bold', 'md:mb-2', 'dark:text-neutral-100']"
       >
-        {{ t('settings.dialogs.onboarding.title') }}
+        {{ t(props.localOnly ? 'settings.dialogs.onboarding.localTitle' : 'settings.dialogs.onboarding.title') }}
       </h2>
       <p
         v-motion
@@ -111,11 +108,12 @@ function handleLocalSetup() {
         :delay="100"
         :class="['text-sm', 'text-neutral-600', 'md:text-lg', 'dark:text-neutral-400']"
       >
-        {{ t('settings.dialogs.onboarding.description') }}
+        {{ t(props.localOnly ? 'settings.dialogs.onboarding.localDescription' : 'settings.dialogs.onboarding.description') }}
       </p>
     </div>
     <div :class="['mx-2 flex flex-col items-stretch gap-2']">
       <Button
+        v-if="!props.localOnly"
         v-motion="{
           initial: { opacity: 0, y: 8 },
           enter: { opacity: 1, y: 0 },
@@ -136,14 +134,15 @@ function handleLocalSetup() {
           duration: 500,
           delay: 250,
         }"
-        variant="secondary"
-        :outline="false"
-        :class="['bg-transparent! text-neutral-600 dark:bg-neutral-700/60! dark:text-neutral-200']"
+        :variant="props.localOnly ? 'primary' : 'secondary'"
+        :color="props.localOnly ? 'primary' : 'neutral'"
+        :outline="props.localOnly"
         :label="t('settings.dialogs.onboarding.setupWithoutSigningIn')"
-        @click="handleLocalSetup"
+        @click="props.onNext"
       />
     </div>
     <nav
+      v-if="!props.localOnly"
       v-motion="{
         initial: { opacity: 0 },
         enter: { opacity: 1 },

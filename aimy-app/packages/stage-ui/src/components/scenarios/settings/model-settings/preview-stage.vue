@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
+
 import type { ModelSettingsRuntimeSnapshot } from './runtime'
 
 import { Live2DScene } from '@proj-airi/stage-ui-live2d'
@@ -31,7 +33,7 @@ const emit = defineEmits<{
 const settingsStore = useSettings()
 const modelStore = useModelStore()
 const live2dSceneRef = ref<{ canvasElement: () => HTMLCanvasElement | undefined }>()
-const vrmSceneRef = ref<{ canvasElement: () => HTMLCanvasElement | undefined }>()
+const vrmSceneRef = ref<InstanceType<typeof ThreeScene>>()
 const spineSceneRef = ref<{ canvasElement: () => HTMLCanvasElement | undefined }>()
 const tachieSceneRef = ref<{ canvasElement: () => HTMLCanvasElement | undefined }>()
 const mmdSceneRef = ref<{ canvasElement: () => HTMLCanvasElement | undefined }>()
@@ -192,6 +194,7 @@ watch(runtimeSnapshot, snapshot => emit('runtimeSnapshotChanged', snapshot), { i
 
 defineExpose({
   capturePreviewFrame,
+  playVrmGesture: (gesture: VrmGesture) => vrmSceneRef.value?.playGesture(gesture) ?? false,
 })
 
 const { x: mouseX, y: mouseY } = useMouse()

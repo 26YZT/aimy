@@ -1,0 +1,75 @@
+{
+  "source_read_summary": {
+    "first_party_full_files": 14,
+    "first_party_partial_files": 2,
+    "first_party_read_lines": 3045,
+    "new_full_since_audit": 14
+  },
+  "offline_checks": 10,
+  "assertion_failures": 0,
+  "real_indexeddb_browser_test": false,
+  "real_model_or_device_call": false,
+  "product_source_modified": false,
+  "outputs": [
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/cas-check.cjs",
+      "sha256": "a94d3eb001e2a2f554589fe2be3df89050e52f450c6b4369024fd95781e958c8",
+      "bytes": 3823
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/cas-results.json",
+      "sha256": "6274cff0a57efffcf8eb384d60924b449cd8da27e43e113677552971a848fc68",
+      "bytes": 1135
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/dependency-fingerprints.json",
+      "sha256": "28813460a6f472d28c861c69c8cc3255b2f6cc06b05d416bdf7ea1462470eb23",
+      "bytes": 1890
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/initial-plan.md",
+      "sha256": "bf1318b2ebead594cc0dd2408beb771aa142ed13c055af7796cd4304daa01414",
+      "bytes": 18436
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/key-check.cjs",
+      "sha256": "b63003a375470c93d60d3569791cd8ae0c756a5a9f36c89dd971259d2380af8f",
+      "bytes": 1523
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/key-result.json",
+      "sha256": "4a495b6eb7423180d2effa95307808da20cd53538400957f3d96711159f84d44",
+      "bytes": 397
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/offline-check.cjs",
+      "sha256": "c5b201651361311803fdf510321cba83248dda3cf644eb9300ef5aaa83b6ea91",
+      "bytes": 5007
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/offline-results.json",
+      "sha256": "88d4b59ceb1990a6da58ec92acc101d72b7c5d38eedaa2af0d499d49b98b5d4a",
+      "bytes": 1534
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/prior-source-compatibility.json",
+      "sha256": "42267a9d637bb81a98f12d6156119aa4aba272eeddd29ce1870801c93fb72943",
+      "bytes": 1495
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/read-coverage.json",
+      "sha256": "9e61a733176cbd3de7987c98b94ace84e23e5924a5aeb5c095516c9c4488e84f",
+      "bytes": 10876
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/read-log.jsonl",
+      "sha256": "596406844e044f6c1ba707b114126840f1a1a7f1bd023f6e4032a0c6433a7cff",
+      "bytes": 5694
+    },
+    {
+      "path": "/tmp/aimy-20261014-aions-planning/read.py",
+      "sha256": "06f9cfd1db6269990f57be6ef90383790d5c1c38c2c1687f6e439ab78a484eb3",
+      "bytes": 680
+    }
+  ]
+}

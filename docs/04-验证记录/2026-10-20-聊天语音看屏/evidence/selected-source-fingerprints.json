@@ -1,0 +1,41 @@
+{
+  "note": "Selected entry points only; not a complete turn diff. Earlier user edits preserved.",
+  "files": {
+    "apps/stage-tamagotchi/src/renderer/App.vue": {
+      "before": "8cbed5cd92244038fadc7660a5a7a5614c3a5a673797e2a5899a11fad5539d1a",
+      "after": "9f608d1948371b80ac1b5635cbc0bcc3eb46da994f2ddd245be57ce5312a31ac"
+    },
+    "apps/stage-tamagotchi/src/renderer/pages/chat.vue": {
+      "before": "1f22654edc0c7d655fffbf9c34f5f1729f65112cb3678286cbc3774aa4ffefc6",
+      "after": "594a02171f2e1de98f3158250c16c8e4e5cc757f9a253f2e18d20fbc8f92e225"
+    },
+    "apps/stage-tamagotchi/src/renderer/pages/chat-floating.vue": {
+      "before": "8d61dcd36df3f0f90f6054d47fde1838e4ea506ed2dd3dbb47fa8043cc0376b2",
+      "after": "a32d01fd95e9c8c3fd027eb07ea917d3eff299dde2a14f72e33e3a1c2610ec81"
+    },
+    "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue": {
+      "before": "86014f01e85cd166c5ef00c50708a5f627d0735b9c1e61850225f3bb249078c8",
+      "after": "91eb2db5e8ddbc294bfb1030098d63903b3fa934deaf4ff448c8793163cd53cf"
+    },
+    "apps/stage-tamagotchi/src/main/services/aimy/provider-secrets.ts": {
+      "before": "813568728a3c51042b83ab70d99b1455f9ff5703f970a091df58ae9218cab12e",
+      "after": "5867d92fca421befa0a344c79149578fc386b2be13a0c2a865ef759aff39fd4c"
+    },
+    "packages/stage-ui/src/stores/providers/provider.ts": {
+      "before": "68b37e03da94b78e1732b30e716e800e210450716014a867ee3a022ff38bb621",
+      "after": "0b400d9e2434029f1330ea0d6499f007e43b58873dd773d57748461e56cfb5ec"
+    },
+    "packages/stage-ui/src/stores/chat.ts": {
+      "before": "701e1d42e3ac7062f18b3960d9f4f7dd5600f68a9a952352ed895760234ff62a",
+      "after": "40efec25d27c95f463c45d409e7cc75f44e8946f69ff958978acf7dc3e0f0df3"
+    },
+    "packages/stage-ui/src/stores/modules/speech.ts": {
+      "before": "660d1ea37b869c5c57d2efd0252f744c02219de46693c4567af632f32e58b20f",
+      "after": "f06aadd38c0be2c254f562a955b9013f75ff7ea44cdb5216fc60b270da095dd8"
+    },
+    "packages/provider-inference/src/providers/cloud/mimo-audio/index.ts": {
+      "before": "570faa1d18b5bf8591c4cdb412707a3b66d7bc234355f5e46ff8e26d5e00abee",
+      "after": "549cd138130b09e3d1a2dee33b452f79c4c6a1f7d16c00e2419afdc8e4648c2b"
+    }
+  }
+}

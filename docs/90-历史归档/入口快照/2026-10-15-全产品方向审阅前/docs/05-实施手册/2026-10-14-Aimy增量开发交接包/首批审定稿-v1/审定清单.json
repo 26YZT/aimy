@@ -1,0 +1,222 @@
+{
+  "version": "first-increment-review-v1",
+  "date": "2026-10-15",
+  "status": "awaiting_final_approval_after_clarification",
+  "implementation_authorized": false,
+  "real_model_calls": 0,
+  "items": [
+    {
+      "review_id": "R1",
+      "subject": "复用/存储",
+      "proposal": "AIRI sole owner + bounded Aions/Ryza rules + same IndexedDB envelope",
+      "status": "approved",
+      "answer": "A．认可，按这份复用清单接入并验证（推荐）",
+      "confirmed_by": "user",
+      "confirmed_on": "2026-10-15",
+      "source_question_call_id": "call_a545dd8babe447749f24078a07dc3819",
+      "approved_scope": "沿用AIRI既有底座和本地保存，按本稿AionsHome/Ryza有界复用清单适配、补齐可靠性并验证；仅此项方案认可",
+      "implementation_authorized": false
+    },
+    {
+      "review_id": "R2",
+      "subject": "初始化/启用",
+      "proposal": "afterModelSteps, skippable profile, new-only activation/journal",
+      "status": "approved",
+      "answer": "第2/3/4项均选A：先配置模型、资料可跳过，默认自动记忆可暂停，恢复只处理新聊天不补记暂停期间",
+      "approved_parts": [
+        {
+          "question_number": 2,
+          "part_id": "onboarding_sequence",
+          "status": "approved",
+          "answer": "A．先配好聊天模型，再填可跳过的资料，然后开始聊天（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_87c1cd2616044c6eb148a909026d3e57",
+          "scope": "只确认模型配置在前、可跳过的初始资料在后；默认启用等细节未因此获批"
+        },
+        {
+          "question_number": 3,
+          "part_id": "automatic_memory_default",
+          "status": "approved",
+          "answer": "A．默认开启，首次简短说明；用户可在“关于我”暂停（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_2fd6fe65d47046f2ae8db75573a2efa5",
+          "scope": "新用户完成首次设置后自动记忆默认开启、首次简短告知、关于我可暂停；只处理开启后新聊天，默认开关确认不扩为整包实施授权"
+        },
+        {
+          "question_number": 4,
+          "part_id": "pause_resume_backfill",
+          "status": "approved",
+          "answer": "A．不补记，只整理重新开启后的新聊天（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_aeaf821aad3342fba4da6ec17b59e4fb",
+          "scope": "普通聊天记录保留；自动记忆恢复后不补记暂停期间，只整理恢复后新聊天"
+        }
+      ],
+      "pending_parts": [],
+      "confirmed_default": {
+        "new_user_enabled": true,
+        "first_use_notice": true,
+        "pause_entry": "关于我"
+      },
+      "approved_scope": "首次流程、默认开关与暂停恢复规则；不代表技术schema全文冻结、整包通过或产品开工",
+      "confirmed_pause_resume": {
+        "backfill_paused_chats": false,
+        "future_new_chats_only": true
+      },
+      "implementation_authorized": false
+    },
+    {
+      "review_id": "R3",
+      "subject": "查看/维护",
+      "proposal": "About Me collapsed maintenance; product-owned selective dependency cleanup; no customer impact-set decision; chat retained",
+      "status": "approved_with_user_correction",
+      "answer": "第5项A；第6题撤回并按用户更正取消关联判断输入",
+      "approved_parts": [
+        {
+          "question_number": 5,
+          "part_id": "maintenance_entry_placement",
+          "status": "approved",
+          "answer": "A．平时以查看为主，展开“资料维护”后才显示修改、移除操作（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_311fd5562a1a48a68c80dcc22abcdf1a",
+          "scope": "关于我默认以查看为主，折叠资料维护内显示修改/移除；日常自动记忆和自然聊天纠正；处理记忆并保留聊天原文"
+        },
+        {
+          "question_number": 6,
+          "part_id": "dependent_memory_removal",
+          "question_status": "withdrawn_after_user_correction",
+          "status": "confirmed_custom_requirement",
+          "chosen_option": null,
+          "answer": "不希望用户需要这种输入，让用户进行判断",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_bc84b3049820442f9639a6df6bf86b2d",
+          "interpretation": "不让产品使用者判断记忆关联或选择影响集合；产品承担关联清理职责",
+          "implementation_proposal": "host自动处理目标事实单元及真实派生依赖，保留其他独立记忆/聊天；同源不等于依赖，未知派生先保留隔离自动修复",
+          "implementation_authorized": false
+        }
+      ],
+      "pending_parts": [],
+      "confirmed_maintenance_entry": "collapsed_data_maintenance",
+      "implementation_authorized": false,
+      "approved_scope": "已选折叠维护入口；用户明确不负责关联判断。自动清理算法为据此修订的待实施技术提案，不冒称用户选A/B或schema冻结",
+      "customer_dependency_judgment_required": false
+    },
+    {
+      "review_id": "R4",
+      "subject": "环境/隔离",
+      "proposal": "verify installed Node24.20/pnpm11.24 then align declaration, isolated profile without migration",
+      "status": "pending_user_review",
+      "answer": null
+    },
+    {
+      "review_id": "R5",
+      "subject": "工程/评测",
+      "proposal": "engineering hard gates + retained 8 materials, STEP_01 target proposal, campaign-wide CNY10",
+      "status": "partially_approved",
+      "answer": null,
+      "approved_parts": [
+        {
+          "question_number": 7,
+          "part_id": "acceptance_walkthrough_mode",
+          "status": "approved",
+          "answer": "A．由你先跑8例及AIRI对照、整理结果；我再实际试聊确认（推荐）",
+          "confirmed_by": "user",
+          "confirmed_on": "2026-10-15",
+          "source_question_call_id": "call_4219f9452d3d43eca631176a51431e7b",
+          "scope": "功能做好并满足执行条件后，助手先跑既定8例及原AIRI同条件对照，整理结果/问题，用户再实际试聊；案例、模型、¥10一次总额不变；当前不实施或调用"
+        }
+      ],
+      "pending_parts": [
+        "final_handoff_including_goal_card"
+      ],
+      "confirmed_acceptance_roles": {
+        "assistant": "run retained eight scenarios and same-condition AIRI comparison, report evidence and problems",
+        "user": "actual trial chat and final experience acceptance"
+      },
+      "implementation_authorized": false
+    }
+  ],
+  "already_confirmed_decisions": "parent 审定账本.json decisions preserved; no re-asking or assumed approval",
+  "formal_assets_and_voice": "deferred_without_implicit_choice",
+  "review_mode": "one_plain_language_question_at_a_time",
+  "progress": {
+    "approved_review_ids": [
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "remaining_review_ids": [
+      "R4",
+      "R5"
+    ],
+    "next_review_id": "FINAL_HANDOFF",
+    "next_question_part": "implementation_scope_approval",
+    "note": "仅第7项验收分工获准；R4工程安排与完整目标卡/开工授权等待最终整包审定",
+    "approved_question_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "partially_approved_review_ids": [
+      "R5"
+    ],
+    "next_question_number": 8,
+    "withdrawn_question_numbers": [
+      6
+    ]
+  },
+  "handoff_revision": 2,
+  "final_review": {
+    "question_number": 8,
+    "status": "clarification_answered_awaiting_approval",
+    "answer": null,
+    "summary_entry": "最终审定摘要.md",
+    "implementation_authorized": false,
+    "scope_if_approved": {
+      "product_root": "/Users/mima1234/Documents/aimy/aimy-app",
+      "task_ids": [
+        "BASE-01",
+        "LIFE-01",
+        "LOCAL-01",
+        "SRC-01",
+        "MEM-01",
+        "MEM-02",
+        "MEM-03",
+        "INT-01",
+        "EXP-01"
+      ],
+      "task_order": "baseline/brand -> lifecycle -> local data -> sources -> memory storage -> extraction/model policy -> recall/UI -> integration -> acceptance",
+      "file_boundary": "文件边界.json",
+      "api_contract_proposal_version": 3,
+      "evaluation_goal_card": "06-验收与评测目标.md STEP_01 proposal",
+      "paid_evaluation": "only when relevant evaluation-stage prerequisites and runtime setup are ready; one CNY10 shared campaign cap",
+      "exclusions": [
+        "old Aimy code/data mixing",
+        "unrequested dependency/tool upgrade or data migration/clear",
+        "background proactive feature",
+        "new screen/voice/character-asset features",
+        "git stage/commit/push or release"
+      ]
+    },
+    "clarification_request": {
+      "question_number": 8,
+      "source_question_call_id": "call_4520b5bbb5924d58ac32fb6dec07625b",
+      "date": "2026-10-15",
+      "response_type": "clarification_request_not_approval",
+      "user_questions": [
+        "这个顺序是怎么判断出来的：品牌与必要保护 → 复用规则、自动记忆和相关回忆 → 8例与AIRI对照 → 本人实际试聊",
+        "只在aimy-app开发具体位置；沿用AIRI源码增量还是参照复刻后再新增"
+      ],
+      "clarification": "品牌为现有收尾与基线管理顺序，不是记忆算法技术依赖；可靠数据/来源/取消保护是硬前置；每步都测，8例为整合后的完整对照；直接在已继承AIRI的aimy-app原代码上增量，候选仅有界移植",
+      "implementation_authorized": false
+    }
+  }
+}

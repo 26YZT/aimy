@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/manager.ts",
+    "sha256": "99ac0d163d6e154ea7b72b51abcea4ddd1cdc3d2921a2085bdc7b74778e39bf5",
+    "start": 1,
+    "end": 151,
+    "symbol": "whole original TypeScript module transpiled",
+    "scope": "original types/merge/manager; only Date.now clock boundary"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/merge.ts",
+    "sha256": "0f7632c172c9340c3d76b6a11a35ebb02151f10ab4a4eb6518a64839d289ef68",
+    "start": 1,
+    "end": 247,
+    "symbol": "whole original TypeScript module transpiled",
+    "scope": "original types/merge/manager; only Date.now clock boundary"
+  },
+  {
+    "path": "/Users/mima1234/Documents/aimy/aimy-app/services/computer-use-mcp/src/task-memory/types.ts",
+    "sha256": "497b40b242dc7716753aa8c33277ca8aa25bce96b4af46761652f5bc6ba439a7",
+    "start": 1,
+    "end": 75,
+    "symbol": "whole original TypeScript module transpiled",
+    "scope": "original types/merge/manager; only Date.now clock boundary"
+  }
+]

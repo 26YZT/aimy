@@ -1,0 +1,16 @@
+[
+  {
+    "id": "voicevox",
+    "version": "0.25.2",
+    "archiveBytes": 1797890158,
+    "sha256": "6bd492249ac83c119f6fe38f2e44804e83ebc2c7f75295b21715080beb673a28",
+    "verifiedBeforeExtraction": true
+  },
+  {
+    "id": "aivis",
+    "version": "1.2.0",
+    "archiveBytes": 203306908,
+    "sha256": "581a7f34afb2c5343ff8b27d6d88859083375868607657de95fad506939185df",
+    "verifiedBeforeExtraction": true
+  }
+]

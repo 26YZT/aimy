@@ -1,0 +1,132 @@
+{
+  "root": "/Users/mima1234/Documents/aimy/aimy-app",
+  "aimyHEAD": "b851ef3334320d13dd86cb8cafb449a70d154c9b",
+  "files": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/pages/index.vue",
+      "sha256": "9947b73be7d6c82091fae1bf4fb61281027be3e44716d1bfdbe2d3fe7420c8ad",
+      "lines": 564,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24",
+      "lines": 235,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/shared/window.ts",
+      "sha256": "0177efae28ac89c3e93b52b67b788187e2787c1a0d00f4baf7a1faf35d778d6f",
+      "lines": 186,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/shared/display.ts",
+      "sha256": "b262940da90c17e1fb36412c18fd78781518880a1cecdbae635967c7c4f79e1f",
+      "lines": 377,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/services/electron/window.ts",
+      "sha256": "f8bf0f7ba798dd7f1221bc0d78c6287e52cfa0546db014ebc2a65a3f59731ce6",
+      "lines": 124,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/renderer/utils/fade-on-hover.ts",
+      "sha256": "a831bd99e1115cf7b258d84b4d74fc00c063eeb27e062c6bee6eec2bec283809",
+      "lines": 43,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+      "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856",
+      "lines": 453,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "lines": 1065,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+      "sha256": "e905772d5c74dcd6b2f7d858e6d504c5d23c2ff2565c77409e11353e85db7014",
+      "lines": 102,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt.ts",
+      "sha256": "12718b37961e2749bd3b4e8f7bea6d0ae9137aef6c2462bc46ab2dd2d61ce782",
+      "lines": 383,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/controller.ts",
+      "sha256": "9b4e8c35b5319c0c50b62832630c232cdae80f5785a191a368cb6c9aa48bdab2",
+      "lines": 285,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+      "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7",
+      "lines": 358,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "lines": 1318,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio/src/speech-pipeline.ts",
+      "sha256": "485b4bde5fbb8a94ce897ae0144a7868a37d11935cb98e423c988a1965c9d83a",
+      "lines": 479,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/pipelines-audio/src/managers/playback-manager.ts",
+      "sha256": "a666975b1fb75d4e98be55245d2b83f2ae8c50a831b7c08cf020a32668fd1b1c",
+      "lines": 426,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenes/Stage.vue",
+      "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7",
+      "lines": 760,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+      "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e",
+      "lines": 324,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+      "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7",
+      "lines": 150,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+      "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa",
+      "lines": 131,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de",
+      "lines": 16,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+      "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9",
+      "lines": 24,
+      "review": "selected excerpts and cross references; memory page and stub full"
+    }
+  ]
+}

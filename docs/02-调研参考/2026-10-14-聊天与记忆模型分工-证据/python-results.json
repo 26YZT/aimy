@@ -1,0 +1,61 @@
+{
+  "kind": "isolated_original_ast_dispatch",
+  "real_model_calls": 0,
+  "real_credentials_read": false,
+  "checks": [
+    {
+      "name": "aions_profile_codex_uses_its_configured_model",
+      "passed": true
+    },
+    {
+      "name": "aions_profile_codex_does_not_use_chat_slot",
+      "passed": true
+    },
+    {
+      "name": "aions_profile_original_route_uses_separate_config",
+      "passed": true
+    },
+    {
+      "name": "aions_missing_profile_config_fails_before_call",
+      "passed": true
+    },
+    {
+      "name": "aions_compression_passes_the_explicit_model_per_call",
+      "passed": true
+    },
+    {
+      "name": "kirara_distinct_llm_blocks_can_route_to_distinct_models",
+      "passed": true
+    },
+    {
+      "name": "kirara_unspecified_block_uses_default_text_model",
+      "passed": true
+    },
+    {
+      "name": "kirara_unknown_explicit_model_does_not_silently_fallback",
+      "passed": true
+    }
+  ],
+  "calls": [
+    {
+      "route": "codex",
+      "model": "fake-profile-A",
+      "timeout": 60,
+      "use_chat_slot": false
+    },
+    {
+      "route": "sentinel",
+      "model": "fake-profile-B",
+      "timeout": 60
+    },
+    {
+      "route": "compression",
+      "model": "fake-compression-A"
+    },
+    {
+      "route": "compression",
+      "model": "fake-compression-B"
+    }
+  ],
+  "scope": "Original selected dispatch functions; config, parser and remote calls replaced by synthetic stubs. Not semantic memory quality."
+}

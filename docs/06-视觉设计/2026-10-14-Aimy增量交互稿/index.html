@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aimy · 增量交互设计稿</title><link rel="stylesheet" href="../2026-10-13-AIRI交互风格库-v3/tokens.css"><link rel="stylesheet" href="preview.css"></head>
+<body>
+<header class="review"><a href="DESIGN.md">Aimy · 增量交互稿</a><span>示例数据 · 不连接模型或设备</span><button id="theme" aria-label="切换深色主题">深色</button></header>
+<div class="window"><div class="titlebar"><div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div><span>Aimy 设置</span><span class="local">本地优先</span></div>
+<div class="app"><aside><div class="identity"><img src="../2026-10-13-AIRI交互风格库-v3/assets/aimy-icon-64.png" alt=""><div><strong>Aimy</strong><small>一个角色，继续相处</small></div></div><nav aria-label="设置分类"><button data-page="memory" aria-current="page">记忆</button><button data-page="vision">看屏陪伴</button><button data-page="voice">语音与安静</button><button data-page="diagnostics">诊断与数据</button></nav><p class="aside-note">保留 AIRI 设置结构<br>新增内容设计提案</p></aside>
+<main>
+<section id="memory" class="page"><div class="page-title"><div><p class="eyebrow">设置 / 记忆</p><h1>记住相处中的小事</h1><p>以后聊到相关话题时，她能自然想起来。</p></div></div>
+<div class="row"><div><h2>自动保存重要记忆</h2><p>只保存有来源的用户事实，不需要每次确认。你随时可以改错或删除。</p></div><button role="switch" aria-checked="true" aria-label="自动保存重要记忆" class="switch" id="memory-switch"></button></div>
+<div class="row"><div><h2>轻主动续聊</h2><p>空闲时可以先开口。建议至少间隔15分钟、最近24小时最多12次；关闭后仍能在你的对话里提起相关记忆。</p></div><button role="switch" aria-checked="false" aria-label="轻主动续聊" class="switch" id="pro-switch"></button></div>
+<div class="list-heading"><h2>她记住的事 <span id="memory-count">3</span></h2><label class="search"><span class="sr">搜索记忆</span><input id="search" type="search" placeholder="搜索称呼、偏好或经历"></label></div>
+<div id="memory-list"></div><p class="empty" id="empty" hidden>暂时没有符合条件的记忆。正常聊天后，有来源的重要事实会出现在这里。</p>
+<div class="notice" id="memory-notice" role="status">仅在这份网页中演示，刷新会恢复示例。</div><label class="fixture"><input type="checkbox" id="save-error">演示下一次保存失败</label>
+</section>
+<section id="vision" class="page" hidden><p class="eyebrow">设置 / 看屏陪伴</p><h1>间隔看一眼</h1><p>只看你选择的窗口或屏幕。采集、理解和开口分别控制。</p>
+<div class="row"><div><h2>分享来源</h2><p>此处只演示选择，不打开系统录屏。</p></div><select id="source" aria-label="分享来源"><option>窗口：示例游戏</option><option>屏幕：示例桌面</option></select></div>
+<div class="row"><div><h2>观察间隔</h2><p>建议初值，需在真实费用和体验验证后校准。</p></div><select id="interval" aria-label="观察间隔"><option value="30">每 30 秒</option><option value="60" selected>每 60 秒</option><option value="180">每 3 分钟</option></select></div>
+<div class="observation"><div><span class="label">当前状态</span><h2 id="screen-state">未开始观察</h2><p id="screen-detail">系统授权与本次观察状态分别显示。</p></div><div class="actions"><button class="primary" id="screen-start">开始观察预览</button><button id="screen-stop" disabled>停止观察</button></div></div>
+<dl class="facts"><div><dt>系统授权</dt><dd id="screen-permission">未申请（模拟）</dd></div><div><dt>分享来源</dt><dd id="screen-source">尚未分享</dd></div><div><dt>本次理解</dt><dd id="inferences">0 次（模拟）</dd></div><div><dt>费用</dt><dd>尚无费用数据</dd></div></dl>
+<div class="notice" id="budget-summary" role="status">自动理解上限20次 / 最近1小时（建议初值） · 已用0 · 剩余20。达到后暂停，最早额度释放时可恢复。</div>
+<div class="notice">原始截图默认不长期保存；开启看屏不授予电脑操作权限。</div><div class="fixtures"><label class="fixture"><input type="checkbox" id="deny">演示权限被拒绝</label><button id="budget">演示预算耗尽</button><button id="late">演示迟到结果</button><button id="reset-budget">重置示例预算</button></div><p id="vision-receipt" role="status"></p>
+</section>
+<section id="voice" class="page" hidden><p class="eyebrow">设置 / 语音与安静</p><h1>想说话时，她在这里</h1><p>连续语音沿用 AIRI 管线。有效插话停止旧回复；真实效果需麦克风和扬声器验收。</p>
+<div class="row"><div><h2>连续聆听</h2><p id="mic-detail">系统授权：未申请（模拟） · 当前：未在聆听</p></div><button class="primary" id="mic-toggle">开始聆听预览</button></div>
+<div class="row"><div><h2>安静模式</h2><p>不主动开口；保留你主动发问。看屏自动推理暂停。</p></div><button role="switch" aria-checked="false" aria-label="安静模式" class="switch" id="quiet"></button></div>
+<div class="row"><div><h2>停止所有感知</h2><p>停止当前麦克风和看屏；不代表撤销 macOS 系统授权。</p></div><button id="stop-all">停止所有感知</button></div>
+<div class="semantics"><h2>收起聊天和隐藏角色是两件事</h2><p>收起聊天：她继续留在桌面，已授权语音可继续。</p><p>隐藏角色 / 最小化 / 退出：停止感知和旧输出。恢复后由你重新开启。</p><div class="actions"><button id="collapse">演示收起聊天</button><button id="hide-stage">演示隐藏角色</button><button id="restore-stage" disabled>恢复显示（仍暂停）</button></div><p id="window-state" role="status">角色可见 · 聊天展开</p></div>
+</section>
+<section id="diagnostics" class="page" hidden><p class="eyebrow">设置 / 诊断与数据</p><h1>知道她现在在做什么</h1><p>调用次数、延迟和取消结果可定位问题，不显示真实密钥或采集内容。</p><dl class="facts"><div><dt>对话模型</dt><dd>尚未选择正式版本</dd></div><div><dt>语音体验</dt><dd>待真实设备验证</dd></div><div><dt>数据去向</dt><dd>本地；云模型输入另说明</dd></div><div><dt>原始音频 / 截图</dt><dd>默认不长期保存</dd></div></dl><div class="notice">产品代码尚未接入这些状态。这份设计稿的“成功”仅是交互演示。</div><p><a href="../../05-实施手册/2026-10-14-Aimy增量开发交接包/README.md">查看开发交接包</a></p></section>
+</main></div></div>
+<dialog id="detail"><form method="dialog"><button class="close" aria-label="关闭来源详情">×</button></form><h2>这条记忆的来源</h2><p id="detail-fact"></p><blockquote id="detail-source"></blockquote><p class="muted" id="detail-date">来源日期 · 示例会话 · 用户消息</p><p>人工编写的示例，非你的真实聊天记录。</p><button id="detail-close">返回记忆</button></dialog>
+<dialog id="edit"><h2>纠正记忆</h2><form id="edit-form"><label for="edit-text">现在应该记住什么</label><textarea id="edit-text" rows="3" required maxlength="300"></textarea><p class="muted">保存后旧版本不再作为当前事实使用；来源与更正保留关联。</p><div class="actions"><button type="button" data-close="edit">取消</button><button type="submit" class="primary">保存更正</button></div><p id="edit-error" role="alert"></p></form></dialog>
+<dialog id="remove"><h2>删除这条记忆？</h2><p id="remove-fact"></p><p>关联的已知历史来源不会在后台把它重新保存。聊天正文默认保留。</p><label class="check"><input id="delete-source" type="checkbox">同时删除已知来源聊天</label><p class="muted">这会删除来源消息并作废相关派生内容。无法替你擦除外部模型或未知同义记录。</p><div class="actions"><button data-close="remove">取消</button><button id="confirm-remove" class="danger">删除记忆</button></div></dialog>
+<div id="toast" role="status" aria-live="polite" hidden></div><script src="preview.js"></script>
+</body></html>

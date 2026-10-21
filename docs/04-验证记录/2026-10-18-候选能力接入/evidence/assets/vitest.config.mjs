@@ -1,0 +1,1 @@
+export default {root:'/Users/mima1234/Documents/aimy/aimy-app',envDir:false,test:{exclude:['**/*.browser.test.ts'],include:['packages/stage-ui/src/services/companion/workflow.test.ts','packages/stage-ui/src/models/vrm-inspection*.test.ts']}}

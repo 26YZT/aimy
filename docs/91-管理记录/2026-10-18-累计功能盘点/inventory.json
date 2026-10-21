@@ -1,0 +1,5141 @@
+{
+  "summary": {
+    "date": "2026-10-18",
+    "timezone": "Asia/Shanghai",
+    "scope": "当前Mac体验版及其累计增量，按用户功能归并；不纳入旧digital-lover独立样机为当前来源",
+    "app": "/Users/mima1234/Applications/Aimy体验版.app",
+    "version": "0.12.0-beta.5+aimy.20261018.1",
+    "package_sha256": "48bc90b5efd5a72aa1a7366945e0aa4ae7b1538ef325eddfbcf3e6f344f8c2d0",
+    "categories": {
+      "沿用AIRI": 39,
+      "真正新增的操作或机制": 15,
+      "适配增强与修复": 17,
+      "未完整接入、未开放或排除": 21
+    },
+    "counts_are_not_completion_or_win_rates": true,
+    "coverage": {
+      "baseline_desktop_entries": 100,
+      "later_audit_entries": 84,
+      "candidate_records": 55,
+      "ecosystem_entries": 76,
+      "provider_reference_rows": 73,
+      "excluded_legacy_rows": 58
+    },
+    "product_code_modified": false,
+    "installed_app_modified": false,
+    "private_profile_read": false,
+    "model_calls": 0,
+    "unresolved_source_paths": []
+  },
+  "evidence_catalog": {
+    "S1": "docs/02-调研参考/2026-10-10-AIRI与Aimy完整功能清单.json",
+    "S2": "docs/02-调研参考/2026-10-14-AIRI现状能力清单.json",
+    "S3": "docs/04-验证记录/2026-10-15-首批增量开发/implementation-mapping.md",
+    "S4": "docs/04-验证记录/2026-10-16-首批接口与离线对照/README.md",
+    "S5": "docs/04-验证记录/2026-10-16-真实模型验收/README.md",
+    "S6": "docs/05-实施手册/2026-10-18-候选能力接入/实际文件与接口.md",
+    "S7": "docs/04-验证记录/2026-10-18-新增能力与原版AIRI对照/README.md",
+    "S8": "docs/04-验证记录/2026-10-18-体验版更新/README.md",
+    "S9": "docs/02-调研参考/2026-10-14-五项目功能增量与验证裁决.json",
+    "S10": "docs/04-验证记录/2026-10-16-真实模型验收入口/README.md",
+    "S11": "docs/00-当前方向/产品总纲与当前路线.md"
+  },
+  "entries": [
+    {
+      "id": "A01",
+      "category": "沿用AIRI",
+      "name": "桌面角色、置顶与跨工作区",
+      "user_experience": "桌面上显示角色，可设为置顶；不等于最小化后另留一个角色窗口",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-001",
+        "AIRI-D-003"
+      ],
+      "audit_ids": [
+        "A01"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+        "apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+        "apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/index.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A02",
+      "category": "沿用AIRI",
+      "name": "拖动、缩放、位置恢复与多屏定位",
+      "user_experience": "调整人物窗口位置和大小；显示器热插拔等情况仍待实测",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-002"
+      ],
+      "audit_ids": [
+        "A05"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+        "apps/stage-tamagotchi/src/main/tray/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A03",
+      "category": "沿用AIRI",
+      "name": "透明区穿透与悬停淡出",
+      "user_experience": "尽量不挡住其他应用，鼠标悬停时可淡出",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-004",
+        "AIRI-D-005"
+      ],
+      "audit_ids": [
+        "A02"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+        "apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/controls-island-fade-on-hover.vue",
+        "apps/stage-tamagotchi/src/renderer/utils/fade-on-hover.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A04",
+      "category": "沿用AIRI",
+      "name": "经典/悬浮聊天、折叠与草稿",
+      "user_experience": "可换聊天显示方式、收起聊天；未发送草稿有交接逻辑",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-006",
+        "AIRI-D-024"
+      ],
+      "audit_ids": [
+        "A03"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/main/windows/chat/index.ts",
+        "apps/stage-tamagotchi/src/main/windows/chat/floating.ts",
+        "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+        "apps/stage-tamagotchi/src/main/windows/chat/mode-switch.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A05",
+      "category": "沿用AIRI",
+      "name": "全局快捷键与快速聊天",
+      "user_experience": "快捷键唤起快速输入窗口；键位冲突未全面测试",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-007"
+      ],
+      "audit_ids": [
+        "A06"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/settings/system/window-shortcuts.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/spotlight.vue",
+        "apps/stage-tamagotchi/src/main/services/electron/global-shortcut.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A06",
+      "category": "沿用AIRI",
+      "name": "语音输入浮层与字幕窗",
+      "user_experience": "在单独小窗查看听写或字幕",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-008",
+        "AIRI-D-009"
+      ],
+      "audit_ids": [
+        "A04"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/inlay/index.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/caption.vue",
+        "apps/stage-tamagotchi/src/main/windows/caption/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A07",
+      "category": "沿用AIRI",
+      "name": "托盘、隐藏重显与退出",
+      "user_experience": "从托盘管理窗口；退出保存保护另见C06",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "已做指定版本正常启动/退出；未覆盖所有托盘动作",
+      "baseline_ids": [
+        "AIRI-D-010"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/main/tray/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A08",
+      "category": "沿用AIRI",
+      "name": "资源下载、加载进度与失败状态",
+      "user_experience": "加载人物或其他资源时看到进度和状态",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-011"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/components/stage-islands/resource-status-island/index.vue",
+        "apps/stage-tamagotchi/src/renderer/stores/resources.ts",
+        "packages/stage-ui/src/stores/startup-resources.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A09",
+      "category": "沿用AIRI",
+      "name": "多轮文字聊天与流式回复",
+      "user_experience": "回复逐步显示；支持原模型调用协议和上下文组织",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "原版/Aimy均有真实文字回复证据；不代表所有模型均通过",
+      "baseline_ids": [
+        "AIRI-D-012"
+      ],
+      "audit_ids": [
+        "B01",
+        "B02",
+        "B04",
+        "B08"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/chat.ts",
+        "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A10",
+      "category": "沿用AIRI",
+      "name": "多会话、本地聊天记录与恢复",
+      "user_experience": "新建、切换聊天，保存历史并在以后继续",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "已有独立资料退出/恢复工程证据；私人历史未检查",
+      "baseline_ids": [
+        "AIRI-D-013",
+        "AIRI-D-015"
+      ],
+      "audit_ids": [
+        "F01"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/chat/components/sessions-drawer.vue",
+        "packages/stage-ui/src/stores/chat/session-store.ts",
+        "packages/stage-ui/src/database/repos/chat-sessions.repo.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A11",
+      "category": "沿用AIRI",
+      "name": "删除消息与会话",
+      "user_experience": "删除单条或整段聊天；与新增记忆来源的关联保护另见C04",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-014"
+      ],
+      "audit_ids": [
+        "F02"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/chat/components/sessions-list.vue",
+        "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+        "packages/stage-ui/src/stores/chat/session-store.ts",
+        "packages/stage-pages/src/pages/settings/data/components/chats-section.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A12",
+      "category": "沿用AIRI",
+      "name": "复制、引用、重生成与停止回答",
+      "user_experience": "复制消息、引用回复、让她重答或停止生成",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "停止/旧结果保护有工程验证；所有剪贴板/分支交互未逐项验",
+      "baseline_ids": [
+        "AIRI-D-016",
+        "AIRI-D-017",
+        "AIRI-D-018"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/chat/components/action-menu/index.vue",
+        "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/stage-layouts/src/composables/use-chat-interruption.ts",
+        "packages/stage-ui/src/stores/speech-output-control.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A13",
+      "category": "沿用AIRI",
+      "name": "Markdown、代码与引用显示",
+      "user_experience": "显示格式化文本、代码块和引用信息",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "界面实现保留；显示引用不等于来源真实",
+      "baseline_ids": [
+        "AIRI-D-019"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/chat/components/assistant-item.vue",
+        "packages/stage-ui/src/components/scenarios/chat/components/response-citations.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A14",
+      "category": "沿用AIRI",
+      "name": "图片聊天",
+      "user_experience": "附图片、预览图片，并交给支持视觉的模型",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；需支持图片的模型",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "主链存在，当前真实图片理解质量未系统验收",
+      "baseline_ids": [
+        "AIRI-D-020"
+      ],
+      "audit_ids": [
+        "B03"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/chat/composables/use-chat-images.ts",
+        "packages/stage-ui/src/components/scenarios/chat/components/image-attachment-preview.vue",
+        "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+        "packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+        "packages/stage-pages/src/pages/settings/modules/vision.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A15",
+      "category": "沿用AIRI",
+      "name": "录音消息与试听",
+      "user_experience": "录制语音消息并回放，区别于持续听写模式",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；需麦克风授权/对应服务",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "未以真实录音证明完整效果",
+      "baseline_ids": [
+        "AIRI-D-021"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/chat/components/voice-input-button.vue",
+        "packages/stage-ui/src/stores/voice-messages.ts",
+        "packages/stage-ui/src/components/scenarios/chat/components/voice-message-player.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A16",
+      "category": "沿用AIRI",
+      "name": "工具调用过程、结果卡与重跑",
+      "user_experience": "查看工具执行信息；是否能执行取决于工具、服务与授权",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "UI与执行桥保留；没有把所有工具都实际调用一遍",
+      "baseline_ids": [
+        "AIRI-D-022",
+        "AIRI-D-023"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/chat/components/tool-call-block.vue",
+        "apps/stage-tamagotchi/src/renderer/components/chat-tool-renderers/journal-tool-call-block.vue",
+        "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+        "packages/stage-ui/src/stores/tool-call-rerun.ts",
+        "packages/stage-ui/src/stores/chat.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A17",
+      "category": "沿用AIRI",
+      "name": "角色卡、人设与专属模型/音色",
+      "user_experience": "编辑角色设定，选择角色及其模型和声音",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "原角色机制保留；Aimy人设补充及已知冲突见C02",
+      "baseline_ids": [
+        "AIRI-D-025",
+        "AIRI-D-026"
+      ],
+      "audit_ids": [
+        "E01"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/airi-card/components/CardEditor.vue",
+        "packages/stage-ui/src/services/airi-card-editor.ts",
+        "packages/stage-pages/src/pages/settings/airi-card/index.vue",
+        "packages/stage-ui/src/stores/modules/airi-card.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A18",
+      "category": "沿用AIRI",
+      "name": "角色卡导入导出与管理",
+      "user_experience": "ZIP导入导出、搜索、排序、删除角色卡",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码保留，所有格式兼容/恢复未全面验证",
+      "baseline_ids": [
+        "AIRI-D-027",
+        "AIRI-D-028"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/airi-card/index.vue",
+        "packages/stage-pages/src/pages/settings/airi-card/components/CardDetailDialog.vue",
+        "packages/stage-ui/src/services/airi-card-import-export.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A19",
+      "category": "沿用AIRI",
+      "name": "Live2D显示、导入与基础动作",
+      "user_experience": "显示二维角色、使用原视线/眨眼/body点击等；新增区域配置见B13",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "示例渲染及部分回调已验；正式人物、真实命中/动画质量未验",
+      "baseline_ids": [
+        "AIRI-D-030",
+        "AIRI-D-038"
+      ],
+      "audit_ids": [
+        "E04",
+        "E06"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+        "packages/stage-ui-live2d/src/components/scenes/live2d/Model.vue",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/live2d.vue",
+        "packages/stage-ui/src/features/motions/live2d/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A20",
+      "category": "沿用AIRI",
+      "name": "VRM显示与导入",
+      "user_experience": "加载三维人物；新增导入报告见B15",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "原/新同loader、同自制资产加载与形变一致；不是新渲染器更强",
+      "baseline_ids": [
+        "AIRI-D-031"
+      ],
+      "audit_ids": [
+        "E02"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+        "packages/stage-ui-three/src/components/ThreeScene.vue",
+        "packages/stage-ui-three/src/components/Model/VRMModel.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A21",
+      "category": "沿用AIRI",
+      "name": "Spine、立绘与MMD角色",
+      "user_experience": "保留这些人物格式的渲染/导入分支",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：相关分支；需合适资源/可选依赖",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "未逐格式真实模型验收，不承诺功能等同VRM/Live2D",
+      "baseline_ids": [
+        "AIRI-D-032",
+        "AIRI-D-033",
+        "AIRI-D-034"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/spine.vue",
+        "packages/stage-ui/src/components/scenes/Stage.vue",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/tachie.vue",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/mmd.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A22",
+      "category": "沿用AIRI",
+      "name": "模型库、大小位置、相机和灯光",
+      "user_experience": "管理模型并调画面，不同格式提供的参数不同",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "VRM部分导入流程已实测；其他格式/控件未全面验",
+      "baseline_ids": [
+        "AIRI-D-036",
+        "AIRI-D-037"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue",
+        "packages/stage-ui/src/stores/display-models.ts",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/live2d.vue",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/vrm.vue",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/mmd.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A23",
+      "category": "沿用AIRI",
+      "name": "口型、表情与动作响应",
+      "user_experience": "保留声音带口型、情绪/动作标记和原播放系统",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；依赖模型具备对应素材/绑定",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "口型/表情目标有合成资产证据；真实声音与人物协调未验",
+      "baseline_ids": [
+        "AIRI-D-039",
+        "AIRI-D-040"
+      ],
+      "audit_ids": [
+        "E03",
+        "E05",
+        "E07"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenes/Stage.vue",
+        "packages/stage-ui/src/constants/emotions.ts",
+        "packages/model-driver-lipsync/package.json"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A24",
+      "category": "沿用AIRI",
+      "name": "背景、图库、主题取色与贴纸",
+      "user_experience": "换背景、管理贴纸，沿用原配色能力；绘图服务另看A35",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "入口保留；Chromatic是原有依赖，不算新复用",
+      "baseline_ids": [
+        "AIRI-D-041",
+        "AIRI-D-042",
+        "AIRI-D-043"
+      ],
+      "audit_ids": [
+        "I02"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/scene/index.vue",
+        "packages/stage-ui/src/stores/background.ts",
+        "packages/stage-pages/src/pages/settings/airi-card/components/CardDetailDialog.vue",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/live2d.vue",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/spine.vue",
+        "packages/stage-pages/src/pages/settings/system/color-scheme.vue",
+        "packages/stage-ui/src/components/modules/stickers.vue",
+        "packages/stage-ui/src/stores/modules/stickers.ts",
+        "packages/stage-ui/src/components/scenarios/chat/components/sticker.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A25",
+      "category": "沿用AIRI",
+      "name": "麦克风与音频设备选择",
+      "user_experience": "选择输入设备并控制收听；授权默认与停止保护见C05",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；需系统权限与设备",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-044"
+      ],
+      "audit_ids": [
+        "C01"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+        "packages/stage-ui/src/components/scenarios/chat/components/voice-input-button.vue",
+        "packages/stage-ui/src/stores/settings/audio-device.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A26",
+      "category": "沿用AIRI",
+      "name": "持续语音、VAD、插话与原回声门控",
+      "user_experience": "判断讲话起止、在有效插话时停止旧回复；短句/文本回声增量见C10/C11",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；需ASR/TTS和设备",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "原主链及取消机制已核；实际误打断/延迟/噪声下效果未验",
+      "baseline_ids": [
+        "AIRI-D-045",
+        "AIRI-D-052"
+      ],
+      "audit_ids": [
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C08",
+        "C09",
+        "C10"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/voice.ts",
+        "packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+        "packages/core-agent/src/voice/input/attempt.ts",
+        "packages/core-agent/src/voice/controller.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A27",
+      "category": "沿用AIRI",
+      "name": "语音识别、听写草稿、润色与自动发送",
+      "user_experience": "把语音转成文字，可先编辑或按设置发送",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；依赖识别模型，润色可能额外调用",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "草稿与新增回声路径有工程对照；供应商实际效果未逐一验证",
+      "baseline_ids": [
+        "AIRI-D-046",
+        "AIRI-D-047",
+        "AIRI-D-048"
+      ],
+      "audit_ids": [
+        "C06",
+        "C11"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/modules/hearing.vue",
+        "packages/stage-ui/src/stores/modules/hearing.ts",
+        "packages/stage-ui/src/composables/voice-drafts.ts",
+        "packages/stage-ui/src/components/scenarios/chat/components/voice-drafts.vue",
+        "packages/stage-ui/src/libs/voice/voice-rephrase-plugin.ts",
+        "packages/stage-ui/src/composables/voice-rephrase.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A28",
+      "category": "沿用AIRI",
+      "name": "朗读、音色选择、试听与语速音调音量",
+      "user_experience": "原版已经支持这些声音设置，部分供应商支持SSML",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；需对应TTS/音色",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "原SSML函数已实跑；真正试听/各供应商参数效果待验",
+      "baseline_ids": [
+        "AIRI-D-050",
+        "AIRI-D-051"
+      ],
+      "audit_ids": [
+        "C07"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/modules/speech.vue",
+        "packages/stage-pages/src/pages/settings/providers/speech/openai-compatible-audio-speech.vue",
+        "packages/stage-ui/src/stores/modules/speech.ts",
+        "apps/stage-tamagotchi/src/renderer/components/stage-islands/controls-island/controls-island-speech-mute.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A29",
+      "category": "沿用AIRI",
+      "name": "语音/动作调试与音乐节拍跟随",
+      "user_experience": "保留ASR测试台、手柄动作、系统音频口型和BeatSync等入口",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：部分为开发/实验入口",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "没有开启真实采集；不等于默认聊天已支持所有手柄或音乐效果",
+      "baseline_ids": [
+        "AIRI-D-049",
+        "AIRI-D-055",
+        "AIRI-D-056",
+        "AIRI-D-057"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/modules/hearing.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/devtools/live2d-motion.vue",
+        "packages/stage-ui/src/features/devtools/motion/live2d/components/joystick.vue",
+        "packages/stage-ui/src/features/devtools/motion/live2d/components/keyframe-editor.vue",
+        "packages/input-gamepad-vueuse/src/index.ts",
+        "apps/stage-tamagotchi/src/renderer/features/live2d/system-audio-lipsync.ts",
+        "packages/stage-ui/src/stores/system-audio-lipsync.ts",
+        "packages/stage-pages/src/pages/settings/modules/beat-sync.vue",
+        "apps/stage-tamagotchi/src/renderer/beat-sync.main.ts",
+        "apps/stage-tamagotchi/src/main/windows/beat-sync/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A30",
+      "category": "沿用AIRI",
+      "name": "上下文、历史压缩、笔记任务与Spark事件",
+      "user_experience": "原版已有上下文摘要、内存笔记/日记/任务和外部事件反应",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：底层/部分实验链",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "原模块做过离线对照；不是完整持久用户事实库",
+      "baseline_ids": [
+        "AIRI-D-058",
+        "AIRI-D-062",
+        "AIRI-D-063"
+      ],
+      "audit_ids": [
+        "B05",
+        "F03",
+        "F04",
+        "G01",
+        "G02",
+        "G03",
+        "G06"
+      ],
+      "candidate_ids": [
+        "OL01",
+        "OL02",
+        "OL04",
+        "OL05",
+        "OL08",
+        "OL09",
+        "OL10"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/stores/chat.ts",
+        "packages/stage-ui/src/stores/chat/context-prompt.ts",
+        "packages/stage-ui/src/stores/character/notebook.ts",
+        "packages/stage-ui/src/stores/character/orchestrator/store.ts",
+        "packages/stage-ui/src/stores/mods/api/context-bridge.ts",
+        "packages/stage-ui/src/stores/character/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A31",
+      "category": "沿用AIRI",
+      "name": "授权看屏、取帧、间隔视觉分析",
+      "user_experience": "保留屏幕/窗口选择、取帧、排队和把结果交给模型的链",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：设置/开发入口，需授权和视觉模型",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "已有频率/统计设置；完整陪看/陪玩和自然开口时机未验",
+      "baseline_ids": [
+        "AIRI-D-064",
+        "AIRI-D-065"
+      ],
+      "audit_ids": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D09"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/devtools/screen-capture.vue",
+        "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/devtools/vision.vue",
+        "packages/stage-ui/src/stores/modules/vision/processing-store.ts",
+        "packages/stage-ui/src/stores/modules/vision/orchestrator.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A32",
+      "category": "沿用AIRI",
+      "name": "桌面环境光映射人物",
+      "user_experience": "按屏幕颜色影响角色光照；不等于理解屏幕内容",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；需授权且模型/平台支持",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "源码及构建保留；未逐项完成当前版本真机体验验收",
+      "baseline_ids": [
+        "AIRI-D-066"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/devtools/live2d-ambient-light.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/index.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A33",
+      "category": "沿用AIRI",
+      "name": "模型服务商目录、BYOK与配置检查",
+      "user_experience": "用自己的模型服务；保留原Provider注册和模型/音色目录",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包；需用户配置",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "所选DeepSeek有历史调用；其他供应商不因有目录就算通过",
+      "baseline_ids": [
+        "AIRI-D-067"
+      ],
+      "audit_ids": [
+        "B06",
+        "B07"
+      ],
+      "candidate_ids": [
+        "RY02",
+        "KI02",
+        "KI04",
+        "OL06"
+      ],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/providers/index.vue",
+        "packages/stage-ui/src/stores/providers/provider.ts",
+        "packages/stage-ui/src/stores/providers/config.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A34",
+      "category": "沿用AIRI",
+      "name": "MCP与插件连接框架",
+      "user_experience": "配置外部MCP、发现工具，保留插件管理和跨进程能力桥",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：MCP客户端/插件框架，部分管理为实验入口",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "不等于任意外部服务或插件都已安装/获授权",
+      "baseline_ids": [
+        "AIRI-D-069",
+        "AIRI-D-070",
+        "AIRI-D-080"
+      ],
+      "audit_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "candidate_ids": [
+        "OL13"
+      ],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/settings/modules/mcp.vue",
+        "apps/stage-tamagotchi/src/main/services/airi/mcp-servers/index.ts",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/mcp.ts",
+        "apps/stage-tamagotchi/src/renderer/App.vue",
+        "packages/stage-ui/src/stores/mcp-tool-bridge.ts",
+        "packages/stage-pages/src/pages/devtools/plugin-host.vue",
+        "packages/stage-ui/src/stores/devtools/plugin-host-debug.ts",
+        "apps/stage-tamagotchi/src/main/services/airi/plugins/index.ts",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/plugins.ts",
+        "packages/stage-ui/src/stores/plugin-host-capabilities.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A35",
+      "category": "沿用AIRI",
+      "name": "联网搜索、天气、小组件与图像服务",
+      "user_experience": "保留搜索、天气、路线示意小窗、Artistry绘图/图片日记等",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：相关入口/调用链；依赖外部服务与配置",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "未实际发送搜索/天气/绘图来验收；路线示意不是真实GIS；图像生成不是3D建模",
+      "baseline_ids": [
+        "AIRI-D-072",
+        "AIRI-D-073",
+        "AIRI-D-076",
+        "AIRI-D-077",
+        "AIRI-D-078",
+        "AIRI-D-079"
+      ],
+      "audit_ids": [
+        "H06",
+        "H07",
+        "G05"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/modules/web-search.vue",
+        "packages/stage-ui/src/stores/modules/web-search.ts",
+        "packages/stage-ui/src/tools/web-search.ts",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/weather.ts",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/weather-api.ts",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/widgets.ts",
+        "apps/stage-tamagotchi/src/main/windows/widgets/index.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/widgets.vue",
+        "apps/stage-tamagotchi/src/renderer/widgets/map/components/Map.vue",
+        "apps/stage-tamagotchi/src/renderer/widgets/artistry/components/Comfy.vue",
+        "packages/stage-pages/src/pages/settings/modules/artistry.vue",
+        "packages/stage-ui/src/stores/modules/artistry.ts",
+        "packages/stage-pages/src/pages/settings/airi-card/components/tabs/CardCreationTabArtistry.vue",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/image-journal.ts",
+        "apps/stage-tamagotchi/src/main/services/airi/widgets/artistry-bridge.ts",
+        "packages/stage-ui/src/stores/modules/artistry-autonomous.ts",
+        "packages/stage-ui/src/stores/chat.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A36",
+      "category": "沿用AIRI",
+      "name": "账号页面、连接与局域网通道",
+      "user_experience": "保留账号资料/登录页面、原本地频道、二维码和连接设置",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：入口/本地频道；账号后台依赖上游",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "不是Aimy已自建完整账号后台；隐私与同步边界另见C07/D03",
+      "baseline_ids": [
+        "AIRI-D-085",
+        "AIRI-D-086",
+        "AIRI-D-091"
+      ],
+      "audit_ids": [
+        "H04"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/settings/account/index.vue",
+        "packages/stage-ui/src/stores/auth.ts",
+        "apps/stage-tamagotchi/src/renderer/bridges/electron-auth-callback.ts",
+        "packages/stage-pages/src/pages/settings/account/account-settings-page.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/settings/connection/index.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/settings/connection/server-channel-qr-card.vue",
+        "apps/stage-tamagotchi/src/main/services/airi/channel-server/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A37",
+      "category": "沿用AIRI",
+      "name": "聊天导入导出、缓存与资料管理",
+      "user_experience": "导出/导入聊天，进入数据管理/重置入口",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：原入口/实现保留",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "未对私人资料执行导入、清空或重置",
+      "baseline_ids": [
+        "AIRI-D-089",
+        "AIRI-D-090"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/data/components/chats-section.vue",
+        "packages/stage-ui/src/composables/use-data-maintenance.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/settings/data/index.vue",
+        "packages/stage-pages/src/pages/settings/data/components/models-modules-section.vue",
+        "packages/stage-pages/src/pages/settings/data/components/danger-section.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/settings/data/components/desktop-folder-section.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/settings/data/components/desktop-reset-section.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A38",
+      "category": "沿用AIRI",
+      "name": "设置、主题、语言、Dock与开发诊断",
+      "user_experience": "保留导航、主题/语言、图标隐藏、实验/V2页面和诊断工具",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：普通设置与开发/实验入口",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "开发页面不算独立成熟产品；日志不承诺全面去除对话内容",
+      "baseline_ids": [
+        "AIRI-D-092",
+        "AIRI-D-093",
+        "AIRI-D-094",
+        "AIRI-D-097",
+        "AIRI-D-098"
+      ],
+      "audit_ids": [
+        "I01",
+        "I03",
+        "I06",
+        "I10"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/settings/index.vue",
+        "apps/stage-tamagotchi/src/renderer/layouts/settings.vue",
+        "packages/stage-pages/src/pages/settings/account/account-settings-page.vue",
+        "packages/stage-pages/src/components/settings-general-fields.vue",
+        "packages/stage-pages/src/pages/settings/system/color-scheme.vue",
+        "packages/stage-ui/src/stores/settings/analytics.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/settings/system/general.vue",
+        "apps/stage-tamagotchi/src/main/windows/shared/app-icon.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/settings/system/developer.vue",
+        "packages/stage-pages/src/pages/devtools/io-tracer/index.vue",
+        "packages/stage-pages/src/pages/devtools/context-flow/index.vue",
+        "packages/stage-pages/src/pages/devtools/websocket-inspector.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/devtools/performance-visualizer.vue",
+        "packages/stage-pages/src/components/settings-experimental-features.vue",
+        "packages/stage-ui/src/stores/feature-flags.ts",
+        "packages/stage-pages/src/pages/v2/index.vue",
+        "packages/stage-pages/src/pages/devtools/index.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "A39",
+      "category": "沿用AIRI",
+      "name": "问题反馈与截图附件入口",
+      "user_experience": "保留原反馈界面和提交处理器",
+      "reuse_source": "AIRI直接沿用",
+      "experience_app": "已入包：入口；依赖远端反馈服务",
+      "compared_with_airi": "不适用：同源沿用，不能算复用后更强",
+      "verification_and_limits": "未提交反馈或外发截图；不表示已建立Aimy自己的客服服务",
+      "baseline_ids": [
+        "AIRI-D-096"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+        "packages/stage-ui/src/components/scenarios/dialogs/bug-report/bug-report-dialog.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "id": "B01",
+      "category": "真正新增的操作或机制",
+      "name": "可跳过的初始用户档案",
+      "user_experience": "先配置聊天模型，再填称呼、聊天偏好、近期在意的事；也能之后补填",
+      "reuse_source": "用户已选方案；Aimy新资料页沿用AIRI向导组件",
+      "experience_app": "已入包",
+      "compared_with_airi": "新增具体机制；尚未证明真实体验更强",
+      "verification_and_limits": "界面/保存流程有测试；不是开箱就能准确理解所有自由填写",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.vue"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B02",
+      "category": "真正新增的操作或机制",
+      "name": "自动整理长期用户记忆",
+      "user_experience": "从启用后的新聊天提取称呼、偏好、边界、事件和共同经历",
+      "reuse_source": "AionsHome来源/更新规则 + Ryza相关筛选规则；Aimy适配到AIRI",
+      "experience_app": "已入包",
+      "compared_with_airi": "机制新增；8例真实验收未通过，不能称整体更准",
+      "verification_and_limits": "提取/保存有真实证据，也有面试整理失败和日期错误",
+      "baseline_ids": [],
+      "audit_ids": [
+        "F07"
+      ],
+      "candidate_ids": [
+        "AH-R01",
+        "AH-R02",
+        "RY03"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/stores/memory.ts",
+        "packages/stage-ui/src/stores/memory/policy.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B03",
+      "category": "真正新增的操作或机制",
+      "name": "长期事实的本地保存与作用域",
+      "user_experience": "按用户/角色保存事实，跨聊天取用；聊天记录与长期记忆分开",
+      "reuse_source": "AionsHome来源/更新规则 + Ryza相关筛选规则；Aimy适配到AIRI；IndexedDB沿用AIRI",
+      "experience_app": "已入包",
+      "compared_with_airi": "持久事实机制更完整；不等于每条内容都正确",
+      "verification_and_limits": "合成资料持久恢复有工程证据；不保证所有真实语义正确",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/database/repos/memory.repo.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B04",
+      "category": "真正新增的操作或机制",
+      "name": "把相关记忆带进聊天",
+      "user_experience": "选择相关事实、核心档案和近期事项送入回答上下文",
+      "reuse_source": "AionsHome来源/更新规则 + Ryza相关筛选规则；Aimy适配到AIRI",
+      "experience_app": "已入包",
+      "compared_with_airi": "真实表现有得失，未证明整体优于原版",
+      "verification_and_limits": "布丁跨会话部分有效；慢慢来已保存却漏召回；目前主要字面相关规则",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R03",
+        "RY04"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/stores/memory/policy.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B05",
+      "category": "真正新增的操作或机制",
+      "name": "关于我：查看记忆与对应原话",
+      "user_experience": "查看Aimy记住的内容并回看来源；原WIP记忆页改接实际界面",
+      "reuse_source": "AionsHome来源/更新规则 + Ryza相关筛选规则；Aimy适配到AIRI；Aimy界面补写",
+      "experience_app": "已入包",
+      "compared_with_airi": "新增具体机制；尚未证明真实体验更强",
+      "verification_and_limits": "原话查看/当前事实列表有点击与浏览器证据；历史分页是逻辑接口，不把它宣称为独立历史UI",
+      "baseline_ids": [
+        "AIRI-D-060",
+        "AIRI-D-061"
+      ],
+      "audit_ids": [
+        "F06"
+      ],
+      "candidate_ids": [
+        "RY08"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/settings/about-me.vue",
+        "packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+        "packages/stage-pages/src/pages/settings/memory/index.vue"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B06",
+      "category": "真正新增的操作或机制",
+      "name": "更正/移除记忆与偏好更新",
+      "user_experience": "在维护区改错或移除；产品处理依赖，保留独立事实和聊天原文",
+      "reuse_source": "AionsHome来源/更新规则 + Ryza相关筛选规则；Aimy适配到AIRI；Aimy事务/版本/删除屏障",
+      "experience_app": "已入包",
+      "compared_with_airi": "工程控制更完整；自然聊天纠正的模型理解未全部通过",
+      "verification_and_limits": "纠正/移除/原话检查有工程及点击证据；不是删除所有聊天按钮",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R04"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/stores/memory/policy.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B07",
+      "category": "真正新增的操作或机制",
+      "name": "自动记忆开关与只记新聊天",
+      "user_experience": "默认开启首批自动记忆；可暂停，重开不批量补记暂停期间内容",
+      "reuse_source": "用户逐项决定；Aimy启用代次/来源规则",
+      "experience_app": "已入包",
+      "compared_with_airi": "新增具体机制；尚未证明真实体验更强",
+      "verification_and_limits": "默认和暂停恢复规则有测试；与本轮陪伴增强默认关闭不同",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/memory/policy.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B08",
+      "category": "真正新增的操作或机制",
+      "name": "独立选择记忆整理模型",
+      "user_experience": "默认跟随聊天模型；需要时单独指定整理用的服务商和型号",
+      "reuse_source": "用户已选方案；沿用AIRI Provider",
+      "experience_app": "已入包",
+      "compared_with_airi": "新增具体机制；尚未证明真实体验更强",
+      "verification_and_limits": "设置/保存和配置变更保护已接；不是新增模型服务商",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/scenarios/settings/about-me.vue"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B09",
+      "category": "真正新增的操作或机制",
+      "name": "整理状态、失败提示与重试",
+      "user_experience": "看到记忆是否正在整理、是否失败，可重试失败任务",
+      "reuse_source": "Aimy记忆任务与界面补写",
+      "experience_app": "已入包",
+      "compared_with_airi": "增加可观察性；不能用“有重试”代替整理可靠",
+      "verification_and_limits": "8例真实运行确实留下失败；未假报全部成功",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/memory.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "B10",
+      "category": "真正新增的操作或机制",
+      "name": "持久的单次延后续聊计划",
+      "user_experience": "设置等待多久、安静时段、每日轮数；看计划或取消",
+      "reuse_source": "AionsHome计划规则适配；AIRI Spark/生成/呈现继续沿用",
+      "experience_app": "已入包；默认关闭",
+      "compared_with_airi": "单次/取消/来源约束局部更完整；自然度未证",
+      "verification_and_limits": "零费用同目标比较成立；原版本已有通用提醒；正常退出会取消，不是重开闹钟",
+      "baseline_ids": [],
+      "audit_ids": [
+        "G07"
+      ],
+      "candidate_ids": [
+        "AH-R06"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/services/companion/followup.ts",
+        "packages/stage-ui/src/stores/companion.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "B11",
+      "category": "真正新增的操作或机制",
+      "name": "按日/周/月回顾已有记忆",
+      "user_experience": "按事实保存/更新时间分组展示完整条目，来源改了就让旧回顾失效",
+      "reuse_source": "AionsHome来源依赖 + Ryza条目组织方法；Aimy补写",
+      "experience_app": "已入包；手动整理，闲时自动默认关",
+      "compared_with_airi": "新增组织方式；不是记忆理解/召回更强",
+      "verification_and_limits": "同来源更改后失效有实跑；未接模型总结/反思",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R05",
+        "AH-R07",
+        "RY03"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/services/companion/review.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "B12",
+      "category": "真正新增的操作或机制",
+      "name": "屏幕原文与另一语言朗读分开",
+      "user_experience": "保留原聊天文字，只把朗读内容翻译成所选语言",
+      "reuse_source": "Open-LLM-VTuber后端MIT分路方法适配；AIRI TTS仍负责播放",
+      "experience_app": "已入包；默认关；双向流式语音不支持转换",
+      "compared_with_airi": "新增选项；翻译准确度/听感/延迟未验证",
+      "verification_and_limits": "固定译文分路/失败退回已验；语义错误译文可能通过格式校验；启用会额外调用模型",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "OL03"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/services/companion/speech-transform.ts",
+        "packages/stage-ui/src/stores/modules/speech.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "B13",
+      "category": "真正新增的操作或机制",
+      "name": "Live2D点击区域和动作权重配置",
+      "user_experience": "给模型已有的头部/身体等区域分配不同动作与概率",
+      "reuse_source": "Open-LLM-VTuber前端行为参考，独立实现；未复制受限前端",
+      "experience_app": "已入包；默认关；需要模型自带区域/动作",
+      "compared_with_airi": "比原body固定动作更可配置；真实动画质量未证",
+      "verification_and_limits": "真实回调同输入比较；模型/SDK仍沿用AIRI；节奏适配见C13",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "OL03"
+      ],
+      "source_paths": [
+        "packages/stage-ui-live2d/src/composables/live2d/companion-motion.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "B14",
+      "category": "真正新增的操作或机制",
+      "name": "陪伴场景的本地组合规则",
+      "user_experience": "按话题、事件、优先级选择续聊、回顾或保持安静",
+      "reuse_source": "Kirara组合/类型约束思路；Aimy独立TS实现，未搬AGPL后端",
+      "experience_app": "已入包；默认无自建规则；自动动作还受对应开关控制",
+      "compared_with_airi": "新增配置入口；原版已有工作流，未证明通用引擎更强",
+      "verification_and_limits": "原工作流与新规则均实跑各自范围；没有通用图编辑器/IM发送",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "KI06",
+        "KI07"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/services/companion/workflow.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "B15",
+      "category": "真正新增的操作或机制",
+      "name": "VRM导入前检查与可下载报告",
+      "user_experience": "提示口型/眨眼/表情等缺项，拒绝坏容器和外部资源引用",
+      "reuse_source": "Charakuru制作检查/交接方法参考；Aimy独立检查 + AIRI原loader",
+      "experience_app": "已入包；从原角色导入入口触发",
+      "compared_with_airi": "信息反馈更完整；原/新渲染效果相同",
+      "verification_and_limits": "真实库同资产口型/表情响应相同；声明检查不能证明人物好看；保存修复见C14",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "CK03",
+        "CK04"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/models/vrm-inspection.ts",
+        "packages/stage-ui/src/components/scenarios/dialogs/model-selector/model-selector.vue"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "C01",
+      "category": "适配增强与修复",
+      "name": "Aimy品牌、窗口文案与图标",
+      "user_experience": "对外显示Aimy；内部airi可执行名、包名/许可证等仍保留",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已入包",
+      "compared_with_airi": "适配/保护，不作整体体验优胜结论",
+      "verification_and_limits": "体验包名称/身份/启动已核；崩溃报告出现airi不代表旧样机",
+      "baseline_ids": [],
+      "audit_ids": [
+        "A09"
+      ],
+      "candidate_ids": [
+        "RY01"
+      ],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/main/tray/index.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/about.vue"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C02",
+      "category": "适配增强与修复",
+      "name": "陪伴人格提示与首次流程适配",
+      "user_experience": "追加温柔、有主见、尊重边界、不编共同过去的规则；原模型配置后接资料页",
+      "reuse_source": "用户已定人格/流程 + AIRI角色与向导",
+      "experience_app": "已入包",
+      "compared_with_airi": "未验证更强；已知仍有人设/语言混杂",
+      "verification_and_limits": "真实8例中有自称AIRI/英语/转话题分寸问题；提示中的未成年人/危机要求不等于完整安全验收",
+      "baseline_ids": [
+        "AIRI-D-100"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/memory/prompts.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+        "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+        "packages/stage-ui/src/stores/onboarding.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "id": "C03",
+      "category": "适配增强与修复",
+      "name": "记忆写入、版本与跨窗口保护",
+      "user_experience": "多个窗口不争写；旧整理结果不能盖回新修改；操作失败不装成功",
+      "reuse_source": "AionsHome小规则适配 + Aimy本地事务/任务保护",
+      "experience_app": "已入包",
+      "compared_with_airi": "确定性机制增强；不是模型理解保证",
+      "verification_and_limits": "相关工程检查已有，实际体验边界另列",
+      "baseline_ids": [],
+      "audit_ids": [
+        "I03"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/database/repos/memory.repo.ts",
+        "packages/stage-ui/src/stores/memory.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C04",
+      "category": "适配增强与修复",
+      "name": "记忆与原聊天修改/删除联动",
+      "user_experience": "原话改了或删了，相关记忆失效；防止旧后台任务重新记回来",
+      "reuse_source": "AionsHome来源/撤权思路 + Aimy消息日志与版本屏障",
+      "experience_app": "已入包",
+      "compared_with_airi": "工程保护局部增强；完整语义遗忘未证明",
+      "verification_and_limits": "相关工程检查已有，实际体验边界另列",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/services/memory-session.ts",
+        "packages/stage-ui/src/stores/chat/session-store.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C05",
+      "category": "适配增强与修复",
+      "name": "麦克风/看屏权限和停止保护",
+      "user_experience": "独立授权，默认关；隐藏/最小化/退出停止相关采集并拒绝迟到结果",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已入包",
+      "compared_with_airi": "新增应用级保护；不拿假设备测试当真设备全部通过",
+      "verification_and_limits": "相关工程检查已有，实际体验边界另列",
+      "baseline_ids": [],
+      "audit_ids": [
+        "D08",
+        "I07"
+      ],
+      "candidate_ids": [
+        "AH-R11"
+      ],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/main/services/aimy/resource-lifecycle.ts",
+        "packages/stage-ui/src/services/resource-policy.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C06",
+      "category": "适配增强与修复",
+      "name": "取消旧输出、保存后退出与恢复",
+      "user_experience": "退出先等已接受写入，取消在飞任务；区分关资料窗与退出整个应用",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已入包",
+      "compared_with_airi": "适配/保护，不作整体体验优胜结论",
+      "verification_and_limits": "有独立合成profile退出/恢复证据；长期稳定性未完成",
+      "baseline_ids": [],
+      "audit_ids": [
+        "I08",
+        "G08"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/bridges/persistence-drain.ts",
+        "packages/core-agent/src/runtime/request-guard.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C07",
+      "category": "适配增强与修复",
+      "name": "本地数据策略与云副本限制",
+      "user_experience": "桌面聊天和Provider云副本加阻断；正常BYOK模型仍发送必要输入",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已入包；不是全App断网",
+      "compared_with_airi": "适配/保护，不作整体体验优胜结论",
+      "verification_and_limits": "角色卡同步另有默认关闭开关；账号/官方服务仍留联网入口，不能声称全部云功能都被移除",
+      "baseline_ids": [
+        "AIRI-D-088"
+      ],
+      "audit_ids": [
+        "I13"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/services/local-data-policy.ts",
+        "packages/stage-ui/src/libs/auth-fetch.ts",
+        "packages/stage-ui/src/libs/chat-sync/ws-client.ts",
+        "packages/stage-ui/src/stores/chat/session-store.ts",
+        "packages/stage-ui/src/stores/modules/airi-card.ts",
+        "packages/stage-ui/src/stores/providers/config.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C08",
+      "category": "适配增强与修复",
+      "name": "密钥安全保存与错误信息收敛",
+      "user_experience": "配置使用安全存储引用，避免把明文复制进普通设置/同步/错误信息",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已入包",
+      "compared_with_airi": "适配/保护，不作整体体验优胜结论",
+      "verification_and_limits": "合成凭据/故障边界与配置保存已验证；没有读取真实密钥做盘点；不等于整个App所有日志均脱敏",
+      "baseline_ids": [],
+      "audit_ids": [
+        "I04"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/main/services/aimy/provider-secrets.ts",
+        "packages/stage-ui/src/services/provider-secret-storage.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C09",
+      "category": "适配增强与修复",
+      "name": "电脑自动操作禁用",
+      "user_experience": "原版相关源码/入口仍可存在，但本期UI、工具和主机执行层关闭",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "包内有相关代码；功能明确禁用",
+      "compared_with_airi": "适配/保护，不作整体体验优胜结论",
+      "verification_and_limits": "COMPUTER_AUTOMATION_ENABLED=false及拒绝路径已有测试；不是新增自动操控能力",
+      "baseline_ids": [
+        "AIRI-D-068",
+        "AIRI-D-074",
+        "AIRI-D-075"
+      ],
+      "audit_ids": [
+        "H08"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/shared/product-capabilities.ts",
+        "apps/stage-tamagotchi/src/main/services/airi/computer-use/index.ts",
+        "apps/stage-tamagotchi/src/renderer/components/InteractiveArea.vue",
+        "packages/stage-ui/src/stores/ai/chat-llm/tool-resolver.ts",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/built-in.ts",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/builtin/computer-use.ts",
+        "apps/stage-tamagotchi/src/main/services/airi/computer-use/runtime.ts",
+        "services/computer-use-mcp/src/server/browser-agent.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/desktop-overlay.vue",
+        "apps/stage-tamagotchi/src/main/windows/desktop-overlay/index.ts"
+      ],
+      "evidence_refs": [
+        "S3",
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "C10",
+      "category": "适配增强与修复",
+      "name": "短句自适应静音收尾",
+      "user_experience": "在原VAD上，对短句采用较短等待",
+      "reuse_source": "AionsHome VoiceCallPolicy阈值规则适配",
+      "experience_app": "已入包；默认关",
+      "compared_with_airi": "有取舍：模拟窗口少等416ms，但句中896ms停顿可能被分段",
+      "verification_and_limits": "不是新ASR，也未验证真实麦克风识别率",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R10"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/libs/voice/voice-activity-plugin.ts",
+        "packages/stage-ui/src/services/companion/voice-policy.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "C11",
+      "category": "适配增强与修复",
+      "name": "转写后的文本回声保护",
+      "user_experience": "原音频门控后再比对最近实际播过的文字，疑似回声留草稿",
+      "reuse_source": "Ryza echo规则/NEKO归属参考；Aimy适配",
+      "experience_app": "已入包；默认关",
+      "compared_with_airi": "有取舍：能挡重复文字，也会挡有意复述的自动发送",
+      "verification_and_limits": "不是声学消回声；不能保证避免转写前误打断",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "RY06"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/services/companion/voice-policy.ts",
+        "packages/stage-ui/src/composables/voice-drafts.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "C12",
+      "category": "适配增强与修复",
+      "name": "可选表达导演与台词校验",
+      "user_experience": "尝试调整台词停顿/表达，禁止改词和删否定，再使用温柔等预设",
+      "reuse_source": "AionsHome expressive_voice规则适配 + AIRI原SSML",
+      "experience_app": "已入包；默认关；限支持的Microsoft/Azure SSML音色",
+      "compared_with_airi": "收益未证明：原版已能调相同语速/音量，此方案会多模型调用",
+      "verification_and_limits": "坏台词拒绝/别名Provider等已验；没有真实试听优势证据",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R08"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/services/companion/speech-transform.ts",
+        "packages/stage-ui/src/stores/modules/speech.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "C13",
+      "category": "适配增强与修复",
+      "name": "Live2D动作间隔、避免重复与让位",
+      "user_experience": "在原SDK可用动作中控制节奏，保留SDK优先级/排除规则",
+      "reuse_source": "Ryza avatar惯例参考；Aimy动作策略",
+      "experience_app": "已入包；随互动开关，默认关",
+      "compared_with_airi": "机制可配置；仍可能重复，未证明更自然",
+      "verification_and_limits": "两组动作都进入近期记录后可再次重复；没有换SDK或角色资产",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "RY05"
+      ],
+      "source_paths": [
+        "packages/stage-ui-live2d/src/composables/live2d/companion-motion.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "C14",
+      "category": "适配增强与修复",
+      "name": "角色保存失败不假报成功",
+      "user_experience": "模型落盘成功后才进入列表，失败保留报告可重试",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已入包",
+      "compared_with_airi": "同故障输入下明确改善：原返回成功/列表新增，新拒绝且不发布",
+      "verification_and_limits": "真实函数同输入故障注入及浏览器流程通过；非制造真实磁盘满",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/display-models.ts"
+      ],
+      "evidence_refs": [
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "C15",
+      "category": "适配增强与修复",
+      "name": "模型配置、实例识别与失败路径修复",
+      "user_experience": "修复重复初始化同步对象、Provider实例与定义识别、请求取消/错误出口等",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已入包",
+      "compared_with_airi": "适配/保护，不作整体体验优胜结论",
+      "verification_and_limits": "特定故障回归通过；不等于所有供应商兼容验收。专用验收目录问题属于C17工具",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/providers/provider.ts",
+        "packages/stage-ui/src/stores/modules/speech.ts"
+      ],
+      "evidence_refs": [
+        "S4",
+        "S6",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "id": "C16",
+      "category": "适配增强与修复",
+      "name": "本机体验包装、更新策略与备份",
+      "user_experience": "独立Aimy-Preview数据目录、桌面入口、旧程序备份；上游自动更新关闭",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "已安装：10月18日体验包；原更新源码在包内但关闭执行",
+      "compared_with_airi": "适配/保护，不作整体体验优胜结论",
+      "verification_and_limits": "包内容/签名/隔离保存重开/实际启动已核；临时签名且未公证，不是正式分发验收",
+      "baseline_ids": [
+        "AIRI-D-095"
+      ],
+      "audit_ids": [
+        "I09",
+        "I11"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/electron-builder.config.ts",
+        "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+        "apps/stage-tamagotchi/src/main/services/electron/auto-updater.ts"
+      ],
+      "evidence_refs": [
+        "S8"
+      ]
+    },
+    {
+      "id": "C17",
+      "category": "适配增强与修复",
+      "name": "评测、诊断与预算工具",
+      "user_experience": "8例A/B、专用配置、费用账本、诊断/测试脚本帮助开发验收",
+      "reuse_source": "Aimy在AIRI原链上补写/修正",
+      "experience_app": "工作区工具已实现；普通App无测试driver，专用预算默认不启用",
+      "compared_with_airi": "开发验收能力；不是用户陪伴效果提升",
+      "verification_and_limits": "旧¥10仅8例活动，不是App日常消费上限；真实8例已执行但未通过",
+      "baseline_ids": [],
+      "audit_ids": [
+        "I12"
+      ],
+      "candidate_ids": [
+        "AH-R12",
+        "KI05"
+      ],
+      "source_paths": [
+        "apps/stage-tamagotchi/scripts/acceptance",
+        "packages/stage-ui/src/services/memory-acceptance-diagnostics.ts"
+      ],
+      "evidence_refs": [
+        "S4",
+        "S5",
+        "S10",
+        "S8"
+      ]
+    },
+    {
+      "id": "D01",
+      "category": "未完整接入、未开放或排除",
+      "name": "Godot独立舞台",
+      "user_experience": "桌面桥接/实验入口有，当前包缺Godot舞台执行资源，不能说能直接切换使用",
+      "reuse_source": "AIRI可选Godot/Kirie",
+      "experience_app": "部分：桥接代码有，完整执行资源未入包",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-035"
+      ],
+      "audit_ids": [
+        "A08"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/settings/models/index.vue",
+        "apps/stage-tamagotchi/src/main/services/airi/godot-stage/index.ts",
+        "packages/stage-ui/src/components/scenarios/settings/model-settings/godot.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D02",
+      "category": "未完整接入、未开放或排除",
+      "name": "正式角色制作与专属音色",
+      "user_experience": "示例/用户自带模型仍可用；正式主角色、音色和完整授权资产方案未定",
+      "reuse_source": "AIRI资产接口；Charakuru生产侧候选",
+      "experience_app": "未作为完整功能进入体验版",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [
+        "E09"
+      ],
+      "candidate_ids": [
+        "CK01",
+        "CK05"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D03",
+      "category": "未完整接入、未开放或排除",
+      "name": "角色卡云历史与同步服务",
+      "user_experience": "保留原入口/代码，另有默认关闭开关，依赖上游账号与后台",
+      "reuse_source": "AIRI角色卡同步",
+      "experience_app": "部分：界面/客户端有；未作为Aimy自建云服务交付",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-029"
+      ],
+      "audit_ids": [
+        "I05"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/modules/airi-card.ts",
+        "packages/stage-ui/src/libs/feature-flags.ts",
+        "packages/stage-pages/src/pages/settings/airi-card/components/CardDetailDialog.vue",
+        "packages/stage-pages/src/pages/settings/airi-card/index.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D04",
+      "category": "未完整接入、未开放或排除",
+      "name": "官方音色包、Flux余额与支付",
+      "user_experience": "原账号/官方服务页面可能存在，但未验证购买、额度或音色包可用；不是Aimy自己的收费系统",
+      "reuse_source": "AIRI官方云服务",
+      "experience_app": "部分：客户端入口可有，外部服务/购买未验收",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-053",
+        "AIRI-D-087"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/stores/voice-packs.ts",
+        "packages/stage-pages/src/pages/settings/modules/speech.vue",
+        "packages/stage-pages/src/pages/settings/flux.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D05",
+      "category": "未完整接入、未开放或排除",
+      "name": "开箱语音唤醒",
+      "user_experience": "已有唤醒词路由扩展点，未形成默认桌面完整唤醒识别链",
+      "reuse_source": "AIRI语音扩展点",
+      "experience_app": "部分底层接口；不是已交付的唤醒功能",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-054"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R09"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/stores/wake-words.ts",
+        "packages/stage-ui/src/stores/voice.ts",
+        "packages/stage-ui/src/libs/voice/wake-words.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D06",
+      "category": "未完整接入、未开放或排除",
+      "name": "Home Assistant真实家居联动",
+      "user_experience": "保留设置与执行桥；设备/服务未配置验证，也未纳入当前陪伴验收",
+      "reuse_source": "AIRI Home Assistant",
+      "experience_app": "部分：入口/客户端在包；真实家居链未交付",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-071"
+      ],
+      "audit_ids": [
+        "H09"
+      ],
+      "candidate_ids": [],
+      "source_paths": [
+        "apps/stage-tamagotchi/src/renderer/pages/settings/modules/home-assistant.vue",
+        "apps/stage-tamagotchi/src/renderer/stores/tools/home-assistant.ts",
+        "apps/stage-tamagotchi/src/main/services/airi/home-assistant/index.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D07",
+      "category": "未完整接入、未开放或排除",
+      "name": "Discord/Telegram/Satori/X与直播整合",
+      "user_experience": "部分桌面配置入口保留；依赖独立机器人/扩展/服务，不能默认收发消息",
+      "reuse_source": "AIRI生态；Kirara/OLV外部集成候选",
+      "experience_app": "部分配置/桥接有；完整外部平台服务未接入部署",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-081",
+        "AIRI-D-082"
+      ],
+      "audit_ids": [
+        "H05"
+      ],
+      "candidate_ids": [
+        "OL14",
+        "KI06"
+      ],
+      "source_paths": [
+        "packages/stage-ui/src/components/modules/MessagingDiscord.vue",
+        "packages/stage-ui/src/stores/modules/discord.ts",
+        "packages/stage-ui/src/stores/configurator.ts",
+        "packages/stage-ui/src/components/modules/X.vue",
+        "packages/stage-ui/src/stores/modules/twitter.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D08",
+      "category": "未完整接入、未开放或排除",
+      "name": "Minecraft/Factorio等游戏自动操作",
+      "user_experience": "原配置或独立集成代码存在，当前App不是开箱代玩所有游戏",
+      "reuse_source": "AIRI游戏生态",
+      "experience_app": "部分设置/上下文桥有；游戏服务未部署验收",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-083",
+        "AIRI-D-084"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-ui/src/components/modules/GamingMinecraft.vue",
+        "packages/stage-ui/src/stores/modules/gaming-minecraft.ts",
+        "packages/stage-ui/src/stores/chat/context-providers/minecraft.ts",
+        "packages/stage-ui/src/components/modules/GamingFactorio.vue",
+        "packages/stage-ui/src/components/modules/GamingModuleSettings.vue",
+        "packages/stage-ui/src/stores/modules/gaming-module-factory.ts"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D09",
+      "category": "未完整接入、未开放或排除",
+      "name": "网页、移动端、编辑器与视频扩展整套产品",
+      "user_experience": "Web/PWA/iOS/Android、浏览器陪看、VS Code/Claude Code插件属于独立宿主",
+      "reuse_source": "AIRI生态；Ryza Android候选",
+      "experience_app": "未作为独立客户端/扩展随本Mac App安装",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "RY11"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D10",
+      "category": "未完整接入、未开放或排除",
+      "name": "完整模型式回顾、日历压缩与闲时反思",
+      "user_experience": "本轮只做完整事实列表分组，没有搬自动总结/破坏性压缩或闲时反思整套系统",
+      "reuse_source": "AionsHome/Ryza",
+      "experience_app": "未接完整机制；B11只是其中有界整理",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R05",
+        "AH-R07",
+        "RY03"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D11",
+      "category": "未完整接入、未开放或排除",
+      "name": "语义检索、向量RAG与独立记忆服务",
+      "user_experience": "当前召回主要字面规则；没有把Mem0/MemOS/Memvid/Letta或向量库接成正式事实权威",
+      "reuse_source": "早期候选及OLV/Letta；AIRI memory-pgvector占位",
+      "experience_app": "未集成；仓内占位不等于可用服务",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [
+        "F05"
+      ],
+      "candidate_ids": [
+        "OL11",
+        "OL12",
+        "RY13"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D12",
+      "category": "未完整接入、未开放或排除",
+      "name": "通用可视化工作流、插件市场与IM网关",
+      "user_experience": "本轮只有有限本地规则；没有节点画布、完整Kirara后端或运行时装插件",
+      "reuse_source": "Kirara",
+      "experience_app": "未接完整系统；B14为独立小范围实现",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [
+        "H10"
+      ],
+      "candidate_ids": [
+        "KI06",
+        "KI07",
+        "KI08",
+        "KI01",
+        "KI03"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D13",
+      "category": "未完整接入、未开放或排除",
+      "name": "长期情绪、关系数值与关系成长系统",
+      "user_experience": "已有角色提示和逐轮表情，不等于跨天情绪状态、好感值或关系经济",
+      "reuse_source": "产品后续方向；候选角色系统",
+      "experience_app": "未作为完整功能进入体验版",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [
+        "E08"
+      ],
+      "candidate_ids": [],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D14",
+      "category": "未完整接入、未开放或排除",
+      "name": "回听收藏、RPG世界与多人角色社交",
+      "user_experience": "Ryza回听/收藏/经济/NPC/签到，Aions群聊/Visitor Lounge未纳入当前版本",
+      "reuse_source": "Ryza/AionsHome",
+      "experience_app": "未作为完整功能进入体验版",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "RY09",
+        "RY10",
+        "AH-R13"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D15",
+      "category": "未完整接入、未开放或排除",
+      "name": "摄像头、设备监控、外发/支付与成人模块",
+      "user_experience": "本期明确排除或不纳入；原仓或配置字段存在不构成使用授权",
+      "reuse_source": "产品底线；候选无关模块",
+      "experience_app": "未作为本期功能开放；不宣称上游每个相关字节都已删除",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R14"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D16",
+      "category": "未完整接入、未开放或排除",
+      "name": "候选整套后端、音频栈与资源包",
+      "user_experience": "没有把Aions FastAPI、Ryza数据库、OLV整套WS后端、受限前端或Charakuru Kit搬入",
+      "reuse_source": "AionsHome/Ryza/OLV/Kirara/Charakuru",
+      "experience_app": "未接入/明确不整体复用",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "AH-R15",
+        "OL13",
+        "KI08",
+        "CK05",
+        "RY12"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D17",
+      "category": "未完整接入、未开放或排除",
+      "name": "开机自启",
+      "user_experience": "当前桌面源码未找到对应登录启动设置实现；不是已交付开关",
+      "reuse_source": "待需求确认的产品能力",
+      "experience_app": "未作为完整功能进入体验版",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [
+        "A07"
+      ],
+      "candidate_ids": [],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D18",
+      "category": "未完整接入、未开放或排除",
+      "name": "完整角色编辑器和运营仪表盘",
+      "user_experience": "editor/dashboard预留窗口不是完成的编辑器/后台；短期记忆页仍有WIP",
+      "reuse_source": "AIRI预留页面",
+      "experience_app": "只有占位入口，不计已可用功能",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [
+        "AIRI-D-059",
+        "AIRI-D-099"
+      ],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [
+        "packages/stage-pages/src/pages/settings/modules/memory-short-term.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/editor/index.vue",
+        "apps/stage-tamagotchi/src/renderer/pages/dashboard/index.vue"
+      ],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D19",
+      "category": "未完整接入、未开放或排除",
+      "name": "正式分发、自动更新与全平台安装",
+      "user_experience": "当前仅本机体验包；正式证书/公证、自己的更新源、受邀用户与其他系统验收未完成",
+      "reuse_source": "沿用AIRI构建链，Aimy后续发布工作",
+      "experience_app": "当前本机包有；正式发行链未完成",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D20",
+      "category": "未完整接入、未开放或排除",
+      "name": "其他供应商与智能端点新增",
+      "user_experience": "OLV特定ASR/TTS或Ryza计划中的端点没有因为研究过就自动接入",
+      "reuse_source": "OLV/Ryza条件候选",
+      "experience_app": "未逐一选择/接入额外适配；原Provider目录仍沿用",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [
+        "OL07",
+        "RY13"
+      ],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "id": "D21",
+      "category": "未完整接入、未开放或排除",
+      "name": "Chromatic新增复用",
+      "user_experience": "用户明确排除新增候选；原AIRI依赖和主题功能继续保留",
+      "reuse_source": "Chromatic / AIRI既有依赖",
+      "experience_app": "原依赖随AIRI在；没有本轮新增复用",
+      "compared_with_airi": "没有优胜结论／不适用",
+      "verification_and_limits": "未验证比原版更强",
+      "baseline_ids": [],
+      "audit_ids": [],
+      "candidate_ids": [],
+      "source_paths": [],
+      "evidence_refs": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ]
+    }
+  ],
+  "baseline_desktop_mapping": {
+    "AIRI-D-001": [
+      "A01"
+    ],
+    "AIRI-D-003": [
+      "A01"
+    ],
+    "AIRI-D-002": [
+      "A02"
+    ],
+    "AIRI-D-004": [
+      "A03"
+    ],
+    "AIRI-D-005": [
+      "A03"
+    ],
+    "AIRI-D-006": [
+      "A04"
+    ],
+    "AIRI-D-024": [
+      "A04"
+    ],
+    "AIRI-D-007": [
+      "A05"
+    ],
+    "AIRI-D-008": [
+      "A06"
+    ],
+    "AIRI-D-009": [
+      "A06"
+    ],
+    "AIRI-D-010": [
+      "A07"
+    ],
+    "AIRI-D-011": [
+      "A08"
+    ],
+    "AIRI-D-012": [
+      "A09"
+    ],
+    "AIRI-D-013": [
+      "A10"
+    ],
+    "AIRI-D-015": [
+      "A10"
+    ],
+    "AIRI-D-014": [
+      "A11"
+    ],
+    "AIRI-D-016": [
+      "A12"
+    ],
+    "AIRI-D-017": [
+      "A12"
+    ],
+    "AIRI-D-018": [
+      "A12"
+    ],
+    "AIRI-D-019": [
+      "A13"
+    ],
+    "AIRI-D-020": [
+      "A14"
+    ],
+    "AIRI-D-021": [
+      "A15"
+    ],
+    "AIRI-D-022": [
+      "A16"
+    ],
+    "AIRI-D-023": [
+      "A16"
+    ],
+    "AIRI-D-025": [
+      "A17"
+    ],
+    "AIRI-D-026": [
+      "A17"
+    ],
+    "AIRI-D-027": [
+      "A18"
+    ],
+    "AIRI-D-028": [
+      "A18"
+    ],
+    "AIRI-D-030": [
+      "A19"
+    ],
+    "AIRI-D-038": [
+      "A19"
+    ],
+    "AIRI-D-031": [
+      "A20"
+    ],
+    "AIRI-D-032": [
+      "A21"
+    ],
+    "AIRI-D-033": [
+      "A21"
+    ],
+    "AIRI-D-034": [
+      "A21"
+    ],
+    "AIRI-D-036": [
+      "A22"
+    ],
+    "AIRI-D-037": [
+      "A22"
+    ],
+    "AIRI-D-039": [
+      "A23"
+    ],
+    "AIRI-D-040": [
+      "A23"
+    ],
+    "AIRI-D-041": [
+      "A24"
+    ],
+    "AIRI-D-042": [
+      "A24"
+    ],
+    "AIRI-D-043": [
+      "A24"
+    ],
+    "AIRI-D-044": [
+      "A25"
+    ],
+    "AIRI-D-045": [
+      "A26"
+    ],
+    "AIRI-D-052": [
+      "A26"
+    ],
+    "AIRI-D-046": [
+      "A27"
+    ],
+    "AIRI-D-047": [
+      "A27"
+    ],
+    "AIRI-D-048": [
+      "A27"
+    ],
+    "AIRI-D-050": [
+      "A28"
+    ],
+    "AIRI-D-051": [
+      "A28"
+    ],
+    "AIRI-D-049": [
+      "A29"
+    ],
+    "AIRI-D-055": [
+      "A29"
+    ],
+    "AIRI-D-056": [
+      "A29"
+    ],
+    "AIRI-D-057": [
+      "A29"
+    ],
+    "AIRI-D-058": [
+      "A30"
+    ],
+    "AIRI-D-062": [
+      "A30"
+    ],
+    "AIRI-D-063": [
+      "A30"
+    ],
+    "AIRI-D-064": [
+      "A31"
+    ],
+    "AIRI-D-065": [
+      "A31"
+    ],
+    "AIRI-D-066": [
+      "A32"
+    ],
+    "AIRI-D-067": [
+      "A33"
+    ],
+    "AIRI-D-069": [
+      "A34"
+    ],
+    "AIRI-D-070": [
+      "A34"
+    ],
+    "AIRI-D-080": [
+      "A34"
+    ],
+    "AIRI-D-072": [
+      "A35"
+    ],
+    "AIRI-D-073": [
+      "A35"
+    ],
+    "AIRI-D-076": [
+      "A35"
+    ],
+    "AIRI-D-077": [
+      "A35"
+    ],
+    "AIRI-D-078": [
+      "A35"
+    ],
+    "AIRI-D-079": [
+      "A35"
+    ],
+    "AIRI-D-085": [
+      "A36"
+    ],
+    "AIRI-D-086": [
+      "A36"
+    ],
+    "AIRI-D-091": [
+      "A36"
+    ],
+    "AIRI-D-089": [
+      "A37"
+    ],
+    "AIRI-D-090": [
+      "A37"
+    ],
+    "AIRI-D-092": [
+      "A38"
+    ],
+    "AIRI-D-093": [
+      "A38"
+    ],
+    "AIRI-D-094": [
+      "A38"
+    ],
+    "AIRI-D-097": [
+      "A38"
+    ],
+    "AIRI-D-098": [
+      "A38"
+    ],
+    "AIRI-D-096": [
+      "A39"
+    ],
+    "AIRI-D-060": [
+      "B05"
+    ],
+    "AIRI-D-061": [
+      "B05"
+    ],
+    "AIRI-D-100": [
+      "C02"
+    ],
+    "AIRI-D-088": [
+      "C07"
+    ],
+    "AIRI-D-068": [
+      "C09"
+    ],
+    "AIRI-D-074": [
+      "C09"
+    ],
+    "AIRI-D-075": [
+      "C09"
+    ],
+    "AIRI-D-095": [
+      "C16"
+    ],
+    "AIRI-D-035": [
+      "D01"
+    ],
+    "AIRI-D-029": [
+      "D03"
+    ],
+    "AIRI-D-053": [
+      "D04"
+    ],
+    "AIRI-D-087": [
+      "D04"
+    ],
+    "AIRI-D-054": [
+      "D05"
+    ],
+    "AIRI-D-071": [
+      "D06"
+    ],
+    "AIRI-D-081": [
+      "D07"
+    ],
+    "AIRI-D-082": [
+      "D07"
+    ],
+    "AIRI-D-083": [
+      "D08"
+    ],
+    "AIRI-D-084": [
+      "D08"
+    ],
+    "AIRI-D-059": [
+      "D18"
+    ],
+    "AIRI-D-099": [
+      "D18"
+    ]
+  },
+  "later_audit_mapping": {
+    "A01": [
+      "A01"
+    ],
+    "A05": [
+      "A02"
+    ],
+    "A02": [
+      "A03"
+    ],
+    "A03": [
+      "A04"
+    ],
+    "A06": [
+      "A05"
+    ],
+    "A04": [
+      "A06"
+    ],
+    "B01": [
+      "A09"
+    ],
+    "B02": [
+      "A09"
+    ],
+    "B04": [
+      "A09"
+    ],
+    "B08": [
+      "A09"
+    ],
+    "F01": [
+      "A10"
+    ],
+    "F02": [
+      "A11"
+    ],
+    "B03": [
+      "A14"
+    ],
+    "E01": [
+      "A17"
+    ],
+    "E04": [
+      "A19"
+    ],
+    "E06": [
+      "A19"
+    ],
+    "E02": [
+      "A20"
+    ],
+    "E03": [
+      "A23"
+    ],
+    "E05": [
+      "A23"
+    ],
+    "E07": [
+      "A23"
+    ],
+    "I02": [
+      "A24"
+    ],
+    "C01": [
+      "A25"
+    ],
+    "C02": [
+      "A26"
+    ],
+    "C03": [
+      "A26"
+    ],
+    "C04": [
+      "A26"
+    ],
+    "C05": [
+      "A26"
+    ],
+    "C08": [
+      "A26"
+    ],
+    "C09": [
+      "A26"
+    ],
+    "C10": [
+      "A26"
+    ],
+    "C06": [
+      "A27"
+    ],
+    "C11": [
+      "A27"
+    ],
+    "C07": [
+      "A28"
+    ],
+    "B05": [
+      "A30"
+    ],
+    "F03": [
+      "A30"
+    ],
+    "F04": [
+      "A30"
+    ],
+    "G01": [
+      "A30"
+    ],
+    "G02": [
+      "A30"
+    ],
+    "G03": [
+      "A30"
+    ],
+    "G06": [
+      "A30"
+    ],
+    "D01": [
+      "A31"
+    ],
+    "D02": [
+      "A31"
+    ],
+    "D03": [
+      "A31"
+    ],
+    "D04": [
+      "A31"
+    ],
+    "D05": [
+      "A31"
+    ],
+    "D06": [
+      "A31"
+    ],
+    "D07": [
+      "A31"
+    ],
+    "D09": [
+      "A31"
+    ],
+    "B06": [
+      "A33"
+    ],
+    "B07": [
+      "A33"
+    ],
+    "H01": [
+      "A34"
+    ],
+    "H02": [
+      "A34"
+    ],
+    "H03": [
+      "A34"
+    ],
+    "H06": [
+      "A35"
+    ],
+    "H07": [
+      "A35"
+    ],
+    "G05": [
+      "A35"
+    ],
+    "H04": [
+      "A36"
+    ],
+    "I01": [
+      "A38"
+    ],
+    "I03": [
+      "A38",
+      "C03"
+    ],
+    "I06": [
+      "A38"
+    ],
+    "I10": [
+      "A38"
+    ],
+    "F07": [
+      "B02"
+    ],
+    "F06": [
+      "B05"
+    ],
+    "G07": [
+      "B10"
+    ],
+    "A09": [
+      "C01"
+    ],
+    "D08": [
+      "C05"
+    ],
+    "I07": [
+      "C05"
+    ],
+    "I08": [
+      "C06"
+    ],
+    "G08": [
+      "C06"
+    ],
+    "I13": [
+      "C07"
+    ],
+    "I04": [
+      "C08"
+    ],
+    "H08": [
+      "C09"
+    ],
+    "I09": [
+      "C16"
+    ],
+    "I11": [
+      "C16"
+    ],
+    "I12": [
+      "C17"
+    ],
+    "A08": [
+      "D01"
+    ],
+    "E09": [
+      "D02"
+    ],
+    "I05": [
+      "D03"
+    ],
+    "H09": [
+      "D06"
+    ],
+    "H05": [
+      "D07"
+    ],
+    "F05": [
+      "D11"
+    ],
+    "H10": [
+      "D12"
+    ],
+    "E08": [
+      "D13"
+    ],
+    "A07": [
+      "D17"
+    ],
+    "G04": [
+      "A30",
+      "D18"
+    ]
+  },
+  "candidate_mapping": {
+    "OL01": [
+      "A30"
+    ],
+    "OL02": [
+      "A30"
+    ],
+    "OL04": [
+      "A30"
+    ],
+    "OL05": [
+      "A30"
+    ],
+    "OL08": [
+      "A30"
+    ],
+    "OL09": [
+      "A30"
+    ],
+    "OL10": [
+      "A30"
+    ],
+    "RY02": [
+      "A33"
+    ],
+    "KI02": [
+      "A33"
+    ],
+    "KI04": [
+      "A33"
+    ],
+    "OL06": [
+      "A33"
+    ],
+    "OL13": [
+      "A34",
+      "D16"
+    ],
+    "AH-R01": [
+      "B02"
+    ],
+    "AH-R02": [
+      "B02"
+    ],
+    "RY03": [
+      "B02",
+      "B11",
+      "D10"
+    ],
+    "AH-R03": [
+      "B04"
+    ],
+    "RY04": [
+      "B04"
+    ],
+    "RY08": [
+      "B05"
+    ],
+    "AH-R04": [
+      "B06"
+    ],
+    "AH-R06": [
+      "B10"
+    ],
+    "AH-R05": [
+      "B11",
+      "D10"
+    ],
+    "AH-R07": [
+      "B11",
+      "D10"
+    ],
+    "OL03": [
+      "B12",
+      "B13"
+    ],
+    "KI06": [
+      "B14",
+      "D07",
+      "D12"
+    ],
+    "KI07": [
+      "B14",
+      "D12"
+    ],
+    "CK03": [
+      "B15"
+    ],
+    "CK04": [
+      "B15"
+    ],
+    "RY01": [
+      "C01"
+    ],
+    "AH-R11": [
+      "C05"
+    ],
+    "AH-R10": [
+      "C10"
+    ],
+    "RY06": [
+      "C11"
+    ],
+    "AH-R08": [
+      "C12"
+    ],
+    "RY05": [
+      "C13"
+    ],
+    "AH-R12": [
+      "C17"
+    ],
+    "KI05": [
+      "C17"
+    ],
+    "CK01": [
+      "D02"
+    ],
+    "CK05": [
+      "D02",
+      "D16"
+    ],
+    "AH-R09": [
+      "D05"
+    ],
+    "OL14": [
+      "D07"
+    ],
+    "RY11": [
+      "D09"
+    ],
+    "OL11": [
+      "D11"
+    ],
+    "OL12": [
+      "D11"
+    ],
+    "RY13": [
+      "D11",
+      "D20"
+    ],
+    "KI08": [
+      "D12",
+      "D16"
+    ],
+    "KI01": [
+      "D12"
+    ],
+    "KI03": [
+      "D12"
+    ],
+    "RY09": [
+      "D14"
+    ],
+    "RY10": [
+      "D14"
+    ],
+    "AH-R13": [
+      "D14"
+    ],
+    "AH-R14": [
+      "D15"
+    ],
+    "AH-R15": [
+      "D16"
+    ],
+    "RY12": [
+      "D16"
+    ],
+    "OL07": [
+      "D20"
+    ],
+    "RY07": [
+      "A28",
+      "C12"
+    ],
+    "CK02": [
+      "A20",
+      "B15"
+    ]
+  },
+  "ecosystem_mapping": [
+    {
+      "id": "AE-W01",
+      "name": "浏览器角色与文字/语音聊天界面",
+      "source_scope": "stage-web；浏览器",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-W02",
+      "name": "PWA更新提醒",
+      "source_scope": "stage-web；支持PWA的浏览器",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-W03",
+      "name": "浏览器音频录制与VAD开发页",
+      "source_scope": "stage-web；开发者工具",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-W04",
+      "name": "性能录制与FPS可视化",
+      "source_scope": "stage-web；开发者工具",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-W05",
+      "name": "人体/手势驱动与背景去除实验",
+      "source_scope": "stage-web；开发者工具",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-W06",
+      "name": "触觉与界面特效实验",
+      "source_scope": "stage-web；开发者工具",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-W07",
+      "name": "网页登录与角色管理入口",
+      "source_scope": "stage-web",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M01",
+      "name": "移动角色聊天界面",
+      "source_scope": "stage-pocket；iOS；Android；移动Web预览",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M02",
+      "name": "iOS与Android原生宿主",
+      "source_scope": "stage-pocket；iOS；Android",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M03",
+      "name": "麦克风与通知权限管理",
+      "source_scope": "stage-pocket；iOS；Android",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M04",
+      "name": "原生WebSocket连接桥",
+      "source_scope": "stage-pocket；iOS；Android",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M05",
+      "name": "扫描桌面频道连接二维码",
+      "source_scope": "stage-pocket；iOS；Android",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M06",
+      "name": "系统浏览器登录与深链回调",
+      "source_scope": "stage-pocket；iOS；Android",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M07",
+      "name": "移动本地听觉模型入口",
+      "source_scope": "stage-pocket",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M08",
+      "name": "本地通知实验",
+      "source_scope": "stage-pocket；devtools",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-M09",
+      "name": "移动后台持续语音/系统桌宠",
+      "source_scope": "stage-pocket",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "本地未找到实现",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-X01",
+      "name": "Component Calling流式组件聊天演示",
+      "source_scope": "apps/component-calling；独立Web演示",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-X02",
+      "name": "Kirie/Godot桌面宿主迁移",
+      "source_scope": "stage-tamagotchi-kirie；开发用途",
+      "maps_to": [
+        "D01"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-X03",
+      "name": "Godot原生VRM舞台导入",
+      "source_scope": "engines/stage-tamagotchi-godot；桌面sidecar",
+      "maps_to": [
+        "D01"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-X04",
+      "name": "Godot相机、视图与场景呈现",
+      "source_scope": "Godot舞台sidecar",
+      "maps_to": [
+        "D01"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G01",
+      "name": "Minecraft独立智能体连接与配置",
+      "source_scope": "integrations/minecraft；Minecraft Java服务器",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G02",
+      "name": "Minecraft移动、跟随和世界感知",
+      "source_scope": "Minecraft bot",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G03",
+      "name": "Minecraft采集、放置与制作",
+      "source_scope": "Minecraft bot",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G04",
+      "name": "Minecraft背包、容器与战斗",
+      "source_scope": "Minecraft bot",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G05",
+      "name": "Minecraft感知、规划与调试工具",
+      "source_scope": "Minecraft独立服务；开发调试",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G06",
+      "name": "Factorio连接设置",
+      "source_scope": "共享设置/桌面配置；外部游戏服务",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "部分实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G07",
+      "name": "Chess插件声明",
+      "source_scope": "plugins/airi-plugin-game-chess",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "占位",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G08",
+      "name": "Kerbal Space Program宣称",
+      "source_scope": "README/外部项目",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "文档/外部项目",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-G09",
+      "name": "Helldivers 2协作规划",
+      "source_scope": "README",
+      "maps_to": [
+        "D08"
+      ],
+      "original_status": "文档/外部项目",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-I01",
+      "name": "Discord文字聊天与配置桥",
+      "source_scope": "integrations/discord-bot；Discord DM/群频道",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-I02",
+      "name": "Discord加入语音频道与语音转写",
+      "source_scope": "Discord bot",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "部分实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-I03",
+      "name": "Telegram文字/图片/贴纸机器人",
+      "source_scope": "integrations/telegram-bot；独立Telegram服务",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-I04",
+      "name": "Telegram自主定时互动与上下文",
+      "source_scope": "独立Telegram服务",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-I05",
+      "name": "Satori跨平台协议桥",
+      "source_scope": "integrations/satori-bot；独立Koishi/Satori服务",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-I06",
+      "name": "X/Twitter浏览器服务与MCP桥",
+      "source_scope": "integrations/twitter-services；独立Playwright服务",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-I07",
+      "name": "X/Twitter关注用户",
+      "source_scope": "Twitter服务声明",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "占位",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E01",
+      "name": "浏览器视频上下文与字幕陪看桥",
+      "source_scope": "airi-plugin-web-extension；YouTube/Bilibili网页",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E02",
+      "name": "浏览器视频截图预览实验",
+      "source_scope": "Web Extension popup",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "部分实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E03",
+      "name": "Bilibili Laplace插件",
+      "source_scope": "plugins/airi-plugin-bilibili-laplace",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "占位",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E04",
+      "name": "VS Code编辑器上下文采集",
+      "source_scope": "vscode-airi扩展",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E05",
+      "name": "VS Code宿主侧UI贡献桥",
+      "source_scope": "integrations/vscode/airi-plugin-vscode",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "占位",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E06",
+      "name": "Claude Code提示hook转发",
+      "source_scope": "airi-plugin-claude-code CLI",
+      "maps_to": [
+        "D09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E07",
+      "name": "Extension生命周期、manifest与Kit注册框架",
+      "source_scope": "packages/plugin-sdk；开发者SDK",
+      "maps_to": [
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E08",
+      "name": "Gamelet/Widget和工具贡献SDK",
+      "source_scope": "plugin-sdk-tamagotchi；桌面扩展开发者",
+      "maps_to": [
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E09",
+      "name": "插件SDK跨运行时transport",
+      "source_scope": "plugin-sdk Node runtime",
+      "maps_to": [
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "original_status": "部分实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-E10",
+      "name": "Twitch与OBS自动直播集成",
+      "source_scope": "本地checkout范围",
+      "maps_to": [
+        "D07"
+      ],
+      "original_status": "本地未找到实现",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-S01",
+      "name": "本地/独立WebSocket频道服务器",
+      "source_scope": "packages/server-runtime；桌面嵌入或独立Node服务",
+      "maps_to": [
+        "A36"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A01",
+      "name": "独立认证UI",
+      "source_scope": "apps/ui-server-auth；网页/桌面/移动授权流程",
+      "maps_to": [
+        "A36",
+        "D19"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A02",
+      "name": "认证、OIDC与账号生命周期",
+      "source_scope": "server/apps/auth；独立Node服务",
+      "maps_to": [
+        "A36",
+        "D19"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A03",
+      "name": "社交登录与绑定/撤销",
+      "source_scope": "Auth服务/UI",
+      "maps_to": [
+        "A36",
+        "D19"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A04",
+      "name": "云角色目录管理",
+      "source_scope": "server/apps/api；登录客户端",
+      "maps_to": [
+        "D03"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A05",
+      "name": "角色卡跨设备字段同步与历史",
+      "source_scope": "API；登录客户端",
+      "maps_to": [
+        "D03"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A06",
+      "name": "服务商配置云同步",
+      "source_scope": "API；登录客户端",
+      "maps_to": [
+        "C07"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A07",
+      "name": "云会话、成员与聊天消息同步",
+      "source_scope": "API；WebSocket V1/V2；登录客户端",
+      "maps_to": [
+        "C07"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A08",
+      "name": "OpenAI兼容模型网关与上游路由",
+      "source_scope": "API；官方服务provider",
+      "maps_to": [
+        "D04"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A09",
+      "name": "官方语音合成、流式音频与音色目录",
+      "source_scope": "API；HTTP/WS TTS",
+      "maps_to": [
+        "D04"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A10",
+      "name": "官方实时语音识别流",
+      "source_scope": "API；浏览器PCM上传",
+      "maps_to": [
+        "D04"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A11",
+      "name": "服务端维护音色包目录",
+      "source_scope": "API",
+      "maps_to": [
+        "D04"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A12",
+      "name": "Flux额度、用量与交易记录",
+      "source_scope": "API；登录账户",
+      "maps_to": [
+        "D04"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A13",
+      "name": "Stripe充值支付",
+      "source_scope": "API；外部Checkout",
+      "maps_to": [
+        "D04"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A14",
+      "name": "Apple消耗型内购后端",
+      "source_scope": "API；Apple交易验证",
+      "maps_to": [
+        "D04"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A15",
+      "name": "模型请求诊断与运营可观测性",
+      "source_scope": "API/运维",
+      "maps_to": [
+        "A36",
+        "D19"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-A16",
+      "name": "分析部署与后端启动骨架",
+      "source_scope": "运维；deploy/openpanel；server/dev/caddy",
+      "maps_to": [
+        "A36",
+        "D19"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C01",
+      "name": "MCP执行服务与能力预检",
+      "source_scope": "computer-use-mcp独立stdio服务；以macOS为主",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C02",
+      "name": "观察窗口、截图与原生可访问树",
+      "source_scope": "macos-local MCP",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C03",
+      "name": "原生鼠标键盘、打开/聚焦App",
+      "source_scope": "macos-local MCP",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C04",
+      "name": "审批队列、审计与任务执行轨迹",
+      "source_scope": "computer-use-mcp",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C05",
+      "name": "后台命令与交互PTY终端",
+      "source_scope": "computer-use-mcp；本地shell",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C06",
+      "name": "开发工作流与PTY自获取",
+      "source_scope": "computer-use-mcp",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C07",
+      "name": "浏览器DOM与CDP操作",
+      "source_scope": "computer-use-mcp；Chrome",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C08",
+      "name": "浏览器自主任务入口",
+      "source_scope": "computer-use-mcp；外部Python agent",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "部分实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C09",
+      "name": "VS Code CLI控制器",
+      "source_scope": "computer-use-mcp",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C10",
+      "name": "任务状态记忆、剪贴板与受控环境值读取",
+      "source_scope": "computer-use-mcp",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C11",
+      "name": "显示器与坐标辅助",
+      "source_scope": "computer-use-mcp",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "源码实现，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C12",
+      "name": "coding_*工具描述表",
+      "source_scope": "computer-use-mcp descriptors",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "占位",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    },
+    {
+      "id": "AE-C13",
+      "name": "Linux X11与远程runner实验",
+      "source_scope": "computer-use-mcp；linux-x11/SSH",
+      "maps_to": [
+        "C09"
+      ],
+      "original_status": "实验/开发入口，未运行验收",
+      "note": "独立生态/辅助代码，不以存在于monorepo判定完整进入Mac体验版"
+    }
+  ],
+  "provider_reference": [
+    {
+      "symbol": "providerBrowserWebSpeechApi",
+      "name": "Web Speech API (Browser)",
+      "id": "browser-web-speech-api",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt",
+        "streaming-transcription"
+      ],
+      "path": "packages/provider-inference/src/providers/local/browser-web-speech-api/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerPlayer2Speech",
+      "name": "Player2 Speech",
+      "id": "player2-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/local/player2-speech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerVoicevox",
+      "name": "VOICEVOX",
+      "id": "voicevox",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/local/voicevox/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "tasks_evidence": "packages/provider-inference/src/providers/local/voicevox/define.ts",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAivisSpeech",
+      "name": "AivisSpeech",
+      "id": "aivis-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/local/voicevox/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "tasks_evidence": "packages/provider-inference/src/providers/local/voicevox/define.ts",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerLmStudio",
+      "name": "LM Studio",
+      "id": "lm-studio",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/local/lm-studio/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerIndexTtsVllm",
+      "name": "Index-TTS by Bilibili",
+      "id": "index-tts-vllm",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/local/index-tts-vllm/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOllama",
+      "name": "Ollama",
+      "id": "ollama",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/local/ollama/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerSpeechNoop",
+      "name": "None",
+      "id": "speech-noop",
+      "tasks": [
+        "text-to-speech",
+        "tts"
+      ],
+      "path": "packages/provider-inference/src/providers/local/speech-noop/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMimoAudioSpeech",
+      "name": "Xiaomi MiMo",
+      "id": "mimo-audio-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/mimo-audio/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMimoAudioTranscription",
+      "name": "Xiaomi MiMo",
+      "id": "mimo-audio-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/mimo-audio/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenRouterAudioSpeech",
+      "name": "OpenRouter",
+      "id": "openrouter-audio-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openrouter-audio-speech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerBytePlus",
+      "name": "BytePlus",
+      "id": "byteplus",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/byteplus/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "tasks_evidence": "packages/provider-inference/src/providers/cloud/ark-shared.ts",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMimo",
+      "name": "Xiaomi MiMo",
+      "id": "mimo",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/mimo/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerTogetherAI",
+      "name": "Together.ai",
+      "id": "together-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/together-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMinimaxSpeech",
+      "name": "MiniMax Speech",
+      "id": "minimax-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/minimax-speech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "provider302AI",
+      "name": "302.AI",
+      "id": "302-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/302-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerGoogleGeminiAudioSpeech",
+      "name": "Google Gemini",
+      "id": "google-gemini-audio-speech",
+      "tasks": [
+        "text-to-speech",
+        "tts"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/google-gemini-audio-speech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerFireworksAI",
+      "name": "Fireworks.ai",
+      "id": "fireworks-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/fireworks-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerGroq",
+      "name": "Groq",
+      "id": "groq",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/groq/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMinimax",
+      "name": "MiniMax",
+      "id": "minimax",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/minimax/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMinimaxGlobal",
+      "name": "MiniMax Global",
+      "id": "minimax-global",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/minimax/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerDeepSeek",
+      "name": "DeepSeek",
+      "id": "deepseek",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/deepseek/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerXAI",
+      "name": "xAI",
+      "id": "xai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/xai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerElevenLabs",
+      "name": "ElevenLabs",
+      "id": "elevenlabs",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/elevenlabs/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAzureOpenAI",
+      "name": "Azure OpenAI",
+      "id": "azure-openai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/azure-openai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerModelScope",
+      "name": "ModelScope",
+      "id": "modelscope",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/modelscope/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerCloudflareWorkersAI",
+      "name": "Cloudflare Workers AI",
+      "id": "cloudflare-workers-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/cloudflare-workers-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerPerplexityAI",
+      "name": "Perplexity",
+      "id": "perplexity-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/perplexity-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerFeatherlessAI",
+      "name": "Featherless.ai",
+      "id": "featherless-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/featherless-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerN1N",
+      "name": "n1n",
+      "id": "n1n",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/n1n/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenAICompatible",
+      "name": "OpenAI Compatible",
+      "id": "openai-compatible",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openai-compatible/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenPaths",
+      "name": "OpenPaths",
+      "id": "openpaths",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openpaths/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerGoogleGenerativeAI",
+      "name": "Google Gemini",
+      "id": "google-generative-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/google-generative-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerDeepgramTts",
+      "name": "Deepgram",
+      "id": "deepgram-tts",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/unspeech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMicrosoftSpeech",
+      "name": "Microsoft / Azure Speech",
+      "id": "microsoft-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/unspeech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAlibabaCloudModelStudio",
+      "name": "Alibaba Cloud Model Studio",
+      "id": "alibaba-cloud-model-studio",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/unspeech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerVolcengineSpeech",
+      "name": "Volcengine",
+      "id": "volcengine",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/unspeech/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAtlasCloud",
+      "name": "Atlas Cloud",
+      "id": "atlascloud",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/atlascloud/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerCometAPI",
+      "name": "CometAPI",
+      "id": "comet-api",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/comet-api/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerCometAPISpeech",
+      "name": "CometAPI Speech",
+      "id": "comet-api-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/comet-api/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerCometAPITranscription",
+      "name": "CometAPI Transcription",
+      "id": "comet-api-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/comet-api/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenRouterAI",
+      "name": "OpenRouter",
+      "id": "openrouter-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openrouter-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAzureAIFoundry",
+      "name": "Azure AI Foundry",
+      "id": "azure-ai-foundry",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/azure-ai-foundry/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerNovitaAI",
+      "name": "Novita",
+      "id": "novita-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/novita-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAnthropic",
+      "name": "Anthropic",
+      "id": "anthropic",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/anthropic/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerBytePlusCodingPlan",
+      "name": "BytePlus Coding Plan",
+      "id": "byteplus-coding-plan",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/byteplus-coding-plan/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "tasks_evidence": "packages/provider-inference/src/providers/cloud/ark-shared.ts",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAmazonBedrock",
+      "name": "Amazon Bedrock",
+      "id": "amazon-bedrock",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/amazon-bedrock/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAIHubMix",
+      "name": "AIHubMix",
+      "id": "aihubmix",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/aihubmix/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenAIAudioSpeech",
+      "name": "OpenAI",
+      "id": "openai-audio-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openai-audio/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenAICompatibleAudioSpeech",
+      "name": "OpenAI Compatible",
+      "id": "openai-compatible-audio-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openai-audio/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenAIAudioTranscription",
+      "name": "OpenAI",
+      "id": "openai-audio-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openai-audio/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenAICompatibleAudioTranscription",
+      "name": "OpenAI Compatible",
+      "id": "openai-compatible-audio-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openai-audio/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMistralAI",
+      "name": "Mistral",
+      "id": "mistral-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/mistral-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerVolcengineCodingPlan",
+      "name": "Volcengine Coding Plan",
+      "id": "volcengine-coding-plan",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/volcengine-coding-plan/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "tasks_evidence": "packages/provider-inference/src/providers/cloud/ark-shared.ts",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerCerebrasAI",
+      "name": "Cerebras",
+      "id": "cerebras-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/cerebras-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerMoonshotAI",
+      "name": "Moonshot AI",
+      "id": "moonshot-ai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/moonshot-ai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerZai",
+      "name": "Z.ai",
+      "id": "zai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/zai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOpenAI",
+      "name": "OpenAI",
+      "id": "openai",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/provider-inference/src/providers/cloud/openai/index.ts",
+      "scope": "portable registry",
+      "runtime": "not vendor validated in this inventory",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerPromptAPICompatible",
+      "name": "Prompt API",
+      "id": "prompt-api",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/prompt-api/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerKokoroLocal",
+      "name": "Kokoro TTS",
+      "id": "kokoro-local",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/kokoro-local/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAppLocalAudioSpeech",
+      "name": "App (Local)",
+      "id": "app-local-audio-speech",
+      "tasks": [
+        "text-to-speech",
+        "tts"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/local-audio/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAppLocalAudioTranscription",
+      "name": "App (Local)",
+      "id": "app-local-audio-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/local-audio/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerBrowserLocalAudioSpeech",
+      "name": "Browser (Local)",
+      "id": "browser-local-audio-speech",
+      "tasks": [
+        "text-to-speech",
+        "tts"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/local-audio/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerBrowserLocalAudioTranscription",
+      "name": "Browser (Local)",
+      "id": "browser-local-audio-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/local-audio/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOfficialChat",
+      "name": "Official Provider",
+      "id": "official-provider",
+      "tasks": [
+        "text-generation"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/official/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOfficialSpeech",
+      "name": "Official Speech Provider",
+      "id": "official-provider-speech",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/official/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOfficialSpeechStreaming",
+      "name": "Official Streaming Speech Provider",
+      "id": "official-provider-speech-streaming",
+      "tasks": [
+        "text-to-speech"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/official/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerOfficialTranscription",
+      "name": "Official Transcription Provider",
+      "id": "official-provider-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt",
+        "streaming-transcription"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/official/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerNvidia",
+      "name": "NVIDIA NIM",
+      "id": "nvidia",
+      "tasks": [
+        "chat"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/nvidia/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAliyunNlsTranscription",
+      "name": "Aliyun NLS",
+      "id": "aliyun-nls-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt",
+        "streaming-transcription"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/aliyun-nls/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAppleSpeechTranscription",
+      "name": "Apple Speech",
+      "id": "apple-speech-transcription",
+      "tasks": [
+        "speech-to-text",
+        "automatic-speech-recognition",
+        "asr",
+        "stt",
+        "streaming-transcription"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/apple-speech/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerAppleVision",
+      "name": "Apple Vision",
+      "id": "apple-vision",
+      "tasks": [
+        "vision",
+        "image-understanding"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/apple-vision/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    },
+    {
+      "symbol": "providerSherpawTranscription",
+      "name": "Sherpaw",
+      "id": "sherpaw-transcription",
+      "tasks": [
+        "speech-to-text",
+        "streaming-transcription"
+      ],
+      "path": "packages/stage-ui/src/libs/providers/providers/sherpaw/index.ts",
+      "scope": "stage registry",
+      "runtime": "availability depends on platform, backend and model",
+      "tasks_evidence": "packages/provider-inference/src/providers/local/sherpaw-transcription/index.ts",
+      "current_source_exists": true,
+      "current_claim": "原Provider目录继承；目录/声明不等于供应商已逐个连通或质量通过"
+    }
+  ],
+  "excluded_legacy_ids": [
+    "AIMY-W01",
+    "AIMY-W02",
+    "AIMY-W03",
+    "AIMY-W04",
+    "AIMY-W05",
+    "AIMY-C01",
+    "AIMY-C02",
+    "AIMY-C03",
+    "AIMY-C04",
+    "AIMY-C05",
+    "AIMY-C06",
+    "AIMY-C07",
+    "AIMY-C08",
+    "AIMY-S01",
+    "AIMY-S02",
+    "AIMY-S03",
+    "AIMY-S04",
+    "AIMY-S05",
+    "AIMY-A01",
+    "AIMY-A02",
+    "AIMY-A03",
+    "AIMY-A04",
+    "AIMY-A05",
+    "AIMY-V01",
+    "AIMY-V02",
+    "AIMY-V03",
+    "AIMY-V04",
+    "AIMY-V05",
+    "AIMY-V06",
+    "AIMY-V07",
+    "AIMY-P01",
+    "AIMY-P02",
+    "AIMY-P03",
+    "AIMY-P04",
+    "AIMY-P05",
+    "AIMY-H01",
+    "AIMY-H02",
+    "AIMY-H03",
+    "AIMY-H04",
+    "AIMY-H05",
+    "AIMY-H06",
+    "AIMY-H07",
+    "AIMY-R01",
+    "AIMY-R02",
+    "AIMY-R03",
+    "AIMY-R04",
+    "AIMY-R05",
+    "AIMY-R06",
+    "AIMY-R07",
+    "AIMY-R08",
+    "AIMY-R09",
+    "AIMY-T01",
+    "AIMY-T02",
+    "AIMY-T03",
+    "AIMY-T04",
+    "AIMY-T05",
+    "AIMY-T06",
+    "AIMY-T07"
+  ]
+}

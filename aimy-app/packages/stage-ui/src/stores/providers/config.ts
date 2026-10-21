@@ -1,18 +1,25 @@
 import type {} from 'pinia-plugin-synced'
+import type { $ZodObject } from 'zod/v4/core'
 
 import type { InferenceServiceProvider, ProviderValidationStatus } from '../../libs/providers/types'
 import type { ProviderReplicaRow } from '../../services/inference-service-providers'
+import type { ProviderSecretReference } from '../../services/provider-secret-storage'
 import type { ProviderSyncRow, ProviderSyncSnapshot } from './merge'
 
 import { useDebounceFn, useIntervalFn, useLocalStorage } from '@vueuse/core'
-import { isEqual } from 'es-toolkit'
+import { cloneDeep, isEqual } from 'es-toolkit'
 import { nanoid } from 'nanoid'
-import { defineStore } from 'pinia'
-import { computed, shallowRef, watch } from 'vue'
+import { defineStore, getActivePinia } from 'pinia'
+import { computed, onScopeDispose, ref, shallowRef, watch } from 'vue'
+import { globalRegistry } from 'zod'
+
+import * as v from 'valibot'
 
 import { client } from '../../composables/api'
 import { getDefinedProvider } from '../../libs/providers'
 import { inferenceServiceProvidersService as service } from '../../services/inference-service-providers'
+import { isCloudReplicaEnabled } from '../../services/local-data-policy'
+import { getProviderSecretStorage } from '../../services/provider-secret-storage'
 import { useAuthStore } from '../auth'
 import { mergeProviderSync } from './merge'
 
@@ -33,6 +40,96 @@ const emptyReplicaSyncState: Record<string, ProviderReplicaSyncState> = Object.f
 
 type StoredProvider = InferenceServiceProvider & {
   replicaUpdatedAt?: string
+  secretReference?: ProviderSecretReference
+  configurationRevision?: number
+}
+
+interface PreparedConfiguration {
+  providerId: string
+  definitionId: string
+  config: Record<string, unknown>
+  secretReference?: ProviderSecretReference
+  expectedRevision: number | undefined
+  status?: ProviderValidationStatus
+  added?: boolean
+}
+
+const localProviderStorageKey = 'settings/providers/local-configured-v1'
+const storedProviderSchema = v.object({
+  id: v.string(),
+  definitionId: v.string(),
+  config: v.record(v.string(), v.unknown()),
+  status: v.picklist(['unconfigured', 'validating', 'configured', 'invalid', 'bypassed']),
+  configuredBy: v.picklist(['user', 'authentication']),
+  replicaUpdatedAt: v.optional(v.string()),
+  configurationRevision: v.optional(v.pipe(v.number(), v.integer(), v.minValue(1))),
+  secretReference: v.optional(v.object({ secretRef: v.string(), revision: v.pipe(v.number(), v.integer(), v.minValue(1)) })),
+})
+const localProviderEnvelopeSchema = v.strictObject({
+  schemaVersion: v.literal(1),
+  providers: v.record(v.string(), storedProviderSchema),
+  revisions: v.record(v.string(), v.pipe(v.number(), v.integer(), v.minValue(1))),
+  added: v.record(v.string(), v.boolean()),
+})
+
+function loadLocalProviderEnvelope() {
+  const raw = localStorage.getItem(localProviderStorageKey)
+  if (raw === null)
+    return { schemaVersion: 1 as const, providers: {}, revisions: {}, added: {} }
+  try {
+    const envelope = v.parse(localProviderEnvelopeSchema, JSON.parse(raw))
+    for (const provider of Object.values(envelope.providers)) {
+      if (Object.entries(provider.config).some(([key, value]) => hasSensitiveValue(key, value)))
+        throw new Error('Unprotected provider configuration')
+    }
+    return envelope
+  }
+  catch {
+    throw new Error('Stored provider configuration needs recovery and was not overwritten')
+  }
+}
+
+const sensitiveFieldName = /api.?key|access.?key|app.?key|token|secret|password|credential|authorization|headers/i
+
+function hasSensitiveValue(key: string, value: unknown): boolean {
+  if (sensitiveFieldName.test(key))
+    return value !== undefined && value !== ''
+  if (typeof value === 'string' && /(?:url|endpoint)$/i.test(key)) {
+    try {
+      const url = new URL(value)
+      return Boolean(url.username || url.password) || [...url.searchParams.keys()].some(name => sensitiveFieldName.test(name))
+    }
+    catch {}
+  }
+  return value !== null && typeof value === 'object' && Object.entries(value).some(([child, entry]) => hasSensitiveValue(child, entry))
+}
+
+async function partitionConfiguration(definitionId: string, config: Record<string, unknown>) {
+  const definition = getDefinedProvider(definitionId)
+  if (!definition)
+    throw new Error('Provider definition is unavailable')
+  const schema = await definition.createProviderConfig({ t: key => key })
+  const shape = schema._zod.def.type === 'object' ? (schema as $ZodObject)._zod.def.shape : undefined
+  const publicConfig: Record<string, unknown> = {}
+  const secrets: Record<string, unknown> = {}
+  for (const [key, value] of Object.entries(config)) {
+    if (typeof value === 'string' && value.trim() && /(?:url|endpoint)$/i.test(key)) {
+      let endpoint: URL
+      try {
+        endpoint = new URL(value)
+      }
+      catch { throw new Error('Provider endpoint is invalid') }
+      if (endpoint.username || endpoint.password || endpoint.search || endpoint.hash)
+        throw new Error('Use a provider endpoint without credentials, query parameters or fragments')
+    }
+    const field = shape?.[key]
+    const sensitive = hasSensitiveValue(key, value) || (field && globalRegistry.get(field)?.type === 'password')
+    if (sensitive)
+      secrets[key] = value
+    else
+      publicConfig[key] = value
+  }
+  return { publicConfig, secrets }
 }
 
 function isUserProvider(provider: InferenceServiceProvider) {
@@ -46,11 +143,46 @@ function isUserProvider(provider: InferenceServiceProvider) {
  * on this device, then replica time.
  */
 export const useProviderConfigStore = defineStore('provider-config', () => {
+  const pinia = getActivePinia()
+  let disposed = false
+  onScopeDispose(() => {
+    disposed = true
+  })
   const authStore = useAuthStore()
-  const providers = useLocalStorage<Record<string, StoredProvider>>('settings/providers/configured', {}, providerStorageOptions)
-  const addedProviders = useLocalStorage<Record<string, boolean>>('settings/providers/added', {}, providerStorageOptions)
-  const pendingDeletes = useLocalStorage<Record<string, string | null>>('settings/providers/pending-deletes', {}, providerStorageOptions)
-  const legacyConfigs = useLocalStorage<Record<string, Record<string, unknown>>>('settings/credentials/providers', {}, providerStorageOptions)
+  const localOnly = !isCloudReplicaEnabled()
+  const localEnvelope = localOnly ? loadLocalProviderEnvelope() : undefined
+  const providers = localOnly
+    ? ref<Record<string, StoredProvider>>(localEnvelope!.providers)
+    : useLocalStorage<Record<string, StoredProvider>>('settings/providers/configured', {}, providerStorageOptions)
+  const configurationRevisions = localOnly
+    ? ref<Record<string, number>>(localEnvelope!.revisions)
+    : useLocalStorage<Record<string, number>>('settings/providers/configuration-revisions', {}, providerStorageOptions)
+  const addedProviders = localOnly
+    ? ref<Record<string, boolean>>(localEnvelope!.added)
+    : useLocalStorage<Record<string, boolean>>('settings/providers/added', {}, providerStorageOptions)
+  const pendingDeletes = localOnly
+    ? ref<Record<string, string | null>>({})
+    : useLocalStorage<Record<string, string | null>>('settings/providers/pending-deletes', {}, providerStorageOptions)
+
+  function commitLocalSnapshot(nextProviders: Record<string, StoredProvider>, nextRevisions = configurationRevisions.value, nextAdded = addedProviders.value) {
+    if (localOnly) {
+      const envelope = v.parse(localProviderEnvelopeSchema, { schemaVersion: 1, providers: nextProviders, revisions: nextRevisions, added: nextAdded })
+      try {
+        localStorage.setItem(localProviderStorageKey, JSON.stringify(envelope))
+      }
+      catch {
+        throw new Error('Provider configuration was not committed: persistence')
+      }
+    }
+    providers.value = nextProviders
+    configurationRevisions.value = nextRevisions
+    addedProviders.value = nextAdded
+  }
+
+  // Local profiles never inspect or migrate the old plaintext credential store.
+  const legacyConfigs = localOnly
+    ? ref<Record<string, Record<string, unknown>>>({})
+    : useLocalStorage<Record<string, Record<string, unknown>>>('settings/credentials/providers', {}, providerStorageOptions)
 
   const lastLiveRemote = shallowRef<Record<string, ProviderReplicaRow>>({})
   let replicaMerged = false
@@ -154,7 +286,8 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
   }
 
   const schedulePush = useDebounceFn(() => {
-    void pushProviders()
+    if (isCloudReplicaEnabled())
+      void pushProviders()
   }, PUSH_DEBOUNCE_MS)
 
   // Nested config writes skip actions, so the replica payload is watched.
@@ -173,9 +306,110 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     void schedulePush()
   })
 
-  const configs = computed(() => Object.fromEntries(
-    Object.entries(providers.value).map(([providerId, provider]) => [providerId, provider.config]),
-  ))
+  // Existing forms edit this private window draft. Only prepared references enter the replicated store.
+  const editableConfigs = ref<Record<string, Record<string, unknown>>>({})
+  const draftSnapshots = new Map<string, Record<string, unknown>>()
+  const draftJobs = new Map<string, Promise<void>>()
+  const draftFailures = new Map<string, Error>()
+  const pendingDraftPatches = new Map<string, Record<string, unknown>>()
+  const draftSchedulers = new Map<string, ReturnType<typeof useDebounceFn>>()
+  let hydratingDrafts = false
+
+  function hydrateDrafts() {
+    if (!localOnly)
+      return
+    hydratingDrafts = true
+    try {
+      for (const [providerId, provider] of Object.entries(providers.value)) {
+        if (draftJobs.has(providerId) || pendingDraftPatches.has(providerId))
+          continue
+        const currentDraft = editableConfigs.value[providerId]
+        const next = { ...currentDraft, ...cloneDeep(provider.config) }
+        editableConfigs.value[providerId] = next
+        draftSnapshots.set(providerId, cloneDeep(next))
+      }
+      for (const providerId of Object.keys(editableConfigs.value)) {
+        if (!providers.value[providerId]) {
+          delete editableConfigs.value[providerId]
+          draftSnapshots.delete(providerId)
+        }
+      }
+    }
+    finally {
+      hydratingDrafts = false
+    }
+  }
+
+  watch(providers, hydrateDrafts, { deep: true, immediate: true, flush: 'sync' })
+  watch(editableConfigs, () => {
+    if (!localOnly || hydratingDrafts)
+      return
+    for (const [providerId, draft] of Object.entries(editableConfigs.value)) {
+      const provider = providers.value[providerId]
+      if (!provider)
+        continue
+      const previous = draftSnapshots.get(providerId)
+      const patch = Object.fromEntries(Object.entries(draft).filter(([key, value]) => !isEqual(value, previous?.[key])))
+      if (!Object.keys(patch).length)
+        continue
+      draftSnapshots.set(providerId, cloneDeep(draft))
+      pendingDraftPatches.set(providerId, { ...pendingDraftPatches.get(providerId), ...cloneDeep(patch) })
+      let schedule = draftSchedulers.get(providerId)
+      if (!schedule) {
+        schedule = useDebounceFn(() => enqueueDraft(providerId), 300)
+        draftSchedulers.set(providerId, schedule)
+      }
+      void schedule()
+    }
+  }, { deep: true, flush: 'sync' })
+
+  function enqueueDraft(providerId: string) {
+    if (disposed)
+      return
+    const patch = pendingDraftPatches.get(providerId)
+    if (!patch)
+      return
+    pendingDraftPatches.delete(providerId)
+    const pending = draftJobs.get(providerId) ?? Promise.resolve()
+    const job = pending.catch(() => undefined).then(async () => {
+      if (!await patchProviderConfig(providerId, patch))
+        throw new Error('Provider configuration is unavailable')
+      draftFailures.delete(providerId)
+    })
+    draftJobs.set(providerId, job)
+    void job.catch(() => {
+      draftFailures.set(providerId, new Error('Could not securely save provider configuration'))
+    }).finally(() => {
+      if (draftJobs.get(providerId) === job) {
+        draftJobs.delete(providerId)
+        hydrateDrafts()
+      }
+    })
+  }
+
+  const configs = computed(() => localOnly
+    ? editableConfigs.value
+    : Object.fromEntries(
+        Object.entries(providers.value).map(([providerId, provider]) => [providerId, provider.config]),
+      ))
+
+  /** Waits for this window's form edits before validation or a provider preview. */
+  async function flushProviderConfig(providerId: string): Promise<void> {
+    enqueueDraft(providerId)
+    const job = draftJobs.get(providerId)
+    if (job)
+      await job
+    const failure = draftFailures.get(providerId)
+    if (failure)
+      throw failure
+  }
+
+  /** Shutdown calls this in each renderer before acknowledging that its settings have settled. */
+  async function flushProviderConfigurations(): Promise<void> {
+    const ids = new Set([...pendingDraftPatches.keys(), ...draftJobs.keys(), ...draftFailures.keys()])
+    await Promise.all([...ids].map(providerId => flushProviderConfig(providerId)))
+  }
+
   const listedProviders = computed(() => Object.fromEntries(
     Object.entries(providers.value).filter(([providerId]) => addedProviders.value[providerId]),
   ))
@@ -184,7 +418,7 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
   ))
 
   const replicaSyncState = computed(() => {
-    if (!authStore.isAuthenticated)
+    if (!isCloudReplicaEnabled() || !authStore.isAuthenticated)
       return emptyReplicaSyncState
 
     const states: Record<string, ProviderReplicaSyncState> = {}
@@ -209,10 +443,131 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     return providers.value[providerId]?.config
   }
 
-  function ensureProvider(providerId: string, definitionId: string, config: Record<string, unknown> = {}) {
+  /** A committed version identifies public settings and the opaque secret reference together. */
+  function getProviderConfigRevision(providerId: string): number {
+    return configurationRevisions.value[providerId] ?? providers.value[providerId]?.configurationRevision ?? 0
+  }
+
+  function nextConfigurationRevision(providerId: string): number {
+    return getProviderConfigRevision(providerId) + 1
+  }
+
+  /** Resolves credentials only in the calling renderer, outside synchronized state and action results. */
+  async function resolveProviderConfig(providerId: string, overrides?: Record<string, unknown>): Promise<Record<string, unknown> | undefined> {
+    const provider = providers.value[providerId]
+    if (!provider)
+      return overrides
+    const revision = getProviderConfigRevision(providerId)
+    let secretValues: Record<string, unknown> = {}
+    if (localOnly && provider.secretReference) {
+      const values = await getProviderSecretStorage().read({ providerId, reference: { ...provider.secretReference } })
+      const decoded: unknown = JSON.parse(values.config)
+      if (!decoded || typeof decoded !== 'object' || Array.isArray(decoded))
+        throw new Error('Provider secret configuration is invalid')
+      secretValues = decoded as Record<string, unknown>
+    }
+    if (!providers.value[providerId] || getProviderConfigRevision(providerId) !== revision)
+      throw new Error('Provider configuration changed while resolving credentials')
+    return { ...provider.config, ...secretValues, ...overrides }
+  }
+
+  /** Receives only public configuration and opaque references through the leader action channel. */
+  async function commitPreparedConfiguration(prepared: PreparedConfiguration): Promise<StoredProvider> {
+    let current = providers.value[prepared.providerId]
+    if (disposed || current?.configurationRevision !== prepared.expectedRevision)
+      throw new Error('Provider configuration was not committed: revision conflict')
+    if (localOnly) {
+      const checked = await partitionConfiguration(prepared.definitionId, prepared.config)
+      if (Object.keys(checked.secrets).length)
+        throw new Error('Unprotected provider credentials cannot enter shared state')
+      current = providers.value[prepared.providerId]
+      if (current?.configurationRevision !== prepared.expectedRevision)
+        throw new Error('Provider configuration was not committed: revision conflict')
+    }
+    const definition = getDefinedProvider(prepared.definitionId)
+    if (!definition)
+      throw new Error('Provider definition is unavailable')
+    const next: StoredProvider = {
+      ...current,
+      id: prepared.providerId,
+      definitionId: prepared.definitionId,
+      configuredBy: current?.configuredBy ?? definition.configuredBy ?? 'user',
+      config: cloneDeep(prepared.config),
+      secretReference: prepared.secretReference,
+      configurationRevision: nextConfigurationRevision(prepared.providerId),
+      status: prepared.status ?? current?.status ?? 'unconfigured',
+    }
+    commitLocalSnapshot(
+      { ...providers.value, [prepared.providerId]: next },
+      { ...configurationRevisions.value, [prepared.providerId]: next.configurationRevision! },
+      prepared.added ? { ...addedProviders.value, [prepared.providerId]: true } : addedProviders.value,
+    )
+    delete pendingDeletes.value[prepared.providerId]
+    schedulePush()
+    // Nested settings can come from Vue state. RPC results must be plain data.
+    return cloneDeep(next)
+  }
+
+  async function prepareAndCommitConfiguration(providerId: string, definitionId: string, config: Record<string, unknown>, status?: ProviderValidationStatus, added?: boolean) {
+    const current = providers.value[providerId]
+    const expectedRevision = current?.configurationRevision
+    let secretReference = current?.secretReference ? { ...current.secretReference } : undefined
+    let publicConfig = config
+    let createdReference: ProviderSecretReference | undefined
+    if (localOnly) {
+      const split = await partitionConfiguration(definitionId, config)
+      publicConfig = split.publicConfig
+      if (Object.keys(split.secrets).length) {
+        let previousValues: Record<string, unknown> = {}
+        if (secretReference) {
+          const stored = await getProviderSecretStorage().read({ providerId, reference: secretReference })
+          previousValues = JSON.parse(stored.config) as Record<string, unknown>
+        }
+        createdReference = await getProviderSecretStorage().write({
+          providerId,
+          secrets: { config: JSON.stringify({ ...previousValues, ...split.secrets }) },
+          previous: secretReference,
+        })
+        secretReference = createdReference
+      }
+    }
+    try {
+      if (disposed)
+        throw new Error('Provider configuration owner was closed')
+      const committed = await useProviderConfigStore(pinia).commitPreparedConfiguration({ providerId, definitionId, config: publicConfig, secretReference, expectedRevision, status, added })
+      if (localOnly && createdReference && current?.secretReference) {
+        await getProviderSecretStorage().remove({ providerId, reference: { ...current.secretReference } }).catch(() => {
+          console.warn('Replaced provider credential cleanup is pending')
+        })
+      }
+      return committed
+    }
+    catch (error) {
+      const definitelyNotCommitted = error instanceof Error && (error.message === 'Provider configuration was not committed: persistence' || error.message === 'Provider configuration was not committed: revision conflict' || error.message === 'Provider configuration owner was closed')
+      if (createdReference && definitelyNotCommitted)
+        await getProviderSecretStorage().remove({ providerId, reference: createdReference }).catch(() => undefined)
+      throw error
+    }
+  }
+
+  async function ensureProvider(providerId: string, definitionId: string, config: Record<string, unknown> = {}) {
+    if (localOnly) {
+      const split = await partitionConfiguration(definitionId, config)
+      if (Object.keys(split.secrets).some(key => split.secrets[key] !== undefined && split.secrets[key] !== ''))
+        throw new Error('Save provider credentials through the secure configuration action')
+      config = split.publicConfig
+    }
+    return useProviderConfigStore(pinia).ensurePreparedProvider(providerId, definitionId, config)
+  }
+
+  /** Only non-sensitive defaults cross the leader channel to create a provider. */
+  async function ensurePreparedProvider(providerId: string, definitionId: string, config: Record<string, unknown>) {
     const current = providers.value[providerId]
     if (current)
-      return current
+      return cloneDeep(current)
+
+    if (localOnly && Object.entries(config).some(([key, value]) => hasSensitiveValue(key, value)))
+      throw new Error('Save provider credentials through the secure configuration action')
 
     const definition = getDefinedProvider(definitionId)
     if (!definition)
@@ -224,18 +579,21 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
       config,
       status: 'unconfigured',
       configuredBy: definition.configuredBy ?? 'user',
+      configurationRevision: nextConfigurationRevision(providerId),
     }
-    providers.value[providerId] = provider
+    commitLocalSnapshot({ ...providers.value, [providerId]: provider }, { ...configurationRevisions.value, [providerId]: provider.configurationRevision! })
     delete pendingDeletes.value[providerId]
     return provider
   }
 
   function markProviderAdded(providerId: string) {
-    addedProviders.value[providerId] = true
+    commitLocalSnapshot(providers.value, configurationRevisions.value, { ...addedProviders.value, [providerId]: true })
   }
 
   function unmarkProviderAdded(providerId: string) {
-    delete addedProviders.value[providerId]
+    const nextAdded = { ...addedProviders.value }
+    delete nextAdded[providerId]
+    commitLocalSnapshot(providers.value, configurationRevisions.value, nextAdded)
   }
 
   function setProviderStatus(providerId: string, status: ProviderValidationStatus) {
@@ -243,7 +601,7 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     if (!provider)
       return
 
-    provider.status = status
+    commitLocalSnapshot({ ...providers.value, [providerId]: { ...provider, status } })
     // Config often changes first; validation marks configured later.
     // Push then, or a finished key never uploads.
     if (status === 'configured')
@@ -261,11 +619,7 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     const provider = providers.value[providerId]
     if (!provider)
       return false
-
-    providers.value[providerId] = {
-      ...provider,
-      config: { ...provider.config, ...patch },
-    }
+    await prepareAndCommitConfiguration(providerId, provider.definitionId, { ...provider.config, ...patch })
     return true
   }
 
@@ -281,10 +635,8 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     if (!provider)
       return
 
-    providers.value[providerId] = {
-      ...provider,
-      config: { ...provider.config, model },
-    }
+    const next = { ...provider, config: { ...provider.config, model }, configurationRevision: nextConfigurationRevision(providerId) }
+    commitLocalSnapshot({ ...providers.value, [providerId]: next }, { ...configurationRevisions.value, [providerId]: next.configurationRevision })
     schedulePush()
   }
 
@@ -300,10 +652,8 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     if (typeof currentModel === 'string' && currentModel.length > 0)
       return
 
-    providers.value[providerId] = {
-      ...provider,
-      config: { ...provider.config, model },
-    }
+    const next = { ...provider, config: { ...provider.config, model }, configurationRevision: nextConfigurationRevision(providerId) }
+    commitLocalSnapshot({ ...providers.value, [providerId]: next }, { ...configurationRevisions.value, [providerId]: next.configurationRevision })
     schedulePush()
   }
 
@@ -366,7 +716,7 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
   }
 
   async function syncProviders() {
-    if (!authStore.isAuthenticated)
+    if (!isCloudReplicaEnabled() || !authStore.isAuthenticated)
       return
 
     if (syncInFlight) {
@@ -377,10 +727,14 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     syncInFlight = (async () => {
       try {
         const remote = await service.listRemote(client)
+        if (!isCloudReplicaEnabled())
+          return
         const merged = mergeProviderSync(snapshotLocal(), remote, {
           local: localWorkingIds(),
           remote: await remoteWorkingIds(remote),
         })
+        if (!isCloudReplicaEnabled())
+          return
         applyMerged(merged)
         indexAcceptedReplica(merged, remote)
         replicaMerged = true
@@ -402,7 +756,7 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
   }
 
   async function pushProviders() {
-    if (!authStore.isAuthenticated)
+    if (!isCloudReplicaEnabled() || !authStore.isAuthenticated)
       return
 
     const toUpsert = Object.values(providers.value).filter(provider =>
@@ -417,11 +771,15 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
 
     for (const provider of toUpsert) {
       try {
+        if (!isCloudReplicaEnabled())
+          return
         const remote = await service.upsertRemote(client, {
           id: provider.id,
           definitionId: provider.definitionId,
           config: provider.config,
         })
+        if (!isCloudReplicaEnabled())
+          return
         const current = providers.value[provider.id]
         if (current)
           current.replicaUpdatedAt = remote.updatedAt
@@ -437,7 +795,11 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
 
     for (const id of Object.keys(pendingDeletes.value)) {
       try {
+        if (!isCloudReplicaEnabled())
+          return
         await service.deleteRemote(client, id)
+        if (!isCloudReplicaEnabled())
+          return
         delete pendingDeletes.value[id]
         const nextRemote = { ...lastLiveRemote.value }
         delete nextRemote[id]
@@ -458,6 +820,8 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
   )
 
   authStore.onAuthenticated(() => {
+    if (!isCloudReplicaEnabled())
+      return
     void syncProviders()
     periodicSync.resume()
   })
@@ -467,10 +831,7 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
   })
 
   async function addProvider(definitionId: string, initialConfig: Record<string, unknown> = {}) {
-    const provider = ensureProvider(nanoid(), definitionId, initialConfig)
-    markProviderAdded(provider.id)
-    schedulePush()
-    return provider
+    return prepareAndCommitConfiguration(nanoid(), definitionId, initialConfig, undefined, true)
   }
 
   async function removeProvider(providerId: string) {
@@ -478,42 +839,48 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
     if (!provider)
       return
 
-    if (isUserProvider(provider))
+    if (isCloudReplicaEnabled() && isUserProvider(provider))
       pendingDeletes.value[providerId] = new Date().toISOString()
 
-    delete providers.value[providerId]
-    unmarkProviderAdded(providerId)
+    const nextProviders = { ...providers.value }
+    delete nextProviders[providerId]
+    const nextAdded = { ...addedProviders.value }
+    delete nextAdded[providerId]
+    commitLocalSnapshot(nextProviders, { ...configurationRevisions.value, [providerId]: nextConfigurationRevision(providerId) }, nextAdded)
     const nextRemote = { ...lastLiveRemote.value }
     delete nextRemote[providerId]
     lastLiveRemote.value = nextRemote
     schedulePush()
+    if (localOnly && provider.secretReference)
+      await getProviderSecretStorage().remove({ providerId, reference: { ...provider.secretReference } })
   }
 
   async function updateProviderConfig(providerId: string, config: Record<string, unknown>, status: ProviderValidationStatus) {
     const provider = providers.value[providerId]
     if (!provider)
       return
-
-    const next: StoredProvider = {
-      ...provider,
-      config: { ...config },
-      status,
-    }
-    providers.value[providerId] = next
-    schedulePush()
-    return next
+    return prepareAndCommitConfiguration(providerId, provider.definitionId, config, status)
   }
 
   async function resetProviders() {
-    providers.value = {}
-    addedProviders.value = {}
+    const previous = Object.values(providers.value)
+    const nextRevisions = { ...configurationRevisions.value }
+    for (const providerId of Object.keys(providers.value))
+      nextRevisions[providerId] = nextConfigurationRevision(providerId)
+    commitLocalSnapshot({}, nextRevisions, {})
     pendingDeletes.value = {}
     lastLiveRemote.value = {}
     replicaMerged = false
+    if (localOnly) {
+      await Promise.all(previous.map(provider => provider.secretReference
+        ? getProviderSecretStorage().remove({ providerId: provider.id, reference: { ...provider.secretReference } })
+        : undefined))
+    }
   }
 
   return {
     providers,
+    configurationRevisions,
     configs,
     addedProviders,
     pendingDeletes,
@@ -523,7 +890,13 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
 
     getProvider,
     getProviderConfig,
+    getProviderConfigRevision,
+    flushProviderConfig,
+    flushProviderConfigurations,
+    resolveProviderConfig,
+    commitPreparedConfiguration,
     ensureProvider,
+    ensurePreparedProvider,
     markProviderAdded,
     unmarkProviderAdded,
     setProviderStatus,
@@ -542,18 +915,16 @@ export const useProviderConfigStore = defineStore('provider-config', () => {
 }, {
   synced: {
     actions: [
-      'ensureProvider',
+      'ensurePreparedProvider',
+      'commitPreparedConfiguration',
       'markProviderAdded',
       'unmarkProviderAdded',
       'setProviderStatus',
-      'patchProviderConfig',
       'setProviderModel',
       'setProviderModelIfUnset',
       'syncProviders',
       'pushProviders',
-      'addProvider',
       'removeProvider',
-      'updateProviderConfig',
       'resetProviders',
     ],
     state: true,

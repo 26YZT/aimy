@@ -8,10 +8,9 @@ import type { ChatHistoryItem, ChatToolReference } from '../types/chat'
 import type { StoredVoiceInterruption } from '../types/chat-session'
 import type { ToolCallRerunPayload } from './tool-call-rerun'
 
-import { errorMessageFrom } from '@moeru/std'
 import { decodeBase64 } from '@moeru/std/base64'
 import { fileSource } from '@proj-airi/audio/encoding'
-import { createChatOrchestratorRuntime, renderConversationPreview } from '@proj-airi/core-agent'
+import { createChatOrchestratorRuntime, projectGenerationFailure, publicGenerationError, renderConversationPreview } from '@proj-airi/core-agent'
 import { IOAttributes, IOEvents, IOSpanNames, IOSubsystems } from '@proj-airi/stage-shared'
 import { nanoid } from 'nanoid'
 import { defineStore, storeToRefs } from 'pinia'
@@ -30,6 +29,9 @@ import {
   AIRI_CHAT_ROUND_ID_HEADER,
   AIRI_CHAT_SESSION_ID_HEADER,
 } from '../libs/product-signals/headers'
+import { conversationNow } from '../services/conversation-clock'
+import { getResourcePolicy } from '../services/resource-policy'
+import { filterScreenContextSnapshot, projectScreenConversation } from '../services/screen-context'
 import { getSpeechBusContext, voiceGenerationEnded } from '../services/speech/bus'
 import { useLLM } from './ai/chat-llm/llm'
 import { resolveLlmTools } from './ai/chat-llm/tool-resolver'
@@ -42,13 +44,17 @@ import { describeChatImages, replaceToolResultImages } from './chat/image-projec
 import { useChatSessionStore } from './chat/session-store'
 import { useChatStreamStore } from './chat/stream-store'
 import { useContextObservabilityStore } from './devtools/context-observability'
+import { useMemoryStore } from './memory'
+import { getAcceptanceBudget } from './memory/budget'
 import { useAiriCardStore } from './modules/airi-card'
 import { useAutonomousArtistryStore } from './modules/artistry-autonomous'
 import { useConsciousnessStore } from './modules/consciousness'
+import { useConsciousnessSettingsStore } from './modules/consciousness-settings'
 import { useHearingStore } from './modules/hearing'
 import { useStickersStore } from './modules/stickers'
 import { useVisionStore } from './modules/vision'
 import { useWebSearchStore } from './modules/web-search'
+import { useProviderConfigStore } from './providers/config'
 import { executeToolCallRerun } from './tool-call-rerun'
 
 interface ForkOptions {
@@ -216,10 +222,13 @@ export const useChatStore = defineStore('chat', () => {
   // without its paired prompt-injection defense.
   useWebSearchStore()
   const consciousnessStore = useConsciousnessStore()
+  const consciousnessSettings = useConsciousnessSettingsStore()
   const chatVision = useChatVision()
   const artistryAutonomousStore = useAutonomousArtistryStore()
   const { activeProvider, activeModel, chatReady } = storeToRefs(consciousnessStore)
   const chatSession = useChatSessionStore()
+  const memory = useMemoryStore()
+  const providerConfig = useProviderConfigStore()
   const chatStream = useChatStreamStore()
   const chatContext = useChatContextStore()
   const cardStore = useAiriCardStore()
@@ -295,6 +304,8 @@ export const useChatStore = defineStore('chat', () => {
     context: Conversation,
     options?: StreamOptions,
   ) {
+    if (getAcceptanceBudget() && context.turns.some(turn => turn.type === 'user' && turn.content.some(part => part.type === 'image' || part.type === 'audio' || part.type === 'file')))
+      throw publicGenerationError({ code: 'ACCEPTANCE_TEXT_ONLY' })
     let llmTextLength = 0
     let llmOutputChunkCount = 0
     const llmOutputChunkLengths: number[] = []
@@ -433,7 +444,7 @@ export const useChatStore = defineStore('chat', () => {
               throw new Error('The recording has no completed transcription')
 
             if (sessionId && stored?.id)
-              writeAudioTranscript(sessionId, stored.id, sourceIndex, text)
+              await writeAudioTranscript(sessionId, stored.id, sourceIndex, text)
           }
 
           turn.content[index] = { type: 'text', text }
@@ -446,6 +457,13 @@ export const useChatStore = defineStore('chat', () => {
     if (!options?.supportsAudioInput)
       providerContext = await prepareTextOnlyAudioContext(providerContext)
 
+    const screenProjection = projectScreenConversation(providerContext, options?.requestCorrelation?.conversationId)
+    providerContext = screenProjection.context
+    const assertRequestCurrent = () => {
+      options?.assertCurrent?.()
+      screenProjection.assertCurrent()
+    }
+    assertRequestCurrent()
     const providerMessages = renderConversationPreview(providerContext)
     if (options?.requestCorrelation?.conversationId)
       contextObservability.captureProviderPromptProjection(options.requestCorrelation.conversationId, providerMessages)
@@ -464,7 +482,12 @@ export const useChatStore = defineStore('chat', () => {
     try {
       await llmStore.stream(model, chatProvider, providerContext, {
         ...options,
-        prepareStringContent: prepareTextOnlyAudioContext,
+        assertCurrent: assertRequestCurrent,
+        prepareStringContent: async (source) => {
+          const prepared = await prepareTextOnlyAudioContext(source)
+          assertRequestCurrent()
+          return projectScreenConversation(prepared, options?.requestCorrelation?.conversationId).context
+        },
         headers,
         describeToolImage,
         onStreamEvent: async (event: StreamEvent) => {
@@ -540,6 +563,8 @@ export const useChatStore = defineStore('chat', () => {
   }
 
   const runtime = createChatOrchestratorRuntime({
+    now: conversationNow,
+    resolveRequestContext: ({ sessionId, history, query }) => memory.resolveRequestContext(sessionId, history, query),
     session: {
       ensureSession: sessionId => chatSession.ensureSession(sessionId),
       getSessionMessages: sessionId => chatSession.getSessionMessages(sessionId).map(message => toRaw(message)),
@@ -550,7 +575,7 @@ export const useChatStore = defineStore('chat', () => {
     context: {
       ingest: envelope => chatContext.ingestContextMessage(envelope),
       snapshot: () => {
-        const snapshot = { ...chatContext.getContextsSnapshot() }
+        const snapshot = { ...filterScreenContextSnapshot(chatContext.getContextsSnapshot()) }
         // Account data belongs to this request, not the persistent context registry.
         // A signed-out request therefore cannot inherit the previous account snapshot.
         const account = createUserAccountContext(authStore)
@@ -618,11 +643,15 @@ export const useChatStore = defineStore('chat', () => {
       }
     },
     onUserTurnReady: ({ messageText, sessionMessages }) => {
+      if (getAcceptanceBudget())
+        return
       const autonomousTarget = cardStore.activeCard?.extensions?.airi?.modules?.artistry?.autonomousTarget || 'user'
       if (autonomousTarget === 'user')
         void artistryAutonomousStore.runArtistTask(messageText, toProviderHistory(sessionMessages))
     },
     onAssistantTurnReady: ({ messageText, sessionMessages }) => {
+      if (getAcceptanceBudget())
+        return
       const artistry = cardStore.activeCard?.extensions?.airi?.modules?.artistry
       if (artistry?.autonomousEnabled && artistry?.autonomousTarget === 'assistant')
         void artistryAutonomousStore.runArtistTask(messageText, toProviderHistory(sessionMessages))
@@ -649,6 +678,7 @@ export const useChatStore = defineStore('chat', () => {
     if (existing)
       return existing.request.done
 
+    const endMemoryDeferral = memory.beginConversation()
     const abort = new AbortController()
     const captured = {
       ...options,
@@ -671,7 +701,10 @@ export const useChatStore = defineStore('chat', () => {
     }
     requests.set(key, { sessionId, abort, request })
     void request.accepted.catch(() => {})
-    void request.done.finally(() => requests.delete(key)).catch(() => {})
+    void request.done.finally(() => {
+      requests.delete(key)
+      endMemoryDeferral()
+    }).catch(() => {})
     return request.done
   }
 
@@ -696,7 +729,7 @@ export const useChatStore = defineStore('chat', () => {
     return [...names].map(name => ({ name }))
   }
 
-  function writeAudioTranscript(sessionId: string, messageId: string, index: number, text: string) {
+  async function writeAudioTranscript(sessionId: string, messageId: string, index: number, text: string) {
     const messages = chatSession.getSessionMessagesIfLoaded(sessionId)
     if (!messages?.some(message => message.id === messageId))
       return
@@ -707,6 +740,7 @@ export const useChatStore = defineStore('chat', () => {
       audioTranscripts[index] = text
       return { ...message, audioTranscripts }
     }))
+    await chatSession.flushPersistence()
   }
 
   /**
@@ -716,7 +750,7 @@ export const useChatStore = defineStore('chat', () => {
   async function settleAudioTranscript(payload: { sessionId: string, messageId: string, transcript?: string }) {
     const key = JSON.stringify([payload.sessionId, payload.messageId])
     if (payload.transcript) {
-      writeAudioTranscript(payload.sessionId, payload.messageId, 0, payload.transcript)
+      await writeAudioTranscript(payload.sessionId, payload.messageId, 0, payload.transcript)
     }
     else if (payload.transcript === '') {
       droppedTurns.add(key)
@@ -731,14 +765,15 @@ export const useChatStore = defineStore('chat', () => {
   }
 
   function appendSendError(sessionId: string, error: unknown) {
-    if (error instanceof DOMException && error.name === 'AbortError')
+    const failure = projectGenerationFailure(error)
+    if (failure.code === 'GENERATION_ABORTED')
       return
     if (!chatSession.getSessionMessagesIfLoaded(sessionId))
       return
 
     chatSession.appendSessionMessage(sessionId, {
       role: 'error',
-      content: errorMessageFrom(error) ?? 'Unknown chat operation failure',
+      content: failure.message,
       id: nanoid(),
       createdAt: Date.now(),
     })
@@ -753,18 +788,19 @@ export const useChatStore = defineStore('chat', () => {
 
     let providerId = activeProvider.value
     let modelId = activeModel.value
+    const voiceCharacterId = voice ? chatSession.sessionMetas[payload.sessionId]?.characterId : undefined
     if (voice) {
-      const characterId = chatSession.sessionMetas[payload.sessionId]?.characterId
-      if (!characterId)
+      if (!voiceCharacterId)
         throw new Error('The target session has no character')
 
-      const selection = cardStore.getModules(characterId).consciousness
+      const selection = cardStore.getModules(voiceCharacterId).consciousness
       providerId = selection.provider
       modelId = selection.model
     }
 
     const temperature = payload.temperature ?? consciousnessStore.activeTemperature
     const topP = payload.topP ?? consciousnessStore.activeTopP
+    const reasoning = consciousnessSettings.reasoning
     const controlEvents = voice ? chatSession.sessionMetas[payload.sessionId]?.controlEvents : undefined
     const supplements = [llmToolsetPromptsStore.activeToolsetPrompt]
 
@@ -781,11 +817,29 @@ export const useChatStore = defineStore('chat', () => {
     if (!ready)
       throw new Error('No active chat provider or model configured')
 
+    const configRevision = providerConfig.getProviderConfigRevision(providerId)
+    const appEpoch = getResourcePolicy()?.state.appEpoch
+    const assertCurrent = () => {
+      signal.throwIfAborted()
+      const voiceSelection = voiceCharacterId ? cardStore.getModules(voiceCharacterId).consciousness : undefined
+      if (providerConfig.getProviderConfigRevision(providerId) !== configRevision
+        || getResourcePolicy()?.state.appEpoch !== appEpoch
+        || (getResourcePolicy() && !getResourcePolicy()!.state.active)
+        || consciousnessSettings.reasoning !== reasoning
+        || (payload.temperature ?? consciousnessStore.activeTemperature) !== temperature
+        || (payload.topP ?? consciousnessStore.activeTopP) !== topP
+        || (voice && (chatSession.sessionMetas[payload.sessionId]?.characterId !== voiceCharacterId
+          || voiceSelection?.provider !== providerId || voiceSelection?.model !== modelId))
+        || (!voice && (activeProvider.value !== providerId || activeModel.value !== modelId))) {
+        throw new DOMException('Request settings changed', 'AbortError')
+      }
+    }
+
     const stickers = await stickersStore.selectCatalogForReply()
     signal.throwIfAborted()
 
     const chatProvider = await consciousnessStore.getChatProviderInstance(providerId)
-    signal.throwIfAborted()
+    assertCurrent()
 
     if (!chatProvider)
       throw new Error(`Failed to resolve chat provider "${providerId}"`)
@@ -794,6 +848,7 @@ export const useChatStore = defineStore('chat', () => {
     const supportsAudioInput = selectedModel?.inputModalities?.includes('audio') === true && chatProvider.generation(modelId).protocol === 'chat-completions'
 
     return {
+      assertCurrent,
       providerId,
       supportsAudioInput,
       supportsVisionInput: selectedModel?.metadata?.abilities?.vision === true,
@@ -823,6 +878,7 @@ export const useChatStore = defineStore('chat', () => {
     if (existing)
       return existing.request
 
+    const endMemoryDeferral = memory.beginConversation()
     const abort = new AbortController()
     const prepared = prepareSend({ ...payload, messageId }, abort.signal, voice)
       .then(options => runtime.submit(payload.text, options, payload.sessionId))
@@ -833,7 +889,10 @@ export const useChatStore = defineStore('chat', () => {
 
     requests.set(key, { sessionId: payload.sessionId, abort, request })
     void request.accepted.catch(() => {})
-    void request.done.finally(() => requests.delete(key)).catch(() => {})
+    void request.done.finally(() => {
+      requests.delete(key)
+      endMemoryDeferral()
+    }).catch(() => {})
 
     return request
   }

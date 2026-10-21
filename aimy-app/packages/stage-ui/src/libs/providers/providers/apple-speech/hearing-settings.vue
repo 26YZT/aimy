@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { AppleSpeechTranscriber } from '@xsai-apple-speech/transcription'
+
 import { errorMessageFrom } from '@moeru/std'
 import { FieldCombobox, GhostButton } from '@proj-airi/ui'
 import { computedAsync } from '@vueuse/core'
@@ -21,6 +23,14 @@ const locale = computed(() => {
   const value = providerConfig.value?.locale
   return typeof value === 'string' && value.trim() ? value : 'en-US'
 })
+const transcriber = computed<AppleSpeechTranscriber>(() => {
+  const value = providerConfig.value?.transcriber
+  return value === 'dictation' || value === 'speech' ? value : 'automatic'
+})
+const transcriberOptions = computed(() => ['automatic', 'dictation', 'speech'].map(value => ({
+  value,
+  label: t(`settings.pages.providers.provider.apple-speech-transcription.fields.transcriber.${value}`),
+})))
 const localeOptions = computedAsync(async (onCancel) => {
   void loadAttempt.value
 
@@ -31,7 +41,7 @@ const localeOptions = computedAsync(async (onCancel) => {
   try {
     return await listAppleSpeechLocaleOptions({
       abortSignal: abortController.signal,
-      config: { locale: locale.value },
+      config: { locale: locale.value, transcriber: transcriber.value },
       t,
     })
   }
@@ -65,10 +75,36 @@ async function updateLocale(value: string | undefined) {
     isSaving.value = false
   }
 }
+
+async function updateTranscriber(value: string | undefined) {
+  if (!value || !['automatic', 'dictation', 'speech'].includes(value) || value === transcriber.value || isSaving.value)
+    return
+  isSaving.value = true
+  saveError.value = undefined
+  try {
+    await updateProviderConfig({ transcriber: value })
+  }
+  catch (cause) {
+    saveError.value = errorMessageFrom(cause) ?? t('settings.pages.providers.catalog.edit.config.save-error')
+  }
+  finally {
+    isSaving.value = false
+  }
+}
 </script>
 
 <template>
   <div :class="['flex', 'flex-col', 'gap-2']">
+    <FieldCombobox
+      data-testid="apple-speech-transcriber"
+      :model-value="transcriber"
+      :label="t('settings.pages.providers.provider.apple-speech-transcription.fields.transcriber.label')"
+      :description="t('settings.pages.providers.provider.apple-speech-transcription.fields.transcriber.description')"
+      :options="transcriberOptions"
+      :disabled="isSaving"
+      layout="vertical"
+      @update:model-value="updateTranscriber"
+    />
     <FieldCombobox
       data-testid="apple-speech-locale"
       :model-value="locale"

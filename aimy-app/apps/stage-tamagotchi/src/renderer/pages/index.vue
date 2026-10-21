@@ -95,7 +95,7 @@ const isTransparentByThreeExact = useThreeSceneIsTransparentAtPoint(
 )
 
 const settingsStore = useSettings()
-const { alwaysOnTop, stageModelRenderer, stageModelSelectedUrl } = storeToRefs(settingsStore)
+const { alwaysOnTop, stageModelRenderer, stageModelSelected, stageModelSelectedUrl } = storeToRefs(settingsStore)
 const modelStore = useModelStore()
 const expressionStore = useExpressionStore()
 const { sceneMutationLocked, scenePhase } = storeToRefs(modelStore)
@@ -201,10 +201,11 @@ const modelSettingsRuntimeSnapshot = computed<ModelSettingsRuntimeSnapshot>(() =
   if (stageModelRenderer.value === 'vrm') {
     return createEmptyModelSettingsRuntimeSnapshot({
       ownerInstanceId: modelSettingsRuntimeOwnerInstanceId,
+      modelId: modelStore.lastCommittedModelId,
       renderer: 'vrm',
       phase: hasModel ? scenePhase.value : 'no-model',
       controlsLocked: hasModel
-        ? (!stageMounted.value || sceneMutationLocked.value)
+        ? (!stageMounted.value || sceneMutationLocked.value || stagePaused.value || modelStore.lastCommittedModelId !== stageModelSelected.value)
         : false,
       previewAvailable: hasModel,
       canCapturePreview: false,
@@ -353,6 +354,7 @@ useModelSettingsRuntimeOwner({
   applyLive2DExpressionCommand: (command) => {
     expressionStore.applySettingsCommand(command)
   },
+  applyVrmGesture: gesture => !stagePaused.value && (widgetStageRef.value?.playVrmGesture(gesture) ?? false),
 })
 
 const voice = useVoiceStore()

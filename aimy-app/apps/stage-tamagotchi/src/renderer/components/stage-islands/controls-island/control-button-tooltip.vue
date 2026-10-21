@@ -31,7 +31,7 @@ const resolvedSide = computed<NonNullable<TooltipContentProps['side']>>(() => {
     :skip-delay-duration="0"
   >
     <TooltipRoot>
-      <TooltipTrigger :as-child="asChild">
+      <TooltipTrigger :as-child="asChild" :class="['inline-flex items-center justify-center align-middle leading-none']">
         <slot />
       </TooltipTrigger>
       <TooltipPortal>

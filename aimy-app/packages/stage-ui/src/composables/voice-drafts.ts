@@ -35,7 +35,7 @@ export function useVoiceDrafts(report: (cause: unknown) => void) {
     })
   }
 
-  async function acceptSpeech(submission: SpeechSubmission, signal: AbortSignal) {
+  async function acceptSpeech(submission: SpeechSubmission, signal: AbortSignal, options?: { forceDraft: boolean }) {
     signal.throwIfAborted()
     const text = submission.text.trim()
     const existing = hearing.autoSendEnabled
@@ -55,7 +55,7 @@ export function useVoiceDrafts(report: (cause: unknown) => void) {
     sources.set(id, evidence)
     drafts.value = [...drafts.value.filter(item => item.id !== id), draft]
     frontDraftId.value = id
-    if (!hearing.autoSendEnabled || !text)
+    if (!hearing.autoSendEnabled || !text || options?.forceDraft)
       return { status: 'drafted' as const, draftId: id }
 
     const receipt = await sendDraft(id, signal)

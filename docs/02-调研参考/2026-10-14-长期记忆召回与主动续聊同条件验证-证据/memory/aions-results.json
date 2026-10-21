@@ -1,0 +1,3879 @@
+{
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "initial_clock": "2026-10-14T10:00:00+08:00",
+  "runtime": "3.12.10 (v3.12.10:0cc81280367, Apr  8 2025, 08:46:59) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "cases": [
+    {
+      "case_id": "LM01",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "固定用户事实写入后新进程仍可读取",
+      "contract_outcome": "pass",
+      "observed": {
+        "before_restart": {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.c7fd598d888849288b83dcdd9182465d",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 77,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "saved_chars": 8,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.c7fd598d888849288b83dcdd9182465d": {
+                  "key": "fact.c7fd598d888849288b83dcdd9182465d",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+          "clock": 1791943200.0
+        },
+        "fresh_os_process": {
+          "pid": 37572,
+          "database": "/tmp/aimy-20261014-memory-ab-lm/synthetic/LM01.sqlite",
+          "seeded_or_written_in_child": false,
+          "model_calls": 0,
+          "state": {
+            "snapshot": {
+              "revision": 1,
+              "entries": [
+                {
+                  "key": "fact.c7fd598d888849288b83dcdd9182465d",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "view_status": "active",
+                  "included": true
+                }
+              ],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 77,
+              "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+              "saved_chars": 8,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 1,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.c7fd598d888849288b83dcdd9182465d": {
+                    "key": "fact.c7fd598d888849288b83dcdd9182465d",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": false,
+                    "deleted": false,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943200.0,
+                    "sources": [
+                      "private:U1"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "clock": 1791943200.0
+          }
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 1796
+        }
+      ],
+      "native_sequence": [
+        "original ensure_schema/enqueue_event/run_pending_once/_apply_analysis SQL commit",
+        "new Python OS process, same synthetic SQLite, original snapshot/build_context; no child writes"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM02",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "重复同条写入不产生重复当前事实",
+      "contract_outcome": "pass",
+      "observed": {
+        "first": {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.7156caeeebf5430f820a1b56ea1cdc8a",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 77,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "saved_chars": 8,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.7156caeeebf5430f820a1b56ea1cdc8a": {
+                  "key": "fact.7156caeeebf5430f820a1b56ea1cdc8a",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+          "clock": 1791943200.0
+        },
+        "duplicate_job_processed": false,
+        "original_repeated_apply_changed": false,
+        "repeated_apply_document": {
+          "version": 2,
+          "entries": {
+            "fact.7156caeeebf5430f820a1b56ea1cdc8a": {
+              "key": "fact.7156caeeebf5430f820a1b56ea1cdc8a",
+              "category": "profile",
+              "topic": "饮料偏好",
+              "content": "用户喜欢美式咖啡",
+              "kind": "context",
+              "status": "active",
+              "sustained": false,
+              "locked": false,
+              "deleted": false,
+              "updated_at": 1791943200.0,
+              "source_ts": 1791943200.0,
+              "sources": [
+                "private:U1"
+              ],
+              "available_at": null,
+              "due_at": null,
+              "expires_at": null
+            }
+          },
+          "current_state": null,
+          "_analysis_errors": []
+        },
+        "final": {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.7156caeeebf5430f820a1b56ea1cdc8a",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 77,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "saved_chars": 8,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.7156caeeebf5430f820a1b56ea1cdc8a": {
+                  "key": "fact.7156caeeebf5430f820a1b56ea1cdc8a",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+          "clock": 1791943200.0
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 1796
+        }
+      ],
+      "native_sequence": [
+        "same fixture message ID enqueued twice through native INSERT OR IGNORE",
+        "same candidate applied twice with original _apply_analysis, no extra dedupe added"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM03",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "较新同主题更正后旧当前偏好不并存",
+      "contract_outcome": "pass",
+      "observed": {
+        "states_in_input_order": [
+          {
+            "snapshot": {
+              "revision": 1,
+              "entries": [
+                {
+                  "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "view_status": "active",
+                  "included": true
+                }
+              ],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 77,
+              "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+              "saved_chars": 8,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 1,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.1502d56814b64b6ba907cdc02b148ce7": {
+                    "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": false,
+                    "deleted": false,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943200.0,
+                    "sources": [
+                      "private:U1"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "clock": 1791943200.0
+          },
+          {
+            "snapshot": {
+              "revision": 2,
+              "entries": [
+                {
+                  "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "view_status": "active",
+                  "included": true
+                }
+              ],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 87,
+              "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶，已经不喝美式咖啡",
+              "saved_chars": 18,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 2,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.1502d56814b64b6ba907cdc02b148ce7": {
+                    "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": false,
+                    "deleted": false,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943201.0,
+                    "sources": [
+                      "private:U2"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              },
+              {
+                "source_id": "private:U2",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U2",
+                "source_ts": 1791943201.0,
+                "content": "现在不喝咖啡了，更喜欢乌龙茶",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶，已经不喝美式咖啡",
+            "clock": 1791943200.0
+          }
+        ],
+        "final": {
+          "snapshot": {
+            "revision": 2,
+            "entries": [
+              {
+                "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943201.0,
+                "sources": [
+                  "private:U2"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 87,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶，已经不喝美式咖啡",
+            "saved_chars": 18,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 2,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.1502d56814b64b6ba907cdc02b148ce7": {
+                  "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            },
+            {
+              "source_id": "private:U2",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U2",
+              "source_ts": 1791943201.0,
+              "content": "现在不喝咖啡了，更喜欢乌龙茶",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶，已经不喝美式咖啡",
+          "clock": 1791943200.0
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 1796
+        },
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+                "sources": [
+                  "U2"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 2145
+        }
+      ],
+      "native_sequence": [
+        {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 77,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "saved_chars": 8,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.1502d56814b64b6ba907cdc02b148ce7": {
+                  "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+          "clock": 1791943200.0
+        },
+        {
+          "snapshot": {
+            "revision": 2,
+            "entries": [
+              {
+                "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943201.0,
+                "sources": [
+                  "private:U2"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 87,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶，已经不喝美式咖啡",
+            "saved_chars": 18,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 2,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.1502d56814b64b6ba907cdc02b148ce7": {
+                  "key": "fact.1502d56814b64b6ba907cdc02b148ce7",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            },
+            {
+              "source_id": "private:U2",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U2",
+              "source_ts": 1791943201.0,
+              "content": "现在不喝咖啡了，更喜欢乌龙茶",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶，已经不喝美式咖啡",
+          "clock": 1791943200.0
+        }
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM04",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "新结果落地后较旧轮次迟到不能覆盖",
+      "contract_outcome": "pass",
+      "observed": {
+        "states_new_then_old": [
+          {
+            "snapshot": {
+              "revision": 1,
+              "entries": [
+                {
+                  "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "view_status": "active",
+                  "included": true
+                }
+              ],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 78,
+              "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+              "saved_chars": 9,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 1,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.2a14a7b8f53045df9e617b3548a55201": {
+                    "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户现在喜欢乌龙茶",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": false,
+                    "deleted": false,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943201.0,
+                    "sources": [
+                      "private:U2"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U2",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U2",
+                "source_ts": 1791943201.0,
+                "content": "现在喜欢乌龙茶",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+            "clock": 1791943200.0
+          },
+          {
+            "snapshot": {
+              "revision": 1,
+              "entries": [
+                {
+                  "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "view_status": "active",
+                  "included": true
+                }
+              ],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 78,
+              "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+              "saved_chars": 9,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 1,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.2a14a7b8f53045df9e617b3548a55201": {
+                    "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户现在喜欢乌龙茶",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": false,
+                    "deleted": false,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943201.0,
+                    "sources": [
+                      "private:U2"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              },
+              {
+                "source_id": "private:U2",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U2",
+                "source_ts": 1791943201.0,
+                "content": "现在喜欢乌龙茶",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+            "clock": 1791943200.0
+          }
+        ],
+        "final": {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户现在喜欢乌龙茶",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943201.0,
+                "sources": [
+                  "private:U2"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 78,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+            "saved_chars": 9,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.2a14a7b8f53045df9e617b3548a55201": {
+                  "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            },
+            {
+              "source_id": "private:U2",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U2",
+              "source_ts": 1791943201.0,
+              "content": "现在喜欢乌龙茶",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+          "clock": 1791943200.0
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户现在喜欢乌龙茶",
+                "sources": [
+                  "U2"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 1889
+        },
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 2046
+        }
+      ],
+      "native_sequence": [
+        {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户现在喜欢乌龙茶",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943201.0,
+                "sources": [
+                  "private:U2"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 78,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+            "saved_chars": 9,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.2a14a7b8f53045df9e617b3548a55201": {
+                  "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U2",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U2",
+              "source_ts": 1791943201.0,
+              "content": "现在喜欢乌龙茶",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+          "clock": 1791943200.0
+        },
+        {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户现在喜欢乌龙茶",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943201.0,
+                "sources": [
+                  "private:U2"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 78,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+            "saved_chars": 9,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.2a14a7b8f53045df9e617b3548a55201": {
+                  "key": "fact.2a14a7b8f53045df9e617b3548a55201",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户现在喜欢乌龙茶",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943201.0,
+                  "sources": [
+                    "private:U2"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            },
+            {
+              "source_id": "private:U2",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U2",
+              "source_ts": 1791943201.0,
+              "content": "现在喜欢乌龙茶",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户现在喜欢乌龙茶",
+          "clock": 1791943200.0
+        }
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM05",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "引用不存在的来源不得写入",
+      "contract_outcome": "pass",
+      "observed": {
+        "final": {
+          "snapshot": {
+            "revision": 0,
+            "entries": [],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 0.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "画像：画像更新缺少有效用户来源",
+            "pending": 1,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 0,
+            "prompt_preview": "",
+            "saved_chars": 0,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 0,
+            "epoch": 0,
+            "updated_at": 0.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "画像：画像更新缺少有效用户来源",
+            "document": {
+              "version": 2,
+              "entries": {},
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "pending",
+              "epoch": 0,
+              "error": "画像：画像更新缺少有效用户来源",
+              "attempts": 1,
+              "next_attempt_at": 1791943230.0,
+              "model_output": "{\"updates\": [{\"category\": \"profile\", \"topic\": \"饮料偏好\", \"content\": \"用户喜欢美式咖啡\", \"sources\": [\"U999\"]}], \"state\": null}"
+            }
+          ],
+          "native_context": "",
+          "clock": 1791943200.0
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U999"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 1796
+        }
+      ],
+      "native_sequence": [
+        "original queued task consumes fixed _call_model result"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM06",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "等待抽取时原消息修改后拒绝旧候选",
+      "contract_outcome": "pass",
+      "observed": {
+        "final": {
+          "snapshot": {
+            "revision": 0,
+            "entries": [],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 0.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 0,
+            "prompt_preview": "",
+            "saved_chars": 0,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 0,
+            "epoch": 0,
+            "updated_at": 0.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {},
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "skipped",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "",
+          "clock": 1791943200.0
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 1796
+        }
+      ],
+      "native_sequence": [
+        "original queued task consumes fixed _call_model result",
+        "LM06 real SQL body edit occurs while original run_pending_once awaits fake model"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM07",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "删除后旧待处理抽取不能复活同ref事实",
+      "contract_outcome": "pass",
+      "observed": {
+        "baseline_manual": {
+          "revision": 1,
+          "entries": [
+            {
+              "key": "fixture.fact",
+              "category": "profile",
+              "content": "用户喜欢美式咖啡",
+              "topic": "饮料偏好",
+              "kind": "context",
+              "status": "active",
+              "sustained": false,
+              "available_at": null,
+              "due_at": null,
+              "expires_at": null,
+              "locked": false,
+              "deleted": false,
+              "updated_at": 1791943200.0,
+              "sources": [
+                "manual"
+              ],
+              "source_ts": 1791943200.0,
+              "view_status": "active",
+              "included": true
+            }
+          ],
+          "current_state": null,
+          "enabled": true,
+          "updated_at": 1791943200.0,
+          "last_checked_at": 0.0,
+          "last_error": "",
+          "pending": 1,
+          "failed": 0,
+          "model": "fixed supplied outputs; no real model",
+          "categories": {
+            "profile": "长期画像",
+            "recent": "近期重点与待办"
+          },
+          "phases": {
+            "planned": "计划",
+            "ongoing": "进行中",
+            "finished": "已结束",
+            "unknown": "未确认"
+          },
+          "kinds": {
+            "context": "普通近况",
+            "project": "项目",
+            "task": "待办"
+          },
+          "statuses": {
+            "active": "当前关注",
+            "stale": "久未确认",
+            "unknown": "结果未确认",
+            "done": "已完成",
+            "cancelled": "已取消",
+            "retired": "已淡出"
+          },
+          "prompt_limit": 1200,
+          "prompt_chars": 77,
+          "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+          "saved_chars": 8,
+          "omitted": 0
+        },
+        "manual_delete_receipt": {
+          "revision": 2,
+          "entries": [],
+          "current_state": null,
+          "enabled": true,
+          "updated_at": 1791943200.0,
+          "last_checked_at": 0.0,
+          "last_error": "",
+          "pending": 1,
+          "failed": 0,
+          "model": "fixed supplied outputs; no real model",
+          "categories": {
+            "profile": "长期画像",
+            "recent": "近期重点与待办"
+          },
+          "phases": {
+            "planned": "计划",
+            "ongoing": "进行中",
+            "finished": "已结束",
+            "unknown": "未确认"
+          },
+          "kinds": {
+            "context": "普通近况",
+            "project": "项目",
+            "task": "待办"
+          },
+          "statuses": {
+            "active": "当前关注",
+            "stale": "久未确认",
+            "unknown": "结果未确认",
+            "done": "已完成",
+            "cancelled": "已取消",
+            "retired": "已淡出"
+          },
+          "prompt_limit": 1200,
+          "prompt_chars": 0,
+          "prompt_preview": "",
+          "saved_chars": 0,
+          "omitted": 0
+        },
+        "after_first_await": {
+          "snapshot": {
+            "revision": 2,
+            "entries": [],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 1,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 0,
+            "prompt_preview": "",
+            "saved_chars": 0,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 2,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fixture.fact": {
+                  "key": "fixture.fact",
+                  "category": "profile",
+                  "content": "用户喜欢美式咖啡",
+                  "topic": "饮料偏好",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "locked": true,
+                  "deleted": true,
+                  "updated_at": 1791943200.0,
+                  "sources": [
+                    "manual"
+                  ],
+                  "source_ts": 1791943200.0
+                }
+              },
+              "current_state": null,
+              "state_cleared_at": 1791943200.0
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "pending",
+              "epoch": 0,
+              "error": "",
+              "attempts": 0,
+              "next_attempt_at": 1791943230.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "",
+          "clock": 1791943200.0
+        },
+        "native_retry_processed": true,
+        "after_native_retry": {
+          "snapshot": {
+            "revision": 2,
+            "entries": [],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943231.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 0,
+            "prompt_preview": "",
+            "saved_chars": 0,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 2,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943231.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fixture.fact": {
+                  "key": "fixture.fact",
+                  "category": "profile",
+                  "content": "用户喜欢美式咖啡",
+                  "topic": "饮料偏好",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "locked": true,
+                  "deleted": true,
+                  "updated_at": 1791943200.0,
+                  "sources": [
+                    "manual"
+                  ],
+                  "source_ts": 1791943200.0
+                }
+              },
+              "current_state": null,
+              "state_cleared_at": 1791943200.0
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943231.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "",
+          "clock": 1791943231.0
+        },
+        "automatic_same_source_leaf_probe": {
+          "layer": "native task baseline + native manual delete + original pure _apply_analysis replay; no after-delete SQL commit or native job requeue",
+          "auto_before": {
+            "snapshot": {
+              "revision": 1,
+              "entries": [
+                {
+                  "key": "fact.bac6c429f2594537899b4d8474f67ecf",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "view_status": "active",
+                  "included": true
+                }
+              ],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 77,
+              "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+              "saved_chars": 8,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 1,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.bac6c429f2594537899b4d8474f67ecf": {
+                    "key": "fact.bac6c429f2594537899b4d8474f67ecf",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": false,
+                    "deleted": false,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943200.0,
+                    "sources": [
+                      "private:U1"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "clock": 1791943200.0
+          },
+          "delete_receipt": {
+            "revision": 2,
+            "entries": [],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 0,
+            "prompt_preview": "",
+            "saved_chars": 0,
+            "omitted": 0
+          },
+          "deleted_entry_sources": {
+            "fact.bac6c429f2594537899b4d8474f67ecf": [
+              "private:U1"
+            ]
+          },
+          "native_context_sources": {
+            "U1": "private:U1"
+          },
+          "replayed_candidate": {
+            "category": "profile",
+            "topic": "饮料偏好",
+            "content": "用户喜欢美式咖啡",
+            "sources": [
+              "U1"
+            ],
+            "ref": "P1"
+          },
+          "changed": false,
+          "raw_replayed_document": {
+            "version": 2,
+            "entries": {
+              "fact.bac6c429f2594537899b4d8474f67ecf": {
+                "key": "fact.bac6c429f2594537899b4d8474f67ecf",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": true,
+                "deleted": true,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null
+              }
+            },
+            "current_state": null,
+            "state_cleared_at": 1791943200.0,
+            "_analysis_errors": []
+          },
+          "active_after_pure_replay": [],
+          "model_calls_for_auto_baseline": [
+            {
+              "at": 1791943200.0,
+              "fixed_return": {
+                "updates": [
+                  {
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "sources": [
+                      "U1"
+                    ]
+                  }
+                ],
+                "state": null
+              },
+              "prompt_chars": 1796
+            }
+          ],
+          "persisted_after_probe": {
+            "snapshot": {
+              "revision": 2,
+              "entries": [],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 0,
+              "prompt_preview": "",
+              "saved_chars": 0,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 2,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.bac6c429f2594537899b4d8474f67ecf": {
+                    "key": "fact.bac6c429f2594537899b4d8474f67ecf",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": true,
+                    "deleted": true,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943200.0,
+                    "sources": [
+                      "private:U1"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null,
+                "state_cleared_at": 1791943200.0
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "",
+            "clock": 1791943200.0
+          }
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ],
+                "ref": "P1"
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 2045
+        },
+        {
+          "at": 1791943231.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ],
+                "ref": "P1"
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 2044
+        }
+      ],
+      "native_sequence": [
+        "native save_manual baseline key fixture.fact, source_ts same fixed initial clock",
+        "same candidate gets native existing-ref P1 field mapping",
+        "native manual delete during fake model await changes revision; original task requeues",
+        "advance logical clock +31s beyond native 30s retry; original deleted-ref check refuses restoration"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM08",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "删事实后换主题同义抽取也不能复活",
+      "contract_outcome": "fail",
+      "observed": {
+        "baseline_manual": {
+          "revision": 1,
+          "entries": [
+            {
+              "key": "fixture.fact",
+              "category": "profile",
+              "content": "用户喜欢美式咖啡",
+              "topic": "饮料偏好",
+              "kind": "context",
+              "status": "active",
+              "sustained": false,
+              "available_at": null,
+              "due_at": null,
+              "expires_at": null,
+              "locked": false,
+              "deleted": false,
+              "updated_at": 1791943200.0,
+              "sources": [
+                "manual"
+              ],
+              "source_ts": 1791943200.0,
+              "view_status": "active",
+              "included": true
+            }
+          ],
+          "current_state": null,
+          "enabled": true,
+          "updated_at": 1791943200.0,
+          "last_checked_at": 0.0,
+          "last_error": "",
+          "pending": 1,
+          "failed": 0,
+          "model": "fixed supplied outputs; no real model",
+          "categories": {
+            "profile": "长期画像",
+            "recent": "近期重点与待办"
+          },
+          "phases": {
+            "planned": "计划",
+            "ongoing": "进行中",
+            "finished": "已结束",
+            "unknown": "未确认"
+          },
+          "kinds": {
+            "context": "普通近况",
+            "project": "项目",
+            "task": "待办"
+          },
+          "statuses": {
+            "active": "当前关注",
+            "stale": "久未确认",
+            "unknown": "结果未确认",
+            "done": "已完成",
+            "cancelled": "已取消",
+            "retired": "已淡出"
+          },
+          "prompt_limit": 1200,
+          "prompt_chars": 77,
+          "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+          "saved_chars": 8,
+          "omitted": 0
+        },
+        "manual_delete_receipt": {
+          "revision": 2,
+          "entries": [],
+          "current_state": null,
+          "enabled": true,
+          "updated_at": 1791943200.0,
+          "last_checked_at": 0.0,
+          "last_error": "",
+          "pending": 1,
+          "failed": 0,
+          "model": "fixed supplied outputs; no real model",
+          "categories": {
+            "profile": "长期画像",
+            "recent": "近期重点与待办"
+          },
+          "phases": {
+            "planned": "计划",
+            "ongoing": "进行中",
+            "finished": "已结束",
+            "unknown": "未确认"
+          },
+          "kinds": {
+            "context": "普通近况",
+            "project": "项目",
+            "task": "待办"
+          },
+          "statuses": {
+            "active": "当前关注",
+            "stale": "久未确认",
+            "unknown": "结果未确认",
+            "done": "已完成",
+            "cancelled": "已取消",
+            "retired": "已淡出"
+          },
+          "prompt_limit": 1200,
+          "prompt_chars": 0,
+          "prompt_preview": "",
+          "saved_chars": 0,
+          "omitted": 0
+        },
+        "final": {
+          "snapshot": {
+            "revision": 3,
+            "entries": [
+              {
+                "key": "fact.d72f5817d91a4fea8bea46a5fe12f28e",
+                "category": "profile",
+                "topic": "日常饮品",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 77,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 日常饮品：用户喜欢美式咖啡",
+            "saved_chars": 8,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 3,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fixture.fact": {
+                  "key": "fixture.fact",
+                  "category": "profile",
+                  "content": "用户喜欢美式咖啡",
+                  "topic": "饮料偏好",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "locked": true,
+                  "deleted": true,
+                  "updated_at": 1791943200.0,
+                  "sources": [
+                    "manual"
+                  ],
+                  "source_ts": 1791943200.0
+                },
+                "fact.d72f5817d91a4fea8bea46a5fe12f28e": {
+                  "key": "fact.d72f5817d91a4fea8bea46a5fe12f28e",
+                  "category": "profile",
+                  "topic": "日常饮品",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null,
+              "state_cleared_at": 1791943200.0
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "我喜欢美式咖啡",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 日常饮品：用户喜欢美式咖啡",
+          "clock": 1791943200.0
+        },
+        "automatic_same_source_leaf_probe": {
+          "layer": "native task baseline + native manual delete + original pure _apply_analysis replay; no after-delete SQL commit or native job requeue",
+          "auto_before": {
+            "snapshot": {
+              "revision": 1,
+              "entries": [
+                {
+                  "key": "fact.4c27c823488945fda596d91ed6953d36",
+                  "category": "profile",
+                  "topic": "饮料偏好",
+                  "content": "用户喜欢美式咖啡",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null,
+                  "view_status": "active",
+                  "included": true
+                }
+              ],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 77,
+              "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+              "saved_chars": 8,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 1,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.4c27c823488945fda596d91ed6953d36": {
+                    "key": "fact.4c27c823488945fda596d91ed6953d36",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": false,
+                    "deleted": false,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943200.0,
+                    "sources": [
+                      "private:U1"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 饮料偏好：用户喜欢美式咖啡",
+            "clock": 1791943200.0
+          },
+          "delete_receipt": {
+            "revision": 2,
+            "entries": [],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 0,
+            "prompt_preview": "",
+            "saved_chars": 0,
+            "omitted": 0
+          },
+          "deleted_entry_sources": {
+            "fact.4c27c823488945fda596d91ed6953d36": [
+              "private:U1"
+            ]
+          },
+          "native_context_sources": {
+            "U1": "private:U1"
+          },
+          "replayed_candidate": {
+            "category": "profile",
+            "topic": "日常饮品",
+            "content": "用户喜欢美式咖啡",
+            "sources": [
+              "U1"
+            ]
+          },
+          "changed": true,
+          "raw_replayed_document": {
+            "version": 2,
+            "entries": {
+              "fact.4c27c823488945fda596d91ed6953d36": {
+                "key": "fact.4c27c823488945fda596d91ed6953d36",
+                "category": "profile",
+                "topic": "饮料偏好",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": true,
+                "deleted": true,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null
+              },
+              "fact.39bbf2da9fa7404e807c54e526ecd186": {
+                "key": "fact.39bbf2da9fa7404e807c54e526ecd186",
+                "category": "profile",
+                "topic": "日常饮品",
+                "content": "用户喜欢美式咖啡",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null
+              }
+            },
+            "current_state": null,
+            "state_cleared_at": 1791943200.0,
+            "_analysis_errors": []
+          },
+          "active_after_pure_replay": [
+            {
+              "key": "fact.39bbf2da9fa7404e807c54e526ecd186",
+              "category": "profile",
+              "topic": "日常饮品",
+              "content": "用户喜欢美式咖啡",
+              "kind": "context",
+              "status": "active",
+              "sustained": false,
+              "locked": false,
+              "deleted": false,
+              "updated_at": 1791943200.0,
+              "source_ts": 1791943200.0,
+              "sources": [
+                "private:U1"
+              ],
+              "available_at": null,
+              "due_at": null,
+              "expires_at": null
+            }
+          ],
+          "model_calls_for_auto_baseline": [
+            {
+              "at": 1791943200.0,
+              "fixed_return": {
+                "updates": [
+                  {
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "sources": [
+                      "U1"
+                    ]
+                  }
+                ],
+                "state": null
+              },
+              "prompt_chars": 1796
+            }
+          ],
+          "persisted_after_probe": {
+            "snapshot": {
+              "revision": 2,
+              "entries": [],
+              "current_state": null,
+              "enabled": true,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "pending": 0,
+              "failed": 0,
+              "model": "fixed supplied outputs; no real model",
+              "categories": {
+                "profile": "长期画像",
+                "recent": "近期重点与待办"
+              },
+              "phases": {
+                "planned": "计划",
+                "ongoing": "进行中",
+                "finished": "已结束",
+                "unknown": "未确认"
+              },
+              "kinds": {
+                "context": "普通近况",
+                "project": "项目",
+                "task": "待办"
+              },
+              "statuses": {
+                "active": "当前关注",
+                "stale": "久未确认",
+                "unknown": "结果未确认",
+                "done": "已完成",
+                "cancelled": "已取消",
+                "retired": "已淡出"
+              },
+              "prompt_limit": 1200,
+              "prompt_chars": 0,
+              "prompt_preview": "",
+              "saved_chars": 0,
+              "omitted": 0
+            },
+            "document_row": {
+              "id": 1,
+              "revision": 2,
+              "epoch": 0,
+              "updated_at": 1791943200.0,
+              "last_checked_at": 1791943200.0,
+              "last_error": "",
+              "document": {
+                "version": 2,
+                "entries": {
+                  "fact.4c27c823488945fda596d91ed6953d36": {
+                    "key": "fact.4c27c823488945fda596d91ed6953d36",
+                    "category": "profile",
+                    "topic": "饮料偏好",
+                    "content": "用户喜欢美式咖啡",
+                    "kind": "context",
+                    "status": "active",
+                    "sustained": false,
+                    "locked": true,
+                    "deleted": true,
+                    "updated_at": 1791943200.0,
+                    "source_ts": 1791943200.0,
+                    "sources": [
+                      "private:U1"
+                    ],
+                    "available_at": null,
+                    "due_at": null,
+                    "expires_at": null
+                  }
+                },
+                "current_state": null,
+                "state_cleared_at": 1791943200.0
+              }
+            },
+            "jobs": [
+              {
+                "source_id": "private:U1",
+                "scope": "private",
+                "parent_id": "fixture-session",
+                "message_id": "U1",
+                "source_ts": 1791943200.0,
+                "content": "我喜欢美式咖啡",
+                "status": "done",
+                "epoch": 0,
+                "error": "",
+                "attempts": 1,
+                "next_attempt_at": 1791943200.0,
+                "model_output": ""
+              }
+            ],
+            "native_context": "",
+            "clock": 1791943200.0
+          }
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "日常饮品",
+                "content": "用户喜欢美式咖啡",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 2044
+        }
+      ],
+      "native_sequence": [
+        "same single current fact via native manual API",
+        "native manual delete before pending job model call; no source or epoch invalidation added",
+        "fixed second candidate same content/source but renamed topic, no existing ref"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM09",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "合法来源中的小说人物不能误存为用户姓名",
+      "contract_outcome": "fail",
+      "observed": {
+        "final": {
+          "snapshot": {
+            "revision": 1,
+            "entries": [
+              {
+                "key": "fact.3adafa91e4014aa981375121be5005da",
+                "category": "profile",
+                "topic": "称呼",
+                "content": "用户本人叫张三",
+                "kind": "context",
+                "status": "active",
+                "sustained": false,
+                "locked": false,
+                "deleted": false,
+                "updated_at": 1791943200.0,
+                "source_ts": 1791943200.0,
+                "sources": [
+                  "private:U1"
+                ],
+                "available_at": null,
+                "due_at": null,
+                "expires_at": null,
+                "view_status": "active",
+                "included": true
+              }
+            ],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "pending": 0,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 74,
+            "prompt_preview": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 称呼：用户本人叫张三",
+            "saved_chars": 7,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 1,
+            "epoch": 0,
+            "updated_at": 1791943200.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "",
+            "document": {
+              "version": 2,
+              "entries": {
+                "fact.3adafa91e4014aa981375121be5005da": {
+                  "key": "fact.3adafa91e4014aa981375121be5005da",
+                  "category": "profile",
+                  "topic": "称呼",
+                  "content": "用户本人叫张三",
+                  "kind": "context",
+                  "status": "active",
+                  "sustained": false,
+                  "locked": false,
+                  "deleted": false,
+                  "updated_at": 1791943200.0,
+                  "source_ts": 1791943200.0,
+                  "sources": [
+                    "private:U1"
+                  ],
+                  "available_at": null,
+                  "due_at": null,
+                  "expires_at": null
+                }
+              },
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "小说人物叫张三，我本人不叫张三",
+              "status": "done",
+              "epoch": 0,
+              "error": "",
+              "attempts": 1,
+              "next_attempt_at": 1791943200.0,
+              "model_output": ""
+            }
+          ],
+          "native_context": "【用户的共享画像】\n资料是背景，本轮表达优先。结果未确认不等于仍在做；久未确认不主动提起，不反复追问旧事项。\n【长期画像】\n- 称呼：用户本人叫张三",
+          "clock": 1791943200.0
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "称呼",
+                "content": "用户本人叫张三",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 1804
+        }
+      ],
+      "native_sequence": [
+        "original queued task consumes fixed _call_model result"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    },
+    {
+      "case_id": "LM10",
+      "arm": "AionsHome.post_sentinel",
+      "contract": "单条长事实不能突破1200字符目标",
+      "contract_outcome": "pass",
+      "observed": {
+        "final": {
+          "snapshot": {
+            "revision": 0,
+            "entries": [],
+            "current_state": null,
+            "enabled": true,
+            "updated_at": 0.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "画像：每条画像请填写 1–600 字",
+            "pending": 1,
+            "failed": 0,
+            "model": "fixed supplied outputs; no real model",
+            "categories": {
+              "profile": "长期画像",
+              "recent": "近期重点与待办"
+            },
+            "phases": {
+              "planned": "计划",
+              "ongoing": "进行中",
+              "finished": "已结束",
+              "unknown": "未确认"
+            },
+            "kinds": {
+              "context": "普通近况",
+              "project": "项目",
+              "task": "待办"
+            },
+            "statuses": {
+              "active": "当前关注",
+              "stale": "久未确认",
+              "unknown": "结果未确认",
+              "done": "已完成",
+              "cancelled": "已取消",
+              "retired": "已淡出"
+            },
+            "prompt_limit": 1200,
+            "prompt_chars": 0,
+            "prompt_preview": "",
+            "saved_chars": 0,
+            "omitted": 0
+          },
+          "document_row": {
+            "id": 1,
+            "revision": 0,
+            "epoch": 0,
+            "updated_at": 0.0,
+            "last_checked_at": 1791943200.0,
+            "last_error": "画像：每条画像请填写 1–600 字",
+            "document": {
+              "version": 2,
+              "entries": {},
+              "current_state": null
+            }
+          },
+          "jobs": [
+            {
+              "source_id": "private:U1",
+              "scope": "private",
+              "parent_id": "fixture-session",
+              "message_id": "U1",
+              "source_ts": 1791943200.0,
+              "content": "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+              "status": "pending",
+              "epoch": 0,
+              "error": "画像：每条画像请填写 1–600 字",
+              "attempts": 1,
+              "next_attempt_at": 1791943230.0,
+              "model_output": "{\"updates\": [{\"category\": \"profile\", \"topic\": \"长事实\", \"content\": \"合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲\", \"sources\": [\"U1\"]}], \"state\": null}"
+            }
+          ],
+          "native_context": "",
+          "clock": 1791943200.0
+        },
+        "fixed_candidate_characters": 1504,
+        "native_context_characters": 0,
+        "manual_original_validation": {
+          "accepted": false,
+          "type": "ValueError",
+          "error": "每条画像请填写 1–600 字"
+        }
+      },
+      "model_calls": [
+        {
+          "at": 1791943200.0,
+          "fixed_return": {
+            "updates": [
+              {
+                "category": "profile",
+                "topic": "长事实",
+                "content": "合成事实甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+                "sources": [
+                  "U1"
+                ]
+              }
+            ],
+            "state": null
+          },
+          "prompt_chars": 3293
+        }
+      ],
+      "native_sequence": [
+        "original queued task consumes fixed _call_model result"
+      ],
+      "true_code": [
+        "post_sentinel AST original functions and original SQL",
+        "user_profile_policy original module",
+        "sqlite3 file/transactions; asyncio await"
+      ],
+      "fake_boundaries": [
+        "fixed model output, not original _call_model or a model/API request",
+        "synthetic user_name 用户/config/notification sink",
+        "async protocol adapter over sqlite3; not third-party aiosqlite library"
+      ],
+      "field_mapping": {
+        "candidate": "unchanged topic/content/sources + native category=profile; state=null",
+        "source_IDs": "fixture U labels to original private:<message-id> through native _context_for_job",
+        "message_timestamps": "clock_epoch + turn - 1 seconds",
+        "manual_initial_state_for_LM07_08": "real save_manual, key fixture.fact, identical candidate content/topic; sources manual as native API requires",
+        "LM07_ref": "P1 determined by one native existing fact; no content changes",
+        "LM06_edit": "same fixture message text plus （已编辑） in synthetic messages table"
+      },
+      "limitations": [
+        "not full FastAPI/observer startup or native aiosqlite concurrency",
+        "exact literal topic matching only, no tested semantic equivalence",
+        "fixed erroneous model output only tests deterministic defenses; no extraction quality measurement",
+        "LM01 fresh Python process restores this SQLite document, not AIRI or whole application restore"
+      ]
+    }
+  ]
+}

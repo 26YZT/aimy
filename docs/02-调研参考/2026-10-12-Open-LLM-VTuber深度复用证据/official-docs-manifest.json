@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://docs.llmvtuber.com/docs/user-guide/backend/agent/",
+    "method": "Jina reader of official docs",
+    "observed_at_utc": "2026-10-12T07:46:29.067926+00:00",
+    "ok": true,
+    "temp_snapshot": "/tmp/aimy-openllmvtuber-20261012/official-docs/agent.txt",
+    "sha256": "34abda10f755b607c53fc5cd089ec8e8ca28571f58f0b4d83c5cfece1ac4e8b3",
+    "bytes": 8294,
+    "lines": 132
+  },
+  {
+    "url": "https://docs.llmvtuber.com/docs/user-guide/live2d/",
+    "method": "Jina reader of official docs",
+    "observed_at_utc": "2026-10-12T07:46:30.894090+00:00",
+    "ok": true,
+    "temp_snapshot": "/tmp/aimy-openllmvtuber-20261012/official-docs/live2d.txt",
+    "sha256": "46a4c276409a00bae2f3a1954e022aa459527ea7ab4f46db692ac9bcb25569e5",
+    "bytes": 14523,
+    "lines": 229
+  },
+  {
+    "url": "https://docs.llmvtuber.com/docs/user-guide/frontend/electron/",
+    "method": "Jina reader of official docs",
+    "observed_at_utc": "2026-10-12T07:46:30.837696+00:00",
+    "ok": true,
+    "temp_snapshot": "/tmp/aimy-openllmvtuber-20261012/official-docs/electron.txt",
+    "sha256": "54ee0760154735315c5052eb7395dfbb76a27bf7fe3d90e6365175bafc982f76",
+    "bytes": 2803,
+    "lines": 71
+  },
+  {
+    "url": "https://docs.llmvtuber.com/docs/user-guide/frontend/web/",
+    "method": "Jina reader of official docs",
+    "observed_at_utc": "2026-10-12T07:46:29.012580+00:00",
+    "ok": true,
+    "temp_snapshot": "/tmp/aimy-openllmvtuber-20261012/official-docs/web.txt",
+    "sha256": "7c0366ae060ca834c3a8ad2be27df2b78ca18d378640cd4a6809446e9a58c86d",
+    "bytes": 14216,
+    "lines": 270
+  },
+  {
+    "url": "https://docs.llmvtuber.com/docs/user-guide/backend/structure/",
+    "method": "Jina reader of official docs",
+    "observed_at_utc": "2026-10-12T07:46:32.924539+00:00",
+    "ok": true,
+    "temp_snapshot": "/tmp/aimy-openllmvtuber-20261012/official-docs/structure.txt",
+    "sha256": "1057dc9faa5e50f9cd2abf23f63606e05aeb666ef464aa7106b7c130c9ca897d",
+    "bytes": 6041,
+    "lines": 83
+  },
+  {
+    "url": "https://docs.llmvtuber.com/docs/user-guide/mcp/overview/",
+    "method": "Jina reader of official docs",
+    "observed_at_utc": "2026-10-12T07:46:34.691666+00:00",
+    "ok": true,
+    "temp_snapshot": "/tmp/aimy-openllmvtuber-20261012/official-docs/mcp.txt",
+    "sha256": "ee4db1e0db6f58b7729758910d4a69911d2013967f50da33e684bb7195940d6d",
+    "bytes": 2441,
+    "lines": 20
+  },
+  {
+    "url": "https://docs.llmvtuber.com/docs/user-guide/backend/remote/",
+    "method": "Jina reader of official docs",
+    "observed_at_utc": "2026-10-12T07:46:35.934883+00:00",
+    "ok": true,
+    "temp_snapshot": "/tmp/aimy-openllmvtuber-20261012/official-docs/remote.txt",
+    "sha256": "1f082ed98cfcc84e52130ee38e9ed552f5d76e8445f45faab5158e6dc9e3db2d",
+    "bytes": 7242,
+    "lines": 85
+  }
+]

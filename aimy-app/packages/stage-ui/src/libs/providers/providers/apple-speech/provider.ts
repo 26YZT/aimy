@@ -9,6 +9,7 @@ import { z } from 'zod'
 
 export const appleSpeechConfigSchema = z.object({
   locale: z.string().trim().min(1).default('en-US'),
+  transcriber: z.enum(['automatic', 'dictation', 'speech']).default('automatic'),
 })
 
 /** Serializable configuration for the Apple Speech Provider. */
@@ -35,7 +36,7 @@ function sortLocales(locales: AppleSpeechLocale[]) {
   })
 }
 
-/** Lists labeled native locales available through Apple's automatic transcriber selection. */
+/** Lists native locales supported by the selected Apple transcriber. */
 export async function listAppleSpeechLocaleOptions(context: ProviderConfigContext<AppleSpeechConfig>) {
   if (context.config === undefined)
     return []
@@ -46,7 +47,7 @@ export async function listAppleSpeechLocaleOptions(context: ProviderConfigContex
   const eventa = createContext(window.electron.ipcRenderer)
   try {
     const provider = createAppleSpeechProvider({ context: eventa.context })
-    const locales = await provider.getLocales({ transcriber: 'automatic' })
+    const locales = await provider.getLocales({ transcriber: context.config.transcriber ?? 'automatic' })
     context.abortSignal?.throwIfAborted()
     return sortLocales(locales).map(({ locale }) => ({
       label: localeLabel(locale),

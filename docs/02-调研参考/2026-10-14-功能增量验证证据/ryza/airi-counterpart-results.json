@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-14 Asia/Shanghai",
+  "sourceRoot": "/Users/mima1234/Documents/aimy/aimy-app/",
+  "networkCalls": 0,
+  "realModels": 0,
+  "realDevices": 0,
+  "productWrites": 0,
+  "results": [
+    {
+      "id": "AIRI-C01",
+      "module": "character/notebook.ts",
+      "actualFunctions": [
+        "useCharacterNotebookStore",
+        "addNote",
+        "addEntry"
+      ],
+      "output": {
+        "manualNotesInFirstVm": 1,
+        "notesInFreshVm": 0,
+        "hasFactSelector": false,
+        "hasMemoryCardLayers": false
+      },
+      "scope": "Actual manual notebook code with fake Vue/Pinia constructors. This is a neighboring in-memory notebook, not an AIRI promised fact-memory subsystem or a durable chat-store test."
+    },
+    {
+      "id": "AIRI-C02",
+      "module": "packages/provider-inference/src/providers/cloud/mimo-audio/index.ts",
+      "actualFunctions": [
+        "normalizeBaseUrl",
+        "createMimoSpeechProvider",
+        "speech().fetch"
+      ],
+      "input": {
+        "style": "平静、清晰地说",
+        "spokenText": "今天一起玩游戏。",
+        "voice": "fixture_voice"
+      },
+      "output": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "平静、清晰地说"
+          },
+          {
+            "role": "assistant",
+            "content": "今天一起玩游戏。"
+          }
+        ],
+        "voice": "fixture_voice",
+        "syntheticAudioBytes": 2
+      },
+      "scope": "Actual request-shaping function with fake fetch/response; zero network and no speech-quality measurement. Proves independent TTS style and spoken-text fields already exist."
+    },
+    {
+      "id": "AIRI-C03",
+      "module": "packages/provider-inference/src/providers/cloud/mimo-audio/index.ts",
+      "output": {
+        "rejectedMissingStyle": true,
+        "noAdditionalFetch": true
+      },
+      "scope": "Actual validation negative; not a real provider error or model invocation."
+    }
+  ],
+  "memoryAbsenceEvidence": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+      "sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a",
+      "evidence": "<WIP /> and route metadata only"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-short-term.vue",
+      "sha256": "5f0110ca0d084a169f29fc40bc4fcfb7a73804416c73b5e99381a234eaaf4bda",
+      "evidence": "<WIP /> and route metadata only"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de",
+      "evidence": "<WIP /> and route metadata only"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+      "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9",
+      "evidence": "Empty module:configure handler; no fact persistence/retrieval implementation"
+    }
+  ]
+}

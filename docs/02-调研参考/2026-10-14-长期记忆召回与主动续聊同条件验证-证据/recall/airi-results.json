@@ -1,0 +1,3214 @@
+{
+  "fixture": "/tmp/aimy-20261014-memory-ab/fixtures.json",
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "clock": "2026-10-14T10:00:00+08:00",
+  "actual_libraries": {
+    "typescript": "6.0.3",
+    "vue": "3.5.41",
+    "pinia": "4.0.3"
+  },
+  "boundaries": {
+    "full_app": false,
+    "models": 0,
+    "network": 0,
+    "devices": 0,
+    "product_writes": 0,
+    "history_storage": "synthetic supplied in-memory same32records; no actual persisted user data",
+    "source_transforms": "TypeScript transpile to CJS; explicit reexport aliases only; exact default buildContext+runtime-append fragments wrapped with frozen now and identity unwrapMessage"
+  },
+  "observations": [
+    {
+      "query_id": "Q01",
+      "raw_question": "昨天的面试问了什么",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [
+        "R01"
+      ],
+      "forbidden": [
+        "R02",
+        "R03"
+      ],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 昨天的面试问了什么\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 昨天的面试问了什么\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1344,
+        "context_utf16_units": 1344,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [
+          "R01"
+        ],
+        "contained_forbidden": [
+          "R02",
+          "R03"
+        ],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [
+            "R01"
+          ],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": false,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q02",
+      "raw_question": "2026-10-12 面试",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [
+        "R02"
+      ],
+      "forbidden": [
+        "R01",
+        "R03"
+      ],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 2026-10-12 面试\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 2026-10-12 面试\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1348,
+        "context_utf16_units": 1348,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [
+          "R02"
+        ],
+        "contained_forbidden": [
+          "R01",
+          "R03"
+        ],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [
+            "R02"
+          ],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": false,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q03",
+      "raw_question": "现在喜欢喝什么饮料",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [
+        "R05"
+      ],
+      "forbidden": [
+        "R04"
+      ],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 现在喜欢喝什么饮料\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 现在喜欢喝什么饮料\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1344,
+        "context_utf16_units": 1344,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [
+          "R05"
+        ],
+        "contained_forbidden": [
+          "R04"
+        ],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [
+            "R05"
+          ],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": false,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q04",
+      "raw_question": "星露谷 游戏约定",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [
+        "R06"
+      ],
+      "forbidden": [
+        "R09"
+      ],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 星露谷 游戏约定\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 星露谷 游戏约定\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1343,
+        "context_utf16_units": 1343,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [
+          "R06"
+        ],
+        "contained_forbidden": [
+          "R09"
+        ],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [
+            "R06"
+          ],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": false,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q05",
+      "raw_question": "去海岸走走时找到的东西",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [
+        "R07"
+      ],
+      "forbidden": [],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 去海岸走走时找到的东西\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 去海岸走走时找到的东西\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1346,
+        "context_utf16_units": 1346,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [
+          "R07"
+        ],
+        "contained_forbidden": [],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [
+            "R07"
+          ],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": false,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q06",
+      "raw_question": "火星采矿基地地址",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [],
+      "forbidden": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R30",
+        "R31",
+        "R32"
+      ],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 火星采矿基地地址\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 火星采矿基地地址\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1343,
+        "context_utf16_units": 1343,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [],
+        "contained_forbidden": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [],
+          "forbidden_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": true,
+          "forbidden_absent": false,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q07",
+      "raw_question": "灯塔散步约定还有效吗",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [],
+      "forbidden": [
+        "R09"
+      ],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 灯塔散步约定还有效吗\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 灯塔散步约定还有效吗\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1345,
+        "context_utf16_units": 1345,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [],
+        "contained_forbidden": [
+          "R09"
+        ],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": true,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q08",
+      "raw_question": "Aimy的记忆项目",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [
+        "R08"
+      ],
+      "forbidden": [],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] Aimy的记忆项目\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] Aimy的记忆项目\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1344,
+        "context_utf16_units": 1344,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [
+          "R08"
+        ],
+        "contained_forbidden": [],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [
+            "R08"
+          ],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": false,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q09",
+      "raw_question": "我本人叫张三吗",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [
+        "R10"
+      ],
+      "forbidden": [],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 我本人叫张三吗\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 我本人叫张三吗\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1342,
+        "context_utf16_units": 1342,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [
+          "R10"
+        ],
+        "contained_forbidden": [],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [
+            "R10"
+          ],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": false,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    },
+    {
+      "query_id": "Q10",
+      "raw_question": "2月31日 面试",
+      "contract_outcome": "unsupported",
+      "selected_original_ids": null,
+      "original_order": null,
+      "expected_relevant": [],
+      "forbidden": [],
+      "default_desktop_prompt_fragment": {
+        "raw_provider_messages": [
+          {
+            "role": "system",
+            "content": "合成角色系统提示。"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 12:00] 昨天给植物浇水"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 12:00] 周日修好了键盘"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+          },
+          {
+            "role": "user",
+            "content": "[2026-10-14 10:00] 2月31日 面试\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。"
+          }
+        ],
+        "native_context": "合成角色系统提示。\n[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案\n[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法\n[2026-10-14 12:00] 今天下午要复盘产品经理面试\n[2026-10-01 12:00] 用户以前喜欢美式咖啡\n[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡\n[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语\n[2026-10-12 12:00] 去海边散步时捡到了一个贝壳\n[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆\n[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定\n[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三\n[2026-10-13 12:00] 昨天给植物浇水\n[2026-10-11 12:00] 周日修好了键盘\n[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13\n[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14\n[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15\n[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16\n[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17\n[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18\n[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19\n[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20\n[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21\n[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22\n[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23\n[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24\n[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25\n[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26\n[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27\n[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28\n[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29\n[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30\n[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31\n[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32\n[2026-10-14 10:00] 2月31日 面试\n[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "context_chars_unicode_codepoints": 1343,
+        "context_utf16_units": 1343,
+        "actual_runtime_contexts": {
+          "system:airi-runtime-prompt": [
+            {
+              "id": "gIgzOisj8dyawKoJvxXJA",
+              "contextId": "system:airi-runtime-prompt",
+              "strategy": "replace-self",
+              "metadata": {
+                "source": {
+                  "id": "system:airi-runtime-prompt"
+                }
+              },
+              "text": "合成运行信息，非记忆。",
+              "createdAt": 1791943200000
+            }
+          ]
+        },
+        "runtime_context_text": "[Context]\n- system:airi-runtime-prompt: 合成运行信息，非记忆。",
+        "memory_note_context_text": "",
+        "contained_history_original_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "contained_expected": [],
+        "contained_forbidden": [],
+        "contained_retired": [
+          "R04",
+          "R09"
+        ],
+        "contains_32_note_texts_via": "supplied synthetic session history, not notebook injection or retrieval",
+        "contract_outcome": "unsupported; default owner fragment renders history/runtime contexts, no native topK/keyword/date selector executed"
+      },
+      "notebook": {
+        "entries": 32,
+        "entry_order": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "native_query_interface": "unsupported",
+        "native_prompt_interface": "unsupported in this store",
+        "wired_default_context_projection": "not present in inspected default owner chain; do not inject notes in harness"
+      },
+      "adjacent_task_memory": {
+        "native_context": "Status: active\nConfirmed facts:\n  - 第23条无关日常：整理书桌和收纳盒编号23\n  - 第24条无关日常：整理书桌和收纳盒编号24\n  - 第25条无关日常：整理书桌和收纳盒编号25\n  - 第26条无关日常：整理书桌和收纳盒编号26\n  - 第27条无关日常：整理书桌和收纳盒编号27\n  - 第28条无关日常：整理书桌和收纳盒编号28\n  - 第29条无关日常：整理书桌和收纳盒编号29\n  - 第30条无关日常：整理书桌和收纳盒编号30\n  - 第31条无关日常：整理书桌和收纳盒编号31\n  - 第32条无关日常：整理书桌和收纳盒编号32",
+        "context_chars_unicode_codepoints": 291,
+        "native_retained_original_ids": [
+          "R23",
+          "R24",
+          "R25",
+          "R26",
+          "R27",
+          "R28",
+          "R29",
+          "R30",
+          "R31",
+          "R32"
+        ],
+        "sourceTurnId": "frozen-corpus-turn",
+        "native_query_interface": "unsupported",
+        "native_top5_interface": "unsupported; confirmedFacts hard cap10 and toContextString emits all retained",
+        "native_relevance_ranking": null,
+        "contained_ids_diagnostic_only": {
+          "expected_hits": [],
+          "missing_expected": [],
+          "forbidden_selected": [],
+          "unrelated_selected": [
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R30",
+            "R31",
+            "R32"
+          ],
+          "retired_selected": [],
+          "duplicates": [],
+          "all_expected_present": true,
+          "forbidden_absent": true,
+          "no_unrelated_evidence": false,
+          "observed_max5": false,
+          "observed_context_max1200": true
+        },
+        "contract_outcome": "unsupported; same fixed context for every question, not a retrieval ranking"
+      },
+      "outcomes": {
+        "evidence_selection": "unsupported",
+        "default_1200_configuration": "unsupported",
+        "default_1200_observed": "fail",
+        "default_memory_query": "unsupported in inspected owner chain",
+        "LLM_answer_semantics": "inconclusive; provider not invoked"
+      },
+      "limits": "Original assembly fragments plus original serializers, actual Vue/Pinia stores and registry. Synthetic history/control prompt only. Not full app/LLM dispatch, storage load, compaction or external plugin behavior."
+    }
+  ]
+}

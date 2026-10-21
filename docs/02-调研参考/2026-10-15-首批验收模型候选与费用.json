@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-15",
+  "candidate_selected": null,
+  "real_model_calls": 0,
+  "product_code_writes": 0,
+  "example_input_tokens": 1000000,
+  "example_output_tokens": 200000,
+  "prices": [
+    {
+      "model": "deepseek-flash-offpeak",
+      "input_CNY_per_1M": 1,
+      "output_CNY_per_1M": 4,
+      "example_CNY": "1.8"
+    },
+    {
+      "model": "deepseek-flash-peak",
+      "input_CNY_per_1M": 2,
+      "output_CNY_per_1M": 8,
+      "example_CNY": "3.6"
+    },
+    {
+      "model": "qwen3.7-plus-2026-05-26",
+      "input_CNY_per_1M": 2,
+      "output_CNY_per_1M": 8,
+      "example_CNY": "3.6"
+    },
+    {
+      "model": "kimi-k2.6",
+      "input_CNY_per_1M": 6.5,
+      "output_CNY_per_1M": 27,
+      "example_CNY": "11.9"
+    }
+  ],
+  "scope": "官方价格/接入源码依据，非模型质量排名；条件见报告。",
+  "sources": [
+    {
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "local_raw": "/tmp/aimy-model-candidates-20261015/deepseek-pricing-zh.txt",
+      "sha256": "9df56bcc663f1ae658c973d824e52f115f0ecb4c2aa8995f956593643b036060"
+    },
+    {
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "local_raw": "/tmp/aimy-model-candidates-20261015/qwen-pricing.txt",
+      "sha256": "93f0eb0e3fa0fb83ae45c37f5aaad795b4243c793dada39f25fd632caeed7d54"
+    },
+    {
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "local_raw": "/tmp/aimy-model-candidates-20261015/kimi-pricing.txt",
+      "sha256": "e672c88cbf7943d558ccf72c5a28160f80b76214b61451db88fcc9098d582e7f"
+    },
+    {
+      "url": "https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart",
+      "local_raw": "/tmp/aimy-model-candidates-20261015/kimi-guide.txt",
+      "sha256": "a76ee8d4a70285e61628073a4f98f890bca504533ed7a237275d59f3d528ef10"
+    }
+  ]
+}

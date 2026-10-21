@@ -8,6 +8,10 @@ import { listModels } from '@xsai/model'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
+import { acceptanceAttemptGate } from '../../../services/acceptance-generation'
+import { getMemorySessionPort } from '../../../services/memory-session'
+import { getAcceptanceBudget } from '../../memory/budget'
+import { useProviderStore } from '../../providers/provider'
 import { resolveLlmTools } from './tool-resolver'
 
 export type { StreamEvent, StreamOptions } from '@proj-airi/core-agent'
@@ -28,6 +32,9 @@ export const useLLM = defineStore('llm', () => {
     let toolExecutionStarted = false
     const { tools: customTools, describeToolImage, ...streamOptions } = options ?? {}
     const builtinToolsResolver = () => resolveLlmTools({ customTools, describeImage: describeToolImage })
+    const acceptanceDefinition = getAcceptanceBudget()
+      ? useProviderStore().findProviderDefinition(streamOptions.providerId ?? '')
+      : undefined
 
     const runStream = () => coreStreamFrom({
       model,
@@ -35,6 +42,9 @@ export const useLLM = defineStore('llm', () => {
       conversation: context,
       options: {
         ...streamOptions,
+        attemptGate: streamOptions.attemptGate ?? acceptanceAttemptGate(acceptanceDefinition, 'chat', streamOptions.requestCorrelation?.turnId),
+        supportsTools: getAcceptanceBudget() ? false : streamOptions.supportsTools,
+        maxInputTokens: streamOptions.maxInputTokens ?? (getMemorySessionPort() ? 64_000 : undefined),
         onStreamEvent: async (event) => {
           if (event.type === 'tool-call')
             toolExecutionStarted = true
@@ -51,7 +61,7 @@ export const useLLM = defineStore('llm', () => {
     }
     catch (err) {
       if (isToolRelatedError(err)) {
-        console.warn(`[llm] Auto-disabling tools for "${key}" due to tool-related error`)
+        console.warn('[llm] Disabling unsupported tools for this request configuration')
         toolsCompatibility.value.set(key, false)
       }
       // NOTICE:
@@ -61,7 +71,7 @@ export const useLLM = defineStore('llm', () => {
       // requiring them to resend; subsequent calls reuse the cached degrade.
       // See: https://github.com/moeru-ai/airi/issues/1500
       if (isContentArrayRelatedError(err) && contentArrayCompatibility.value.get(key) !== false) {
-        console.warn(`[llm] Auto-disabling content-part arrays for "${key}" and retrying once`)
+        console.warn('[llm] Retrying this request configuration with text content')
         contentArrayCompatibility.value.set(key, false)
         // A completed tool can have external effects. A full retry must not repeat it.
         if (toolExecutionStarted)

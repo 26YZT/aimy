@@ -10,9 +10,17 @@ animations:
     title: Use Page Specific Transitions
 dialogs:
   onboarding:
+    acceptanceTextOnly: 'Extra paid connection probes are off for this text and memory trial. Model calls use the shared trial budget.'
+    storedCredential: Securely saved · leave blank to reuse
+    storedCredentialHint: Your saved key stays private. Leave this field blank to reuse it, or enter a replacement.
+    saveFailed: Could not finish validating or saving this configuration. Your input is still here. Retry when the connection is ready.
+    apiKeyDescription: Enter your API key for the selected provider.
+    baseUrlDescription: Enter the base URL for the provider API.
+    localTitle: Meet Aimy
+    localDescription: A companion on your desktop. Connect your own model, then get to know each other.
     official:
       title: AIRI Official Provider
-    title: Welcome to AIRI!
+    title: Welcome to Aimy!
     description: Let's set up your first AI provider to get started.
     selectProvider: Choose an AI Provider
     configureProvider: Configure {provider}
@@ -36,15 +44,12 @@ dialogs:
     retry: Retry
     credentialsSafeLabel: Keep your API keys and credentials safe!
     credentialsSafeLocal: >-
-      AIRI is running pure locally in your PC, and we will never steal your
-      credentials for AI / LLM providers. But keep in mind that your API keys
-      are sensitive information. Make sure to keep them safe and do not share
-      them with anyone.
+      Aimy runs on your computer and connects to the AI provider you configure.
+      Keep your API key private.
     credentialsSafeOpenSource: >-
-      AIRI is open sourced at {github}, if you want to check how we handle your
-      credentials, feel free to inspect our code.
+      Aimy is based on Project AIRI. The upstream source code is available at {github}.
     enableChatCheck: >-
-      Allow airi to send a "ping" message to the first available chat model to
+      Allow Aimy to send a "ping" message to the first available chat model to
       check availability
     start: Let's do it!
     loginPrompt: Sign in to use the official AIRI provider for the best experience.
@@ -65,7 +70,7 @@ dialogs:
       notificationsTitle: Notifications
       notificationsDescription: Allow reminders and important status updates.
       microphoneTitle: Microphone
-      microphoneDescription: Allow AIRI to use your microphone for voice input and transcription.
+      microphoneDescription: Allow Aimy to use your microphone for voice input and transcription.
       requestAction: Request access
       optionalHint: You can continue even if these permissions are not granted.
       stateGranted: Granted
@@ -115,6 +120,32 @@ analytics:
   disabled:
     title: Analytics disabled for this development build
 model-select:
+  vrm-report:
+    title: "Model file check"
+    description: "Checks declared capabilities and structure, not visual quality or actual motion."
+    ready: "Structure ready"
+    warning: "Importable with missing capabilities"
+    invalid: "Cannot import"
+    import: "Continue import"
+    close: "Close report"
+    download: "Save report"
+    import-failed: "Import failed. Check the file and try again."
+    present: "Declared"
+    missing: "Not declared"
+    capabilities:
+      humanoid: "Humanoid bones"
+      mouth: "Lip sync"
+      blink: "Blink"
+      emotion: "Expressions"
+      lookAt: "Gaze"
+      spring: "Spring physics"
+      mtoon: "MToon materials"
+    errors:
+      invalid-container: "The file container is damaged or unsupported."
+      external-resource: "External resources are referenced. Package them locally before importing."
+      missing-vrm: "No VRM definition was found."
+      invalid-humanoid: "The humanoid definition is incomplete."
+      file-too-large: "The file exceeds the inspection size limit."
   panel-callout:
     support-status-header: We support both 2D and 3D models
     support-status: >
@@ -277,6 +308,111 @@ live2d:
 microphone: Microphone
 models: Model
 pages:
+  companion:
+    loadedModel: "Loaded Live2D character"
+    title: "Companion enhancements"
+    description: "Keep the existing chat and character features. Enable optional enhancements, then save your choices. Automatic behavior is off by default."
+    saved: "Saved. Your choices are active."
+    saveFailed: "Settings were not saved. Check numbers and complete rules, or reload before trying again."
+    loadFailed: "Settings could not load. Existing features remain available. Enhancements stay off."
+    done: "Operation completed."
+    operationFailed: "The operation did not complete. Configure a chat model, open a conversation, and check memory status."
+    followupTitle: "Continue later"
+    followupEnabled: "Allow a follow-up when the conversation is idle"
+    costNotice: "This calls your configured model and can incur extra costs. Daily rounds are not a monetary limit or the acceptance-test budget. Provider retries can add requests. New input, chat changes, or hiding the character cancels old plans."
+    delay: "Minutes after a reply (1–60)"
+    dailyLimit: "Maximum daily follow-up rounds (1–20)"
+    quietStart: "Quiet hours start (0–23)"
+    quietEnd: "Quiet hours end (0–23, same value disables quiet hours)"
+    noPlans: "No follow-up plans. Enable and save to schedule after your next conversation."
+    cancelPlans: "Cancel current follow-up plans"
+    reviewTitle: "Review important moments"
+    reviewDescription: "Group existing valid memories by date while keeping their sources. Originals remain intact. Local grouping creates no new facts or model requests."
+    idleReview: "Organize reviews while idle"
+    cadence: "Group by"
+    reviewNow: "Create a review"
+    noReviews: "No reviews yet. Create valid memories through conversation first."
+    voiceTitle: "Speech and voice input"
+    translationEnabled: "Keep the displayed text and translate spoken words"
+    targetLanguage: "Spoken language"
+    translationDescription: "Translation uses your configured chat model and can incur costs. Regular synthesis is supported. Bidirectional streaming retains its existing behavior."
+    directorEnabled: "Use speech expression with word-preservation checks"
+    style: "Expression"
+    directorDescription: "Available for Microsoft/Azure voices with SSML enabled. Other voices retain their existing behavior. Direction cannot add words or remove negation."
+    echoEnabled: "Keep suspected playback echoes as editable drafts"
+    echoDescription: "Only recently played words are compared. Manual sending and short replies remain available. This does not prevent interruptions before transcription."
+    endpointEnabled: "Try shorter silence waits for short utterances"
+    interactionTitle: "Character interaction"
+    interactionEnabled: "Enable region actions and repeat spacing"
+    interactionDescription: "Only use regions and actions provided by the current Live2D model. Unconfigured regions keep their existing behavior. Other formats remain unchanged."
+    noMotionModel: "Load a Live2D character on the stage to configure its click actions."
+    model: "Loaded model"
+    area: "Hit area"
+    motionGroup: "Motion group"
+    weight: "Relative weight (0 excludes the action)"
+    addMotion: "Add or update action"
+    remove: "Remove"
+    assetHint: "VRM checks appear in the existing model selector during import. Other formats keep their import flow."
+    rulesTitle: "Local behavior rules"
+    rulesDescription: "Higher priority matches first. Ties use list order. Only the first matching rule applies. Rules select local behavior without code execution or external messages."
+    newRule: "New rule"
+    ruleName: "Rule name"
+    ruleEnabled: "Enable this rule"
+    event: "Event"
+    keyword: "Topic contains (required)"
+    mode: "Match conditions"
+    priority: "Priority (higher first)"
+    action: "Action"
+    ruleDelay: "Follow-ups use the delay above and require follow-ups to be enabled."
+    addRule: "Add rule"
+    runRules: "Try saved rules on the current topic"
+    save: "Save settings"
+    reload: "Reload"
+    languages:
+      zh: "Chinese"
+      en: "English"
+      ja: "Japanese"
+      ko: "Korean"
+    styles:
+      gentle: "Gentle"
+      calm: "Calm"
+      lively: "Lively"
+    cadences:
+      day: "Day"
+      week: "Week"
+      month: "Month"
+    actions:
+      followup: "Schedule a follow-up"
+      review: "Create a review"
+      none: "Stay quiet"
+    modes:
+      all: "All conditions"
+      any: "Any condition"
+    events:
+      chat-complete: "Chat reply completed"
+      idle: "Conversation idle"
+      manual: "Manual trial"
+    planStates:
+      scheduled: "Scheduled"
+      claimed: "Processing"
+      delivered: "Presented"
+      cancelled: "Cancelled"
+      expired: "Expired"
+      failed: "Failed"
+      unknown: "Previous result unknown. No automatic retry."
+    reviewStates:
+      current: "Current"
+      invalidated: "Sources changed. Content hidden."
+    speechStates:
+      idle: "Not used yet"
+      working: "Processing"
+      ready: "Ready"
+      failed: "Processing failed. Original speech retained."
+      unsupported-stream: "This bidirectional stream retains its original behavior."
+      unsupported-provider: "This voice does not support expression enhancement."
+      missing-model: "Configure a chat model first."
+      input-too-long: "Text exceeds the enhancement limit."
+      rejected: "Direction changed the words. Original text retained."
   account:
     title: Account
     description: View your profile and manage your account
@@ -557,8 +693,77 @@ pages:
     upload: Upload
     upload_desc: Click or drag an AIRI card package to import
   memory:
-    description: Where memories got stored, and organized
-    title: Memory
+    description: 'What you share and what Aimy remembers'
+    title: 'About Me'
+    intro: 'Aimy learns from your conversations. You can check what she remembers here, without managing it every day.'
+    autoLabel: 'Organize new chats automatically'
+    autoDescription: 'Keep useful details from new conversations. Existing memories remain available when you pause.'
+    activeNotice: 'Memory organization uses your selected model and can add model charges. Earlier chats are not processed automatically.'
+    pausedNotice: 'Paused. When you resume, only new chats are organized. Chats from this pause are not processed later.'
+    notReady: 'Your local profile is still getting ready. Your draft stays here. You can retry or return to chatting.'
+    saveError: 'This change was not confirmed as saved. Your draft is still here. Refresh the page state, then retry.'
+    closeFailed: 'Some changes are not saved yet. This window has stayed open so you can retry.'
+    saved: 'Saved on this computer.'
+    removed: 'This memory was removed from future recall. Your original chat remains.'
+    organizingNotice: '{count} saved items are waiting for organization or being organized.'
+    configureToOrganize: 'Choose a chat model to organize these details'
+    pendingNotice: '{count} organization tasks need attention. Chatting can continue.'
+    personalTitle: 'What you have told me'
+    sharedTitle: 'Important things we have talked about'
+    empty: 'We can start with a chat. Aimy will get to know you over time.'
+    sourceLoading: 'Opening the original words…'
+    sourceMissing: 'The exact original words are currently unavailable.'
+    actions:
+      previous: 'Back'
+      save: 'Save'
+      cancel: 'Cancel'
+      retry: 'Refresh'
+      source: 'View source'
+      correct: 'Correct'
+      remove: 'Remove from memory'
+      saveModel: 'Save memory model'
+      retryOrganizing: 'Retry organization'
+    profile:
+      title: 'Let me get to know you'
+      intro: 'All of these are optional. You can skip them and get to know each other through conversation.'
+      preferredName: 'What can I call you?'
+      optional: 'Optional. Use a name you feel comfortable with.'
+      chatPreference: 'How do you prefer to talk?'
+      preferenceNone: 'Let us find out as we chat'
+      listenFirst: 'Listen to me first'
+      talkItThrough: 'Think it through together'
+      lighthearted: 'Keep it light and playful'
+      recentMatter: 'What is on your mind lately?'
+      recentHint: 'A recent plan, interest, or something important to you. You can leave this blank.'
+      privacy: 'Your profile and memories stay on this computer. With a cloud model, necessary content is sent to the provider you selected.'
+      autoNotice: 'Automatic memory starts enabled. Organization can add model charges. You can pause it in About Me.'
+      continueAfterError: Start chatting and check the save status later
+      saveAndChat: 'Save and start chatting'
+      skip: 'Start chatting without saving these details'
+      add: 'Add a few details about yourself'
+      saved: 'Your answers are saved. Free text can still be waiting for organization.'
+    maintenance:
+      title: 'Profile maintenance'
+      description: 'You can also correct Aimy naturally in conversation. These controls change memories and keep your original chats. Aimy handles the related cleanup.'
+      correction: 'What is correct now?'
+    model:
+      title: 'Memory organization model'
+      currentChat: 'Current chat model: {model}'
+      unconfigured: 'Not configured'
+      mode: 'Model choice'
+      follow: 'Follow the chat model'
+      override: 'Choose a separate model'
+      provider: 'Configured provider'
+      configureProvider: 'Configure a model provider'
+      refreshModels: 'Refresh model list'
+      customPlaceholder: 'Enter the exact model name…'
+      searchPlaceholder: 'Search models…'
+      noModels: 'No models were listed. You can enter the exact model name or check your provider settings.'
+      cost: 'Even when it follows the chat model, memory organization sends a separate request and can add charges. Saving this setting does not test a model.'
+    plan:
+      unknown: 'Planned · outcome not confirmed'
+      done: 'Completed'
+      cancelled: 'Cancelled'
   data:
     title: Data
     description: Manage stored AIRI data, exports, and resets
@@ -1414,6 +1619,12 @@ pages:
         title: Apple Speech
         description: On-device speech recognition on macOS 26 or later. No API key is required.
         fields:
+          transcriber:
+            label: Recognition mode
+            description: Dictation suits short messages. Speech suits continuous audio. Accuracy varies with the speaker and recording.
+            automatic: Automatic
+            dictation: Dictation (short messages)
+            speech: Speech (continuous audio)
           locale:
             label: Locale
             description: Use an exact Apple Speech locale, such as en-US or zh-CN.
@@ -2123,6 +2334,15 @@ theme:
 title: Settings
 voices: Voice
 vrm:
+  motion:
+    title: Body motions
+    description: Play a built-in gesture once, then return to idle. Motion range varies with the model rig.
+    wave: Wave
+    nod: Nod
+    stop: Stop gesture
+    started: Gesture started. The character returns to idle when it ends.
+    stopped: Gesture stopped. Idle animation resumed.
+    unavailable: Gesture did not start. Load the character, keep its window visible, then try again.
   fps:
     title: Frame rate limit
     description: Limit VRM rendering in the stage and model preview. Lower limits reduce GPU use without changing animation speed.

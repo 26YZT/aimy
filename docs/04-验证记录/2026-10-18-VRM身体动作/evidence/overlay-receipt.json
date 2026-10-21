@@ -1,0 +1,6 @@
+{
+  "sourceMainSha256": "d05d1d9d5a0fb6e2781a66e91e45bdbe039726e9cc9d12e313d1fa79c8ef9c68",
+  "packagedMainSha256": "afb013eeaac7995380efe7f9d249046371297ca89a4e9dfdeb2dea5063af016f",
+  "version": "0.12.0-beta.5+aimy.20261018.2",
+  "change": "compiled preview copy disables upstream updater; wrapper identity unchanged"
+}

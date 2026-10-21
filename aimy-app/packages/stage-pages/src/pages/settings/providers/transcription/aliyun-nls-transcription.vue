@@ -15,6 +15,7 @@ import {
   ProviderSettingsLayout,
 } from '@proj-airi/stage-ui/components'
 import { useProviderValidation } from '@proj-airi/stage-ui/composables/use-provider-validation'
+import { captureResourceStream, onResourceRevoked, requestResourceAccess } from '@proj-airi/stage-ui/services/resource-policy'
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useProviderConfigStore } from '@proj-airi/stage-ui/stores/providers/config'
 import { useProviderStore } from '@proj-airi/stage-ui/stores/providers/provider'
@@ -201,6 +202,8 @@ async function startStreaming() {
   if (!canStart.value)
     return
 
+  await requestResourceAccess('microphone')
+
   errorMessage.value = null
   resetTranscriptionOutput()
 
@@ -260,7 +263,7 @@ async function startStreaming() {
         throw error
       })
 
-    const stream = await navigator.mediaDevices.getUserMedia({
+    const stream = await captureResourceStream('microphone', () => navigator.mediaDevices.getUserMedia({
       audio: {
         channelCount: 1,
         sampleRate: SAMPLE_RATE,
@@ -268,7 +271,7 @@ async function startStreaming() {
         noiseSuppression: true,
         autoGainControl: true,
       },
-    })
+    }))
 
     mediaStream.value = stream
     await initializeAudioGraph(stream)
@@ -350,6 +353,12 @@ onBeforeUnmount(async () => {
   abortStreaming()
   await stopStreaming()
 })
+
+const stopOnResourceRevoked = onResourceRevoked((_, kind) => {
+  if (!kind || kind === 'microphone')
+    void stopStreaming()
+})
+onBeforeUnmount(stopOnResourceRevoked)
 </script>
 
 <template>

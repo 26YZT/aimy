@@ -17,6 +17,8 @@ export interface VoiceActivityOptions {
   readonly minSpeechMs?: number
   /** @default 1200. This much silence ends an accepted input. */
   readonly silenceMs?: number
+  /** Optional application policy changes the timeout using accepted speech duration. Manual inputs remain unchanged. */
+  readonly silenceTimeoutMs?: (speechMs: number) => number
   /** @default 360. Speech onset retains this much audio before the detected window. */
   readonly preRollMs?: number
 }
@@ -87,7 +89,8 @@ export function createVoiceActivityPlugin(options: VoiceActivityOptions): VoiceP
       const duration = (ctx.window.range.endFrame - ctx.window.range.startFrame) * 1000 / ctx.window.sampleRate
       speechMs += speech ? duration : 0
       silenceMs = speech ? 0 : silenceMs + duration
-      if (silenceMs >= (options.silenceMs ?? 1200)) {
+      const timeout = options.silenceTimeoutMs?.(speechMs) ?? options.silenceMs ?? 1200
+      if (silenceMs >= timeout) {
         if (speechMs < (options.minSpeechMs ?? 300))
           input.cancel('Speech segment was too short')
         else

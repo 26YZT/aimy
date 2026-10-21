@@ -4,6 +4,7 @@ import type { PcmBlock } from '@proj-airi/pipelines-audio'
 import { createPushStream } from '@proj-airi/pipelines-audio'
 import { nanoid } from 'nanoid/non-secure'
 
+import { getAcceptanceBudget } from '../../stores/memory/budget'
 import { getAuthToken } from '../auth'
 import { SERVER_URL } from '../server'
 
@@ -103,6 +104,19 @@ export interface StreamingTtsPipelineHandle {
 
 /** Connects the existing WebSocket protocol to SpeechStream. Normal text EOF flushes synthesis. Cancellation releases its reader and transport. */
 export function streamSpeech(options: Omit<StreamingTtsPipelineOptions, keyof StreamingTtsPipelineEvents>, text: ReadableStream<string>, signal: AbortSignal): ReadableStream<SpeechAudio> {
+  if (getAcceptanceBudget()) {
+    return new ReadableStream<SpeechAudio>({
+      async start(controller) {
+        try {
+          await text.pipeTo(new WritableStream(), { signal })
+          controller.close()
+        }
+        catch (error) {
+          controller.error(error)
+        }
+      },
+    })
+  }
   const reader = text.getReader()
   const sourceId = nanoid()
   let frame = 0
@@ -191,6 +205,10 @@ export function streamSpeech(options: Omit<StreamingTtsPipelineOptions, keyof St
  *   AudioBuffers are emitted via `options.onSentence` in arrival order.
  */
 export function createStreamingTtsPipeline(options: StreamingTtsPipelineOptions): StreamingTtsPipelineHandle {
+  if (getAcceptanceBudget()) {
+    queueMicrotask(() => options.onDone?.())
+    return noopHandle()
+  }
   const token = options.token ?? getAuthToken()
   if (!token) {
     const err = new Error('streaming-pipeline: not authenticated')
@@ -240,6 +258,10 @@ export function createStreamingTtsPipeline(options: StreamingTtsPipelineOptions)
   const bufferEntireSession = options.bufferEntireSession ?? false
 
   function safeSend(payload: string) {
+    if (getAcceptanceBudget()) {
+      terminate(null)
+      return
+    }
     if (closed)
       return
     if (ws.readyState === WebSocket.OPEN) {
@@ -311,6 +333,10 @@ export function createStreamingTtsPipeline(options: StreamingTtsPipelineOptions)
   }
 
   ws.addEventListener('open', () => {
+    if (getAcceptanceBudget()) {
+      terminate(null)
+      return
+    }
     const startFrame = {
       event: 'start',
       model: options.model,

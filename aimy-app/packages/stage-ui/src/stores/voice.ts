@@ -8,6 +8,7 @@ import { errorMessageFrom } from '@moeru/std'
 import { turnKey } from '@proj-airi/core-agent'
 import { defineStore, storeToRefs } from 'pinia'
 import { onScopeDispose, shallowRef, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { useVoiceController } from '../composables/audio/voice-controller'
 import { traceSpeechOutput } from '../composables/speech-output-trace'
@@ -16,7 +17,10 @@ import { useVoiceRephrase } from '../composables/voice-rephrase'
 import { observeInputLevel } from '../libs/voice/input-level'
 import { createVoiceActivityPlugin } from '../libs/voice/voice-activity-plugin'
 import { createVoiceRephrasePlugin } from '../libs/voice/voice-rephrase-plugin'
-import { getSpeechBusContext, voiceGenerationEnded, voiceGetTurns, voiceInputCommand, voiceInputLevel, voiceInterrupt, voiceLevelMonitor, voiceRequestSnapshot, voiceRequestTurns, voiceSnapshotChanged, voiceSpeechCommand, voiceTurnsChanged } from '../services/speech/bus'
+import { getCompanionPreferences, onCompanionPreferencesChange } from '../services/companion/preferences'
+import { adaptiveSilenceTimeout, recentSpeechEcho } from '../services/companion/voice-policy'
+import { getResourcePolicy, onResourceRevoked } from '../services/resource-policy'
+import { getSpeechBusContext, voiceGenerationEnded, voiceGetTurns, voiceInputCommand, voiceInputLevel, voiceInterrupt, voiceLevelMonitor, voiceMicrophoneCommand, voiceRequestSnapshot, voiceRequestTurns, voiceSnapshotChanged, voiceSpeechCommand, voiceTurnsChanged } from '../services/speech/bus'
 import { SileroVad } from '../workers/vad/silero-vad'
 import { useLlmStreamingControlStore } from './ai/chat-llm/streaming-control'
 import { useAudioContext, useSpeakingStore } from './audio'
@@ -31,6 +35,7 @@ const VOICE_REPHRASE_TIMEOUT_MS = 10_000
 
 /** Application wiring owns presentation and durable chat adapters. The controller owns voice lifecycles. */
 export const useVoiceStore = defineStore('voice', () => {
+  const { t } = useI18n()
   const devices = useSettingsAudioDevice()
   const hearing = useHearingStore()
   const chat = useChatStore()
@@ -38,7 +43,7 @@ export const useVoiceStore = defineStore('voice', () => {
   const voiceMessages = useVoiceMessagesStore()
   const speaking = useSpeakingStore()
   const streamingControl = useLlmStreamingControlStore()
-  const { stream: microphoneStream, enabled: microphoneEnabled, error: microphoneError } = storeToRefs(devices)
+  const { stream: microphoneStream, enabled: continuousListening, microphoneEnabled, permissionPending, error: microphoneError } = storeToRefs(devices)
   const { drafts, frontDraftId, acceptSpeech, sendDraft, discardDraft, editDraft, selectDraft } = useVoiceDrafts(report)
   const activeTurns = shallowRef<readonly TurnRef[]>([])
   const responses = new Map<string, { response: VoiceResponse, speech?: SpeechStream }>()
@@ -47,14 +52,26 @@ export const useVoiceStore = defineStore('voice', () => {
   const speechTraces = new Map<string, ReturnType<typeof traceSpeechOutput>>()
   let output: ((turn: TurnRef) => SpeechOutput) | undefined
   let listening: VoicePluginHandle | undefined
+  let listeningStop: Promise<void> | undefined
+  const listeningStopping = shallowRef(false)
   let detectorOptions: Pick<VoiceActivityOptions, 'detectWakeWord' | 'acceptSpeech'> = {}
   const inputRequests = new Map<string, SpeechInputAttempt>()
+  const pendingInputs = new Map<string, AbortController>()
+  const manualReservations = new Set<string>()
+  const manualInputs = shallowRef(0)
+  let microphoneChoice = 0
   /**
    * Inputs that a composer began, keyed by attempt ID. Submission stores the final text here instead of creating a draft.
    * The `end` command returns the text and removes the entry. A settled attempt removes it too.
    */
   const composerInputs = new Map<string, string | undefined>()
   let presentedInput: { requestId: string, attempt: SpeechInputAttempt } | undefined
+
+  /** A cancelled request releases only its own reservation, including after a newer request has started. */
+  function releaseManualInput(requestId: string) {
+    manualReservations.delete(requestId)
+    manualInputs.value = manualReservations.size
+  }
 
   const { controller, state, snapshot: transcript, error } = useVoiceController({
     transcriber: () => hearing.createTranscriber(),
@@ -67,8 +84,10 @@ export const useVoiceStore = defineStore('voice', () => {
       return trace.output
     },
     submit: async (submission, signal) => {
-      if (!composerInputs.has(submission.submissionId))
-        return acceptSpeech(submission, signal)
+      if (!composerInputs.has(submission.submissionId)) {
+        const forceDraft = getCompanionPreferences().speech.echoFilterEnabled && recentSpeechEcho.matches(submission.sessionId, submission.text)
+        return acceptSpeech(submission, signal, { forceDraft })
+      }
 
       // The composer owns this text as its own draft. No voice draft or message is created.
       composerInputs.set(submission.submissionId, submission.text)
@@ -82,6 +101,9 @@ export const useVoiceStore = defineStore('voice', () => {
     onError: event => report(event.error),
   })
   const { rephrase } = useVoiceRephrase()
+  const offEchoPreferences = onCompanionPreferencesChange(() => recentSpeechEcho.reset())
+  onScopeDispose(offEchoPreferences)
+  watch(() => sessions.activeSessionId, () => recentSpeechEcho.reset(), { flush: 'sync' })
   controller.use(
     createVoiceRephrasePlugin({ enabled: () => hearing.rephraseEnabled, rephrase, timeoutMs: VOICE_REPHRASE_TIMEOUT_MS }),
     { grants: ['transcript-patch'], onError: event => report(event.error) },
@@ -94,6 +116,20 @@ export const useVoiceStore = defineStore('voice', () => {
   }
 
   controller.onInput((attempt) => {
+    try {
+      const lease = getResourcePolicy()?.acquire('microphone')
+      const cancel = () => attempt.cancel('Capture authorization changed')
+      lease?.signal.addEventListener('abort', cancel, { once: true })
+      const release = () => {
+        lease?.signal.removeEventListener('abort', cancel)
+        lease?.release()
+      }
+      void attempt.done.then(release, release)
+    }
+    catch {
+      attempt.cancel('Microphone capture is not authorized')
+      return
+    }
     presentedInput = { requestId: attempt.id, attempt }
   })
 
@@ -103,7 +139,7 @@ export const useVoiceStore = defineStore('voice', () => {
 
     const snapshot: VoiceHostSnapshot = {
       connected: true,
-      microphone: { enabled: devices.enabled, ready: !!devices.stream, error: devices.error },
+      microphone: { enabled: devices.microphoneEnabled, ready: !!devices.stream, listening: devices.enabled, recording: voiceMessages.isRecording || manualInputs.value > 0, pending: devices.permissionPending, error: devices.error },
       drafts: drafts.value.map(draft => ({ ...draft })),
       frontDraftId: frontDraftId.value,
       error: error.value,
@@ -121,7 +157,7 @@ export const useVoiceStore = defineStore('voice', () => {
     getSpeechBusContext().emit(voiceSnapshotChanged, snapshot)
   }
 
-  watch([state, transcript, frontDraftId, error, microphoneStream, microphoneEnabled, microphoneError], publishSnapshot)
+  watch([state, transcript, frontDraftId, error, microphoneStream, microphoneEnabled, continuousListening, permissionPending, microphoneError, manualInputs, () => voiceMessages.isRecording], publishSnapshot)
   watch(drafts, publishSnapshot, { deep: true })
 
   function beginInput(options: BeginSpeechInput) {
@@ -148,6 +184,8 @@ export const useVoiceStore = defineStore('voice', () => {
   }
 
   function getResponse(turn: TurnRef) {
+    if (getResourcePolicy() && !getResourcePolicy()?.state.active)
+      throw new Error('Voice output is suspended')
     const key = turnKey(turn)
     const existing = responses.get(key)
     if (existing)
@@ -219,12 +257,12 @@ export const useVoiceStore = defineStore('voice', () => {
         return
       clearTimeout(monitorTimer)
       const remaining = body.until - Date.now()
-      monitoring.value = remaining > 0
+      monitoring.value = remaining > 0 && devices.microphoneEnabled && !!devices.stream
       if (remaining > 0)
         monitorTimer = setTimeout(() => monitoring.value = false, remaining)
     })
     const stop = watch(
-      [() => voiceMessages.isRecording || state.value?.phase === 'capturing' || monitoring.value, () => devices.input],
+      [() => devices.microphoneEnabled && !!devices.stream && (voiceMessages.isRecording || state.value?.phase === 'capturing' || monitoring.value), () => devices.input],
       ([capturing, input]) => {
         observation?.abort('Voice capture changed')
         observation = undefined
@@ -260,7 +298,13 @@ export const useVoiceStore = defineStore('voice', () => {
     const producers = new Map<string, SpeechStream>()
     const opened = new Set<string>()
     const stops = [
-      voiceMessages.connect(),
+      voiceMessages.connect({ beforeRecord: async () => {
+        if (manualInputs.value)
+          throw new Error('Another microphone recording is active')
+        await stopListening()
+        if (manualInputs.value)
+          throw new Error('Another microphone recording is active')
+      } }),
       publishInputLevel(),
       context.on(voiceGenerationEnded, ({ body }) => {
         if (!body)
@@ -272,17 +316,49 @@ export const useVoiceStore = defineStore('voice', () => {
         void finishResponse(body).catch(report)
       }),
       context.on(voiceRequestSnapshot, publishSnapshot),
+      defineInvokeHandler(context, voiceMicrophoneCommand, async (command) => {
+        const choice = ++microphoneChoice
+        if (!command.enabled) {
+          await devices.setMicrophoneEnabled(false)
+          await stopListening()
+        }
+        else {
+          await devices.setMicrophoneEnabled(true)
+          if (choice !== microphoneChoice)
+            return { status: 'closed' }
+          if (command.continuous !== undefined)
+            await devices.setContinuousListening(command.continuous)
+        }
+        publishSnapshot()
+        return { status: 'accepted' }
+      }),
       defineInvokeHandler(context, voiceInputCommand, async (command) => {
         switch (command.type) {
           case 'begin': {
-            if (inputRequests.has(command.requestId))
+            if (inputRequests.has(command.requestId) || pendingInputs.has(command.requestId) || manualInputs.value || voiceMessages.isRecording)
               return { status: 'closed' }
-
-            const attempt = beginManual(command.sessionId)
+            const pending = new AbortController()
+            pendingInputs.set(command.requestId, pending)
+            manualReservations.add(command.requestId)
+            manualInputs.value = manualReservations.size
+            let attempt: SpeechInputAttempt
+            try {
+              await devices.requestCaptureAccess(pending.signal)
+              pending.signal.throwIfAborted()
+              await stopListening()
+              pending.signal.throwIfAborted()
+              attempt = beginManual(command.sessionId)
+            }
+            catch (cause) {
+              releaseManualInput(command.requestId)
+              throw cause
+            }
+            finally { pendingInputs.delete(command.requestId) }
             inputRequests.set(command.requestId, attempt)
             if (command.target === 'composer')
               composerInputs.set(attempt.id, undefined)
             void attempt.done.then((outcome) => {
+              releaseManualInput(command.requestId)
               if (inputRequests.get(command.requestId) === attempt)
                 inputRequests.delete(command.requestId)
               // A drafted composer input keeps its text until `end` reads it. Other outcomes have no text to return.
@@ -309,6 +385,8 @@ export const useVoiceStore = defineStore('voice', () => {
             return { status: 'accepted', ...(text ? { text } : {}) }
           }
           case 'cancel': {
+            pendingInputs.get(command.requestId)?.abort(new DOMException('Input control cancelled', 'AbortError'))
+            releaseManualInput(command.requestId)
             const attempt = inputRequests.get(command.requestId)
             if (!attempt)
               return { status: 'closed' }
@@ -387,15 +465,20 @@ export const useVoiceStore = defineStore('voice', () => {
 
     updateActiveTurns()
     publishSnapshot()
+    startListening()
 
     return () => {
-      stops.forEach(stop => stop())
       output = undefined
+      stops.forEach(stop => stop())
       for (const entry of responses.values())
         entry.response.cancel('Voice output host detached')
       responses.clear()
       for (const attempt of inputRequests.values())
         attempt?.cancel('Voice host detached')
+      for (const pending of pendingInputs.values())
+        pending.abort(new DOMException('Voice host detached', 'AbortError'))
+      manualReservations.clear()
+      manualInputs.value = 0
 
       inputRequests.clear()
       updateActiveTurns()
@@ -405,7 +488,7 @@ export const useVoiceStore = defineStore('voice', () => {
   }
 
   function startListening(options: Pick<VoiceActivityOptions, 'detectWakeWord' | 'acceptSpeech'> = detectorOptions) {
-    if (listening)
+    if (!output || listening || listeningStopping.value || !devices.enabled || !devices.microphoneEnabled || voiceMessages.isRecording || manualInputs.value)
       return
 
     detectorOptions = options
@@ -413,12 +496,20 @@ export const useVoiceStore = defineStore('voice', () => {
     const plugin = createVoiceActivityPlugin({
       detect: (window, signal) => model.score(window, signal),
       detectWakeWord: options.detectWakeWord,
+      silenceTimeoutMs: speechMs => getCompanionPreferences().speech.adaptiveSilenceEnabled ? adaptiveSilenceTimeout(speechMs) : 1200,
       enabled: () => !voiceMessages.isRecording,
       // Automatic barge-in requires platform echo cancellation or an external echo classifier.
       acceptSpeech: options.acceptSpeech ?? (async () => !speaking.nowSpeaking || devices.source.echoCancellation),
-      target: () => sessions.activeSessionId && hearing.configured
-        ? { sessionId: sessions.activeSessionId, interruptTurns: activeTurns.value.filter(turn => turn.sessionId === sessions.activeSessionId) }
-        : undefined,
+      target: () => {
+        const sessionId = sessions.resolveInteractionSessionId()
+        if (!sessionId) {
+          error.value = t('stage.chat.voice-composer.select-chat')
+          return undefined
+        }
+        return sessionId && hearing.configured
+          ? { sessionId, interruptTurns: activeTurns.value.filter(turn => turn.sessionId === sessionId) }
+          : undefined
+      },
     })
 
     listening = controller.use({ ...plugin, setup(scope) {
@@ -442,10 +533,49 @@ export const useVoiceStore = defineStore('voice', () => {
     const previous = listening
     listening = undefined
     cancelInput()
-    await previous?.dispose()
+    if (!previous)
+      return listeningStop
+    listeningStopping.value = true
+    const stopping: Promise<void> = previous.dispose().then(() => undefined).finally(() => {
+      if (listeningStop === stopping) {
+        listeningStop = undefined
+        listeningStopping.value = false
+      }
+    })
+    listeningStop = stopping
+    await stopping
   }
 
+  watch([() => devices.enabled, () => devices.microphoneEnabled, () => voiceMessages.isRecording, manualInputs, listeningStopping], () => {
+    if (devices.enabled && devices.microphoneEnabled && !voiceMessages.isRecording && !manualInputs.value)
+      startListening()
+    else if (listening)
+      void stopListening().catch(report)
+  }, { flush: 'sync' })
+
+  const offRevoked = onResourceRevoked((reason, kind) => {
+    recentSpeechEcho.reset()
+    if (!kind || kind === 'microphone') {
+      microphoneChoice++
+      for (const pending of pendingInputs.values())
+        pending.abort(new DOMException(reason, 'AbortError'))
+      manualReservations.clear()
+      manualInputs.value = 0
+      cancelInput()
+      for (const attempt of inputRequests.values())
+        attempt.cancel(reason)
+      composerInputs.clear()
+      void stopListening().catch(report)
+    }
+    if (!kind) {
+      for (const entry of responses.values())
+        entry.response.cancel(reason)
+    }
+  })
+
   onScopeDispose(() => {
+    recentSpeechEcho.reset()
+    offRevoked()
     void stopListening()
   })
 

@@ -1,0 +1,100 @@
+{
+  "svg_count": 34,
+  "svg_parse_passed": true,
+  "missing_local_links": [],
+  "iconset": [
+    {
+      "file": "icon_16x16.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_16x16@2x.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_32x32.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_32x32@2x.png",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_128x128.png",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_128x128@2x.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_256x256.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_256x256@2x.png",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_512x512.png",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "passed": true
+    },
+    {
+      "file": "icon_512x512@2x.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "passed": true
+    }
+  ],
+  "icns_header_valid": true,
+  "product_integration": "not_performed",
+  "human_visual_approval": "pending"
+}

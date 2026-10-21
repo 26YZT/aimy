@@ -1,0 +1,392 @@
+{
+  "date": "2026-10-14",
+  "definition": "新增 means an identified AIRI product-capability gap with candidate mechanism tests; not production adoption or quality superiority",
+  "counts": {
+    "已有": 3,
+    "新增": 3,
+    "待AB": 2,
+    "不适用": 4,
+    "工程参考": 1,
+    "窄更强": 0
+  },
+  "entries": [
+    {
+      "candidate_id": "RY01",
+      "capability": "桌面窗口与显示集成",
+      "eligibility": "已有",
+      "retained_delta_candidate": false,
+      "reason": "AIRI已有透明角色、多窗/穿透/位置；这是基线，不计外部新增功能。",
+      "proposed_selection": "移出复用候选，保留AIRI基线检查",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/main.js",
+          "line": 150,
+          "sha256": "52e654166286008886bf7cf155f0c8cf802d8ee30f9d48294ac428c1fa026428"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/src/main/windows/main/index.ts",
+          "line": 82,
+          "sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY02",
+      "capability": "Provider、流式音频和取消",
+      "eligibility": "已有",
+      "retained_delta_candidate": false,
+      "reason": "AIRI已有更完整的stream/signal/TurnRef/PlaybackGroup；Ryza整句返回与取消缺陷不是增量。",
+      "proposed_selection": "移出复用候选，原缺陷只留回归输入",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/turn.js",
+          "line": 23,
+          "sha256": "e8516b2f19ca3b082ae517e316febae51d48bf5386cf535b4bee43b855bb7dac"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/output/response.ts",
+          "line": 94,
+          "sha256": "d880f3a7fa9422dd8559c18e25bbe5342029e815c6ef0dcb858ef62860ad7db7"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY03",
+      "capability": "会话卡/事实层与重要条目保留",
+      "eligibility": "新增",
+      "retained_delta_candidate": true,
+      "reason": "AIRI当前长期记忆UI与包仍占位；Ryza实际有卡片滚层、dated entries与protected retention。仅证明机制差异，不证明事实准确/可靠生命周期。",
+      "proposed_selection": "保留为新增记忆子能力的策略/纯规则适配；不搬consolidate/store",
+      "positive_cases": [
+        "DRY-P01",
+        "DRY-P02",
+        "DRY-P03",
+        "DRY-P04"
+      ],
+      "negative_cases": [
+        "DRY-N01",
+        "DRY-N02",
+        "DRY-N04",
+        "DRY-N06",
+        "DRY-N08"
+      ],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+          "line": 187,
+          "sha256": "11fbb6fae5def1214cf939d275d001460fe6da02dcfd08165c56c286932c5611"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+          "line": 135,
+          "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+          "line": 1,
+          "sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 1,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 10,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY04",
+      "capability": "关键词/ISO日期排序及active条目选择",
+      "eligibility": "新增",
+      "retained_delta_candidate": true,
+      "reason": "实际_score/_select/active过滤与最多12条canonical输出可执行；完整原条目预算未实现，撤回原能力合并说法。",
+      "proposed_selection": "只保留可解释词法选择叶子；Aimy另做整条预算/输入校验，不把自研修复算Ryza优势",
+      "positive_cases": [
+        "DRY-P05",
+        "DRY-P06",
+        "DRY-P07"
+      ],
+      "negative_cases": [
+        "DRY-N03",
+        "DRY-N04",
+        "DRY-N05",
+        "DRY-N06",
+        "DRY-N09"
+      ],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+          "line": 143,
+          "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/longterm.js",
+          "line": 157,
+          "sha256": "abcd214c2e21121fe9fccbc5aff3bac5f795529b6f50214b47af0e6a2293dd7b"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+          "line": 1,
+          "sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 1,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 10,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY05",
+      "capability": "表现节奏、去重与动作让位",
+      "eligibility": "待AB",
+      "retained_delta_candidate": false,
+      "reason": "Ryza有两套间隔/去重，但AIRI已Motion Magic、exclusiveOwner/pose release/暂停；不同角色骨骼和参数下未证同条件更自然。",
+      "proposed_selection": "从本期适配降条件AB；通过同资产同音频对照再纳入",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/avatar.js",
+          "line": 138,
+          "sha256": "0ba836f1c2ee1ca8ab447d0eeb6fedd1430a73866073a9d6054cae35a57ffb12"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenes/Stage.vue",
+          "line": 93,
+          "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/features/motions/live2d/profiles.ts",
+          "line": 31,
+          "sha256": "d4e105b4091cfa2d50d773cf731b6f638b43ee2223679aae8db7b53f6441fb4f"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY06",
+      "capability": "文本回声过滤",
+      "eligibility": "待AB",
+      "retained_delta_candidate": false,
+      "reason": "已有算法函数并不证明当前AIRI AEC不足或误拦可接受；需要扬声器/短句/多语言真实对照。",
+      "proposed_selection": "保留实验候选，当前不计新增采用；不复用采集器",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/echo.js",
+          "line": 110,
+          "sha256": "168f7e04a36a34a1b1273f126093cbbac73b7b408edf4164d816b020bdd4c212"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 417,
+          "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY07",
+      "capability": "人设语气与TTS风格分开",
+      "eligibility": "已有",
+      "retained_delta_candidate": false,
+      "reason": "AIRI已有角色卡/独立speech配置；实际MiMo provider已把stylePrompt和朗读input分开，AIRIC02/03执行核实。Ryza模式是否更好未试听。",
+      "proposed_selection": "从本期适配移到已有配置/产品调参；不新增ASMR模式",
+      "positive_cases": [
+        "AIRI-C02",
+        "AIRI-C03"
+      ],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/provider-inference/src/providers/cloud/mimo-audio/index.ts",
+          "line": 56,
+          "sha256": "069ba9a1254224b06a1afbb49be5cb0de765487c138394b9fac2077e845ae299"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/components/scenes/Stage.vue",
+          "line": 410,
+          "sha256": "dfec0c4d390d41ac36ec9049c80fd3e2f6fa17211364f8e2cfe0cea2ffa3d2b7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/api.js",
+          "line": 51,
+          "sha256": "c7b9be46c521faf92c20930fbfdf3d2d1f061f498a3e450807b85cc77b41c250"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY08",
+      "capability": "已存会话卡的查看/编辑/删除",
+      "eligibility": "新增",
+      "retained_delta_candidate": true,
+      "reason": "AIRI记忆管理页仍WIP；Memory.get/update/remove确有动作；但不是可靠事实纠正/彻底遗忘，压力提示是工程反馈。",
+      "proposed_selection": "窄化为卡片管理交互/命令形状；可靠事实更正/屏障/回执由Aimy自管。存储压力拆工程参考",
+      "positive_cases": [
+        "DRY-P08"
+      ],
+      "negative_cases": [
+        "DRY-N07",
+        "DRY-N08"
+      ],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/memory.js",
+          "line": 300,
+          "sha256": "11fbb6fae5def1214cf939d275d001460fe6da02dcfd08165c56c286932c5611"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/app.js",
+          "line": 2422,
+          "sha256": "a71173cf55248600d7519b95247988a63506a6a70bfbca426e7f202a4d8b8df3"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/memory/index.vue",
+          "line": 1,
+          "sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 1,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY09",
+      "capability": "回听与收藏",
+      "eligibility": "不适用",
+      "retained_delta_candidate": false,
+      "reason": "当前用户范围没有选择回听收藏需求；不能因候选存在就新增实体/功能。",
+      "proposed_selection": "不进入当前增量清单",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/voicecache.js",
+          "line": 101,
+          "sha256": "f4ddf7445793720503131274a7c132bd370422ef0873b6f99bd59f71cb14f79c"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY10",
+      "capability": "RPG世界/经济/NPC/签到",
+      "eligibility": "不适用",
+      "retained_delta_candidate": false,
+      "reason": "确为Ryza有的领域玩法，但偏离当前现实桌面单角色陪伴；确定性状态原则不是外部新增功能。",
+      "proposed_selection": "当前排除；不用工程原则冒充玩法复用",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/game.js",
+          "line": 352,
+          "sha256": "a120fff55900395afc13d9d849657ab53bc7d000c93202fc1f788696b4517e44"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/npc.js",
+          "line": 101,
+          "sha256": "043bd5b622863583dfb3aab2f96d277e77d686a5c64048fc5880127306b92d1e"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY11",
+      "capability": "Android/跨端壳与原生闹钟",
+      "eligibility": "不适用",
+      "retained_delta_candidate": false,
+      "reason": "macOS一期无直接需要；共用代码不是跨设备同步；删除native合同缺陷不能反向算增强。",
+      "proposed_selection": "当前排除",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/android/app/src/main/java/com/ryza/chat/RyzaAlarm.java",
+          "line": 186,
+          "sha256": "1c2a8e529192c02f9d1e9b7090cdd1a048f15ceac700fc37a12ae7d8c2275af2"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY12",
+      "capability": "ZIP/明文镜像/eraser与工程负例",
+      "eligibility": "工程参考",
+      "retained_delta_candidate": false,
+      "reason": "ZIP读长、明文镜像、清除不全为失败证据；hash/guard/test等通用工程方法不算新增用户功能。",
+      "proposed_selection": "实现不引入；只保留回归输入",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/crfstore.js",
+          "line": 97,
+          "sha256": "6064edd321287d03246859d40fe527741a4eeedc98b581e3b1d8860105bc9968"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/desktop/web-storage.js",
+          "line": 72,
+          "sha256": "7c052bbeb7222bdaebc1750d8fd62b359972811cf4ea49af96924f3576e2b37f"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/web/js/config.js",
+          "line": 350,
+          "sha256": "35b968664bf8708798b64e57730031a58f840ce09d1168bc0477c91c6653d604"
+        }
+      ],
+      "ready_to_copy_source": false
+    },
+    {
+      "candidate_id": "RY13",
+      "capability": "计划中的vision/proactive/语义端点",
+      "eligibility": "不适用",
+      "retained_delta_candidate": false,
+      "reason": "planned=true且文件未创建，不能执行不存在模块或称现成增强；AIRI已有vision/spark主链。",
+      "proposed_selection": "排除现成复用判断；方案仅历史参考",
+      "positive_cases": [],
+      "negative_cases": [],
+      "evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/ryza-ai-revive-master/config/layers.json",
+          "line": 78,
+          "sha256": "ed448aa21f5fd43c5a334163df47bd93f5093aceb500789a9498ff8a4235cfc4"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+          "line": 61,
+          "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa"
+        }
+      ],
+      "ready_to_copy_source": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "mode": "offline-fixture",
+  "status": "failed",
+  "runId": "8ebb3ef1-7751-490b-8292-928bf2abd756",
+  "datasetSha256": "6df77f21da49b90f71a68e8dc171f95005968b54560fdab50892436aeb247818",
+  "modelCalls": 0,
+  "semanticScores": null,
+  "cases": [],
+  "failure": "OFFLINE_RUNTIME_FAILED"
+}

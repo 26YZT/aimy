@@ -1,0 +1,6 @@
+{
+  "visionReadCorrect": true,
+  "chatReadCorrect": true,
+  "answerNotInUserQuestion": true,
+  "requestCount": 3
+}

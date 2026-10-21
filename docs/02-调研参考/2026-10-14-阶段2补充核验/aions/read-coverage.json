@@ -1,0 +1,414 @@
+{
+  "summary": {
+    "first_party_full_files": 14,
+    "first_party_partial_files": 2,
+    "first_party_read_lines": 3045,
+    "new_full_since_audit": 14
+  },
+  "first_party": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/compaction.ts",
+      "sha256": "dfd32990796ed56c7a058480d4569c4bbf247e284a264e15358993a0f11fb578",
+      "total_lines": 117,
+      "ranges": [
+        [
+          1,
+          117
+        ]
+      ],
+      "full": true,
+      "read_lines": 117,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/agent-hooks.ts",
+      "sha256": "ddd5042612c619b1c51a0c8fc04cda253050f99bb494a465fd82a68bb6caa0a8",
+      "total_lines": 259,
+      "ranges": [
+        [
+          1,
+          259
+        ]
+      ],
+      "full": true,
+      "read_lines": 259,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "total_lines": 1318,
+      "ranges": [
+        [
+          240,
+          310
+        ],
+        [
+          470,
+          578
+        ],
+        [
+          716,
+          831
+        ],
+        [
+          852,
+          915
+        ]
+      ],
+      "full": false,
+      "read_lines": 360,
+      "new_full_relative_to_prior_audit": false
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/context-registry.ts",
+      "sha256": "80b7202a70ede6aaf07c3d27597f10f85381665190a1f4f60f6403f644d2cc48",
+      "total_lines": 163,
+      "ranges": [
+        [
+          1,
+          163
+        ]
+      ],
+      "full": true,
+      "read_lines": 163,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.test.ts",
+      "sha256": "bbfcc2c0e0b756ffed5cd64c02fa0a866a25266431c07ae1fe5403fcf1912df2",
+      "total_lines": 189,
+      "ranges": [
+        [
+          1,
+          189
+        ]
+      ],
+      "full": true,
+      "read_lines": 189,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35",
+      "total_lines": 162,
+      "ranges": [
+        [
+          1,
+          162
+        ]
+      ],
+      "full": true,
+      "read_lines": 162,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/storage.ts",
+      "sha256": "fc54da57c438fd82abe010c2170752ab0748feef716a73b095812bf5e9199ce4",
+      "total_lines": 11,
+      "ranges": [
+        [
+          1,
+          11
+        ]
+      ],
+      "full": true,
+      "read_lines": 11,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "total_lines": 1065,
+      "ranges": [
+        [
+          1,
+          1065
+        ]
+      ],
+      "full": true,
+      "read_lines": 1065,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/context-prompt.ts",
+      "sha256": "c78e109187306f55f2ed93587989eacc387470103dae0164b57ea9e6f52f4a29",
+      "total_lines": 2,
+      "ranges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "full": true,
+      "read_lines": 2,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/context-store.ts",
+      "sha256": "6a903814528e2a320c1c43e0dd9cd969fbc99d8c95ad8823f656a61c9da0856e",
+      "total_lines": 78,
+      "ranges": [
+        [
+          1,
+          78
+        ]
+      ],
+      "full": true,
+      "read_lines": 78,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/data-store.ts",
+      "sha256": "e2a58bb138a72ad6ab8def67b1ca5f49a1d7f288c62d5510702a0188d4a98e06",
+      "total_lines": 146,
+      "ranges": [
+        [
+          1,
+          146
+        ]
+      ],
+      "full": true,
+      "read_lines": 146,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/hooks.ts",
+      "sha256": "d0292af26053783d948465373f38a91a2d75862babfb48ce3dc7ac7a8799f37d",
+      "total_lines": 1,
+      "ranges": [
+        [
+          1,
+          1
+        ]
+      ],
+      "full": true,
+      "read_lines": 1,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/maintenance.ts",
+      "sha256": "0e9afc10f04ad7eca681247a0422b3cfce2fc57a78ca497bf4ac0bf389f502af",
+      "total_lines": 17,
+      "ranges": [
+        [
+          1,
+          17
+        ]
+      ],
+      "full": true,
+      "read_lines": 17,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "total_lines": 1758,
+      "ranges": [
+        [
+          75,
+          176
+        ],
+        [
+          278,
+          400
+        ],
+        [
+          584,
+          701
+        ],
+        [
+          749,
+          788
+        ],
+        [
+          1737,
+          1758
+        ]
+      ],
+      "full": false,
+      "read_lines": 405,
+      "new_full_relative_to_prior_audit": false
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/chat-session.ts",
+      "sha256": "311a36378e08bc0a3b9b4d1591e26386a05b522bf1b87d847f3db1241fc0051d",
+      "total_lines": 54,
+      "ranges": [
+        [
+          1,
+          54
+        ]
+      ],
+      "full": true,
+      "read_lines": 54,
+      "new_full_relative_to_prior_audit": true
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/types/chat.ts",
+      "sha256": "7716a580faa5639b64dde4ef5a0af01eadcf8ce79804c7dd32293ec1d8556ca6",
+      "total_lines": 16,
+      "ranges": [
+        [
+          1,
+          16
+        ]
+      ],
+      "full": true,
+      "read_lines": 16,
+      "new_full_relative_to_prior_audit": true
+    }
+  ],
+  "dependency_read_ranges": [
+    {
+      "endswith": "idb-keyval/package.json",
+      "ranges": [
+        [
+          1,
+          28
+        ]
+      ],
+      "full": false,
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/package.json",
+      "sha256": "28c6f3816282c710a8f67021422939cbff9a440ebadd67f083292da6edaf6648",
+      "total_lines": 85
+    },
+    {
+      "endswith": "idb-keyval/dist/index.js",
+      "ranges": [
+        [
+          1,
+          107
+        ]
+      ],
+      "full": false,
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.js",
+      "sha256": "480f1d31a40b5720fbaaee44c1a21d83392c6cf9516672007813a1824483a058",
+      "total_lines": 199
+    },
+    {
+      "endswith": "idb-keyval/dist/index.cjs",
+      "ranges": [
+        [
+          1,
+          112
+        ]
+      ],
+      "full": false,
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.cjs",
+      "sha256": "b10a7be0906f392b84e36b5bad32484d3d6869f9ef926439905825d428246f78",
+      "total_lines": 213
+    },
+    {
+      "endswith": "idb-keyval/dist/index.d.ts",
+      "ranges": [
+        [
+          2,
+          3
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          35,
+          41
+        ],
+        [
+          48,
+          48
+        ],
+        [
+          55,
+          55
+        ],
+        [
+          61,
+          61
+        ],
+        [
+          67,
+          67
+        ],
+        [
+          73,
+          73
+        ],
+        [
+          79,
+          79
+        ]
+      ],
+      "full": false,
+      "note": "matched exported APIs, not full semantic read",
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/dist/index.d.ts",
+      "sha256": "783a36e6a2d7f172437b5a7988430cca01fd87dd2c11d3b9b79a938600b4a637",
+      "total_lines": 79,
+      "read_mode": "export signature search only"
+    },
+    {
+      "endswith": "unstorage/drivers/indexedb.cjs",
+      "ranges": [
+        [
+          1,
+          48
+        ]
+      ],
+      "full": true,
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/drivers/indexedb.cjs",
+      "sha256": "36425b419aa7b1a1d6355542c26ec2e6936c512ca5daecb8d1baef59a4ae22af",
+      "total_lines": 48
+    },
+    {
+      "endswith": "unstorage/dist/index.cjs",
+      "ranges": [
+        [
+          48,
+          140
+        ],
+        [
+          190,
+          262
+        ],
+        [
+          378,
+          402
+        ]
+      ],
+      "full": false,
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/index.cjs",
+      "sha256": "7a4b9ad12b0993dc895a753d85cacd9b75986f547e164c84ef508829b3d67dfd",
+      "total_lines": 532
+    },
+    {
+      "endswith": "unstorage/dist/shared/unstorage.DD6EOqvC.cjs",
+      "ranges": [
+        [
+          1,
+          55
+        ],
+        [
+          117,
+          140
+        ]
+      ],
+      "full": false,
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/dist/shared/unstorage.DD6EOqvC.cjs",
+      "sha256": "ab2e24bab8f466813b0269b4ee9434a3548e302395948d550d7a5bc47b17f4e5",
+      "total_lines": 163
+    }
+  ],
+  "scope": "Full means all source lines displayed/read; hash scanning and transpilation alone are not full read. Previous Aions post_sentinel/user_profile_policy full reading remains in prior audit; current hash compatibility verified below."
+}

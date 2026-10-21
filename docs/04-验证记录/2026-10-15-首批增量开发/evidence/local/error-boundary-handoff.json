@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "packages/core-agent/src/runtime/llm-service.ts",
+      "sha256": "9c86a04e9e4d11f016c096649486a8a7df3e2f33fa0656a90bf908faa98740ed"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "f4fa97a7fd2aee5e2e49a3f8b1d0efd76920685dbe76208c8561a141a0d1a701"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.test.ts",
+      "sha256": "1f45f2a2d3e135c163b4fd5d59c8fdc9cc26a4b6d6ba8f34f20ea68f18f20618"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/generation-errors.test.ts",
+      "sha256": "4c9b7ad23f8fc494d53dde0eca5c824a050d091fdbd41da42e7db8972998a3b5"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "sha256": "452e2503cf1992a40b02e7f2d5a0b32e37a9a5f270dc7d092c1651443d16e628"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat-network-errors.browser.test.ts",
+      "sha256": "58900f3863df3f96960a24dfed79a42e5daaca782ed570f55ce106acb10d3f39"
+    }
+  ],
+  "node_tests": {
+    "files": 3,
+    "tests": 71,
+    "status": "passed"
+  },
+  "browser_test": {
+    "status": "pending rebuilt core with ACCEPTANCE_TEXT_ONLY",
+    "subchecks_before_last_failure": [
+      "actual SDK HTTP401 error projected",
+      "console no synthetic key",
+      "real Pinia state no synthetic key",
+      "IndexedDB record no synthetic key",
+      "Abort added no error item"
+    ]
+  },
+  "product_file_write_ownership_returned": true
+}

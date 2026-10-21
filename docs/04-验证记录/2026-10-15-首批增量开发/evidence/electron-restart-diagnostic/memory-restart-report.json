@@ -1,0 +1,53 @@
+{
+  "status": "FAIL",
+  "schemaVersion": 1,
+  "startedAt": "2026-10-15T13:36:33.863Z",
+  "runs": [
+    {
+      "cdpPort": 54044,
+      "channelPort": 54045,
+      "proxyPort": 54046,
+      "network": {
+        "forwardedChannel": 0,
+        "blockedGeneration": 0,
+        "blockedMetadata": 0,
+        "blockedOther": 3
+      },
+      "pid": 24418,
+      "portOwners": {
+        "cdp": [
+          24418
+        ],
+        "channel": [
+          24418
+        ]
+      },
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      }
+    }
+  ],
+  "paths": {
+    "entry": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/out/main/index.js",
+    "profile": "/private/tmp/aimy-first-implementation-20261015/aimy-final-synthetic-z1y2b710",
+    "campaignConfig": "/private/tmp/aimy-first-implementation-20261015/synthetic-campaign.json",
+    "ledger": "/private/tmp/aimy-first-implementation-20261015/campaign/synthetic-ledger.json",
+    "output": "/private/tmp/aimy-first-implementation-20261015/electron-restart-diagnostic"
+  },
+  "fingerprints": {
+    "entry": "2079cc9304e616007d96fe3d4cb0702cc2f0da97b060dd520ed178dc7c1ec835",
+    "campaign": "d460ae19acb253a2131ecd855aea4ba2d1d26d60d594fce7f889a2b25968dc2f",
+    "marker": "cf696e68b74097a02f3d4892c5797acb8002dd3bd3f70c13b43e2aa3a5f9e600"
+  },
+  "logPolicy": "Application output is stored only as chunk byte counts and SHA-256. Proxy evidence excludes headers, bodies, query and userinfo.",
+  "ledgerBefore": {
+    "exists": false,
+    "attempts": 0,
+    "recordsSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "paused": false
+  },
+  "code": "UNSAFE_PROFILE_MODEL_OR_SCOPE",
+  "finishedAt": "2026-10-15T13:36:37.644Z"
+}

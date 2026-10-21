@@ -1,0 +1,1358 @@
+[
+  {
+    "relative": ".eslintignore",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/.eslintignore",
+    "sha256": "e9aeb90655e14520037aac1d9bb0aa7b88c430df274f8ccded421bc7b8790603",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": ".eslintrc.js",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/.eslintrc.js",
+    "sha256": "d20ef87e9ab6349f245bf6169507159150743314b21dd7c936dfba5ceeef41b1",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": ".gitattributes",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/.gitattributes",
+    "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": ".github/workflows/build.yml",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/.github/workflows/build.yml",
+    "sha256": "50a9436e4784999d4c611172dcaf809a5b90dde8b78a9b094bd561bb33e3535f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": ".gitignore",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/.gitignore",
+    "sha256": "e7854c0617cb5d77c8307298af1943877e05ddec278e4b8c42def70954d938ef",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "CLAUDE.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/CLAUDE.md",
+    "sha256": "f9958cb02e6bff7684c1d8ef403ec7af162a760d5b40bce53a102bac8b649cc0",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "LICENSE",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/LICENSE",
+    "sha256": "12f7da34b1480c006316978a4460bb8cfbff57adabe30288d20c0e01f93fa550",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "README.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/README.md",
+    "sha256": "5ba630601c7547824e1a57c3df42319ef5cd5fb7bf96af1588967271b785d508",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "docs/i18n-usage.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/docs/i18n-usage.md",
+    "sha256": "7f0e2ad8059090f5ed6b72049b27d6da78a77cb3b4ead7c4d6630d693fc2842a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "electron-builder.yml",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/electron-builder.yml",
+    "sha256": "547330dd45ec286829ea31ff06d286479c3a43d9151621126c6e0f8bf5f9def6",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "electron.vite.config.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/electron.vite.config.ts",
+    "sha256": "0ba200d7ceecb90447ab93767a25b754af1c570c3e305f834293d80b39f61652",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "i18next-scanner.config.js",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/i18next-scanner.config.js",
+    "sha256": "14fb55145b2f89faf84232a6335520ad65a511dd39b2ca289e1fb22241cb7bbe",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "package-lock.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/package-lock.json",
+    "sha256": "6d4be83fe71b156768ac94162beb0c2a8a06d3482a1778fd17b74ff5c55ab37f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "package.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/package.json",
+    "sha256": "a42f988ed9b266ecc7e1e8fe714b6976bcbd241b64245117f82e588948f175ba",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "resources/icon.icns",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/resources/icon.icns",
+    "sha256": "9c7250e7e17fe2889c2e1ec372e081b745003c2039d32d3fa0f8225f8279c242",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "resources/icon.ico",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/resources/icon.ico",
+    "sha256": "d51ae8ae0788d9ab061e4303fa8cb201f9c719b3615d86a0062c6814c4ecec68",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "resources/icon.png",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/resources/icon.png",
+    "sha256": "27a566a468aaa3e934110742531fd5491bd079efdc8a39738d9c22feae2dd177",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/main/index.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/main/index.ts",
+    "sha256": "0b621445e318c88bb82a1d84acdf19c5ea1b5624003158c5b6e960183074816e",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/main/menu-manager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/main/menu-manager.ts",
+    "sha256": "5f90c3143e07af86455fd5beb69f13c030ae3345e3b85f162f476b74e39353db",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/main/window-manager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/main/window-manager.ts",
+    "sha256": "4d94f0948631fb75720cdccef64aea11a24780d08b4059bc35de449fcd01d4ee",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/preload/index.d.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/preload/index.d.ts",
+    "sha256": "1459b76e9a44ba4cfabe14a8886f83420c0280552b622532782e519c1aa67c7f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/preload/index.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/preload/index.ts",
+    "sha256": "1a33a3d94b47d48c7c3080d222f87390115f0859a98d8bda58e61ad571f0b770",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/CHANGELOG.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/CHANGELOG.md",
+    "sha256": "5f401aaf8378f8e2b826041ec6970019d3ac657949347ffb18245796d536e0ba",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/LICENSE.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/LICENSE.md",
+    "sha256": "b81e37048010ef1d336106151201a0323c3309cae44aecdedf57831fe88fa991",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/README.ja.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/README.ja.md",
+    "sha256": "45c33c96ad56c571c7982f3c5b4819647184fc4da6e3d8c5e4a3460693db468c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/README.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/README.md",
+    "sha256": "7a27d6d2586c555fca63e25baa9369f9da8a83781e35900c4b09ea437a5297f5",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/RedistributableFiles.txt",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/RedistributableFiles.txt",
+    "sha256": "d16c123688299e1e69a7f5ebc01b3bd75a8d408c024002a7d35b2aae94003f8c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/live2dcubismcore.d.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/live2dcubismcore.d.ts",
+    "sha256": "fa914858b76cf0589be2a120dfbd6733951f725f79139342d4908af05c3ed2dd",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/live2dcubismcore.js",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/live2dcubismcore.js",
+    "sha256": "2d0b155609878e24a0ac4c032494da8a86d15d92438899eac08af06f172e3b97",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/live2dcubismcore.js.map",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/live2dcubismcore.js.map",
+    "sha256": "d9b7c65be59863d6e11143237539517e391fefdf43336b35bec8d6d423992771",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Core/live2dcubismcore.min.js",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Core/live2dcubismcore.min.js",
+    "sha256": "942783587666a3a1bddea93afd349e26f798ed19dcd7a52449d0ae3322fcff7c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/.editorconfig",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/.editorconfig",
+    "sha256": "0785fa0a8a7f4c327d6c57a2cc787cfdfd51671802ad35296c45ca694b900776",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/.eslintrc.yml",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/.eslintrc.yml",
+    "sha256": "d7385ad15aa129f4dab93b451ef19d4404e35eefe947ddc786b30f3ebc5f7a0f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/.gitattributes",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/.gitattributes",
+    "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/.gitignore",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/.gitignore",
+    "sha256": "12989c21fa1a33b868932ce2a57316c45b16cc29db7e33fd7c51241cfab3d322",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/.vscode/extensions.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/.vscode/extensions.json",
+    "sha256": "75b3cea122a2e2465848a92b1d867b708f39eabbfd54389ab7ab704c770a34bf",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/.vscode/settings.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/.vscode/settings.json",
+    "sha256": "e66ce61585ff5aaca7350ca7633224092a01b366607e32c5764d68a720090a22",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/.vscode/tasks.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/.vscode/tasks.json",
+    "sha256": "774d8fae6d31de7067abf8a6ed659a68ca2b7040a8f7381c254c432e9e9c3133",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/CHANGELOG.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/CHANGELOG.md",
+    "sha256": "0acfcf1d54bd8f3f8308f5d46778256cb86f01ae45c94f50ca3dd78264545f4a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/LICENSE.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/LICENSE.md",
+    "sha256": "7ed849bff1e6499aa7cd882e47d246ddbbe06817c1e84cb974df949488302614",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/README.ja.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/README.ja.md",
+    "sha256": "3bb4c6cea30ff6450e7b662cc75854dd772a6ea8359f93f9dec7568d96b713bf",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/README.md",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/README.md",
+    "sha256": "38f29d35beac8d93983e5f30050edbdb632af1bb5fdb56e5ee5c4b16bdf022b2",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/package-lock.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/package-lock.json",
+    "sha256": "cb6ea65504197ade1d8f4646a6cb16feec2899c6d7336b1ad8e32209b2f7031f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/package.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/package.json",
+    "sha256": "3d95ee4932f22fa45f20800874017b19630decf6640bbf299a61827f766126f9",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/cubismdefaultparameterid.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/cubismdefaultparameterid.ts",
+    "sha256": "f92e20db8145f06b73728fb6ba4215bbaed723e26959471f2e291962142c95b5",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/cubismframeworkconfig.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/cubismframeworkconfig.ts",
+    "sha256": "92399ad1a572ec6048ea351ce4363b357f6f86471f9edb4af84bb7e16790828b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/cubismmodelsettingjson.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/cubismmodelsettingjson.ts",
+    "sha256": "77e0bc44fda3501d99b98f4c2986e821293b5544be041bf5cce4cbcc1b46a3b1",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/effect/cubismbreath.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/effect/cubismbreath.ts",
+    "sha256": "aeffcb9c43ca27314535724e22d120c00aac5901a5c951d21b2cba0c188fd9ce",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/effect/cubismeyeblink.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/effect/cubismeyeblink.ts",
+    "sha256": "34e05cb7f9389de317ba279ac7001311b5bdb40d0bbe36b6dafe0209e0f7e3f8",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/effect/cubismpose.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/effect/cubismpose.ts",
+    "sha256": "c5a6354be1c0bfec6527eae21cf3d91e033fd8984be2e0b58e221e75d4b59ef9",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/icubismallcator.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/icubismallcator.ts",
+    "sha256": "d0c3a178e6c6b86697117eac21cd7faa422bf180b4cc84adecfc3491c573055f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/icubismmodelsetting.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/icubismmodelsetting.ts",
+    "sha256": "c16392c3f27fb1f021fc0ccc8941a963a94e0081509d4765228b8c4075cbf365",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/id/cubismid.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/id/cubismid.ts",
+    "sha256": "eddeff3f0067a419fba3494c88ff05b83931dad592507c7c78fc7786504aa5f7",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/id/cubismidmanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/id/cubismidmanager.ts",
+    "sha256": "4d868703ad1d18f65e5d635fc58ad1636c1f5b731bf5337a35e2f02e29424290",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/live2dcubismframework.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/live2dcubismframework.ts",
+    "sha256": "dc20093ded82ed6704d94a443fa28961ba23aefb64fb76b9be35c8de869bd934",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/math/cubismmath.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/math/cubismmath.ts",
+    "sha256": "16ee91747ef123cb645bb3a2c612a633c6f52e8b4652fdeaf3ba6d34105911a9",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/math/cubismmatrix44.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/math/cubismmatrix44.ts",
+    "sha256": "006b5bf1a40de7ef12489d04dfc17a7b3d3f6ea2dd1b662c7a7a5ecde1b1b6b1",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/math/cubismmodelmatrix.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/math/cubismmodelmatrix.ts",
+    "sha256": "0e4bbb4b5778d6214f9b26b49b73afaf0d29ac8b10dd0fbfc6ec6167abbe8508",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/math/cubismtargetpoint.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/math/cubismtargetpoint.ts",
+    "sha256": "b09812890e639d89f96e0b1774a4ccdc076d1174fcb3daa95b0acd8102285999",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/math/cubismvector2.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/math/cubismvector2.ts",
+    "sha256": "369b0c0b842432f7156827bf77047276fb23b10301d9f5d40762497b9f75372d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/math/cubismviewmatrix.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/math/cubismviewmatrix.ts",
+    "sha256": "3276768bd6efbe287a3384eb1960f6c1901f10137f38396096a9e8e84b9a65f5",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/model/cubismmoc.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/model/cubismmoc.ts",
+    "sha256": "cb0d8f55a94b00c99841c08ba9a00146dfc5f87bb48e0d81f52033103ebd023a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/model/cubismmodel.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/model/cubismmodel.ts",
+    "sha256": "d8f82f82538e75e1d68501f2b9b65591a80eb719fd6109d416a817ddf0e98344",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/model/cubismmodeluserdata.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/model/cubismmodeluserdata.ts",
+    "sha256": "96af3558a3404d788052f7a8bbb007feb13efc4d0aae83aba2881ff80b66e40c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/model/cubismmodeluserdatajson.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/model/cubismmodeluserdatajson.ts",
+    "sha256": "4c8f546a393ac47bf8245dd8f7ae65e50eb61518578c33c3ad28ef23b2ffa4c1",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/model/cubismusermodel.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/model/cubismusermodel.ts",
+    "sha256": "93d2fcee10f94767a117f6640e4fbb52a646dc32eda4b46b5b36cfe64f1e224d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/acubismmotion.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/acubismmotion.ts",
+    "sha256": "9d7aeeb27eb872cb9a666a4b249eaf24af0391140da37687fd195287dc8892f3",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismexpressionmotion.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismexpressionmotion.ts",
+    "sha256": "d27a036eadef7612a42c681d9affe1bb0de16813cf83242a0e36893a59319a96",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismexpressionmotionmanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismexpressionmotionmanager.ts",
+    "sha256": "9873803276dd562130700e058302b84f946efd280a3dcad85c55c449baac1eda",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismmotion.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismmotion.ts",
+    "sha256": "098cb7ab91321bb480bb084ddb1183b52a0d0328f22c1b72e6f7d12971912207",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismmotioninternal.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismmotioninternal.ts",
+    "sha256": "c8ef60a18f39615b8680098e6fa1fadc56013b1a7675ff6f4bb10e15d337fb99",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismmotionjson.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismmotionjson.ts",
+    "sha256": "f2fa20b2e34107766f8ad6875ec8a6b8cef66201500abe9c6df42f69950687bb",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismmotionmanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismmotionmanager.ts",
+    "sha256": "7e88b825f99e4cbc1fd13ae07a7f5063a20ef9d96bf86855e426fb221813e72d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismmotionqueueentry.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismmotionqueueentry.ts",
+    "sha256": "4619da4891829c7f8f5741a4b7f711a6cc2beb9fa06075a2b8caefec20b2ea19",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/motion/cubismmotionqueuemanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/motion/cubismmotionqueuemanager.ts",
+    "sha256": "b3e8e7f1f809e2616fbf1dbebea929fee6045952d0ce4f070ebb1d12f3bd9080",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/physics/cubismphysics.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/physics/cubismphysics.ts",
+    "sha256": "14404a780abaa87687cbdfa2b878cb78cc1ffb43370082ab666d27aee6ca5491",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/physics/cubismphysicsinternal.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/physics/cubismphysicsinternal.ts",
+    "sha256": "5355d3c8fdbf149a7dea6a33b52684e7dfa1e571823d8d1635a84ae569b243cf",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/physics/cubismphysicsjson.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/physics/cubismphysicsjson.ts",
+    "sha256": "c57c5ae5e06e88104ca887992b4a0b2be79091fffcca8dbb4e1087ba9c6553fa",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/rendering/cubismclippingmanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/rendering/cubismclippingmanager.ts",
+    "sha256": "1418c5e2503f1501e545e0ab5e3d1d8aea4e409c2b3503a95092d38d33615593",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/rendering/cubismrenderer.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/rendering/cubismrenderer.ts",
+    "sha256": "955c7098dbac8c4b635c860f707cd41338fc91a988496e403325da5413793502",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/rendering/cubismrenderer_webgl.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/rendering/cubismrenderer_webgl.ts",
+    "sha256": "1611ca841b6fe293cd0049a5510d6cdf9e2d8bfc63d5f9cdcb2d6e19713b116f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/rendering/cubismshader_webgl.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/rendering/cubismshader_webgl.ts",
+    "sha256": "3cd673148d780286cee011fa8928c48dd14b56dadb6c19904beb113122233943",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/type/csmmap.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/type/csmmap.ts",
+    "sha256": "adc3337e20971186851a9d614c72a129e668b68916c83234d874630caf2d4c09",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/type/csmrectf.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/type/csmrectf.ts",
+    "sha256": "c199fdc276d2d66ed3abd140b137a3e127fc52b5735869849d450eacd5f416d8",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/type/csmstring.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/type/csmstring.ts",
+    "sha256": "197ee26d76695cad1dc50498563e8a9c6016056d7017c0bcae03c51eda139cc1",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/type/csmvector.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/type/csmvector.ts",
+    "sha256": "5c84597f325053370d0f2f40b9236e3d74018f54a99397d68391a78c6e1d6f4d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/utils/cubismdebug.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/utils/cubismdebug.ts",
+    "sha256": "0a526141825d6a980d838e95fc6856a4362173674bb6469d8bd40d054e9e7520",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/utils/cubismjson.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/utils/cubismjson.ts",
+    "sha256": "97efa6e00fccc3edd41d0720cc58b1bb4d56390b67f1889624207a18678a9a93",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/utils/cubismjsonextension.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/utils/cubismjsonextension.ts",
+    "sha256": "137fd3fbe78f79e5a41073972e88ee80a276445d36daa7e9b2174f7c89e03b55",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/src/utils/cubismstring.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/src/utils/cubismstring.ts",
+    "sha256": "746c4da878164ecb6444addf2934e9086897b08f0fb68fb1a5f85132f5f76a7c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/Framework/tsconfig.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/Framework/tsconfig.json",
+    "sha256": "69355fbc0d9ff9878a6b4ac2b27d0c12be72ccf1dabf9620fd5f565af0d59132",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappadapter.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappadapter.ts",
+    "sha256": "ba2dd00fcc4caa4975ce63e7df3345407f9e2f68365bc678ed3bce9b91d2da5d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappdefine.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappdefine.ts",
+    "sha256": "3460b9a2c2f966d83c275159271abff5beb00dcc0a3b36bd8dbeae760c9530da",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappdelegate.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappdelegate.ts",
+    "sha256": "8b1ee0bdcdbb50ae095f0bad7a8f46610525903deaee932b886e866f82912d64",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappglmanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappglmanager.ts",
+    "sha256": "b73be66b0877efe27d16580ad4fd2ecd19d8889028dfa8fd38a68bb91db67011",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lapplive2dmanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lapplive2dmanager.ts",
+    "sha256": "1856dc8b51c653b88e0e5bdb656a8274470a61bd2f996c22e29d49aa2cf9beb2",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappmodel.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappmodel.ts",
+    "sha256": "0546db05e93a2b310e46b2f5c40c26431a25837f5d3c0f0028bb071904b95863",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lapppal.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lapppal.ts",
+    "sha256": "679b981fe375dfc550d6a9ef2d250ce766146753d5590ecaafe8a4cab9fb229a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappsprite.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappsprite.ts",
+    "sha256": "b9fd608a551ca1e7c703b6e281165a3c4f5058fe9dab405fff8e8882c03c0695",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lapptexturemanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lapptexturemanager.ts",
+    "sha256": "e1453fbf3e19bce21a5efdf09d9e5792318ac939e8325fef3cf555b1ebb459c2",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappview.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappview.ts",
+    "sha256": "b4951f051cb1131157fb4af34cfbd5ed0cb134a24d68967c112962406b82f627",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/lappwavfilehandler.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/lappwavfilehandler.ts",
+    "sha256": "8b17ec9e10b823a49d63c2e2c63a3b2b0df4874ddfd60a5c8f63ebdeba66ef75",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/main.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/main.ts",
+    "sha256": "87d29480ef19e0e1e33da3274b1772a19dc759af1c8102db5a915e94d9574210",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/WebSDK/src/touchmanager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/WebSDK/src/touchmanager.ts",
+    "sha256": "8e50185935f1f998a0fca03630dc3aff9d79595c2ff7a0047a2cde02e0c4d207",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/index.html",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/index.html",
+    "sha256": "ee8228545318ec8d76dfadff54c15443a9ad8d8ea650e54c488fb285d2208030",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/public/favicon.ico",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/public/favicon.ico",
+    "sha256": "d51ae8ae0788d9ab061e4303fa8cb201f9c719b3615d86a0062c6814c4ecec68",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/public/libs/live2d.min.js",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/public/libs/live2d.min.js",
+    "sha256": "e4ea1f18bdd44b65394ffd5a1bab16982e88757d45134d1bd0737c8a6b3ddd08",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/public/libs/live2dcubismcore.min.js",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/public/libs/live2dcubismcore.min.js",
+    "sha256": "942783587666a3a1bddea93afd349e26f798ed19dcd7a52449d0ae3322fcff7c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/App.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/App.tsx",
+    "sha256": "80af6a41f62bac79c5e6494a8ecddfd62e5e9a119428da7cbfe01526cec7ab59",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/assets/react.svg",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/assets/react.svg",
+    "sha256": "a6bd32300d8a4c5bf4d0c93529164fb9294440ca87e7e5554ad3a3e8d3453635",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/canvas/background.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/canvas/background.tsx",
+    "sha256": "d8d503ef1de9e2e494b9b615842dade65c56358f1b6c253173d9de4b9e70dfbe",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/canvas/canvas-styles.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/canvas/canvas-styles.tsx",
+    "sha256": "d3dae7a4018d26ae35d0944eb568e38ea248c698418cee9b1108b68d37dcb043",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/canvas/canvas.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/canvas/canvas.tsx",
+    "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/canvas/live2d.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/canvas/live2d.tsx",
+    "sha256": "6a7c9e27d14966ca94c9393692a40ccf52adb74f1df569e3d16fc3dc45dde668",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/canvas/subtitle.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/canvas/subtitle.tsx",
+    "sha256": "f88e3dd4046c67d43a425734ed47882988f5a8e15b42ef8b3c13de78718b1901",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/canvas/ws-status.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/canvas/ws-status.tsx",
+    "sha256": "fcb0eaa51fb6129881f697da9e3da1df0c5a55196877cd7b49721bc806b40a43",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/electron/electron-style.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/electron/electron-style.tsx",
+    "sha256": "e0375ad8ab36bfa1c45ecdd07e5e158abdd0db31a050fdfbc7e21ea687b59d78",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/electron/input-subtitle.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/electron/input-subtitle.tsx",
+    "sha256": "ec3385f7cc632fd76b0ad6701276ce88eadace83e2dee0c826dbc110f7be634b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/electron/title-bar.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/electron/title-bar.tsx",
+    "sha256": "659b17c544d3e6938a705a8dea456c6bd0b770745958831e17cb2adbc60490a1",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/footer/ai-state-indicator.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/footer/ai-state-indicator.tsx",
+    "sha256": "78ad6a094d8146cc1dcf24a0cdcff56647b7a51a727a38db99eb6c0d3405cd10",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/footer/footer-styles.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/footer/footer-styles.tsx",
+    "sha256": "391eb3bf65e288481ca6a58e87f9cc7caa4a852a4b52d7508361a81fd525baf2",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/footer/footer.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/footer/footer.tsx",
+    "sha256": "9949f3853824e7b4f51aaef38de6972d709d3aab1353367450dea6b763eb119a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/bottom-tab.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/bottom-tab.tsx",
+    "sha256": "f2104e59efd4524ffccf0e419ae33c774a52ff0d02b009d614dec4dc23e40c7b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/browser-panel.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/browser-panel.tsx",
+    "sha256": "68777633383102aea31dfd2b2f3ab013cf80a8706af10dfb542e4bd60cb40fe2",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/camera-panel.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/camera-panel.tsx",
+    "sha256": "eb7be018c39fc0c4621bf9f66c6e345f640efe7c8c0ca19d902e39b8a880815d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/chat-bubble.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/chat-bubble.tsx",
+    "sha256": "248e59d3d193cb2212dbe524aa7b09360c4f6da38175235a4ecbb36b4a85e90d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/chat-history-panel.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/chat-history-panel.tsx",
+    "sha256": "603a0ea16f0cb88a7fcd6fb29bd4ffe8b2f120b33b8122a415c1083bff911c9b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/group-drawer.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/group-drawer.tsx",
+    "sha256": "162ec852d7d7603d015e9a37616bed03c994c5d08f194d33501fc3f68dd5a8fb",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/history-drawer.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/history-drawer.tsx",
+    "sha256": "8ffd085b7820da7f6b1016345689b56d05001fcc1b5301a927ff07416bd7582a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/invite-dialog.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/invite-dialog.tsx",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/screen-panel.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/screen-panel.tsx",
+    "sha256": "c9062930f94ba0da3ef671aac939ca027bc87599d35fc8cb3fab05c55b23b721",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/about.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/about.tsx",
+    "sha256": "cdbb56970fe4eb68bd368f9f306acd2f3a2b3ead2d75cf2bb0103c0d3fdae101",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/agent.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/agent.tsx",
+    "sha256": "b0c17b0857f626cba1512af2be3bd35534d8d9a3e6e0c59f56207222783473dc",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/asr.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/asr.tsx",
+    "sha256": "80208c15f8475efc575e356bf50c6e17835a6825454dfa8057ff85e9d17e9f51",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/common.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/common.tsx",
+    "sha256": "3612c550aeb3fb7a4a24d77672cddfe355830909553ebf202d613e257781fb80",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/general.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/general.tsx",
+    "sha256": "25a7a197be2e54414cd34467136936c30372affa74b9b1a67e3ea1e5b5caed88",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/live2d.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/live2d.tsx",
+    "sha256": "f30247883e63e85a0d005dbaa873262b4dead34e90ff922fcdbf0d45b66ccc97",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/setting-styles.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/setting-styles.tsx",
+    "sha256": "694aeaf1788f7c282875e9bc3e6cb2d7c70771e07ada13477371ed74eea2a555",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/setting-ui.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/setting-ui.tsx",
+    "sha256": "4098d4203f30df553892a26cf73ca0a1633325db8b28d78f50334f758b583b48",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/setting/tts.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/setting/tts.tsx",
+    "sha256": "049e182c5fa41eae5f44e74cc37cf3bf1bfca58b203890bcd2727b71a3dbb5d0",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/sidebar-styles.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/sidebar-styles.tsx",
+    "sha256": "60ba45c5ca6a339967d7e2854476c24c8e13ffdffb58e1978a68b66f0d498822",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/sidebar/sidebar.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/sidebar/sidebar.tsx",
+    "sha256": "5f7c677ca9579d2cd3a72d3cec918129aee5e75e3ab2193ee8228c02a260033b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/alert.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/alert.tsx",
+    "sha256": "c4f95f66b713e290563f207dd39688bf2297f217493625178ac193b9ba6ca578",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/avatar.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/avatar.tsx",
+    "sha256": "901815627e568cfe7a2b41ca2efd6e9d9c917aa052bd4d511ccefff889e412ac",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/button.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/button.tsx",
+    "sha256": "18bc201c1702c590e5615d454e9f389abc7c91f64d62d3e225139151b9319bbe",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/checkbox.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/checkbox.tsx",
+    "sha256": "c198a0bd48b5ec25c916a8eda4d13b99fdfa54adf7c47ee87b33bc694ae81529",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/clipboard.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/clipboard.tsx",
+    "sha256": "c7ab02fd78649d69951be2a346b2109d9465d35006bb2da75048a80a0bb53343",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/close-button.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/close-button.tsx",
+    "sha256": "be08ee2860c02f462db49d23238a167ac92e18a14ba0c04bb8f8ca9d38affc01",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/color-mode.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/color-mode.tsx",
+    "sha256": "f2eb7c11d37e9c20fa57cf85bf3811fe96787b95ef0264ecb66224c8dca6a480",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/dialog.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/dialog.tsx",
+    "sha256": "6aa2364e2a1138f6966d8861a030c72339d1fe01f649aafc3c27ba6fe74a54db",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/drawer.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/drawer.tsx",
+    "sha256": "aabe925fc5805490df094d00305416b39bb4d15f772f6cc5211bc759673d7632",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/field.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/field.tsx",
+    "sha256": "826bd849d362ffaa305ab4f0e3ef90ab1252bb54414d695f932a392873a87c37",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/input-group.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/input-group.tsx",
+    "sha256": "b4e95fd71d4b96ed973ab4289637f12bbeca6c7862baa4efd85d0589c90ccc6f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/number-input.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/number-input.tsx",
+    "sha256": "04108ed2df5f9fc66b25fc1d10618a3f7625484c36d272538f8f417e28d0ab4a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/popover.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/popover.tsx",
+    "sha256": "33c9bc6beafcef7e6484b3dc809d70ab541dd84e6a3188cc3de2981933b76ace",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/provider.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/provider.tsx",
+    "sha256": "7e7953eb2f85536acb3a877d70394a15d1693e083467957bdb4a0c5ff9c926d8",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/radio.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/radio.tsx",
+    "sha256": "094cf1477f9e6a15ee12d307813e3fb87c51ee3081354062272ad19231d13c11",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/select.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/select.tsx",
+    "sha256": "a04a616984bb10d322c2f8724943222fc0bccef8be2a0b17f0886fe828cba3c4",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/slider.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/slider.tsx",
+    "sha256": "935866c4299ba0f89f18ba8436de037c529dc8f20f5393074be9e53bac49f9d6",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/switch.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/switch.tsx",
+    "sha256": "54e64145db3a8d5e725491a445e9242004beaf15c5137c21276de8d60e5fd763",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/tag.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/tag.tsx",
+    "sha256": "d2456294887a6bc2e0b4766013fd57bd9bb1e7e7d508a6e4ba801002e9864527",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/toaster.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/toaster.tsx",
+    "sha256": "18353ab9e1f20c092d03b9317e02e1477ad41316710d539dc77780b64c7accae",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/components/ui/tooltip.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/components/ui/tooltip.tsx",
+    "sha256": "304f454502ac256576fe150c30a7c9038b8be1336cadf2b033d4cee8477f8ca6",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/ai-state-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/ai-state-context.tsx",
+    "sha256": "caff88c001d47c839c41bcf6f5642d2b1a217290b1d1437c4b10af8cfcc4f95c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/bgurl-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/bgurl-context.tsx",
+    "sha256": "e7f08a305e72facd0a3eb167d586f4bcd75480ff5888edc1588bcd66d836015d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/browser-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/browser-context.tsx",
+    "sha256": "00d9cbc1aab9015c3ae7e9925678461e88fe534b6718a5172e623b4dd10b5b78",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/camera-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/camera-context.tsx",
+    "sha256": "3a89b03836f9bcb2a2741c87715420bcb4436b04f7e9dfde71a1325112c6f991",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/character-config-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/character-config-context.tsx",
+    "sha256": "ab5e2de9123e4c1c68c1ad257b65cd09463de8ff11eb492ea3cab3897191759e",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/chat-history-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/chat-history-context.tsx",
+    "sha256": "1318518ee0e5c55230deac31f92dfcdaca882fc56a46b1614bb3651da83b6a5d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/group-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/group-context.tsx",
+    "sha256": "b9909c2d2d286a85bdebc9270fb71360df6ac71b61747a1f9162947adfe98590",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/live2d-config-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/live2d-config-context.tsx",
+    "sha256": "f9630cda3794ebf45956a88ca9d0570e4fbf20f24aec1a85c6447b162ee2ad4a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/mode-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/mode-context.tsx",
+    "sha256": "dc8f8bb9eae22e5fb28d8865d7ecb6839422ffa02ab0a8bf83d7657a6409e61b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/proactive-speak-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/proactive-speak-context.tsx",
+    "sha256": "5cbf303f620c847cdaff9e8c0bbfae00e4dd430d94cf45e1c77d4fd6d3397493",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/screen-capture-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/screen-capture-context.tsx",
+    "sha256": "bfd655f41dd2c6418e1a1e7d34e0fdb19cdcce5c3c797bada41341fb1d4a21b0",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/subtitle-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/subtitle-context.tsx",
+    "sha256": "b5163db9985527e104f8faa8a8802d604f2a4f483d77217230ea04da5c46e5d0",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/vad-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/vad-context.tsx",
+    "sha256": "57fda891796abd9114ea0cb6cd37ac469daf80a758ff01f28e6ae21e1c726bf0",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/context/websocket-context.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/context/websocket-context.tsx",
+    "sha256": "7474568ffb44b3fa4720e05ec6fbbbc15d9d56a8804102c3585f7b298d6bfe95",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/electron.d.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/electron.d.ts",
+    "sha256": "2335daaf37f7056fa1b43a29fd2b696c36471d70aa3a89ec7d60e0e62c5ec83b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/env.d.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/env.d.ts",
+    "sha256": "30b3026753f61a3181d72b5a9d20bbd2b93954f4c33468116c88f7aa12ffb933",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/canvas/use-background.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/canvas/use-background.ts",
+    "sha256": "17b2bed6bb63e5c24c020dcdd4184fadc86e202d44f54cca5dcdebfce96b66ea",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/canvas/use-live2d-expression.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/canvas/use-live2d-expression.ts",
+    "sha256": "555795ce41e96dd6edf5267eb6330e3390a42956dc42a23f873b290e18830ace",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/canvas/use-live2d-model.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/canvas/use-live2d-model.ts",
+    "sha256": "b5861631713d7359366a05dcfc64821b6efac1b37f18fe0a0ae9100e064b91a0",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/canvas/use-live2d-resize.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/canvas/use-live2d-resize.ts",
+    "sha256": "9f81aef8eb72f90fd5b853a681ae7cd9dd5b9c7bb92e0ccc9299beb8fda7e752",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/canvas/use-subtitle-display.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/canvas/use-subtitle-display.ts",
+    "sha256": "cf3782fcc17b5fa4b003ac4a802dd4aa1a58e96b6abe1ce51723e81f47b4cfc2",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/canvas/use-ws-status.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/canvas/use-ws-status.ts",
+    "sha256": "061cfdb2ed5433c96b28dff17f1fc64b7548766400ae1e2b64e9e90aace9e25c",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/electron/use-draggable.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/electron/use-draggable.ts",
+    "sha256": "68fdade5593162b7f81294f65c2c597bfa5031c9b51e9e301352cca2f32d8d6b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/electron/use-input-subtitle.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/electron/use-input-subtitle.ts",
+    "sha256": "fcb6ed2170deb382a608b08d5134c94743b20e7ec3f108238ddd72380a4d88ce",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/footer/use-footer.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/footer/use-footer.ts",
+    "sha256": "e241dbe4d605c4719b26ea1314c8f4e8a86716e8e738532e1ae67450ab830751",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/footer/use-text-input.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/footer/use-text-input.tsx",
+    "sha256": "ba80eef120988f5e11185d69c4e6e94ce3db901d90c5b26097af40b8408e7582",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/setting/use-agent-settings.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/setting/use-agent-settings.ts",
+    "sha256": "62db965c54e12274e6921e7e5e74927278ae36714cf610051ff11abf9cad0f2f",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/setting/use-asr-settings.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/setting/use-asr-settings.ts",
+    "sha256": "d642dbc06f73d93335b0bbcbbe14bd82c160fd7798dcad9e729902eed6c1c6cf",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/setting/use-general-settings.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/setting/use-general-settings.ts",
+    "sha256": "b5a2ad3d3be7927e32bde8507e471332f27c42fdcf8e15e8db387a5270c36109",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/setting/use-live2d-settings.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/setting/use-live2d-settings.ts",
+    "sha256": "c37f065274d5764b98b4382036b845e62ef1e71cb5dfb7ad7502a6d5b95c8043",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/use-camera-panel.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/use-camera-panel.ts",
+    "sha256": "cedd015233e8d333e0f19f4d358c146c7387b86d35355f20465f194deca0bf78",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/use-capture-screen.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/use-capture-screen.ts",
+    "sha256": "52ebc69737bc315fcf5bcef71188bee0b83380d227ead4234d460caac4868436",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/use-chat-history-panel.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/use-chat-history-panel.ts",
+    "sha256": "64d979a62924e048b9f7dd1da2e751d4de4baa9cc4bd38dd0691fa035ecd0da2",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/use-group-drawer.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/use-group-drawer.tsx",
+    "sha256": "94c39812bce383ddf6fefacc4f9269f379e380a3c8bf122aadf485607d8cdeef",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/use-history-drawer.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/use-history-drawer.ts",
+    "sha256": "2d72dce20bb5da1cb7090c332311cbe813ea0094986a6c3baa08d91cd1eeac34",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/use-invite-dialog.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/use-invite-dialog.ts",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/sidebar/use-sidebar.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/sidebar/use-sidebar.ts",
+    "sha256": "a5161fa06782655e5ebdd950b23287405242e5483494c680b0b1efe1bdc1a27a",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-audio-task.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-audio-task.ts",
+    "sha256": "3b551a78479fc1bcb6821aa09f471d0d9f3f69679ec88600efe341639243d3de",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-force-ignore-mouse.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-force-ignore-mouse.ts",
+    "sha256": "b4f94b034eaf69fd05807c19d612783df565e735ad7f7201ada2ec72d4824fdd",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-interrupt.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-interrupt.ts",
+    "sha256": "0bd652f354cb9a773136b1f5e6acac59781201b16457a854edfa61f86350b9eb",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-ipc-handlers.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-ipc-handlers.ts",
+    "sha256": "82716c3649db22c6ce8cc4a4a83033a8a15fda4bb18039822afc7c8bb9952725",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-local-storage.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-local-storage.ts",
+    "sha256": "33f09428d9bf714e4c0a0a3ef717b3d18e5426b4265014d554f7020b4ed171e8",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-media-capture.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-media-capture.tsx",
+    "sha256": "848bd9bb4f19e3ee1cd805fb41b1c3427319df361499d860915ef8adabbf34b3",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-mic-toggle.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-mic-toggle.ts",
+    "sha256": "bafd9ed7d4efe808c354bbdfe5407da4a5228a0e0f957367fe2d72f48081bcd4",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-send-audio.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-send-audio.tsx",
+    "sha256": "096c7b8bc5d0e0e17f7ca6b20e755fc15daedff53cee879772b7288377f6b5f1",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-switch-character.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-switch-character.tsx",
+    "sha256": "97844edb6a12c8ea42a2c46f40e125a590b1ff7138a7984efe61fafdf67cb67e",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/hooks/utils/use-trigger-speak.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/hooks/utils/use-trigger-speak.ts",
+    "sha256": "f2f86a75121d8bf7be7d8b62ae197102a00c5b21e7c5494f35fe128cdcdfd1c0",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/i18n.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/i18n.ts",
+    "sha256": "cd950851fb3a21990414bc09f08e7a39b75a6290035b19e0177bb84a3b207dff",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/index.css",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/index.css",
+    "sha256": "5584cc338c0f0ab0a0203f1d73b6623767822f18680f8ad386302443ce776082",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/layout.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/layout.tsx",
+    "sha256": "4bce3ec159dc05ea39ac41c10f79d2d568afcee4c793f37d16f05bec479c24a6",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/locales/en/translation.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/locales/en/translation.json",
+    "sha256": "47df4a09d059b1df5d7e2530fb005894b0d6e8604a92b22b4b82f633c551cce8",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/locales/zh/translation.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/locales/zh/translation.json",
+    "sha256": "d06c971baa767005f5f609c899b84fed0b1bf09471e8ead22467f6a1a848f9a6",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/main.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/main.tsx",
+    "sha256": "cb005ef6637bfdf7784cdc3a905df43c281dc87520c82c6b30f6323a7f1a2c58",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/services/websocket-handler.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/services/websocket-handler.tsx",
+    "sha256": "270e4932a1dff84b8585004781314c6eec91615a5ff715c0a406232117d160d6",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/services/websocket-service.tsx",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/services/websocket-service.tsx",
+    "sha256": "89b4891f889361cc349a4e4e2d075e2380b39388a8bc8466f540339a262d2e5b",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/utils/audio-manager.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/utils/audio-manager.ts",
+    "sha256": "7761dcb4df0478a598d2dd74fa6b6db09996f1a46d5dba19e1f16c6cf81ce246",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/utils/task-queue.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/utils/task-queue.ts",
+    "sha256": "c699e2abcc41a546d14782ca2a1948b639a9f82f4fbd11c10ce3bafa6b2b5234",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "src/renderer/src/vite-env.d.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/src/renderer/src/vite-env.d.ts",
+    "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "tsconfig.app.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/tsconfig.app.json",
+    "sha256": "66638189dfefe44682a75df1c2ef2fc2b03b14eebe43b2adc83ffb348de57947",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "tsconfig.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/tsconfig.json",
+    "sha256": "7185cc6edfa39c8404eface63ecd7d4191ccb4068f5c21ccca07546f761c64ba",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "tsconfig.node.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/tsconfig.node.json",
+    "sha256": "4d3d99fc2908b69a12ed60d8ffe0d450ac87482a46dbe131e59b4f71b589b343",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "tsconfig.web.json",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/tsconfig.web.json",
+    "sha256": "123abc51b888bd3b92aa48fbe07164cf0a844d093d2ebe2c5e9bcd66fe98bb8d",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  },
+  {
+    "relative": "vite.config.ts",
+    "path": "/tmp/aimy-20261014-delta-olv/frontend-source/vite.config.ts",
+    "sha256": "5b10c1193debdafc26490db54d099e8a294425d3760b2ca64f111f036d9a7776",
+    "reading_scope": "only named focused files semantically read; full tracked inventory is not full reading"
+  }
+]

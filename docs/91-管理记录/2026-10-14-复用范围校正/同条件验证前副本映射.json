@@ -1,0 +1,27 @@
+[
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/能力选择.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/同条件验证前-能力选择.json",
+    "sha256": "d208389228e0d0df851d812179bf9f2cce8cc0321b679727d5161795bdb893df"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/追溯矩阵.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/同条件验证前-追溯矩阵.json",
+    "sha256": "28c61f8358e5c6996f7ffea6e88143904b58d93f0fd47a0c0e40d2aa3a94e489"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/05-实施手册/2026-10-14-Aimy增量开发交接包/01-能力选择与分期.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/同条件验证前-01-能力选择与分期.md",
+    "sha256": "2fe9ddac5d66b9419e07e304e24105d542ccab052fac348e156734f4bffd29dc"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-五项目功能增量与验证裁决.md",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/同条件验证前-2026-10-14-五项目功能增量与验证裁决.md",
+    "sha256": "12d7ec7f40c7f548c94af9929c2b02958b25d2b04a34ab415f82e8a5eb04b20f"
+  },
+  {
+    "source": "/Users/mima1234/Documents/aimy/docs/02-调研参考/2026-10-14-五项目功能增量与验证裁决.json",
+    "copy": "/Users/mima1234/Documents/aimy/docs/91-管理记录/2026-10-14-复用范围校正/同条件验证前-2026-10-14-五项目功能增量与验证裁决.json",
+    "sha256": "6acf37a4e7217e4fde0d620d10527127af26b3c6aa938a98da44f475afb15355"
+  }
+]

@@ -14,6 +14,7 @@ import {
 import { useAnalytics } from '@proj-airi/stage-ui/composables'
 import { OFFICIAL_SPEECH_PROVIDER_ID, OFFICIAL_SPEECH_STREAMING_PROVIDER_ID } from '@proj-airi/stage-ui/libs/providers/providers/official'
 import { useAiriCardStore } from '@proj-airi/stage-ui/stores'
+import { AcceptanceBudgetError, getAcceptanceBudget } from '@proj-airi/stage-ui/stores/memory/budget'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
 import { useProviderConfigStore } from '@proj-airi/stage-ui/stores/providers/config'
 import { useProviderStore } from '@proj-airi/stage-ui/stores/providers/provider'
@@ -399,13 +400,17 @@ async function persistSelection() {
 
 // Function to generate speech
 async function generateTestSpeech() {
+  if (getAcceptanceBudget()) {
+    errorMessage.value = new AcceptanceBudgetError('paid-validation-disabled').message
+    return
+  }
   if (!testText.value.trim() && !useSSML.value)
     return
 
   if (useSSML.value && !ssmlText.value.trim())
     return
 
-  const provider = await providersStore.getProviderInstance(activeSpeechProvider.value) as SpeechProviderWithExtraOptions<string, any>
+  const provider = await providersStore.getProviderInstance(activeSpeechProvider.value) as SpeechProviderWithExtraOptions<string, Record<string, unknown>>
   if (!provider) {
     console.error('Failed to initialize speech provider')
     return
@@ -484,6 +489,8 @@ async function generateTestSpeech() {
       })
     }
 
+    if (getAcceptanceBudget())
+      throw new AcceptanceBudgetError('paid-validation-disabled')
     const response = await generateSpeech({
       ...provider.speech(
         model,

@@ -59,6 +59,23 @@ function createHIDPermissionDetails(overrides: Partial<DevicePermissionHandlerHa
  * shouldGrantElectronPermission(localWebContents, 'media', origin, details)
  */
 describe('media permissions', () => {
+  it('denies local microphone capture until the independent resource gate allows it', () => {
+    const details = createMediaRequestDetails({ mediaTypes: ['audio'] })
+    expect(shouldGrantElectronPermission(localWebContents, 'media', undefined, details)).toBe(false)
+    expect(shouldGrantElectronPermission(localWebContents, 'media', undefined, details, () => false, kind => kind === 'microphone')).toBe(true)
+    expect(shouldGrantElectronPermission(localWebContents, 'media', undefined, details, () => true, kind => kind === 'screen')).toBe(false)
+  })
+
+  it('denies a local child frame even when its parent has resource consent', () => {
+    const details = createMediaRequestDetails({ mediaTypes: ['audio'], isMainFrame: false })
+    expect(shouldGrantElectronPermission(localWebContents, 'media', undefined, details, () => true, () => true)).toBe(false)
+  })
+
+  it('denies a selected screen after its resource consent is revoked', () => {
+    const details = createMediaRequestDetails({ mediaTypes: [] })
+    expect(shouldGrantElectronPermission(localWebContents, 'media', undefined, details, () => true, () => false)).toBe(false)
+  })
+
   beforeEach(() => {
     vi.stubEnv('ELECTRON_RENDERER_URL', 'http://localhost:5173')
   })
@@ -208,13 +225,14 @@ describe('media permissions', () => {
     )).toBe(true)
   })
 
-  /** @example Local AIRI pages retain screen-capture access. */
-  it('grants display capture requests from local app pages', () => {
+  it('grants display capture only after both source selection and resource consent', () => {
     expect(shouldGrantElectronPermission(
       localWebContents,
       'display-capture',
       undefined,
       createMediaRequestDetails(),
+      () => true,
+      kind => kind === 'screen',
     )).toBe(true)
   })
 
@@ -250,6 +268,7 @@ describe('media permissions', () => {
       undefined,
       createMediaRequestDetails({ mediaTypes: [], securityOrigin: 'file:///app/index.html' }),
       () => true,
+      kind => kind === 'screen',
     )).toBe(true)
   })
 

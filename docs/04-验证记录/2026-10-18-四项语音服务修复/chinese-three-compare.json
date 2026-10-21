@@ -1,0 +1,12 @@
+[
+  {
+    "fast": "automatic",
+    "text": "我想喝一杯热茶 ，然后继续阅读这篇文章。",
+    "events": 21
+  },
+  {
+    "fast": "dictation",
+    "text": "我想喝饮杯热茶，然后继续阅读篇文章",
+    "events": 16
+  }
+]

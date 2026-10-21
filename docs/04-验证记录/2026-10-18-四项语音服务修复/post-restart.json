@@ -1,0 +1,44 @@
+{
+  "apple": {
+    "locale": "zh-CN",
+    "transcriber": "dictation"
+  },
+  "capture": {
+    "microphone": false,
+    "screen": false
+  },
+  "local": {
+    "aivis-speech": {
+      "baseUrl": "http://127.0.0.1:10101/",
+      "status": "configured"
+    },
+    "voicevox": {
+      "baseUrl": "http://127.0.0.1:50021/",
+      "status": "configured"
+    }
+  },
+  "mimoModel": "mimo-v2.5-asr",
+  "selections": {
+    "chat": {
+      "model": "deepseek-flash",
+      "provider": "deepseek"
+    },
+    "hearing": {
+      "model": "apple-speech",
+      "provider": "apple-speech-transcription"
+    },
+    "speech": {
+      "model": "mimo-v2.5-tts",
+      "provider": "mimo-audio-speech",
+      "voice": "冰糖"
+    },
+    "vision": {
+      "model": "deepseek-flash",
+      "provider": "vision-deepseek"
+    }
+  },
+  "voices": {
+    "aivis-speech": 10,
+    "voicevox": 127
+  }
+}

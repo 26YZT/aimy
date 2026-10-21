@@ -9,9 +9,17 @@ animations:
     title: 是否使用页面特定过场动画
 dialogs:
   onboarding:
+    acceptanceTextOnly: '本次只验收文字与记忆，已关闭额外的付费连通测试。模型调用统一计入验收预算。'
+    storedCredential: 已安全保存，留空沿用
+    storedCredentialHint: 已保存的密钥不会显示。留空继续使用，填写新密钥即可更换。
+    saveFailed: 配置还没有验证或保存成功，输入内容仍保留。请稍后重试。
+    apiKeyDescription: 填写你选的服务商提供的 API 密钥。
+    baseUrlDescription: 填写服务商的 API 地址。
+    localTitle: 你好，我是 Aimy
+    localDescription: 陪你待在电脑前。先接好你自己的模型，再慢慢认识彼此。
     official:
       title: AIRI 官方提供商
-    title: 欢迎来到 AIRI！
+    title: 欢迎来到 Aimy！
     description: 让我们设置您的第一个服务来源来开始使用。
     selectProvider: 选择服务来源
     configureProvider: 配置 {provider}
@@ -33,11 +41,11 @@ dialogs:
     retry: 重试
     credentialsSafeLabel: 保证您的 API 密钥和凭据的安全！
     credentialsSafeLocal: >-
-      AIRI 完全本地运行在您的电脑中，我们绝不窃取您对大模型提供商的凭据。但请牢记，您的 API 密钥属于敏感信息。务必妥善保管，切勿与他人分享。
+      Aimy 在你的电脑上运行，并连接你配置的 AI 服务来源。请妥善保管 API 密钥，不要与他人分享。
     credentialsSafeOpenSource: >-
-      AIRI 在 {github} 开源，如果您想确认我们如何存储您的凭据，您可以自由浏览源码。
+      Aimy 基于 Project AIRI 开发。你可以在 {github} 查看上游源码。
     enableChatCheck: >-
-      允许 AIRI 向第一个可用的聊天模式发送「ping」消息以检查可用性
+      允许 Aimy 向第一个可用的聊天模型发送「ping」消息以检查可用性
     start: 开始吧！
     loginPrompt: 登录并使用 AIRI 官方提供的服务以获得最佳体验。
     loginAction: 登录
@@ -56,7 +64,7 @@ dialogs:
       notificationsTitle: 通知
       notificationsDescription: 允许提醒以及重要的状态更新。
       microphoneTitle: 麦克风
-      microphoneDescription: 允许 AIRI 使用麦克风进行语音输入和转写。
+      microphoneDescription: 允许 Aimy 使用麦克风进行语音输入和转写。
       requestAction: 请求获取
       optionalHint: 即使没有授予这些权限，您也可以继续。
       stateGranted: 已授权
@@ -104,6 +112,32 @@ analytics:
   disabled:
     title: 此开发版本的使用数据及崩溃分析功能已禁用
 model-select:
+  vrm-report:
+    title: "角色文件检查"
+    description: "检查文件声明与必要结构，不代表美术质量或真实动作效果。"
+    ready: "文件结构可用"
+    warning: "可导入，部分能力缺失"
+    invalid: "无法导入"
+    import: "继续导入"
+    close: "关闭报告"
+    download: "保存检查报告"
+    import-failed: "导入失败，请检查文件后重试。"
+    present: "已声明"
+    missing: "未声明"
+    capabilities:
+      humanoid: "人形骨骼"
+      mouth: "口型"
+      blink: "眨眼"
+      emotion: "情绪表情"
+      lookAt: "视线"
+      spring: "弹簧物理"
+      mtoon: "MToon材质"
+    errors:
+      invalid-container: "文件容器损坏或格式不受支持。"
+      external-resource: "文件引用外部资源。本地检查不会下载它们，请先打包资源。"
+      missing-vrm: "未找到VRM定义。"
+      invalid-humanoid: "人形骨骼定义不完整。"
+      file-too-large: "文件超出检查大小限制。"
   panel-callout:
     support-status-header: 我们同时支持 2D 和 3D 模型
     support-status: >
@@ -252,6 +286,111 @@ live2d:
 microphone: 麦克风
 models: 模型
 pages:
+  companion:
+    loadedModel: "当前Live2D角色"
+    title: "陪伴增强"
+    description: "保留原有聊天与角色能力，按需开启这些增强。自动行为默认关闭，保存后生效。"
+    saved: "已保存。新的选择已经生效。"
+    saveFailed: "没有保存成功。请检查数字与规则是否完整，或重新载入后再试。"
+    loadFailed: "无法读取设置。原有功能继续可用，增强保持关闭。"
+    done: "操作已完成。"
+    operationFailed: "操作没有完成。请先配置聊天模型并打开一个聊天，再检查记忆状态。"
+    followupTitle: "稍后接着聊"
+    followupEnabled: "允许在空闲时继续当前话题"
+    costNotice: "开启后会调用你配置的模型，可能产生额外费用。每日轮数不是金额上限；原模型兼容重试可能增加请求，也不使用此前的验收预算。新消息、切换聊天或隐藏角色会取消旧计划。"
+    delay: "聊天结束后等待几分钟（1–60）"
+    dailyLimit: "每天最多主动续聊几轮（1–20）"
+    quietStart: "安静时段开始（0–23点）"
+    quietEnd: "安静时段结束（0–23点，相同表示不设时段）"
+    noPlans: "还没有续聊计划。开启并保存后，从下一段聊天开始安排。"
+    cancelPlans: "取消当前续聊计划"
+    reviewTitle: "回顾重要的事"
+    reviewDescription: "按时间整理已保存的有效记忆，保留原话依据。不删除原记忆，不把回顾变成新的用户事实；当前是本地条目整理，不额外调用模型。"
+    idleReview: "空闲时自动整理回顾"
+    cadence: "按什么时间分组"
+    reviewNow: "现在整理回顾"
+    noReviews: "还没有回顾内容。先在聊天中形成有效记忆。"
+    voiceTitle: "声音与语音输入"
+    translationEnabled: "屏幕保留原文，用另一种语言朗读"
+    targetLanguage: "朗读目标语言"
+    translationDescription: "翻译使用已配置的聊天模型，会额外计费。当前支持普通语音合成；双向流式语音继续原方式。取消后不会继续翻译或播放。"
+    directorEnabled: "使用经过台词校验的语音表达"
+    style: "表达方式"
+    directorDescription: "当前适用于已开启SSML的Microsoft/Azure音色。其他音色保持原方式。导演不能改词、删除否定或加入新内容。"
+    echoEnabled: "将疑似自己声音的转写留为草稿"
+    echoDescription: "仅检查最近实际播放过的句子。你仍可编辑并手动发送，不会丢掉短答；这不保证避免转写前的误打断。"
+    endpointEnabled: "尝试让短句更快结束等待"
+    interactionTitle: "角色互动"
+    interactionEnabled: "启用点击区域动作与重复间隔"
+    interactionDescription: "只使用当前Live2D模型实际提供的区域和动作。未配置区域继续原有行为，不改变其他角色格式。"
+    noMotionModel: "请先在主舞台加载Live2D角色，再配置它的点击动作。"
+    model: "当前角色模型"
+    area: "点击区域"
+    motionGroup: "动作组"
+    weight: "相对出现权重（0表示不选）"
+    addMotion: "添加或更新动作"
+    remove: "移除"
+    assetHint: "VRM导入检查位于原来的角色选择窗口。导入时会显示能力报告；其他格式仍按原流程。"
+    rulesTitle: "本地行为规则"
+    rulesDescription: "高优先级先匹配，同优先级按列表顺序。一次事件只采用第一条命中规则。规则只选择应用内行为，不执行代码或发送外部消息。"
+    newRule: "新规则"
+    ruleName: "规则名称"
+    ruleEnabled: "启用这条规则"
+    event: "发生什么事情时"
+    keyword: "话题包含哪些文字（必填）"
+    mode: "条件匹配方式"
+    priority: "优先级（数值越大越先匹配）"
+    action: "命中后怎么做"
+    ruleDelay: "续聊采用上方等待分钟数，且必须先开启续聊。"
+    addRule: "添加规则"
+    runRules: "用当前话题试运行已保存规则"
+    save: "保存设置"
+    reload: "重新载入"
+    languages:
+      zh: "中文"
+      en: "英语"
+      ja: "日语"
+      ko: "韩语"
+    styles:
+      gentle: "温柔"
+      calm: "平静"
+      lively: "轻快"
+    cadences:
+      day: "每天"
+      week: "每周"
+      month: "每月"
+    actions:
+      followup: "安排稍后续聊"
+      review: "整理回顾"
+      none: "保持安静"
+    modes:
+      all: "全部条件符合"
+      any: "任一条件符合"
+    events:
+      chat-complete: "一次聊天回复完成"
+      idle: "空闲一段时间"
+      manual: "手动试运行"
+    planStates:
+      scheduled: "等待中"
+      claimed: "处理中"
+      delivered: "已呈现"
+      cancelled: "已取消"
+      expired: "已过期"
+      failed: "处理失败"
+      unknown: "上次处理结果未知，不自动重发"
+    reviewStates:
+      current: "有效"
+      invalidated: "来源已变化，内容不再展示"
+    speechStates:
+      idle: "尚未运行"
+      working: "正在处理"
+      ready: "已准备好"
+      failed: "处理失败，本句保留原朗读"
+      unsupported-stream: "当前双向流式语音不启用此增强"
+      unsupported-provider: "当前音色不支持此表达增强"
+      missing-model: "请先配置聊天模型"
+      input-too-long: "文本过长，本句不使用增强"
+      rejected: "导演改变了台词，已保留原文"
   account:
     title: 账号
     description: 查看您的个人资料并管理您的帐户
@@ -527,8 +666,77 @@ pages:
     upload: 上传
     upload_desc: 点击或拖动 AIRI 角色卡包以导入
   memory:
-    description: 存放记忆的地方，以及策略
-    title: 记忆体
+    description: '你告诉我的，以及我们聊过的重要事情'
+    title: '关于我'
+    intro: 'Aimy 会在自然聊天中慢慢了解你。这里可以看看她记住了什么，不需要你每天整理。'
+    autoLabel: '自动整理新聊天'
+    autoDescription: '从新聊天里记下值得记住的内容。暂停后，已保存的记忆仍可用于聊天。'
+    activeNotice: '整理会使用你选的模型，可能产生额外费用。不会自动补记启用前的聊天。'
+    pausedNotice: '已暂停。恢复后只整理新聊天，不补记暂停期间的内容。'
+    notReady: '本地资料还在准备中。输入的内容先留在这里，你可以重试，也可以先去聊天。'
+    saveError: '这次修改还没有确认保存成功，输入的内容仍保留。请刷新当前状态后重试。'
+    closeFailed: '还有内容没有保存好，窗口已保留，请稍后重试。'
+    saved: '已保存在这台电脑。'
+    removed: '这条记忆已移除，不再用于后续回忆。聊天原文保留。'
+    organizingNotice: '有 {count} 项内容原文已保存，正在等待或进行整理。'
+    configureToOrganize: '先配置聊天模型，再整理这些内容'
+    pendingNotice: '有 {count} 项内容尚未整理成功，仍可以正常聊天。'
+    personalTitle: '你告诉我的'
+    sharedTitle: '我们聊过的重要事情'
+    empty: '可以先聊聊，我会慢慢了解你。'
+    sourceLoading: '正在打开原话…'
+    sourceMissing: '暂时找不到准确的原话，不能用其他聊天代替。'
+    actions:
+      previous: '返回'
+      save: '保存'
+      cancel: '取消'
+      retry: '刷新状态'
+      source: '看看原话'
+      correct: '更正'
+      remove: '从记忆中移除'
+      saveModel: '保存记忆模型选择'
+      retryOrganizing: '重试整理'
+    profile:
+      title: '先认识你'
+      intro: '这些都可以不填，也可以直接跳过，以后在聊天中慢慢了解。'
+      preferredName: '你希望我怎么称呼你？'
+      optional: '可以不填，写一个让你觉得舒服的称呼就好。'
+      chatPreference: '你希望我们怎么聊天？'
+      preferenceNone: '聊着聊着再了解'
+      listenFirst: '先听我说'
+      talkItThrough: '一起想办法'
+      lighthearted: '轻松聊聊、开开玩笑'
+      recentMatter: '最近有什么在意的事？'
+      recentHint: '可以是近期安排、兴趣，或对你重要的事情。也可以留空。'
+      privacy: '资料和记忆保存在这台电脑。使用云端模型时，必要内容会发给你选的模型服务商。'
+      autoNotice: '自动记忆默认开启，整理可能产生额外模型费用。以后可在“关于我”暂停。'
+      continueAfterError: 先聊天，稍后查看保存状态
+      saveAndChat: '保存，然后开始聊天'
+      skip: '先聊天，这些资料暂不保存'
+      add: '补充一点关于你的资料'
+      saved: '回答已保存，补充的自由文字可能还在等待整理。'
+    maintenance:
+      title: '资料维护'
+      description: '平时也可以在聊天中自然纠正。这里的操作只处理记忆，保留聊天原文；相关内容由 Aimy 自动处理。'
+      correction: '现在正确的内容是什么？'
+    model:
+      title: '记忆整理模型'
+      currentChat: '当前聊天模型：{model}'
+      unconfigured: '尚未配置'
+      mode: '使用哪套模型'
+      follow: '跟随聊天模型'
+      override: '单独选择整理模型'
+      provider: '已配置的服务商'
+      configureProvider: '去配置模型服务商'
+      refreshModels: '刷新模型列表'
+      customPlaceholder: '填写准确的模型名称…'
+      searchPlaceholder: '搜索模型…'
+      noModels: '没有获取到模型列表。可以填写准确型号，或检查服务商设置。'
+      cost: '即使跟随聊天模型，整理记忆仍是单独请求，可能产生额外费用。保存选项不会自动试用模型。'
+    plan:
+      unknown: '已计划，结果尚未确认'
+      done: '已完成'
+      cancelled: '已取消'
   data:
     description: 管理存储 AIRI 数据、导出和重置
     sections:
@@ -1342,6 +1550,12 @@ pages:
         title: Apple 语音识别
         description: 使用 macOS 26 或更高版本的设备端语音识别，无需 API 密钥。
         fields:
+          transcriber:
+            label: 识别模式
+            description: 听写适合短句，语音转写适合连续音频。准确率取决于说话者和录音条件。
+            automatic: 自动选择
+            dictation: 听写（短句）
+            speech: 语音转写（连续音频）
           locale:
             label: 语言区域
             description: 使用 Apple 语音识别支持的完整语言区域代码，例如 en-US 或 zh-CN。
@@ -1896,6 +2110,15 @@ theme:
 title: 设置
 voices: 声线
 vrm:
+  motion:
+    title: 身体动作
+    description: 播放一次内置动作，结束后回到待机。动作幅度会随模型骨骼比例变化。
+    wave: 挥手
+    nod: 点头
+    stop: 停止动作
+    started: 动作已开始，结束后自动回到待机。
+    stopped: 已停止动作，恢复待机。
+    unavailable: 动作未播放。请确认角色已加载、窗口可见，然后重试。
   fps:
     title: 帧率上限
     description: 限制角色和模型预览的 VRM 渲染帧率。降低上限可减少 GPU 占用，不会改变动作播放速度。

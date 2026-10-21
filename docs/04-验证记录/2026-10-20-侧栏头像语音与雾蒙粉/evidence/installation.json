@@ -1,0 +1,12 @@
+{
+  "version": "0.12.0-beta.5+aimy.20261020.3",
+  "installed": "/Users/mima1234/Applications/Aimy体验版.app",
+  "backup": "/Users/mima1234/Library/Application Support/Aimy-Package-Backups/20261020-Rose/Aimy体验版-雾蒙粉更新前.app",
+  "asarSha256": "4ee39e7cc842a57f5a0454b2e8528826bd277a582a407887d8910d80ba10da44",
+  "dataDirectoryUnchanged": true,
+  "privateDataReadOrMigrated": false,
+  "normalLaunchVerified": true,
+  "pid": 42246,
+  "launchObservation": "42246 01:07 /Users/mima1234/Applications/Aimy体验版.app/Contents/MacOS/airi",
+  "desktopLink": "/Users/mima1234/Desktop/Aimy体验版.app"
+}

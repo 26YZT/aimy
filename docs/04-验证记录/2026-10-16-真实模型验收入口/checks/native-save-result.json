@@ -1,0 +1,10 @@
+{
+  "nativeClickSave": true,
+  "configured": true,
+  "configurationRevision": 3,
+  "requests": 0,
+  "normalExit": true,
+  "plaintextInLog": false,
+  "output": "/private/tmp/aimy-live-entry-20261016/qualification/setup-runs/setup-a12732b7-dc08-4142-b5ef-1f5d1c62be47",
+  "runnerFault": "After successful save the temporary test script called close on unused CDP client; public receipts audited separately."
+}

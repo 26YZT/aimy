@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import type { VrmGesture } from '@proj-airi/stage-ui-three/composables/vrm'
+
 import type { ModelSettingsRuntimeSnapshot } from './runtime'
 
 import { useModelStore } from '@proj-airi/stage-ui-three'
 import { Button, Callout, GhostButton, SelectTab } from '@proj-airi/ui'
 import { storeToRefs } from 'pinia'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import { Container, PropertyColor, PropertyNumber, PropertyPoint } from '../../../data-pane'
@@ -14,6 +16,7 @@ const props = withDefaults(defineProps<{
   palette: string[]
   allowExtractColors?: boolean
   runtimeSnapshot: ModelSettingsRuntimeSnapshot
+  playGesture?: (gesture: VrmGesture) => boolean | Promise<boolean>
 }>(), {
   allowExtractColors: true,
 })
@@ -49,6 +52,28 @@ const {
   skyBoxIntensity,
 } = storeToRefs(modelStore)
 const controlsLocked = computed(() => props.runtimeSnapshot.controlsLocked)
+const gesturePending = ref(false)
+const gestureMessage = ref('')
+const gestureDisabled = computed(() => controlsLocked.value || props.runtimeSnapshot.phase !== 'mounted' || !props.playGesture || gesturePending.value)
+
+async function playGesture(gesture: VrmGesture) {
+  if (gestureDisabled.value)
+    return
+  gesturePending.value = true
+  gestureMessage.value = ''
+  try {
+    const applied = await props.playGesture?.(gesture)
+    gestureMessage.value = t(applied ? 'settings.vrm.motion.started' : 'settings.vrm.motion.unavailable')
+    if (applied && gesture === 'stop')
+      gestureMessage.value = t('settings.vrm.motion.stopped')
+  }
+  catch {
+    gestureMessage.value = t('settings.vrm.motion.unavailable')
+  }
+  finally {
+    gesturePending.value = false
+  }
+}
 // Bare numbers and an i18n'd unlimited label, matching the Live2D and Spine frame-rate controls.
 const fpsOptions = computed(() => [
   { value: 0, label: t('settings.vrm.fps.options.unlimited') },
@@ -90,6 +115,25 @@ const envOptions = computed(() => [
 </script>
 
 <template>
+  <Container :title="t('settings.vrm.motion.title')" icon="i-solar:play-bold-duotone">
+    <p :class="['mb-3 text-xs', 'text-neutral-500 dark:text-neutral-400']">
+      {{ t('settings.vrm.motion.description') }}
+    </p>
+    <div :class="['flex flex-wrap items-center gap-2']">
+      <Button :disabled="gestureDisabled" @click="playGesture('wave')">
+        {{ t('settings.vrm.motion.wave') }}
+      </Button>
+      <Button :disabled="gestureDisabled" @click="playGesture('nod')">
+        {{ t('settings.vrm.motion.nod') }}
+      </Button>
+      <Button :disabled="gestureDisabled" @click="playGesture('stop')">
+        {{ t('settings.vrm.motion.stop') }}
+      </Button>
+    </div>
+    <p v-if="gestureMessage" role="status" :class="['mt-2 text-xs']">
+      {{ gestureMessage }}
+    </p>
+  </Container>
   <Container :title="t('settings.vrm.fps.title')" icon="i-solar:speedometer-bold-duotone">
     <p :class="['text-xs', 'text-neutral-500 dark:text-neutral-400']">
       {{ t('settings.vrm.fps.description') }}
@@ -150,6 +194,7 @@ const envOptions = computed(() => [
           :disabled="controlsLocked"
           size="sm"
           :active="trackingMode === option.value"
+          :aria-pressed="trackingMode === option.value"
           :label="option.label"
           @click="trackingMode = option.value"
         />

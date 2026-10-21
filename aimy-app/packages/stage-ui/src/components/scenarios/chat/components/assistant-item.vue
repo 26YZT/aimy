@@ -7,6 +7,7 @@ import type { ChatToolCallRendererRegistry } from './tool-call-renderer'
 import { isStageCapacitor, isStageWeb } from '@proj-airi/stage-shared'
 import { computed } from 'vue'
 
+import MessageAvatar from './message-avatar.vue'
 import ChatReplyQuote from './reply-quote.vue'
 import ResponseCitations from './response-citations.vue'
 import ChatResponsePart from './response-part.vue'
@@ -28,6 +29,8 @@ const props = withDefaults(defineProps<{
   variant?: 'desktop' | 'mobile'
   /** How the bubble paints its background; see `ChatHistory`'s `surface`. */
   surface?: 'translucent' | 'opaque'
+  appearance?: 'stage' | 'messenger'
+  avatar?: string
   toolCallRenderers?: ChatToolCallRendererRegistry
 }>(), {
   canReply: false,
@@ -35,6 +38,7 @@ const props = withDefaults(defineProps<{
   scrollContainer: null,
   variant: 'desktop',
   surface: 'translucent',
+  appearance: 'stage',
   toolCallRenderers: () => ({}),
 })
 
@@ -106,8 +110,12 @@ function getToolCallRenderer(slice: ChatSlices) {
 }
 
 const showLoader = computed(() => props.showPlaceholder && resolvedSlices.value.length === 0)
-const containerClass = computed(() => props.variant === 'mobile' ? 'mr-0' : 'mr-12')
+const containerClass = computed(() => props.appearance === 'messenger'
+  ? 'mr-0 items-start gap-2 pr-5 font-sans text-base leading-relaxed'
+  : ['font-cute', props.variant === 'mobile' ? 'mr-0' : 'mr-12'])
 const boxClasses = computed(() => {
+  if (props.appearance === 'messenger')
+    return ['messenger-incoming relative min-w-0 px-3 py-2']
   const spacing = props.variant === 'mobile' ? 'px-2 py-2 text-sm' : 'px-3 py-3'
   if (props.surface === 'opaque')
     return [spacing, 'bg-primary-50 shadow-md dark:bg-primary-950']
@@ -123,7 +131,8 @@ const copyText = computed(() => getChatHistoryItemCopyText(props.message as Chat
 </script>
 
 <template>
-  <div flex :class="['font-cute', containerClass]" class="ph-no-capture">
+  <div flex :class="[containerClass]" class="ph-no-capture" :data-appearance="appearance">
+    <MessageAvatar v-if="appearance === 'messenger'" :source="avatar" :label="label" />
     <ChatActionMenu
       :copy-text="copyText"
       :can-reply="canReply"
@@ -137,10 +146,11 @@ const copyText = computed(() => getChatHistoryItemCopyText(props.message as Chat
       <template #default="{ setMeasuredElement }">
         <div
           :ref="setMeasuredElement"
-          flex="~ col" shadow="sm primary-200/50 dark:none"
-          min-w-20 gap-2 rounded-xl h="unset <sm:fit"
+          flex="~ col"
+          gap-2 h="unset <sm:fit"
           :class="[
             'chat-message-item-container',
+            appearance === 'stage' ? 'min-w-20 rounded-xl shadow-sm shadow-primary-200/50 dark:shadow-none' : '',
             boxClasses,
             (isStageWeb() || isStageCapacitor()) && props.variant === 'mobile' ? 'select-none sm:select-auto' : '',
           ]"
@@ -151,10 +161,10 @@ const copyText = computed(() => getChatHistoryItemCopyText(props.message as Chat
             :message="message"
             :variant="variant"
           />
-          <div class="<sm:hidden">
+          <div v-if="appearance === 'stage'" class="<sm:hidden">
             <span text-sm text="black/60 dark:white/65" font-normal>{{ label }}</span>
           </div>
-          <div v-if="resolvedSlices.length > 0" class="flex flex-col gap-2 break-words" text="primary-700 dark:primary-100">
+          <div v-if="resolvedSlices.length > 0" :class="['flex min-w-0 flex-col gap-2 break-words', appearance === 'stage' ? 'text-primary-700 dark:text-primary-100' : '']">
             <template v-for="(slice, sliceIndex) in resolvedSlices" :key="sliceIndex">
               <component
                 :is="getToolCallRenderer(slice)"
@@ -180,3 +190,8 @@ const copyText = computed(() => getChatHistoryItemCopyText(props.message as Chat
     </ChatActionMenu>
   </div>
 </template>
+
+<style scoped>
+.messenger-incoming { border-radius: 4px 20px 20px 20px; background: var(--messenger-soft, #f6edf1); color: var(--messenger-muted, #76616c); box-shadow: none; }
+:global(.dark .messenger-incoming) { background: var(--messenger-soft, #362a30); color: #ead5df; }
+</style>

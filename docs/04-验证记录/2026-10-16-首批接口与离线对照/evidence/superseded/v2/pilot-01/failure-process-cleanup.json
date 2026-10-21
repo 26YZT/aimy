@@ -1,0 +1,16 @@
+{
+  "pid": 91274,
+  "processNumber": 1,
+  "runId": "8ebb3ef1-7751-490b-8292-928bf2abd756-airi-USER-V2-05-p1",
+  "cdpPort": 51009,
+  "channelPort": 51007,
+  "modelPort": 51008,
+  "profile": "/private/tmp/aimy-closure-20261016/v2/pilot-01/USER-V2-05-airi/profile",
+  "entrySha256": "4438c97eebb2780077065d46f297ab4727a16a44b29112a50c76af4781f4ef9e",
+  "debugPortOwnerVerified": true,
+  "exit": {
+    "code": 0,
+    "signal": null,
+    "forced": false
+  }
+}

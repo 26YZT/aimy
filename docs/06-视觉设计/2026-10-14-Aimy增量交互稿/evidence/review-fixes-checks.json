@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-14",
+  "scope": "仅文档原型模拟；非产品/模型/设备",
+  "checks": [
+    {
+      "id": "FIX-01",
+      "pass": true,
+      "detail": "隐藏后麦克风不能重开"
+    },
+    {
+      "id": "FIX-02",
+      "pass": true,
+      "detail": "隐藏后看屏不能重开"
+    },
+    {
+      "id": "FIX-03",
+      "pass": true,
+      "detail": "恢复显示仍暂停"
+    },
+    {
+      "id": "FIX-04",
+      "pass": true,
+      "detail": "收起聊天保留已有聆听"
+    },
+    {
+      "id": "FIX-05",
+      "pass": true,
+      "detail": "开始过的请求停止不退示例预算"
+    },
+    {
+      "id": "FIX-06",
+      "pass": true,
+      "detail": "预算耗尽不能直接重开绕过"
+    },
+    {
+      "id": "FIX-07",
+      "pass": true,
+      "detail": "权限等待中取消不计已开始请求"
+    },
+    {
+      "id": "FIX-08",
+      "pass": true,
+      "detail": "来源日期与记忆一致"
+    },
+    {
+      "id": "FIX-09",
+      "pass": true,
+      "detail": "修改后窄窗口无横向溢出"
+    }
+  ]
+}

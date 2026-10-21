@@ -1,0 +1,78 @@
+/* Aimy 粉雾 0.1 — 2026-10-12 — design proposal */
+:root {
+  color-scheme: light;
+  --canvas: #FCF9FA;
+  --surface: #FFFFFF;
+  --surface-soft: #F6F1F4;
+  --surface-raised: #FFFFFF;
+  --text: #372F36;
+  --text-secondary: #73646E;
+  --text-muted: #7E6D78;
+  --border: #E7DDE3;
+  --control-border: #9B8994;
+  --primary: #B44870;
+  --primary-hover: #9B3A60;
+  --primary-pressed: #81304F;
+  --on-primary: #FFFFFF;
+  --primary-soft: #FBE6EF;
+  --primary-text: #9B3A60;
+  --focus: #9B3A60;
+  --success: #326C59;
+  --success-soft: #EAF4EF;
+  --warning: #865C21;
+  --warning-soft: #FFF3DC;
+  --danger: #B13E4C;
+  --danger-soft: #FDECEF;
+  --disabled: #EDE5EA;
+  --on-disabled: #8B7A85;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #211C23;
+  --surface: #2A242D;
+  --surface-soft: #332B35;
+  --surface-raised: #3B303C;
+  --text: #F8EDF3;
+  --text-secondary: #C5B2BF;
+  --text-muted: #B7A1B0;
+  --border: #4C3C49;
+  --control-border: #9B8293;
+  --primary: #F1A9C5;
+  --primary-hover: #F7C1D6;
+  --primary-pressed: #E28BAF;
+  --on-primary: #34212D;
+  --primary-soft: #49303D;
+  --primary-text: #F3B9CF;
+  --focus: #F1A9C5;
+  --success: #A2D6BE;
+  --success-soft: #233C32;
+  --warning: #E8C082;
+  --warning-soft: #423524;
+  --danger: #FFA7B6;
+  --danger-soft: #472B35;
+  --disabled: #453743;
+  --on-disabled: #A68E9F;
+}
+:root {
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Consolas, monospace;
+  --radius-small: 8px;
+  --radius-control: 12px;
+  --radius-bubble: 18px;
+  --radius-panel: 24px;
+  --radius-pill: 999px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --shadow-panel: 0 16px 48px #52344712, 0 2px 6px #52344706;
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --duration: 180ms;
+}
+[data-theme="dark"] { --shadow-panel: 0 16px 48px #00000030; }

@@ -1,0 +1,48 @@
+{
+  "caseId": "USER-V2-02",
+  "arm": "airi",
+  "buildManifestSha256": "02b90b6285002673a48b926e423f82ab0474eb3e230e4e638e89901d3830665b",
+  "processes": [
+    {
+      "pid": 20825,
+      "processNumber": 1,
+      "runId": "53f34c66-0f53-471c-b917-d53624884bae-airi-USER-V2-02-p1",
+      "cdpPort": 57388,
+      "channelPort": 57386,
+      "modelPort": 57387,
+      "profile": "/Users/mima1234/Library/Application Support/Aimy-Acceptance/first-memory-v1/runs/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-02-airi/profile",
+      "entrySha256": "4438c97eebb2780077065d46f297ab4727a16a44b29112a50c76af4781f4ef9e",
+      "debugPortOwnerVerified": true,
+      "targetId": "E365980CF56B60A81BF31F5F1F51D670",
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "forced": false
+      },
+      "accounting": {
+        "acceptedRequests": 2,
+        "settledAttempts": 2,
+        "authorizationRejected": 0,
+        "plaintextSyntheticCredentialInEvidence": false
+      }
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "USER-V2-02-T1",
+      "transition": "create_fresh_case_profile_and_session",
+      "sourceSha256": "ce59f29ebf8254ed02b8e0a86458ddd235575ffec4bbd6c2b547c72a7c838cf7",
+      "elapsedMs": 2326,
+      "sessionId": "K3APg51BCyseRf47yj4ln",
+      "processNumber": 1
+    },
+    {
+      "stepId": "USER-V2-02-T2",
+      "transition": "continue_same_session",
+      "sourceSha256": "d020bb035db9a166ebe6266fcea636f6d5538cc34e00d5adc6bd54408d06ecd7",
+      "elapsedMs": 2824,
+      "sessionId": "K3APg51BCyseRf47yj4ln",
+      "processNumber": 1
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "pid": 65947,
+  "naturalQuitViaAppQuit": true,
+  "processStopped": true,
+  "quitElapsedSeconds": 2.183,
+  "forcedKill": false,
+  "stageMounted": true,
+  "stageCanvasCount": 1,
+  "companionRouteRegistered": true,
+  "companionLazyComponentLoaded": true,
+  "allEnhancementsDefaultOff": true,
+  "settingsRevision": 0,
+  "modelCalls": 0,
+  "externalSocketProbe": {
+    "blocked": true,
+    "errno": 1
+  },
+  "nativeClicks": "not-performed: sandbox test application was absent from CUA app inventory",
+  "profile": "/tmp/aimy-round2-native-profile",
+  "entrySha256": "d05d1d9d5a0fb6e2781a66e91e45bdbe039726e9cc9d12e313d1fa79c8ef9c68",
+  "network": "OS external-network deny, Unix/loopback permitted; Chromium request filtering and main-fetch filtering",
+  "limitations": [
+    "Chromium inner sandbox disabled only for test under retained OS sandbox",
+    "Stage mounted/canvas exists is not visual character quality acceptance",
+    "Settings route registration and lazy load checked; native settings clicks not performed"
+  ],
+  "remainingOwnedProcesses": []
+}

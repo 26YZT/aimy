@@ -1,0 +1,1490 @@
+{
+  "date": "2026-10-15",
+  "product_root": "/Users/mima1234/Documents/aimy/aimy-app",
+  "status": "proposal_pending_user_review",
+  "boundary": "shared chat/core/main files one writer; only docs approval now; targeted corresponding tests and public export files must be declared",
+  "existing": 65,
+  "proposed_new": 53,
+  "files": [
+    {
+      "path": ".tool-versions",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "审定后先验证现有Node24.20，再对齐声明，未升级",
+      "source_sha256": "92b4b010a28e33f380a19ffb25432a4293036330198803aed9f9ade53733ece4",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/database/storage.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-01",
+        "SRC-01"
+      ],
+      "purpose": "同local底层store/key转换和updateRawLocal窄适配；updateRawLocalMany同store原子session/journal+index",
+      "source_sha256": "fc54da57c438fd82abe010c2170752ab0748feef716a73b095812bf5e9199ce4",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01"
+      ],
+      "purpose": "原saveSession保存消息及optional journal，保留原队列；commitSessionSnapshotAndIndex原子登记发现路径",
+      "source_sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/types/chat-session.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01"
+      ],
+      "purpose": "ChatSessionRecord optional memoryJournal/来源版本元数据",
+      "source_sha256": "311a36378e08bc0a3b9b4d1591e26386a05b522bf1b87d847f3db1241fc0051d",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LOCAL-01",
+        "SRC-01"
+      ],
+      "purpose": "关闭额外cloud链；同record journal/恢复；mutation持久回执",
+      "source_sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LOCAL-01",
+        "SRC-01",
+        "MEM-02",
+        "MEM-03"
+      ],
+      "purpose": "来源/血缘/失效、真实请求投影、cancel/呈现/持久guard",
+      "source_sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/providers/config.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LOCAL-01"
+      ],
+      "purpose": "local同步闸门；persist只存secretRef和非敏感配置",
+      "source_sha256": "fd2250a95cc4cd34adaf02e3a6c6bf40f44c8c4fd2ef417e039be38a5c22654e",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/providers/provider.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LOCAL-01",
+        "MEM-02"
+      ],
+      "purpose": "运行时取secret、配置revision；复用GenerationProvider工厂",
+      "source_sha256": "99a87e8d995d7d5eee7b55ac53541565109655e09910fc0fd3dd1f5291e844b6",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/modules/consciousness.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "读取跟随聊天选择；仅必要窄读取端口",
+      "source_sha256": "18a1f01bb3f08a93541f7c9e6e58ce8d414aa21679b7f629c2298de1c3fb41b3",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/services/inference-service-providers.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LOCAL-01"
+      ],
+      "purpose": "额外cloud API最终发送闸门",
+      "source_sha256": "3f92129eab064021bffcd69c952e383b389ae45b21c45799bfdabe139c1a572c",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01"
+      ],
+      "purpose": "按请求scope解析上下文；后commit恢复触发；拒旧输出",
+      "source_sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/request-context.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "MEM-03"
+      ],
+      "purpose": "native continuation scope纳入memoryEpoch",
+      "source_sha256": "76bd7db411283193ede935af5ec6d41c8d7a1c0fda541a0668233259895e6ad4",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/llm-service.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "MEM-03"
+      ],
+      "purpose": "所有async准备后/重试/协议切换guard；失效不可重试旧payload",
+      "source_sha256": "f7474bfc16bafb4166124aa30e85e0cfe1a12bf98abd1f7c89c673f394fadd60",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-completions.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "MEM-03"
+      ],
+      "purpose": "每步和实际fetch guard，保持provider fetch wrapper",
+      "source_sha256": "f62fa818c080ddf97c5f005b09bcf7fe8a5d2ed400c2f67df2d252ebe592796f",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/responses.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "MEM-03"
+      ],
+      "purpose": "每步和实际fetch guard，native/portable两分支过滤",
+      "source_sha256": "212363665b735b45085cb1c0a730e59f4a0e742cae3f8ffe1ad78651a097f88f",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/messages/chat-completions.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "MEM-03"
+      ],
+      "purpose": "native/portable两分支失效；重建有效投影",
+      "source_sha256": "706747b89b705108eded64c8736b4194f5bfac52f41714a2355f6b4b12238d8f",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/types/llm.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "MEM-03"
+      ],
+      "purpose": "非序列化guard和request correlation memoryEpoch",
+      "source_sha256": "d7cb3f9f4e4ae6b5d3abf3d745306469ac342f8e62b6361dab5440535dbc8a98",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01",
+        "LOCAL-01",
+        "MEM-02"
+      ],
+      "purpose": "原生命周期服务注册、安全桥注册和有限退出；仅验收campaign模式注入BudgetGate",
+      "source_sha256": "a89ec1e33b3e3a921eca7de7b3c229567a8d16b94c936ac975c0cab4570d3136",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/window.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "复用原窗口事件，资源撤权独立于animation pause",
+      "source_sha256": "f8bf0f7ba798dd7f1221bc0d78c6287e52cfa0546db014ebc2a65a3f59731ce6",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/media-permissions.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "产品独立授权/owner lease门，保留默认deny与来源校验",
+      "source_sha256": "d0704953e37dc3197cf425cf60e73cdc87176a78de9405e303f6ae6e8a882563",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "已有beforeQuit钩子接有限握手，不静默挂死",
+      "source_sha256": "086384c14bc361c52c90fa6fc7174988bb19d6a20f698f1d53841e1b579b4110",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01",
+        "LIFE-01"
+      ],
+      "purpose": "主窗口close/hide原语义保留/核清，用户可见标题",
+      "source_sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/shared/eventa/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01",
+        "LOCAL-01",
+        "MEM-02"
+      ],
+      "purpose": "窄控制事件注册，沿既有Eventa；仅验收campaign模式注入BudgetGate",
+      "source_sha256": "bfca93b34731b2636af29892a9c1f89b11e5b1e14d331f391598b79f722b7086",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/main.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LOCAL-01",
+        "MEM-02"
+      ],
+      "purpose": "store初始化前注入桌面secret适配；仅验收campaign模式注入BudgetGate",
+      "source_sha256": "67f66bf1998bf36480f0185d28fc2ad70d17bb6f91eb403a11b828e2d0a2dfac",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/App.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01",
+        "MEM-01",
+        "MEM-03"
+      ],
+      "purpose": "原auth/card ready后bootstrap memory owner/资源bridge",
+      "source_sha256": "cc350e25147e59d63ffa5ef68e9eb2a2929ff97d03cff8e4a6b2db8bf4429550",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/stores/stage-window-lifecycle.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "窗口快照给资源门，保留stagePaused原动画语义",
+      "source_sha256": "b1cf1061efc6f3e9570859e55b18c48200316434b6aba1b9a2e6a799f819dd12",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/composables/use-vision-screen-capture.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "既有采集开始/停track接资源epoch，非看屏产品化",
+      "source_sha256": "5435f5534daf2f346f3c6dca67b5e245ea07a36b9ad47ed4729d5492dde4f759",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/composables/use-screen-ambient-light.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "既有ambient screen consumer关闭门",
+      "source_sha256": "c86c7f98809d210f6cd205249470cdccde1e49b8b120d0e8b97087af980cd46d",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/features/live2d/system-audio-lipsync.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "既有system audio capture关闭门",
+      "source_sha256": "ab77752bda9437c117678f78d61a737f7279ed84a8c9a0836510665788c9319f",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/settings/audio-device.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "hold订阅遵守资源门",
+      "source_sha256": "046e4452947ca992d1950cfda4bd2bf661b5288be6a45d32d8204404774b4cca",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/voice.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "原voice消费者取消/停止保护，非语音优化",
+      "source_sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/audio/voice-controller.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "原voice controller订阅遵守资源门",
+      "source_sha256": "7843f7a4f63c8f2efa24e41fe2a76a0870a019fb30658b326e5045ea903ec14f",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/onboarding.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01",
+        "MEM-03"
+      ],
+      "purpose": "可跳过profile extraStep, canonical scope就绪后保存",
+      "source_sha256": "c06ad7a364acabaca115dad5f661f3e01d7eb3b86686af585dcfdd224d1b94a4",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "品牌及上游许可/署名",
+      "source_sha256": "65ba5a56aca5bc9434ac148ac251e831d695d14b6642fc0256ec6a4e4600dc01",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/types.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "必要初始档案step props/guard类型，不重造onboarding",
+      "source_sha256": "e48c24186b4b4f3c6174df4745d39ff2953c7ae468aa942b1381130f46c96c0d",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/memory/index.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "关于我入口/同事实库视图",
+      "source_sha256": "3f287654fec864d6b71bb7365122e59ea5c7e818588455b57a2e6221b39c1b2a",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "原占位页按UI方案适配/跳转，防双设置owner",
+      "source_sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de",
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/types/memory.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "SRC-01",
+        "MEM-01"
+      ],
+      "purpose": "typed SourceRef/envelope/receipt；分开直接来源、事实单元/别名、host真实依赖、提取/回放屏障",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/database/repos/memory.repo.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-01"
+      ],
+      "purpose": "同store单key事务/CAS/fencing/回执；目标与真实依赖自动清理；共享来源不连坐",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/store.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-01"
+      ],
+      "purpose": "synced leader动作与只读状态",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/service.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-01"
+      ],
+      "purpose": "唯一业务owner, ready/bootstrap/恢复/queue",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/sources.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "SRC-01",
+        "MEM-02"
+      ],
+      "purpose": "chat/onboarding/correction来源适配与核验",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/source-journal.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "SRC-01"
+      ],
+      "purpose": "原session durable marker恢复/ack",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/model-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "默认跟随/override非敏感快照与失效",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/extraction.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "独立提取请求/source与job状态",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/validators.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "schema/scope/source/分层屏障；模型不自封无依赖或扩大删除范围",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/budget.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "未来验收费用预留/结算/unknown failclosed",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/retrieval.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "关键词/时间/有效事实选择",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/projection.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "阻止已移除目标重进native/portable/HTTP；同源独立事实仅用安全当前投影保留",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/mutations.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "按目标自动计算真实依赖闭包、屏障/cleanup回执；不接受用户关联集合",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/profile.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "可跳过首次资料的同envelope来源/结构校验",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/services/local-data-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LOCAL-01"
+      ],
+      "purpose": "额外Aimy同步集中闸门",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/services/provider-secret-storage.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LOCAL-01"
+      ],
+      "purpose": "受控平台secretRef读取/保存窄端口",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/services/resource-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "所有consumer可用epoch/lease门",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/provider-secrets.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LOCAL-01"
+      ],
+      "purpose": "safeStorage加密保存, 原子替换, sender校验, 无明文回退",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/shared/eventa/aimy-provider-secrets.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LOCAL-01"
+      ],
+      "purpose": "版本化secret桥契约",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/provider-secrets.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LOCAL-01"
+      ],
+      "purpose": "runtime临时secret受控桌面适配",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/resource-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "主进程资源lease/撤权/退出协调",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/shared/eventa/aimy-lifecycle.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "资源/退出控制事件与receipt",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/resource-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "原media consumers统一适配/停回执",
+      "source_sha256": null,
+      "kind": "runtime",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/tray/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "可见tooltip/菜单文案局部收尾",
+      "kind": "runtime",
+      "source_sha256": "7868759d9ff73324873b26cc97b04457b10fa8bd8b39f0634842253b6d1545ce",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "新增afterModelSteps默认空，原extraSteps顺序保持",
+      "kind": "runtime",
+      "source_sha256": "05f6aa7fa257ed588501bdaf3064036eabd25baacab05ad5a574902ec4697646",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "实际使用的新增step导出",
+      "kind": "runtime",
+      "source_sha256": "a20a7b8d5ad1b3e68041ef27d789448b5c5a062b6b0bd023c7936fdb611644fa",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-welcome.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅用户可见品牌，法律链接/来源保留",
+      "kind": "runtime",
+      "source_sha256": "020ec692eb9b521100326d9be673684a1794e317b8b3105130d5b1ee011bd017",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/i18n/src/locales/zh-Hans/settings.yaml",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "首次认识、关于我、整理模型与维护中文文案",
+      "kind": "runtime",
+      "source_sha256": "a20234b9ad92bc805c533fc696fc985e75085215b1c1bd46325134082fd099ea",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/i18n/src/locales/en/settings.yaml",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "对应英文和fallback文案",
+      "kind": "runtime",
+      "source_sha256": "37a54de81968dce7f5312065583344e6930f8ac485c5865d822b04aedd754d54",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/audio/audio-device.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "中央mic permission/probe/input接统一资源门",
+      "kind": "runtime",
+      "source_sha256": "1c1fdeac112b09c3557bcc8f6926ae1e0e29867471f730baab57cbc09a66908e",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/settings/providers/transcription/aliyun-nls-transcription.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "raw getUserMedia试录入口保护，不新增语音功能",
+      "kind": "runtime",
+      "source_sha256": "f634ded6e4c75cba56663f1f85b872df5856e70088b3e1044d874b2714757b93",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-pages/src/pages/devtools/providers-transcription-realtime-aliyun-nls.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "raw getUserMedia devtools入口保护",
+      "kind": "runtime",
+      "source_sha256": "0ede4528f2eb78598363ca9f407ca9f0293c8e5927cc2d892c085aef74df4a2d",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/devtools/screen-capture.vue",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01"
+      ],
+      "purpose": "raw getDisplayMedia入口保护",
+      "kind": "runtime",
+      "source_sha256": "4e592cfc21ba332306ffe7c010afd6de52fcd3db732883a4da6e40aa1336245b",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/source-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "SRC-01"
+      ],
+      "purpose": "AH-L01/L02适配；sourceLifecycle、extractionBlock、replayBlock按用途分开",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/fact-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-01"
+      ],
+      "purpose": "AH-L03/L05/L06；稳定fact单元/已知别名与host依赖，不以共享来源判连坐",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/recall-policy.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "AH-L07/L09/L10及RY-L01/L02选定评分分项",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/context.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "AH-L08整条记忆装箱及预算适配",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/prompts.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "本版任务模板/版本装配",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.vue",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "可跳过首次资料，无假session/消息",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/settings/about-me.vue",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03"
+      ],
+      "purpose": "折叠资料维护只操作目标，无关联选择/影响范围裁决UI",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "验收campaign跨profile共用host持久预算门",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/shared/eventa/aimy-acceptance.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "验收预算窄桥契约",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/bridges/acceptance-budget.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02"
+      ],
+      "purpose": "真实发送前共用campaign预算端口",
+      "kind": "runtime",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "INT-01"
+      ],
+      "purpose": "实际移植来源与许可通知",
+      "kind": "notice",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "licenses/AionsHome-MIT.txt",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "INT-01"
+      ],
+      "purpose": "完整原MIT通知，不只写MIT字样",
+      "kind": "notice",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "licenses/Ryza-MIT.txt",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "INT-01"
+      ],
+      "purpose": "完整原MIT通知，不包含官方角色资源",
+      "kind": "notice",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/database/repos/memory.repo.browser.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-01",
+        "INT-01"
+      ],
+      "purpose": "真实IDB同store/事务abort/幂等/lease",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/source-policy.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "SRC-01",
+        "INT-01"
+      ],
+      "purpose": "来源白名单/版本；真实源删除与提取阻断区分，ENG-X09同源独立事实保留",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/fact-policy.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-01",
+        "INT-01"
+      ],
+      "purpose": "新旧/例外/计划；共享source不等于dependsOnFactIds",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/recall-policy.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03",
+        "INT-01"
+      ],
+      "purpose": "无关空/日期非法/同日异主题/固定32记录10query",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/extraction.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02",
+        "INT-01"
+      ],
+      "purpose": "挂起模型/切路线/旧结果与候选拒绝",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/budget.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02",
+        "INT-01"
+      ],
+      "purpose": "unknown费用/取消/预算端口无绕过",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/source-journal.browser.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "SRC-01",
+        "MEM-01",
+        "INT-01"
+      ],
+      "purpose": "消息已落盘未入队/未ack的崩溃恢复",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/projection.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03",
+        "INT-01"
+      ],
+      "purpose": "两协议/guard；移除F1不重放旧原文，同源独立F2可安全召回",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/model-policy.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02",
+        "INT-01"
+      ],
+      "purpose": "跟随/覆盖快照，不改聊天模型",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/memory/mutations.browser.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03",
+        "INT-01"
+      ],
+      "purpose": "ENG-X09自动依赖清理、独立事实保留、partial/重启/迟到job不复活",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/step-user-profile.browser.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03",
+        "INT-01"
+      ],
+      "purpose": "全跳过、保存失败、owner ready/切scope",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/settings/about-me.browser.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-03",
+        "INT-01"
+      ],
+      "purpose": "折叠维护/回执/模型错误；无用户关联集合输入，失败不假成功",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/aimy/acceptance-budget.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "MEM-02",
+        "INT-01"
+      ],
+      "purpose": "共享campaign独占锁/重启/原子回执/预算不重置",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/memory-restart.electron-smoke.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "INT-01"
+      ],
+      "purpose": "独立tsx显式Electron新PID验收，必须隔离profile和构建路径；不被Vitest默认收集",
+      "kind": "integration-script",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/llm-service.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "9d011314fbefd5b6c528a5b96bd81b39076d61369a65e425cb251ccada5217e6",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-completions.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "f0f0da4ce8a5353346baa346ff1ac77ffa90bd58b21892a8276a7142433b6cf7",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/responses.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "251f2a45f192e100f3773dfac255722046c6ae0b8b62e1c57a9e81acc1fcb70e",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/database/repos/chat-sessions.repo.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "bbfcc2c0e0b756ffed5cd64c02fa0a866a25266431c07ae1fe5403fcf1912df2",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/providers/config.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LOCAL-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "ec4f926f9dc72204fab971dfd079d136c649f9c28ac88a6caef0882541ec46b2",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat/session-store-lifecycle.browser.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "SRC-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "0c88ae333db4a6d878b0d81dc195a089e703abc6886d6b8edc0b0aea09d7bd2d",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/settings/audio-device.browser.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "ce24b41fea9efde8b03fd47b6be138d0a2ddee94a9712defb139fbff2b2e159d",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/services/electron/media-permissions.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "7b39f1bcf413eee89e81365d7785555a7d2548d6f6138e9ddba6581160d16a21",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/libs/bootkit/lifecycle.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "LIFE-01",
+        "INT-01"
+      ],
+      "purpose": "受影响已有定向回归",
+      "kind": "test",
+      "source_sha256": "1f7ad28be737d2e5d0ed0836a530b27b5fe09cbabee7cf80271d73591c8f551e",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/editor/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "181a7d99f47bd3d1d2cad791b03ee7cc5a39beb01f54c8499bce79a4de2694b9",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/about/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "d18e07a7ba30047f8dd0253a5922e4240b3ba499ddb6a5cc4a99287ce75e315c",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/onboarding/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "835bebb9f13c725594919aaaa72882688f0957e9de3378e53259706aa4f91e8b",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/spotlight/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "b8b94c729ac126930204f44f94958b4c26121da13f6e593c579cbb9877ce6b22",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/dashboard/index.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "b07988820d6f74880a1cb262f4d8f8c46b464da86a1ba21976d60712fc9bd7ed",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "41ad8a12294fcfe5cefff6177dcce52d7d239da0e545392a1748d1698f61be55",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/i18n/src/locales/zh-Hans/tamagotchi/electron/tray.yaml",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "1f954d238119b0042e04b9c7006ea67fefd77f32d607a4e72b5dce63ecf041c1",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/i18n/src/locales/en/tamagotchi/electron/tray.yaml",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "BASE-01"
+      ],
+      "purpose": "仅实际用户可见品牌/标题；配置查找兼容和上游声明保留；gated窗口不因此启用",
+      "kind": "runtime",
+      "source_sha256": "d97793d4c11bc7469cd0c265fbcdbdff29a16119c4d350b1814de75b1cfe9b7b",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/dialogs/onboarding/onboarding.browser.test.ts",
+      "state": "existing",
+      "exists": true,
+      "task_ids": [
+        "MEM-03",
+        "INT-01"
+      ],
+      "purpose": "完整流程前后step顺序/全局skip/默认空兼容",
+      "kind": "test",
+      "source_sha256": "c75d1ebfbf8c7781461e20d5b6ac01082643c171650c0206cd782c82bdf6ab5e",
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/run-memory-acceptance.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "INT-01",
+        "EXP-01"
+      ],
+      "purpose": "两臂/profile/共同campaign入口；默认离线、评测阶段与真实调用资格门",
+      "kind": "integration-script",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/airi-baseline-adapter.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "INT-01",
+        "EXP-01"
+      ],
+      "purpose": "原AIRI fetch/usage接同预算guard，保持原记忆行为",
+      "kind": "integration-script",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    },
+    {
+      "path": "apps/stage-tamagotchi/scripts/acceptance/acceptance-budget-adapter.test.ts",
+      "state": "proposed_new",
+      "exists": false,
+      "task_ids": [
+        "INT-01",
+        "EXP-01"
+      ],
+      "purpose": "合成两臂HTTP attempts输出上限/账本共用/guard等待后失效",
+      "kind": "test",
+      "source_sha256": null,
+      "implementation_status": "not_started"
+    }
+  ],
+  "conditional_existing": [],
+  "ui_and_consumer_paths_pending": null,
+  "version": "first-increment-review-v1",
+  "product_implementation_authorized": false,
+  "exclusions": [
+    "package names / IPC compatibility / storage base renaming",
+    "old Aimy runtime",
+    "lockfile/dependency upgrade",
+    "external candidate service/asset import",
+    "all unlisted files require bounded reason and manifest update first"
+  ],
+  "review_note": "old audit is an input snapshot; this matrix is the consolidated first-batch upper boundary, not all files must change",
+  "handoff_revision": 2,
+  "revision_reason": "question 6 withdrawn by human correction; automatic selective dependency cleanup in existing planned modules"
+}

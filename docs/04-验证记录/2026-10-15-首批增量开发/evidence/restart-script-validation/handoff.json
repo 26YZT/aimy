@@ -1,0 +1,49 @@
+{
+  "status": "READY_FOR_ROOT_RUNTIME_RUN",
+  "writeOwnership": "released",
+  "productFiles": [
+    "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/memory-restart.electron-smoke.ts"
+  ],
+  "sha256": "1f47c101df33f2bdd959cbd814f335b7dec22497bcc60f321da36823b196cd1b",
+  "cliCwd": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi",
+  "cli": "pnpm exec tsx scripts/acceptance/memory-restart.electron-smoke.ts --entry /Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/out/main/index.js --profile /tmp/aimy-first-implementation-20261015/FINAL_SYNTHETIC_PROFILE --campaign-config /tmp/aimy-first-implementation-20261015/synthetic-campaign.json --output /tmp/aimy-first-implementation-20261015/FINAL_RESTART_EVIDENCE",
+  "optionalPreflightFlag": "--check-only",
+  "markerFilename": ".aimy-synthetic-profile.json",
+  "marker": {
+    "schemaVersion": 1,
+    "purpose": "aimy-first-increment-offline",
+    "createdByTask": "2026-10-15-first-increment",
+    "realCredentials": false
+  },
+  "constraints": [
+    "All four path arguments are explicit and absolute. Entry is a built index.js/mjs/cjs inside this app out/main.",
+    "Profile, ledger and output are descendants of the campaign config parent. Output is new or empty and is disjoint from profile and ledger.",
+    "Marker has exactly the four agreed fields. Default app data, live profile lock, unsafe channel hostname/TLS and nonzero/non-synthetic price are rejected.",
+    "Stored chat and memory model route must be openai-compatible + synthetic-memory on explicit literal loopback HTTP port; no query, userinfo or hash.",
+    "Profile contains nonempty ready memory with pendingJobCount zero. Script only reads Pinia projection, not DOM navigation or mutation.",
+    "Two independent Electron PIDs use the same profile. PID and loopback listener ownership checked via CDP and existing macOS lsof.",
+    "Normal SIGINT and existing app shutdown handshake. Timeout forces only the owned process group and reports FAIL.",
+    "Proxy explicitly disables Chromium localhost bypass, forwards only the dedicated channel port, blocks all other browser requests. Metadata list requests are separate from inference attempts.",
+    "Generated inference attempts or changed ledger records cause FAIL. Child logs are byte counts/SHA only; proxy evidence never includes headers, bodies, query or userinfo."
+  ],
+  "checks": {
+    "preflightCasesPassed": 11,
+    "preflightCasesTotal": 11,
+    "preflightFileTreeUnchanged": true,
+    "postPatchValidPreflight": "PREFLIGHT_OK",
+    "scopedEslintExit": 0,
+    "targetedStrictTscExit": 0,
+    "electronLaunched": false,
+    "modelCalls": 0
+  },
+  "evidence": [
+    "preflight-results.json",
+    "eslint.log",
+    "typecheck.log"
+  ],
+  "runtimeOutputs": [
+    "memory-restart-report.json",
+    "events.sanitized.jsonl"
+  ],
+  "remaining": "Root rebuilds the app, creates the final populated settled synthetic profile, and runs actual two-process acceptance. This handoff does not claim runtime PASS."
+}

@@ -1,0 +1,56 @@
+{
+  "mode": "offline-fixture",
+  "generatedAt": "2026-10-16T03:46:32.998Z",
+  "provenance": [
+    {
+      "entry": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/driver-airi.ts",
+      "sha256": "535fb3d9f1c259a6e1ff04a10908069419af0b8d01ccaf35ff595aa724b0ac23",
+      "output": "/tmp/aimy-closure-20261016/v2/driver/airi.bootstrap.ts",
+      "outputSha256": "45a6f5c1961b6cf9226a1405fb0809456757c494b594953a47d1eed9bdd68e5f"
+    },
+    {
+      "entry": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/driver-aimy.ts",
+      "sha256": "5a4997ebae1006ad7c8ec941bcee8cf907fccaf35244af30582b5980c83f5389",
+      "output": "/tmp/aimy-closure-20261016/v2/driver/aimy.bootstrap.ts",
+      "outputSha256": "e8265dd94ed7f0508a174487d65b18d613b657c17cb5be36bab6f71c6baf4951"
+    },
+    {
+      "entry": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/offline-host.ts",
+      "sha256": "cb4dc655170c8174aaf0e7f1074df93f3a80ba8f9a248826de2b3da069cacc39",
+      "output": "/tmp/aimy-closure-20261016/v2/host/offline-host.mjs",
+      "outputSha256": "ebeb71199ae1dcad009e32cdafc1b269ad54c19b8045124ae292a6c754e20664"
+    }
+  ],
+  "sharedInputs": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/driver-common.ts",
+      "sha256": "e7f99b0f14025164323511dc1dee880d4683639462f39d90e6092f2483107057"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/offline-events.ts",
+      "sha256": "81ff928690ca1588102d825699db87a579f4832538e6a25e493eb14b2f2b071d"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/offline-network.ts",
+      "sha256": "1c4943c159da63e52e9ef6c05a0deb4145975884ae027824b482d6295205e103"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/baseline-renderer-fetch.ts",
+      "sha256": "8f6daf71417b2f5aec6ab1eb59562ad604335b6f81b8a62aab37d17b0eef33b8"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/transport-events.ts",
+      "sha256": "1e4a23e8cfbf6d078cf3d161c82d8766f7b19948b27d3d73924f1f0e132ea3a3"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/baseline-transport.ts",
+      "sha256": "994d9dd361de795ed087f50feec58e8de3cee0b493805819cd8007244a2fff21"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi/scripts/acceptance/airi-baseline-adapter.ts",
+      "sha256": "a58293620d99b98087057bba32c8dcb5a052145960f2f8bc3f8199e94f0b9b64"
+    }
+  ],
+  "externalProductModules": true,
+  "noProductionEntryModified": true
+}

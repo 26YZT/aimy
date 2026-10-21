@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-16",
+  "task": "DIAG-AGG",
+  "status": "implemented and handed back",
+  "entrypoint": "@proj-airi/stage-ui/services/memory-acceptance-diagnostics",
+  "signature": "readMemoryAcceptanceDiagnostics(owner: Pick<ReturnType<typeof useMemoryStore>, scope | diagnosticsSummary>, request?: MemoryReadRequest): Promise<MemoryAcceptanceDiagnostics>",
+  "usage": "Pass the live existing Pinia store, not a copied scope projection. The helper creates no store or owner.",
+  "output": {
+    "consistency": "independent-snapshots",
+    "scope": "MemoryScope | null, selected by the existing owner",
+    "startedAt": "host wall-clock milliseconds",
+    "completedAt": "host wall-clock milliseconds",
+    "memory": "DiagnosticsPart<MemoryDiagnosticsSummary>",
+    "budget": "DiagnosticsPart<AcceptanceBudgetStatus>",
+    "resources": "DiagnosticsPart<Pick<ResourceSnapshot, revision | appEpoch | active | microphone | screen>>",
+    "part_shapes": [
+      "{status: available, observedAt, snapshot}",
+      "{status: not-configured, observedAt}",
+      "{status: unavailable, observedAt, code}"
+    ]
+  },
+  "guarantees": [
+    "Only existing memory.diagnosticsSummary, budget.status and resource.state are read; no model call, budget reservation, grant change or new persistence.",
+    "No configured budget port yields not-configured without fabricated zero monetary values.",
+    "Each part retains its own observation time. Resource reason text is omitted and the aggregate is never called atomic.",
+    "Valibot output whitelists remove extra evidence, prompts, provider configuration and raw Error objects.",
+    "Operation IDs are at most 128 characters; source/scope IDs at most 256 and have no control characters. Counters are finite safe nonnegative integers.",
+    "Memory operation/source lists are capped at 20 each with explicit truncation flags.",
+    "Expected scope is validated before reads. A temporary synchronous watcher catches transitions including away-and-back; scope is rechecked after awaits and the watcher stops in finally.",
+    "Late scope mismatch rejects the entire read. Other failures become safe per-part unavailable codes.",
+    "Existing owner RPC deadlines apply; this reader adds no polling or product state."
+  ],
+  "verification": [
+    {
+      "command": "pnpm -F @proj-airi/stage-ui exec vitest run --project node src/services/memory-acceptance-diagnostics.test.ts",
+      "exit_code": 0,
+      "tests_passed": 9,
+      "log": "/tmp/aimy-closure-20261016/diagnostics/tests-final.log"
+    },
+    {
+      "command": "pnpm -F @proj-airi/stage-ui exec vue-tsc --noEmit",
+      "exit_code": 0,
+      "log": "/tmp/aimy-closure-20261016/diagnostics/typecheck.log"
+    },
+    {
+      "command": "pnpm exec eslint packages/stage-ui/src/services/memory-acceptance-diagnostics.ts packages/stage-ui/src/services/memory-acceptance-diagnostics.test.ts",
+      "exit_code": 0,
+      "log": "/tmp/aimy-closure-20261016/diagnostics/lint-final.log"
+    }
+  ],
+  "coverage": [
+    "unconfigured budget/resource",
+    "safe field whitelist and truncation",
+    "async scope switch",
+    "scope switch away and back",
+    "mismatched owner response",
+    "raw native error sanitization",
+    "invalid monetary counters and oversized IDs",
+    "foreign expected scope rejected before calls",
+    "independent observations during resource changes"
+  ],
+  "boundaries": {
+    "product_files": [
+      "packages/stage-ui/src/services/memory-acceptance-diagnostics.ts",
+      "packages/stage-ui/src/services/memory-acceptance-diagnostics.test.ts"
+    ],
+    "memory_store_modified": false,
+    "clock_modified": false,
+    "core_modified": false,
+    "budget_or_gate_modified": false,
+    "new_dependency": false,
+    "new_database_or_ui_or_http": false,
+    "real_data_read": false,
+    "real_model_calls": 0,
+    "git_mutations": false
+  },
+  "source_sha256": {
+    "packages/stage-ui/src/services/memory-acceptance-diagnostics.ts": "45d525b32993afdb65cb136fee73a6067e0d1f1965b4abe421d4b31643e278b4",
+    "packages/stage-ui/src/services/memory-acceptance-diagnostics.test.ts": "967f7c6f669b2fd497360de457a4ccbd04865e6654b14d8c780356232e1ac34e"
+  },
+  "limits": [
+    "Tests use real Pinia/Vue scope reactivity and the real ResourcePolicy class, with controlled owner-read and budget ports. They do not claim a new real Electron or paid-model acceptance run.",
+    "Root owns final driver integration and whole-workspace verification."
+  ]
+}

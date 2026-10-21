@@ -10,6 +10,8 @@ import { computed, ref, shallowRef, watch } from 'vue'
 
 import * as v from 'valibot'
 
+import { assertCloudReplicaAllowed, isCloudReplicaEnabled, onLocalDataPolicyChange } from '../../services/local-data-policy'
+
 const RECONNECT_BASE_MS = 1000
 const RECONNECT_MAX_MS = 30_000
 const RECONNECT_RETRIES = -1
@@ -195,7 +197,7 @@ export function createChatWsUrlRef(
   serverUrl: string,
 ): ComputedRef<string | undefined> {
   return computed(() => {
-    if (!enabled.value)
+    if (!enabled.value || !isCloudReplicaEnabled())
       return undefined
     const token = getToken()
     if (!token)
@@ -296,6 +298,10 @@ export function createChatWsClient(options: CreateChatWsClientOptions): ChatWsCl
       ),
     },
     onConnected(rawWs) {
+      if (!isCloudReplicaEnabled()) {
+        rawWs.close()
+        return
+      }
       activeSocket = rawWs
       const created = createWsContext(rawWs)
       context.value = created.context
@@ -395,13 +401,22 @@ export function createChatWsClient(options: CreateChatWsClientOptions): ChatWsCl
     ws.close()
   })
 
+  const stopPolicyListener = onLocalDataPolicyChange(() => {
+    enabled.value = false
+    activeSocket = undefined
+    ws.close()
+    disposeContext()
+  })
+
   function getContext(): WsEventContext {
+    assertCloudReplicaAllowed()
     if (!context.value || !authenticated.value)
       throw new Error('chat-ws not authenticated')
     return context.value
   }
 
   function getAuthenticationContext(): WsEventContext {
+    assertCloudReplicaAllowed()
     if (!context.value)
       throw new Error('chat-ws not connected')
     return context.value
@@ -418,6 +433,8 @@ export function createChatWsClient(options: CreateChatWsClientOptions): ChatWsCl
   return {
     status: () => mapStatus(ws.status.value, enabled.value, authenticated.value),
     connect() {
+      if (!isCloudReplicaEnabled())
+        return
       if (enabled.value && ws.status.value === 'OPEN')
         return
       enabled.value = true
@@ -444,9 +461,10 @@ export function createChatWsClient(options: CreateChatWsClientOptions): ChatWsCl
       disposeContext()
       stopStatusWatch()
       stopTokenWatch()
+      stopPolicyListener()
     },
-    sendMessages: req => invokeSendMessages(req),
-    pullMessages: req => invokePullMessages(req),
+    sendMessages: async req => invokeSendMessages(req),
+    pullMessages: async req => invokePullMessages(req),
     onNewMessages(handler) {
       newMessagesHandlers.add(handler)
       return () => {

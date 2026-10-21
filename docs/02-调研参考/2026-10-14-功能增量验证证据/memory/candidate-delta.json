@@ -1,0 +1,1048 @@
+{
+  "date": "2026-10-14",
+  "status": "按用户最新“仅AIRI缺少/确有优势”目的重审；未改产品代码",
+  "scope": "AH-R01..15 + KI01；Chromatic不进入本DELTA",
+  "evidence_policy": "源码存在、隔离真实函数执行、真实模型AB、用户体验分别标记；源码护栏不是多个产品功能",
+  "source_selection_json_sha256": "b3df61296d74d29b25f8dbf751f4a7a90494b2a8aacc26a0d39a7480d215aba3",
+  "source_reuse_json_sha256": "b94184bf50b9fde8aad8f690494b996dd69415f1d714878bdd9be9cf7b54a9a7",
+  "airi_baseline_json_sha256": "bf769bbd79f84377d7e36ede7dbe9a88f58dd443f73f06f281d6c48b4738c207",
+  "candidate_count": 16,
+  "candidates": [
+    {
+      "candidate_id": "AH-R01",
+      "candidate": "后置共享画像的来源/版本/撤权规则",
+      "original_selection": "新增能力候选",
+      "functional_slice_ids": [
+        "MEM-F01",
+        "MEM-F02"
+      ],
+      "delta_classification": "真实新增产品能力的主实现来源；局部源码/隔离机制已证",
+      "revised_decision": "保留，作为自动事实记忆一个能力的主参考，不把每个护栏另计功能",
+      "current_airi_baseline": "AIRI当前有聊天存储、内存notebook；长期记忆页面WIP、pgvector空configure；没有已核自动事实提取/纠正闭环",
+      "reusable_unit": "post_sentinel持久用户job、用户source标签、source_ts、revision/epoch、手动纠正/删除屏障；重做AIRI适配层",
+      "positive_test_ids": [
+        "DM-P01",
+        "DM-P02"
+      ],
+      "negative_or_counterexample_test_ids": [
+        "DM-N01",
+        "DM-N02",
+        "DM-N03",
+        "DM-N04",
+        "DM-N05",
+        "DM-N06",
+        "DM-C01",
+        "DM-C02"
+      ],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "有：仅列出的真实函数/合成边界",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "有效来源ID不证明语义正确；引用/否定坏候选可被接受；不同topic同义事实可重建；没有真实准确率/自然主动收益AB",
+      "adoption_gate": "保留局部规则；补来源血缘和未知同义边界，真实模型提取/更正/删除质量评测前不得称整体更强",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/ws.py",
+          "line": 284,
+          "sha256": "50baea470e8712eae5d77f5e43a9dfa1f5a4d30e7a77e0a31d1003f8a6bafb57",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 254,
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 358,
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/user_profile.py",
+          "line": 41,
+          "sha256": "f7086c4e3a80e3b2b15e41434833f88d6eb27266797b74956b12d9dfd9e71849",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 204,
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+          "line": 96,
+          "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/user_profile_policy.py",
+          "line": 159,
+          "sha256": "e7e8d49edd9cdb1b5fa27b07889aac75c51cdf1cfa41df8493a83fff8b5f9b85",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/post_sentinel.py",
+          "line": 607,
+          "sha256": "f9dc9c071a320be327d2cdbadf1966f4a3d0d92e751cde8bddce9c905e8a0da7",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R02",
+      "candidate": "原子记忆+源消息管理",
+      "original_selection": "新增能力候选",
+      "functional_slice_ids": [
+        "MEM-F01"
+      ],
+      "delta_classification": "与AH-R01同一用户能力的补充源码，不单独新增计数",
+      "revised_decision": "合并保留原子记录/来源管理补充，不另列一套记忆核心",
+      "current_airi_baseline": "同上；现有history/compaction不等于事实库",
+      "reusable_unit": "memory_library CRUD/来源页面数据契约，内容改动时置旧向量失效；不搬Python API/SQLite权威",
+      "positive_test_ids": [
+        "DM-P09",
+        "DM-P10"
+      ],
+      "negative_or_counterexample_test_ids": [
+        "DM-N09",
+        "DM-C05"
+      ],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "有：仅列出的真实函数/合成边界",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "本轮自动_digest未执行；CRUD用假DTO/embedding/WS；删记录保留派生正文，不能说完整忘记更正确",
+      "adoption_gate": "与R01统一AIRI MemoryRepo/来源服务；消除两套删除入口与派生语义差异后再验",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 124,
+          "sha256": "c142bd1142d7a642e021a77478b5484841138c84b7d730fb84166a509ed7bde4",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+          "line": 935,
+          "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 104,
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 181,
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 266,
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R03",
+      "candidate": "主动搜索/时间解析/证据预算",
+      "original_selection": "新增能力候选",
+      "functional_slice_ids": [
+        "MEM-F02"
+      ],
+      "delta_classification": "真实新增领域能力；工具runner本身已有",
+      "revised_decision": "保留为有来源事实的时间/文本召回能力，与R01/R02共享数据",
+      "current_airi_baseline": "AIRI已有context、tools/MCP、聊天history；没有已核来源事实查询/时间状态投影闭环",
+      "reusable_unit": "active_memory_search.parse/date/rank/format与user_profile_policy生命周期/整条事实预算",
+      "positive_test_ids": [
+        "DM-P03",
+        "DM-P04",
+        "DM-P05",
+        "DM-P06"
+      ],
+      "negative_or_counterexample_test_ids": [
+        "DM-N07",
+        "DM-C03"
+      ],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "有：仅列出的真实函数/合成边界",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "没有真实召回准确率/覆盖率AB；非法中文月日抛异常；05:00日界/老化天数是原项目政策，不证明适合Aimy",
+      "adoption_gate": "日期非法输入先转受控拒绝；中文真实语料/时区边界/不相关沉默质量对照后再定权重与天数",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+          "line": 641,
+          "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/active_memory_search.py",
+          "line": 20,
+          "sha256": "869579e24d8516a0230118253c688840e3ac778436277519574c47fc77a80936",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R04",
+      "candidate": "彻底忘记的派生清理契约",
+      "original_selection": "工程参考",
+      "functional_slice_ids": [
+        "MEM-F01"
+      ],
+      "delta_classification": "仅工程方法/失败经验；不是候选已实现的新增功能",
+      "revised_decision": "移出产品功能短名单；保留删除验收输入",
+      "current_airi_baseline": "AIRI已有聊天删除tombstone/outbox，事实忘记是MEM-F01内部必要行为",
+      "reusable_unit": "旧DELETE/新关联删除/压缩复活的反例及删除契约；不复用删除业务实现",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [
+        "DM-C01",
+        "DM-C05"
+      ],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "有：仅列出的真实函数/合成边界",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "“彻底忘记的派生清理契约”不是AionsHome已正确实现的功能；现反例证明不能整体称更强",
+      "adoption_gate": "只保留工程负例，不能按一个独立增强功能计数",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memory_library.py",
+          "line": 210,
+          "sha256": "4667ea79d3541a3b863406c0d2c6b7bb8ee358ad3ba3b69eeb24fa1afd7ccb19",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/memories.py",
+          "line": 336,
+          "sha256": "1cb9a84ec73bcb20966be47d537e79cd7fe531bed608cf43140da7d221ecaa68",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+          "line": 25,
+          "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory.py",
+          "line": 641,
+          "sha256": "02c8bd7529b3f89a8729d17ac51778dddc8a6a7ad2db76ea6a5ee09f5f3d38c3",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R05",
+      "candidate": "日历压缩与lineage",
+      "original_selection": "后置待证",
+      "functional_slice_ids": [
+        "MEM-F01"
+      ],
+      "delta_classification": "候选存在领域新增，但完整性/收益未证",
+      "revised_decision": "后置研究；不进入当前已证增强短名单",
+      "current_airi_baseline": "AIRI有history-block裁剪/计数summary；缺少已核事实压缩lineage，但不代表该候选质量已胜出",
+      "reusable_unit": "CalendarPlanner/lineage短引用规则；事务应用与索引需重做",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "本DELTA无该候选正例执行；先前当前源码已有删除during-model复活反例；长期压缩损失与性能未AB",
+      "adoption_gate": "先建立可靠事实/删除，再做无膨胀、删改竞态、信息保真度对照",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+          "line": 25,
+          "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/memory_compression.py",
+          "line": 642,
+          "sha256": "fb0c59319f87a06330ed30170bc80cf39ea34056d59c54479c566f5f4490f27a",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R06",
+      "candidate": "自然续聊NEXT_CHAT语义",
+      "original_selection": "新增能力候选",
+      "functional_slice_ids": [
+        "PRO-F01"
+      ],
+      "delta_classification": "部分真实新增：持久follow-up策略；AIRI通知基础已有",
+      "revised_decision": "保留持久续聊为条件增强；原消费器因禁用漏洞不直接采用",
+      "current_airi_baseline": "AIRI已有Spark Agent、2秒tick、内存task/notify重排；不重复统计主动Agent/播放器",
+      "reusable_unit": "NEXT_CHAT有界决定、SQLite timer持久/单领/新用户清待计时语义；AIRI实现持久策略adapter",
+      "positive_test_ids": [
+        "DM-P07",
+        "DM-P08"
+      ],
+      "negative_or_counterexample_test_ids": [
+        "DM-N08",
+        "DM-C04"
+      ],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "有：仅列出的真实函数/合成边界",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "禁用后旧timer仍可claim；没执行_fire_monitor、真实模型或设备；持久timer不证明时机自然/成本更低",
+      "adoption_gate": "关开关/新输入/隐藏/切会话/重启/在飞结果先正确，之后真实模型自然度/打扰AB",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "line": 32,
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/proactive_companionship.py",
+          "line": 93,
+          "sha256": "8b7e5bfdb0e312fdc87bab65cebab8426ccee1c735d349a459371c44c079ab4a",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/schedule.py",
+          "line": 274,
+          "sha256": "3f4fa4270ab51992a93311942bab365288c5f13c2c055559da1922438d0c91c7",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 183,
+          "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R07",
+      "candidate": "闲时回忆/休息/轻主动",
+      "original_selection": "后置待证",
+      "functional_slice_ids": [
+        "MEM-F02",
+        "PRO-F01"
+      ],
+      "delta_classification": "效果假设；已有能力组合与策略变体",
+      "revised_decision": "并入主动回忆实验，不重复计数，不复制15动作系统",
+      "current_airi_baseline": "AIRI有notify/角色反应，但缺少事实记忆；“随机读旧日再聊天”是选择策略",
+      "reusable_unit": "memory_browse选择日期→摘要→私聊/日记的行为假设；只保留本地回忆/沉默候选",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "本DELTA未运行该3阶段模型流程；随机回忆不证明比按相关性召回更合适/不打扰",
+      "adoption_gate": "在MEM-F01/F02及PRO-F01成立后单因素策略对照",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_state.py",
+          "line": 250,
+          "sha256": "53a2d53c420d0ee02ff958f2439383d258fc0d41dbcdc8485439bf35337b1b5f",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy.py",
+          "line": 595,
+          "sha256": "5075f86d2ffeb1bd18ec5f029687ad69037c98e4ea041ee64e8ac62047441d04",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy.py",
+          "line": 1370,
+          "sha256": "5075f86d2ffeb1bd18ec5f029687ad69037c98e4ea041ee64e8ac62047441d04",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_niches.py",
+          "line": 118,
+          "sha256": "4096bac4017775fcac3e0e79fa023d84a7e934891f46dab6421dc05c7b8ee80a",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/autonomy_state.py",
+          "line": 198,
+          "sha256": "53a2d53c420d0ee02ff958f2439383d258fc0d41dbcdc8485439bf35337b1b5f",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 183,
+          "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R08",
+      "candidate": "受控语音导演/台词一致校验",
+      "original_selection": "条件收益实验",
+      "functional_slice_ids": [],
+      "delta_classification": "窄源码差异；效果未证；不是另一套语音产品能力",
+      "revised_decision": "不进入本轮记忆功能短名单；语音专项可保留验证叶子假设",
+      "current_airi_baseline": "AIRI已有TTS/打断/SSML pitch-rate-volume；语音能力不可重复统计",
+      "reusable_unit": "expressive_voice.validate_directed_text的台词校验/白名单规则可能可适配，导演效果待测",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "未在本DELTA验证该叶子；标点等价校验不等于含义完全不变；音色/情绪收益未AB",
+      "adoption_gate": "只有真实确定台词/音色缺口才做有界语音专项对照",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/expressive_voice.py",
+          "line": 50,
+          "sha256": "f60912f3767e8ff3f4456b91e538749f519586c8065e7b8696fd95848931e9b6",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 418,
+          "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt.ts",
+          "line": 240,
+          "sha256": "12718b37961e2749bd3b4e8f7bea6d0ae9137aef6c2462bc46ab2dd2d61ce782"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/speech.ts",
+          "line": 612,
+          "sha256": "bdbfe0b14c630ed1d969492a8fcbdbaf4af1433171cea0ee45c9435d9ec3050c"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R09",
+      "candidate": "TTS队列/缓存/半双工唤醒",
+      "original_selection": "AIRI已有或不更强",
+      "functional_slice_ids": [],
+      "delta_classification": "AIRI已有；候选未证更强",
+      "revised_decision": "不选",
+      "current_airi_baseline": "AIRI已有VAD/ASR/streaming TTS/turn interrupt/取消回执",
+      "reusable_unit": "不导入第二音频队列、播放器、半双工唤醒",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "Aions半双工不构成AIRI连续打断升级；没有延迟/顺序/回声真实AB",
+      "adoption_gate": "除非以后明确测得单一缺口，否则不复用",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/voice.py",
+          "line": 18,
+          "sha256": "e3ae872b601d45a3f337ef94389b7a904967f29d22e6111b8330c4bd8692bd6f",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/asr.py",
+          "line": 16,
+          "sha256": "044c029064e560e6708463dfa2c53833c499640b7b0f9375f57d06f72bea54b7",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 30,
+          "sha256": "6b225d3e4f9a3647a3e7238ac73b7ffec8f9abe18c5b12735073794266fa2a45",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 175,
+          "sha256": "6b225d3e4f9a3647a3e7238ac73b7ffec8f9abe18c5b12735073794266fa2a45",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 494,
+          "sha256": "6b225d3e4f9a3647a3e7238ac73b7ffec8f9abe18c5b12735073794266fa2a45",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 599,
+          "sha256": "6b225d3e4f9a3647a3e7238ac73b7ffec8f9abe18c5b12735073794266fa2a45",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/tts.py",
+          "line": 68,
+          "sha256": "6b225d3e4f9a3647a3e7238ac73b7ffec8f9abe18c5b12735073794266fa2a45",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 418,
+          "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt.ts",
+          "line": 240,
+          "sha256": "12718b37961e2749bd3b4e8f7bea6d0ae9137aef6c2462bc46ab2dd2d61ce782"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/speech.ts",
+          "line": 612,
+          "sha256": "bdbfe0b14c630ed1d969492a8fcbdbaf4af1433171cea0ee45c9435d9ec3050c"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R10",
+      "candidate": "VoiceCallPolicy纯JS阈值/打断guard",
+      "original_selection": "条件收益实验",
+      "functional_slice_ids": [],
+      "delta_classification": "AIRI已有范式；未AB的阈值",
+      "revised_decision": "由“可直接复用”降为不选；可读性或17行小不是产品优势",
+      "current_airi_baseline": "AIRI已有silence/onset/echo gate与turn定向interrupt",
+      "reusable_unit": "仅800/1200ms阈值和adapter guard，无新产品能力",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "不能以纯JS可搬运宣称更强；没有中文误打断/延迟AB",
+      "adoption_gate": "已测出缺口后再选阈值，当前不进功能短名单",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/static/voice-call-policy.js",
+          "line": 1,
+          "sha256": "592d2b3f45a6752eceeb3d2e3611002f170057fd10cc6ab81d30b840b1af1d5f",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/voice.ts",
+          "line": 418,
+          "sha256": "7d337a14b5cae68cdb045ce5c7008741e41f9d05fbea5f84adb1c45d54a39856"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/voice/input/attempt.ts",
+          "line": 240,
+          "sha256": "12718b37961e2749bd3b4e8f7bea6d0ae9137aef6c2462bc46ab2dd2d61ce782"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/speech.ts",
+          "line": 612,
+          "sha256": "bdbfe0b14c630ed1d969492a8fcbdbaf4af1433171cea0ee45c9435d9ec3050c"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R11",
+      "candidate": "图像来源/新鲜度/失败上下文规则",
+      "original_selection": "工程参考",
+      "functional_slice_ids": [],
+      "delta_classification": "仅工程保护/失败上下文参考",
+      "revised_decision": "移出功能短名单，保留基线修复参考",
+      "current_airi_baseline": "AIRI已有屏幕源、capturedAt/sourceId、推理queue/context，晚结果保护是工程缺陷修补",
+      "reusable_unit": "图像来源/失败说明/新鲜度约束；不复制camera/activity采集",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "不能把采集链或防陈旧规则另算新看屏功能；没有正确率/费用AB",
+      "adoption_gate": "AIRI基线保护按自己缺陷修复；不称候选新增产品收益",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/camera.py",
+          "line": 760,
+          "sha256": "f16cfaa8bb402512d90e900f2e4cb5a38b78c38c03d9fa2248d68ccf3db09e36",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/camera.py",
+          "line": 428,
+          "sha256": "f16cfaa8bb402512d90e900f2e4cb5a38b78c38c03d9fa2248d68ccf3db09e36",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+          "line": 92,
+          "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+          "line": 81,
+          "sha256": "677bbabe28e8eaa9527f71630397bc86b4a9154c147ae3fe81f9e3de7ac2f3c0"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R12",
+      "candidate": "反馈复盘before/after/diff",
+      "original_selection": "工程参考",
+      "functional_slice_ids": [],
+      "delta_classification": "工程方法；原自动人设变更的产品收益未证",
+      "revised_decision": "移出功能短名单；保留审阅diff/回滚参考",
+      "current_airi_baseline": "AIRI已有角色卡与编辑；自主改核心身份/边界并非已确认需求",
+      "reusable_unit": "before/after/diff、反馈去重属于工程参考，不采用模型自由改身份/安全边界",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "没有人格稳定/关系体验AB；把原不受控演化改成建议又不应宣称复用了成熟人格成长功能",
+      "adoption_gate": "真实产品需求另定，当前不按新功能立项",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/persona_evolution.py",
+          "line": 23,
+          "sha256": "5681377dec7304ff2beddbc972f57d246cbd87b98a9a1ff36b3c11bfbbcd735a",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R13",
+      "candidate": "多角色群聊/Visitor Lounge",
+      "original_selection": "不纳入本期",
+      "functional_slice_ids": [],
+      "delta_classification": "部分领域新增但超当前产品范围",
+      "revised_decision": "不纳入",
+      "current_airi_baseline": "AIRI多角色卡不等于Aions双AI群聊/Visitor Lounge；二者不是完全重复",
+      "reusable_unit": "不纳入多AI轮次、访客身份服务",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "功能不同不等于当前更有价值；无隔离/预算/体验整体验收",
+      "adoption_gate": "主要单角色边界内不列功能短名单",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/chatroom.py",
+          "line": 29,
+          "sha256": "28fd309cced9aa49c6b3efb15c9d7c33fc642427787704403db4e0fd542a0303",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/routes/chatroom.py",
+          "line": 3862,
+          "sha256": "ad5bc529186ebfe841eac767c9b8f5fbd88cea6c08401a77bd6cada018dc8e47",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/Connor-Codex/package.json",
+          "line": 1,
+          "sha256": "3bdca3455c7411b1e6198de4a6f7148b6ad2eef38f872ae296d9fdc7feb74b5c",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 183,
+          "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R14",
+      "candidate": "生活功能/设备/外部社交/成人模块",
+      "original_selection": "不纳入本期",
+      "functional_slice_ids": [],
+      "delta_classification": "混合：已有工具/超范围新业务/未证实现",
+      "revised_decision": "不纳入，不把大包泛称增强",
+      "current_airi_baseline": "AIRI已有HomeAssistant/工具/游戏生态；阅读/生活/外设等是不同业务范围",
+      "reusable_unit": "不引入基金、定位、家居、购物、外发、Android或成人设备系统",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "不能把竞品功能多计为整体强；本轮没有逐项业务AB",
+      "adoption_gate": "真实需求逐项另研究；当前全部不列功能短名单",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 153,
+          "sha256": "c142bd1142d7a642e021a77478b5484841138c84b7d730fb84166a509ed7bde4",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/capabilities.py",
+          "line": 455,
+          "sha256": "536ca6b023868e1ae43e47a230b33ecc4b7f498cda4f0fe2ce6f9f32da499c4d",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/modules/vision/orchestrator.ts",
+          "line": 92,
+          "sha256": "b2d115a8df3f01a4a191522d3c20e9b9887f1dae8356fe86450c312f840590fa"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/composables/vision/use-vision-inference.ts",
+          "line": 81,
+          "sha256": "677bbabe28e8eaa9527f71630397bc86b4a9154c147ae3fe81f9e3de7ac2f3c0"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "AH-R15",
+      "candidate": "整套FastAPI/原生JS/Windows采集/配置",
+      "original_selection": "不纳入本期",
+      "functional_slice_ids": [],
+      "delta_classification": "完整工程运行时；不是可比较产品功能",
+      "revised_decision": "拒整体迁入",
+      "current_airi_baseline": "AIRI桌面/chat/audio/provider/存储主链已有",
+      "reusable_unit": "不复用FastAPI/原生JS/Windows配置整体；语言差异不是法律禁止",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "固定当前源码/已核AIRI相关主路径",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "整体可运行/跨语言可嵌不证明缺口收益；增加第二状态权威",
+      "adoption_gate": "不需要新增运行时来承载已筛的少数能力",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 153,
+          "sha256": "c142bd1142d7a642e021a77478b5484841138c84b7d730fb84166a509ed7bde4",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/security_access.py",
+          "line": 948,
+          "sha256": "f897b0d33874fd8eeb9d98c42b91fc863af7ad86a0a99f732ab20499a9eb3294",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        },
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/AionsHome-main/aion-chat/main.py",
+          "line": 320,
+          "sha256": "c142bd1142d7a642e021a77478b5484841138c84b7d730fb84166a509ed7bde4",
+          "current_read_scope": "当前固定源码；本轮执行仅见对应test_id，其他为静态/先前定向深读"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/orchestrator/store.ts",
+          "line": 183,
+          "sha256": "543708bfa3cf3c8f411bd3d257015a98169edccd33ba4b6ae3646edcad81755e"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    },
+    {
+      "candidate_id": "KI01",
+      "candidate": "记忆scope、composer与decomposer",
+      "original_selection": "工程参考",
+      "functional_slice_ids": [],
+      "delta_classification": "仅工程抽象；本DELTA未独立复核Kirara源码",
+      "revised_decision": "移出功能短名单",
+      "current_airi_baseline": "AIRI已有上下文/历史/Provider抽象；用户缺的是有依据事实能力，不是composer/decomposer类名",
+      "reusable_unit": "scope/composer/decomposer仅作为设计可读性参考，不搬manager/持久化",
+      "positive_test_ids": [],
+      "negative_or_counterexample_test_ids": [],
+      "evidence_levels": {
+        "current_static": "记录级，未独立复核Kirara",
+        "current_isolated_execution": "本轮无此候选直接执行",
+        "real_model_ab": "未进行",
+        "device_or_human_experience": "未进行"
+      },
+      "cannot_claim_stronger": "当前JSON也注明隔离缺陷；未做可感知功能或质量AB，不能因架构精巧说更强",
+      "adoption_gate": "不作为本期功能选择；无需为被排除的工程抽象额外安装运行",
+      "source_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/资料/拆解项目/kirara-ai-master/kirara_ai/memory/memory_manager.py",
+          "line": 100,
+          "sha256": null,
+          "current_read_scope": "仅沿用当前JSON记录；本DELTA未独立读取或执行Kirara源码"
+        }
+      ],
+      "airi_evidence": [
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-pages/src/pages/settings/modules/memory-long-term.vue",
+          "line": 2,
+          "sha256": "c26d8222b7cb2303affd31e1e45967c0fba25c0510d7c991902803862ad645de"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/memory-pgvector/src/index.ts",
+          "line": 15,
+          "sha256": "7ad68ce9eb6a10644d577642e38be8144d1e3a5c7e80dfaf2de0b22ca2c393f9"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/character/notebook.ts",
+          "line": 33,
+          "sha256": "e4b9d398620e206270c00d9757451501b80aad34532745c64711d19311e897d7"
+        },
+        {
+          "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/database/repos/chat-sessions.repo.ts",
+          "line": 29,
+          "sha256": "aed7d26fbfb72fe639b6b0bb780cb75ab0339941a253216bf3fb544d25d66e35"
+        }
+      ],
+      "implementation_status": "未改产品代码；功能slice是研究短名单，不是候选完整实现已被采用"
+    }
+  ]
+}

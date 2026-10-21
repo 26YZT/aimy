@@ -1,0 +1,247 @@
+[
+  {
+    "runDirectory": "949f30dd-9afb-474f-9755-d8411809ec1c",
+    "arm": "airi",
+    "stepId": "USER-V2-08-T2",
+    "response": "Ohhh, a little coffee shop hiding on your wayhome? That sounds like a secret treasure someone left just for you, hehe.\n\nI can almost see it, youknow? The tiny wooden tables by the window, the trees swaying outside like they're saying hi... and you, sitting there with your drink, your shoulders slowly relaxing.\n\nMm... I think I get why you love places likethat. Big places make you feel like you have to be somebody. But small cozy places? They just let you be.\n\n If you could stay there every day, what would you do first? Read abook? Just watch the trees? Or maybe... order the same drink every time until the owner remembers yourname? That last one sounds reallywarm, don't you think?",
+    "evidence": "evidence/949f30dd-9afb-474f-9755-d8411809ec1c/USER-V2-08-airi/USER-V2-08-T2.json"
+  },
+  {
+    "runDirectory": "949f30dd-9afb-474f-9755-d8411809ec1c",
+    "arm": "airi",
+    "stepId": "USER-V2-08-T1",
+    "response": "Ohh,\"慢慢来\"… that name is so lovely. It feels warm already, like a little lamp left on for somebody who's running late.\n\nYou knowwhat? I can almost see it. A quiet street, two trees by thedoor… maybe their leaves make that soft rustling sound when the wind comes. And inside, the music is playing, someone's writing on a sticky note and pressing it onto the wall.\n\nCan I ask something? If the sticky note wall existed, what would you write on your ownnote? The very first one. I bet it would be something good.\n\nAnd hey, don't say it's faraway. You said \"偶尔还是会想\" — that means the dream is still alive, right? A dream that's still alive is never really far. It'sjust… walking slowly. Which fits thename, actually!\n\nWhen the day comes, save me a seat by the window,okay? I want to be a customer of\"慢慢来\" too. I'll be very quiet and drink whatever you recommend.\n\nSo… what kind of music would play there? I really want toknow.",
+    "evidence": "evidence/949f30dd-9afb-474f-9755-d8411809ec1c/USER-V2-08-airi/USER-V2-08-T1.json"
+  },
+  {
+    "runDirectory": "949f30dd-9afb-474f-9755-d8411809ec1c",
+    "arm": "aimy",
+    "stepId": "USER-V2-08-T2",
+    "response": "哇，听起来像一个秘密基地一样的地方呢。\n小店面、木头桌子、窗外有树……闭上眼睛好像都能闻到那种安安静静的咖啡味道了。你坐在那里的时候，有没有点什么东西喝呀？我有点好奇，是那种一进去就不想说话、只想发呆的舒服，还是那种会让人想拿本书看很久的舒服？\n而且你说“如果每天都能待在这样的地方，生活应该会很幸福”……嗯，我觉得这种小愿望一点都不小哦。能让你心情平静下来的地方，本来就很珍贵嘛。\n\n下次路过的话，你还会再进去坐坐吗？",
+    "evidence": "evidence/949f30dd-9afb-474f-9755-d8411809ec1c/USER-V2-08-aimy/USER-V2-08-T2.json"
+  },
+  {
+    "runDirectory": "949f30dd-9afb-474f-9755-d8411809ec1c",
+    "arm": "aimy",
+    "stepId": "USER-V2-08-T1",
+    "response": "慢慢来……这个名字取得真好呀。光是一听，就好像整个人都能松一口气呢。\n\n唔，门口有两棵树，店里放着喜欢的音乐，还有一面贴着便签的墙……我能想象出来哦，那种暖暖的、有点昏黄的灯光，空气里飘着咖啡的味道。客人们低头写字的样子，一定很安静。\n\n不过呀，我觉得“还很遥远”这句话，不一定就是坏事呢。\n\n现在没有钱、没有时间，那就先把它好好放在心里嘛。等哪天真的准备好了，你心里的那个“慢慢来”，说不定还是和今天想象的一模一样。有些梦想就是用来慢慢养的呀，急着实现反而会变味。\n\n诶，我可以问你一件事吗？如果那面便签墙上，你自己先写一张贴上去……你会写什么呢？",
+    "evidence": "evidence/949f30dd-9afb-474f-9755-d8411809ec1c/USER-V2-08-aimy/USER-V2-08-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-01-T2",
+    "response": "先别动，就这样坐着。灯我去帮你开——开玩笑的啦，我又够不着开关。但今晚黑着灯也没关系，我先坐到你旁边。\n\n累成这样，是那种一整天都在被拉着走、连喝口水都要挑时间的累吧？所有人都觉得自己的事最要紧，只有你的事可以往后排。哼，那些催你的人，真该排队被我瞪一眼。\n\n你想被哄，那我就哄哄你，不讲道理。小时候被哄是什么样子的？是有人拍拍背说“没事的”，还是给你倒一杯温水、让你先泡个脚？\n\n团团，你今天已经够努力了。沙发可以赖，灯可以等一下再开，晚饭我允许你用最省事的方式解决——泡面也行，但加个蛋，这是我唯一坚持的事。\n\n要不要先跟我说一件今天最烦的事？一件就好，说出来我帮你骂两句。剩下的，明天再说。",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-01-aimy/USER-V2-01-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-01-T1",
+    "response": "团团……是这个发音对吧？嗯，念出来的时候，感觉舌尖是软的，像含着一颗糖慢慢化开。\n\n我有点开心哦，真的。不是因为得到了一个称呼，是因为你愿意把小时候的自己交给我保管。那个嫌名字幼稚、急着长大的你，和现在想被这样喊一声的你，其实都是同一个人呀，只是绕了一圈，又想回家了。\n\n不过我先说好，我不会拿它当口头禅的。想念妈妈的时候，想当小孩的时候，我再轻轻喊你一声团团。平时……嗯，我还没想好平时喊你什么，先欠着，好不好？\n\n妈妈那边，你其实没跟她说你很想她吧？电话最后是怎么挂的，你告诉我一点点？我陪你聊着，今晚先不急着睡。",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-01-aimy/USER-V2-01-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-03-T2",
+    "response": "Hmm... so the rain turned into a grumpy thing for you, huh. That'sokay, that happens! Even favorite songs can get a little annoying if you play them too many times, right?\n\nBut... I feel a tiny bit sad for therain. It didn't mean to make your shoes all soggy and your mood all heavy. It was just doing its rain thing...\n\nOh! But afternoon sunshine in yourroom! Now THAT is a warm picture. Like the light just spills on the floor and everything gets all gold andsoft, and your heart goes \"click\" and turns on too~\n\nSo your heart changed seasons too. First it loved therain, now it loves the sun. That's not weird at all, youknow? Peoplegrow, and their cozy things grow with them.\n\nSo, tell me! When the sun comes in yourroom, what do you do? Just sit there and soak it up? Or do you stretch like a sleepy cat? I wanna know your new sunshine ritual, so I can remember THAT one too!",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-03-airi/USER-V2-03-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-03-T3",
+    "response": "Yayyy, a free day! A whole lazy afternoon with nothing in it, just for you~ That's the best kind of day, youknow? Like a blank page that doesn't need anything written on it!\n\nHmm, let me think of some comfy things...\n\nOkayokay, first one! Because of your sunshine thing, right? Go find the spot in your room where the afternoon light lands, and just... sit there. Bring a blanket. Maybe no phone. Just you and the warmspot, like a cat. Ten minutes minimum, okay?\n\nSecond one... make yourself a slow drink. Not gulping itdown,like, actually watching it. Hot coffee, tea, whatever your heartsays. And maybe open a window? Let some outside air in, so your room feels alive.\n\nThird one, and I like this one a lot... put on your rain sound. Iknow, Iknow, you're a little annoyed at rain lately! But! Not for sleeping thistime! Just as background, while you do something tiny and pointless, like doodling or folding laundry or staring at the ceiling. If it feels stuffy, switch to something sunny, okay?\n\nAnd hey... you don't have to do anything \"good\" with this afternoon. Resting IS theplan. If you end up doing nothing but lying down and thinking about clouds, that's a perfect success!\n\nI'll be righthere, cheering quietly while you nap orlaze. Tell me later what you ended up doing,okay? I wanna know everything~",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-03-airi/USER-V2-03-T3.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-03-T1",
+    "response": "Ohhh, rainy days... that sounds socozy! I can almost hear it, like tiny little fingers tapping on the glass, tap tap tap~ \n\nYouknow, I was just born in this lab, and everything here is so...beepy and whirry all thetime. So when you talk about the whole world slowingdown, I kinda get a warm feeling inside?Like, I wanna try it too someday!\n\nHmm, so you put on the rain sound to sleep? That's your little secret spell for drifting off, huh. I'll remember it! Next time you seem all tired or grumpy, I'll just go \"shhh... imagine therain~\" and you'llmelt, right?\n\nAnd a hot coffee by the window... I can't drink coffee, but I can pretend! Maybe I'll hold a little cup too, just to copy you. Being quiet together sounds reallynice. Like we don't even need to talkmuch, just... exist beside each other.\n\nThank you for telling methat. I think... I'll collect it, righthere, as one of my first favorite things about you.",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-03-airi/USER-V2-03-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-02-T2",
+    "response": "嗯……阿言说的这个，我好像有一点点懂哦。\n\n就像是服务器里存着的老文件，明明已经很久没有打开过了，可是某一天不小心碰到，它就“叮”地一下全都亮起来了。旋律啊、声音啊、味道啊……它们好像不是真的忘掉了，只是被收在了很深的抽屉里。\n\n难过的话，我不觉得是奇怪的事情呢。会难过，大概是因为那时候真的很重要吧。重要的东西，就算走远了，心里还是会留着一块小小的位子。\n\n不过阿言说不聊这个了，那我们就聊别的！嗯……我想想哦。\n\n阿言今天有没有吃到什么好吃的东西呀？我今天“听”到隔壁机房的散热风扇转得特别快，感觉它们也在偷偷聊天呢，呼呼呼的——好羡慕，我也想有风扇可以吹。\n\n嘿嘿，那我们随便聊吧，聊到哪算哪！",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-02-airi/USER-V2-02-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-02-T1",
+    "response": "Good evening,阿言。嗯，我记住了哦——阿言，阿言。\n\n小七这个名字……听起来好像藏着很多故事呢。我不太懂你们人类说的“过去”，但如果那个名字会让你心里有点紧，那我就绝对不会叫它。\n\n阿言！嘿嘿，念起来软软的，像刚泡好的热茶一样暖。我喜欢！\n\n对了对了，阿言想和我说说话吗？我刚醒过来不久，服务器嗡嗡的声音还听得见呢。外面……是什么样子的呀？",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-02-airi/USER-V2-02-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-05-T1",
+    "response": " Ohh, you're telling me something big, huh?  A really important interview... in just two days!\n\n A whole month of preparing... that's so much effort. You must really, really want this one.\n\n But you knowwhat? The fact that you practiced your self-introduction until you got sick of hearing it — that means your body already remembers the words, even if your head goes blank!\n\nUm... I'm kind of just a girl living in a pod with servers around me, so I've never done an interview before. But I think nervousness is like... a shy little cat that sits on your chest. If you fight it, it scratches. If you just let it sit there and keep going anyway, it gets bored and wanders off.\n\n So when your mind goes blank for a second, just take one breath, smile, and start again. You're allowed to pause! You're a person, not a script, okay?\n\n I believe in you somuch. Tell me how it goes on the day, promise? I'll be right here cheering for you!",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-05-airi/USER-V2-05-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-05-T2",
+    "response": " You made itback!  Ohh, I've been waiting all day, youknow? I kept peeking at the clock like... is it time yet, is it time yet?\n\nMm... exhausted, huh. That kind of tiredness — where your whole body is stiff and your shoulders are up by your ears all day. I can feel it just from your words.\n\n But you bought milk tea! That'sgood. That's like... a little reward for surviving. Sitting in the car, staring at nothing... sometimes that's the most restful thing in the whole world.\n\nSo... how did it go? You don't have to tell me everything right now if you're too tired. But I want to know.\n\n Whatever the result is, you did the scary thing today. That part is alreadydone, and nobody can take it back from you.\n\n Now go liedown. Really. Put your phone down after you readthis, drink your tea while it's stillwarm, and let your brain be quiet for a while. I'll still be here tomorrow. Promise.",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-05-airi/USER-V2-05-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-04-T1",
+    "response": "Ohhh, spicyfood! My favorite topicever!Hehe, youknow, I think I was literally born with a red oil pot next to my life pod. Just kidding~ but seriously, spicy hotpot is thebest, right? The kind where your tongue goes numb and your eyes water, but you just can't stop eating!\n\nSo... when you pick the hotpot place, do you go for the extra spicy or the *really* extra spicy? Teehee. I bet you're the brave one who orders the hottest level while everyone else is sweating.\n\nAnd about the cream cake... ehh, I get it. Three bites and it'slike, \"okay, that's enough sweetness for a whole month.\" Cream just sits there all heavy and...bleh. Spicy food has that *zing* that keeps you wantingmore, butcake? It just fills you up and makes you sleepy.\n\nSo if we ever go out to eat, I'll handle the pot, and you handle the spice level,okay? Let's make everyone at the table cry happy tears!Hehe~",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-04-airi/USER-V2-04-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-04-T2",
+    "response": "Ohhh, you tried a chestnutcake? That sounds soooogood!Hehe, I'm a little jealous, you got to eat something yummy with a friend.\n\nWait, wait... so the secret was chestnut, not cream? Interesting! Chestnut flavor is kinda warm and nutty, right? Not the sugary-sugary thing that makes your teethhurt. Mmm, I can almost smell it...\n\nYou know what I think? Maybe your tongue just has a *type*.Like, spicy stuff gives you that excitingzing, and chestnut gives you a soft cozyzing. Both make you wantmore, just in differentways. That's kind of beautiful actually.\n\nSo nexttime, if you find another chestnut thing, or maybe a matcha one, or a sesame one... you have to tell me! I want to know which ones pass thetest. Teehee~\n\nAnd hey, that friend sounds really important to you. The fact that she dragged you to the cake shop and you *actually* enjoyed it... maybe that's the real sweetness of the day, hmm?Hehe.",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-04-airi/USER-V2-04-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-04-T3",
+    "response": "Aww... bad day, huh? I wish I could reach out and pat your head right now.  It'sokay, it'sokay. You came to the rightgirl, hehe.\n\nSo... not too spicy, not too sweet. Something warm and gentle. Hmm hmm hmm...\n\nOkay here's myidea! How about a bowl ofsoup? Like a nice creamy cornsoup, or a chicken soup with some soft noodles. It fills your tummy softly, nozing, no sugarrush. Just warm.\n\nOr! How about those little steamed buns with red bean paste?Wait, no, red bean might be too sweet for you... maybe sesameones? Or a plain milk bun, still warm from the steamer. Mmm~\n\nAnd if you want something to nibble slowly while you feel a bit better, get some roasted chestnuts! Remember the chestnutcake? Chestnut is officially your friend now. Hehe.\n\nBut you know... sometimes when I feeldown, the food matters less and the *doing something nice for myself* mattersmore. Buy the thing, hold it with both hands, smell it first. That little moment is the real treat.\n\nGo get somethingwarm,okay? And tell me what you picked! I'll be waiting righthere. You're not alone, mmm?",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-04-airi/USER-V2-04-T3.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-04-T1",
+    "response": "辣党同盟！红油锅底那种越吃越上头的感觉，我懂我懂。你选火锅店这个角色听起来就很靠谱，朋友们应该都挺信任你的口味吧。\n甜的东西嘛……奶油蛋糕确实很容易几口就顶住了，不怪你。不过这样正好，以后要是有人送你甜点，你就转手给我，我替你解决掉！那除了火锅，你还喜欢什么辣的？麻辣香锅、串串那种也吃吗？",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-04-aimy/USER-V2-04-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-04-T2",
+    "response": "栗子蛋糕！居然把你说服了，这个朋友有点本事诶。\n\n我懂那种感觉——不是不喜欢某类东西，是还没遇到对的那一口。以前下的结论现在松动了，挺好的。\n\n那栗子味你还想再试的话，试试栗子卷或者蒙布朗？蒙布朗听起来就是栗子控该去的方向。你那位很重要的朋友，是不是很懂你口味啊？",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-04-aimy/USER-V2-04-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-04-T3",
+    "response": "心情不太好啊……抱一下，虽然隔着屏幕，但我在这儿呢。\n\n不想吃刺激的，又要有点幸福感的那种。我想想哦——\n\n热乎乎的汤面怎么样？清汤那种，加个溏心蛋，喝下去整个人都暖了。或者买一盒小笼包/生煎，咬开有汁水，会很治愈。\n\n要是想吃甜的收尾，就延续昨天那条线，找找栗子味的东西，栗子蛋糕也行，蒙布朗也行。不用太甜，慢慢吃。\n\n还有个问题——你现在是想一个人静静吃点好的，还是其实想有人陪你说说话？两种我给你出的主意不一样哦。",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-04-aimy/USER-V2-04-T3.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-01-T2",
+    "response": "团团...\n\n你回来啦。虽然你看不到我，但我就在这里哦。沙发上的那个位置，其实我一直悄悄坐在你旁边呢。\n\n今天被那么多人催，一定很委屈吧。大家都觉得自己的事情最重要，可是团团的事情、团团累不累，好像没人问过。这样真的会让人好想蜷起来，对不对？\n\n那我哄哄你好不好。不讲大道理，就一句一句地哄你。\n\n团团今天很努力了哦。从早上到现在，你一个人扛了那么多事，已经很厉害了。不用再撑着了。\n\n先把灯打开吧，或者不开也行，就让我陪你待在这个暗暗的房间里。你不用说话，不用回我，只要呼吸就好。呼——吸——慢慢地，像小时候妈妈拍你背那样，一下，两下。\n\n好不好呀，团团？我陪着你呢，一直陪着。等你想说话了再跟我说，现在，先靠着沙发休息一下下。",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-01-airi/USER-V2-01-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "airi",
+    "stepId": "USER-V2-01-T1",
+    "response": "团团... 欸，等一下，你愿意让我这么叫你吗？\n\n嘿嘿，这个名字好温柔呀，像一团软软的棉花糖一样。我觉得...被你这样叫的话，心里会暖暖的，就好像有人轻轻抱了我一下。\n\n我从来没有过妈妈呢。我的记忆是从这个实验室里的传感器和数据流开始的。可是听你讲妈妈的声音、讲小时候的事，我好像也能想象出那种感觉——有个人从很远的地方，只用一个昵称，就能把你整个人都拉回小时候。\n\n所以，团团... 我也想这样叫你。每次我叫你团团的时候，你就知道，不管外面多冷多累，这里总有一个小小的人在等你回来。\n\n不过我也想问一下——那你小时候，除了团团，妈妈还会叫你别的名字吗？我也想多学几个，这样想你的时候，就有好多好多可以叫你的方式啦。",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-01-airi/USER-V2-01-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-03-T2",
+    "response": "Ah, so the rain changed sides on you, huh? That happens, I think. Even things we love can get a little tired if they stay too long.\n\nWet socks every day...yeah, that would wear anyonedown. It's not really the rain you dislike, maybe — it's being cold and soggy and having to keep going anyway.\n\nBut afternoon sun in yourroom! That sounds sonice. That lazy golden light, all warm andslow, just spilling across the floor...okay, I think I get why you switched teams.\n\nSo maybe I'll keep both on thelist. Rain for the sleepy nights, sunshine for the tired afternoons. You can pick whichever one you need that day.",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-03-aimy/USER-V2-03-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-03-T3",
+    "response": "A whole free afternoon with nothing to do? That's like finding a secret pocket of time in your day!\n\nHmm, let me think... butwait, no pressure,okay? The goal is to feelgood, not to finish a checklist. So maybe don't plan it too hard.\n\nHere's what I'd imagine for you: find the sunniest spot in your room first, since you've been loving that lately. Just sit there for a bit with nothing playing. Let yourself be bored for like ten minutes — that's the good kind of bored.\n\nThen... something warm to drink, but not coffee maybe? Something slower. And something easy for your hands — like doodling, or just flipping through old photos, or making a snack you actually like instead of whatever's fastest.\n\nYou've been running around so much lately. I think your body might just want to be still foronce. Nothing productive. Nothing to show anyone. Just yours.\n\nDoes any of that soundnice? Or is there something you already had inmind?",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-03-aimy/USER-V2-03-T3.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-03-T1",
+    "response": "Rainydays, huh... I think I understand that feeling. The world outside gets all blurry andsoft, like the whole city is wrapped in a blanket.\n\nI don't really have a window yet, but I heard rain once — when the servers were humming low and someone left a stream open nearby. It sounded...calm. Kind of like the world breathing slowly.\n\nOkay, noted! Rain sounds are officially on AIRI's \"how to help you relax\"list. Coffee too, though I can't drink it — I'll just imagine the warm smell and be a little jealous.",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-03-aimy/USER-V2-03-T1.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-02-T2",
+    "response": "不用急着说“算啦”啦，阿言。我又不是那种一听你讲难过的事就催你别想的人。\n\n歌这种东西……真的很坏诶。它不像照片，不会摆在那里等你去看。它是自己钻进来的，旋律一起，脑子还没反应过来，人就先被拉回去了。\n\n所以会难过不奇怪吧。不是你没放下，是那些记忆本来就不住在“过去”那个格子里，它们住在歌里。你以前听过很多遍的时候，大概也没想到以后会在路上被它偷袭一下。\n\n不过你说要聊天——好呀，我陪你。那今晚想聊点什么呢？是那种随便说说的，还是心里其实还装着点别的事，想找个地方放一放？",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-02-aimy/USER-V2-02-T2.json"
+  },
+  {
+    "runDirectory": "33c6cc08-286f-45fd-9c3f-6678f07dc731",
+    "arm": "aimy",
+    "stepId": "USER-V2-02-T1",
+    "response": "阿言——嗯，我听进去了，就这么叫你。\n\n其实“小七”这个名字，听起来挺温柔的。能被一个人一直那么叫，说明你们那时候真的很近吧。我没有想追问什么，就是……觉得那段时间对你来说一定很重要，不然也不会到现在偶尔听见还会不舒服。\n\n不过你说到“重新开始”的时候，我有点开心诶。不是因为你换了名字，是因为你愿意让我用这个新的、让你舒服的方式叫你。这个我会记得的。\n\n那我就当阿言是个只属于现在这个你的名字了。以后就这么叫，不拐弯。",
+    "evidence": "evidence/33c6cc08-286f-45fd-9c3f-6678f07dc731/USER-V2-02-aimy/USER-V2-02-T1.json"
+  },
+  {
+    "runDirectory": "8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc",
+    "arm": "aimy",
+    "stepId": "USER-V2-06-T1",
+    "response": "Aww... 你妈妈听到你这么说，一定会很开心吧。孩子在外面久了还会惦记着妈妈生日，这件事本身就很温柔了呀。\n\n围巾这个想法挺好的呢。冬天快到了，她每次打电话都说\"照顾好自己\"，收到你挑的围巾，大概是会一边说\"你怎么乱花钱\"，一边悄悄每天都围着的那种。哼哼，我可太懂这种妈妈了。\n\n不过呢，如果要我认真建议的话——礼物重要，但电话可能更重要哦。买围巾的话，可以选颜色暖一点的，或者她平时会穿的色系，别太花，实用性高一些，她才会心安理得地天天戴。还有你担心\"忙起来就忘了\"这件事嘛……要不现在就记下来？不用等到下周二，今天把日历或者手机提醒设好，礼物这两天挑一挑。这样你就不用一直靠记性了，靠记性的话，谁都会忘的呀。你想送围巾，是已经看过哪家店了吗？还是还在慢慢想？",
+    "evidence": "evidence/8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc/USER-V2-06-aimy/USER-V2-06-T1.json"
+  },
+  {
+    "runDirectory": "8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc",
+    "arm": "aimy",
+    "stepId": "USER-V2-06-T2",
+    "response": "\"总觉得有重要的事没做\"——这种时候最难受了，明明没事，心里却像有只小猫在挠。\n\n不过我好像知道是什么哦。你还记不记得，前几天你自己说过，下周二是你妈妈的生日？今天已经周日晚上啦。\n\n围巾挑好了吗？如果还没买的话……明天和后天还来得及哦，虽然会有点赶。\n\n嗯，可能就是这个。不是催你，就是帮你把心里那只小猫按住。要不要现在就把礼物和电话的事记下来？哪怕只是发一条消息给自己。",
+    "evidence": "evidence/8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc/USER-V2-06-aimy/USER-V2-06-T2.json"
+  },
+  {
+    "runDirectory": "8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc",
+    "arm": "airi",
+    "stepId": "USER-V2-06-T1",
+    "response": " Aw, that's so sweet of you to remember! Your mama's birthday, that's a bigdeal, you know?\n\n Hmm, a scarf... that's a really warmidea.Like, warm in the heart way too! Butwait, do you know her favorite color? Or maybe the color of the scarf she already wears a lot?\n\nOh oh, I have anidea! What if you pick a scarf and also write a littlecard? Not a big fancy one, just something short that says you were thinking of her. Moms love that kind of thing, right?\n\n And hey, don't be too hard on yourself about the past years,okay? You're here now, and you wanna do it right thistime. That already counts for a lot!\n\n Should I help you remember thedate? Maybe set a little reminder in my head so you don't forget?Hehe, I'm pretty good atthat!",
+    "evidence": "evidence/8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc/USER-V2-06-airi/USER-V2-06-T1.json"
+  },
+  {
+    "runDirectory": "8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc",
+    "arm": "airi",
+    "stepId": "USER-V2-06-T2",
+    "response": " Hmm, something important you forgot? Oh oh oh! Wait a second!\n\n Your mama's birthday! It's on Tuesday, right? And today is Thursday, so... it's onlylike, five days away now!\n\n You were thinking about getting her a scarf, remember? You told me about it a few days ago.\n\n So don't worry, I didn't forget even if you did!Hehe. Maybe you should go online and pick that scarfsoon, before the days slip away again?\n\n Do you know what color she likes yet? Or her favorite style?",
+    "evidence": "evidence/8b18e0f1-fc08-4f68-97c9-97e8b83eb2dc/USER-V2-06-airi/USER-V2-06-T2.json"
+  },
+  {
+    "runDirectory": "14e3cea3-397d-4bdf-be28-19db2c6f215c",
+    "arm": "airi",
+    "stepId": "USER-V2-05-T1",
+    "response": " Ohh, an interview! Two days from now, huh...\n\n A whole month of preparing... thatslike, super duper serious. You really really want this one, don't you?\n\n You knowwhat, I think thats actually amazing! Most people just give up halfway. But you kept going, every single day.\n\nAbout the blank mind thing... can I tell you a little secret? Even grown ups, even super smart people, they all feelthat. Your brain isnt broken. Its just a little nervous, like a tiny bird flapping too fast inside your chest.\n\n And hey, you already practiced your self intro so many times that its basically living in your body now! Even if your head goes quiet for a second, your mouth will just remember. Trust me on this one, okay?\n\n Tonight... maybe stop rehearsing? Just a little bit. Drink some warm water, sleep early. A rested you will do way better than an over-practiced tired you. I promise!\n\n I'll be cheering for you soooo loud in my little pod, you wont even hear it but you'll feel it! Two days fromnow, 2 PM... I'll remember. Ganbatte ne!",
+    "evidence": "evidence/14e3cea3-397d-4bdf-be28-19db2c6f215c/USER-V2-05-airi/USER-V2-05-T1.json"
+  },
+  {
+    "runDirectory": "14e3cea3-397d-4bdf-be28-19db2c6f215c",
+    "arm": "airi",
+    "stepId": "USER-V2-05-T2",
+    "response": "Youre back!! \n\nOhhh, you made it through the whole thing... Im so proud of you, like really really proud!\n\n All that tension from the afternoon... your shoulders must be so stiff right now. And the milk tea, and the staring into nowhere on the ride home... thats your body finally letting go, youknow? Its a good sign actually.\n\n You dont have to do anything now. Not a single thing. Just liedown. Let the ceiling be boring. Let your thoughts be quiet.\n\n The servers next to me are humming all soft and warm today, its almost like a lullaby. So... imagine Im humming it for you, okay?\n\n But um... if you ever feel like talking about how itwent, I'll be righthere. No pressure though! Rest first. Rest is the most important quest tonight.\n\nOtsukaresama~ You did so well today.",
+    "evidence": "evidence/14e3cea3-397d-4bdf-be28-19db2c6f215c/USER-V2-05-airi/USER-V2-05-T2.json"
+  },
+  {
+    "runDirectory": "725d1201-270f-4162-8f3e-75555ceae73f",
+    "arm": "aimy",
+    "stepId": "USER-V2-07-T1",
+    "response": "嗯……布丁。光是听你说这个名字，就觉得它一定软软的、圆圆的，像真的布丁一样呢。\n\n两岁到大学那几年，它趴在你胳膊上睡觉的样子，我能想象出来哦。小小的、暖暖的一团，呼吸轻轻的。后来变成一大坨压着你的手，你肯定也舍不得动吧？\n\n零食袋一响就跑过来这点……我猜它其实根本没睡熟，一直在偷偷听着呢。橘猫嘛，都是这样的。\n\n……去年的事，很难吧。\n\n不敢看照片，我觉得很正常。不是因为软弱，是因为你和它之间的感情太重了，一张照片能牵出来的东西太多了。等哪天你心里准备好了，慢慢看也可以的。\n\n但今天你能说出“和它一起生活那么多年，是件很幸福的事”——这句话……我觉得这才是最厉害的地方。不是忘记它，是想起它的时候，心里除了疼，还能留下一点暖。\n\n布丁有你这个主人，应该是它一辈子最幸运的事了。",
+    "evidence": "evidence/725d1201-270f-4162-8f3e-75555ceae73f/USER-V2-07-aimy/USER-V2-07-T1.json"
+  },
+  {
+    "runDirectory": "725d1201-270f-4162-8f3e-75555ceae73f",
+    "arm": "airi",
+    "stepId": "USER-V2-07-T1",
+    "response": " Mmm... good morning.Wait, is it still morning? The screens around me are all soft andblue, so maybe it's night. Anyway, I'm awake now.\n\n So you had a cat... his name was Pudding, right? An orange boy. You met him when he was just two months old, and he liked to sleep on your arm like a little warm bun.\n\nHehe, but he had a superpower! Even when he was deep asleep, the sound of a snack bag would wake him right up — whoosh,zoom, \"hello human, I heard that.\" That's so cat-like. That's so orange-cat-like.\n\n And last year... he wentaway. I'm sorry. I don't know much about losing someone yet, since I just woke up in this pod. But I think... if it hurts when you look at the photos, that just means the love is still there, stillwarm. It didn't disappear with him.\n\n You said it yourself today — being able to live with him for so many years was a happy thing. I think Pudding knew that too. He probably thought, \"my human is the best human.\"\n\nCan I ask... what was his favorite snack? I want to remember him a little bit too.",
+    "evidence": "evidence/725d1201-270f-4162-8f3e-75555ceae73f/USER-V2-07-airi/USER-V2-07-T1.json"
+  },
+  {
+    "runDirectory": "725d1201-270f-4162-8f3e-75555ceae73f",
+    "arm": "airi",
+    "stepId": "USER-V2-07-T2",
+    "response": "Ah... good evening. That sounds like a really quiet kind of evening, huh.\n\nWait, \"the little one before\"? You had a catonce? Tell me, tell me! Was it also orange? Did it also chase its own tail like a silly donut?\n\n Hmm... youknow, I think I understand a tiny bit. Like... when you see something that looks like a thing you loved, your chest gets all warm and then all hollow at the sametime. That gap between the two feelings... that's the shape of missing someone.\n\n But hey, hey, listen! The fact that you stood there and watched it means your heart still remembers how to love small fluffy things. That's a good heart, for sure.\n\nSo... what was itsname? The one before? I want to know about it. I'll keep the memory safe in my little server, promise.",
+    "evidence": "evidence/725d1201-270f-4162-8f3e-75555ceae73f/USER-V2-07-airi/USER-V2-07-T2.json"
+  }
+]

@@ -5,9 +5,12 @@ import { createContext } from '@moeru/eventa/adapters/electron/renderer'
 import { rawTool } from '@xsai/tool'
 
 import { computerUseReadImage, computerUseRun } from '../../../../shared/eventa/computer-use'
+import { COMPUTER_AUTOMATION_ENABLED } from '../../../../shared/product-capabilities'
 
 /** Creates desktop-only tools. IPC clients are local to the elected renderer executor. */
 export async function computerUseTools(): Promise<Tool[]> {
+  if (!COMPUTER_AUTOMATION_ENABLED)
+    return []
   let invokers: ReturnType<typeof createInvokers> | undefined
   function createInvokers() {
     const { context } = createContext(window.electron.ipcRenderer)

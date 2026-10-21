@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "status": "当前机器/源码配置只读核对；未重新构建或启动产品",
+  "workspace": "/Users/mima1234/Documents/aimy",
+  "product_root": "/Users/mima1234/Documents/aimy/aimy-app",
+  "desktop_root": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi",
+  "docs_root": "/Users/mima1234/Documents/aimy/docs",
+  "git": {
+    "branch": "main",
+    "head": "b851ef3334320d13dd86cb8cafb449a70d154c9b",
+    "repository_root": "/Users/mima1234/Documents/aimy"
+  },
+  "host": {
+    "platform": "macOS",
+    "version": "26.5.2",
+    "arch": "arm64",
+    "xcode_command_line_tools": "/Library/Developer/CommandLineTools"
+  },
+  "cli": {
+    "node": "24.20.0",
+    "pnpm": "11.24.0",
+    "git": "2.50.1 (Apple Git-155)",
+    "python": "3.12.10",
+    "paths": {
+      "node": "/usr/local/bin/node",
+      "pnpm": "/Users/mima1234/.local/bin/pnpm",
+      "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3"
+    }
+  },
+  "tool_declarations": {
+    "packageManager": "pnpm@11.24.0",
+    "tool_versions_nodejs": "26.7.0",
+    "tool_versions_pnpm": "11.24.0",
+    "tool_versions_dotnet": "10",
+    "node_matches_declaration": false,
+    "pnpm_matches_declaration": true,
+    "conclusion": "Node工具声明与实际PATH/pnpm exec不一致；实施前统一验证基线，未执行升级或修改配置"
+  },
+  "installed_metadata": {
+    "electron": {
+      "version": "43.4.1",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/electron@43.4.1_supports-color@10.2.2/node_modules/electron/package.json",
+      "binaryExists": true
+    },
+    "electron-vite": {
+      "version": "5.0.0",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/electron-vite@5.0.0_supports-color@10.2.2_vite@8.2.2_@types+node@26.2.0_esbuild@0.28.2__fb877ddd1bc3b154a5006900734ff361/node_modules/electron-vite/package.json"
+    },
+    "electron-builder": {
+      "version": "26.16.1",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/electron-builder@26.16.1_electron-builder-squirrel-windows@26.16.1_supports-color@10.2.2/node_modules/electron-builder/package.json"
+    },
+    "vue": {
+      "version": "3.5.41",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/vue@3.5.41_typescript@6.0.3/node_modules/vue/package.json"
+    },
+    "pinia": {
+      "version": "4.0.3",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/pinia@4.0.3_@vue+devtools-api@8.2.1_typescript@6.0.3_vue@3.5.41_typescript@6.0.3_/node_modules/pinia/package.json"
+    },
+    "typescript": {
+      "version": "6.0.3",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/package.json"
+    },
+    "vite": {
+      "version": "8.2.2",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/vite@8.2.2_@types+node@26.2.0_esbuild@0.28.2_jiti@2.7.0_less@4.9.0_supports-color@10.2._fa721383ea52d790fb7bcba5783e78d6/node_modules/vite/package.json"
+    },
+    "vitest": {
+      "version": "4.1.11",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/vitest@4.1.11_@opentelemetry+api@1.9.1_@types+node@26.2.0_@vitest+browser-playwright@4._aee21a8aced7eca57eb58406d7b5e6e7/node_modules/vitest/package.json"
+    },
+    "unstorage": {
+      "version": "1.17.5",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/unstorage@1.17.5_idb-keyval@6.3.0_ioredis@6.0.0_supports-color@10.2.2_/node_modules/unstorage/package.json"
+    },
+    "idb-keyval": {
+      "version": "6.3.0",
+      "packagePath": "/Users/mima1234/Documents/aimy/aimy-app/node_modules/.pnpm/idb-keyval@6.3.0/node_modules/idb-keyval/package.json"
+    }
+  },
+  "isolation_summary": {
+    "date": "2026-10-14",
+    "scope": "产品package manifest和本批已安装直接node_modules symlink；不证明运行数据完全隔离或全量静态/动态导入审计",
+    "manifest_count": 76,
+    "manifest_old_project_refs": [],
+    "direct_node_modules_directories": 36,
+    "direct_symlinks_checked": 775,
+    "cross_old_project_symlinks": [],
+    "no_user_data_or_credentials_read": true
+  },
+  "runtime_data": {
+    "source_override": "APP_USER_DATA_PATH",
+    "source_anchor": "aimy-app/apps/stage-tamagotchi/src/main/index.ts:81",
+    "suggested_dev_path": "/Users/mima1234/Library/Application Support/Aimy-AIRI-Dev",
+    "applied_this_turn": false,
+    "actual_user_data_or_credentials_read": false,
+    "default_packaged_name_reuse_caution": "Aimy名称与旧样机历史同名；不能根据代码隔离断言运行数据为空或隔离完毕"
+  },
+  "validation_limits": {
+    "fresh_build": false,
+    "desktop_launch": false,
+    "current_process_or_port_inventory": false,
+    "model_connectivity_or_credentials": false,
+    "all_source_dynamic_imports_audited": false,
+    "user_data_isolation_tested": false
+  },
+  "product_code_changed": false
+}

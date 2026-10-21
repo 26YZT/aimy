@@ -8,6 +8,7 @@ import { defineStore } from 'pinia'
 import { onScopeDispose, shallowRef } from 'vue'
 
 import { VoiceMessage } from '../libs/voice/voice-message'
+import { getResourcePolicy, onResourceRevoked } from '../services/resource-policy'
 import { getSpeechBusContext, voiceMessageCommand, voiceMessageDropped, voiceMessagesChanged, voiceRequestMessages } from '../services/speech/bus'
 import { useChatStore } from './chat'
 import { useHearingStore } from './modules/hearing'
@@ -36,12 +37,13 @@ export const useVoiceMessagesStore = defineStore('voice-messages', () => {
   const hearing = useHearingStore()
   const messages = new Map<string, VoiceMessage>()
   const opened = new Set<string>()
+  const pendingRecords = new Map<string, AbortController>()
   const isRecording = shallowRef(false)
   const bus = getSpeechBusContext()
 
   function publish() {
     const snapshots = [...messages.values()].map(message => message.snapshot)
-    isRecording.value = snapshots.some(message => message.phase === 'pending' || message.phase === 'capturing')
+    isRecording.value = pendingRecords.size > 0 || snapshots.some(message => message.phase === 'pending' || message.phase === 'capturing')
     bus.emit(voiceMessagesChanged, snapshots)
   }
 
@@ -61,46 +63,84 @@ export const useVoiceMessagesStore = defineStore('voice-messages', () => {
     return completed ? text.trim() : (text.trim() || undefined)
   }
 
-  function record(command: Extract<VoiceMessageCommand, { type: 'record' }>) {
-    if (opened.has(command.id))
+  async function record(command: Extract<VoiceMessageCommand, { type: 'record' }>, beforeRecord?: () => Promise<void>) {
+    if (opened.has(command.id) || pendingRecords.size || isRecording.value)
       return false
     opened.add(command.id)
-    const message = new VoiceMessage(command.id, command.sessionId, devices.input, async (draft) => {
-      const data = encodeBase64(new Uint8Array(await draft.audio.arrayBuffer()))
-      return chat.submit({
-        sessionId: draft.sessionId,
-        messageId: draft.messageId,
-        text: draft.text,
-        attachments: [{ type: 'audio', mimeType: 'audio/wav', data, ...(draft.transcript ? { transcript: draft.transcript } : {}) }],
-        audioTranscriptPending: draft.transcriptPending,
-        replyToMessageId: command.replyToMessageId,
-        tools: command.tools,
-      })
-    }, hearing.configured ? transcribeRecording : undefined, draft => chat.settleAudioTranscript(draft))
-    messages.set(command.id, message)
-    let submitted = false
-    const stop = message.subscribe(() => {
-      const { phase, error } = message.snapshot
-      submitted ||= phase === 'transcribing'
-      if (phase === 'sent' || phase === 'cancelled') {
-        messages.delete(command.id)
-        stop()
-        // A message that left the chat again is gone from the list. The event lets its control report why.
-        if (phase === 'cancelled' && submitted && error)
-          bus.emit(voiceMessageDropped, { id: command.id, sessionId: command.sessionId, error })
-      }
-      publish()
-    })
+    const pending = new AbortController()
+    pendingRecords.set(command.id, pending)
     publish()
-    return true
+    try {
+      await devices.requestCaptureAccess(pending.signal)
+      pending.signal.throwIfAborted()
+      await beforeRecord?.()
+      pending.signal.throwIfAborted()
+      const lease = getResourcePolicy()?.acquire('microphone')
+      const message = new VoiceMessage(command.id, command.sessionId, devices.input, async (draft) => {
+        lease?.assertCurrent()
+        const data = encodeBase64(new Uint8Array(await draft.audio.arrayBuffer()))
+        lease?.assertCurrent()
+        return chat.submit({
+          sessionId: draft.sessionId,
+          messageId: draft.messageId,
+          text: draft.text,
+          attachments: [{ type: 'audio', mimeType: 'audio/wav', data, ...(draft.transcript ? { transcript: draft.transcript } : {}) }],
+          audioTranscriptPending: draft.transcriptPending,
+          replyToMessageId: command.replyToMessageId,
+          tools: command.tools,
+        })
+      }, hearing.configured ? transcribeRecording : undefined, async (draft) => {
+        lease?.assertCurrent()
+        return chat.settleAudioTranscript(draft)
+      })
+      messages.set(command.id, message)
+      let submitted = false
+      const stop = message.subscribe(() => {
+        const { phase, error } = message.snapshot
+        submitted ||= phase === 'transcribing'
+        if (phase === 'sent' || phase === 'cancelled') {
+          lease?.release()
+          messages.delete(command.id)
+          stop()
+          // A message that left the chat again is gone from the list. The event lets its control report why.
+          if (phase === 'cancelled' && submitted && error)
+            bus.emit(voiceMessageDropped, { id: command.id, sessionId: command.sessionId, error })
+        }
+        publish()
+      })
+      publish()
+      return true
+    }
+    finally {
+      if (pendingRecords.get(command.id) === pending)
+        pendingRecords.delete(command.id)
+      publish()
+    }
   }
 
-  function connect() {
+  const offRevoked = onResourceRevoked((reason, kind) => {
+    if (!kind || kind === 'microphone') {
+      for (const pending of pendingRecords.values())
+        pending.abort(new DOMException(reason, 'AbortError'))
+      pendingRecords.clear()
+      publish()
+      for (const message of messages.values())
+        message.stopCapture(reason)
+    }
+  })
+
+  function connect(options?: { beforeRecord?: () => Promise<void> }) {
     const stops = [
       bus.on(voiceRequestMessages, publish),
       defineInvokeHandler(bus, voiceMessageCommand, async (command) => {
         if (command.type === 'record')
-          return { status: record(command) ? 'accepted' : 'closed' }
+          return { status: await record(command, options?.beforeRecord) ? 'accepted' : 'closed' }
+        if (command.type === 'discard' && pendingRecords.has(command.id)) {
+          pendingRecords.get(command.id)!.abort(new DOMException('Recording cancelled', 'AbortError'))
+          pendingRecords.delete(command.id)
+          publish()
+          return { status: 'accepted' }
+        }
         const message = messages.get(command.id)
         if (!message)
           return { status: 'closed' }
@@ -130,6 +170,10 @@ export const useVoiceMessagesStore = defineStore('voice-messages', () => {
     publish()
     return () => {
       stops.forEach(stop => stop())
+      for (const pending of pendingRecords.values())
+        pending.abort(new DOMException('Voice host detached', 'AbortError'))
+      pendingRecords.clear()
+      publish()
       for (const message of messages.values()) {
         if (['pending', 'capturing', 'finalizing'].includes(message.snapshot.phase))
           message.cancel()
@@ -138,6 +182,7 @@ export const useVoiceMessagesStore = defineStore('voice-messages', () => {
   }
 
   onScopeDispose(() => {
+    offRevoked()
     for (const message of messages.values())
       message.cancel()
   })

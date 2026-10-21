@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-14",
+  "status": "文档与字节保护核验通过；不是产品或效果验收",
+  "active_projects": 5,
+  "audit_records_not_fully_tested_functions": 55,
+  "current_eligible_records": 8,
+  "current_merged_slices": [
+    "MEM-F01",
+    "MEM-F02",
+    "OLV-F01",
+    "OLV-F02",
+    "PRO-F01"
+  ],
+  "verified_kirara_backlog_slices": [
+    "KI-DIFF-F01",
+    "KI-DIFF-F03"
+  ],
+  "excluded_candidates": [
+    "CH01",
+    "CH02"
+  ],
+  "classification_counts": {
+    "AIRI已有或不更强": 12,
+    "新增能力候选": 7,
+    "工程参考": 12,
+    "条件收益实验": 4,
+    "条件功能候选": 1,
+    "生产侧局部已验": 2,
+    "后置待证": 4,
+    "不纳入本期": 11,
+    "后置机制局部已验": 2
+  },
+  "core_plan": {
+    "requirements": 14,
+    "tasks": 15,
+    "local_apis": 17,
+    "prompts": 5,
+    "prompt_hashes_unchanged": true
+  },
+  "new_observations": {
+    "kirara": {
+      "positive": 8,
+      "rejection": 6,
+      "counterexample": 6,
+      "total": 20
+    },
+    "airi_adjacent": {
+      "positive": 6,
+      "rejection": 6,
+      "bounded_counterexample": 2,
+      "total": 14
+    },
+    "airi_task_memory": {
+      "positive": 2,
+      "negative_blocked": 1,
+      "scope_counterexample": 5,
+      "observations": 8
+    }
+  },
+  "charakuru_exact_original_results_preserved": true,
+  "same_sampling_physics_equal_within_float_error": true,
+  "kit_multi_vertex_metric_kept_separate": true,
+  "all_project_features_or_real_ab_completed": false,
+  "new_evidence_original_byte_copies": 38,
+  "old_evidence_copies_unchanged": 39,
+  "old_plan_copies_unchanged": {
+    "旧版副本映射.json": 3,
+    "邻接补核前副本映射.json": 3
+  },
+  "source_manifest_entries_checked": 320,
+  "navigation": {
+    "files": 22,
+    "local_links": 538,
+    "broken": []
+  },
+  "protected_product_files": 5336,
+  "changed_product": [],
+  "added_or_removed_product_files": [],
+  "git_index_unchanged": true,
+  "original_claude_files": 28,
+  "original_changed": []
+}

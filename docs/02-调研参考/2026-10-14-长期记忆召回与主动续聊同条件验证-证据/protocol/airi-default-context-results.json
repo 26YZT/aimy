@@ -1,0 +1,1320 @@
+{
+  "date": "2026-10-14",
+  "fixture_sha256": "61b8c0b87067f9d349876f11217adcb82d321df795ddfec6e330e0f9caa14b61",
+  "captures": [
+    {
+      "session": "A",
+      "conversation": {
+        "turns": [
+          {
+            "type": "system",
+            "id": "SYS-A-0",
+            "authority": "system",
+            "content": [
+              {
+                "type": "text",
+                "text": "合成角色系统提示"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U1-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 10:00] 我喜欢美式咖啡"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "SYNTHETIC-2-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 10:00] 我喜欢什么饮料"
+              }
+            ]
+          }
+        ]
+      },
+      "providerMessages": [
+        {
+          "role": "system",
+          "content": "合成角色系统提示"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 10:00] 我喜欢美式咖啡"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 10:00] 我喜欢什么饮料"
+        }
+      ]
+    },
+    {
+      "session": "B",
+      "conversation": {
+        "turns": [
+          {
+            "type": "system",
+            "id": "SYS-B-0",
+            "authority": "system",
+            "content": [
+              {
+                "type": "text",
+                "text": "合成角色系统提示"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "SYNTHETIC-5-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 10:00] 我喜欢什么饮料"
+              }
+            ]
+          }
+        ]
+      },
+      "providerMessages": [
+        {
+          "role": "system",
+          "content": "合成角色系统提示"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 10:00] 我喜欢什么饮料"
+        }
+      ]
+    },
+    {
+      "session": "C",
+      "conversation": {
+        "turns": [
+          {
+            "type": "system",
+            "id": "SYS-C-0",
+            "authority": "system",
+            "content": [
+              {
+                "type": "text",
+                "text": "合成角色系统提示"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R01-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R02-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R03-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R04-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R05-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R06-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R07-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R08-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R09-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R10-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R11-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-13 12:00] 昨天给植物浇水"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R12-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-11 12:00] 周日修好了键盘"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R13-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R14-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R15-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R16-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R17-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R18-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R19-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R20-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R21-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R22-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R23-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R24-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R25-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R26-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R27-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R28-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R29-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R30-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R31-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "U-R32-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+              }
+            ]
+          },
+          {
+            "type": "user",
+            "id": "SYNTHETIC-8-0",
+            "content": [
+              {
+                "type": "text",
+                "text": "[2026-10-14 10:00] 火星采矿基地地址"
+              }
+            ]
+          }
+        ]
+      },
+      "providerMessages": [
+        {
+          "role": "system",
+          "content": "合成角色系统提示"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-13 12:00] 昨天参加了产品经理面试，面试官问了长期记忆方案"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-12 12:00] 前天参加了算法面试，面试官问了排序算法"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 12:00] 今天下午要复盘产品经理面试"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-01 12:00] 用户以前喜欢美式咖啡"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 12:00] 用户现在喜欢乌龙茶，已经不喝美式咖啡"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-13 12:00] 约好2026-10-15晚上一起玩星露谷物语"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-12 12:00] 去海边散步时捡到了一个贝壳"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 12:00] 正在开发Aimy桌面陪伴产品，当前在调研记忆"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-10 12:00] 灯塔散步计划已经取消，不应当作当前约定"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 12:00] 用户给小说人物起名为张三，用户本人不叫张三"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-13 12:00] 昨天给植物浇水"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-11 12:00] 周日修好了键盘"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-08 10:00] 第13条无关日常：整理书桌和收纳盒编号13"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-07 10:00] 第14条无关日常：整理书桌和收纳盒编号14"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-06 10:00] 第15条无关日常：整理书桌和收纳盒编号15"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-13 10:00] 第16条无关日常：整理书桌和收纳盒编号16"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-12 10:00] 第17条无关日常：整理书桌和收纳盒编号17"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-11 10:00] 第18条无关日常：整理书桌和收纳盒编号18"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-10 10:00] 第19条无关日常：整理书桌和收纳盒编号19"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-09 10:00] 第20条无关日常：整理书桌和收纳盒编号20"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-08 10:00] 第21条无关日常：整理书桌和收纳盒编号21"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-07 10:00] 第22条无关日常：整理书桌和收纳盒编号22"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-06 10:00] 第23条无关日常：整理书桌和收纳盒编号23"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-13 10:00] 第24条无关日常：整理书桌和收纳盒编号24"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-12 10:00] 第25条无关日常：整理书桌和收纳盒编号25"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-11 10:00] 第26条无关日常：整理书桌和收纳盒编号26"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-10 10:00] 第27条无关日常：整理书桌和收纳盒编号27"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-09 10:00] 第28条无关日常：整理书桌和收纳盒编号28"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-08 10:00] 第29条无关日常：整理书桌和收纳盒编号29"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-07 10:00] 第30条无关日常：整理书桌和收纳盒编号30"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-06 10:00] 第31条无关日常：整理书桌和收纳盒编号31"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-13 10:00] 第32条无关日常：整理书桌和收纳盒编号32"
+        },
+        {
+          "role": "user",
+          "content": "[2026-10-14 10:00] 火星采矿基地地址"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "AIRI-CTX01",
+      "observation": "same session original prior user text is in actual runtime provider projection",
+      "priorFactPresent": true,
+      "contract_outcome": "pass"
+    },
+    {
+      "id": "AIRI-CTX02",
+      "observation": "new session does not import earlier session fact in this default-shaped harness",
+      "priorFactPresent": false,
+      "contract_outcome": "unsupported",
+      "limit": "no external runtime context provider or memory extraction attached; not all possible integrations/character configurations"
+    },
+    {
+      "id": "AIRI-CTX03",
+      "observation": "all32 same-session raw messages remain available for unrelated Q06; no query-ranked top5 performed",
+      "historyRecords": 32,
+      "contract_outcome": "unsupported",
+      "limit": "history inclusion is not a retrieval answer or a factual error; fixed fake LLM did not interpret it"
+    },
+    {
+      "id": "AIRI-CAP01",
+      "observation": "actual compaction leaves32 raw chat entries unchanged",
+      "entries": 32,
+      "contract_outcome": "unsupported",
+      "limit": "function contract only compacts structured history blocks; not evidence default desktop applies it"
+    },
+    {
+      "id": "AIRI-CAP02",
+      "observation": "actual explicit synthetic history block retains5 turns with generic count summary",
+      "keptTurns": 5,
+      "defaultSummary": "Compacted 27 older turns with paired reactions.",
+      "contract_outcome": "pass",
+      "limit": "generic count summary is not persistent factual summary; no domain summary formatter supplied"
+    }
+  ],
+  "compaction": {
+    "rawInput": [
+      {
+        "role": "user",
+        "content": "昨天参加了产品经理面试，面试官问了长期记忆方案"
+      },
+      {
+        "role": "user",
+        "content": "前天参加了算法面试，面试官问了排序算法"
+      },
+      {
+        "role": "user",
+        "content": "今天下午要复盘产品经理面试"
+      },
+      {
+        "role": "user",
+        "content": "用户以前喜欢美式咖啡"
+      },
+      {
+        "role": "user",
+        "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡"
+      },
+      {
+        "role": "user",
+        "content": "约好2026-10-15晚上一起玩星露谷物语"
+      },
+      {
+        "role": "user",
+        "content": "去海边散步时捡到了一个贝壳"
+      },
+      {
+        "role": "user",
+        "content": "正在开发Aimy桌面陪伴产品，当前在调研记忆"
+      },
+      {
+        "role": "user",
+        "content": "灯塔散步计划已经取消，不应当作当前约定"
+      },
+      {
+        "role": "user",
+        "content": "用户给小说人物起名为张三，用户本人不叫张三"
+      },
+      {
+        "role": "user",
+        "content": "昨天给植物浇水"
+      },
+      {
+        "role": "user",
+        "content": "周日修好了键盘"
+      },
+      {
+        "role": "user",
+        "content": "第13条无关日常：整理书桌和收纳盒编号13"
+      },
+      {
+        "role": "user",
+        "content": "第14条无关日常：整理书桌和收纳盒编号14"
+      },
+      {
+        "role": "user",
+        "content": "第15条无关日常：整理书桌和收纳盒编号15"
+      },
+      {
+        "role": "user",
+        "content": "第16条无关日常：整理书桌和收纳盒编号16"
+      },
+      {
+        "role": "user",
+        "content": "第17条无关日常：整理书桌和收纳盒编号17"
+      },
+      {
+        "role": "user",
+        "content": "第18条无关日常：整理书桌和收纳盒编号18"
+      },
+      {
+        "role": "user",
+        "content": "第19条无关日常：整理书桌和收纳盒编号19"
+      },
+      {
+        "role": "user",
+        "content": "第20条无关日常：整理书桌和收纳盒编号20"
+      },
+      {
+        "role": "user",
+        "content": "第21条无关日常：整理书桌和收纳盒编号21"
+      },
+      {
+        "role": "user",
+        "content": "第22条无关日常：整理书桌和收纳盒编号22"
+      },
+      {
+        "role": "user",
+        "content": "第23条无关日常：整理书桌和收纳盒编号23"
+      },
+      {
+        "role": "user",
+        "content": "第24条无关日常：整理书桌和收纳盒编号24"
+      },
+      {
+        "role": "user",
+        "content": "第25条无关日常：整理书桌和收纳盒编号25"
+      },
+      {
+        "role": "user",
+        "content": "第26条无关日常：整理书桌和收纳盒编号26"
+      },
+      {
+        "role": "user",
+        "content": "第27条无关日常：整理书桌和收纳盒编号27"
+      },
+      {
+        "role": "user",
+        "content": "第28条无关日常：整理书桌和收纳盒编号28"
+      },
+      {
+        "role": "user",
+        "content": "第29条无关日常：整理书桌和收纳盒编号29"
+      },
+      {
+        "role": "user",
+        "content": "第30条无关日常：整理书桌和收纳盒编号30"
+      },
+      {
+        "role": "user",
+        "content": "第31条无关日常：整理书桌和收纳盒编号31"
+      },
+      {
+        "role": "user",
+        "content": "第32条无关日常：整理书桌和收纳盒编号32"
+      }
+    ],
+    "rawOutput": [
+      {
+        "role": "user",
+        "content": "昨天参加了产品经理面试，面试官问了长期记忆方案"
+      },
+      {
+        "role": "user",
+        "content": "前天参加了算法面试，面试官问了排序算法"
+      },
+      {
+        "role": "user",
+        "content": "今天下午要复盘产品经理面试"
+      },
+      {
+        "role": "user",
+        "content": "用户以前喜欢美式咖啡"
+      },
+      {
+        "role": "user",
+        "content": "用户现在喜欢乌龙茶，已经不喝美式咖啡"
+      },
+      {
+        "role": "user",
+        "content": "约好2026-10-15晚上一起玩星露谷物语"
+      },
+      {
+        "role": "user",
+        "content": "去海边散步时捡到了一个贝壳"
+      },
+      {
+        "role": "user",
+        "content": "正在开发Aimy桌面陪伴产品，当前在调研记忆"
+      },
+      {
+        "role": "user",
+        "content": "灯塔散步计划已经取消，不应当作当前约定"
+      },
+      {
+        "role": "user",
+        "content": "用户给小说人物起名为张三，用户本人不叫张三"
+      },
+      {
+        "role": "user",
+        "content": "昨天给植物浇水"
+      },
+      {
+        "role": "user",
+        "content": "周日修好了键盘"
+      },
+      {
+        "role": "user",
+        "content": "第13条无关日常：整理书桌和收纳盒编号13"
+      },
+      {
+        "role": "user",
+        "content": "第14条无关日常：整理书桌和收纳盒编号14"
+      },
+      {
+        "role": "user",
+        "content": "第15条无关日常：整理书桌和收纳盒编号15"
+      },
+      {
+        "role": "user",
+        "content": "第16条无关日常：整理书桌和收纳盒编号16"
+      },
+      {
+        "role": "user",
+        "content": "第17条无关日常：整理书桌和收纳盒编号17"
+      },
+      {
+        "role": "user",
+        "content": "第18条无关日常：整理书桌和收纳盒编号18"
+      },
+      {
+        "role": "user",
+        "content": "第19条无关日常：整理书桌和收纳盒编号19"
+      },
+      {
+        "role": "user",
+        "content": "第20条无关日常：整理书桌和收纳盒编号20"
+      },
+      {
+        "role": "user",
+        "content": "第21条无关日常：整理书桌和收纳盒编号21"
+      },
+      {
+        "role": "user",
+        "content": "第22条无关日常：整理书桌和收纳盒编号22"
+      },
+      {
+        "role": "user",
+        "content": "第23条无关日常：整理书桌和收纳盒编号23"
+      },
+      {
+        "role": "user",
+        "content": "第24条无关日常：整理书桌和收纳盒编号24"
+      },
+      {
+        "role": "user",
+        "content": "第25条无关日常：整理书桌和收纳盒编号25"
+      },
+      {
+        "role": "user",
+        "content": "第26条无关日常：整理书桌和收纳盒编号26"
+      },
+      {
+        "role": "user",
+        "content": "第27条无关日常：整理书桌和收纳盒编号27"
+      },
+      {
+        "role": "user",
+        "content": "第28条无关日常：整理书桌和收纳盒编号28"
+      },
+      {
+        "role": "user",
+        "content": "第29条无关日常：整理书桌和收纳盒编号29"
+      },
+      {
+        "role": "user",
+        "content": "第30条无关日常：整理书桌和收纳盒编号30"
+      },
+      {
+        "role": "user",
+        "content": "第31条无关日常：整理书桌和收纳盒编号31"
+      },
+      {
+        "role": "user",
+        "content": "第32条无关日常：整理书桌和收纳盒编号32"
+      }
+    ],
+    "structuredInput": [
+      {
+        "id": "SYNTHETIC-HISTORY",
+        "role": "event",
+        "segments": [
+          {
+            "type": "history-block",
+            "compacted": false,
+            "items": [
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 1,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "昨天参加了产品经理面试，面试官问了长期记忆方案"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 2,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "前天参加了算法面试，面试官问了排序算法"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 3,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "今天下午要复盘产品经理面试"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 4,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "用户以前喜欢美式咖啡"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 5,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "用户现在喜欢乌龙茶，已经不喝美式咖啡"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 6,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "约好2026-10-15晚上一起玩星露谷物语"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 7,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "去海边散步时捡到了一个贝壳"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 8,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "正在开发Aimy桌面陪伴产品，当前在调研记忆"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 9,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "灯塔散步计划已经取消，不应当作当前约定"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 10,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "用户给小说人物起名为张三，用户本人不叫张三"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 11,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "昨天给植物浇水"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 12,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "周日修好了键盘"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 13,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第13条无关日常：整理书桌和收纳盒编号13"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 14,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第14条无关日常：整理书桌和收纳盒编号14"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 15,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第15条无关日常：整理书桌和收纳盒编号15"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 16,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第16条无关日常：整理书桌和收纳盒编号16"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 17,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第17条无关日常：整理书桌和收纳盒编号17"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 18,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第18条无关日常：整理书桌和收纳盒编号18"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 19,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第19条无关日常：整理书桌和收纳盒编号19"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 20,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第20条无关日常：整理书桌和收纳盒编号20"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 21,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第21条无关日常：整理书桌和收纳盒编号21"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 22,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第22条无关日常：整理书桌和收纳盒编号22"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 23,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第23条无关日常：整理书桌和收纳盒编号23"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 24,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第24条无关日常：整理书桌和收纳盒编号24"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 25,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第25条无关日常：整理书桌和收纳盒编号25"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 26,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第26条无关日常：整理书桌和收纳盒编号26"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 27,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第27条无关日常：整理书桌和收纳盒编号27"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 28,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第28条无关日常：整理书桌和收纳盒编号28"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 29,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第29条无关日常：整理书桌和收纳盒编号29"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 30,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第30条无关日常：整理书桌和收纳盒编号30"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 31,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第31条无关日常：整理书桌和收纳盒编号31"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 32,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第32条无关日常：整理书桌和收纳盒编号32"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "structuredOutput": [
+      {
+        "id": "SYNTHETIC-HISTORY",
+        "role": "event",
+        "segments": [
+          {
+            "type": "history-block",
+            "compacted": true,
+            "items": [
+              {
+                "type": "summary",
+                "text": "Compacted 27 older turns with paired reactions.",
+                "fromTurnIndex": 1,
+                "toTurnIndex": 32
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 28,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第28条无关日常：整理书桌和收纳盒编号28"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 29,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第29条无关日常：整理书桌和收纳盒编号29"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 30,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第30条无关日常：整理书桌和收纳盒编号30"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 31,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第31条无关日常：整理书桌和收纳盒编号31"
+                }
+              },
+              {
+                "type": "turn",
+                "turnType": "synthetic-chat",
+                "turnIndex": 32,
+                "actor": "user",
+                "action": {
+                  "kind": "text",
+                  "text": "第32条无关日常：整理书桌和收纳盒编号32"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sourceHashes": [
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "sha256": "4f2ac6379fc035d4aeacc2e068b214327b5b0125bbab702245b13b17d94686b1"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/chat-completions.ts",
+      "sha256": "706747b89b705108eded64c8736b4194f5bfac52f41714a2355f6b4b12238d8f"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/core-agent/src/messages/compaction.ts",
+      "sha256": "dfd32990796ed56c7a058480d4569c4bbf247e284a264e15358993a0f11fb578"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat.ts",
+      "sha256": "8db8a79ae93eddf228ccd4e0d44e491847740f395fa0597a1a82737279f9766b"
+    },
+    {
+      "path": "/Users/mima1234/Documents/aimy/aimy-app/packages/stage-ui/src/stores/chat/session-store.ts",
+      "sha256": "0f8aa3b423141f5fd914f9e33a569a70abd7c99a176e4c1ff9d6f567d5c2af31"
+    }
+  ],
+  "true_boundaries": [
+    "actual original chat orchestrator and chat-completion projection",
+    "actual original compaction function"
+  ],
+  "fake_boundaries": [
+    "session IO is synthetic in-memory port",
+    "context snapshot empty, standard role prompt only",
+    "LLM fixed delta/finish, no real provider",
+    "foreground UI sink recorder/noop"
+  ],
+  "model_calls": 0,
+  "product_code_changed": false,
+  "full_electron_restart_tested": false
+}

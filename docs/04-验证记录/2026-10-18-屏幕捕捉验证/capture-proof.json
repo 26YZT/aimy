@@ -1,0 +1,31 @@
+{
+  "audioTracks": 0,
+  "captures": 0,
+  "contextUpdates": 0,
+  "frameHashFirst": "b6452b7b13f3079be6b7032a0ba614ad36f067692cae4b5a9ae7997b24dfc2a1",
+  "frameHashSecond": "b61cb8d1f0f6f0e52f81662b4eab77a6ea73692e4ad3b681ca0206ac58043aa7",
+  "framesDifferent": true,
+  "height": 1160,
+  "inferences": 0,
+  "leftPixel": [
+    236,
+    29,
+    35,
+    255
+  ],
+  "readyState": 4,
+  "rightPixel": [
+    0,
+    71,
+    171,
+    255
+  ],
+  "tickerRunning": false,
+  "videoTracks": [
+    {
+      "enabled": true,
+      "state": "live"
+    }
+  ],
+  "width": 1600
+}

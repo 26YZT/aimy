@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-15",
+  "task": "BASE-01 brand slice",
+  "status": "code_and_targeted_checks_complete_runtime_visual_pending",
+  "ownership": "returned_to_root",
+  "files": [
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/main/index.ts",
+      "before_sha256": "7de0fe77007ddb8c4452b7c6c53680517a06e5d59338453136e752869a655d24",
+      "after_sha256": "074eb9ec8bb3821f30b786e567e21717d8ad14bfd9f4015eb8697e2a9302b39d",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/dashboard/index.ts",
+      "before_sha256": "b07988820d6f74880a1cb262f4d8f8c46b464da86a1ba21976d60712fc9bd7ed",
+      "after_sha256": "df73dd179ebea352c0741d1c332845a1e010105ce04a0bcc5a89e7be35c78aee",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/about/index.ts",
+      "before_sha256": "d18e07a7ba30047f8dd0253a5922e4240b3ba499ddb6a5cc4a99287ce75e315c",
+      "after_sha256": "5102b2e3fcf6df458db7003ad126fc84219c1b17b1f0a3ceb62312852c2c2514",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/onboarding/index.ts",
+      "before_sha256": "835bebb9f13c725594919aaaa72882688f0957e9de3378e53259706aa4f91e8b",
+      "after_sha256": "948eb1adc6ea47d00cb31b633c7967d5ed51997397fc2b59796a973b1d94cc63",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/editor/index.ts",
+      "before_sha256": "181a7d99f47bd3d1d2cad791b03ee7cc5a39beb01f54c8499bce79a4de2694b9",
+      "after_sha256": "c590c83a3bd6c5574fc2a1142e26f3814344c384cfbeae2a5ae700aea973713d",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/spotlight/index.ts",
+      "before_sha256": "b8b94c729ac126930204f44f94958b4c26121da13f6e593c579cbb9877ce6b22",
+      "after_sha256": "380ef900d36b878a1a67b425c5b037fee0bb9b8e44dee8ceacc5fa055a526f7d",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.ts",
+      "before_sha256": "41ad8a12294fcfe5cefff6177dcce52d7d239da0e545392a1748d1698f61be55",
+      "after_sha256": "10578ecfe757c24a2604fb4fdda90bb04b483dfcb0d739db121583ed407ab7ac",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.test.ts",
+      "before_sha256": "dc3f765a4562fe9218f3fe5b8872c1f78d3d33f8e65b051bd419cf7bbbfb60a5",
+      "after_sha256": "268e2e97e6268da415e92f1679726075addd3443311becaeeb6461ebf55a40d8",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/main/tray/index.ts",
+      "before_sha256": "7868759d9ff73324873b26cc97b04457b10fa8bd8b39f0634842253b6d1545ce",
+      "after_sha256": "5cbe9749e7de30636301886aa2d3904c33d78d41a742e8be2ed9cbd3a7156446",
+      "changed": true
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/about.vue",
+      "before_sha256": "65ba5a56aca5bc9434ac148ac251e831d695d14b6642fc0256ec6a4e4600dc01",
+      "after_sha256": "3ec3f667fea35b07b50a1ee6e275ac179f218912199f966378c2a68ae2e720d9",
+      "changed": true
+    },
+    {
+      "path": "packages/i18n/src/locales/en/settings.yaml",
+      "before_sha256": "37a54de81968dce7f5312065583344e6930f8ac485c5865d822b04aedd754d54",
+      "after_sha256": "8fdce3efc5d34e981ce18320692988fc019c14af517cea89ac76ea4603a23eb7",
+      "changed": true
+    },
+    {
+      "path": "packages/i18n/src/locales/zh-Hans/settings.yaml",
+      "before_sha256": "a20234b9ad92bc805c533fc696fc985e75085215b1c1bd46325134082fd099ea",
+      "after_sha256": "5da916585803670211fe8f0cc65a9705c532e82876e2fb474fce29b196104c2d",
+      "changed": true
+    },
+    {
+      "path": "packages/i18n/src/locales/en/tamagotchi/stage.yaml",
+      "before_sha256": "89872f70b29428e2e76abb4a4b9db01d1db4163865c68a9784462acfefde0dcf",
+      "after_sha256": "682ae3c463f7a6a53ea3641c72ab4cabb997a0c84157bd054f9167a2f93c17c8",
+      "changed": true
+    },
+    {
+      "path": "packages/i18n/src/locales/zh-Hans/tamagotchi/stage.yaml",
+      "before_sha256": "31d84cce7be53a4cd7b6afd2afaa6fcb934f7487e6ee20a62db087d66d33355c",
+      "after_sha256": "ef21f5ac79b3da77385ed2930f918198b5b0e22d996198271930e40df2e424a9",
+      "changed": true
+    },
+    {
+      "path": "packages/i18n/src/locales/en/tamagotchi/settings.yaml",
+      "before_sha256": "259d18f309cd829fa3c2fe4ed5ebc417095e6f9dea6a36d09daaacf2058f0e8e",
+      "after_sha256": "45aef136c3ff5af1a05a30f6c33aeb8e26acc711b20dc9eccae2eff8182ef966",
+      "changed": true
+    },
+    {
+      "path": "packages/i18n/src/locales/zh-Hans/tamagotchi/settings.yaml",
+      "before_sha256": "1a51b9a0948778121ceeda14356a77914c4d8ba5297c7d3e5507bbb10aa420e3",
+      "after_sha256": "123896018f3ba0407dc7df1417569f173a5a5572ec36c3d7bc2ca20ea3363b0e",
+      "changed": true
+    }
+  ],
+  "summary": [
+    "Aimy visible window titles and tray tooltip use existing AIRI implementations.",
+    "Main/dashboard persist existing AIRI title/tag keys.",
+    "About page identifies Aimy and credits Project AIRI with the unchanged upstream links.",
+    "English and Simplified Chinese welcome/desktop labels use Aimy.",
+    "Upstream provider names, character defaults, file formats, legal links, icons, builder, and credentials were not changed."
+  ],
+  "checks": [
+    {
+      "command": "pnpm exec vitest run --config vitest.node.config.ts src/main/windows/desktop-overlay/window-contract.test.ts",
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app/apps/stage-tamagotchi",
+      "exit_code": 0,
+      "result": "1 file, 3 tests passed"
+    },
+    {
+      "command": "pnpm -F @proj-airi/i18n typecheck",
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app",
+      "exit_code": 0,
+      "result": "tsc --noEmit passed"
+    },
+    {
+      "command": "pnpm -F @proj-airi/i18n test",
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app",
+      "exit_code": 0,
+      "result": "1 file, 20 tests passed"
+    },
+    {
+      "command": "pnpm -F @proj-airi/stage-tamagotchi typecheck",
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app",
+      "exit_code": 0,
+      "result": "vue-tsc --noEmit passed"
+    },
+    {
+      "command": "pnpm exec eslint apps/stage-tamagotchi/src/main/windows/main/index.ts apps/stage-tamagotchi/src/main/windows/dashboard/index.ts apps/stage-tamagotchi/src/main/windows/about/index.ts apps/stage-tamagotchi/src/main/windows/onboarding/index.ts apps/stage-tamagotchi/src/main/windows/editor/index.ts apps/stage-tamagotchi/src/main/windows/spotlight/index.ts apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.ts apps/stage-tamagotchi/src/main/windows/desktop-overlay/window-contract.test.ts apps/stage-tamagotchi/src/main/tray/index.ts apps/stage-tamagotchi/src/renderer/pages/about.vue packages/i18n/src/locales/en/settings.yaml packages/i18n/src/locales/zh-Hans/settings.yaml packages/i18n/src/locales/en/tamagotchi/stage.yaml packages/i18n/src/locales/zh-Hans/tamagotchi/stage.yaml packages/i18n/src/locales/en/tamagotchi/settings.yaml packages/i18n/src/locales/zh-Hans/tamagotchi/settings.yaml",
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app",
+      "exit_code": 0,
+      "result": "all 16 edited files passed, no autofix"
+    },
+    {
+      "command": "node --input-type=module (parseDocument from yaml for six changed locales)",
+      "cwd": "/Users/mima1234/Documents/aimy/aimy-app/packages/i18n",
+      "exit_code": 0,
+      "result": "six YAML files parse without errors"
+    },
+    {
+      "command": "git diff --check (scoped changed paths)",
+      "cwd": "/Users/mima1234/Documents/aimy",
+      "exit_code": 0,
+      "result": "no whitespace errors"
+    }
+  ],
+  "pending": [
+    "Independent synthetic-profile Electron visual checks: main/about/welcome/tray and reopen window position.",
+    "Parent aggregate root typecheck/lint after other implementation slices.",
+    "Dev app-name/default-profile and builder permission string review remain root-owned."
+  ],
+  "no_product_launch": true,
+  "no_real_model_calls": true,
+  "no_user_data_reads": true,
+  "no_git_index_writes": true
+}

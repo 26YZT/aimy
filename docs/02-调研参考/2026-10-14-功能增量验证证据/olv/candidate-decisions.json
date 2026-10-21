@@ -1,0 +1,44 @@
+[
+  {
+    "feature": "独立朗读翻译",
+    "prior_capability": "OB42",
+    "verdict": "已证局部功能增量，条件候选",
+    "runtime_quality_verified": false,
+    "caveats": [
+      "真实质量/延迟/费用未测",
+      "翻译异常当前句不进入TTS",
+      "启用后关闭仍保留旧engine引用"
+    ]
+  },
+  {
+    "feature": "区域配置加权点击动作",
+    "verdict": "已证局部配置增量，条件候选",
+    "runtime_quality_verified": false,
+    "caveats": [
+      "AIRI已有body→tap_body",
+      "OLV未知区域合并/force3需按AIRI策略改",
+      "仅模型有hitArea/motions且最终选Live2D时适用"
+    ]
+  },
+  {
+    "feature": "叙事朗读过滤",
+    "prior_capability": "OB27",
+    "verdict": "OLV算法不更强；AIRI已有算法与默认接线需区分",
+    "runtime_quality_verified": false,
+    "caveats": [
+      "AIRI主路径默认未启stripNarrative",
+      "双方粗过滤普通数学括号会误删，AIRI默认未开时保留",
+      "不搬整队列或pysbd"
+    ]
+  },
+  {
+    "feature": "system-trigger与真实user来源隔离",
+    "prior_capability": "OB09",
+    "verdict": "可借语义规则；AIRI已有Spark基础，非已证新增长期记忆",
+    "runtime_quality_verified": false,
+    "caveats": [
+      "OLV跳过synthetic input但存assistant",
+      "provider role=user不等于logical origin=user"
+    ]
+  }
+]
