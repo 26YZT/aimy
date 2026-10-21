@@ -6,14 +6,14 @@
 
 **在电脑前，陪你聊聊今天。**
 
-基于 Project AIRI 持续开发的桌面虚拟情感陪伴产品。<br />
+一款面向日常交流的桌面虚拟情感陪伴产品，正在准备内测。<br />
 从日常聊天，到一起看视频、玩游戏，探索自然、可控、能延续的陪伴体验。
 
 ![macOS](https://img.shields.io/badge/macOS-优先-282828?style=flat-square&logo=apple&logoColor=white)
 ![Electron](https://img.shields.io/badge/Electron-桌面应用-47848F?style=flat-square&logo=electron&logoColor=white)
 ![Vue](https://img.shields.io/badge/Vue_3-界面-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
 ![BYOK](https://img.shields.io/badge/BYOK-自选模型服务-B96D88?style=flat-square)
-![Status](https://img.shields.io/badge/状态-开发体验版-B96D88?style=flat-square)
+![Status](https://img.shields.io/badge/状态-准备内测中-B96D88?style=flat-square)
 
 [界面预览](#界面预览) · [当前能力](#当前能力) · [开始开发](#开始开发) · [文档中心](docs/README.md)
 
@@ -21,9 +21,9 @@
 
 ---
 
-Aimy 面向电脑前的日常交流与情感陪伴，当前以 macOS、一个主要角色和少量受邀用户为目标。桌面角色是陪伴的呈现方式，文字、声音、动作和情境理解共同构成体验。
+Aimy 面向电脑前的日常交流与情感陪伴，当前状态为 **准备内测中**，以 macOS、一个主要角色和少量受邀用户为目标。桌面角色是陪伴的呈现方式，文字、声音、动作和情境理解共同构成体验。
 
-项目直接继承 AIRI 的桌面、聊天、模型服务、语音与角色系统，在同一工程内增量开发。**唯一产品主工程是 [`aimy-app/`](aimy-app/)**，桌面入口为 `apps/stage-tamagotchi/`。
+**产品主工程是 [`aimy-app/`](aimy-app/)**，桌面入口为 `apps/stage-tamagotchi/`，包含桌面、聊天、模型服务、语音与角色能力。
 
 ## 界面预览
 
@@ -44,8 +44,8 @@ Aimy 面向电脑前的日常交流与情感陪伴，当前以 macOS、一个主
 
 | 体验 | 当前进展 |
 | --- | --- |
-| 桌面角色 | 沿用 AIRI 的 Live2D / VRM 渲染、角色卡与设置；已增加 VRM 手动挥手、点头、停止 |
-| 文字与图片 | 沿用原会话与消息链；已完成聊天界面改版、宽窄窗适配、头像编辑与跨窗口同步 |
+| 桌面角色 | 支持 Live2D / VRM 渲染、角色卡与设置，以及 VRM 手动挥手、点头、停止 |
+| 文字与图片 | 文字与图片会话；已完成聊天界面改版、宽窄窗适配、头像编辑与跨窗口同步 |
 | 语音交流 | 已接入连续聆听、单条语音、转文字与播报；角色和聊天共用麦克风开关，部分服务已有真实连通记录 |
 | 授权看屏 | 麦克风与屏幕分别授权；已有实际取帧与视觉聊天记录，看屏和游戏入口集中在角色侧栏 |
 | 记忆与回顾 | 已接入来源追踪、更新、纠正、删除、相关召回与回顾列表；真实效果仍在迭代 |
@@ -56,7 +56,7 @@ Aimy 面向电脑前的日常交流与情感陪伴，当前以 macOS、一个主
 
 - **记忆效果：**10 月 16 日的首批 8 例真实模型验收暂未通过，日期、召回和部分流程问题仍待修复与复测。
 - **语音与陪伴：**真实声音自然度、背景音下的打断、人物声画协调，以及完整陪玩／陪看旅程仍需持续体验验证。
-- **发行：**当前是开发与本机体验阶段。正式角色、音色、安装分发与更新源仍需单独验收。
+- **发行：**当前正在准备内测。正式角色、音色、安装分发与更新源仍需单独验收。
 
 完整范围见[累计功能清单](docs/00-当前方向/Aimy当前累计功能清单.md)与[当前项目状态](docs/PROJECT_STATE.md)。
 
@@ -74,7 +74,7 @@ Aimy 面向电脑前的日常交流与情感陪伴，当前以 macOS、一个主
 
 ## 开始开发
 
-当前核对环境为 **macOS / Apple Silicon、Node.js 24.20.0、pnpm 11.24.0**。项目保留上游 monorepo，其他平台与可选工程不属于本轮验收范围。
+当前核对环境为 **macOS / Apple Silicon、Node.js 24.20.0、pnpm 11.24.0**。项目采用 monorepo 工程结构，其他平台与可选工程不属于本轮验收范围。
 
 ```bash
 git clone https://github.com/26YZT/aimy.git
@@ -92,7 +92,7 @@ APP_USER_DATA_PATH="$HOME/Library/Application Support/Aimy-Source-Dev" pnpm dev:
 | 目的 | 命令 |
 | --- | --- |
 | 桌面开发 | `pnpm dev:tamagotchi` |
-| 桌面类型检查 | `pnpm -F @proj-airi/stage-tamagotchi typecheck` |
+| 桌面类型检查 | `pnpm --dir apps/stage-tamagotchi typecheck` |
 | 桌面构建 | `pnpm build:tamagotchi` |
 | Web 开发 | `pnpm dev:web` |
 
@@ -111,7 +111,7 @@ APP_USER_DATA_PATH="$HOME/Library/Application Support/Aimy-Source-Dev" pnpm dev:
 
 ```text
 aimy/
-├── aimy-app/              # 唯一产品主工程，继承 AIRI
+├── aimy-app/              # 产品主工程
 │   ├── apps/stage-tamagotchi/  # Electron 桌面入口
 │   └── packages/              # 聊天、语音、角色、设置与共享能力
 ├── docs/                  # Aimy 第一方文档与验证记录
@@ -130,8 +130,8 @@ aimy/
 
 旧样机、历史计划与候选研究仅用于定向追溯。它们不进入默认启动链，也不自动成为新需求。
 
-## 来源与许可
+## 许可与资源使用
 
-感谢 [Project AIRI](https://github.com/moeru-ai/airi) 提供完整桌面、角色、聊天与语音基础。当前主工程继承 AIRI `v0.12.0-beta.5`，保留原包名、许可证与必要兼容标识。
+软件版权、第三方来源与许可信息见[项目许可证](aimy-app/LICENSE)、[根第三方声明](THIRD_PARTY_NOTICES.md)与[产品第三方声明](aimy-app/THIRD_PARTY_NOTICES.md)。
 
-AIRI 继承源码的 MIT 许可见 [`aimy-app/LICENSE`](aimy-app/LICENSE)。有界适配和其他依赖说明见[根第三方声明](THIRD_PARTY_NOTICES.md)与[产品第三方声明](aimy-app/THIRD_PARTY_NOTICES.md)。角色、模型、字体、音色和 SDK 按各自许可使用，代码许可不代表资源获得统一再分发授权。
+角色、模型、字体、音色和 SDK 按各自许可使用，代码许可不代表资源获得统一再分发授权。
